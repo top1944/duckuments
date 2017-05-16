@@ -1,7 +1,15 @@
-# The Duckietown project
+# The Duckietown project {#part:duckietown}
 
 
-## What is Duckietown?
+# What is Duckietown? {#sec:duckietown}
+
+### Watch some videos
+
+TODO: add videos here
+
+### Read papers about Duckietown
+
+TODO: add references here
 
 ## Beginnings of Duckietown
 
@@ -16,11 +24,7 @@ outside of MIT.
 
 TODO: What's coming up in 2017
 
-## How to keep in touch
-
-TODO: add link to Facebook
-
-TODO: add link to Mailing list
+# First steps
 
 ## How to get started
 
@@ -32,6 +36,14 @@ If you are a student in a Duckietown class, please jump to [](#for-students).
 
 If you are a company, and interested in working with Duckietown, please jump to [](#for-companies).
 
-## References
+## How to keep in touch
 
-TODO: add references here
+TODO: add link to Facebook
+
+TODO: add link to Mailing list
+
+TODO: add link to Slack?
+
+## How to contribute
+
+TODO: write

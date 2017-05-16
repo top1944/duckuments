@@ -1,19 +1,27 @@
-out_html=compiled/duckiebook.html
-out_pdf=compiled/duckiebook.pdf
+
+
+dist_dir=duckuments-dist
+
+out_html=$(dist_dir)/duckiebook.html
+out_pdf=$(dist_dir)/duckiebook.pdf
 
 tmp_files=out/tmp
 
 all: $(out_pdf)
 
-install:
-	git clone -b my-branch README.md
-
+duckuments-dist:
+	# clone branch "dist"
+	git clone -b dist git@github.com:duckietown/duckuments.git duckuments-dist
 
 clean:
 	rm -rf $(tmp_files)
 
 $(out_html): $(wildcard docs/**/*md)
 	$(MAKE) compile
+
+compile-pdf:
+	$(MAKE) compile
+	$(MAKE) $(out_pdf)
 
 compile:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
