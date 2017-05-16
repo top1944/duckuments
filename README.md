@@ -1,0 +1,2 @@
+# duckuments
+All documentation
