@@ -1,1 +1,1 @@
-# Duckietown for self-guided learners {#for-self-guided}
+# Duckietown for self-guided learners {#sec:for-self-guided-learners}

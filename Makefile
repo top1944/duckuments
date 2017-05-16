@@ -9,6 +9,8 @@ tmp_files=out/tmp
 
 all: $(out_pdf)
 
+.PHONY: $(out_html)
+
 duckuments-dist:
 	# clone branch "dist"
 	git clone -b dist git@github.com:duckietown/duckuments.git duckuments-dist
@@ -28,7 +30,10 @@ compile:
 		--src docs/ \
 		--stylesheet v_manual_blurb \
 		-o $(tmp_files) \
-		--output_file $(out_html) -c "config echo 1; rparmake"
+		--output_file $(out_html).tmp -c "config echo 1; rparmake"
+
+	python -m mcdp_docs.add_edit_links < $(out_html).tmp > $(out_html)
 
 %.pdf: %.html
 	prince --javascript -o $@ $<
+	# open $@

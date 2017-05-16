@@ -1,11 +1,8 @@
 
 <h1 notoc nonumber id='booktitle'>The Duckietown Book</h1>
 
-TODO: add logo here
-
-
 <p style='text-align:center'>
-<img src='nutonomy_logo.png' style='height:auto; width: 13em; margin-top: 10em; margin-bottom:8em;'/>
+<img src='logo.png' style='height:auto; width: 13em; margin-top: 10em; margin-bottom:8em;'/>
 </p>
 
 
@@ -14,3 +11,7 @@ TODO: add logo here
 
 <!-- place toc here -->
 <div id='toc'></div>
+<style>
+    ul.toc { font-size: smaller; }
+    ul.toc, ul.toc ul { list-style-type: none; }
+</style>
