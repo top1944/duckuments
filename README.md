@@ -1,8 +1,14 @@
-# Duckuments compiled
+# Duckuments
 
-This branch contains only the "binaries".
+## For branch master (Duckietown 2017)
+
+* The **Duckiebook** in [PDF format][master-pdf], [HTML single page][master-html], [HTML multiple pages][master-split].
+
+[master-pdf]: master/duckiebook.pdf
+[master-html]: master/duckiebook.html
+[master-split]: master/duckiebook/index.html
 
 
-[Current version of Duckietown book][current]
+## Previous versions / other editions
 
-[current]: duckiebook.pdf
+...
