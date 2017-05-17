@@ -18,12 +18,19 @@ to click any of the "✎" icons next to the headers.
 They link to the "edit" page in Github. There, one
 can make and commit the edits in only a few seconds.
 
-## Compiling the new version
+## Compiling the documentation
 
 TODO: Write instructions - it's "make all" but the dependencies
 are complicated.
 
-## Feature: embedded LaTeX
+## Deploying the documentation
+
+TODO: Write instructions
+
+# Features of the documentation writing system
+
+
+## Embedded LaTeX
 
 You can use $\LaTeX$ math, environment, and references.
 
