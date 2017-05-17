@@ -8,7 +8,6 @@
 [master-html]: master/duckiebook.html
 [master-split]: master/duckiebook/index.html
 
-
 ## Previous versions / other editions
 
 ...
