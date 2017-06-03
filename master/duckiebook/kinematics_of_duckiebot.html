@@ -277,13 +277,18 @@ ul.toc code:last-of-type::after {
 .chapter_toc {
   display: none;
 }
+ul#main_toc,
+ul#main_toc ul,
+ul#main_toc li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
 .toc a {
+  color: black !important;
   text-decoration: none;
 }
 /************ TOC ***************/
-ul.toc {
-  column-gap: 20px;
-}
 @media screen {
   ul#main_toc > li > ul > li {
     padding-top: 2pt;
@@ -293,71 +298,32 @@ ul.toc {
     margin-bottom: 1pt;
   }
 }
-@media print {
-  /** two-column format */
-  /** add page numbers for the first two */
-  ul#main_toc > li > a::after {
-    content: leader('.') target-counter(attr(href), page);
-    font-weight: bold;
-  }
-  ul#main_toc > li > ul > li > a::after {
-    content: leader('.') target-counter(attr(href), page);
-  }
+.toc_a_for_part {
+  padding-top: 5px;
 }
-ul#main_toc .toc_ul-depth-4 {
-  display: none;
+.toc_a_for_sec,
+.toc_a_for_app {
+  padding-top: 4px;
 }
-ul#main_toc .toc_link-depth-100 {
-  display: none;
-}
-ul#main_toc .toc_ul-depth-100 {
-  display: none;
-}
-ul#main_toc .toc_link-depth-4 {
-  color: blue;
-}
-ul#main_toc .toc_link-depth-4 .toc_what,
-ul#main_toc .toc_link-depth-4 .toc_number,
-ul#main_toc .toc_link-depth-4 .toc_sep {
-  display: none;
-  color: red;
-}
-ul#main_toc ul {
-  margin-left: 0;
-}
-ul#main_toc ul ul {
-  margin-left: 0;
-}
-.toc_li-depth-3 {
-  display: inline;
-}
-.toc_li-depth-3 a {
-  color: gray !important;
-}
-.toc_li-depth-3 a span.toc_number {
-  display: none;
-}
-.toc_li-depth-3 a span.toc_name::before {
-  /*padding-bottom: 5pt !important;*/
-  /*border: solid 1px red;*/
-  /*margin-top: -20pt !important;*/
-  /*display: inline;*/
-}
-.toc_li-depth-3 + .toc_li-depth-3::before {
-  margin-right: 1.6pt;
-  margin-left: 1.6pt;
-  content: '◇';
-  color: lightgrey !important;
-  font-size: 6pt;
-}
-/* first header down is highlighted */
-ul.chapter_toc > li > a {
+.toc_a_for_sec .toc_what,
+.toc_a_for_app .toc_what,
+.toc_a_for_sec .toc_number,
+.toc_a_for_app .toc_number,
+.toc_a_for_sec .toc_name,
+.toc_a_for_app .toc_name {
   font-weight: bold;
 }
-/* below numbers are erased */
-ul.chapter_toc > li > ul > li > a.toc_link > span.toc_name::before {
-  content: '•';
-  margin-right: 0.5em;
+.toc_a_for_sub > .toc_what,
+.toc_a_for_appsub > .toc_what {
+  display: None;
+}
+/** two-column format */
+/** add page numbers for the first two */
+.toc_a_for_part::after,
+.toc_a_for_sec::after,
+.toc_a_for_sub::after {
+  content: leader('.') target-counter(attr(href), page);
+  font-weight: bold;
 }
 /* keywords appearing in headers */
 #maintoc code {
@@ -374,36 +340,17 @@ ul.toc li {
   padding: 0;
   margin: 0;
 }
-ul#main_toc > li {
-  padding-bottom: 1em;
-}
-ul#main_toc > li > ul {
-  padding-top: 4pt;
-}
-ul#main_toc > li > a span.toc_name {
-  font-weight: bold;
-}
-ul#main_toc > li > a > span.toc_number {
-  font-weight: bold;
-}
-ul#main_toc > li > a > span.toc_number ::before {
-  content: 'Chapter ';
-  font-weight: bold;
-}
 ul.toc,
 ul.toc li,
 ul.toc ul {
   margin: 0;
   padding: 0;
 }
-ul#main_toc > li > a[href^='#part:'] {
+.toc_a_for_part {
   display: block;
   font-weight: bold;
   text-align: center;
   color: black !important;
-}
-ul#main_toc > li > a[href^='#part:'] ::after {
-  content: none !important;
 }
 /*prince-text-replace: "ffi" "\fb03" "fi" "\fb01" "ffl" "\fb04" "fl" "\fb02" "ff" "\fb00";*/
 /*font-variant: prince-opentype(onum) prince-opentype(liga);*/
@@ -1513,6 +1460,9 @@ h3:not([nonumber])::before {
   /*content: counter(section) '.' counter(subsection) '-' counter(subsubsection, upper-alpha) '. ';*/
   content: attr(label-self);
 }
+cite::before {
+  content: attr(label-self) ' ';
+}
 /*@num-eq: target-counter(attr(href), listing);
 @ref-eq: '(' @num-eq ')';
 */
@@ -1944,91 +1894,71 @@ h1::after {
 
 
 */</style></head><body><div id="tocdiv"><ul class="toc" id="main_toc">
-<li class="toc_li-depth-0">
-<a class="toc_link toc_link-depth-1 number_name" href="part_duckietown.html#part:duckietown"><span class="toc_what">Part</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">The Duckietown project</span></a><ul class="toc_ul-depth-1">
-<li class="toc_li-depth-1">
-<a class="toc_link toc_link-depth-3 number_name" href="sec_duckietown.html#sec:duckietown"><span class="toc_what">Chapter</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">What is Duckietown?</span></a><ul class="toc_ul-depth-3">
-<li class="toc_li-depth-3">
-<a class="toc_link toc_link-depth-5 number_name" href="sec_duckietown.html#subsub:watch-some-videos"><span class="toc_what">Subsection</span> <span class="toc_number">1.0.1</span><span class="toc_sep"> - </span><span class="toc_name">Watch some videos</span></a>
+<li class="toc_li-depth-0 toc_ul_for_unknown">
+<a class="toc_link toc_link-depth-1 number_name toc_a_for_part" href="part_duckietown_project.html#part:duckietown-project"><span class="toc_what">Part</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">The Duckietown project</span></a><ul class="toc_ul-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_ul_for_part">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec" href="what_is_duckietown.html#sec:what-is-duckietown"><span class="toc_what">Chapter</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">What is Duckietown?</span></a>
 </li>
-<li class="toc_li-depth-3">
-<a class="toc_link toc_link-depth-5 number_name" href="sec_duckietown.html#subsub:read-papers-about-duckietown"><span class="toc_what">Subsection</span> <span class="toc_number">1.0.2</span><span class="toc_sep"> - </span><span class="toc_name">Read papers about Duckietown</span></a>
+<li class="toc_li-depth-1 toc_ul_for_part">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec" href="sec_first_steps.html#sec:first-steps"><span class="toc_what">Chapter</span> <span class="toc_number">2</span><span class="toc_sep"> - </span><span class="toc_name">First steps</span></a><ul class="toc_ul-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub" href="sec_first_steps.html#sub:how-to-get-started"><span class="toc_what">Section</span> <span class="toc_number">2.1</span><span class="toc_sep"> - </span><span class="toc_name">How to get started</span></a>
 </li>
-<li class="toc_li-depth-3">
-<a class="toc_link toc_link-depth-4 number_name" href="sec_duckietown.html#sub:beginnings-of-duckietown"><span class="toc_what">Section</span> <span class="toc_number">1.1</span><span class="toc_sep"> - </span><span class="toc_name">Beginnings of Duckietown</span></a>
+<li class="toc_li-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub" href="sec_first_steps.html#sub:how-to-keep-in-touch"><span class="toc_what">Section</span> <span class="toc_number">2.2</span><span class="toc_sep"> - </span><span class="toc_name">How to keep in touch</span></a>
 </li>
-<li class="toc_li-depth-3">
-<a class="toc_link toc_link-depth-4 number_name" href="sec_duckietown.html#sub:duckietown-around-the-world"><span class="toc_what">Section</span> <span class="toc_number">1.2</span><span class="toc_sep"> - </span><span class="toc_name">Duckietown around the world</span></a>
-</li>
-<li class="toc_li-depth-3">
-<a class="toc_link toc_link-depth-4 number_name" href="sec_duckietown.html#sub:coming-up-in-2017"><span class="toc_what">Section</span> <span class="toc_number">1.3</span><span class="toc_sep"> - </span><span class="toc_name">Coming up in 2017</span></a>
+<li class="toc_li-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub" href="sec_first_steps.html#sub:how-to-contribute"><span class="toc_what">Section</span> <span class="toc_number">2.3</span><span class="toc_sep"> - </span><span class="toc_name">How to contribute</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-1">
-<a class="toc_link toc_link-depth-3 number_name" href="first_steps.html#sec:first-steps"><span class="toc_what">Chapter</span> <span class="toc_number">2</span><span class="toc_sep"> - </span><span class="toc_name">First steps</span></a><ul class="toc_ul-depth-3">
-<li class="toc_li-depth-3">
-<a class="toc_link toc_link-depth-4 number_name" href="first_steps.html#sub:how-to-get-started"><span class="toc_what">Section</span> <span class="toc_number">2.1</span><span class="toc_sep"> - </span><span class="toc_name">How to get started</span></a>
+<li class="toc_li-depth-1 toc_ul_for_part">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec" href="sec_for_instructors.html#sec:for-instructors"><span class="toc_what">Chapter</span> <span class="toc_number">3</span><span class="toc_sep"> - </span><span class="toc_name">Duckietown for instructors</span></a>
 </li>
-<li class="toc_li-depth-3">
-<a class="toc_link toc_link-depth-4 number_name" href="first_steps.html#sub:how-to-keep-in-touch"><span class="toc_what">Section</span> <span class="toc_number">2.2</span><span class="toc_sep"> - </span><span class="toc_name">How to keep in touch</span></a>
+<li class="toc_li-depth-1 toc_ul_for_part">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec" href="sec_for_self_guided_learners.html#sec:for-self-guided-learners"><span class="toc_what">Chapter</span> <span class="toc_number">4</span><span class="toc_sep"> - </span><span class="toc_name">Duckietown for self-guided learners</span></a>
 </li>
-<li class="toc_li-depth-3">
-<a class="toc_link toc_link-depth-4 number_name" href="first_steps.html#sub:how-to-contribute"><span class="toc_what">Section</span> <span class="toc_number">2.3</span><span class="toc_sep"> - </span><span class="toc_name">How to contribute</span></a>
+<li class="toc_li-depth-1 toc_ul_for_part">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec" href="sec_for_companies.html#sec:for-companies"><span class="toc_what">Chapter</span> <span class="toc_number">5</span><span class="toc_sep"> - </span><span class="toc_name">Introduction for companies</span></a>
 </li>
-</ul>
+<li class="toc_li-depth-1 toc_ul_for_part">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec" href="contributing_to_this_documentation.html#sec:contributing-to-this-documentation"><span class="toc_what">Chapter</span> <span class="toc_number">6</span><span class="toc_sep"> - </span><span class="toc_name">Contributing to this documentation</span></a><ul class="toc_ul-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub" href="contributing_to_this_documentation.html#sub:where-the-documentation-is"><span class="toc_what">Section</span> <span class="toc_number">6.1</span><span class="toc_sep"> - </span><span class="toc_name">Where the documentation is</span></a>
 </li>
-<li class="toc_li-depth-1">
-<a class="toc_link toc_link-depth-3 number_name" href="sec_for_instructors.html#sec:for-instructors"><span class="toc_what">Chapter</span> <span class="toc_number">3</span><span class="toc_sep"> - </span><span class="toc_name">Duckietown for instructors</span></a>
+<li class="toc_li-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub" href="contributing_to_this_documentation.html#sub:editing-links"><span class="toc_what">Section</span> <span class="toc_number">6.2</span><span class="toc_sep"> - </span><span class="toc_name">Editing links</span></a>
 </li>
-<li class="toc_li-depth-1">
-<a class="toc_link toc_link-depth-3 number_name" href="sec_for_self_guided_learners.html#sec:for-self-guided-learners"><span class="toc_what">Chapter</span> <span class="toc_number">4</span><span class="toc_sep"> - </span><span class="toc_name">Duckietown for self-guided learners</span></a>
+<li class="toc_li-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub" href="contributing_to_this_documentation.html#sub:comments"><span class="toc_what">Section</span> <span class="toc_number">6.3</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
 </li>
-<li class="toc_li-depth-1">
-<a class="toc_link toc_link-depth-3 number_name" href="sec_for_companies.html#sec:for-companies"><span class="toc_what">Chapter</span> <span class="toc_number">5</span><span class="toc_sep"> - </span><span class="toc_name">Introduction for companies</span></a>
+<li class="toc_li-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub" href="contributing_to_this_documentation.html#sub:compiling-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">6.4</span><span class="toc_sep"> - </span><span class="toc_name">Compiling the documentation</span></a>
 </li>
-<li class="toc_li-depth-1">
-<a class="toc_link toc_link-depth-3 number_name" href="contributing_to_this_documentation.html#sec:contributing-to-this-documentation"><span class="toc_what">Chapter</span> <span class="toc_number">6</span><span class="toc_sep"> - </span><span class="toc_name">Contributing to this documentation</span></a><ul class="toc_ul-depth-3">
-<li class="toc_li-depth-3">
-<a class="toc_link toc_link-depth-4 number_name" href="contributing_to_this_documentation.html#sub:where-the-documentation-is"><span class="toc_what">Section</span> <span class="toc_number">6.1</span><span class="toc_sep"> - </span><span class="toc_name">Where the documentation is</span></a>
-</li>
-<li class="toc_li-depth-3">
-<a class="toc_link toc_link-depth-4 number_name" href="contributing_to_this_documentation.html#sub:editing-links"><span class="toc_what">Section</span> <span class="toc_number">6.2</span><span class="toc_sep"> - </span><span class="toc_name">Editing links</span></a>
-</li>
-<li class="toc_li-depth-3">
-<a class="toc_link toc_link-depth-4 number_name" href="contributing_to_this_documentation.html#sub:comments"><span class="toc_what">Section</span> <span class="toc_number">6.3</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
-</li>
-<li class="toc_li-depth-3">
-<a class="toc_link toc_link-depth-4 number_name" href="contributing_to_this_documentation.html#sub:compiling-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">6.4</span><span class="toc_sep"> - </span><span class="toc_name">Compiling the documentation</span></a>
-</li>
-<li class="toc_li-depth-3">
-<a class="toc_link toc_link-depth-4 number_name" href="contributing_to_this_documentation.html#sub:deploying-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">6.5</span><span class="toc_sep"> - </span><span class="toc_name">Deploying the documentation</span></a>
+<li class="toc_li-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub" href="contributing_to_this_documentation.html#sub:deploying-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">6.5</span><span class="toc_sep"> - </span><span class="toc_name">Deploying the documentation</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-1">
-<a class="toc_link toc_link-depth-3 number_name" href="features_of_the_documentation_writing_system.html#sec:features-of-the-documentation-writing-system"><span class="toc_what">Chapter</span> <span class="toc_number">7</span><span class="toc_sep"> - </span><span class="toc_name">Features of the documentation writing system</span></a><ul class="toc_ul-depth-3">
-<li class="toc_li-depth-3">
-<a class="toc_link toc_link-depth-4 number_name" href="features_of_the_documentation_writing_system.html#sub:embedded-latex"><span class="toc_what">Section</span> <span class="toc_number">7.1</span><span class="toc_sep"> - </span><span class="toc_name">Embedded LaTeX</span></a><ul class="toc_ul-depth-4">
-<li class="toc_li-depth-4">
-<a class="toc_link toc_link-depth-100 number_name" href="features_of_the_documentation_writing_system.html#prop:example"><span class="toc_what">Proposition</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">Proposition example</span></a>
+<li class="toc_li-depth-1 toc_ul_for_part">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec" href="features_of_the_documentation_writing_system.html#sec:features-of-the-documentation-writing-system"><span class="toc_what">Chapter</span> <span class="toc_number">7</span><span class="toc_sep"> - </span><span class="toc_name">Features of the documentation writing system</span></a><ul class="toc_ul-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub" href="features_of_the_documentation_writing_system.html#sub:embedded-latex"><span class="toc_what">Section</span> <span class="toc_number">7.1</span><span class="toc_sep"> - </span><span class="toc_name">Embedded LaTeX</span></a>
+</li>
+<li class="toc_li-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub" href="features_of_the_documentation_writing_system.html#sub:other-interesting-features"><span class="toc_what">Section</span> <span class="toc_number">7.2</span><span class="toc_sep"> - </span><span class="toc_name">Other interesting features</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-3">
-<a class="toc_link toc_link-depth-4 number_name" href="features_of_the_documentation_writing_system.html#sub:other-interesting-features"><span class="toc_what">Section</span> <span class="toc_number">7.2</span><span class="toc_sep"> - </span><span class="toc_name">Other interesting features</span></a>
+<li class="toc_li-depth-1 toc_ul_for_part">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec" href="frequently_asked_questions_about_duckietown.html#sec:frequently-asked-questions-about-duckietown"><span class="toc_what">Chapter</span> <span class="toc_number">8</span><span class="toc_sep"> - </span><span class="toc_name">Frequently asked questions about Duckietown</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-1">
-<a class="toc_link toc_link-depth-3 number_name" href="frequently_asked_questions_about_duckietown.html#sec:frequently-asked-questions-about-duckietown"><span class="toc_what">Chapter</span> <span class="toc_number">8</span><span class="toc_sep"> - </span><span class="toc_name">Frequently asked questions about Duckietown</span></a>
-</li>
-</ul>
-</li>
-<li class="toc_li-depth-0">
-<a class="toc_link toc_link-depth-1 number_name" href="part_modeling.html#part:modeling"><span class="toc_what">Part</span> <span class="toc_number">2</span><span class="toc_sep"> - </span><span class="toc_name">Modeling</span></a><ul class="toc_ul-depth-1">
-<li class="toc_li-depth-1">
-<a class="toc_link toc_link-depth-3 number_name" href="kinematics_of_duckiebot.html#sec:kinematics-of-duckiebot"><span class="toc_what">Chapter</span> <span class="toc_number">9</span><span class="toc_sep"> - </span><span class="toc_name">Kinematics of Duckiebot</span></a>
+<li class="toc_li-depth-0 toc_ul_for_unknown">
+<a class="toc_link toc_link-depth-1 number_name toc_a_for_part" href="part_modeling.html#part:modeling"><span class="toc_what">Part</span> <span class="toc_number">2</span><span class="toc_sep"> - </span><span class="toc_name">Modeling</span></a><ul class="toc_ul-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_ul_for_part">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec" href="kinematics_of_duckiebot.html#sec:kinematics-of-duckiebot"><span class="toc_what">Chapter</span> <span class="toc_number">9</span><span class="toc_sep"> - </span><span class="toc_name">Kinematics of Duckiebot</span></a>
 </li>
 </ul>
 </li>
@@ -2039,7 +1969,7 @@ h1::after {
 .MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
 .MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
 .mjx-svg-href {fill: blue; stroke: blue}
-</style></section></section><fragment>
+</style><div id="put-bibliography-here"></div></section></section><fragment>
 <div id="disqus_section">
 <div id="disqus_thread"></div>
 <script>
