@@ -2,9 +2,8 @@
 <h1 notoc nonumber id='booktitle'>The Duckietown Book</h1>
 
 <p style='text-align:center'>
-<img src='logo.png' style='height:auto; width: 13em; margin-top: 10em; margin-bottom:8em;'/>
+    <img src='logo.png' style='height:auto; width: 13em; margin-top: 10em; margin-bottom:8em;'/>
 </p>
-
 
 
 <h1 notoc="1" nonumber="1" id='toc-heading'>Table of contents</h1>
