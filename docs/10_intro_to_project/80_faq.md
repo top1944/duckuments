@@ -1,3 +1,3 @@
-# Frequently asked questions about Duckietown
+# Frequently Asked Questions {#sec:faq}
 
 TODO: to write

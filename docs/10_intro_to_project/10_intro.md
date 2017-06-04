@@ -17,9 +17,7 @@ TODO:
 
 TODO:
 
-
-
-# Duckietown around the world
+## Duckietown around the world
 
 TODO:
 
