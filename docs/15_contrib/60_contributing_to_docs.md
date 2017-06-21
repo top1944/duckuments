@@ -96,7 +96,7 @@ This creates the following files:
 
 To deploy the documentation, jump into the `DUCKUMENTS/duckuments-dist` directory.
 
-Run the command `git branch`. If it doesn't say that you are on the branch `gh-pages`,
+Run the command `git branch`. If the out does not say that you are on the branch `gh-pages`,
 then one of the steps before was done incorrectly.
 
     $ cd $DUCKUMENTS/duckuments-dist
