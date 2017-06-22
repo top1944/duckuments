@@ -76,7 +76,7 @@ Install PrinceXML from [this page](https://www.princexml.com/download/).
 
 ## Compiling the documentation
 
-Run this command:
+Make sure you have deployed and activated the virtual environment. Then:
 
     $ cd $DUCKUMENTS
     $ make duckuments-dist
