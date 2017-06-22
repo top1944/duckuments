@@ -47,6 +47,11 @@ Activate the virtual environment:
 
     $ source $DUCKUMENTS/deploy/bin/activate
 
+Install some dependencies:
+
+    $ sudo apt-get install libxm12-dev bibxslt1-dev python-dev
+    $ sudo apt-get install libffi6 libffi-dev
+
 Clone this external repository:
 
     $ cd $DUCKUMENTS
@@ -61,6 +66,10 @@ Install these other dependencies:
 
     $ cd $DUCKUMENTS
     $ pip install numpy matplotlib
+
+Ensure the latest version (>6) of `nodejs` is installed, and:
+
+    $ sudo apt-get install node-less 
     $ npm install MathJax-node jsdom@9.3
 
 Install PrinceXML from [this page](https://www.princexml.com/download/).
