@@ -84,7 +84,7 @@ At this point, please make sure that you have these two `.git` folders:
 To compile the docs, go in the `DUCKUMENTS` directory and run `make compile`:
 
     $ cd $DUCKUMENTS
-    $ make 
+    $ make all split
 
 This creates the following files:
 
