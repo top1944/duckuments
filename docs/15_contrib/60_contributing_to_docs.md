@@ -47,6 +47,11 @@ Activate the virtual environment:
 
     $ source $DUCKUMENTS/deploy/bin/activate
 
+Install some dependencies:
+
+    $ sudo apt-get install libxm12-dev bibxslt1-dev python-dev
+    $ sudo apt-get install libffi6 libffi-dev
+
 Clone this external repository:
 
     $ cd $DUCKUMENTS
@@ -61,13 +66,17 @@ Install these other dependencies:
 
     $ cd $DUCKUMENTS
     $ pip install numpy matplotlib
+
+Ensure the latest version (>6) of `nodejs` is installed, and:
+
+    $ sudo apt-get install node-less 
     $ npm install MathJax-node jsdom@9.3
 
 Install PrinceXML from [this page](https://www.princexml.com/download/).
 
 ## Compiling the documentation
 
-Run this command:
+Make sure you have deployed and activated the virtual environment. Then:
 
     $ cd $DUCKUMENTS
     $ make duckuments-dist
@@ -96,7 +105,7 @@ This creates the following files:
 
 To deploy the documentation, jump into the `DUCKUMENTS/duckuments-dist` directory.
 
-Run the command `git branch`. If it doesn't say that you are on the branch `gh-pages`,
+Run the command `git branch`. If the out does not say that you are on the branch `gh-pages`,
 then one of the steps before was done incorrectly.
 
     $ cd $DUCKUMENTS/duckuments-dist
