@@ -1,6 +1,7 @@
 
 
-dist_dir=duckuments-dist/master
+duckuments-branch=devel
+dist_dir=duckuments-dist/$(duckuments-branch)
 
 out_html=$(dist_dir)/duckiebook.html
 out_pdf=$(dist_dir)/duckiebook.pdf
@@ -14,6 +15,15 @@ all: $(out_pdf)
 duckuments-dist:
 	# clone branch "dist"
 	git clone -b gh-pages git@github.com:duckietown/duckuments.git duckuments-dist
+
+automatic-compile:
+	git pull
+	$(MAKE) clean
+	$(MAKE) all split
+	git -C duckuments-dist add $(duckuments-branch)
+	git -C duckuments-dist commit -a -m "automatic compilation"	
+	git -C duckuments-dist push
+
 
 clean:
 	rm -rf $(tmp_files)
