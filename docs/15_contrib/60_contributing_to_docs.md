@@ -69,10 +69,23 @@ Install these other dependencies:
 
 Ensure the latest version (>6) of `nodejs` is installed, and:
 
-    $ sudo apt-get install node-less 
-    $ npm install MathJax-node jsdom@9.3
+    $ sudo apt-get install node-less
+    $ npm install MathJax-node jsdom@9.3 less
 
 Install PrinceXML from [this page](https://www.princexml.com/download/).
+
+
+## Troubleshooting installation problems
+
+### Installing `nodejs` packages
+
+The only pain point  in the installation procedure has been the installation of `nodejs` packages using `npm`. For some reason, they cannot be installated globally (`npm install -g`).
+
+Do not use `sudo` for installation. It will cause problems.
+
+If you use `sudo`, you probably have to delete a bunch of directories,
+such as: `RBROOT/node_modules`, `~/.npm`, and `~/.node_modules`, if they exist.
+
 
 ## Compiling the documentation
 
