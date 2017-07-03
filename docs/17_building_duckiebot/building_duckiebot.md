@@ -28,15 +28,20 @@ The price for this in the US is about USD 15-30.
 
 ## Raspberry PI 3
 
+...
+
 ## Camera
 
 ...
 
-## Bill of materials
+## Bill of materials 
 
 <col2>
     <s>Chassis</s> <s>USD xxx</s>
     <s>Camera</s> <s>USD xxx</s>
+    <s>Raspberry PI 3</s> <s>USD 35</s>
+    <s>Total for minimum configuration</s> <s>USD ??</s>
+    <s>Total for fancy configuration</s> <s>USD ??</s>
 </col2>
 
 
