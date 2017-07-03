@@ -1,6 +1,6 @@
 
 
-duckuments-branch=devel
+duckuments-branch=master
 dist_dir=duckuments-dist/$(duckuments-branch)
 
 out_html=$(dist_dir)/duckiebook.html
@@ -21,7 +21,7 @@ automatic-compile:
 	$(MAKE) clean
 	$(MAKE) all split
 	git -C duckuments-dist add $(duckuments-branch)
-	git -C duckuments-dist commit -a -m "automatic compilation"	
+	git -C duckuments-dist commit -a -m "automatic compilation"
 	git -C duckuments-dist push
 
 

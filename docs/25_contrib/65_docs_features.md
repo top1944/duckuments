@@ -14,7 +14,7 @@ or refer to [](#prop:example).
 \begin{proposition}[Proposition example]\label{prop:example}
 This is an example proposition: $2x = x + x$.
 \end{proposition}
-     
+
 The above was written as in [](#fig:code).
 
 <pre figure-id="fig:code" figure-caption='Use of LaTeX code.'>
@@ -38,3 +38,11 @@ TODO: other LaTeX features supported
 ## Other interesting features
 
 TODO: to write
+
+## Limitations
+
+There are some limitations:
+
+* Please use the string `&#36;` to write the dollar symbol &#36;, otherwise it
+gets confused with LaTeX math materials. Also notice that you should probably
+use "USD" to refer to U.S. dollars

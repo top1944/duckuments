@@ -2,6 +2,8 @@
 
 # What is Duckietown?
 
+## Goals and objectives
+
 Duckietown is a robotics educations and outreach effort.
 
 The most tangible goal of the project is to provide a low-cost educational platform for learning autonomy, consisting of the Duckiebots, an autonomous robot, and the Duckietowns,
@@ -11,8 +13,7 @@ However, we focus on the *learning experience* as a whole, by providing a set of
 
 We have two targets:
 
-1. For **instructors**, we want to create a "class-in-a-box" that allows to
-  offer a modern and engaging learning experience. Currently, this is feasible at the advanced undergraduate and graduate level, though in the future we would like to present the platform as multi-grade experiences.
+1. For **instructors**, we want to create a "class-in-a-box" that allows to offer a modern and engaging learning experience. Currently, this is feasible at the advanced undergraduate and graduate level, though in the future we would like to present the platform as multi-grade experiences.
 
 2. For **self-guided learners**, we want to create a "self-learning experience", that allows to go from zero knowledge of robotics to graduate-level understanding.
 
@@ -20,7 +21,13 @@ In addition, the Duckietown platform has been used as a research platform.
 
 TODO: add references to papers submitted/published with it.
 
+<!-- Duckietown has been recently incorporated as a non-profit foundation. -->
+
+## Results obtained so far
+
 While we are at the early phases of the project, many people have been used the materials in the past year.
+
+## Why the duckies?
 
 *Why the duckies?*
 
@@ -32,7 +39,6 @@ TODO: copy usual discussion from somewhere else.
 
 TODO: add picture of kids with Duckiebots.
 
-Duckietown has been recently incorporated as a non-profit foundation.
 
 ## Learn about the platform
 

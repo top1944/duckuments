@@ -6,10 +6,10 @@
 </p>
 
 <p>
-    The last version of this book and other documents are available at this URL:
+    The last version of this book and other documents are available at the URL
     <br/>
-    <a style='font-size:smaller; font-family: monospace;' href="https://duckietown.github.io/duckuments/master/duckiebook/index.html">
-        https://duckietown.github.io/duckuments/
+    <a style='font-size:smaller; font-family: monospace;' href="http://book.duckietown.org/master/duckiebook/index.html">
+        http://book.duckietown.org/
     </a>
 </p>
 
