@@ -72,12 +72,31 @@ Depending on your system, you might need to install these other dependencies:
     $ cd $DUCKUMENTS
     $ pip install numpy matplotlib
 
-Ensure the latest version (>6) of `nodejs` is installed, and:
+Ensure the latest version (>6) of `nodejs` is installed.
 
-    $ sudo apt-get install node-less
+Run:
+
+    $ nodejs --version
+    6.xx
+
+If the version is 4 or less, remove `nodejs`:
+
+    $ sudo apt-get remove nodejs
+
+Install `nodejs` using [the instructions at this page][nodejs].
+
+[nodejs]: https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
+
+<!-- $ sudo apt-get install node-less -->
+
+Next, install the necessary Javascript libraries using `npm`:
+
+    $ cd $DUCKUMENTS
     $ npm install MathJax-node jsdom@9.3 less
 
 Install PrinceXML from [this page](https://www.princexml.com/download/).
+
+TODO: instructions for fonts
 
 
 ## Troubleshooting installation problems
