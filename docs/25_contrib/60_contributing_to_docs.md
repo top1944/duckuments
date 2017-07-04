@@ -1,4 +1,4 @@
-# Contributing to this documentation {#sec:contribute-to-docs}
+# Contributing to the documentation {#sec:contribute-to-docs}
 
 ## Where the documentation is
 
