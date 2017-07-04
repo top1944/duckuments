@@ -1,0 +1,1 @@
+# Setup Buffalo access point

@@ -1,4 +1,4 @@
-# Building a Duckiebot {#part:building-duckiebot}
+# Acquiring the parts for the Duckiebot
 
 The trip begins with acquiring the parts. Here, we provide a link to all bits and pieces that
 are needed to build a Duckiebot and the Duckietowns.
@@ -9,7 +9,16 @@ In general, keep in mind that:
 - In general, substitutions are OK for the mechanical components,
   and not OK for all the rest.
 
-# Acquiring the parts for the Duckiebot (2017)
+
+## Bill of materials
+
+<col2>
+  <s>Chassis</s> <s>USD xxx</s>
+  <s>Camera</s> <s>USD xxx</s>
+  <s>Raspberry PI 3</s> <s>USD 35</s>
+  <s>Total for minimum configuration</s> <s>USD ??</s>
+  <s>Total for fancy configuration</s> <s>USD ??</s>
+</col2>
 
 ## Chassis
 
@@ -33,16 +42,3 @@ The price for this in the US is about USD 15-30.
 ## Camera
 
 ...
-
-## Bill of materials 
-
-<col2>
-    <s>Chassis</s> <s>USD xxx</s>
-    <s>Camera</s> <s>USD xxx</s>
-    <s>Raspberry PI 3</s> <s>USD 35</s>
-    <s>Total for minimum configuration</s> <s>USD ??</s>
-    <s>Total for fancy configuration</s> <s>USD ??</s>
-</col2>
-
-
-# Acquiring the parts for Duckietown (2017)
