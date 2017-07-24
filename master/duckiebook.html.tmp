@@ -3,7 +3,11 @@
 <head>
 <title>The Duckietown book</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<<<<<<< HEAD
 <link href="/home/duckietown/scm/duckuments/mcdp/src/mcdp_web/static/css/compiled/v_manual_split.css" rel="stylesheet" type="text/css"></link></head>
+=======
+<link href="/Volumes/1704-dorothy-mcdp/env_mcdp/src/mcdp/src/mcdp_web/static/css/compiled/v_manual_split.css" rel="stylesheet" type="text/css"></link></head>
+>>>>>>> 5bb41f1671ab0993e9685bc7a096f53c6bc55dd5
 <body><section class="without-header-inside" level="part"><section class="without-header-inside" level="sec"><section class="without-header-inside" level="sub">
 <div style="display:none">Because of mathjax bug</div>
 </section></section><section class="with-header-inside" id="booktitle:section" level="sec"><h1 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/01_title.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/01_title.md" id="booktitle" nonumber="" notoc="">The Duckietown Book</h1><section class="without-header-inside" level="sub">
