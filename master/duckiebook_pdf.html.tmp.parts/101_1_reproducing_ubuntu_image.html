@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC
+    "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN"
+    "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd">
+<html><head><meta content="application/xhtml+xml; charset=utf-8" http-equiv="Content-Type"></meta><link href="/home/duckietown/scm/duckuments/mcdp/src/mcdp_web/static/css/compiled/v_mcdp_render_default.css" rel="stylesheet" type="text/css"></link><title></title></head><body><div>
+<h1 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="reproducing-the-ubuntu-image-for-the-duckiebot">Reproducing the Ubuntu image for the Duckiebot</h1>
+<p>These are the instructions to reproduce the Ubuntu image that we use.</p>
+<p>We organize this in three steps:</p>
+<ul>
+<li>Step 1: From downloaded image, to updated setup.</li>
+<li>Step 2: Installation of ros and other dependencies.</li>
+</ul>
+<h2 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="step-1-from-blank-to-minimal-setup">Step 1: From blank to minimal setup</h2>
+<p>Resources necessaries:</p>
+<ul>
+<li>Internet connection to download the packages.</li>
+<li>A PC running any Linux with an SD card reader.</li>
+<li>Time: about 20 minutes.</li>
+</ul>
+<p>Results:</p>
+<ul>
+<li>A baseline Ubuntu Mate 16.04.2 image with updated software.</li>
+</ul>
+<h3 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="download-and-uncompress-the-ubuntu-mate-image">Download and uncompress the Ubuntu Mate image</h3>
+<p>Download the image from the page https://ubuntu-mate.org/download/.</p>
+<p>The file we are looking for is:</p>
+<pre><code>filename: ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img.xz
+    size: 1.2 GB
+  SHA256: dc3afcad68a5de3ba683dc30d2093a3b5b3cd6b2c16c0b5de8d50fede78f75c2
+</code></pre>
+<p>Run the command <code>sha256</code> to make sure you have the right version:</p>
+<pre class="console"><code>laptop <span class="console_sign">$</span> sha256 ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img.xz
+dc3afcad68a5de3ba683dc30d2093a3b5b3cd6b2c16c0b5de8d50fede78f75c2
+</code></pre>
+<p>If the string does not correspond exactly, your download was corrupted.
+Delete the file and try again.</p>
+<p>Then decompress using the command <code>xz</code>:</p>
+<pre class="console"><code>laptop <span class="console_sign">$</span> xz <span class="program_option">-d</span> ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img.xz
+</code></pre>
+<h3 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="finding-your-device-name-for-the-sd-card">Finding your device name for the SD card</h3>
+<div class="todo-wrap"><p class="todo">How to find the device name?</p></div>
+<h3 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="burn-the-image-to-an-sd-card">Burn the image to an SD card</h3>
+<p>Then burn to disc using the command <code>dd</code>:</p>
+<pre class="console"><code>laptop <span class="console_sign">$</span> <span class="sudo program">sudo</span> dd of=DEVICE if=IMG status=progress bs=4M
+</code></pre>
+<p>where <code>IMG</code> is the <code>.img</code> file you unzipped, and <code>DEVICE</code> is the device
+that represents your SD card reader.</p>
+<h3 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="verify-that-the-sd-card-was-created-correctly">Verify that the SD card was created correctly</h3>
+<p>Remove the SD card and plug it in again in the laptop.</p>
+<p>Ubuntu will mount two partitions, by the name of <code>PI_ROOT</code> and <code>PI_BOOT</code>.</p>
+<h3 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="installation">Installation</h3>
+<p>Boot the disk in the Raspberry PI.</p>
+<p>I chose the following options:</p>
+<pre><code>language: English
+username: ubuntu
+password: ubuntu
+hostname: duckiebot
+</code></pre>
+<p>Then I rebooteed.</p>
+<h3 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="update-installed-software">Update installed software</h3>
+<p>The WiFi was connected to airport network <code>duckietown</code>
+with password <code>quackquack</code>.</p>
+<p>Afterwards I upgraded all the software preinstalled with these
+commands:</p>
+<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt-get program">apt-get</span> update
+duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt-get program">apt-get</span> dist-upgrade
+</code></pre><div style="display:none">Because of mathjax bug</div><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><style id="MathJax_SVG_styles" type="text/css">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+</style></div></body></html>

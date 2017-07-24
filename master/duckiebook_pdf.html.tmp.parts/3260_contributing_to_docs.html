@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC
+    "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN"
+    "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd">
+<html><head><meta content="application/xhtml+xml; charset=utf-8" http-equiv="Content-Type"></meta><link href="/home/duckietown/scm/duckuments/mcdp/src/mcdp_web/static/css/compiled/v_mcdp_render_default.css" rel="stylesheet" type="text/css"></link><title></title></head><body><div>
+<h1 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/25_contrib/60_contributing_to_docs.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/25_contrib/60_contributing_to_docs.md" id="sec:contribute-to-docs">Contributing to the documentation</h1>
+<h2 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/25_contrib/60_contributing_to_docs.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/25_contrib/60_contributing_to_docs.md" id="where-the-documentation-is">Where the documentation is</h2>
+<p>All the documentation is in the repository <code>duckietown/duckuments</code>.</p>
+<p>The documentation is written as a series of small files in Markdown format.</p>
+<p>It is then processed by a series of scripts to create this output:</p>
+<ul>
+<li><a href="https://book.duckietown.org/master/duckiebook.pdf">a publication-quality PDF</a>;</li>
+<li><a href="https://book.duckietown.org/master/duckiebook/index.html">an online HTML version, split in multiple pages and with comments boxes</a>.</li>
+</ul>
+<h2 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/25_contrib/60_contributing_to_docs.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/25_contrib/60_contributing_to_docs.md" id="editing-links">Editing links</h2>
+<p>The simplest way to contribute to the documentation is to click any of the “✎” icons next to the headers.</p>
+<p>They link to the “edit” page in Github. There, one can make and commit the edits in only a few seconds.</p>
+<h2 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/25_contrib/60_contributing_to_docs.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/25_contrib/60_contributing_to_docs.md" id="comments">Comments</h2>
+<p>In the multiple-page version, each page also includes a comment box powered by a service called Disqus. This provides a way for people to write comments with a very low barrier. (We would periodically remove the comments.)</p>
+<h2 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/25_contrib/60_contributing_to_docs.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/25_contrib/60_contributing_to_docs.md" id="installing-docs-system">Installing dependencies for compiling the documentation</h2>
+<p>Let <code>DUCKUMENTS</code> be the base directory for the documentation.</p>
+<p>Download the <code>duckuments</code> repo in that directory:</p>
+<pre class="console"><code><span class="console_sign">$</span> <span class="git program">git</span> <span class="clone program_command">clone</span> git@github.com:duckietown/duckuments.git $DUCKUMENTS
+</code></pre>
+<p>Cd into directory:</p>
+<pre class="console"><code><span class="console_sign">$</span> <span class="cd program">cd</span> $DUCKUMENTS
+</code></pre>
+<p>On Ubuntu 16.04, create a virtual environment usign <code>virtualenv</code>:</p>
+<pre class="console"><code><span class="console_sign">$</span> virtualenv <span class="program_option">--system-site-packages</span> deploy
+</code></pre>
+<p>In other distributions you might need to use <code>venv</code>:</p>
+<pre class="console"><code><span class="console_sign">$</span> venv deploy
+</code></pre>
+<p>Activate the virtual environment:</p>
+<pre class="console"><code><span class="console_sign">$</span> source $DUCKUMENTS/deploy/bin/activate
+</code></pre>
+<p>Install some dependencies:</p>
+<pre class="console"><code><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt-get program">apt-get</span> <span class="install program_command">install</span> libxml2-dev libxslt1-dev
+<span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt-get program">apt-get</span> <span class="install program_command">install</span> libffi6 libffi-dev
+<span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt-get program">apt-get</span> <span class="install program_command">install</span> python-dev python-numpy python-matplotlib
+</code></pre>
+<p>Clone the <code>mcdp</code> external repository:</p>
+<pre class="console"><code><span class="console_sign">$</span> <span class="cd program">cd</span> $DUCKUMENTS
+<span class="console_sign">$</span> <span class="git program">git</span> <span class="clone program_command">clone</span> <span class="program_option">-b</span> duckuments git@github.com:AndreaCensi/mcdp.git
+</code></pre>
+<p>Install it and its dependencies:</p>
+<pre class="console"><code><span class="console_sign">$</span> <span class="cd program">cd</span> $DUCKUMENTS/mcdp
+<span class="console_sign">$</span> <span class="python program">python</span> setup.py <span class="develop program_command">develop</span>
+</code></pre>
+<p>Depending on your system, you might need to install these other dependencies:
+(It should not be necessary on Ubuntu 16 given the <code>apt-get</code> commands above.)</p>
+<pre class="console"><code><span class="console_sign">$</span> <span class="cd program">cd</span> $DUCKUMENTS
+<span class="console_sign">$</span> <span class="pip program">pip</span> <span class="install program_command">install</span> numpy matplotlib
+</code></pre>
+<p>Ensure the latest version (&gt;6) of <code>nodejs</code> is installed.</p>
+<p>Run:</p>
+<pre class="console"><code><span class="console_sign">$</span> nodejs <span class="program_option">--version</span>
+6.xx
+</code></pre>
+<p>If the version is 4 or less, remove <code>nodejs</code>:</p>
+<pre class="console"><code><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt-get program">apt-get</span> remove nodejs
+</code></pre>
+<p>Install <code>nodejs</code> using <a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions">the instructions at this page</a>.</p>
+<p>Next, install the necessary Javascript libraries using <code>npm</code>:</p>
+<pre class="console"><code><span class="console_sign">$</span> <span class="cd program">cd</span> $DUCKUMENTS
+<span class="console_sign">$</span> <span class="npm program">npm</span> <span class="install program_command">install</span> MathJax-node jsdom@9.3 less
+</code></pre>
+<p>Install PrinceXML from <a href="https://www.princexml.com/download/">this page</a>.</p>
+<div class="todo-wrap"><p class="todo">instructions for fonts</p></div>
+<h2 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/25_contrib/60_contributing_to_docs.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/25_contrib/60_contributing_to_docs.md" id="troubleshooting-installation-problems">Troubleshooting installation problems</h2>
+<h3 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/25_contrib/60_contributing_to_docs.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/25_contrib/60_contributing_to_docs.md" id="installing-nodejs-packages">Installing <code>nodejs</code> packages</h3>
+<p>The only pain point  in the installation procedure has been the installation of <code>nodejs</code> packages using <code>npm</code>. For some reason, they cannot be installated globally (<code>npm install -g</code>).</p>
+<p>Do not use <code>sudo</code> for installation. It will cause problems.</p>
+<p>If you use <code>sudo</code>, you probably have to delete a bunch of directories,
+such as: <code>RBROOT/node_modules</code>, <code>/.npm</code>, and <code>/.node_modules</code>, if they exist.</p>
+<h2 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/25_contrib/60_contributing_to_docs.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/25_contrib/60_contributing_to_docs.md" id="compiling-the-documentation">Compiling the documentation</h2>
+<p>Make sure you have deployed and activated the virtual environment. Then:</p>
+<pre class="console"><code><span class="console_sign">$</span> <span class="cd program">cd</span> $DUCKUMENTS
+<span class="console_sign">$</span> make duckuments-dist
+</code></pre>
+<p>This creates the directory <code>duckuments-dist</code>, which contains
+another checked out copy of the repository, but with the branch <code>gh-pages</code>, which
+is the branch that is published by Github using the “Github Pages” mechanism.</p>
+<p>At this point, please make sure that you have these two <code>.git</code> folders:</p>
+<pre><code>$DUCKUMENTS/.git
+$DUCKUMENTS/duckuments-dist/.git
+</code></pre>
+<p>To compile the docs, go in the <code>DUCKUMENTS</code> directory and run <code>make compile</code>:</p>
+<pre class="console"><code><span class="console_sign">$</span> <span class="cd program">cd</span> $DUCKUMENTS
+<span class="console_sign">$</span> make all split
+</code></pre>
+<p>This creates the following files:</p>
+<ul>
+<li><code>duckuments-dist/master/duckiebook.html</code> is a single-page HTML of everything.</li>
+<li><code>duckuments-dist/master/duckiebook.pdf</code> is the PDF version.</li>
+<li><code>duckuments-dist/master/duckiebook/index.html</code> is the first page of the version with each chapter on a different page.</li>
+</ul>
+<h2 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/25_contrib/60_contributing_to_docs.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/25_contrib/60_contributing_to_docs.md" id="deploying-the-documentation">Deploying the documentation</h2>
+<p>To deploy the documentation, jump into the <code>DUCKUMENTS/duckuments-dist</code> directory.</p>
+<p>Run the command <code>git branch</code>. If the out does not say that you are on the branch <code>gh-pages</code>,
+then one of the steps before was done incorrectly.</p>
+<pre class="console"><code><span class="console_sign">$</span> <span class="cd program">cd</span> $DUCKUMENTS/duckuments-dist
+<span class="console_sign">$</span> <span class="git program">git</span> branch
+...
+* gh-pages
+...
+</code></pre>
+<p>Now, after triple checking that you are in the <code>gh-pages</code> branch, you can
+use <code>git status</code> to see the files that were added or modified,
+and simply use <code>git add</code>, <code>git commit</code> and <code>git push</code> to push the files
+to Github.</p><div style="display:none">Because of mathjax bug</div><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><style id="MathJax_SVG_styles" type="text/css">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+</style></div></body></html>
