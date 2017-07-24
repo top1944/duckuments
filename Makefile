@@ -21,11 +21,15 @@ duckuments-dist:
 automatic-compile:
 	git pull
 	$(MAKE) clean
-	$(MAKE) all split
-	git -C duckuments-dist pull -X ours
+	$(MAKE) compile-slow
+	# $(MAKE) compile-pdf
+	$(MAKE) upload
+
+upload:
+	#git -C duckuments-dist pull -X ours
 	git -C duckuments-dist add $(duckuments-branch)
 	git -C duckuments-dist commit -a -m "automatic compilation"
-	git -C duckuments-dist push
+	git -C duckuments-dist push --force
 
 
 clean:
@@ -54,6 +58,10 @@ compile-pdf:
 compile:
 	$(MAKE) compile-html
 	$(MAKE) split
+
+compile-slow:
+	$(MAKE) compile-html-slow
+	$(MAKE) split
 	
 compile-html:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
@@ -61,7 +69,18 @@ compile-html:
 		--stylesheet v_manual_split \
 		--mathjax 0 \
 		-o $(tmp_files) \
-		--output_file $(out_html).tmp -c "config echo 1; rparmake"
+		--output_file $(out_html).tmp -c "config echo 1; config colorize 0; rparmake"
+
+	python -m mcdp_docs.add_edit_links < $(out_html).tmp > $(out_html).localcss.html
+	python -m mcdp_docs.embed_css < $(out_html).localcss.html > $(out_html)
+
+compile-html-slow:
+	DISABLE_CONTRACTS=1 mcdp-render-manual \
+		--src docs/ \
+		--stylesheet v_manual_split \
+		--mathjax 0 \
+		-o $(tmp_files) \
+		--output_file $(out_html).tmp -c "config echo 1; rmake"
 
 	python -m mcdp_docs.add_edit_links < $(out_html).tmp > $(out_html).localcss.html
 	python -m mcdp_docs.embed_css < $(out_html).localcss.html > $(out_html)
