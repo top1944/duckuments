@@ -26,7 +26,7 @@ As a student in Fall 2017, these are the accounts that you need:
 
 As an instructor/TA for the Fall 2017 class, in addition to the accounts above, these are the accounts that you need:
 
-- Twist: for class organization;
+- Twist: for class organization (TAs, etc.);
 - Google Docs, used to maintain TODOs.
 
 ## For other contributors
