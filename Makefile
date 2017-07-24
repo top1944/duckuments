@@ -22,6 +22,7 @@ automatic-compile:
 	git pull
 	$(MAKE) clean
 	$(MAKE) all split
+	git -C duckuments-dist pull -X ours
 	git -C duckuments-dist add $(duckuments-branch)
 	git -C duckuments-dist commit -a -m "automatic compilation"
 	git -C duckuments-dist push
