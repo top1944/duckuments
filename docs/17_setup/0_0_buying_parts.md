@@ -1,4 +1,4 @@
-# Acquiring the parts for the Duckiebot (2017 version)
+# Acquiring the parts for the Duckiebot 
 
 The trip begins with acquiring the parts. Here, we provide a link to all bits and pieces that
 are needed to build a Duckiebot and the Duckietowns.

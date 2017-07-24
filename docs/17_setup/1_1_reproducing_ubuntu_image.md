@@ -1,4 +1,4 @@
-# Reproducing the Ubuntu image
+# Reproducing the Ubuntu image for the Duckiebot
 
 These are the instructions to reproduce the Ubuntu image that we use.
 
@@ -85,19 +85,3 @@ commands:
 
     duckiebot $ sudo apt-get update
     duckiebot $ sudo apt-get dist-upgrade
-
-
-# Duckietop installation
-
-These are Andrea's notes for installing in a virtual machine.
-
-(screenshot1)
-
-(screenshot2)
-
-I chose the following options:
-
-        language: English
-        username: ubuntu
-        password: ubuntu
-        hostname: duckietop

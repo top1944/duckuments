@@ -26,7 +26,7 @@ They link to the “edit” page in Github. There, one can make and commit the e
 
 In the multiple-page version, each page also includes a comment box powered by a service called Disqus. This provides a way for people to write comments with a very low barrier. (We would periodically remove the comments.)
 
-## Installing dependencies for compiling the documentation
+## Installing dependencies for compiling the documentation {#installing-docs-system}
 
 Let `DUCKUMENTS` be the base directory for the documentation.
 

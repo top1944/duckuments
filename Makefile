@@ -4,11 +4,13 @@ duckuments-branch=master
 dist_dir=duckuments-dist/$(duckuments-branch)
 
 out_html=$(dist_dir)/duckiebook.html
+out_html2=$(dist_dir)/duckiebook_pdf.html
 out_pdf=$(dist_dir)/duckiebook.pdf
 
 tmp_files=out/tmp
+tmp_files2=out/tmp2
 
-all: $(out_pdf)
+all: compile compile-pdf
 
 .PHONY: $(out_html)
 
@@ -27,16 +29,32 @@ automatic-compile:
 
 clean:
 	rm -rf $(tmp_files)
+	rm -rf $(tmp_files2)
 	rm -rf $(dist_dir)/duckiebook*
 
 $(out_html): $(wildcard docs/**/*md)
 	$(MAKE) compile
 
 compile-pdf:
-	$(MAKE) compile
-	$(MAKE) $(out_pdf)
+	# mathjax is 1 in this case
+	DISABLE_CONTRACTS=1 mcdp-render-manual \
+		--src docs/ \
+		--stylesheet v_manual_split \
+		--mathjax 1 \
+		-o $(tmp_files2) \
+		--output_file $(out_html2).tmp -c "config echo 1; rparmake"
+
+	python -m mcdp_docs.add_edit_links < $(out_html2).tmp > $(out_html2)
+
+	prince --javascript -o $(out_pdf) $(out_html2)
+
+	# open $(out_pdf)
 
 compile:
+	$(MAKE) compile-html
+	$(MAKE) split
+	
+compile-html:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src docs/ \
 		--stylesheet v_manual_split \
@@ -53,3 +71,4 @@ compile:
 
 split:
 	python -m mcdp_docs.split $(out_html) $(dist_dir)/duckiebook
+	python -m mcdp_docs.add_mathjax $(dist_dir)/duckiebook/*html
