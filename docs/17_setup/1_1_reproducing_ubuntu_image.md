@@ -41,10 +41,17 @@ Then decompress using the command `xz`:
 
     laptop $ xz -d ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img.xz
 
-### Finding your device name for the SD card
+### Finding your device name for the SD card an unmount it
 
-TODO: How to find the device name?
+    laptop $ df -h
 
+Inspect the output for something like `/dev/mmcblk0`
+If you don't see anything like that, take out the sd card and run the command again and see what disappeared.
+
+Next unmount all the partitions associated with the device probably:
+
+    laptop $ sudo umount /dev/mmcblk0p1
+    laptop $ sudo umount /dev/mmcblk0p2 
 
 ### Burn the image to an SD card
 
