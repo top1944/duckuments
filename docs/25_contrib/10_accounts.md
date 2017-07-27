@@ -19,9 +19,9 @@ Currently, Duckietown has the following accounts:
 
 As a student in Fall 2017, these are the accounts that you need:
 
-- A Github account and membership of the Duckietown organization.
+- A Github account and membership in the Duckietown organization.
 - A Slack account, for team discussion and organization.
-- Dropbox: we will have 1 account that can be shared for uploading files (movies, logs). It is not necessary to install the Dropbox client on ones computer or to download all the files.
+- Dropbox: we will have 1 account that can be shared for uploading files (movies, logs). It is not necessary to install the Dropbox client on one's computer or to download all the files.
 
 As an instructor/TA for the Fall 2017 class, in addition to the accounts above, these are the accounts that you need:
 
