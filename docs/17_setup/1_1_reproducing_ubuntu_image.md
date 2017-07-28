@@ -29,12 +29,10 @@ The file we are looking for is:
         size: 1.2 GB
       SHA256: dc3afcad68a5de3ba683dc30d2093a3b5b3cd6b2c16c0b5de8d50fede78f75c2
 
-Run the command `sha256` to make sure you have the right version:
+Run the command `sha256sum` to make sure you have the right version:
 
-    laptop $ sha256 ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img.xz
+    laptop $ sha256sum ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img.xz
     dc3afcad68a5de3ba683dc30d2093a3b5b3cd6b2c16c0b5de8d50fede78f75c2
-
-(to run this command you may need to do `sudo apt-get install hashalot`)
 
 If the string does not correspond exactly, your download was corrupted.
 Delete the file and try again.
