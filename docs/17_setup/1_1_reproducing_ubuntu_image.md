@@ -94,3 +94,5 @@ commands:
 
     duckiebot $ sudo apt-get update
     duckiebot $ sudo apt-get dist-upgrade
+
+(Expect dist-upgrade to take quite a long time - e.g. 2hrs)
