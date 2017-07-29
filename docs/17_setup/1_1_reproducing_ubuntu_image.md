@@ -29,9 +29,9 @@ The file we are looking for is:
         size: 1.2 GB
       SHA256: dc3afcad68a5de3ba683dc30d2093a3b5b3cd6b2c16c0b5de8d50fede78f75c2
 
-Run the command `sha256` to make sure you have the right version:
+Run the command `sha256sum` to make sure you have the right version:
 
-    laptop $ sha256 ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img.xz
+    laptop $ sha256sum ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img.xz
     dc3afcad68a5de3ba683dc30d2093a3b5b3cd6b2c16c0b5de8d50fede78f75c2
 
 If the string does not correspond exactly, your download was corrupted.
@@ -41,10 +41,17 @@ Then decompress using the command `xz`:
 
     laptop $ xz -d ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img.xz
 
-### Finding your device name for the SD card
+### Finding your device name for the SD card an unmount it
 
-TODO: How to find the device name?
+    laptop $ df -h
 
+Inspect the output for something like `/dev/mmcblk0`
+If you don't see anything like that, take out the sd card and run the command again and see what disappeared.
+
+Next unmount all the partitions associated with the device probably:
+
+    laptop $ sudo umount /dev/mmcblk0p1
+    laptop $ sudo umount /dev/mmcblk0p2 
 
 ### Burn the image to an SD card
 

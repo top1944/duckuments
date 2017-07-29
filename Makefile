@@ -23,13 +23,14 @@ automatic-compile:
 	$(MAKE) clean
 	$(MAKE) compile-slow
 	# $(MAKE) compile-pdf
-	$(MAKE) upload
+	-$(MAKE) upload
 
 upload:
 	#git -C duckuments-dist pull -X ours
-	git -C duckuments-dist add $(duckuments-branch)
-	git -C duckuments-dist commit -a -m "automatic compilation"
-	git -C duckuments-dist push --force
+	echo ignoring errors
+	-git -C duckuments-dist add $(duckuments-branch)
+	-git -C duckuments-dist commit -a -m "automatic compilation"
+	-git -C duckuments-dist push --force
 
 
 clean:
@@ -69,7 +70,7 @@ compile-html:
 		--stylesheet v_manual_split \
 		--mathjax 0 \
 		-o $(tmp_files) \
-		--output_file $(out_html).tmp -c "config echo 1; rparmake"
+		--output_file $(out_html).tmp -c "config echo 1; config colorize 1; rparmake"
 
 	python -m mcdp_docs.add_edit_links < $(out_html).tmp > $(out_html).localcss.html
 	python -m mcdp_docs.embed_css < $(out_html).localcss.html > $(out_html)
@@ -80,7 +81,7 @@ compile-html-slow:
 		--stylesheet v_manual_split \
 		--mathjax 0 \
 		-o $(tmp_files) \
-		--output_file $(out_html).tmp -c "config echo 1; rmake"
+		--output_file $(out_html).tmp -c "config echo 1; config colorize 0; rmake"
 
 	python -m mcdp_docs.add_edit_links < $(out_html).tmp > $(out_html).localcss.html
 	python -m mcdp_docs.embed_css < $(out_html).localcss.html > $(out_html)

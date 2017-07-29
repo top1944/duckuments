@@ -19,7 +19,7 @@ Currently, Duckietown has the following accounts:
 
 As a student in Fall 2017, these are the accounts that you need:
 
-- A Github account and membership of the Duckietown organization.
+- A Github account and membership in the Duckietown organization.
 - A Slack account, for team discussion and organization.
 
 As an instructor/TA for the Fall 2017 class, in addition to the accounts above, these are the accounts that you need:
