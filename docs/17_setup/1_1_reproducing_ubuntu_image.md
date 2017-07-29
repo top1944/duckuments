@@ -80,6 +80,8 @@ I chose the following options:
     password: ubuntu
     hostname: duckiebot
 
+(LP: I also chose the option to log in automatically)
+
 Then I rebooteed.
 
 ### Update installed software
