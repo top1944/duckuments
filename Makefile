@@ -62,14 +62,14 @@ compile:
 compile-slow:
 	$(MAKE) compile-html-slow
 	$(MAKE) split
-	
+
 compile-html:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src docs/ \
 		--stylesheet v_manual_split \
 		--mathjax 0 \
 		-o $(tmp_files) \
-		--output_file $(out_html).tmp -c "config echo 1; config colorize 0; rparmake"
+		--output_file $(out_html).tmp -c "config echo 1; rparmake"
 
 	python -m mcdp_docs.add_edit_links < $(out_html).tmp > $(out_html).localcss.html
 	python -m mcdp_docs.embed_css < $(out_html).localcss.html > $(out_html)
