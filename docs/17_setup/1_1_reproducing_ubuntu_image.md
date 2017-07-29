@@ -45,7 +45,7 @@ Then decompress using the command `xz`:
 
     laptop $ df -h
 
-Inspect the output for something like `/dev/mmcblk0`
+Inspect the output for something like `/dev/mmcblk0`, you may see `/dev/mmcblk0pX` of a couple of similar entries for each partition on the card, where `X` is the partition number.
 If you don't see anything like that, take out the sd card and run the command again and see what disappeared.
 
 Next unmount all the partitions associated with the device probably:
@@ -60,7 +60,7 @@ Then burn to disc using the command `dd`:
     laptop $ sudo dd of=DEVICE if=IMG status=progress bs=4M
 
 where `IMG` is the `.img` file you unzipped, and `DEVICE` is the device
-that represents your SD card reader.
+that represents your SD card reader (NB without partitions. ie, `/dev/mmcblk0` not `/dev/mmcblk0pX`)
 
 ### Verify that the SD card was created correctly
 
