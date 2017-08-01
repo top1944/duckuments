@@ -87,7 +87,7 @@ Go to settings ([](#fig:github1)).
 
 <img figure-id='fig:github1'  class='github-screenshot'  src='github1.png'/>
 
-Add the two SSH keys that you created (on the laptop and on the robot).
+Add the two private SSH keys that you created (on the laptop and on the robot).
 
 <img figure-id='fig:github2' class='github-screenshot'  src='github2.png'/>
 
