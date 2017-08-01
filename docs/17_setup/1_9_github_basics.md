@@ -9,7 +9,7 @@ You will thus create two private/public key pairs.
 
 An SSH key can be generated with the command:
 
-    $ ssh-keygen -h
+    laptop / duckiebot $ ssh-keygen -h
 
 The program will prompt you for the filename on which to save the file.
 
@@ -102,20 +102,20 @@ This step should be performed twice, once on the laptop and once on the robot.
 
 First, create the file `~/.ssh/config`:
 
-    duckiebot $ touch ~/.ssh/config
+    laptop / duckiebot $ touch ~/.ssh/config
 
 Add a line containing "<code>IdentityFile <span class="custom">PRIVATE_KEY_FILE</span></code>"
 (using the filename for the private key).
 
 Check that the config file is correct:
 
-    duckiebot $ cat ~/.ssh/config
+    laptop / duckiebot $ cat ~/.ssh/config
     IdentityFile ~/.ssh/PRIVATE_KEY_FILE
 
 To check that all of this works, use the command `ssh -T git@github.com`. The
 command tries to connect to Github using the private keys that you specified:
 
-    $ ssh -T git@github.com
+    laptop / duckiebot $ ssh -T git@github.com
     Warning: Permanently added the RSA host key for IP address '192.30.252.128' to the list of known hosts.
     Hi USERNAME! You've successfully authenticated, but GitHub does not provide shell access.
 
@@ -123,3 +123,16 @@ If you don't see the greeting, stop.
 
 Repeat what you just did for the Duckiebot on the laptop as well, making sure
 to change the name of the file containing the private key.
+
+
+## Setting up global configurations for Git
+On your laptop, set up git, with the following commands:
+
+    laptop / duckiebot $ git config --global user.email "<email>"
+    laptop / duckiebot $ git config --global user.name "<name>"
+
+The email will be public in our repository’s history. You should use either the @mit.edu email or <nickname>@duckietown.com.
+
+Also do this, and it doesn’t matter if you don’t know what it is:
+
+$ git config --global push.default simple
