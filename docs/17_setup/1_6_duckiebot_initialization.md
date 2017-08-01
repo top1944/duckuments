@@ -11,29 +11,18 @@ Result:
 * A Duckiebot that is ready to use
 
 
-## Setting up a PI with an HDMI monitor
-
-Put the SD card in your PI.
-
-Attach an HDMI cable to the PI.
-
-Note: It’s important that you connect the HDMI cable before powering up the PI.
-
-Attach a USB keyboard.
-
-Plug in the WiFi USB dongle.
-
-Power up. You should see a login screen.
-
 ## Login and update base system
 
-Login. (username: ubuntu, password: ubuntu)
+at this stage you can ssh into your robot with 
+
+	laptop$ ssh ubuntu@duckiebot.local
+pwd ubuntu
 
 ## Learn to love Byobu
 
 Run "byobu":
 
-duckiebot $ byobu
+	duckiebot $ byobu
 
 Yes, you need to learn to use byobu, unless you know an equivalent program. You will save much time later. 
 
@@ -50,41 +39,31 @@ Ctrl-F6: close current terminal
 Using control sequences:
 
 	ctrl-A then C: creates new terminal
-
 	ctrl-A then number: switches to terminal
 
 To quit a terminal: 
 
-duckiebot $ exit 
+	duckiebot $ exit 
 
 ## Update basic system
 
 Use:
 
-duckiebot $ sudo apt-get update
+	duckiebot $ sudo apt-get update
+	duckiebot $ sudo apt-get dist-upgrade
 
-duckiebot $ sudo apt-get dist-upgrade
-
-## Camera Test with a monitor
+## Camera Test
 
 You can test the camera right away, without setting up ROS.
 
 Use the command:
 
-	duckiebot $ raspistill -t 100000 -o out.jpg
+	duckiebot $ raspistill -t 1 -o out.jpg
 
-You should see an image on the screen. If it’s black, remove the lens cap.
-Rotate the lens until the image is in focus. Press ‘Ctrl + c’ to exit.
 
-## Camera Test without a monitor
+Then download out.jpg using scp:
 
-If you don’t have a monitor, you can still take a picture and see it on your computer. Use this:
-
-sudo raspistill -t 1 -o out.jpg
-
-Then, **after all network setup is done**, download out.jpg using scp:
-
-$ scp ubuntu@<robot name>.local:~/out.jpg out.jpg]
+	laptop$ scp ubuntu@duckiebot.local:~/out.jpg out.jpg]
 
 ## Do not change the default shell
 
@@ -117,5 +96,4 @@ $ sudo reboot
 When you reboot, you should see your new hostname:
 
     Ubuntu 16.04.2 LTS 
-
     $duckiebot$ login:
