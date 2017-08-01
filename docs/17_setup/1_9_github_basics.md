@@ -131,8 +131,8 @@ On your laptop, set up git, with the following commands:
     laptop / duckiebot $ git config --global user.email "<email>"
     laptop / duckiebot $ git config --global user.name "<name>"
 
-The email will be public in our repository’s history. You should use either the @mit.edu email or <nickname>@duckietown.com.
+The email will be public in our repository’s history. 
 
 Also do this, and it doesn’t matter if you don’t know what it is:
 
-$ git config --global push.default simple
+    laptop / duckiebot $ git config --global push.default simple
