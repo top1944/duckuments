@@ -1,4 +1,4 @@
-# SD Image to remote control
+# Duckiebot Initialization
 
 Prerequisites:
 
