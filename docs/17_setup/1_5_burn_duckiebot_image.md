@@ -1,4 +1,4 @@
-# Burn the image
+# Burn the Duckiebot image
 
 Prerequisites:
 
