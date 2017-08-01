@@ -6,7 +6,9 @@ Connect your laptop to the same network as the robot.
 
 From your laptop, now you should be able to ping the duckiebot:
 
-	laptop $ ping duckiebot.local
+	laptop $ ping ROBOTNAME.local
+
+(or if you have not changed your hostname then ROBOTNAME=duckiebot)
 
 Do not continue if you cannot do this successfully. 
 
@@ -68,25 +70,19 @@ If there are issues such as "scheme missing" and the file duckietown_key1 does n
 
 To move the mislabeled file:
 
-im ~
-
 	laptop $ mv "duckietown_key1?dl=1"  ~/.ssh/duckietown_key1
 
-On the laptop, now edit  ~/.ssh/config:  
+On the laptop, now edit  ~/.ssh/config:
 
 laptop $ nano ~/.ssh/config
 
 and add the following lines:
 
-Host **duckiebot**
-
-Hostname duckiebot.local
-
-	User ubuntu
-
-	IdentityFile ~/.ssh/duckietown_key1
-
-HostKeyAlgorithms ssh-rsa
+	Host **ROBOTNAME**
+		Hostname ROBOTNAME.local
+		User ubuntu
+		IdentityFile ~/.ssh/duckietown_key1
+		HostKeyAlgorithms ssh-rsa
 
 Now you should be able to ssh passwordlessly from your laptop:
 
