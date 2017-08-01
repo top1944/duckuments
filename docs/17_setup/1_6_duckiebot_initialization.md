@@ -11,18 +11,19 @@ Result:
 * A Duckiebot that is ready to use
 
 
+
 ## Login and update base system
 
-at this stage you can ssh into your robot with 
+If you are in an environment where there is a wireless network with SSID "duckietown" and pwd quackquack then good news! your robot is (should be) already connected to the network. If not you can either connect through an wired LAN or worst case connect a monitor and keyboard.
+
+to ssh into your robot with do:
 
 	laptop$ ssh ubuntu@duckiebot.local
 pwd ubuntu
 
 ## Learn to love Byobu
 
-Run "byobu":
-
-	duckiebot $ byobu
+By default your robot terminal boots into *byobu*. 
 
 Yes, you need to learn to use byobu, unless you know an equivalent program. You will save much time later. 
 
@@ -44,6 +45,24 @@ Using control sequences:
 To quit a terminal: 
 
 	duckiebot $ exit 
+
+
+## Wireless network configuration
+
+The duckiebot is configured by default to connect to a wireless network with SSID "duckietown". If that is not your SSID then you will need to change/add a new clause to the */etc/wpa_supplicant/wpa_supplicant.conf* file:
+
+	duckiebot $ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+	
+you will see a block:
+
+	network={
+	 ssid="duckietown"
+	 scan_ssid=1
+	 psk="quackquack"
+	 priority=10
+	}
+
+either modify that one or add a new one with your ssid and password (assuming you have a roughly similar wireless network setup - if not then you might need to change some of the other attributes)
 
 ## Update basic system
 
