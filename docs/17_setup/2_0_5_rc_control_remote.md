@@ -24,37 +24,6 @@ Then, build the workspace (you have to be under the catkin_ws folder to invoke c
 
     duckiebot $ make build
 
-**Note**: *the catkin_make command might fail* with a message about "exhausted virtual memory" and invoking "do make -j4 -l4" failed. The output output is similar to this:
-
-```
-[  2%] [  4%] [  4%] Building CXX object slam/CMakeFiles/sum_and_average_node.dir/src/sum_and_average_node.cpp.o
-Building CXX object slam/CMakeFiles/slamNode.dir/src/slamNode.cpp.o
-Building CXX object slam/CMakeFiles/listener.dir/src/listener.cpp.o
-virtual memory exhausted: Cannot allocate memory
-make[2]: *** [slam/CMakeFiles/listener.dir/src/listener.cpp.o] Error 1
-make[1]: *** [slam/CMakeFiles/listener.dir/all] Error 2
-make[1]: *** Waiting for unfinished jobs....
-Invoking "make -j4 -l4" failed
-```
-
-Do the following:
-
-Create an empty file using the dd (device-to-device copy) command:
-
-    duckiebot $ sudo dd if=/dev/zero of=/swap0 bs=1M count=512 # This is for a 512 MB swap space.
-
-Format the file for use as swap:
-
-    duckiebot $ sudo mkswap /swap0
-
-Add the swap file to the system configuration:
-
-    duckiebot $ sudo emacs  /etc/fstab and add "/swap0 swap swap" at the bottom
-
-Activate the swap space:
-
-    duckiebot $ sudo swapon -a
-
 ## Add your vehicle to the machines file
 
 On the robot edit the file
