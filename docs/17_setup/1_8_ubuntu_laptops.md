@@ -6,11 +6,11 @@ Connect your laptop to the same network as the robot.
 
 From your laptop, now you should be able to ping the duckiebot:
 
-	laptop $ ping ROBOTNAME.local
+    laptop $ ping ROBOTNAME.local
 
 (or if you have not changed your hostname then ROBOTNAME=duckiebot)
 
-Do not continue if you cannot do this successfully. 
+Do not continue if you cannot do this successfully.
 
 **_Protip_***: In general, if you find yourself:*
 
@@ -26,7 +26,7 @@ Do not continue if you cannot do this successfully.
 
 Verify that you can ssh to the PI:
 
-laptop $ ssh ubuntu@duckiebot.local 
+    laptop $ ssh ubuntu@duckiebot.local
 
 Say "yes" if you get asked whether you want to add it to a list of known hosts.
 
@@ -34,19 +34,19 @@ Say "yes" if you get asked whether you want to add it to a list of known hosts.
 
 Warning: the ECDSA host key for ... differs from the key for the IP address '10.0.1.17'
 
-Offending key for IP in /Users/<user>/.ssh/known_hosts:<line>
+    Offending key for IP in /Users/<user>/.ssh/known_hosts:<line>
 
-then remove line <line> in ~/.ssh/known_hosts
+then remove line &lt;line&gt; in ~/.ssh/known_hosts
 
 Now, let’s set up **passwordless ssh.**
 
 On the laptop, create the .ssh directory:
 
-	laptop $ mkdir -p ~/.ssh
+    laptop $ mkdir -p ~/.ssh
 
 Install the duckietown_key1 by downloading it:
 
-laptop $ wget -O ~/.ssh/duckietown_key1 "https://www.dropbox.com/s/q23qptu01u7ur3y/duckietown_key1?dl=1"
+    laptop $ wget -O ~/.ssh/duckietown_key1 "https://www.dropbox.com/s/q23qptu01u7ur3y/duckietown_key1?dl=1"
 
 **Changing Key Permission **
 
@@ -54,39 +54,39 @@ Edit the permission of the file to make ssh happy. The key file must not be read
 
 **1**
 
-laptop $ 
+    laptop $
 
-chmod 600 ~/.ssh/duckietown_key1
+    chmod 600 ~/.ssh/duckietown_key1
 
-chmod 600 ~/.ssh/duckietown_key1
+    chmod 600 ~/.ssh/duckietown_key1
 
 Regenerate the public key according to:za
 
-laptop $ ssh-keygen -f ~/.ssh/duckietown_key1 -y > ~/.ssh/duckietown_key1.pub
+    laptop $ ssh-keygen -f ~/.ssh/duckietown_key1 -y > ~/.ssh/duckietown_key1.pub
 
 **Troubleshooting**
 
-If there are issues such as "scheme missing" and the file duckietown_key1 does not exist in ~/.ssh/ folder but instead downloaded a file named duckietown_key1?dl=1 in the current folder simply rename duckietown_key1?dl=1 to duckietown_key1 and copy it over to the directory ~/.ssh/. 
+If there are issues such as "scheme missing" and the file duckietown_key1 does not exist in ~/.ssh/ folder but instead downloaded a file named duckietown_key1?dl=1 in the current folder simply rename duckietown_key1?dl=1 to duckietown_key1 and copy it over to the directory ~/.ssh/.
 
 To move the mislabeled file:
 
-	laptop $ mv "duckietown_key1?dl=1"  ~/.ssh/duckietown_key1
+    laptop $ mv "duckietown_key1?dl=1"  ~/.ssh/duckietown_key1
 
 On the laptop, now edit  ~/.ssh/config:
 
-laptop $ nano ~/.ssh/config
+    laptop $ nano ~/.ssh/config
 
 and add the following lines:
 
-	Host **ROBOTNAME**
-		Hostname ROBOTNAME.local
-		User ubuntu
-		IdentityFile ~/.ssh/duckietown_key1
-		HostKeyAlgorithms ssh-rsa
+    Host **ROBOTNAME**
+    Hostname ROBOTNAME.local
+    User ubuntu
+    IdentityFile ~/.ssh/duckietown_key1
+    HostKeyAlgorithms ssh-rsa
 
 Now you should be able to ssh passwordlessly from your laptop:
 
-	laptop $ ssh **duckiebot**
+    laptop $ ssh **duckiebot**
 
 This should succeed. Do not continue unless it does.
 
