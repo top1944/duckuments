@@ -45,7 +45,7 @@ compile-pdf:
 	# mathjax is 1 in this case
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src docs/ \
-		--stylesheet v_manual_split \
+		--stylesheet v_manual_blurb_ready \
 		--mathjax 1 \
 		-o $(tmp_files2) \
 		--output_file $(out_html2).tmp -c "config echo 1; rparmake"

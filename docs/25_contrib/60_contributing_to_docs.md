@@ -130,7 +130,16 @@ At this point, please make sure that you have these two `.git` folders:
 To compile the docs, go in the `DUCKUMENTS` directory and run `make compile`:
 
     $ cd $DUCKUMENTS
-    $ make all split
+    $ make clean compile
+
+If you want to do incremental compilation, you can omit the `clean` and just
+use:
+
+    $ make compile
+
+To compile the PDF, use:
+
+    $ make compile-pdf
 
 This creates the following files:
 
@@ -139,6 +148,8 @@ This creates the following files:
 * `duckuments-dist/master/duckiebook/index.html` is the first page of the version with each chapter on a different page.
 
 ## Deploying the documentation
+
+**This is now done by a bot.**
 
 To deploy the documentation, jump into the `DUCKUMENTS/duckuments-dist` directory.
 

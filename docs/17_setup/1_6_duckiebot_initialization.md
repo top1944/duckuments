@@ -103,7 +103,7 @@ Also edit /etc/hosts and put  "ROBOT_NAME" instead of “duckiebot”:
     duckiebot $ sudo nano /etc/hosts
 
 **Note: the command "sudo hostname duckiebot" is not enough. The change will not persist. You need to go through the steps above.**
-
+``
 **NEVER ADD HOSTNAMES IN /etc/hosts (e.g. duckiebot.local)**
 
 Then reboot:
