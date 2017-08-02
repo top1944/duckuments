@@ -92,17 +92,15 @@ If you know what you are doing, you are welcome to install and use additional sh
 
 ## Set hostname
 
-Choose a name for your robot. This is a simple string that will always appear lowercase.
+Choose a name for your robot. This is a simple string that will always appear lowercase. 
 
-Suppose that the name is "duckiebot".
-
-Edit /etc/hostname and put "duckiebot" instead of “ubuntu”.
+Edit /etc/hostname and put "ROBOT_NAME" instead of “duckiebot”.
 
 	duckiebot $ sudo nano /etc/hostname 
 
-Also edit /etc/hosts and replace "ubuntu" with “duckiebot”:
+Also edit /etc/hosts and put  "ROBOT_NAME" instead of “duckiebot”:
 
-duckiebot $ sudo nano /etc/hosts
+	duckiebot $ sudo nano /etc/hosts
 
 **Note: the command "sudo hostname duckiebot" is not enough. The change will not persist. You need to go through the steps above.**
 
@@ -110,9 +108,9 @@ duckiebot $ sudo nano /etc/hosts
 
 Then reboot:
 
-$ sudo reboot
+	$ sudo reboot
 
 When you reboot, you should see your new hostname:
 
     Ubuntu 16.04.2 LTS 
-    $duckiebot$ login:
+    $ROBOT_NAME$ login:
