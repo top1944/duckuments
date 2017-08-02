@@ -38,7 +38,7 @@ Cd into directory:
 
     $ cd $DUCKUMENTS
 
-On Ubuntu 16.04, create a virtual environment usign `virtualenv`:
+On Ubuntu 16.04, create a virtual environment usign `virtualenv` (`sudo apt install virtualenv` if needed):
 
     $ virtualenv --system-site-packages deploy
 
@@ -65,6 +65,8 @@ Install it and its dependencies:
 
     $ cd $DUCKUMENTS/mcdp
     $ python setup.py develop
+
+(LP: I got a permission error here and stopped)
 
 Depending on your system, you might need to install these other dependencies:
 (It should not be necessary on Ubuntu 16 given the `apt-get` commands above.)
