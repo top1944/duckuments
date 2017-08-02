@@ -66,7 +66,7 @@ Install it and its dependencies:
     $ cd $DUCKUMENTS/mcdp
     $ python setup.py develop
 
-(LP: I got a permission error here and stopped)
+(If you get a permission error here, it means you have not properly activated the virtualenv)
 
 Depending on your system, you might need to install these other dependencies:
 (It should not be necessary on Ubuntu 16 given the `apt-get` commands above.)
