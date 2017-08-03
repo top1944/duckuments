@@ -5,4 +5,4 @@ that we want to maintain polished.
 For installation instructions, see the chapter "Contributing to the documentation"
 in the [current version of the Duckiebook][duckiebook].
 
-[duckiebook]: https://github.com/duckietown/duckuments/raw/dist/duckiebook.pdf
+[duckiebook]: http://book.duckietown.org/master/duckiebook/index.html
