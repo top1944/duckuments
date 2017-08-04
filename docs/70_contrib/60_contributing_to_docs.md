@@ -100,6 +100,18 @@ Install PrinceXML from [this page](https://www.princexml.com/download/).
 
 TODO: instructions for fonts
 
+Download STIX fonts from [this site][stix].
+
+[stix]: https://sourceforge.net/projects/stixfonts/files/latest/download
+
+Unzip and copy the ttf to `~/.fonts`:
+
+    $ cp -R STIXv2.0.0 ~/.fonts
+
+and then rebuild the font cache using:
+
+    $ fc-cache -fv
+
 
 ## Troubleshooting installation problems
 
