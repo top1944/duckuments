@@ -1,4 +1,4 @@
-# Reference for useful software commands
+# Linux reference
 
 This is a reference for all commands mentioned in the documentation.
 
@@ -8,30 +8,38 @@ For each one, please add a description or a link to documentation/tutorials onli
 
 (To write)
 
-    $ sudo apt-get install ssh
+    $ sudo apt install ssh
 
 ## Byobu
 
 (To write)
 
-    sudo apt-get install byobu
+    sudo apt install byobu
 
 ## VIM
 
-(To write)
+The editor to choose is VI, or more precisely, `vim` (improved vi).
 
-    sudo apt-get install vim
+Install like this:
+
+    sudo apt install vim
+
+Documentation:
+
+* [A VIM tutorial](http://www.openvim.com/)
 
 ## `htop`
 
 Use `htop` to monitor CPU usage:
 
-    sudo apt-get install htop
+    sudo apt install htop
 
 ## Git and related commands
 
 Additional utilities for `git`:
 
-    sudo apt-get install git-extras
+    sudo apt install git-extras
+
+This adds `git-ignore`.
 
 (To write)

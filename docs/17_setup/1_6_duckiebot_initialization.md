@@ -68,8 +68,8 @@ either modify that one or add a new one with your ssid and password (assuming yo
 
 Use:
 
-    duckiebot $ sudo apt-get update
-    duckiebot $ sudo apt-get dist-upgrade
+    duckiebot $ sudo apt update
+    duckiebot $ sudo apt dist-upgrade
 
 ## Camera Test
 

@@ -24,42 +24,11 @@ Then, build the workspace (you have to be under the catkin_ws folder to invoke c
 
     duckiebot $ make build
 
-**Note**: *the catkin_make command might fail* with a message about "exhausted virtual memory" and invoking "do make -j4 -l4" failed. The output output is similar to this:
-
-```
-[  2%] [  4%] [  4%] Building CXX object slam/CMakeFiles/sum_and_average_node.dir/src/sum_and_average_node.cpp.o
-Building CXX object slam/CMakeFiles/slamNode.dir/src/slamNode.cpp.o
-Building CXX object slam/CMakeFiles/listener.dir/src/listener.cpp.o
-virtual memory exhausted: Cannot allocate memory
-make[2]: *** [slam/CMakeFiles/listener.dir/src/listener.cpp.o] Error 1
-make[1]: *** [slam/CMakeFiles/listener.dir/all] Error 2
-make[1]: *** Waiting for unfinished jobs....
-Invoking "make -j4 -l4" failed
-```
-
-Do the following:
-
-Create an empty file using the dd (device-to-device copy) command:
-
-    duckiebot $ sudo dd if=/dev/zero of=/swap0 bs=1M count=512 # This is for a 512 MB swap space.
-
-Format the file for use as swap:
-
-    duckiebot $ sudo mkswap /swap0
-
-Add the swap file to the system configuration:
-
-    duckiebot $ sudo emacs  /etc/fstab and add "/swap0 swap swap" at the bottom
-
-Activate the swap space:
-
-    duckiebot $ sudo swapon -a
-
 ## Add your vehicle to the machines file
 
 On the robot edit the file
 
-    duckiebot $ nano ~/duckietown/catkin_ws/src/duckietown/machines
+    duckiebot $ vi ~/duckietown/catkin_ws/src/duckietown/machines
 
     <launch>
         <arg name="env_script_path" default="~/duckietown/environment.sh"/>
@@ -78,17 +47,17 @@ commit and push the new machines file.
 
 ## Run the joystick demo
 
-don’t have a joystick? Move to
+don’t have a joystick? Move to XXX
 
 Plug the joystick to one of the usb port on the RasPi.
 
 SSH into your PI. Go to the duckietown folder and invoke the following scripts:
 
-    duckiebot:~/duckietown$ source environment.sh
+    duckiebot $ cd ~/duckietown
+    duckiebot $ source environment.sh
+    duckiebot $ source set_ros_master.sh
 
-    duckiebot:~/duckietown$ source set_ros_master.sh
-
-The environment.sh setup the ROS environment at the terminal (so you can use commands like rosrun and roslaunch). The set_ros_master.sh by default sets the PI as its own rosmaster.
+The `environment.sh` setups the ROS environment at the terminal (so you can use commands like rosrun and roslaunch). The `set_ros_master.sh` by default sets the PI as its own rosmaster.
 
 Now make sure the motor shield is connected.
 
@@ -118,13 +87,13 @@ Close the program using Ctrl-C.
 
 **Troubleshooting - robot does not move**: The joy_mapper_test.launch assumes that the joystick is at /dev/input/js0. To make sure that the joystick is there, you can do
 
-    $ ls /dev/input/
+    duckiebot $ ls /dev/input/
 
-and check if there is a js0 on the list.
+and check if there is a `js0` on the list.
 
 To test whether or not the joystick itself is working properly (without ROS), you can do
 
-    $ jstest /dev/input/js0
+    duckiebot $ jstest /dev/input/js0
 
 Move the joysticks and push the buttons and check the printouts.
 
@@ -132,13 +101,13 @@ Move the joysticks and push the buttons and check the printouts.
 
 shutting down the robot:
 
-    sudo shutdown -h now
+    duckiebot $ sudo shutdown -h now
 
-then physically disconnect power cables
+then physically disconnect power cables.
 
 # Proper shutdown procedure for the PI
 
-Ctrl-C in the terminal of joystick.launch when you’re done.
+Ctrl-C in the terminal of joystick.launch when you're done.
 
 **To shutdown: DO NOT DISCONNECT THE POWER - the system might get corrupted. **Instead, issue the following command:
 

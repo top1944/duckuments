@@ -38,7 +38,7 @@ Cd into directory:
 
     $ cd $DUCKUMENTS
 
-On Ubuntu 16.04, create a virtual environment usign `virtualenv`:
+On Ubuntu 16.04, create a virtual environment usign `virtualenv` (`sudo apt install virtualenv` if needed):
 
     $ virtualenv --system-site-packages deploy
 
@@ -52,9 +52,9 @@ Activate the virtual environment:
 
 Install some dependencies:
 
-    $ sudo apt-get install libxml2-dev libxslt1-dev
-    $ sudo apt-get install libffi6 libffi-dev
-    $ sudo apt-get install python-dev python-numpy python-matplotlib
+    $ sudo apt install libxml2-dev libxslt1-dev
+    $ sudo apt install libffi6 libffi-dev
+    $ sudo apt install python-dev python-numpy python-matplotlib
 
 Clone the `mcdp` external repository:
 
@@ -66,8 +66,10 @@ Install it and its dependencies:
     $ cd $DUCKUMENTS/mcdp
     $ python setup.py develop
 
+(If you get a permission error here, it means you have not properly activated the virtualenv)
+
 Depending on your system, you might need to install these other dependencies:
-(It should not be necessary on Ubuntu 16 given the `apt-get` commands above.)
+(It should not be necessary on Ubuntu 16 given the `apt` commands above.)
 
     $ cd $DUCKUMENTS
     $ pip install numpy matplotlib
@@ -81,13 +83,13 @@ Run:
 
 If the version is 4 or less, remove `nodejs`:
 
-    $ sudo apt-get remove nodejs
+    $ sudo apt remove nodejs
 
 Install `nodejs` using [the instructions at this page][nodejs].
 
 [nodejs]: https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
 
-<!-- $ sudo apt-get install node-less -->
+<!-- $ sudo apt install node-less -->
 
 Next, install the necessary Javascript libraries using `npm`:
 
