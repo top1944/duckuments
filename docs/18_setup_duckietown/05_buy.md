@@ -1,0 +1,1 @@
+# Acquiring the parts

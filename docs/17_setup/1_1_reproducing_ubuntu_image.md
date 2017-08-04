@@ -1,6 +1,10 @@
-# Reproducing the Ubuntu image for the Duckiebot
+# Reproducing the image
 
 These are the instructions to reproduce the Ubuntu image that we use.
+
+Please note that the image is already available, so you don't need to do this manually.
+
+However, this documentation might be useful if you would like to port the software to a different distribution.
 
 We organize this in three steps:
 
@@ -51,7 +55,7 @@ If you don't see anything like that, take out the sd card and run the command ag
 Next unmount all the partitions associated with the device probably:
 
     laptop $ sudo umount /dev/mmcblk0p1
-    laptop $ sudo umount /dev/mmcblk0p2 
+    laptop $ sudo umount /dev/mmcblk0p2
 
 ### Burn the image to an SD card
 

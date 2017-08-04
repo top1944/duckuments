@@ -1,4 +1,4 @@
-# Reproducing the Ubuntu image for laptops
+# Reproducing the image for laptops
 
 These are Andrea's notes for the laptops (Duckietops).
 
