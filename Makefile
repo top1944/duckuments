@@ -22,7 +22,8 @@ automatic-compile:
 	git pull
 	$(MAKE) clean
 	$(MAKE) compile-slow
-	# $(MAKE) compile-pdf
+	-$(MAKE) upload
+	$(MAKE) compile-pdf
 	-$(MAKE) upload
 
 upload:
