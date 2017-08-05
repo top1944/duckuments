@@ -38,6 +38,8 @@ Cd into directory:
 
     $ cd $DUCKUMENTS
 
+### Setup a virtual environment
+
 On Ubuntu 16.04, create a virtual environment usign `virtualenv` (`sudo apt install virtualenv` if needed):
 
     $ virtualenv --system-site-packages deploy
@@ -97,8 +99,6 @@ Next, install the necessary Javascript libraries using `npm`:
     $ npm install MathJax-node jsdom@9.3 less
 
 Install PrinceXML from [this page](https://www.princexml.com/download/).
-
-TODO: instructions for fonts
 
 Download STIX fonts from [this site][stix].
 

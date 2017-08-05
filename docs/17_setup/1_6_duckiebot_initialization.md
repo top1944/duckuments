@@ -18,7 +18,8 @@ If you are in an environment where there is a wireless network with SSID "duckie
 
 to ssh into your robot with do:
 
-    laptop$ ssh ubuntu@duckiebot.local
+    laptop $ ssh ubuntu@duckiebot.local
+
 pwd ubuntu
 
 ## Learn to love Byobu
@@ -51,7 +52,7 @@ To quit a terminal:
 
 The duckiebot is configured by default to connect to a wireless network with SSID "duckietown". If that is not your SSID then you will need to change/add a new clause to the */etc/wpa_supplicant/wpa_supplicant.conf* file:
 
-    duckiebot $ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+    duckiebot $ sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
 
 you will see a block:
 
@@ -82,7 +83,7 @@ Use the command:
 
 Then download out.jpg using scp:
 
-    laptop$ scp ubuntu@duckiebot.local:~/out.jpg out.jpg]
+    laptop $ scp ubuntu@duckiebot.local:~/out.jpg out.jpg
 
 ## Do not change the default shell
 
@@ -96,11 +97,11 @@ Choose a name for your robot. This is a simple string that will always appear lo
 
 Edit /etc/hostname and put "ROBOT_NAME" instead of “duckiebot”.
 
-    duckiebot $ sudo nano /etc/hostname
+    duckiebot $ sudo vi /etc/hostname
 
 Also edit /etc/hosts and put  "ROBOT_NAME" instead of “duckiebot”:
 
-    duckiebot $ sudo nano /etc/hosts
+    duckiebot $ sudo vi /etc/hosts
 
 **Note: the command "sudo hostname duckiebot" is not enough. The change will not persist. You need to go through the steps above.**
 ``
