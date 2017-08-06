@@ -49,8 +49,8 @@ Then decompress using the command `xz`:
 
     laptop $ df -h
 
-Inspect the output for something like `/dev/mmcblk0`, you may see `/dev/mmcblk0pX` of a couple of similar entries for each partition on the card, where `X` is the partition number.
-If you don't see anything like that, take out the sd card and run the command again and see what disappeared.
+Inspect the output for something like `/dev/mmcblk0`, you may see `/dev/mmcblk0pX` or a couple of similar entries for each partition on the card, where `X` is the partition number.
+If you don't see anything like that, take out the SD card and run the command again and see what disappeared.
 
 Next unmount all the partitions associated with the device probably:
 
@@ -64,7 +64,7 @@ Then burn to disc using the command `dd`:
     laptop $ sudo dd of=DEVICE if=IMG status=progress bs=4M
 
 where `IMG` is the `.img` file you unzipped, and `DEVICE` is the device
-that represents your SD card reader (NB without partitions. ie, `/dev/mmcblk0` not `/dev/mmcblk0pX`)
+that represents your SD card reader. Note without partitions. i.e., `/dev/mmcblk0`, not `/dev/mmcblk0pX`.
 
 ### Verify that the SD card was created correctly
 
@@ -135,21 +135,53 @@ first commands are copied from [http://wiki.ros.org/kinetic/Installation/Ubuntu]
 
 ### Install packages
 
-    duckiebot $ sudo apt install -y emacs vim byobu build-essential git python python-dev ipython libblas-dev liblapack-dev libatlas-base-dev gfortran libyaml-cpp-dev python-sklearn i2c-tools python-smbus
+Install these packages.
+
+
+Editors / shells:
+
+    duckiebot $ sudo apt install -y emacs vim byobu
+
+Git:
+
+    duckiebot $ sudo apt install -y git git-extras
+
+Etckeeper:
+
+    duckiebot $ sudo apt install etckeeper
+
+Other:
+
+    duckiebot $ sudo apt install htop
+
+Development:
+
+    duckiebot $ sudo apt install -y build-essential libblas-dev liblapack-dev libatlas-base-dev gfortran libyaml-cpp-dev
+
+Python:
+
+    duckiebot $ sudo apt install -y python python-dev ipython python-sklearn python-smbus
+
     duckiebot $ sudo pip install scipy --upgrade
 
-(may need to do the following but might be done already through raspi-config):
+I2C:
+
+    duckiebot $ sudo apt install -y i2c-tools
+
+You may need to do the following but might be done already through `raspi-config`:
 
     duckiebot $ sudo usermod -a -G i2c ubuntu
-    duckibot $ sudo udevadm trigger
+    duckiebot $ sudo udevadm trigger
 
 ### Optional user preferences
 
-To automatically boot into byobu:
+To automatically boot into `byobu`:
 
     duckiebot $ byobu-enable
 
-This can be disabled with byobu-disable.
+This can be disabled with `byobu-disable`.
+
+XXX: the above is per-user; should not be done here.
 
 ### Wireless configuration
 
@@ -193,8 +225,16 @@ network={
 }
 ```
 
+### SSH server config
+
+TODO: install SSH and run it on boot
+
+
+    $ sudo systemctl enable ssh
 
 ### SSH config
+
+XXX: This is per-user.
 
 Add `.authorized_keys` in the image so that we can all do passwordless ssh.
 
@@ -232,4 +272,4 @@ Activate the swap space:
 
     duckiebot $ sudo swapon -a
 
-(Can probably do something similar through `raspi-config`.)
+(You can probably do something similar through `raspi-config`.)
