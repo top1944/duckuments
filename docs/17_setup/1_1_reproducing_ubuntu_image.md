@@ -49,22 +49,26 @@ Then decompress using the command `xz`:
 
     laptop $ df -h
 
-Inspect the output for something like `/dev/mmcblk0`, you may see `/dev/mmcblk0pX` or a couple of similar entries for each partition on the card, where `X` is the partition number.
-If you don't see anything like that, take out the SD card and run the command again and see what disappeared.
+Inspect the output for something like `/dev/mmcblk0`.  You may see
+`/dev/mmcblk0pX` or a couple of similar entries for each partition on the card,
+where `X` is the partition number. If you don't see anything like that, take out
+the SD card and run the command again and see what disappeared.
 
-Next unmount all the partitions associated with the device probably:
+Next unmount all the partitions associated with the device:
 
     laptop $ sudo umount /dev/mmcblk0p1
     laptop $ sudo umount /dev/mmcblk0p2
 
 ### Burn the image to an SD card
 
-Then burn to disc using the command `dd`:
+Then burn to disk using the command `dd`:
 
-    laptop $ sudo dd of=DEVICE if=IMG status=progress bs=4M
+    laptop $ sudo dd of=![device] if=![image file] status=progress bs=4M
 
-where `IMG` is the `.img` file you unzipped, and `DEVICE` is the device
-that represents your SD card reader. Note without partitions. i.e., `/dev/mmcblk0`, not `/dev/mmcblk0pX`.
+where `IMG` is the `.img` file you unzipped, and `device` is the device
+that represents your SD card reader.
+
+Note: use the name of the device, without partitions. i.e., `/dev/mmcblk0`, not `/dev/mmcblk0pX`.
 
 ### Verify that the SD card was created correctly
 
@@ -99,38 +103,22 @@ commands:
     duckiebot $ sudo apt update
     duckiebot $ sudo apt dist-upgrade
 
-(Expect dist-upgrade to take quite a long time - e.g. 2hrs)
+Expect dist-upgrade to take quite a long time - e.g. 2hrs.
 
 ## Part 2: Dependencies and Configurations
 
 ### Raspi Config
 
-The raspi is not sshable by default, the camera is disabled, and the I2C bus is disabled. We need to fix those things:
+The raspi is not sshable by default, the camera is disabled, and the I2C bus is disabled. We need to fix those things.
+
+Run `raspi-config`:
 
     duckiebot $ sudo raspi-config
-     choose 3. Interfacing Options,
-     P2 SSH
-     change no to yes
-     back
-     P1 camera
-     change no to yes
-     back
-     P3 I2C
-     change no to yes
-     back
-     finish
 
-things to be installed:
+choose "3. Interfacing Options",
+and enable SSH, camera, and I2C.
 
-### ROS
-
-first commands are copied from [http://wiki.ros.org/kinetic/Installation/Ubuntu](http://wiki.ros.org/kinetic/Installation/Ubuntu)
-
-    duckiebot $ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-    duckiebot $ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
-    duckiebot $ sudo apt update
-    duckiebot $ sudo apt install ros-kinetic-desktop-full
-    duckiebot $ sudo apt install ros-$ROS_DISTRO-{tf-conversions,cv-bridge,image-transport,camera-info-manager,theora-image-transport,joy,image-proc,compressed-image-transport,phidgets-drivers,imu-complementary-filter,imu-filter-madgwick}
+In "5. Advanced options", "A3 Memory Split", select 256 MB for the GPU memory.
 
 
 ### Install packages
@@ -168,10 +156,41 @@ I2C:
 
     duckiebot $ sudo apt install -y i2c-tools
 
-You may need to do the following but might be done already through `raspi-config`:
+You may need to do the following (but might be done already through `raspi-config`):
 
     duckiebot $ sudo usermod -a -G i2c ubuntu
     duckiebot $ sudo udevadm trigger
+
+
+### ROS
+
+The first commands are copied from [this page][ros-ubuntu].
+
+[ros-ubuntu]: http://wiki.ros.org/kinetic/Installation/Ubuntu
+
+Tell Ubuntu where to find ROS:
+
+    duckiebot $ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
+Tell Ubuntu that you trust the ROS people (they are nice folks):
+
+    duckiebot $ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+
+Fetch the ROS repo:
+
+    duckiebot $ sudo apt update
+
+Now install the mega-package `ros-kinetic-desktop-full`.
+
+    duckiebot $ sudo apt install ros-kinetic-desktop-full
+
+There's more to install:
+
+    duckiebot $ sudo apt install ros-kinetic-{tf-conversions,cv-bridge,image-transport,camera-info-manager,theora-image-transport,joy,image-proc,compressed-image-transport,phidgets-drivers,imu-complementary-filter,imu-filter-madgwick}
+
+XXX: do we need Phidgets if we are not using the IMU this year?
+
+
 
 ### Optional user preferences
 
@@ -187,7 +206,7 @@ XXX: the above is per-user; should not be done here.
 
 There are the two key to edit files:
 
-* `/etc/network/interfaces` should look like this:
+The file `/etc/network/interfaces` should look like this:
 
 ```
  interfaces(5) file used by ifup(8) and ifdown(8)
@@ -206,7 +225,8 @@ iface wlan0 inet dhcp
 wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 iface default inet dhcp
 ```
-* `/etc/wpa_supplicant/wpa_supplicant.conf` should look like this:
+
+The file `/etc/wpa_supplicant/wpa_supplicant.conf` should look like this:
 
 ```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -227,8 +247,7 @@ network={
 
 ### SSH server config
 
-TODO: install SSH and run it on boot
-
+This enables the SSH server:
 
     $ sudo systemctl enable ssh
 
@@ -248,11 +267,11 @@ On the PI, download the official key:
     duckiebot $ wget -O .ssh/authorized_keys https://www.dropbox.com/s/pxyou3qy1p8m4d0/duckietown_key1.pub?dl=1
 
 
-### Swap Space
+### Create swap Space
 
 Do the following:
 
-Create an empty file using the dd (device-to-device copy) command:
+Create an empty file using the `dd` (device-to-device copy) command:
 
     duckiebot $ sudo dd if=/dev/zero of=/swap0 bs=1M count=512
 

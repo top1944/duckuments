@@ -12,17 +12,17 @@ From your laptop, now you should be able to ping the duckiebot:
 
 Do not continue if you cannot do this successfully.
 
-**_Protip_***: In general, if you find yourself:*
+**_Protip_**: In general, if you find yourself:*
 
-* *typing an IP*
+* typing an IP
 
-* *typing a password*
+* typing a password
 
-* *typing "ssh" more than once*
+* typing "ssh" more than once
 
-* *using a screen / USB keyboard *
+* using a screen / USB keyboard
 
-*it means you should learn more about Linux and networks, and you are setting yourself up for failure. Yes, you "can do without", but with an additional 30 seconds of your time. The 30 seconds you are not saving every time are the difference between being productive roboticists and going crazy. Really, it is impossible to do robotics when you have to think about IPs and passwords... *
+it means you should learn more about Linux and networks, and you are setting yourself up for failure. Yes, you "can do without", but with an additional 30 seconds of your time. The 30 seconds you are not saving every time are the difference between being productive roboticists and going crazy. Really, it is impossible to do robotics when you have to think about IPs and passwords...
 
 Verify that you can ssh to the PI:
 
