@@ -73,8 +73,8 @@ compile-html:
 		-o $(tmp_files) \
 		--output_file $(out_html).tmp -c "config echo 1; config colorize 1; rparmake"
 
-	python -m mcdp_docs.add_edit_links < $(out_html).tmp > $(out_html).localcss.html
-	python -m mcdp_docs.embed_css < $(out_html).localcss.html > $(out_html)
+	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp 
+	python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
 
 compile-html-slow:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
@@ -84,8 +84,8 @@ compile-html-slow:
 		-o $(tmp_files) \
 		--output_file $(out_html).tmp -c "config echo 1; config colorize 0; rmake"
 
-	python -m mcdp_docs.add_edit_links < $(out_html).tmp > $(out_html).localcss.html
-	python -m mcdp_docs.embed_css < $(out_html).localcss.html > $(out_html)
+	python -m mcdp_docs.add_edit_links $(out_html).localcss.html < $(out_html).tmp
+	python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
 
 %.pdf: %.html
 	prince --javascript -o $@ $<
