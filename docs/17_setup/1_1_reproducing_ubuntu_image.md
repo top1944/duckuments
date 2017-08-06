@@ -49,22 +49,26 @@ Then decompress using the command `xz`:
 
     laptop $ df -h
 
-Inspect the output for something like `/dev/mmcblk0`, you may see `/dev/mmcblk0pX` or a couple of similar entries for each partition on the card, where `X` is the partition number.
-If you don't see anything like that, take out the SD card and run the command again and see what disappeared.
+Inspect the output for something like `/dev/mmcblk0`.  You may see
+`/dev/mmcblk0pX` or a couple of similar entries for each partition on the card,
+where `X` is the partition number. If you don't see anything like that, take out
+the SD card and run the command again and see what disappeared.
 
-Next unmount all the partitions associated with the device probably:
+Next unmount all the partitions associated with the device:
 
     laptop $ sudo umount /dev/mmcblk0p1
     laptop $ sudo umount /dev/mmcblk0p2
 
 ### Burn the image to an SD card
 
-Then burn to disc using the command `dd`:
+Then burn to disk using the command `dd`:
 
-    laptop $ sudo dd of=DEVICE if=IMG status=progress bs=4M
+    laptop $ sudo dd of=![device] if=![image file] status=progress bs=4M
 
-where `IMG` is the `.img` file you unzipped, and `DEVICE` is the device
-that represents your SD card reader. Note without partitions. i.e., `/dev/mmcblk0`, not `/dev/mmcblk0pX`.
+where `IMG` is the `.img` file you unzipped, and `device` is the device
+that represents your SD card reader.
+
+Note: use the name of the device, without partitions. i.e., `/dev/mmcblk0`, not `/dev/mmcblk0pX`.
 
 ### Verify that the SD card was created correctly
 
@@ -99,16 +103,20 @@ commands:
     duckiebot $ sudo apt update
     duckiebot $ sudo apt dist-upgrade
 
-(Expect dist-upgrade to take quite a long time - e.g. 2hrs)
+Expect dist-upgrade to take quite a long time - e.g. 2hrs.
 
 ## Part 2: Dependencies and Configurations
 
 ### Raspi Config
 
-The raspi is not sshable by default, the camera is disabled, and the I2C bus is disabled. We need to fix those things:
+The raspi is not sshable by default, the camera is disabled, and the I2C bus is disabled. We need to fix those things.
+
+Run `raspi-config`:
 
     duckiebot $ sudo raspi-config
-     choose 3. Interfacing Options,
+
+choose 3. Interfacing Options
+
      P2 SSH
      change no to yes
      back

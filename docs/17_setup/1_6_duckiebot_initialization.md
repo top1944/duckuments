@@ -50,7 +50,7 @@ To quit a terminal:
 
 ## Wireless network configuration
 
-The duckiebot is configured by default to connect to a wireless network with SSID "duckietown". If that is not your SSID then you will need to change/add a new clause to the */etc/wpa_supplicant/wpa_supplicant.conf* file:
+The duckiebot is configured by default to connect to a wireless network with SSID "duckietown". If that is not your SSID then you will need to change/add a new clause to the `/etc/wpa_supplicant/wpa_supplicant.conf` file:
 
     duckiebot $ sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
 
