@@ -23,8 +23,8 @@ automatic-compile:
 	$(MAKE) clean
 	$(MAKE) compile-slow
 	-$(MAKE) upload
-	$(MAKE) compile-pdf
-	-$(MAKE) upload
+	# $(MAKE) compile-pdf
+	# -$(MAKE) upload
 
 upload:
 	#git -C duckuments-dist pull -X ours
