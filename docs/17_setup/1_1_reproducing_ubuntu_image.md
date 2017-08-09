@@ -25,7 +25,9 @@ Results:
 
 ### Download and uncompress the Ubuntu Mate image
 
-Download the image from the page https://ubuntu-mate.org/download/.
+Download the image from the page
+
+> [https://ubuntu-mate.org/download/](https://ubuntu-mate.org/download/)
 
 The file we are looking for is:
 
@@ -33,7 +35,7 @@ The file we are looking for is:
         size: 1.2 GB
       SHA256: dc3afcad68a5de3ba683dc30d2093a3b5b3cd6b2c16c0b5de8d50fede78f75c2
 
-Run the command `sha256sum` to make sure you have the right version:
+After download, run the command `sha256sum` to make sure you have the right version:
 
     laptop $ sha256sum ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img.xz
     dc3afcad68a5de3ba683dc30d2093a3b5b3cd6b2c16c0b5de8d50fede78f75c2
