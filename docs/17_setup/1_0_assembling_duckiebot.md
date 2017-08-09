@@ -1,4 +1,4 @@
 # Assembling the Duckiebot
 
-Shiying: change this frown face to a smiling face: `:-)`.
+Shiying: hier will be the instruction about assembling the duckiebot. 
 :-)
