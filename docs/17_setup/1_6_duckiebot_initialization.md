@@ -11,20 +11,19 @@ Result:
 * A Duckiebot that is ready to use
 
 
-
 ## Login and update base system
 
-If you are in an environment where there is a wireless network with SSID "duckietown" and pwd quackquack then good news! your robot is (should be) already connected to the network. If not you can either connect through an wired LAN or worst case connect a monitor and keyboard.
+If you are in an environment where there is a wireless network with SSID "`duckietown`" and password "`quackquack`" then good news! your robot is (should be) already connected to the network. If not you can either connect through an wired LAN or worst case connect a monitor and keyboard.
 
-to ssh into your robot with do:
+To ssh into your robot do:
 
-    laptop $ ssh ubuntu@duckiebot.local
+    laptop $ ssh ubuntu@![robot name].local
 
-pwd ubuntu
+The pwd is `ubuntu`.
 
 ## Learn to love Byobu
 
-By default your robot terminal boots into *byobu*.
+By default your robot terminal boots into `byobu`.
 
 Yes, you need to learn to use byobu, unless you know an equivalent program. You will save much time later.
 
@@ -74,38 +73,45 @@ Use:
 
 ## Camera Test
 
-You can test the camera right away, without setting up ROS.
+You can test the camera right away using a command-line utility
+called `raspistill`.
 
-Use the command:
+Use this command to capture the file `out.jpg`:
 
     duckiebot $ raspistill -t 1 -o out.jpg
 
-
-Then download out.jpg using scp:
+Then download `out.jpg` using `scp`:
 
     laptop $ scp ubuntu@duckiebot.local:~/out.jpg out.jpg
 
 ## Do not change the default shell
 
-If you know what you are doing, you are welcome to install and use additional shells (such as zsh), but please keep **bash** as be the default shell. This is important for some scripts.
+If you know what you are doing, you are welcome to install and use additional shells (such as zsh), but please keep Bash as be the default shell. This is important for some scripts.
 
-(For the record, our favorite shell is zsh with oh-my-zsh.)
+(For the record, our favorite shell is ZSH with `oh-my-zsh`.)
 
 ## Set hostname
 
 Choose a name for your robot. This is a simple string that will always appear lowercase.
 
-Edit /etc/hostname and put "ROBOT_NAME" instead of “duckiebot”.
+Edit `/etc/hostname` and put "`![robot name]`" instead of `duckiebot`.
 
     duckiebot $ sudo vi /etc/hostname
 
-Also edit /etc/hosts and put  "ROBOT_NAME" instead of “duckiebot”:
+Also edit /etc/hosts and put "`![robot name]`" instead of `duckiebot`:
 
     duckiebot $ sudo vi /etc/hosts
 
-**Note: the command "sudo hostname duckiebot" is not enough. The change will not persist. You need to go through the steps above.**
-``
-**NEVER ADD HOSTNAMES IN /etc/hosts (e.g. duckiebot.local)**
+Note: the command
+
+    sudo hostname `![host name]`
+
+is not enough to actually change the hostname.
+The change will not persist. You need to go through the steps above.
+
+**NEVER ADD HOSTNAMES IN `/etc/hosts` (e.g. `duckiebot.local`)**
+
+XXX The above should be clarified; we just told them to do it.
 
 Then reboot:
 
@@ -114,4 +120,4 @@ Then reboot:
 When you reboot, you should see your new hostname:
 
     Ubuntu 16.04.2 LTS
-    $ROBOT_NAME$ login:
+    ![robot name] login:

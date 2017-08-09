@@ -47,15 +47,16 @@ Documentation:
 
 ### Testing SD Card and disk speed
 
-Test SD Card (or any disk) speed using:
+Test SD Card (or any disk) speed using the following commands,
+which write to a file called `![filename]`.
 
-    $ dd if=/dev/zero of=~/test.tmp bs=500K count=1024
+    $ dd if=/dev/zero of=![filename] bs=500K count=1024
     $ sync
     $ echo 3 | sudo tee /proc/sys/vm/drop_caches
-    $ dd if=~/test.tmp of=/dev/null bs=500K count=1024
-    $ rm ~/test.tmp
+    $ dd if=![filename] of=/dev/null bs=500K count=1024
+    $ rm ![filename]
 
-Note the `sync` and the following commands are very important.
+Note the `sync` and the `echo` command are very important.
 
 Example results:
 

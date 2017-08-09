@@ -1,71 +1,75 @@
-# Setup Github access
+# Setup Github access {#sec:github-access}
 
-This chapter describes how to create a Github account and setup SSH on the robot and on the laptop.
+This chapter describes how to create a Github account and setup SSH. on the robot and on the laptop.
 
 ## Create an SSH key on your machine
 
 This step needs to be repeated twice: once on the Duckiebot, and once on your laptop.
+
 You will thus create two private/public key pairs.
 
 An SSH key can be generated with the command:
 
-    laptop / duckiebot $ ssh-keygen -h
+    $ ssh-keygen -h
 
 The program will prompt you for the filename on which to save the file.
 
-When you do this on the robot, use this name convention:
+Use the convention
 
+    /home/![username]/.ssh/![username]@![host name]
 
-<style>
+So when you do this on the robot, use
 
-.custom { color: darkorange; }
-.github-screenshot {
-    max-width: 100%;
-    max-height: 15em;
-}
-</style>
+    /home/![ubuntu]/.ssh/![username]@![robot name]
 
-<pre>
-<code>/home/<span class='custom'>ubuntu</span>/.ssh/<span class='custom'>username@robot name</span></code>
-</pre>
+and when doing it on the laptop, use the file name:
 
-Of course, substitute your username and hostname.
+    /home/![username]/.ssh/![username]@![laptop name]
 
-When doing it on the laptop, use the file name:
+The session output will look something like this:
 
-<pre>
-<code>/home/<span class='custom'>username</span>/.ssh/<span class='custom'>username@laptop name</span></code>
-</pre>
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (/home/![username]/.ssh/id_rsa):
 
-The output will look something like this:
+Choose this file:
 
-<pre>
-<code>Generating public/private rsa key pair.
-Enter file in which to save the key (/home/<span class='custom'>username</span>/.ssh/id_rsa): /home/<span class='custom'>username</span>/.ssh/<span class='custom'>username@hostname</span>
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /home/<span class='custom'>username</span>/.ssh/<span class='custom'>username@hostname</span>
-Your public key has been saved in /home/<span class='custom'>username</span>/.ssh/<span class='custom'>username@hostname</span>.pub
-The key fingerprint is:
-XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX <span class='custom'>username@hostname</span>
-The key's randomart image is:
-+--[ RSA 2048]----+
-|            .    |
-|       o   o  .  |
-|      o = o  . o |
-|       B . .  * o|
-|        S o    O |
-|         o o  . E|
-|          o o  o |
-|           o  +  |
-|            .. . |
-+-----------------+
-</code>
-</pre>
+    /home/![username]/.ssh/![username]@![host name]
+
+Then:
+
+    Enter passphrase (empty for no passphrase):
+
+Press enter.
+
+    Enter same passphrase again:
+
+Press enter.
+
+    Your identification has been saved in /home/![username]/.ssh/![username]@![host name]
+    Your public key has been saved in /home/![username]/.ssh/![username]@![host name].pub
+    The key fingerprint is:
+    ![XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX] ![username]@![host name]
+    The key's randomart image is:
+    +--[ RSA 2048]----+
+    |            .    |
+    |       o   o  .  |
+    |      o = o  . o |
+    |       B . .  * o|
+    |        S o    O |
+    |         o o  . E|
+    |          o o  o |
+    |           o  +  |
+    |            .. . |
+    +-----------------+
+
 
 Note that the program created two files: a file that contains the private key in
-<code>/home/<span class='custom'>username</span>/.ssh/<span class='custom'>username@hostname</span></code> and a file that contains the public key with extension `.pub` called
-<code>/home/<span class='custom'>username</span>/.ssh/<span class='custom'>username@hostname</span><strong>.pub</strong></code>.
+
+    /home/![username]/.ssh/![username]@![host name]
+
+and a file that contains the public key with extension `.pub` called
+
+    /home/![username]/.ssh/![username]@![host name].pub
 
 ## Create a Github account
 
@@ -102,22 +106,31 @@ This step should be performed twice, once on the laptop and once on the robot.
 
 First, create the file `~/.ssh/config`:
 
-    laptop / duckiebot $ touch ~/.ssh/config
+    $ touch ~/.ssh/config
 
-Add a line containing "<code>IdentityFile <span class="custom">PRIVATE_KEY_FILE</span></code>"
+Add a line containing
+
+    IdentityFile ![PRIVATE_KEY_FILE]
+
 (using the filename for the private key).
 
 Check that the config file is correct:
 
-    laptop / duckiebot $ cat ~/.ssh/config
-    IdentityFile ~/.ssh/PRIVATE_KEY_FILE
+    $ cat ~/.ssh/config
 
-To check that all of this works, use the command `ssh -T git@github.com`. The
-command tries to connect to Github using the private keys that you specified:
+    IdentityFile ![PRIVATE_KEY_FILE]
 
-    laptop / duckiebot $ ssh -T git@github.com
-    Warning: Permanently added the RSA host key for IP address '192.30.252.128' to the list of known hosts.
-    Hi USERNAME! You've successfully authenticated, but GitHub does not provide shell access.
+To check that all of this works, use the command
+
+    $ ssh -T git@github.com
+
+The command tries to connect to Github using the private keys that you specified.
+This is the expected output:
+
+    $ ssh -T git@github.com
+
+    Warning: Permanently added the RSA host key for IP address '![ip address]' to the list of known hosts.
+    Hi ![username]! You've successfully authenticated, but GitHub does not provide shell access.
 
 If you don't see the greeting, stop.
 
@@ -126,13 +139,14 @@ to change the name of the file containing the private key.
 
 
 ## Setting up global configurations for Git
-On your laptop, set up git, with the following commands:
 
-    laptop / duckiebot $ git config --global user.email "<email>"
-    laptop / duckiebot $ git config --global user.name "<name>"
+Finally, set up Git options, with the following commands:
 
-The email will be public in our repository’s history. 
+    $ git config --global user.email "![email]"
+    $ git config --global user.name  "![full name]"
 
-Also do this, and it doesn’t matter if you don’t know what it is:
+The email will be public in our repository's history.
 
-    laptop / duckiebot $ git config --global push.default simple
+Also do this, and it doesn't matter if you don't know what it is:
+
+    $ git config --global push.default simple

@@ -188,28 +188,18 @@ There's more to install:
 
     duckiebot $ sudo apt install ros-kinetic-{tf-conversions,cv-bridge,image-transport,camera-info-manager,theora-image-transport,joy,image-proc,compressed-image-transport,phidgets-drivers,imu-complementary-filter,imu-filter-madgwick}
 
-XXX: do we need Phidgets if we are not using the IMU this year?
+XXX Do we need Phidgets if we are not using the IMU this year?
 
 
-
-### Optional user preferences
-
-To automatically boot into `byobu`:
-
-    duckiebot $ byobu-enable
-
-This can be disabled with `byobu-disable`.
-
-XXX: the above is per-user; should not be done here.
 
 ### Wireless configuration
 
-There are the two key to edit files:
+There are two files that are important to edit.
 
 The file `/etc/network/interfaces` should look like this:
 
 ```
- interfaces(5) file used by ifup(8) and ifdown(8)
+# interfaces(5) file used by ifup(8) and ifdown(8)
 # Include files from /etc/network/interfaces.d:
 #source-directory /etc/network/interfaces.d
 
@@ -251,21 +241,6 @@ This enables the SSH server:
 
     $ sudo systemctl enable ssh
 
-### SSH config
-
-XXX: This is per-user.
-
-Add `.authorized_keys` in the image so that we can all do passwordless ssh.
-
-Create the `.authorized_keys` files.
-
-On the PI, download the official key:
-
-    duckiebot $ cd ~
-    duckiebot $ mkdir -p .ssh
-    duckiebot $ chmod g-rwx,o-rwx .ssh
-    duckiebot $ wget -O .ssh/authorized_keys https://www.dropbox.com/s/pxyou3qy1p8m4d0/duckietown_key1.pub?dl=1
-
 
 ### Create swap Space
 
@@ -285,10 +260,76 @@ Add the swap file to the system configuration:
 
     duckiebot $ sudo vi /etc/fstab
 
-Add `/swap0 swap swap` at the bottom
+Add this line to the bottom:
+
+    /swap0 swap swap
 
 Activate the swap space:
 
     duckiebot $ sudo swapon -a
 
 (You can probably do something similar through `raspi-config`.)
+
+## Sudo
+
+### Make vi the default editor
+
+Run:
+
+    sudo update-alternatives --config editor
+
+And then choose `vim.basic`.
+
+### Passwordless sudo
+
+Run:
+
+    $ sudo visudo
+
+And then change this line:
+
+    %sudo   ALL=(ALL:ALL) ALL
+
+into this line:
+
+    %sudo   ALL=(ALL:ALL) NOPASSWD:ALL
+
+
+## Ubuntu user configuration
+
+### SSH config
+
+Add `.authorized_keys` in the image so that we can all do passwordless ssh.
+
+Create the `.authorized_keys` files.
+
+On the PI, download the official key:
+
+    duckiebot $ cd ~
+    duckiebot $ mkdir -p .ssh
+    duckiebot $ chmod g-rwx,o-rwx .ssh
+    duckiebot $ wget -O .ssh/authorized_keys https://www.dropbox.com/s/pxyou3qy1p8m4d0/duckietown_key1.pub?dl=1
+
+### Optional user preferences
+
+Configure to automatically boot into `byobu`:
+
+    duckiebot $ byobu-enable
+
+This can be disabled with `byobu-disable`.
+
+
+### Shell prompt
+
+Add the following lines to `~ubuntu/.bashrc`:
+
+    echo ""
+    echo "Welcome to a duckiebot!"
+    echo ""
+    echo "Reminders:"
+    echo ""
+    echo "1) Do not use the user 'ubuntu' for development - create your own user."
+    echo "2) Change the name of the robot from 'duckiebot' to something else."
+    echo ""
+
+    export EDITOR=vim

@@ -18,9 +18,9 @@ It is then processed by a series of scripts to create this output:
 
 ## Editing links
 
-The simplest way to contribute to the documentation is to click any of the “✎” icons next to the headers.
+The simplest way to contribute to the documentation is to click any of the "✎" icons next to the headers.
 
-They link to the “edit” page in Github. There, one can make and commit the edits in only a few seconds.
+They link to the "edit" page in Github. There, one can make and commit the edits in only a few seconds.
 
 ## Comments
 
@@ -146,24 +146,34 @@ To compile the docs, go in the `DUCKUMENTS` directory and run `make compile`:
     $ cd $DUCKUMENTS
     $ make clean compile
 
+To see the result, open the file
+
+    ./duckuments-dist/master/duckiebook/index.html
+
+### Incremental compilation
+
 If you want to do incremental compilation, you can omit the `clean` and just
 use:
 
     $ make compile
 
+This will be faster. However, sometimes it might get confused. At that point,
+do `make clean`.
+
+### Compiling the PDF
+
 To compile the PDF, use:
 
     $ make compile-pdf
 
-This creates the following files:
+This creates the file:
 
-* `duckuments-dist/master/duckiebook.html` is a single-page HTML of everything.
-* `duckuments-dist/master/duckiebook.pdf` is the PDF version.
-* `duckuments-dist/master/duckiebook/index.html` is the first page of the version with each chapter on a different page.
+    ./duckuments-dist/master/duckiebook.pdf
+
 
 ## Deploying the documentation
 
-**This is now done by a bot.**
+**This part is now done by a bot, so you don't need to do it manually.**
 
 To deploy the documentation, jump into the `DUCKUMENTS/duckuments-dist` directory.
 

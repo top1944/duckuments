@@ -1,13 +1,23 @@
-# Acquiring the parts for the Duckiebot 
+# Acquiring the parts for the Duckiebot
 
-The trip begins with acquiring the parts. Here, we provide a link to all bits and pieces that
-are needed to build a Duckiebot and the Duckietowns.
+The trip begins with acquiring the parts. Here, we provide a link to all bits and pieces that are needed to build a Duckiebot.
 
 In general, keep in mind that:
 
 - The links might expire, or the prices might vary.
 - In general, substitutions are OK for the mechanical components,
-  and not OK for all the rest.
+  and not OK for all the electronics, unless you are OK in writing
+  some software.
+
+## Duckiebot configurations
+
+Assigned: Shiying, Jacopo to maintain this.
+
+Configuration `D17-0`: Only camera and motors.
+
+Configuration `D17-0+w`: Previous one + an additional WiFi card (Edimax).
+
+Configuration `D17-1`: LED lights and bumpers
 
 
 ## Bill of materials
