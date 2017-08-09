@@ -14,3 +14,9 @@
 > Bad: "Ctrl-C from the command line".
 
 > Better: "Use Ctrl-C from the command line".
+
+* Use full English words:
+
+> Bad: "The pwd is `ubuntu`."
+
+> Better: "The password is `ubuntu`."

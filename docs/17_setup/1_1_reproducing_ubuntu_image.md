@@ -144,13 +144,14 @@ Other:
 
     duckiebot $ sudo apt install htop
 
+
 Development:
 
     duckiebot $ sudo apt install -y build-essential libblas-dev liblapack-dev libatlas-base-dev gfortran libyaml-cpp-dev
 
 Python:
 
-    duckiebot $ sudo apt install -y python python-dev ipython python-sklearn python-smbus
+    duckiebot $ sudo apt install -y python-dev ipython python-sklearn python-smbus
 
     duckiebot $ sudo pip install scipy --upgrade
 

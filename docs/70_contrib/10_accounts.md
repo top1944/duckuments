@@ -13,7 +13,7 @@ Currently, Duckietown has the following accounts:
 * The `duckietown-teaching` mailing list, for low-rate communication with instructors;
 * We also have a list of addresses, of people signed up on the website, that we didn't use yet;
 * The Facebook page.
-
+ 
 
 ## For Fall 2017
 
