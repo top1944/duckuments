@@ -17,6 +17,7 @@ Clone the repository using:
 
 * If it fails with weird errors, probably the time is not set up correctly. Use `ntpdate` as above:
 
+
     $ sudo ntpdate -u us.pool.ntp.org
 
 ## Set up ROS environment on the Duckiebot
