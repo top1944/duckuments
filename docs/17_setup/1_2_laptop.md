@@ -2,25 +2,32 @@
 
 Before you prepare the Duckiebot, you need to have a laptop with Ubuntu installed.
 
+<div class='requirements'>
+
 Requires:
 
 - A laptop with free disk space.
 - Internet connection to download the Ubuntu image.
-- About 1 hour XXX.
+- About ??? minutes.
+
+TODO: estimate time
 
 Results:
 
 - A laptop ready to be used for Duckietown.
 
+</div>
+
 ## Install Ubuntu
 
-The image was Ubuntu 16.04.2.
+Install Ubuntu 16.04.2.
 
-We are not writing here the instructions on how to install Ubuntu.
-
-See: See for example [this online tutorial][tutorial] on how to install Ubuntu.
+See: For instructions, see for example [this online tutorial][tutorial].
 
 [tutorial]: https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop
+
+**On the choice of username:**  During the installation, create a user for yourself with a username different from `ubuntu`, which is the default. Otherwise, you may get confused later.
+
 
 <!--
 
@@ -33,7 +40,7 @@ I chose the following options:
 
 If you choose a different username, you will need to change all the commands later. -->
 
-## Useful software
+## Install useful software
 
 Use `etckeeper` to keep track of the configuration in `/etc`:
 
@@ -85,6 +92,26 @@ Set to "autostart" from the icon.
 Next, install the documentation system using the documentation in [](#sub:installing-docs-system).
 
 
-## Other
+## Passwordless sudo
 
-See [](#howto-passwordless-sudo).
+Add passwordless `sudo`.
+
+See: This procedure is described in [](#howto-passwordless-sudo).
+
+## SSH and Git setup
+
+### Create key pair for `![username]`
+
+Next, create a private/public key pair for the user; call it `![username]@![robot name]`.
+
+See: The procedure is documented in [](#howto-create-key-pair).
+
+### Add `![username]`'s public key to Github
+
+Add the public key to your Github account.
+
+See: The procedure is documented in [](#howto-add-pubkey-to-github).
+
+If the step is done correctly, this command should succeed:
+
+    duckiebot $ ssh -T git@github.com

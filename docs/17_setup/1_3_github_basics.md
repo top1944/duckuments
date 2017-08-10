@@ -1,0 +1,95 @@
+# Setup Github access {#github-access}
+
+This chapter describes how to create a Github account and setup SSH
+on the robot and on the laptop.
+
+## Create a Github account
+
+Our example account is the following:
+
+    Github name: greta-p
+    E-mail: greta-p@duckietown.com
+
+Create a Github account ([](#fig:github0)).
+
+<!-- (redirects to Andrea)
+    greta-p@censi.org -->
+
+<img figure-id='fig:github0' style='width: 10em' class='github-screenshot' src='github0.png'/>
+
+Go to your inbox and verify the email.
+
+## Become a member of the Duckietown organization
+
+Give the administrators your account name. They will invite you.
+
+Accept the invitation to join the organization that you will find in your email.
+
+## Add a public key to Github {#howto-add-pubkey-to-github}
+
+You will do this procedure twice: once for the public key created on the laptop,
+and later with the public key created on the robot.
+
+<div class='requirements' markdown='1'>
+
+Requires:
+
+- A public/private keypair already created and configured.
+
+See: This procedure is explained in [](#howto-create-key-pair).
+
+Result:
+
+- You can access Github using the key provided.
+
+</div>
+
+Go to settings ([](#fig:github1)).
+
+<img figure-id='fig:github1'  style='width: 10em'  class='github-screenshot'  src='github1.png'/>
+
+Add the public key that you created:
+
+<img figure-id='fig:github2'  style='width: 10em' class='github-screenshot'  src='github2.png'/>
+
+<img figure-id='fig:github3'  style='width: 10em' class='github-screenshot'  src='github3.png'/>
+
+<img figure-id='fig:github4'  style='width: 10em' class='github-screenshot'  src='github4.png'/>
+
+<style>
+.github-screenshot {
+    max-width: 80%;
+}
+</style>
+
+
+To check that all of this works, use the command
+
+    $ ssh -T git@github.com
+
+The command tries to connect to Github using the private keys that you specified.
+This is the expected output:
+
+    $ ssh -T git@github.com
+
+    Warning: Permanently added the RSA host key for IP address '![ip address]' to the list of known hosts.
+    Hi ![username]! You've successfully authenticated, but GitHub does not provide shell access.
+
+If you don't see the greeting, stop.
+
+Repeat what you just did for the Duckiebot on the laptop as well, making sure
+to change the name of the file containing the private key.
+
+
+## Setting up global configurations for Git  {#howto-git-local-config}
+
+This should be done twice, once on the laptop, and later, on the robot.
+
+These options tell Git who you are:
+
+    $ git config --global user.email "![email]"
+    $ git config --global user.name  "![full name]"
+
+Also do this, and it doesn't matter if you don't know what it is:
+
+    $ git config --global push.default simple

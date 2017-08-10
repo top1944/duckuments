@@ -1,3 +1,3 @@
-# Introduction for companies  {#sec:for-companies}
+## Introduction for companies  {#for-companies}
 
 TODO: to write

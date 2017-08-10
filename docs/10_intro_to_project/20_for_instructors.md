@@ -1,1 +1,1 @@
-# Duckietown for instructors {#sec:for-instructors}
+## Duckietown for instructors {#for-instructors}

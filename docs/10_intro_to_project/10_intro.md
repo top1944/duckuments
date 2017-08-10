@@ -151,13 +151,13 @@ XXX
 
 # First steps {#sec:first-steps}
 
-## How to get started
+## How to get started 
 
-If you are an instructor, please jump to [](#sec:for-instructors).
+If you are an instructor, please jump to [](#for-instructors).
 
-If you are a self-guided learner, please jump to [](#sec:for-self-guided-learners).
+If you are a self-guided learner, please jump to [](#for-self-guided-learners).
 
-If you are a company, and interested in working with Duckietown, please jump to  [](#sec:for-companies).
+If you are a company, and interested in working with Duckietown, please jump to [](#for-companies).
 
 ## How to keep in touch
 

@@ -1,10 +1,10 @@
-# Documentation Style Guide
+# Documentation style guide
 
 This chapter describes the conventions for writing the technical documentation.
 
-## General indication about technical documentation
+## General guidelines for technical writing
 
-The following holds for all technical documentation.
+The following holds for all technical writing.
 
 - The documentation is written in correct English.
 
@@ -36,7 +36,7 @@ The following holds for all technical documentation.
 
 ## Style guide for the Duckietown documentation
 
-- Subtle humor is encouraged.
+
 
 - It's ok to use "it's" instead of "it is", "can't" instead of "cannot", etc.
 
@@ -51,6 +51,8 @@ The following holds for all technical documentation.
 > Bad: "Ctrl-C from the command line".
 
 > Better: "Use Ctrl-C from the command line".
+
+- Subtle humor and puns about duckies are encouraged.
 
 ## Writing command lines
 

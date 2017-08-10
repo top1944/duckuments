@@ -46,7 +46,7 @@ Then decompress using the command `xz`:
 
 Next, burn the image on to the SD card.
 
-This procedure is explained in [](#howto-burn-image).
+See: This procedure is explained in [](#howto-burn-image).
 
 
 ### Verify that the SD card was created correctly
@@ -84,9 +84,8 @@ commands:
 
 Expect `dist-upgrade` to take quite a long time (up to 2 hours).
 
-## Step 2: Dependencies and Configurations
 
-### Raspberry PI Config
+## Raspberry PI Config
 
 The Raspberry PI is not accessible by SSH by default.
 
@@ -104,10 +103,9 @@ Also disable the graphical boot
 <!-- In "5. Advanced options", "A3 Memory Split", select 256 MB for the GPU memory. -->
 
 
-### Install packages
+## Install packages
 
 Install these packages.
-
 
 Etckeeper:
 
@@ -124,8 +122,7 @@ Git:
 
 Other:
 
-    duckiebot $ sudo apt install htop atop  nethogs iftop
-
+    duckiebot $ sudo apt install htop atop nethogs iftop
     duckiebot $ sudo apt install aptitude apt-file
 
 Development:
@@ -135,7 +132,6 @@ Development:
 Python:
 
     duckiebot $ sudo apt install -y python-dev ipython python-sklearn python-smbus
-
     duckiebot $ sudo pip install scipy --upgrade
 
 I2C:
@@ -159,7 +155,7 @@ First, mark the kernel packages as not upgradeable:
 Then, download and install the Edimax driver from [this repository](https://github.com/duckietown/rtl8822bu).
 
 
-### ROS
+## Install ROS
 
 The first commands are copied from [this page][ros-ubuntu].
 
@@ -186,9 +182,9 @@ There's more to install:
     duckiebot $ sudo apt install ros-kinetic-{tf-conversions,cv-bridge,image-transport,camera-info-manager,theora-image-transport,joy,image-proc,compressed-image-transport,phidgets-drivers,imu-complementary-filter,imu-filter-madgwick}
 
 
-### Wireless configuration (old configuration)
+## Wireless configuration (old version)
 
-XXX This is the old configuration.
+XXX This is the old version.
 
 There are two files that are important to edit.
 
@@ -311,14 +307,14 @@ Contents:
 Note that there is an interface name and MAC address that need to be changed
 on each PI.
 
-### SSH server config
+## SSH server config
 
 This enables the SSH server:
 
     $ sudo systemctl enable ssh
 
 
-### Create swap Space
+## Create swap Space
 
 Do the following:
 
@@ -344,19 +340,15 @@ Activate the swap space:
 
     duckiebot $ sudo swapon -a
 
-## Sudo
+## Passwordless sudo {#howto-passwordless-sudo}
 
-### Make `vi` the default editor
-
-Run:
+First, make `vi` the default editor, using
 
     sudo update-alternatives --config editor
 
-And then choose `vim.basic`.
+and then choose `vim.basic`.
 
-### Passwordless sudo {#howto-passwordless-sudo}
-
-Run:
+Then run:
 
     $ sudo visudo
 

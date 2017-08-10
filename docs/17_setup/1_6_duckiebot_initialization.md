@@ -33,7 +33,7 @@ Put the SD Card in the Duckiebot.
 
 Turn on the Duckiebot by connecting the power cable.
 
-TODO: figure
+TODO: add figure
 
 ## Connect the Duckiebot to a network
 
@@ -86,9 +86,9 @@ The password is `ubuntu`.
 
 By default, the robot boots into Byobu.
 
-Please see [](#sec:byobu) for an introduction to Byobu.
+Please see [](#byobu) for an introduction to Byobu.
 
-XXX: not sure it's a good idea to boot into Byobu.
+XXX Not sure it's a good idea to boot into Byobu.
 
 ## (For D17-C1) Configure the robot-generated network
 
@@ -137,8 +137,8 @@ At this point you should see a new network being created named "`![robot name]`"
 
 You can connect with the laptop to that network.
 
-If the PI's network interface is connected to the `duckietown` network
-and to the internet, the PI will act as a bridge to the internet.
+If the Raspberry PI's network interface is connected to the `duckietown` network
+and to the internet, the Raspberry PI will act as a bridge to the internet.
 
 
 ## Setting up wireless network configuration
@@ -176,39 +176,6 @@ Use these commands
 
     duckiebot $ sudo apt update
     duckiebot $ sudo apt dist-upgrade
-
-
-## Check that the camera works
-
-Check that the camera is connected using this command:
-
-    duckiebot $ vcgencmd get_camera
-    supported=1 detected=1
-
-If you see `detected=0`, it means that the hardware connection is not working.
-
-You can test the camera right away using a command-line utility
-called `raspistill`.
-
-Use the `raspistill` command to capture the file `out.jpg`:
-
-    duckiebot $ raspistill -t 1 -o out.jpg
-
-Then download `out.jpg` to your computer using `scp` for inspection.
-
-See [](#howto-download-file-with-scp)
-
-### Troubleshooting
-
-If you see `detected=0`, it is likely that the
-
-If you see an error that starts like this:
-
-    mmal: Cannot read cameara info, keeping the defaults for OV5647
-    ![...]
-    mmal: Camera is not detected. Please check carefully the camera module is installed correctly.
-
-then, just like it says: "Please check carefully the camera module is installed correctly.".
 
 ## Give a name to the Duckiebot
 
@@ -257,21 +224,134 @@ Note: Never add other hostnames in `/etc/hosts`. It is a tempting
 fix when DNS does not work, but it will cause other problems
 subsequently.
 
-Then reboot the PI using the command
+Then reboot the Raspberry PI using the command
 
     $ sudo reboot
 
-After reboot, log in again, and run the command
-`hostname` to check that the change persisted:
+After reboot, log in again, and run the command `hostname` to check that the
+change has persisted:
 
     $ hostname
     ![robot name]
 
 
-## Do not change the default shell
+## Create your user
+
+You must not use the `ubuntu` user for development.
+Instead, you need to create a new user.
+
+Choose a user name, which we will refer to as `![username]`.
+
+To create a new user:
+
+    duckiebot $ sudo useradd -m ![username]
+
+Make the user an administrator by adding it to the group `sudo`:
+
+    duckiebot $ sudo adduser ![username] sudo
+
+To set a password, use:
+
+    duckiebot $ sudo passwd ![username]
+
+At this point, you should be able to login to the new user from the laptop
+using the password:
+
+    laptop $ ssh ![username]@![robot name]
+
+Next, you should repeat some steps that we already described.
+
+### Create key pair for `![username]`
+
+Next, create a private/public key pair for the user; call it `![username]@![robot name]`.
+
+See: The procedure is documented in [](#howto-create-key-pair).
+
+### Add `![username]`'s public key to Github
+
+Add the public key to your Github account.
+
+See: The procedure is documented in [](#howto-add-pubkey-to-github).
+
+If the step is done correctly, this command should succeed:
+
+    duckiebot $ ssh -T git@github.com
+
+### Local Git configuration
+
+See: Do the procedure in {#howto-git-local-config} on the Duckiebot.
+
+### Set up the laptop-Duckiebot connection
+
+Make sure that you can login passwordlessly to your user.
+
+See: The procedure is explained in [](#howto-login-without-password). In this case, we have:
+ `![local]` = laptop, `![local-user]` = your local user on the laptop,
+ `![remote]` = `![robot name]`, `![remote-user]` = `![username]`.
+
+If the step is done correctly, you should be able to login from the laptop to
+the robot, without typing a password:
+
+    laptop $ ssh ![username]@![robot name]
+
+### Some advice on the importance of passwordless access
+
+In general, if you find yourself:
+
+- typing an IP
+- typing a password
+- typing "ssh" more than once
+- using a screen / USB keyboard
+
+it means you should learn more about Linux and networks, and you are setting
+yourself up for failure.
+
+Yes, you "can do without", but with an additional 30 seconds of your time. The
+30 seconds you are not saving every time are the difference between being
+productive roboticists and going crazy.
+
+Really, it is impossible to do robotics when you have to think about IPs and
+passwords...
+
+## Other customizations
 
 If you know what you are doing, you are welcome to install and use additional
-shells (such as zsh), but please keep Bash as be the default shell. This is
-important for some scripts.
+shells, but please keep Bash as be the default shell. This is
+important for ROS installation.
 
-(For the record, our favorite shell is ZSH with `oh-my-zsh`.)
+For the record, our favorite shell is ZSH with `oh-my-zsh`.
+
+
+## Hardware check: camera
+
+Check that the camera is connected using this command:
+
+    duckiebot $ vcgencmd get_camera
+    supported=1 detected=1
+
+If you see `detected=0`, it means that the hardware connection is not working.
+
+You can test the camera right away using a command-line utility
+called `raspistill`.
+
+Use the `raspistill` command to capture the file `out.jpg`:
+
+    duckiebot $ raspistill -t 1 -o out.jpg
+
+Then download `out.jpg` to your computer using `scp` for inspection.
+
+See [](#howto-download-file-with-scp)
+
+### Troubleshooting
+
+Symptom: `detected=0`
+
+Resolution: If you see `detected=0`, it is likely that the camera is not connected correctly.
+
+If you see an error that starts like this:
+
+    mmal: Cannot read camera info, keeping the defaults for OV5647
+    ![...]
+    mmal: Camera is not detected. Please check carefully the camera module is installed correctly.
+
+then, just like it says: "Please check carefully the camera module is installed correctly.".

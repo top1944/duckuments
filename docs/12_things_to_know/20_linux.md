@@ -77,6 +77,8 @@ You can use `htop` to monitor CPU usage.
 
 ## How to burn an image to an SD card {#howto-burn-image}
 
+<div class='requirements'>
+
 Requires:
 
 - A blank SD card.
@@ -86,6 +88,8 @@ Requires:
 Results:
 
 - A burned image.
+
+</div>
 
 ### Finding your device name for the SD card
 
@@ -137,3 +141,40 @@ Burn the image using the command `dd`:
 
 Note: Use the name of the device, without partitions. i.e., `/dev/mmcblk0`, not
 `/dev/mmcblk0pX`.
+
+
+
+## Byobu
+
+You need to learn to use `byobu`. It will save much time later.
+
+Byobu is "GNU `screen`" with fancy configuration; if you know `screen`,
+that's fine as well.
+
+Please learn about Byobu here:
+
+- [http://byobu.co/](http://byobu.co/)
+
+Install using:
+
+    $ sudo apt install byobu
+
+### Advantages of using Byobu
+
+TODO: To write
+
+### Quick command reference
+
+Quick commands reference, using function keys:
+
+- `F2`: open a new terminal.
+- `F3`/`F4`: switch among the terminals.
+- `Ctrl-F6`: close current terminal.
+
+Using control sequences:
+
+- `ctrl-A` then `C`: creates new terminal.
+- `ctrl-A` then a number: switches to that terminal.
+- `ctrl-A` then `D`: detaches the terminal.
+
+To quit a terminal, just use `exit`.

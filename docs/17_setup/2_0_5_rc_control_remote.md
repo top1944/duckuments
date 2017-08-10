@@ -2,7 +2,7 @@
 
 Prerequisites:
 
-* Created Github access [](#sec:github-access).
+* Created Github account and configured public keys ([](#github-access)).
 
 
 ## Clone the Duckietown repository
@@ -11,9 +11,15 @@ Clone the repository in the folder `~/duckietown`:
 
     duckiebot $ git clone git@github.com:duckietown/Software.git ~/duckietown
 
+For the above to succeed you should have a Github account already set up.
+
+It should not ask for a password.
+
 ### Troubleshooting
 
-* For the above to succeed you should have a Github account already set up.
+Symptom: It asks for a password.
+
+Resolution: You missed some of the steps described in [](#github-access).
 
 Symptom: Other weird errors.
 
@@ -126,16 +132,19 @@ Check that the joystick has the switch set to the position "x".
 And the mode light should be off.
 
 
-## Proper shutdown procedure for the PI
+## Proper shutdown procedure for the Raspberry PI
 
 Use `Ctrl-C` in the terminal of joystick.launch when you're done.
 
-**To shutdown: DO NOT DISCONNECT THE POWER - the system might get corrupted.**
-
-Instead, issue the following command:
+To shutdown, issue the following command:
 
     duckiebot $ sudo shutdown -h now
 
-and then wait 30 seconds before disconnecting the power.
+and then wait 30 seconds.
 
-**Also: Disconnect the battery end of the cable,** not the one close to the PI, because you might damage it.
+Then, disconnect the power cable, at the **battery end**.
+
+Warning: If you disconnect the power before shutting down properly using `shutdown`,
+the system might get corrupted.
+
+Warning: If you disconnect frequently the cable at the Raspberry PI's end, you might damage the port.

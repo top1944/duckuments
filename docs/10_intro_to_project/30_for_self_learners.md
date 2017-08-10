@@ -1,3 +1,3 @@
-# Duckietown for self-guided learners {#sec:for-self-guided-learners}
+## Duckietown for self-guided learners {#for-self-guided-learners}
 
 TODO: to write

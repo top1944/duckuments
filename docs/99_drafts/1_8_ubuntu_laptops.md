@@ -1,7 +1,7 @@
-# Connect the laptop and the Duckiebot
+# Laptop setup
 
 
-## Make sure that you can ping the robot
+<!-- ## Make sure that you can ping the robot
 
 Connect your laptop to the same network as the robot.
 
@@ -22,22 +22,14 @@ Verify that you can establish an SSH connection to the robot:
 
 Say "yes" if you get asked whether you want to add it to a list of known hosts.
 
-The password is "`ubuntu`".
+The password is "`ubuntu`". -->
 
 
-### Troubleshooting
+## Setup passwordless SSH to log in using the `ubuntu` user
 
-**Symptom**: "Offending key error".
+On each Duckiebot it is possible to log in as the `ubuntu` user using
+a common key.
 
-If you get something like this:
-
-    Warning: the ECDSA host key for ![...] differs from the key for the IP address '![...] '
-
-    Offending key for IP in /home/![user]/.ssh/known_hosts:![line]
-
-then remove line `![line]` in `~/.ssh/known_hosts`.
-
-## Setup passwordless SSH
 
 Now, let's set up passwordless SSH, so that you don't need to type a password.
 
@@ -74,9 +66,8 @@ Now you should be able to connect without using a password.
 
 The following command should connect without a password being asked:
 
-    laptop $ ssh ![robot name]
+    laptop $ ssh ubuntu@![robot name]
 
-Note that you can actually auto-complete with tab after ssh.
 
 ### Troubleshooting
 
@@ -87,22 +78,3 @@ Resolution: If there are issues such as "scheme missing" and the file
 downloaded a file named `duckietown_key1?dl=1` in the current folder, simply
 rename `duckietown_key1?dl=1` to `duckietown_key1` and copy it over to the
 directory `~/.ssh/`.
-
-## Advice
-
-In general, if you find yourself:
-
-- typing an IP
-- typing a password
-- typing "ssh" more than once
-- using a screen / USB keyboard
-
-it means you should learn more about Linux and networks, and you are setting
-yourself up for failure.
-
-Yes, you "can do without", but with an additional 30 seconds of your time. The
-30 seconds you are not saving every time are the difference between being
-productive roboticists and going crazy.
-
-Really, it is impossible to do robotics when you have to think about IPs and
-passwords...
