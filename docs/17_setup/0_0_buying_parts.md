@@ -33,7 +33,7 @@ Configuration `D17-1`: LED lights and bumpers
 ## Chassis
 
 
-We selected the Magician Chassis  as the basic chassis for the robot ([](#fig:magician_chassis)).
+We selected the Magician Chassis as the basic chassis for the robot ([](#fig:magician_chassis)).
 
 We chose it because it has a double-decker configuration, and so
 we can put the battery in the lower part.

@@ -11,14 +11,14 @@
 
 ### Can you do the following?
 
-- Log in the duckiebot from the laptop;
-- Log in the duckiebot from the laptop, without using password;
+- Log in the Duckiebot from the laptop;
+- Log in the Duckiebot from the laptop, without using password;
 
 
 ### Can you do the following?
 
-- Copy a file from the duckiebot to the laptop;
-- Copy a file from the laptop to the duckiebot; -->
+- Copy a file from the Duckiebot to the laptop;
+- Copy a file from the laptop to the Duckiebot; -->
 
 
 
@@ -74,3 +74,66 @@ You can use `htop` to monitor CPU usage.
 ### Measuring I/O usage using `iotop`
 
     $ sudo apt install iotop
+
+## How to burn an image to an SD card {#howto-burn-image}
+
+Requires:
+
+- A blank SD card.
+- An image file to burn.
+- An Ubuntu computer with an SD reader.
+
+Results:
+
+- A burned image.
+
+### Finding your device name for the SD card
+
+First, find out what is the device name for the SD card.
+
+Insert the SD Card in the slot.
+
+Run the command:
+
+    $ sudo fdisk -l
+
+Find your device name, by looking at the sizes.
+
+For example, the output might contain:
+
+    Disk /dev/mmcblk0: 14.9 GiB, 15931539456 bytes, 31116288 sectors
+    Units: sectors of 1 * 512 = 512 bytes
+    Sector size (logical/physical): 512 bytes / 512 bytes
+    I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+In this case, the device is `/dev/mmcblk0`. That will be the `![device]`
+in the next commands.
+
+You may see `/dev/mmcblk0pX` or a couple of similar entries for each partition on the card,
+where `X` is the partition number. If you don't see anything like that, take out
+the SD card and run the command again and see what disappeared.
+
+### Unmount partitions
+
+Before proceeding, unmount all partitions.
+
+Run `df -h`. If there are partitions like `/dev/mmcblk0p![n]`, then unmount
+each of them. For example:
+
+    laptop $ sudo umount /dev/mmcblk0p1
+    laptop $ sudo umount /dev/mmcblk0p2
+
+
+### Burn the image
+
+Now that you know that the device is `![device]`,
+you can burn the image to disk.
+
+Let the image file be `![image file]`.
+
+Burn the image using the command `dd`:
+
+    laptop $ sudo dd of=![device] if=![image file] status=progress bs=4M
+
+Note: Use the name of the device, without partitions. i.e., `/dev/mmcblk0`, not
+`/dev/mmcblk0pX`.

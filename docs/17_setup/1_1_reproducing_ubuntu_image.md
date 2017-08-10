@@ -6,12 +6,6 @@ Please note that the image is already available, so you don't need to do this ma
 
 However, this documentation might be useful if you would like to port the software to a different distribution.
 
-We organize this in three steps:
-
-- Step 1: Downloading and loading the raw ubuntu image
-- Step 2: Installation of ros and other dependencies and other configurations
-
-## Step 1: From blank to minimal setup
 
 Resources necessaries:
 
@@ -23,7 +17,8 @@ Results:
 
 -  A baseline Ubuntu Mate 16.04.2 image with updated software.
 
-### Download and uncompress the Ubuntu Mate image
+
+## Download and uncompress the Ubuntu Mate image
 
 Download the image from the page
 
@@ -47,30 +42,12 @@ Then decompress using the command `xz`:
 
     laptop $ xz -d ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img.xz
 
-### Finding your device name for the SD card an unmount it
+## Burn the image to an SD card
 
-    laptop $ df -h
+Next, burn the image on to the SD card.
 
-Inspect the output for something like `/dev/mmcblk0`.  You may see
-`/dev/mmcblk0pX` or a couple of similar entries for each partition on the card,
-where `X` is the partition number. If you don't see anything like that, take out
-the SD card and run the command again and see what disappeared.
+This procedure is explained in [](#howto-burn-image).
 
-Next unmount all the partitions associated with the device:
-
-    laptop $ sudo umount /dev/mmcblk0p1
-    laptop $ sudo umount /dev/mmcblk0p2
-
-### Burn the image to an SD card
-
-Then burn to disk using the command `dd`:
-
-    laptop $ sudo dd of=![device] if=![image file] status=progress bs=4M
-
-where `IMG` is the `.img` file you unzipped, and `device` is the device
-that represents your SD card reader.
-
-Note: use the name of the device, without partitions. i.e., `/dev/mmcblk0`, not `/dev/mmcblk0pX`.
 
 ### Verify that the SD card was created correctly
 
@@ -83,16 +60,16 @@ Ubuntu will mount two partitions, by the name of `PI_ROOT` and `PI_BOOT`.
 
 Boot the disk in the Raspberry PI.
 
-I chose the following options:
+Choose the following options:
 
     language: English
     username: ubuntu
     password: ubuntu
     hostname: duckiebot
 
-(LP: I also chose the option to log in automatically)
+Choose the option to log in automatically.
 
-Then I rebooteed.
+Reboot.
 
 ### Update installed software
 
@@ -105,22 +82,26 @@ commands:
     duckiebot $ sudo apt update
     duckiebot $ sudo apt dist-upgrade
 
-Expect dist-upgrade to take quite a long time - e.g. 2hrs.
+Expect `dist-upgrade` to take quite a long time (up to 2 hours).
 
-## Part 2: Dependencies and Configurations
+## Step 2: Dependencies and Configurations
 
-### Raspi Config
+### Raspberry PI Config
 
-The raspi is not sshable by default, the camera is disabled, and the I2C bus is disabled. We need to fix those things.
+The Raspberry PI is not accessible by SSH by default.
 
 Run `raspi-config`:
 
     duckiebot $ sudo raspi-config
 
-choose "3. Interfacing Options",
-and enable SSH, camera, and I2C.
+choose "3. Interfacing Options", and enable SSH,
 
-In "5. Advanced options", "A3 Memory Split", select 256 MB for the GPU memory.
+We need to enable the camera and the I2C bus.
+
+choose "3. Interfacing Options", and enable camera, and I2C.
+
+Also disable the graphical boot
+<!-- In "5. Advanced options", "A3 Memory Split", select 256 MB for the GPU memory. -->
 
 
 ### Install packages
@@ -128,22 +109,24 @@ In "5. Advanced options", "A3 Memory Split", select 256 MB for the GPU memory.
 Install these packages.
 
 
+Etckeeper:
+
+    duckiebot $ sudo apt install etckeeper
+
 Editors / shells:
 
-    duckiebot $ sudo apt install -y emacs vim byobu
+    duckiebot $ sudo apt install -y vim emacs byobu zsh
 
 Git:
 
     duckiebot $ sudo apt install -y git git-extras
 
-Etckeeper:
-
-    duckiebot $ sudo apt install etckeeper
 
 Other:
 
-    duckiebot $ sudo apt install htop
+    duckiebot $ sudo apt install htop atop  nethogs iftop
 
+    duckiebot $ sudo apt install aptitude apt-file
 
 Development:
 
@@ -163,6 +146,17 @@ You may need to do the following (but might be done already through `raspi-confi
 
     duckiebot $ sudo usermod -a -G i2c ubuntu
     duckiebot $ sudo udevadm trigger
+
+
+## Install Edimax driver
+
+First, mark the kernel packages as not upgradeable:
+
+    $ sudo apt-mark hold raspberrypi-kernel raspberrypi-kernel-headers
+    raspberrypi-kernel set on hold.
+    raspberrypi-kernel-headers set on hold
+
+Then, download and install the Edimax driver from [this repository](https://github.com/duckietown/rtl8822bu).
 
 
 ### ROS
@@ -191,11 +185,10 @@ There's more to install:
 
     duckiebot $ sudo apt install ros-kinetic-{tf-conversions,cv-bridge,image-transport,camera-info-manager,theora-image-transport,joy,image-proc,compressed-image-transport,phidgets-drivers,imu-complementary-filter,imu-filter-madgwick}
 
-XXX Do we need Phidgets if we are not using the IMU this year?
 
+### Wireless configuration (old configuration)
 
-
-### Wireless configuration
+XXX This is the old configuration.
 
 There are two files that are important to edit.
 
@@ -238,6 +231,86 @@ network={
 }
 ```
 
+## Wireless configuration
+
+The files that describe the network configuration are
+in the directory
+
+    /etc/NetworkManager/system-connections/
+
+This is the contents of the connection file `duckietown`, which
+describes how to connect to the `duckietown` wireless network:
+
+    [connection]
+    id=duckietown
+    uuid=e9cef1bd-f6fb-4c5b-93cf-cca837ec35f2
+    type=wifi
+    permissions=
+    secondaries=
+    timestamp=1502254646
+
+    [wifi]
+    mac-address-blacklist=
+    mac-address-randomization=0
+    mode=infrastructure
+    ssid=duckietown
+
+    [wifi-security]
+    group=
+    key-mgmt=wpa-psk
+    pairwise=
+    proto=
+    psk=quackquack
+
+    [ipv4]
+    dns-search=
+    method=auto
+
+    [ipv6]
+    addr-gen-mode=stable-privacy
+    dns-search=
+    ip6-privacy=0
+    method=auto
+
+This is the file
+
+    /etc/NetworkManager/system-connections/create-5ghz-network
+
+Contents:
+
+    [connection]
+    id=create-5ghz-network
+    uuid=7331d1e7-2cdf-4047-b426-c170ecc16f51
+    type=wifi
+    # Put the Edimax interface name here:
+    interface-name=![wlx74da38c9caa0 - to change]
+    permissions=
+    secondaries=
+    timestamp=1502023843
+
+    [wifi]
+    band=a
+    # Put the Edimax MAC address here
+    mac-address=![74:DA:38:C9:CA:A0 - to change]
+    mac-address-blacklist=
+    mac-address-randomization=0
+    mode=ap
+    seen-bssids=
+    ssid=duckiebot-not-configured
+
+    [ipv4]
+    dns-search=
+    method=shared
+
+    [ipv6]
+    addr-gen-mode=stable-privacy
+    dns-search=
+    ip6-privacy=0
+    method=ignore
+
+Note that there is an interface name and MAC address that need to be changed
+on each PI.
+
 ### SSH server config
 
 This enables the SSH server:
@@ -271,11 +344,9 @@ Activate the swap space:
 
     duckiebot $ sudo swapon -a
 
-(You can probably do something similar through `raspi-config`.)
-
 ## Sudo
 
-### Make vi the default editor
+### Make `vi` the default editor
 
 Run:
 
@@ -283,7 +354,7 @@ Run:
 
 And then choose `vim.basic`.
 
-### Passwordless sudo
+### Passwordless sudo {#howto-passwordless-sudo}
 
 Run:
 
@@ -302,24 +373,29 @@ into this line:
 
 ### SSH config
 
-Add `.authorized_keys` in the image so that we can all do passwordless ssh.
-
-Create the `.authorized_keys` files.
-
-On the PI, download the official key:
+Create the SSH directory with appropriate permissions:
 
     duckiebot $ cd ~
-    duckiebot $ mkdir -p .ssh
-    duckiebot $ chmod g-rwx,o-rwx .ssh
-    duckiebot $ wget -O .ssh/authorized_keys https://www.dropbox.com/s/pxyou3qy1p8m4d0/duckietown_key1.pub?dl=1
+    duckiebot $ mkdir -p ~/.ssh
+    duckiebot $ chmod g-rwx,o-rwx ~/.ssh
 
+Add `.authorized_keys` so that we can all do passwordless ssh.
+
+The key is at the URL
+
+    https://www.dropbox.com/s/pxyou3qy1p8m4d0/duckietown_key1.pub?dl=1
+
+Download to `.ssh/authorized_keys`:
+
+    duckiebot $ curl -o .ssh/authorized_keys ![URL above]
+<!--
 ### Optional user preferences
 
 Configure to automatically boot into `byobu`:
 
     duckiebot $ byobu-enable
 
-This can be disabled with `byobu-disable`.
+This can be disabled with `byobu-disable`. -->
 
 
 ### Shell prompt

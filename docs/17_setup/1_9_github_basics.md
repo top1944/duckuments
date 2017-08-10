@@ -1,6 +1,7 @@
-# Setup Github access {#sec:github-access}
+# Setup Github access {#github-access}
 
-This chapter describes how to create a Github account and setup SSH. on the robot and on the laptop.
+This chapter describes how to create a Github account and setup SSH
+on the robot and on the laptop.
 
 ## Create an SSH key on your machine
 

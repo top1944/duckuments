@@ -190,3 +190,16 @@ Now, after triple checking that you are in the `gh-pages` branch, you can
 use `git status` to see the files that were added or modified,
 and simply use `git add`, `git commit` and `git push` to push the files
 to Github.
+
+## In summary: the workflow
+
+This is the workflow:
+
+
+1. Edit the Markdown in the `master` branch of the `duckuments` repository.
+2. Run `make compile` to make sure it compiles.
+3. Commit the Markdown and push on the `master` branch.
+
+Done. The bot will redo the compilation and push the changes in the `gh-pages` branch.
+
+Step 2 is done, so you know that the bot will not encounter errors.

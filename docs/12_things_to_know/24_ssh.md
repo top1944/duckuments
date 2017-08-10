@@ -31,6 +31,9 @@ TODO: to write
 
 TODO: to write
 
+
+### Download a file with SCP {#howto-download-file-with-scp}
+
 ## RSync
 
 TODO: to write

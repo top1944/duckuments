@@ -7,18 +7,20 @@ Prerequisites:
 
 ## Clone the Duckietown repository
 
-Clone the repository using:
+Clone the repository in the folder `~/duckietown`:
 
-    duckiebot $ git clone git@github.com:duckietown/Software.git duckietown
+    duckiebot $ git clone git@github.com:duckietown/Software.git ~/duckietown
 
 ### Troubleshooting
 
 * For the above to succeed you should have a Github account already set up.
 
-* If it fails with weird errors, probably the time is not set up correctly. Use `ntpdate` as above:
+Symptom: Other weird errors.
 
+Resolution: Probably the time is not set up correctly. Use `ntpdate` as above:
 
     $ sudo ntpdate -u us.pool.ntp.org
+
 
 ## Set up ROS environment on the Duckiebot
 
