@@ -68,9 +68,7 @@ To check that all of this works, use the command
     $ ssh -T git@github.com
 
 The command tries to connect to Github using the private keys that you specified.
-This is the expected output:
-
-    $ ssh -T git@github.com
+This is the expected output: 
 
     Warning: Permanently added the RSA host key for IP address '![ip address]' to the list of known hosts.
     Hi ![username]! You've successfully authenticated, but GitHub does not provide shell access.
