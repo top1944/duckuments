@@ -150,7 +150,7 @@ Assumptions:
 - The two computers are on the same network.
 - You have created a keypair for `![local-user]` on `![local]`.
 
-See: This procedure is described in [](#howto-create-key-pair).
+ See: This procedure is described in [](#howto-create-key-pair).
 
 Results:
 

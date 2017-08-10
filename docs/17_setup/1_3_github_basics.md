@@ -79,17 +79,3 @@ If you don't see the greeting, stop.
 
 Repeat what you just did for the Duckiebot on the laptop as well, making sure
 to change the name of the file containing the private key.
-
-
-## Setting up global configurations for Git  {#howto-git-local-config}
-
-This should be done twice, once on the laptop, and later, on the robot.
-
-These options tell Git who you are:
-
-    $ git config --global user.email "![email]"
-    $ git config --global user.name  "![full name]"
-
-Also do this, and it doesn't matter if you don't know what it is:
-
-    $ git config --global push.default simple

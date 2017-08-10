@@ -6,6 +6,7 @@ Please note that the image is already available, so you don't need to do this ma
 
 However, this documentation might be useful if you would like to port the software to a different distribution.
 
+<div class='requirements' markdown="1">
 
 Resources necessaries:
 
@@ -17,6 +18,7 @@ Results:
 
 -  A baseline Ubuntu Mate 16.04.2 image with updated software.
 
+</div>
 
 ## Download and uncompress the Ubuntu Mate image
 
@@ -138,10 +140,6 @@ I2C:
 
     duckiebot $ sudo apt install -y i2c-tools
 
-You may need to do the following (but might be done already through `raspi-config`):
-
-    duckiebot $ sudo usermod -a -G i2c ubuntu
-    duckiebot $ sudo udevadm trigger
 
 
 ## Install Edimax driver
@@ -362,6 +360,18 @@ into this line:
 
 
 ## Ubuntu user configuration
+
+### Groups
+
+You should make the `ubuntu` user belong to the `i2c` and `input` groups:
+
+    duckiebot $ sudo adduser ubuntu i2c
+    duckiebot $ sudo adduser ubuntu input
+
+You may need to do the following (but might be done already through `raspi-config`): XXX
+
+    duckiebot $ sudo udevadm trigger
+
 
 ### SSH config
 

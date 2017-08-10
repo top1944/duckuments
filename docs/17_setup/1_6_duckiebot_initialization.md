@@ -1,39 +1,61 @@
-# Duckiebot Initialization
+# Duckiebot Initialization {#setup-duckiebot}
+
+<div class='requirements' markdown="1">
 
 Prerequisites:
 
+- An SD card of dimensions at least 32 GB.
+- A computer with an internet connection, an SD card reader, and 35 GB of free space.
 - A mounted Duckiebot in configuration `D17-C0`.
-- An SD card.
-- A computer to download the image.
-- A computer to burn the SD card.
+
+See: This is the result of [](#assembling-duckiebot).
 
 Result:
 
 - A Duckiebot that is ready to use.
 
+</div>
+
 XXX What does it mean "ready to use"?.
 
 ## Acquire and burn the image
 
-TODO: where is image?
+On the laptop, download the compressed image at this URL:
 
-TODO: to write
+> [https://www.dropbox.com/s/1p4am7erdd9e53r/duckiebot-RPI3-AC-aug10.img.xz?dl=1](https://www.dropbox.com/s/1p4am7erdd9e53r/duckiebot-RPI3-AC-aug10.img.xz?dl=1)
 
-Make sure that the image is downloaded correctly.
+The size is 2.5 GB.
 
-TODO: hash
+You can use:
+
+    $ curl -o duckiebot-RPI3-AC-aug10.img.xz ![URL above]
+
+Uncompress the file:
+
+    $ xz -d -k duckiebot-RPI3-AC-aug10.img.xz
+
+This will create a file of 32 GB in size.
+
+To make sure that the image is downloaded correctly, compute its hash
+using the program `sha256sum`:
+
+    $ sha256sum duckiebot-RPI3-AC-aug10.img
+    2ea79b0fc6353361063c89977417fc5e8fde70611e8afa5cbf2d3a166d57e8cf  duckiebot-ac-aug10.img
+
+Compare the hash that you obtain with the hash above. If they are different,
+there was some problem in downloading the image.
 
 Next, burn the image on disk.
 
 See: The procedure of how to burn an image is explained in [](#howto-burn-image).
 
-## Turn on
+## Turn on the Duckiebot
 
 Put the SD Card in the Duckiebot.
 
-Turn on the Duckiebot by connecting the power cable.
+Turn on the Duckiebot by connecting the power cable to the battery.
 
-TODO: add figure
+TODO: Add figure
 
 ## Connect the Duckiebot to a network
 
@@ -57,8 +79,6 @@ The Duckiebot connects automatically to a 2.4 GHz network
 called "`duckietown`" and password "`quackquack`".
 
 Connect your laptop to the same wireless network.
-
-
 
 
 ## Ping the Duckiebot
@@ -235,7 +255,7 @@ change has persisted:
     ![robot name]
 
 
-## Create your user
+## Create your user {#create-user-on-duckiebot}
 
 You must not use the `ubuntu` user for development.
 Instead, you need to create a new user.
@@ -249,6 +269,16 @@ To create a new user:
 Make the user an administrator by adding it to the group `sudo`:
 
     duckiebot $ sudo adduser ![username] sudo
+
+Make the user a member of the group `input` and `i2c`
+
+    duckiebot $ sudo adduser ![username] input
+    duckiebot $ sudo adduser ![username] i2c
+
+Set the shell `bash`:
+
+    duckiebot $ sudo chsh -s /bin/bash andrea
+
 
 To set a password, use:
 
@@ -283,7 +313,7 @@ See: Do the procedure in {#howto-git-local-config} on the Duckiebot.
 
 ### Set up the laptop-Duckiebot connection
 
-Make sure that you can login passwordlessly to your user.
+Make sure that you can login passwordlessly to your user from the laptop.
 
 See: The procedure is explained in [](#howto-login-without-password). In this case, we have:
  `![local]` = laptop, `![local-user]` = your local user on the laptop,

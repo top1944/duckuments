@@ -1,13 +1,34 @@
 # Software setup and RC remote control
 
+<div class='requirements' markdown='1'>
+
 Prerequisites:
 
-* Created Github account and configured public keys ([](#github-access)).
+* You have configured the laptop.
+
+See: The procedure is documented in [](#setup-laptop).
+
+* You have configured the Duckiebot.
+
+See: The procedure is documented in [](#setup-duckiebot).
+
+* You have created a Github account and configured public keys,
+  both for the laptop and for the Duckiebot.
+
+See: The procedure is documented in [](#github-access).
+
+Results:
+
+* You can run the remote control joystick demo.
+
+</div>
 
 
 ## Clone the Duckietown repository
 
-Clone the repository in the folder `~/duckietown`:
+All of the following should be
+
+Clone the repository in the directory `~/duckietown`:
 
     duckiebot $ git clone git@github.com:duckietown/Software.git ~/duckietown
 
@@ -30,17 +51,31 @@ Resolution: Probably the time is not set up correctly. Use `ntpdate` as above:
 
 ## Set up ROS environment on the Duckiebot
 
+All the following commands should be run in the `~/duckietown` directory:
+
     duckiebot $ cd ~/duckietown
 
-Now we are ready to make the workspace. First you need to source the baseline ROS indigo environment:
+Now we are ready to make the workspace. First you need to source the baseline ROS environment:
 
-    duckiebot $ source /opt/ros/indigo/setup.bash
+    duckiebot $ source /opt/ros/kinetic/setup.bash
 
-Then, build the workspace (you have to be under the `catkin_ws` folder to invoke `catkin_make`)
+Then, build the workspace using:
 
     duckiebot $ make build
 
+XXX AC: I had to run it twice. The first time it complained:
+
+```
+In file included from /home/andrea/duckietown/catkin_ws/src/apriltags_ros/apriltags_ros/src/apriltag_detector.cpp:1:0:
+/home/andrea/duckietown/catkin_ws/src/apriltags_ros/apriltags_ros/include/apriltags_ros/apriltag_detector.h:6:41: fatal error: duckietown_msgs/BoolStamped.h: No such file or directory
+```
+
+
+<!-- (you have to be under the `catkin_ws` folder to invoke `catkin_make`) -->
+
 ## Add your vehicle to the machines file
+
+TODO: Automate this part
 
 On the robot edit the file
 
@@ -50,101 +85,121 @@ You will see something like this:
 
     <launch>
         <arg name="env_script_path" default="~/duckietown/environment.sh"/>
-        <machine name="![robot name]" address="![robot name].local" user="ubuntu" env-loader="$(arg env_script_path)"/>
+
+        <machine name="![robot name]" address="![robot name].local" user="![username]" env-loader="$(arg env_script_path)"/>
             ...
         ...
     </launch>
 
-Now, duplicate a `&lt;machine&gt;` line between &lt;launch&gt; and &lt;/launch&gt;, and replace the name and address string with the name of your vehicle. In this example, the additional line to add is
 
-    <machine name="duckiebot" address="duckiebot.local" user="ubuntu" env-loader="$(arg env_script_path)"/>
+Now, duplicate a &lt;machine&gt; line between &lt;launch&gt; and &lt;/launch&gt;, and replace the name and address string with the name of your vehicle. In this example, the additional line to add is
 
-commit and push the new machines file.
+    <machine name="duckiebot" address="duckiebot.local" user="greta" env-loader="$(arg env_script_path)"/>
+
+Commit and push the new machines file.
+
+XXX No, don't do that.
+
+
+## Test that the joystick is detected {#test-joystick}
+
+Make sure that your user is in the group `input` and `i2c`:
+
+    duckiebot $ groups
+    ![username] sudo input i2c
+
+If `input` and `i2c` are not in the list, you missed a step. Ohi ohi!
+You are not following the instructions carefully!
+
+See: Consult again [](#create-user-on-duckiebot).
+
+Plug the joystick receiver in one of the USB port on the Raspberry PI.
+
+To make sure that the joystick is detected, run:
+
+    duckiebot $ ls /dev/input/
+
+and check if there is a device called `js0` on the list.
+
+To test whether or not the joystick itself is working properly, run:
+
+    duckiebot $ jstest /dev/input/js0
+
+Move the joysticks and push the buttons. You should see the data displayed change
+according to your actions.
 
 ## Run the joystick demo
 
-Don't have a joystick? Move to (incompletE) XXX
-
-Plug the joystick to one of the usb port on the Raspberry PI.
-
-SSH into your PI. Go to the `duckietown` folder and invoke the following scripts:
+SSH into the Raspberry PI and run the following from the `duckietown` directory:
 
     duckiebot $ cd ~/duckietown
     duckiebot $ source environment.sh
     duckiebot $ source set_ros_master.sh
 
-The `environment.sh` setups the ROS environment at the terminal (so you can use commands like `rosrun` and `roslaunch`). The `set_ros_master.sh` script by default sets the PI as its own ROS master.
+The `environment.sh` setups the ROS environment at the terminal (so you can use
+commands like `rosrun` and `roslaunch`).
+
+The `set_ros_master.sh` script by default sets the Raspberry PI as its own ROS master.
 
 Now make sure the motor shield is connected.
 
 Run the command:
 
-    duckiebot $ roslaunch duckietown joystick.launch veh:=duckiebot
+    duckiebot $ roslaunch duckietown joystick.launch veh:=![robot name]
 
-If there is no "red" output in the command line then pushing the left joystick knob controls throttle - right controls steering.
+If there is no "red" output in the command line then pushing the left joystick
+knob controls throttle - right controls steering.
 
 This is the expected result of the commands:
 
-left joystick up = forward
+<col2>
+    <s>left joystick up</s>     <s>forward</s>
+    <s>left joystick down</s>   <s>backward</s>
+    <s>right joystick left</s>  <s>turn left (positive theta)</s>
+    <s>right joystick right</s> <s>turn right (negative theta)</s>
+</col2>
 
-left joystick down = backward
+It is possible you will have to unplug and replug the joystick or just push lots of buttons on your joystick until it wakes up. Also make sure that the mode switch on the top of your joystick is set to "X", not "D".
 
-right joystick left = turn left (positive theta)
-
-right joystick right = turn right (negative theta)
-
-It is possible you will have to unplug and replug the joystick or just push lots of buttons on your joystick until it wakes up. Also make sure that the mode switch on the top of your joystick is set to "X" not "D".
-
-XXX Is the above valid with the new joystick?
+XXX Is all of the above valid with the new joystick?
 
 Close the program using Ctrl-C.
 
-
 ### Troubleshooting
 
-**Symptom: The robot moves weirdly (forward instead of backward).**
+Symptom: The robot moves weirdly (e.g. forward instead of backward).
 
-Either the cables or the motors are inverted. Please refer to the assembly guide for pictures of the correct connections.
+Resolution: The cables are not correctly inserted.
+Please refer to the assembly guide for pictures of the correct connections.
+Try swapping cables until you obtain the expected behavior.
 
-**Symptom: The left joystick does not work.**
+Resolution: Check that the joystick has the switch set to the position "x".And the mode light should be off.
+
+Symptom: The left joystick does not work.
 
 If the green light on the right to the "mode" button is on, click the "mode" button to turn the light off. The "mode" button toggles between left joystick or the cross on the left.
 
-**Symptom: The robot does not move.**
+Symptom: The robot does not move at all.
 
-The `joy_mapper_test.launch` assumes that the joystick is at `/dev/input/js0`.
+Resolution: The cables are disconnected.
 
-To make sure that the joystick is there, you can do
-
-    duckiebot $ ls /dev/input/
-
-and check if there is a `js0` on the list.
-
-To test whether or not the joystick itself is working properly (without ROS), you can do
-
-    duckiebot $ jstest /dev/input/js0
-
-Move the joysticks and push the buttons and check the printouts.
-
-**Symptom: The robot moves very weirdly.**
-
-Check that the joystick has the switch set to the position "x".
-And the mode light should be off.
+Resolution: The program assumes that the joystick is at `/dev/input/js0`.
+In doubt, see [](#test-joystick).
 
 
-## Proper shutdown procedure for the Raspberry PI
+## The proper shutdown procedure for the Raspberry PI
 
-Use `Ctrl-C` in the terminal of joystick.launch when you're done.
+Generally speaking, you can terminate any `roslaunch` command with `Ctrl-C`.
 
-To shutdown, issue the following command:
+To completely shutdown the robot, issue the following command:
 
     duckiebot $ sudo shutdown -h now
 
-and then wait 30 seconds.
-
-Then, disconnect the power cable, at the **battery end**.
+Then wait 30 seconds.
 
 Warning: If you disconnect the power before shutting down properly using `shutdown`,
 the system might get corrupted.
+
+Then, disconnect the power cable, at the **battery end**.
 
 Warning: If you disconnect frequently the cable at the Raspberry PI's end, you might damage the port.

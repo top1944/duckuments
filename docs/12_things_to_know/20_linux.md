@@ -77,7 +77,7 @@ You can use `htop` to monitor CPU usage.
 
 ## How to burn an image to an SD card {#howto-burn-image}
 
-<div class='requirements'>
+<div class='requirements' markdown='1'>
 
 Requires:
 

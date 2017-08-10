@@ -1,4 +1,6 @@
-# Acquiring the parts for the Duckiebot
+# Acquiring the parts for the Duckiebot {#acquiring-parts}
+
+
 
 The trip begins with acquiring the parts. Here, we provide a link to all bits and pieces that are needed to build a Duckiebot.
 
@@ -8,6 +10,21 @@ In general, keep in mind that:
 - In general, substitutions are OK for the mechanical components,
   and not OK for all the electronics, unless you are OK in writing
   some software.
+  
+<div class='requirements' markdown="1">
+
+Resources necessaries:
+
+- Cost: USD ???
+- Time: ??? days (average shipping)
+
+Results:
+
+-  A kit of parts ready to be assembled.
+
+</div>
+
+
 
 ## Duckiebot configurations
 

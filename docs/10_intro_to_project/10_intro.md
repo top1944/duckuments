@@ -14,7 +14,6 @@ However, we focus on the *learning experience* as a whole, by providing a set of
 We have two targets:
 
 1. For **instructors**, we want to create a "class-in-a-box" that allows to offer a modern and engaging learning experience. Currently, this is feasible at the advanced undergraduate and graduate level, though in the future we would like to present the platform as multi-grade experiences.
-
 2. For **self-guided learners**, we want to create a "self-learning experience", that allows to go from zero knowledge of robotics to graduate-level understanding.
 
 In addition, the Duckietown platform has been used as a research platform.
@@ -25,7 +24,8 @@ TODO: add references to papers submitted/published with it.
 
 ## Results obtained so far
 
-While we are at the early phases of the project, many people have been used the materials in the past year.
+While we are at the early phases of the project, many people have been used the
+materials in the past year.
 
 ## Why the duckies?
 
@@ -151,7 +151,7 @@ XXX
 
 # First steps {#sec:first-steps}
 
-## How to get started 
+## How to get started
 
 If you are an instructor, please jump to [](#for-instructors).
 

@@ -1,8 +1,8 @@
-# Installing Ubuntu on laptops
+# Installing Ubuntu on laptops {#setup-laptop}
 
 Before you prepare the Duckiebot, you need to have a laptop with Ubuntu installed.
 
-<div class='requirements'>
+<div class='requirements' markdown='1'>
 
 Requires:
 
@@ -115,3 +115,7 @@ See: The procedure is documented in [](#howto-add-pubkey-to-github).
 If the step is done correctly, this command should succeed:
 
     duckiebot $ ssh -T git@github.com
+
+### Local Git setup
+
+See: Do the procedure on {#howto-git-local-config}.
