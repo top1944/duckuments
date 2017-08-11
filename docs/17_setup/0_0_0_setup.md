@@ -1,1 +1,1 @@
-# Setup instructions {#part:building-duckiebot}
+# Duckiebot setup {#part:building-duckiebot}

@@ -1,13 +1,13 @@
-# Configuration `D17-1` (lights) parts
+# `D17-1` (LEDs) parts
 
 Assigned: Jacopo
 
 
-# Configuration `D17-1` (lights) assembly
+# `D17-1` (LEDs) assembly
 
 Assigned: Shiying
 
 
-# Configuration `D17-1` (lights) setup
+# `D17-1` (LEDs) setup
 
 Assigned: Andrea
