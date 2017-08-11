@@ -1,5 +1,8 @@
 # Installing Ubuntu on laptops {#setup-laptop}
 
+Assigned: Andrea
+
+
 Before you prepare the Duckiebot, you need to have a laptop with Ubuntu installed.
 
 <div class='requirements' markdown='1'>

@@ -1,5 +1,7 @@
 # Software setup and RC remote control
 
+Assigned: Andrea
+
 <div class='requirements' markdown='1'>
 
 Prerequisites:

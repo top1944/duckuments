@@ -1,5 +1,6 @@
 # Soldering boards
 
+Assigned: Shiying
 
 <div class='requirements' markdown="1">
 

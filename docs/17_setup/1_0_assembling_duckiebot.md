@@ -1,5 +1,6 @@
 # Assembling the Duckiebot {#assembling-duckiebot}
 
+Assigned: Shiying
 
 <div class='requirements' markdown="1">
 

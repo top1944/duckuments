@@ -1,5 +1,8 @@
 # Duckiebot Initialization {#setup-duckiebot}
 
+Assigned: Andrea
+
+
 <div class='requirements' markdown="1">
 
 Prerequisites:

@@ -1,5 +1,7 @@
 # The Duckietown specification
 
+Assigned: Liam?
+
 ## Topology
 
 ### Topology constraints

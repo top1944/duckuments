@@ -1,5 +1,7 @@
 # Reproducing the image
 
+Assigned: Andrea
+
 These are the instructions to reproduce the Ubuntu image that we use.
 
 Please note that the image is already available, so you don't need to do this manually.

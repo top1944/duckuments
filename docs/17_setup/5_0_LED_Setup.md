@@ -1,12 +1,13 @@
-# Configuration `D17-1` assembly and setup
+# Configuration `D17-1` (lights) parts
 
-This is the advanced assembly and configuration
-
-## Assembly
-
-TODO: To write
+Assigned: Jacopo
 
 
-## Setup
+# Configuration `D17-1` (lights) assembly
 
-TODO: To write
+Assigned: Shiying
+
+
+# Configuration `D17-1` (lights) setup
+
+Assigned: Andrea
