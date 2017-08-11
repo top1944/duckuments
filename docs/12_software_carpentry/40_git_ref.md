@@ -42,4 +42,43 @@ Also do this, and it doesn't matter if you don't know what it is:
 
 You can clone without history with the command:
 
-    $ git clone --depth 1 ![repo]
+    $ git clone --depth 1 ![repository URL]
+
+## Git troubleshooting
+
+
+### Problem 1: https instead of ssh:
+
+The symptom is:
+
+    $ git push
+    Username for 'https://github.com':
+
+Diagnosis: the `remote` is not correct.
+
+If you do `git remote` you get:
+
+    $ git remote -v
+    origin  https://github.com/duckietown/Software.git (fetch)
+    origin  https://github.com/duckietown/Software.git (push)
+
+Solution:
+
+    $ git remote remove origin
+    $ git remote add origin git@github.com:duckietown/Software.git
+
+Expectation:
+
+    $ git remote -v
+    origin  git@github.com:duckietown/Software.git (fetch)
+    origin  git@github.com:duckietown/Software.git (push)
+
+### Problem 1: `git push` complains about upstream
+
+The symptom is:
+
+    fatal: The current branch ![branch name] has no upstream branch.
+
+Solution:
+
+    $ git push --set-upstream origin ![branch name]

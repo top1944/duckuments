@@ -1,3 +1,3 @@
-# Problem formulation {#SLAM_formulation}
+# SLAM - Problem formulation {#SLAM_formulation}
 
 Assigned: Liam
