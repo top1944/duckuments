@@ -76,6 +76,12 @@ Depending on your system, you might need to install these other dependencies:
     $ cd $DUCKUMENTS
     $ pip install numpy matplotlib
 
+## Extra dependencies for compiling the PDF version
+
+Note: The dependencies below are harder to install. If you don't manage
+to do it, then you only lose the ability to compile the PDF. You can do `make compile`
+to compile the HTML version, but you cannot do `make compile-pdf`.
+
 Ensure the latest version (>6) of `nodejs` is installed.
 
 Run:

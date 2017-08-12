@@ -12,11 +12,11 @@ Note: in the future you will have to debug problems, and these
 problems might be harder to understand if you rely blindly on the shortcuts.
 
 
-<div class='requirements' mardkown="1">
+<div class='requirements' markdown="1">
 
 Results:
 
-- You will know about some shortcuts.
+- You will know about some useful shortcuts.
 
 </div>
 
@@ -32,7 +32,10 @@ You can use the "`set_ros_master.sh`" script in the repo:
     $ source set_ros_master.sh ![robot name]
 
 
-## SSH machines alias
+Note that you need to use `source`; without that, it will not work.
+
+
+## SSH aliases
 
 Instead of using
 
@@ -52,5 +55,11 @@ contents:
 Here, you can choose any other string in place of "`my-robot`".
 
 
-You can substitute
-TODO: to write
+Note that you **cannot** do
+
+    $ ping my-robot
+
+You haven't created another hostname, just an alias for SSH.
+
+However, you can use the alias with all the tools that rely
+on SSH, including `rsync` and `scp`.

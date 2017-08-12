@@ -53,8 +53,6 @@ Run the launch file called `camera.launch`:
 
     duckiebot $ roslaunch duckietown camera.launch veh:=![robot name]
 
-See also: For more information about `roslaunch` and "launch files", see [](#roslaunch).
-
 At this point, you should see the red LED on the camera light up continuously.
 
 In the terminal you should not see any red message, but only happy messages like the following:
@@ -64,6 +62,8 @@ In the terminal you should not see any red message, but only happy messages like
     [INFO] [1502539383.951123]: [/![robot name]/camera_node] Start capturing.
     [INFO] [1502539384.040615]: [/![robot name]/camera_node] Published the first image.
 
+
+See also: For more information about `roslaunch` and "launch files", see [](#roslaunch).
 
 ## Second window: view published topics
 

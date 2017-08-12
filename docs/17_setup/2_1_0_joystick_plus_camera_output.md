@@ -101,7 +101,7 @@ You can see a list of topics currently on the `ROS_MASTER` with the commands:
     laptop $ export ROS_MASTER_URI=http://![robot name].local:11311/
     laptop $ rostopic list
 
-<!--
+
 
 You should see the following:
 
