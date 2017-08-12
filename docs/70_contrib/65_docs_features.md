@@ -54,8 +54,17 @@ TODO: Use `#[description]` for parameters in code
 Make sure to quote (with 4 spaces) all command lines. Otherwise, the dollar symbol
 confuses the LaTeX interpreter.
 
-### Tables
+### Keyboard
 
+Use the `kbd` element for keystrokes.
+
+Example:
+
+    Press <kbd>a</kbd> then <kbd>Ctrl</kbd>-<kbd>C</kbd>.
+
+becomes:
+
+> Press <kbd>a</kbd> then <kbd>Ctrl</kbd>-<kbd>C</kbd>.
 
 ### Shortcut for tables
 

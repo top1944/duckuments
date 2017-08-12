@@ -112,7 +112,7 @@ That's the "image" --- as seen by a machine.
 
 If you are Neo, then this already makes sense.
 
-If you are not Neo, use `Ctrl-C` to stop `rostopic`.
+If you are not Neo, use <kbd>Ctrl</kbd>-<kbd>C</kbd> to stop `rostopic`.
 
 Later, in [](#rc-cam-launched-remotely), you will learn how to visualize the image stream
 on the laptop  using `rviz`.

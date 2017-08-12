@@ -169,7 +169,7 @@ It is possible you will have to unplug and replug the joystick or just push lots
 
 XXX Is all of the above valid with the new joystick?
 
-Close the program using Ctrl-C.
+Close the program using <kbd>Ctrl</kbd>-<kbd>C</kbd>.
 
 ### Troubleshooting
 
@@ -195,7 +195,7 @@ In doubt, see [](#test-joystick).
 
 ## The proper shutdown procedure for the Raspberry PI
 
-Generally speaking, you can terminate any `roslaunch` command with `Ctrl-C`.
+Generally speaking, you can terminate any `roslaunch` command with <kbd>Ctrl</kbd>-<kbd>C</kbd>.
 
 To completely shutdown the robot, issue the following command:
 

@@ -14,7 +14,7 @@ all: compile compile-pdf
 
 duckuments-dist:
 	# clone branch "dist"
-	git clone -b gh-pages git@github.com:duckietown/duckuments.git duckuments-dist
+	git clone --depth 3 -b gh-pages git@github.com:duckietown/duckuments.git duckuments-dist
 
 automatic-compile:
 	git pull
@@ -51,15 +51,22 @@ compile-pdf:
 
 	python -m mcdp_docs.add_edit_links < $(out_html2).tmp > $(out_html2)
 
-	prince --javascript -o $(out_pdf) $(out_html2)
+
+	prince --javascript -o /tmp/duckiebook.pdf $(out_html2)
+	
+	pdftk A=/tmp/duckiebook.pdf B=blank.pdf cat A1-end B output /tmp/duckiebook2.pdf keep_final_id
+	pdftk /tmp/duckiebook2.pdf update_info blank-metadata output $(out_pdf)
 
 	# open $(out_pdf)
 
-compile:
+update-mcdp:
+	-git -C mcdp/ pull
+
+compile: update-mcdp
 	$(MAKE) compile-html
 	$(MAKE) split
 
-compile-slow:
+compile-slow: update-mcdp
 	$(MAKE) compile-html-slow
 	$(MAKE) split
 

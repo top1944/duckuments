@@ -91,7 +91,7 @@ You should see a nice interface listing all the printouts in real time,
 completed with filters that can help you find that message you are looking for
 in a sea of messages.
 
-You can use `Ctrl-C` at the terminal where `roslaunch` was executed to stop all the
+You can use <kbd>Ctrl</kbd>-<kbd>C</kbd> at the terminal where `roslaunch` was executed to stop all the
 nodes launched by the launch file.
 
 See also: For more information about `rqt_console`, see [](#rqt_console).

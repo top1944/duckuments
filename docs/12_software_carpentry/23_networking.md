@@ -1,28 +1,32 @@
-# Networking {#networking}
+# Networking tools {#networking}
 
 Assigned: Andrea
 
-## Background reading
+<div class='requirements' markdown="1">
 
-Here are some background reading about networking and networking in Linux:
+Preliminary reading:
+
+- Basics of networking, including
+
+    - what are IP addresses
+    - what are subnets
+    - how DNS works
+    - how `.local` names work
+    - ...
+
+See: XXX (ref to find).
+
+</div>
+
 
 TODO: to write
 
 Make sure that you know:
 
-- what are IP addresses
-- what are subnets
-- how DNS works
-- how `.local` names work
-- ...
-
-A short reference follows.
-
-
 
 ## Visualizing information about the network
 
-### `ping`
+### `ping`: are you there?
 
 TODO: to write
 
@@ -32,9 +36,7 @@ TODO: to write
 
     $ ifconfig
 
-
-
-# Wireless networks
+## Wireless networks
 
 ### `iwlist`
 

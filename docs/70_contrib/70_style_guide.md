@@ -46,11 +46,11 @@ The following holds for all technical writing.
 
 > Better: "Edit the `~/.ssh/config` file using `vi`."
 
-- `Ctrl-C`, `ssh` etc. are not verbs.
+- <kbd>Ctrl</kbd>-<kbd>C</kbd>, `ssh` etc. are not verbs.
 
-> Bad: "Ctrl-C from the command line".
+> Bad: "<kbd>Ctrl</kbd>-<kbd>C</kbd> from the command line".
 
-> Better: "Use Ctrl-C from the command line".
+> Better: "Use <kbd>Ctrl</kbd>-<kbd>C</kbd> from the command line".
 
 - Subtle humor and puns about duckies are encouraged.
 
