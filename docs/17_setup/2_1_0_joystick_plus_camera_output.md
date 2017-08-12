@@ -31,7 +31,7 @@ We are assuming that the joystick demo in [](#rc-launched-remotely) worked.
 
 We are assuming that the procedure in [](#read-camera-data) succeeded.
 
-We also assume that you terminated all instances of `roslaunch` with `Ctrl-C`,
+We also assume that you terminated all instances of `roslaunch` with <kbd>Ctrl</kbd>-<kbd>C</kbd>,
 so that currently there is nothing running in any window.
 
 <!--
@@ -134,8 +134,8 @@ camera.
 
 ## Proper shutdown procedure
 
-To stop the nodes: You can stop the node by pressing `Ctrl-C` on the terminal
-where `roslaunch` was executed. In this case, you can use `Ctrl-C` in the
+To stop the nodes: You can stop the node by pressing <kbd>Ctrl</kbd>-<kbd>C</kbd> on the terminal
+where `roslaunch` was executed. In this case, you can use <kbd>Ctrl</kbd>-<kbd>C</kbd> in the
 terminal where you launched the `camera.launch`.
 
 You should see the red light on the camera turn off in a few seconds.

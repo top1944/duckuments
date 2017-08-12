@@ -44,5 +44,3 @@ To mark a block of lines and indent it, use <kbd>V</kbd>.
 For example, use <kbd>V</kbd><kbd>j</kbd><kbd>j</kbd><kbd>&gt;</kbd> to indent 3 lines.
 
 Use <kbd>&lt;</kbd> to dedent.
-
-To indent a curly-braces block, put your cursor on one of the curly braces and use >%.
