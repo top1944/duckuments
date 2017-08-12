@@ -35,7 +35,7 @@ upload:
 clean:
 	rm -rf $(tmp_files)
 	rm -rf $(tmp_files2)
-	rm -rf $(dist_dir)/duckiebook*
+	#rm -rf $(dist_dir)/duckiebook/*html
 
 $(out_html): $(wildcard docs/**/*md)
 	$(MAKE) compile
@@ -90,5 +90,6 @@ compile-html-slow:
 	# open $@
 
 split:
+	rm -f $(dist_dir)/duckiebook/*html
 	python -m mcdp_docs.split $(out_html) $(dist_dir)/duckiebook
 	python -m mcdp_docs.add_mathjax $(dist_dir)/duckiebook/*html
