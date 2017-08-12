@@ -53,17 +53,20 @@ compile-pdf:
 
 
 	prince --javascript -o /tmp/duckiebook.pdf $(out_html2)
-
-	pdftk A=/tmp/duckiebook.pdf B=blank.pdf cat A1-end B output $(out_pdf) keep_final_id
-
+	
+	pdftk A=/tmp/duckiebook.pdf B=blank.pdf cat A1-end B output /tmp/duckiebook2.pdf keep_final_id
+	pdftk /tmp/duckiebook2.pdf update_info blank-metadata output $(out_pdf)
 
 	# open $(out_pdf)
 
-compile:
+update-mcdp:
+	-git -C mcdp/ pull
+
+compile: update-mcdp
 	$(MAKE) compile-html
 	$(MAKE) split
 
-compile-slow:
+compile-slow: update-mcdp
 	$(MAKE) compile-html-slow
 	$(MAKE) split
 
