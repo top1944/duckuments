@@ -36,3 +36,7 @@ Using control sequences:
 - `ctrl-A` then `D`: detaches the terminal.
 
 To quit a terminal, just use `exit`.
+
+<!-- Shift+<arrow keys> switches between panes. Shift+Alt+<arrow keys> changes the current pane size. -->
+
+<!-- Byobu tips: don't forget F2 (or ctrl-a C) in byobu will open a terminal in a new tab. Alternatively, you can also Shift+F2 to split the current tab into two horizontally. -->

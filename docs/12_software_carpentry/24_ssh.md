@@ -24,6 +24,29 @@ This enables the server:
 
 TODO: to write
 
+## Local configuration {#ssh-local-configuration}
+
+The SSH configuration as a client is in the file
+
+    ~/.ssh/config
+
+Create the directory with the right permissions:
+
+    $ mkdir ~/.ssh
+    $ chmod 0700 ~/.ssh
+
+Then add the following lines:
+
+    HostKeyAlgorithms ssh-rsa
+
+The reason is that Paramiko, used by `roslaunch`,
+[does not support the ECSDA keys][bug].
+
+[bug]: https://answers.ros.org/question/41446/a-is-not-in-your-ssh-known_hosts-file/
+
+
+
+
 ## How to login with SSH and a password {#howto-login}
 
 To log in to a remote computer `![remote]` with user `![remote-user]`, use:

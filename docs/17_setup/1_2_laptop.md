@@ -74,6 +74,13 @@ Other utilities:
     laptop $ sudo apt install avahi-utils ecryptfs-utils
 
 
+## Install ROS
+
+Install ROS on your laptop.
+
+See: The procedure is given in [](#install-ROS).
+
+
 ## Other suggested software
 
 ### Redshift
@@ -92,16 +99,28 @@ Set to "autostart" from the icon.
 
 ### Installation of the duckuments system
 
-Next, install the documentation system using the documentation in [](#sub:installing-docs-system).
+Optional but very encouraged: install the duckuments system.
+This will allow you to have a local copy of the documentation
+and easily submit questions and changes.
+
+See: The procedure is documented in [](#sub:installing-docs-system).
 
 
-## Passwordless sudo
+## Passwordless `sudo`
 
-Add passwordless `sudo`.
+Set up passwordless `sudo`.
 
 See: This procedure is described in [](#howto-passwordless-sudo).
 
 ## SSH and Git setup
+
+
+### Basic SSH config
+
+Do the basic SSH config.
+
+See: The procedure is documented in [](#ssh-local-configuration).
+
 
 ### Create key pair for `![username]`
 
@@ -121,4 +140,6 @@ If the step is done correctly, this command should succeed:
 
 ### Local Git setup
 
-See: Do the procedure on {#howto-git-local-config}.
+Set up Git locally.
+
+See: The procedure is described in [](#howto-git-local-config).

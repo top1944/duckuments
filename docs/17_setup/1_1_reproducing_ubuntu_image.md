@@ -154,33 +154,11 @@ First, mark the kernel packages as not upgradeable:
 
 Then, download and install the Edimax driver from [this repository](https://github.com/duckietown/rtl8822bu).
 
-
 ## Install ROS
 
-The first commands are copied from [this page][ros-ubuntu].
+Install ROS.
 
-[ros-ubuntu]: http://wiki.ros.org/kinetic/Installation/Ubuntu
-
-Tell Ubuntu where to find ROS:
-
-    duckiebot $ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-
-Tell Ubuntu that you trust the ROS people (they are nice folks):
-
-    duckiebot $ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
-
-Fetch the ROS repo:
-
-    duckiebot $ sudo apt update
-
-Now install the mega-package `ros-kinetic-desktop-full`.
-
-    duckiebot $ sudo apt install ros-kinetic-desktop-full
-
-There's more to install:
-
-    duckiebot $ sudo apt install ros-kinetic-{tf-conversions,cv-bridge,image-transport,camera-info-manager,theora-image-transport,joy,image-proc,compressed-image-transport,phidgets-drivers,imu-complementary-filter,imu-filter-madgwick}
-
+See: The procedure is given in [](#install-ROS).
 
 ## Wireless configuration (old version)
 
@@ -370,20 +348,28 @@ You should make the `ubuntu` user belong to the `i2c` and `input` groups:
     duckiebot $ sudo adduser ubuntu i2c
     duckiebot $ sudo adduser ubuntu input
 
+XXX: forgot to add to aug20 image:
+
+    duckiebot $ sudo adduser ubuntu video
+
+
 You may need to do the following (but might be done already through `raspi-config`): XXX
 
     duckiebot $ sudo udevadm trigger
 
 
-### SSH config
+### Basic SSH config
 
-Create the SSH directory with appropriate permissions:
+Do the basic SSH config.
 
-    duckiebot $ cd ~
-    duckiebot $ mkdir -p ~/.ssh
-    duckiebot $ chmod g-rwx,o-rwx ~/.ssh
+See: The procedure is documented in [](#ssh-local-configuration).
 
-Add `.authorized_keys` so that we can all do passwordless ssh.
+Note: this is not in the aug10 image.
+
+
+### Passwordless SSH config
+
+Add `.authorized_keys` so that we can all do passwordless SSH.
 
 The key is at the URL
 

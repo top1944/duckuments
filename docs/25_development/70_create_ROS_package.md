@@ -7,7 +7,7 @@
 
 ## Conforming ROS package checklist
 
-☐ The name of the package is “package_<handle>”
+☐ The name of the package is `package_![handle]`
 
 ☐ The directory is in …
 

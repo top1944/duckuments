@@ -10,6 +10,8 @@ If you are a company, and interested in working with Duckietown, please jump to 
 
 ## Duckietown for instructors {#for-instructors}
 
+TODO: to write
+
 ## Duckietown for self-guided learners {#for-self-guided-learners}
 
 TODO: to write

@@ -276,6 +276,7 @@ Make the user an administrator by adding it to the group `sudo`:
 Make the user a member of the group `input` and `i2c`
 
     duckiebot $ sudo adduser ![username] input
+    duckiebot $ sudo adduser ![username] video
     duckiebot $ sudo adduser ![username] i2c
 
 Set the shell `bash`:
@@ -293,6 +294,12 @@ using the password:
     laptop $ ssh ![username]@![robot name]
 
 Next, you should repeat some steps that we already described.
+
+### Basic SSH config
+
+Do the basic SSH config.
+
+See: The procedure is documented in [](#ssh-local-configuration).
 
 ### Create key pair for `![username]`
 
@@ -312,13 +319,14 @@ If the step is done correctly, this command should succeed:
 
 ### Local Git configuration
 
-See: Do the procedure in {#howto-git-local-config} on the Duckiebot.
+See: This procedure is in [](#howto-git-local-config).
 
 ### Set up the laptop-Duckiebot connection
 
 Make sure that you can login passwordlessly to your user from the laptop.
 
-See: The procedure is explained in [](#howto-login-without-password). In this case, we have:
+See: The procedure is explained in [](#howto-login-without-password).
+In this case, we have:
  `![local]` = laptop, `![local-user]` = your local user on the laptop,
  `![remote]` = `![robot name]`, `![remote-user]` = `![username]`.
 
@@ -333,7 +341,7 @@ In general, if you find yourself:
 
 - typing an IP
 - typing a password
-- typing "ssh" more than once
+- typing `ssh` more than once
 - using a screen / USB keyboard
 
 it means you should learn more about Linux and networks, and you are setting
@@ -354,8 +362,7 @@ important for ROS installation.
 
 For the record, our favorite shell is ZSH with `oh-my-zsh`.
 
-
-## Hardware check: camera
+## Hardware check: camera {#camera-hardware-check}
 
 Check that the camera is connected using this command:
 

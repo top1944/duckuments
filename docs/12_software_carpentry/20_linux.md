@@ -26,14 +26,22 @@ Assigned: Andrea
 
 ### `apt install`
 
+TODO: to write
+
 ### `apt update`
 
-### `apt dist-upgrade`
+TODO: to write
 
+### `apt dist-upgrade`
 
 TODO: hold back packages
 
 ## Measuring resource usage
+
+
+### `pgrep`
+
+TODO: to write
 
 ### Testing SD Card and disk speed
 

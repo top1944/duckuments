@@ -1,4 +1,4 @@
-# Software setup and RC remote control
+# Software setup and RC remote control {#rc-control}
 
 Assigned: Andrea
 
@@ -21,12 +21,12 @@ See: The procedure is documented in [](#github-access).
 
 Results:
 
-* You can run the remote control joystick demo.
+* You can run the joystick demo.
 
 </div>
 
 
-## Clone the Duckietown repository
+## Clone the Duckietown repository {#clone-software-repo}
 
 All of the following should be
 
@@ -51,7 +51,7 @@ Resolution: Probably the time is not set up correctly. Use `ntpdate` as above:
     $ sudo ntpdate -u us.pool.ntp.org
 
 
-## Set up ROS environment on the Duckiebot
+## Set up ROS environment on the Duckiebot {#build-repo}
 
 All the following commands should be run in the `~/duckietown` directory:
 
@@ -75,7 +75,7 @@ In file included from /home/andrea/duckietown/catkin_ws/src/apriltags_ros/aprilt
 
 <!-- (you have to be under the `catkin_ws` folder to invoke `catkin_make`) -->
 
-## Add your vehicle to the machines file
+## Add your vehicle to the machines file {#edit-machines-file}
 
 TODO: Automate this part
 
@@ -94,13 +94,14 @@ You will see something like this:
     </launch>
 
 
-Now, duplicate a &lt;machine&gt; line between &lt;launch&gt; and &lt;/launch&gt;, and replace the name and address string with the name of your vehicle. In this example, the additional line to add is
+Now, duplicate a &lt;machine&gt; line between &lt;launch&gt; and &lt;/launch&gt;, and replace the name and address string with the name of your vehicle.
 
-    <machine name="duckiebot" address="duckiebot.local" user="greta" env-loader="$(arg env_script_path)"/>
+For example, for Andrea, `![robot name]` = `emma` and `![username]` = `andrea`.
+So, he would add this line:
 
-Commit and push the new machines file.
+    <machine name="emma" address="emma.local" user="andrea" env-loader="$(arg env_script_path)"/>
 
-XXX No, don't do that.
+Commit and push the new machines file. (XXX No, don't commit the machines file.)
 
 
 ## Test that the joystick is detected {#test-joystick}
@@ -179,7 +180,7 @@ Resolution: Check that the joystick has the switch set to the position "x".And t
 
 Symptom: The left joystick does not work.
 
-If the green light on the right to the "mode" button is on, click the "mode" button to turn the light off. The "mode" button toggles between left joystick or the cross on the left.
+Resolution: If the green light on the right to the "mode" button is on, click the "mode" button to turn the light off. The "mode" button toggles between left joystick or the cross on the left.
 
 Symptom: The robot does not move at all.
 
