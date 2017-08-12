@@ -34,6 +34,13 @@ There's more to install:
 Note: Do not install packages by the name of `ros-X`, only those by
 the name of `ros-kinetic-X`. The packages `ros-X` are from another version of ROS.
 
+XXX: not done in aug20 image:
+
+Initialize ROS:
+
+    $ sudo rosdep init
+    $ rosdep update
+
 
 ## `rqt_console` {#rqt_console}
 
@@ -57,6 +64,10 @@ TODO: to write
 TODO: to write
 
 ### `rostopic echo`
+
+TODO: to write
+
+### `catkin_make` {#catkin_make}
 
 TODO: to write
 

@@ -63,7 +63,9 @@ Now we are ready to make the workspace. First you need to source the baseline RO
 
 Then, build the workspace using:
 
-    duckiebot $ make build
+    duckiebot $ catkin_make -C catkin_ws/
+
+See also: for more information about `catkin_make`, see [](#catkin_make).
 
 XXX AC: I had to run it twice. The first time it complained:
 
@@ -137,12 +139,13 @@ SSH into the Raspberry PI and run the following from the `duckietown` directory:
 
     duckiebot $ cd ~/duckietown
     duckiebot $ source environment.sh
-    duckiebot $ source set_ros_master.sh
+
+<!-- duckiebot $ source set_ros_master.sh -->
 
 The `environment.sh` setups the ROS environment at the terminal (so you can use
 commands like `rosrun` and `roslaunch`).
 
-The `set_ros_master.sh` script by default sets the Raspberry PI as its own ROS master.
+<!-- The `set_ros_master.sh` script by default sets the Raspberry PI as its own ROS master. -->
 
 Now make sure the motor shield is connected.
 

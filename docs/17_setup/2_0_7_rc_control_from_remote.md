@@ -82,7 +82,10 @@ Don't worry though, we can still see the printouts using `rqt_console`.
 
 On the laptop, open a new terminal window, and run:
 
+    laptop $ export ROS_MASTER_URI=http://![robot name].local:11311/
     laptop $ rqt_console
+
+XXX AC: I could not see any messages in `rqt_console` - not sure what is wrong.
 
 You should see a nice interface listing all the printouts in real time,
 completed with filters that can help you find that message you are looking for
@@ -98,11 +101,11 @@ See also: For more information about `rqt_console`, see [](#rqt_console).
 
 Symptom: `roslaunch` fails with an error similar to the following:
 
-```
-remote[![robot name].local-0]: failed to launch on ![robot name]:
+    remote[![robot name].local-0]: failed to launch on ![robot name]:
 
-Unable to establish ssh connection to [![username]@![robot name].local:22]: Server u'![robot name].local' not found in known_hosts
-```
+    Unable to establish ssh connection to [![username]@![robot name].local:22]:
+    Server u'![robot name].local' not found in known_hosts.
+
 
 Resolution: You have not followed the instructions that told you to add the `HostKeyAlgorithms`
 option. Delete `~/.ssh/known_hosts` and fix your configuration.

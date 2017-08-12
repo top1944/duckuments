@@ -166,7 +166,7 @@ and to the internet, the Raspberry PI will act as a bridge to the internet.
 
 ## Setting up wireless network configuration
 
-XXX This part is to be tested
+XXX This part should not be necessary anymore
 
 The Duckiebot is configured by default to connect to a wireless network with
 SSID `duckietown`. If that is not your SSID then you will need to change the
@@ -208,6 +208,7 @@ These are the criteria:
 
 - It should be a simple alphabetic string (no numbers or other characters like "`-`", "`_`", etc.) .
 - It will always appear lowercase.
+- It cannot be a generic name like "`duckiebot`", "`robot`" or similar.
 
 From here on, we will refer to this string as "`![robot name]`".
 Every time you see `![robot name]`, you should substitute the name that you chose.
@@ -380,7 +381,7 @@ Use the `raspistill` command to capture the file `out.jpg`:
 
 Then download `out.jpg` to your computer using `scp` for inspection.
 
-See [](#howto-download-file-with-scp)
+See: For instructions on how to use `scp`, see [](#howto-download-file-with-scp).
 
 ### Troubleshooting
 

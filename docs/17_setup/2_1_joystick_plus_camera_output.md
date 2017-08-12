@@ -87,7 +87,6 @@ In the second window, we will launch the nodes that control the camera.
 The launch file is called `camera.launch`:
 
     laptop $ source environment.sh
-    laptop $ source set_ros_master.sh ![robot name]
     laptop $ roslaunch duckietown camera.launch veh:=![robot name]
 
 You should see the red led on the camera light up.
@@ -96,11 +95,13 @@ You should see the red led on the camera light up.
 
 Open a third terminal on the laptop.
 
-You can see a list of topics currently on the `ROS_MASTER` with the command:
+You can see a list of topics currently on the `ROS_MASTER` with the commands:
 
     laptop $ source environment.sh
-    laptop $ source set_ros_master.sh ![robot name]
+    laptop $ export ROS_MASTER_URI=http://![robot name].local:11311/
     laptop $ rostopic list
+
+<!--
 
 You should see the following:
 
