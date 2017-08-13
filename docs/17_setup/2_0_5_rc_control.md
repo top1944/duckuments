@@ -28,8 +28,6 @@ Results:
 
 ## Clone the Duckietown repository {#clone-software-repo}
 
-All of the following should be
-
 Clone the repository in the directory `~/duckietown`:
 
     duckiebot $ git clone git@github.com:duckietown/Software.git ~/duckietown
@@ -65,7 +63,7 @@ Then, build the workspace using:
 
     duckiebot $ catkin_make -C catkin_ws/
 
-See also: for more information about `catkin_make`, see [](#catkin_make).
+See also: For more information about `catkin_make`, see [](#catkin_make).
 
 XXX AC: I had to run it twice. The first time it complained:
 
@@ -90,7 +88,8 @@ You will see something like this:
     <launch>
         <arg name="env_script_path" default="~/duckietown/environment.sh"/>
 
-        <machine name="![robot name]" address="![robot name].local" user="![username]" env-loader="$(arg env_script_path)"/>
+        <machine name="![robot name]" address="![robot name].local" user="![username]"
+                 env-loader="$(arg env_script_path)"/>
             ...
         ...
     </launch>
@@ -108,6 +107,17 @@ Commit and push the new machines file. (XXX No, don't commit the machines file.)
 
 ## Test that the joystick is detected {#test-joystick}
 
+
+Plug the joystick receiver in one of the USB port on the Raspberry PI.
+
+To make sure that the joystick is detected, run:
+
+    duckiebot $ ls /dev/input/
+
+and check if there is a device called `js0` on the list.
+
+<div class='check' markdown="1">
+
 Make sure that your user is in the group `input` and `i2c`:
 
     duckiebot $ groups
@@ -118,13 +128,7 @@ You are not following the instructions carefully!
 
 See: Consult again [](#create-user-on-duckiebot).
 
-Plug the joystick receiver in one of the USB port on the Raspberry PI.
-
-To make sure that the joystick is detected, run:
-
-    duckiebot $ ls /dev/input/
-
-and check if there is a device called `js0` on the list.
+</div>
 
 To test whether or not the joystick itself is working properly, run:
 
@@ -161,8 +165,8 @@ This is the expected result of the commands:
 <col2>
     <s>left joystick up</s>     <s>forward</s>
     <s>left joystick down</s>   <s>backward</s>
-    <s>right joystick left</s>  <s>turn left (positive theta)</s>
-    <s>right joystick right</s> <s>turn right (negative theta)</s>
+    <s>right joystick left</s>  <s>turn left (positive yaw)</s>
+    <s>right joystick right</s> <s>turn right (negative yaw)</s>
 </col2>
 
 It is possible you will have to unplug and replug the joystick or just push lots of buttons on your joystick until it wakes up. Also make sure that the mode switch on the top of your joystick is set to "X", not "D".

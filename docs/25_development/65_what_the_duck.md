@@ -66,3 +66,5 @@ Please add below any configuration test that can be automated:
 
 * Make sure that packages such as `python-roslaunch`
   are not installed. (The user is invited to install it when `roslaunch` is not found!)
+
+* Repository remote is not `https`.

@@ -43,111 +43,154 @@ This is an example proposition: &#36;2x = x + x&#36;.
 TODO: other LaTeX features supported
 
 
-## Other interesting features
+## Variables in command lines and command output
 
-TODO: to write
+Use the syntax "`!``[name]`" for describing the variables in the code.
 
-TODO: Use `#[description]` for parameters in code
+<div class="example" markdown="1">
 
+For example, to obtain:
 
+    $ ssh ![robot name].local
 
-Make sure to quote (with 4 spaces) all command lines. Otherwise, the dollar symbol
+Use the following:
+
+<pre><code>
+For example, to obtain:
+
+    &#36; ssh <span>!</span>[robot name].local</code>
+</pre>
+
+</div>
+
+Make sure to quote (with 4 spaces) all command lines.
+Otherwise, the dollar symbol
 confuses the LaTeX interpreter.
-
-### Keyboard
-
-Use the `kbd` element for keystrokes.
-
-Example:
-
-    Press <kbd>a</kbd> then <kbd>Ctrl</kbd>-<kbd>C</kbd>.
-
-becomes:
-
-> Press <kbd>a</kbd> then <kbd>Ctrl</kbd>-<kbd>C</kbd>.
-
-### Shortcut for tables
-
-The shortcuts `col2`, `col3`, `col4`, `col5`
-are expanded in tables with 2, 3, 4 or 5 columns.
-
-~~~
-<col2>
-    <span>A</span>
-    <span>B</span>
-    <span>C</span>
-    <span>D</span>
-</col2>
-~~~
-
-
-### Creating figures
-
-For any element, adding an attribute called `figure-id`
-with contents `fig:![figure ID]` or `tab:![table ID]`
-will create a figure that wraps the element.
-
-
-For example:
-
-    <p figure-id="fig:code">
-        I will be the content of a figure.
-    </p>
-
-It will create HMTL of the form:
-
-    <div id='fig:code-wrap' class='generated-figure-wrap'>
-        <figure id='fig:code' class='generated-figure'>
-            <p figure-id="fig:code">
-                I will be the content of a figure.
-            </p>
-        </figure>
-    </div>
-
-To add a class to the figure, use `figure-class`:
-
-    <element figure-id="fig:code" figure-class="myclass">
-        content
-    </element>
-
-This will give it to the <code>&lt;figure&gt;</code> and the containing <code>&lt;figure&gt;</code>
-<!--
-
-Useful classes:
-
-* `float_bottom` -->
-
-To add a caption, add an attribute `figure-caption`:
-
-    <element figure-id="fig:code" figure-caption="This is my caption">
-        content
-    </element>
-
-Alternatively, you can put anywhere an element `figcaption` with ID `![figure id]:caption`:
-
-    <element figure-id="fig:code">
-        content
-    </element>
-
-    <figcaption id='fig:code:caption'>
-        This is my caption. Can contain <code>code</code>.
-    </figcaption>
 
 
 
 ## Character escapes
 
-
-Use the string `&#36;` to write the dollar symbol &#36;, otherwise it
+Use the string <q><code>&amp;#36;</code></q> to write the dollar symbol <q><code>&#36;</code></q>, otherwise it
 gets confused with LaTeX math materials. Also notice that you should probably
-use "USD" to refer to U.S. dollars
+use "USD" to refer to U.S. dollars.
 
-Other symbols to escape:
+Other symbols to escape are shown in [](#tab:escapes).
 
-* use `&#96;` instead of &#96;
-* use `&#36;` instead of &#36;
-* use `&lt;` instead of &lt;
-* use `&gt;` instead of &gt;
+<col2 figure-id="tab:escapes" figure-caption="Symbols to escape">
+    <s>use <code>&amp;#36;</code> </s> <s>instead of <code>&#36;</code></s>
+    <s>use <code>&amp;#96;</code> </s> <s>instead of <code>&#96;</code></s>
+    <s>use <code>&amp;#lt;</code> </s> <s>instead of <code>&lt;</code></s>
+    <s>use <code>&amp;#gt;</code> </s> <s>instead of <code>&gt;</code></s>
+</col2>
+
+
+## Keyboard keys
+
+Use the `kbd` element for keystrokes.
+
+<div class="example" markdown="1">
+
+For example, to obtain:
+
+> Press <kbd>a</kbd> then <kbd>Ctrl</kbd>-<kbd>C</kbd>.
+
+use the following:
+
+    Press <kbd>a</kbd> then <kbd>Ctrl</kbd>-<kbd>C</kbd>.
+
+</div>
+
+## Figures
+
+For any element, adding an attribute called `figure-id`
+with value `fig:![figure ID]` or `tab:![table ID]`
+will create a figure that wraps the element.
+
+
+For example:
+
+    <div figure-id="fig:![figure ID]">
+        ![figure content]
+    </div>
+
+It will create HMTL of the form:
+
+    <div id='fig:code-wrap' class='generated-figure-wrap'>
+        <figure id='fig:![figure ID]' class='generated-figure'>
+            <div>
+                ![figure content]
+            </div>
+        </figure>
+    </div>
+
+<!--
+To add a class to the figure, use `figure-class`:
+
+    <div figure-id="fig:code" figure-class="myclass">
+        ![figure content]
+    </div>
+
+This will give it to the <code>&lt;figure&gt;</code> and the containing <code>&lt;figure&gt;</code>
+
+
+Useful classes:
+
+* `float_bottom`
+
+-->
+
+To add a caption, add an attribute `figure-caption`:
+
+    <div figure-id="fig:![figure ID]" figure-caption="This is my caption">
+        ![figure content]
+    </div>
+
+Alternatively, you can put anywhere an element `figcaption` with ID `![figure id]:caption`:
+
+    <element figure-id="fig:![figure ID]">
+        ![figure content]
+    </element>
+
+    <figcaption id='fig:![figure ID]:caption'>
+        This the caption figure.
+    </figcaption>
+
+To refer to the figure, use an empty link:
+
+    Please see [](#fig:![figure ID]).
+
+The code will put a reference to "Figure XX".
+
+
+
+## Shortcut for tables
+
+The shortcuts `col2`, `col3`, `col4`, `col5`
+are expanded in tables with 2, 3, 4 or 5 columns.
+
+The following code:
+
+<pre>
+<code>
+&lt;col2 figure-id="tab:mytable" figure-caption="My table"&gt;
+    &lt;span&gt;A&lt;/span&gt;
+    &lt;span&gt;B&lt;/span&gt;
+    &lt;span&gt;C&lt;/span&gt;
+    &lt;span&gt;D&lt;/span&gt;
+&lt;/col2&gt;
+</code>
+</pre>
+
+gives the following result:
+
+<col2 figure-id="tab:mytable" figure-caption="My table">
+    <span>A</span>
+    <span>B</span>
+    <span>C</span>
+    <span>D</span>
+</col2>
+
 
 ## Troubleshooting
 

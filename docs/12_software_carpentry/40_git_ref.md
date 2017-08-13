@@ -56,22 +56,24 @@ The symptom is:
 
 Diagnosis: the `remote` is not correct.
 
-If you do `git remote` you get:
+If you do `git remote` you get entries with `https:`:
 
     $ git remote -v
     origin  https://github.com/duckietown/Software.git (fetch)
     origin  https://github.com/duckietown/Software.git (push)
-
-Solution:
-
-    $ git remote remove origin
-    $ git remote add origin git@github.com:duckietown/Software.git
 
 Expectation:
 
     $ git remote -v
     origin  git@github.com:duckietown/Software.git (fetch)
     origin  git@github.com:duckietown/Software.git (push)
+
+Solution:
+
+    $ git remote remove origin
+    $ git remote add origin git@github.com:duckietown/Software.git
+
+
 
 ### Problem 1: `git push` complains about upstream
 

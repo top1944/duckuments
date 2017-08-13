@@ -123,7 +123,7 @@ WiFi adapter in your laptop.
 First, make sure that the Edimax is correctly installed.
 Using `iwconfig`, you should see four interfaces:
 
-    $ iwconfig
+    duckiebot $ iwconfig
     wlx![AABBCCDDEEFFGG]  unassociated  Nickname:"rtl8822bu"
 
     ![...]
@@ -141,7 +141,7 @@ Make note of the name `wlx![AABBCCDDEEFFGG]`.
 
 Look up the MAC address using the command:
 
-    $ ifconfig wlx![AABBCCDDEEFFGG]
+    duckiebot $ ifconfig wlx![AABBCCDDEEFFGG]
     wlx74da38c9caa0 Link encap:Ethernet  HWaddr ![AA:BB:CC:DD:EE:FF:GG]
 
 Then, edit the connection file
@@ -185,7 +185,7 @@ You will see a block like the following:
      priority=10
     }
 
-Add a new one with your SSS and password.
+Add a new one with your SSID and password.
 
 This assumes you have a roughly similar wireless network setup - if not then
 you might need to change some of the other attributes.

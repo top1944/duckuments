@@ -29,15 +29,6 @@ Here we set up the "remote launch".
 
 TODO: draw diagrams
 
-## Make sure that you can log in from the laptop
-
-Make sure that you can login with SSH *without a password*.
-From the laptop, run:
-
-    laptop $ ssh ![username]@![robot name].local
-
-If this doesn't work, you missed some previous steps.
-
 ## Download and setup `Software` repository on the laptop
 
 As you did on the Duckiebot, you should clone the `Software`
@@ -59,6 +50,18 @@ See: The procedure is documented in [](#edit-machines-file).
 ## Start the demo {#roslaunch-joystick}
 
 Now you are ready to launch the joystick demo remotely.
+
+<div class='check' markdown='1'>
+
+Make sure that you can login with SSH **without a password**.
+From the laptop, run:
+
+    laptop $ ssh ![username]@![robot name].local
+
+If this doesn't work, you missed some previous steps.
+
+</div>
+
 
 Run this *on the laptop*:
 

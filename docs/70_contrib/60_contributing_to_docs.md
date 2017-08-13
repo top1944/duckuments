@@ -26,61 +26,161 @@ They link to the "edit" page in Github. There, one can make and commit the edits
 
 In the multiple-page version, each page also includes a comment box powered by a service called Disqus. This provides a way for people to write comments with a very low barrier. (We would periodically remove the comments.)
 
-## Installing dependencies for compiling the documentation {#installing-docs-system}
+## Installing the documentation system {#installing-docs-system}
 
-Let `DUCKUMENTS` be the base directory for the documentation.
+In the following, we are going to assume that the documentation system is
+installed in `~/duckuments`. However, it can be installed anywhere.
 
-Download the `duckuments` repo in that directory:
+We are also going to assume that you have setup
+a Github account with working public keys.
 
-    $ git clone git@github.com:duckietown/duckuments.git $DUCKUMENTS
+<!-- See: The documentation for that is in XXX. -->
 
-Cd into directory:
+### Dependencies
 
-    $ cd $DUCKUMENTS
-
-### Setup a virtual environment
-
-On Ubuntu 16.04, create a virtual environment usign `virtualenv` (`sudo apt install virtualenv` if needed):
-
-    $ virtualenv --system-site-packages deploy
-
-In other distributions you might need to use `venv`:
-
-    $ venv deploy
-
-Activate the virtual environment:
-
-    $ source $DUCKUMENTS/deploy/bin/activate
-
-Install some dependencies:
+On Ubuntu 16.04, these are the dependencies to install:
 
     $ sudo apt install libxml2-dev libxslt1-dev
     $ sudo apt install libffi6 libffi-dev
     $ sudo apt install python-dev python-numpy python-matplotlib
+    $ sudo apt install virtualenv
 
-Clone the `mcdp` external repository:
+### Download the `duckuments` repo
 
-    $ cd $DUCKUMENTS
-    $ git clone -b duckuments git@github.com:AndreaCensi/mcdp.git
+Download the `duckietown/duckuments` repository in that directory:
+
+    $ git clone git@github.com:duckietown/duckuments ~/duckuments
+
+
+### Setup the virtual environment
+
+Next, we will create a virtual environment using inside  the `~/duckuments`
+directory.
+
+Change into that directory:
+
+    $ cd ~/duckuments
+
+Create the virtual environment using `virtualenv`:
+
+    $ virtualenv --system-site-packages deploy
+
+Other distributions: In other distributions you might need to use `venv` instead of `virtualenv`.
+
+Activate the virtual environment:
+
+    $ source ~/duckuments/deploy/bin/activate
+
+### Setup the `mcdp` external repository
+
+Make sure you are in the directory:
+
+    $ cd ~/duckuments
+
+Clone the `mcdp` external repository, with the branch `duckuments`.
+
+    $ git clone -b duckuments git@github.com:AndreaCensi/mcdp
 
 Install it and its dependencies:
 
-    $ cd $DUCKUMENTS/mcdp
+    $ cd ~/duckuments/mcdp
     $ python setup.py develop
 
-(If you get a permission error here, it means you have not properly activated the virtualenv)
+Note: If you get a permission error here, it means you have not properly
+activated the virtual environment.
 
-Depending on your system, you might need to install these other dependencies:
-(It should not be necessary on Ubuntu 16 given the `apt` commands above.)
+Other distributions: If you are not on Ubuntu 16, depending on your system, you might need to install these other dependencies:
 
-    $ cd $DUCKUMENTS
     $ pip install numpy matplotlib
 
-## Extra dependencies for compiling the PDF version
+
+## Compiling the documentation
+
+<div class="check" markdown="1">
+
+Make sure you have deployed and activated the virtual environment. You can check
+this by checking which `python` is active:
+
+    $ which python
+    /home/![user]/duckuments/deploy/bin/python
+
+</div>
+
+Then:
+
+    $ cd ~/duckuments
+    $ make duckuments-dist
+
+This creates the directory `duckuments-dist`, which contains
+another checked out copy of the repository, but with the branch `gh-pages`, which
+is the branch that is published by Github using the "Github Pages" mechanism.
+
+<div class="check" markdown="1">
+
+At this point, please make sure that you have these two `.git` folders:
+
+    ~/duckuments/.git
+    ~/duckuments/duckuments-dist/.git
+
+</div>
+
+To compile the docs, run `make clean compile`:
+
+    $ make clean compile
+
+To see the result, open the file
+
+    ./duckuments-dist/master/duckiebook/index.html
+
+### Incremental compilation
+
+If you want to do incremental compilation, you can omit the `clean` and just
+use:
+
+    $ make compile
+
+This will be faster. However, sometimes it might get confused. At that point,
+do `make clean`.
+
+## The workflow to edit documentation.
+
+This is the workflow:
+
+1. Edit the Markdown in the `master` branch of the `duckuments` repository.
+2. Run `make compile` to make sure it compiles.
+3. Commit the Markdown and push on the `master` branch.
+
+Done. A bot will redo the compilation and push the changes in the `gh-pages` branch.
+
+Step 2 is there so you know that the bot will not encounter errors.
+
+## \*Deploying the documentation
+
+Note: This part is now done by a bot, so you don't need to do it manually.
+
+To deploy the documentation, jump into the `DUCKUMENTS/duckuments-dist` directory.
+
+Run the command `git branch`. If the out does not say that you are on the branch `gh-pages`,
+then one of the steps before was done incorrectly.
+
+    $ cd $DUCKUMENTS/duckuments-dist
+    $ git branch
+    ...
+    * gh-pages
+    ...
+
+Now, after triple checking that you are in the `gh-pages` branch, you can
+use `git status` to see the files that were added or modified,
+and simply use `git add`, `git commit` and `git push` to push the files
+to Github.
+
+## \*Compiling the PDF version
 
 Note: The dependencies below are harder to install. If you don't manage
 to do it, then you only lose the ability to compile the PDF. You can do `make compile`
 to compile the HTML version, but you cannot do `make compile-pdf`.
+
+### Installing `nodejs`
 
 Ensure the latest version (>6) of `nodejs` is installed.
 
@@ -104,7 +204,21 @@ Next, install the necessary Javascript libraries using `npm`:
     $ cd $DUCKUMENTS
     $ npm install MathJax-node jsdom@9.3 less
 
+
+### Troubleshooting `nodejs` installation problems
+
+The only pain point  in the installation procedure has been the installation of `nodejs` packages using `npm`. For some reason, they cannot be installed globally (`npm install -g`).
+
+Do **not** use `sudo` for installation. It will cause problems.
+
+If you use `sudo`, you probably have to delete a bunch of directories,
+such as: `RBROOT/node_modules`, `~/.npm`, and `~/.node_modules`, if they exist.
+
+### Installing Prince
+
 Install PrinceXML from [this page](https://www.princexml.com/download/).
+
+### Installing fonts
 
 Download STIX fonts from [this site][stix].
 
@@ -119,53 +233,6 @@ and then rebuild the font cache using:
     $ fc-cache -fv
 
 
-## Troubleshooting installation problems
-
-### Installing `nodejs` packages
-
-The only pain point  in the installation procedure has been the installation of `nodejs` packages using `npm`. For some reason, they cannot be installated globally (`npm install -g`).
-
-Do not use `sudo` for installation. It will cause problems.
-
-If you use `sudo`, you probably have to delete a bunch of directories,
-such as: `RBROOT/node_modules`, `~/.npm`, and `~/.node_modules`, if they exist.
-
-
-## Compiling the documentation
-
-Make sure you have deployed and activated the virtual environment. Then:
-
-    $ cd $DUCKUMENTS
-    $ make duckuments-dist
-
-This creates the directory `duckuments-dist`, which contains
-another checked out copy of the repository, but with the branch `gh-pages`, which
-is the branch that is published by Github using the "Github Pages" mechanism.
-
-At this point, please make sure that you have these two `.git` folders:
-
-    $DUCKUMENTS/.git
-    $DUCKUMENTS/duckuments-dist/.git
-
-To compile the docs, go in the `DUCKUMENTS` directory and run `make compile`:
-
-    $ cd $DUCKUMENTS
-    $ make clean compile
-
-To see the result, open the file
-
-    ./duckuments-dist/master/duckiebook/index.html
-
-### Incremental compilation
-
-If you want to do incremental compilation, you can omit the `clean` and just
-use:
-
-    $ make compile
-
-This will be faster. However, sometimes it might get confused. At that point,
-do `make clean`.
-
 ### Compiling the PDF
 
 To compile the PDF, use:
@@ -175,37 +242,3 @@ To compile the PDF, use:
 This creates the file:
 
     ./duckuments-dist/master/duckiebook.pdf
-
-
-## Deploying the documentation
-
-**This part is now done by a bot, so you don't need to do it manually.**
-
-To deploy the documentation, jump into the `DUCKUMENTS/duckuments-dist` directory.
-
-Run the command `git branch`. If the out does not say that you are on the branch `gh-pages`,
-then one of the steps before was done incorrectly.
-
-    $ cd $DUCKUMENTS/duckuments-dist
-    $ git branch
-    ...
-    * gh-pages
-    ...
-
-Now, after triple checking that you are in the `gh-pages` branch, you can
-use `git status` to see the files that were added or modified,
-and simply use `git add`, `git commit` and `git push` to push the files
-to Github.
-
-## In summary: the workflow
-
-This is the workflow:
-
-
-1. Edit the Markdown in the `master` branch of the `duckuments` repository.
-2. Run `make compile` to make sure it compiles.
-3. Commit the Markdown and push on the `master` branch.
-
-Done. The bot will redo the compilation and push the changes in the `gh-pages` branch.
-
-Step 2 is done, so you know that the bot will not encounter errors.
