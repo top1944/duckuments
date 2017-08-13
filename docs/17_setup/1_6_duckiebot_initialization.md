@@ -114,7 +114,7 @@ Please see [](#byobu) for an introduction to Byobu.
 XXX Not sure it's a good idea to boot into Byobu.
 
 ## (For D17-C1) Configure the robot-generated network
-
+XXX `D17-0+w`
 The Duckiebot in configuration `D17-C0+w` can create a WiFi network.
 
 It is a 5 GHz network; this means that you need to have a 5 GHz
