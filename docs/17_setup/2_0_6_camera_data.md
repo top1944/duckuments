@@ -95,7 +95,7 @@ You can use `rostopic hz` to see the statistics about the publishing frequency:
 
     laptop $ rostopic hz /![robot name]/camera_node/image/compressed
 
-On a Raspberry PI 3, you should see a number close to 30 Hz:
+On a Raspberry Pi 3, you should see a number close to 30 Hz:
 
     average rate: 30.016
         min: 0.026s max: 0.045s std dev: 0.00190s window: 841

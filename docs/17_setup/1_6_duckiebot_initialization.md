@@ -160,8 +160,8 @@ At this point you should see a new network being created named "`![robot name]`"
 
 You can connect with the laptop to that network.
 
-If the Raspberry PI's network interface is connected to the `duckietown` network
-and to the internet, the Raspberry PI will act as a bridge to the internet.
+If the Raspberry Pi's network interface is connected to the `duckietown` network
+and to the internet, the Raspberry Pi will act as a bridge to the internet.
 
 
 ## Setting up wireless network configuration
@@ -248,7 +248,7 @@ Note: Never add other hostnames in `/etc/hosts`. It is a tempting
 fix when DNS does not work, but it will cause other problems
 subsequently.
 
-Then reboot the Raspberry PI using the command
+Then reboot the Raspberry Pi using the command
 
     $ sudo reboot
 

@@ -4,16 +4,18 @@ Assigned: Andrea
 
 ## VIM
 
-The editor to choose is VI, or more precisely, VIM (improved vi).
+To do quick changes to files, especially when logged remotely,
+we suggest you use the VI editor, or more precisely, VIM ("VI iMproved").
+
+See: [A VIM tutorial](http://www.openvim.com/).
+
+### Installation
 
 Install like this:
 
     $ sudo apt install vim
 
-Documentation:
-
-* [A VIM tutorial](http://www.openvim.com/)
-
+### Suggested configuration
 
 Suggested `~/.vimrc`:
 
@@ -44,3 +46,11 @@ To mark a block of lines and indent it, use <kbd>V</kbd>.
 For example, use <kbd>V</kbd><kbd>j</kbd><kbd>j</kbd><kbd>&gt;</kbd> to indent 3 lines.
 
 Use <kbd>&lt;</kbd> to dedent.
+
+## Atom
+
+TODO: to write
+
+## Eclipse
+
+TODO: to write

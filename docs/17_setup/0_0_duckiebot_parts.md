@@ -28,13 +28,6 @@ Results:
 
 
 
-## Duckiebot configurations
-
-Configuration `D17-0`: Only camera and motors.
-
-Configuration `D17-0+w`: Previous one + an additional WiFi card (Edimax).
-
-Configuration `D17-1`: LED lights and bumpers
 
 
 ## Bill of materials
@@ -44,7 +37,7 @@ Configuration `D17-1`: LED lights and bumpers
 
 <div markdown="1">
 
-<col2 id='materials' figure-id="tab:materials" figure-caption="Bill of materials">
+ <col2 id='materials' figure-id="tab:materials" figure-caption="Bill of materials">
     <s>[Chassis](http://www.kr4.us/magician-chassis-rob-12866.html)</s>                         <s>USD 20</s>
     <s>[Camera with 160-FOV Fisheye Lens](https://tinyurl.com/ybwrcywc)</s>                         <s>USD 39</s>
     <s>[Camera Mount](https://tinyurl.com/ybyewdrt)</s>                         <s>USD 8.50</s>
@@ -71,7 +64,7 @@ Configuration `D17-1`: LED lights and bumpers
     <s>[Bumpers]()</s><s>USD ??</s>
     <s>Total for minimum configuration</s>                         <s>USD ??</s>
     <s>Total for fancy configuration</s>                         <s>USD ??</s>
-</col2>
+ </col2>
 
 </div>
 
@@ -99,11 +92,11 @@ The price for this in the US is about USD 15-30.
      <img src="magician_chassis.jpg" style='width: 15em'/>
 </div>
 
-## Raspberry PI 3 (RPI-3)
+## Raspberry Pi 3 (RPI-3)
 
 The RPI-3 is the central computer of the Duckiebot. Duckiebot version `D17` uses Model B ([](#fig:rpi3b)) (A1.2GHz 64-bit quad-core ARMv8 CPU, 1GB RAM), a small but powerful computer.
 
-<div figure-id="fig:rpi3b" figure-caption="The Raspberry PI 3 Model B">
+<div figure-id="fig:rpi3b" figure-caption="The Raspberry Pi 3 Model B">
      <img src="rpi3b.png" style='width: 15em'/>
 </div>
 
@@ -111,7 +104,7 @@ The price for this in the US is about USD 35.
 
 ### Power Supply
 
-We want a hard-wired power source (5VDC, 2.4A, Micro USB) to suppply the RPI-3 ([](#fig:power_supply)).
+We want a hard-wired power source (5VDC, 2.4A, Micro USB) to supply the RPI-3 ([](#fig:power_supply)).
 
 <div figure-id="fig:power_supply" figure-caption="The Power Supply">
      <img src="power_supply.png" style='width: 15em'/>
@@ -185,6 +178,8 @@ We use the DC+Stepper motor HAT to control the motors that drive the wheels.
      <img src="motor_hat.png" style='width: 15em'/>
 </div>
 
+TODO: use picture that shows only the hat without the motors
+
 ### Male-Male Jumper Wires
 
 <div figure-id="fig:mm_wires" figure-caption="Premier Male-Male Jumper Wires">
@@ -202,6 +197,9 @@ We use the DC+Stepper motor HAT to control the motors that drive the wheels.
 <div figure-id="fig:servo_hat" figure-caption="The PWM-Servo HAT">
      <img src="servo_hat.png" style='width: 15em'/>
 </div>
+
+
+TODO: use picture without any accessories
 
 
 ## Battery
@@ -228,9 +226,9 @@ In version `D17-1`, the Duckiebot requires 16 standoffs, 4 nuts and 4 screws.
 
 ## Ziptie
 
-Two long (300x5 mm) zipties are going to be useful to keep the battery at the lower deck from moving around.
+Two long (300x5 mm) zip ties are going to be useful to keep the battery at the lower deck from moving around.
 
-<div figure-id="fig:zipties" figure-caption="The Zipties">
+<div figure-id="fig:zipties" figure-caption="The zip ties">
      <img src="zipties.png" style='width: 15em'/>
 </div>
 

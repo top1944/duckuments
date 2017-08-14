@@ -61,9 +61,17 @@ Use either "`laptop`" or "`duckiebot`" (not capitalized, as a hostname) as the p
 For example, for a command that is supposed to run
 on the laptop, use:
 
+> <pre><code>lap<span>top</span> &#36; cd ~/duckietown</code></pre>
+
+It will become:
+
     laptop $ cd ~/duckietown
 
 For a command that must run on the Duckiebot, use:
+
+> <pre><code>duckie<span>bot</span> &#36; cd ~/duckietown</code></pre>
+
+It will become:
 
     duckiebot $ cd ~/duckietown
 
@@ -75,7 +83,7 @@ If the command is supposed to be run on both, omit the hostname:
 
 - "Duckiebot" is always capitalized.
 
-- Use "Raspberry PI", not "PI", "raspi", etc.
+- Use "Raspberry Pi", not "PI", "raspi", etc.
 
 - These are other words frequently misspelled:
 

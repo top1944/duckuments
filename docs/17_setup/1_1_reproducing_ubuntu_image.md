@@ -62,7 +62,7 @@ Ubuntu will mount two partitions, by the name of `PI_ROOT` and `PI_BOOT`.
 
 ### Installation
 
-Boot the disk in the Raspberry PI.
+Boot the disk in the Raspberry Pi.
 
 Choose the following options:
 
@@ -89,9 +89,9 @@ commands:
 Expect `dist-upgrade` to take quite a long time (up to 2 hours).
 
 
-## Raspberry PI Config
+## Raspberry Pi Config
 
-The Raspberry PI is not accessible by SSH by default.
+The Raspberry Pi is not accessible by SSH by default.
 
 Run `raspi-config`:
 
@@ -322,7 +322,7 @@ Activate the swap space:
 
 First, make `vi` the default editor, using
 
-    sudo update-alternatives --config editor
+    $ sudo update-alternatives --config editor
 
 and then choose `vim.basic`.
 

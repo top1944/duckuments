@@ -6,7 +6,7 @@ Assigned: Andrea
 
 Prerequisites:
 
-* You can run the joystick demo from the Raspberry PI.
+* You can run the joystick demo from the Raspberry Pi.
 
 See: The procedure is documented in [](#rc-control).
 
@@ -20,7 +20,7 @@ Results:
 
 ROS nodes can be launched in two ways:
 
-1. "local launch": log in to the Raspberry PI using SSH and run
+1. "local launch": log in to the Raspberry Pi using SSH and run
    the program from there.
 2. "remote launch": run the program directly from a laptop.
 
@@ -70,7 +70,7 @@ Run this *on the laptop*:
 
 You should be able to drive the vehicle with joystick just like the last
 example. Note that remotely launching nodes from your laptop doesn't mean that
-the nodes are running on your laptop. They are still running on the Raspberry PI in this
+the nodes are running on your laptop. They are still running on the Raspberry Pi in this
 case.
 
 See also: For more information about `roslaunch`, see [](#roslaunch).

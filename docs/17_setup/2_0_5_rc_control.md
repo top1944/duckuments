@@ -108,7 +108,7 @@ Commit and push the new machines file. (XXX No, don't commit the machines file.)
 ## Test that the joystick is detected {#test-joystick}
 
 
-Plug the joystick receiver in one of the USB port on the Raspberry PI.
+Plug the joystick receiver in one of the USB port on the Raspberry Pi.
 
 To make sure that the joystick is detected, run:
 
@@ -139,7 +139,7 @@ according to your actions.
 
 ## Run the joystick demo
 
-SSH into the Raspberry PI and run the following from the `duckietown` directory:
+SSH into the Raspberry Pi and run the following from the `duckietown` directory:
 
     duckiebot $ cd ~/duckietown
     duckiebot $ source environment.sh
@@ -149,7 +149,7 @@ SSH into the Raspberry PI and run the following from the `duckietown` directory:
 The `environment.sh` setups the ROS environment at the terminal (so you can use
 commands like `rosrun` and `roslaunch`).
 
-<!-- The `set_ros_master.sh` script by default sets the Raspberry PI as its own ROS master. -->
+<!-- The `set_ros_master.sh` script by default sets the Raspberry Pi as its own ROS master. -->
 
 Now make sure the motor shield is connected.
 
@@ -197,7 +197,7 @@ Resolution: The program assumes that the joystick is at `/dev/input/js0`.
 In doubt, see [](#test-joystick).
 
 
-## The proper shutdown procedure for the Raspberry PI
+## The proper shutdown procedure for the Raspberry Pi
 
 Generally speaking, you can terminate any `roslaunch` command with <kbd>Ctrl</kbd>-<kbd>C</kbd>.
 
@@ -212,4 +212,4 @@ the system might get corrupted.
 
 Then, disconnect the power cable, at the **battery end**.
 
-Warning: If you disconnect frequently the cable at the Raspberry PI's end, you might damage the port.
+Warning: If you disconnect frequently the cable at the Raspberry Pi's end, you might damage the port.

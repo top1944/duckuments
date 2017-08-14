@@ -4,39 +4,138 @@ Assigned: Andrea
 
 ## Byobu
 
-You need to learn to use `byobu`. It will save much time later.
+You need to learn to use Byobu. It will save you much time later.
 
-Byobu is "GNU `screen`" with fancy configuration; if you know `screen`,
-that's fine as well.
+See also: See the screencast on the website [http://byobu.co/][web-byobu].
 
-Please learn about Byobu here:
-
-- [http://byobu.co/](http://byobu.co/)
-
-Install using:
-
-    $ sudo apt install byobu
+[web-byobu]: http://byobu.co/
 
 ### Advantages of using Byobu
 
 TODO: To write
 
+### Installation
+
+On Ubuntu, install using:
+
+    $ sudo apt install byobu
+
 ### Quick command reference
 
-Quick commands reference, using function keys:
+You can change the escape sequence from <kbd>Ctrl</kbd>-<kbd>A</kbd> to
+something else by using the configuration tool that appears when you type
+<kbd>F9</kbd>.
 
-- `F2`: open a new terminal.
-- `F3`/`F4`: switch among the terminals.
-- `Ctrl-F6`: close current terminal.
+Commands to use windows:
 
-Using control sequences:
+<col3 class='command-table' figure-id="tab:commands-windows" figure-caption="Windows">
+    <s></s>
+    <s>Using function keys</s>
+    <s>Using escape sequences</s>
 
-- `ctrl-A` then `C`: creates new terminal.
-- `ctrl-A` then a number: switches to that terminal.
-- `ctrl-A` then `D`: detaches the terminal.
+    <s>Create new window</s>
+    <s><kbd>F2</kbd></s>
+    <s><kbd>Ctrl</kbd>-<kbd>A</kbd> then <kbd>C</kbd></s>
 
-To quit a terminal, just use `exit`.
+    <s>Previous window</s>
+    <s><kbd>F3</kbd></s>
+    <s></s>
+
+    <s>Next window</s>
+    <s><kbd>F4</kbd></s>
+    <s></s>
+
+    <s>Switch to window </s>
+    <s></s>
+    <s><kbd>Ctrl</kbd>-<kbd>A</kbd> then a number</s>
+
+    <s>Close window</s>
+    <s><kbd>F6</kbd></s>
+    <s></s>
+
+    <s>Rename window </s>
+    <s></s>
+    <s><kbd>Ctrl</kbd>-<kbd>A</kbd> then <kbd>,</kbd></s>
+</col3>
+
+
+Commands to use panes (windows split in two or more):
+
+<col3 class='command-table' figure-id="tab:commands-panes">
+
+    <figcaption>Commands for panes</figcaption>
+
+    <s></s>
+    <s>Using function keys</s>
+    <s>Using escape sequences</s>
+
+    <s>Split horizontally</s>
+    <s><kbd>Shift</kbd>-<kbd>F2</kbd></s>
+    <s><kbd>Ctrl</kbd>-<kbd>A</kbd> then <kbd>|</kbd></s>
+
+    <s>Split vertically</s>
+    <s><kbd>Ctrl</kbd>-<kbd>F2</kbd></s>
+    <s><kbd>Ctrl</kbd>-<kbd>A</kbd> then <kbd>%</kbd></s>
+
+    <s>Switch focus among panes</s>
+    <s><kbd>Ctrl</kbd>-<kbd>↑↓←→</kbd></s>
+    <s><kbd>Ctrl</kbd>-<kbd>A</kbd> then one of
+    <kbd>↑↓←→</kbd>
+
+     </s>
+
+    <s>Break pane</s>
+    <s></s>
+    <s><kbd>Ctrl</kbd>-<kbd>A</kbd> then <kbd>!</kbd></s>
+</col3>
+
+<!-- (<kbd>↑</kbd>,<kbd>↓</kbd>,<kbd>←</kbd>,<kbd>→</kbd>) -->
+
+Other commands:
+
+
+<col3 class='command-table' figure-id="tab:commands-other" figure-caption="Other">
+    <s></s>
+    <s>Using function keys</s>
+    <s>Using escape sequences</s>
+
+
+    <s>Help </s>
+    <s></s>
+    <s><kbd>Ctrl</kbd>-<kbd>A</kbd> then <kbd>?</kbd></s>
+
+    <s>Detach </s>
+    <s></s>
+    <s><kbd>Ctrl</kbd>-<kbd>A</kbd> then <kbd>D</kbd></s>
+
+
+
+</col3>
+
+
+<style>
+.command-table td {
+    text-align: left;
+    font-size: 80%;
+}
+</style>
+
+### OS X
+
+Scroll up and down using
+<kbd>fn</kbd><kbd>option</kbd><kbd>↑</kbd>
+and
+<kbd>fn</kbd><kbd>option</kbd><kbd>↓</kbd>.
+
+
+Highlight using <kbd>alt</kbd>
 
 <!-- Shift+<arrow keys> switches between panes. Shift+Alt+<arrow keys> changes the current pane size. -->
 
 <!-- Byobu tips: don't forget F2 (or ctrl-a C) in byobu will open a terminal in a new tab. Alternatively, you can also Shift+F2 to split the current tab into two horizontally. -->
+
+### Alternatives
+
+[GNU Screen][web-screen] is fine as well.
+
+[web-screen]: https://en.wikipedia.org/wiki/GNU_Screen
