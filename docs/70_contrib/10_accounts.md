@@ -14,19 +14,6 @@ Currently, Duckietown has the following accounts:
 * We also have a list of addresses, of people signed up on the website, that we didn't use yet;
 * The Facebook page.
  
-
-## For Fall 2017
-
-As a student in Fall 2017, these are the accounts that you need:
-
-- A Github account and membership in the Duckietown organization.
-- A Slack account, for team discussion and organization.
-
-As an instructor/TA for the Fall 2017 class, in addition to the accounts above, these are the accounts that you need:
-
-- Twist: for class organization (such as TAs, logistics);
-- Google Docs, used to maintain TODOs.
-
 ## For other contributors
 
 If you are an international contributor:

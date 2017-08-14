@@ -1,6 +1,6 @@
 
-This repository contains (will contain) all the documentation
-that we want to maintain polished.
+This repository contains all the documentation of the Duckietown project.
+
 
 For installation instructions, see the chapter "Contributing to the documentation"
 in the [current version of the Duckiebook][duckiebook].
