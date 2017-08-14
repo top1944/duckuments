@@ -45,7 +45,7 @@ TODO: other LaTeX features supported
 
 ## Variables in command lines and command output
 
-Use the syntax "`!``[name]`" for describing the variables in the code.
+Use the syntax "<code><span>!</span>[name]</code>" for describing the variables in the code.
 
 <div class="example" markdown="1">
 
