@@ -1,0 +1,67 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'segments.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{184.76833496bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.96694182)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{segments.pdf}}%
+    \put(0.13260892,0.38570259){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s^1$}}}%
+    \put(0.13142183,1.09183837){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s^2$}}}%
+    \put(0.65189253,0.51450937){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s^4$}}}%
+    \put(0.65626641,1.45922952){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s^3$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{segments.pdf}}%
+    \put(0.00021075,0.05527033){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_1^1$}}}%
+    \put(0.0820831,0.59174819){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_2^1$}}}%
+    \put(0.05584082,0.84104898){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_1^2$}}}%
+    \put(-0.00539104,1.32215661){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_2^2$}}}%
+    \put(0.55881679,1.6808004){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_1^3$}}}%
+    \put(0.7118964,1.16470332){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_2^3$}}}%
+    \put(0.65503836,0.86291784){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_1^4$}}}%
+    \put(0.65503836,0.25497274){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_2^4$}}}%
+  \end{picture}%
+\endgroup%
