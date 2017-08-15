@@ -139,3 +139,104 @@ Burn the image using the command `dd`:
 
 Note: Use the name of the device, without partitions. i.e., `/dev/mmcblk0`, not
 `/dev/mmcblk0pX`.
+
+## How to shrink an image {#howto-shrink-image}
+
+<div class='requirements' markdown='1'>
+
+Requires:
+
+- An image file to burn.
+- An Ubuntu computer.
+
+Results:
+
+- A shrunk image.
+
+</div>
+
+Note: Majority of content taken from [here](http://www.aoakley.com/articles/2015-10-09-resizing-sd-images.php)
+
+We are going to use the tool `gparted` so make sure it's installed
+
+    laptop $ sudo apt-get install gparted
+    
+Let the image file be `![image file]`.
+Run the command:
+
+    laptop $ sudo fdisk -l ![image file]
+should give you something like:
+```
+Device                       Boot  Start      End  Sectors  Size Id Type
+duckiebot-RPI3-LP-aug15.img1        2048   131071   129024   63M  c W95 FAT32 (LBA)
+duckiebot-RPI3-LP-aug15.img2      131072 21219327 21088256 10.1G 83 Linux
+```
+Take note of the start of the Linux partition (in our case 131072), let's call it `![start]`
+Now we are going to mount the Linux partition from the image:
+
+    laptop $ sudo losetup /dev/loop0 imagename.img -o $((![start]*512))
+
+and then run `gparted`:
+
+    laptop $ sudo gparted /dev/loop0
+
+In `gparted` click on the partition and click "Resize" under the "Partition" menu. Resize drag the arrow or enter a size
+that is equal to the minimum size plus 20MB
+
+Note: This didn't work well for me - I had to add much more than 20MB for it to work. 
+
+Click the "Apply" check mark. *Before* closing the final screen click through the arrows in the dialogue box 
+to find a line such a *"resize2fs -p /dev/loop0 1410048K"*. Take note of the new size of your partition. Let's
+call it `![new size]`.
+
+Now remove the loopback on the 2nd partition and setup a loopback on the whole image and run `fdisk`:
+
+    laptop $ sudo losetup -d /dev/loop0
+    laptop $ sudo losetup /dev/loop0 ![image file]
+    laptop $ sudo fdisk /dev/loop0
+    
+    Command (m for help): *d*
+    Partition number (1,2, default 2): *2*
+    Command (m for help): *n*
+    Partition type
+    p   primary (1 primary, 0 extended, 3 free)
+    e   extended (container for logical partitions)
+    Select (default p): *p*
+    Partition number (2-4, default 2): *2*
+    First sector (131072-62521343, default 131072): *![start]*
+    Last sector, +sectors or +size{K,M,G,T,P} (131072-62521343, default 62521343): *+![new size]*
+
+(Note: on the last line to include the `+` and the `K` as part of the size.)
+
+    Created a new partition 2 of type 'Linux' and of size 10.1 GiB.
+
+    Command (m for help): *w*
+    The partition table has been altered.
+    Calling ioctl() to re-read partition table.
+    Re-reading the partition table failed.: Invalid argument
+
+    The kernel still uses the old table. The new table will be used at the next reboot or after you run partprobe(8) or kpartx(8).
+
+Disregard the final error.
+
+You partition has now been resized and the partition table has been updated. Now we will remove the loopback and then 
+truncate the end of the image file:
+
+    laptop $ fdisk -l /dev/loop0
+
+```
+Device       Boot  Start      End  Sectors  Size Id Type
+/dev/loop0p1        2048   131071   129024   63M  c W95 FAT32 (LBA)
+/dev/loop0p2      131072 21219327 21088256 10.1G 83 Linux
+```
+Note down the end of the second partition (in thise case 21219327). Call this `![end]`.
+
+    laptop $ sudo losetup -d /dev/loop0
+    laptop $ sudo truncate -s $(((![end]+1)*512)) ![image file]
+
+You now have a shrunken image file. A further idea is to compress it:
+
+    laptop $ xz ![image file]
+    
+
+
