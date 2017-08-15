@@ -1,3 +1,3 @@
-# Software development guie {#part:development}
+# Software development guide {#part:development}
 
 This part is about how to develop software for the Duckiebot.
