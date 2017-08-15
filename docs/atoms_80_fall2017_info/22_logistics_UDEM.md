@@ -1,4 +1,4 @@
-## Additional information for UdeM students {#logistics_UDEM}
+# Additional information for UdeM students {#logistics_UDEM}
 
 Assigned: Liam
 

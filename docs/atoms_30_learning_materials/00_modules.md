@@ -1,3 +1,3 @@
-# Modules {#part:modules}
+# Theory chapters {#part:theory-chapters}
 
-These are the learning modules.
+These are the theory chapters.

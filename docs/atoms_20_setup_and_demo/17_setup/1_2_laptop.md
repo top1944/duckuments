@@ -7,7 +7,7 @@ Before you prepare the Duckiebot, you need to have a laptop with Ubuntu installe
 
 <div class='requirements' markdown='1'>
 
-Requires:
+Requirements:
 
 - A laptop with free disk space.
 - Internet connection to download the Ubuntu image.

@@ -1,4 +1,4 @@
-# Assembling the Duckiebot {#assembling-duckiebot}
+# Assembling the Duckiebot `C0` {#assembling-duckiebot}
 
 Assigned: Shiying
 
@@ -8,7 +8,7 @@ Resources necessaries:
 
 - Duckiebot `D17-C0` parts.
 
-See: The acquisition process is explained in [](#acquiring-parts).
+Requires: The acquisition process is explained in [](#acquiring-parts).
 
 - Time: about ??? minutes.
 

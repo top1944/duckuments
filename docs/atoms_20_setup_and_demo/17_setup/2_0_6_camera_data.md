@@ -7,7 +7,7 @@ Prerequisites:
 
 * You have configured the Duckiebot.
 
-See: The procedure is documented in [](#setup-duckiebot).
+Requires: The procedure is documented in [](#setup-duckiebot).
 
 * You know the basics of ROS (launch files, `roslaunch`, topics, `rostopic`).
 

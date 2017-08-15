@@ -1,3 +1,3 @@
-# Module template
+# Chapter template
 
 Assigned: Jacopo

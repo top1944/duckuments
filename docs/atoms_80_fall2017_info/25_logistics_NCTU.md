@@ -1,4 +1,4 @@
-## Additional information for NCTU students {#logistics_NCTU}
+# Additional information for NCTU students {#logistics_NCTU}
 
 Assigned: Nick
 

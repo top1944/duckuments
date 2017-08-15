@@ -1,4 +1,4 @@
-# The Duckietown project {#part:duckietown-project}
+# Meta - The Duckietown project {#part:duckietown-project}
 
 # What is Duckietown?
 

@@ -51,9 +51,8 @@ compile-pdf:
 
 	python -m mcdp_docs.add_edit_links < $(out_html2).tmp > $(out_html2)
 
-
 	prince --javascript -o /tmp/duckiebook.pdf $(out_html2)
-	
+
 	pdftk A=/tmp/duckiebook.pdf B=blank.pdf cat A1-end B output /tmp/duckiebook2.pdf keep_final_id
 	pdftk /tmp/duckiebook2.pdf update_info blank-metadata output $(out_pdf)
 

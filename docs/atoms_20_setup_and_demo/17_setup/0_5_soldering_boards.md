@@ -1,4 +1,4 @@
-# Soldering boards
+# Soldering boards for `C0`
 
 Assigned: Shiying
 

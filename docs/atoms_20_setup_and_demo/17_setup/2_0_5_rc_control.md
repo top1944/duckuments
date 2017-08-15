@@ -8,16 +8,16 @@ Prerequisites:
 
 * You have configured the laptop.
 
-See: The procedure is documented in [](#setup-laptop).
+Requires: The procedure is documented in [](#setup-laptop).
 
 * You have configured the Duckiebot.
 
-See: The procedure is documented in [](#setup-duckiebot).
+Requires: The procedure is documented in [](#setup-duckiebot).
 
 * You have created a Github account and configured public keys,
   both for the laptop and for the Duckiebot.
 
-See: The procedure is documented in [](#github-access).
+Requires: The procedure is documented in [](#github-access).
 
 Results:
 

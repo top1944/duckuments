@@ -1,4 +1,4 @@
-# Fall 2017 meta information {#part:fall-2017}
+# Fall 2017 {#part:fall-2017}
 
 This is the first time that a class is taught jointly across 3 continents!
 

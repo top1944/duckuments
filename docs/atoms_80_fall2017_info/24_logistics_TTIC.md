@@ -1,4 +1,4 @@
-## Additional information for TTIC students {#logistics_TTIC}
+# Additional information for TTIC students {#logistics_TTIC}
 
 Assigned: Matt
 

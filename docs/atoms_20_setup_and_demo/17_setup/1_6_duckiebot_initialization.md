@@ -11,7 +11,7 @@ Prerequisites:
 - A computer with an internet connection, an SD card reader, and 35 GB of free space.
 - A mounted Duckiebot in configuration `D17-C0`.
 
-See: This is the result of [](#assembling-duckiebot).
+Requires: This is the result of [](#assembling-duckiebot).
 
 Result:
 

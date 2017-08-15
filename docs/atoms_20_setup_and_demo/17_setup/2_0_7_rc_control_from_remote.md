@@ -8,7 +8,7 @@ Prerequisites:
 
 * You can run the joystick demo from the Raspberry Pi.
 
-See: The procedure is documented in [](#rc-control).
+Requires: The procedure is documented in [](#rc-control).
 
 Results:
 

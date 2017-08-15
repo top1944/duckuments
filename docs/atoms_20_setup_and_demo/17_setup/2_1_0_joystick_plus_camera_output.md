@@ -8,15 +8,15 @@ Prerequisites:
 
 * You can run the joystick demo remotely.
 
-See: The procedure is documented in [](#rc-launched-remotely).
+Requires: The procedure is documented in [](#rc-launched-remotely).
 
 * You can read the camera data from ROS.
 
-See: The procedure is documented in [](#read-camera-data).
+Requires: The procedure is documented in [](#read-camera-data).
 
 * You know how to get around in Byobu.
 
-See: You can find the Byobu tutorial in [](#byobu).
+Reference: You can find the Byobu tutorial in [](#byobu).
 
 Results:
 

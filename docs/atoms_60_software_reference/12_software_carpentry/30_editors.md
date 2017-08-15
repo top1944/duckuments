@@ -43,7 +43,7 @@ To indent 5 lines,  use
 
 To mark a block of lines and indent it, use <kbd>V</kbd>.
 
-For example, use <kbd>V</kbd><kbd>j</kbd><kbd>j</kbd><kbd>&gt;</kbd> to indent 3 lines.
+For example, use <kbd>V</kbd><kbd>J</kbd><kbd>J</kbd><kbd>&gt;</kbd> to indent 3 lines.
 
 Use <kbd>&lt;</kbd> to dedent.
 

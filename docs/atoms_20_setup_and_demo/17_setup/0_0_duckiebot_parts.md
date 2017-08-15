@@ -1,4 +1,4 @@
-# Acquiring the parts for the Duckiebot {#acquiring-parts}
+# Acquiring the parts for the Duckiebot `C0` {#acquiring-parts}
 
 Assigned: Jacopo
 
