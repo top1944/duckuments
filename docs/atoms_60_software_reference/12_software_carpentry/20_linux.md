@@ -164,7 +164,7 @@ We are going to use the tool `gparted` so make sure it's installed
 Let the image file be `![image file]`.
 Run the command:
 
-    laptop $ sudo fdisk -l `![image file]
+    laptop $ sudo fdisk -l ![image file]
 should give you something like:
 ```
 Device                       Boot  Start      End  Sectors  Size Id Type
@@ -195,8 +195,6 @@ Now remove the loopback on the 2nd partition and setup a loopback on the whole i
     laptop $ sudo losetup /dev/loop0 ![image file]
     laptop $ sudo fdisk /dev/loop0
     
-At the prompt (everything in *italics* is what you should enter):
-
     Command (m for help): *d*
     Partition number (1,2, default 2): *2*
     Command (m for help): *n*
@@ -205,8 +203,8 @@ At the prompt (everything in *italics* is what you should enter):
     e   extended (container for logical partitions)
     Select (default p): *p*
     Partition number (2-4, default 2): *2*
-    First sector (131072-62521343, default 131072): *![start]
-    Last sector, +sectors or +size{K,M,G,T,P} (131072-62521343, default 62521343): *+![new size]
+    First sector (131072-62521343, default 131072): *![start]*
+    Last sector, +sectors or +size{K,M,G,T,P} (131072-62521343, default 62521343): *+![new size]*
 
 (Note: on the last line to include the `+` and the `K` as part of the size.)
 
@@ -231,7 +229,7 @@ Device       Boot  Start      End  Sectors  Size Id Type
 /dev/loop0p1        2048   131071   129024   63M  c W95 FAT32 (LBA)
 /dev/loop0p2      131072 21219327 21088256 10.1G 83 Linux
 ```
-Note down the end of the second partition (in thise case 21219372). Call this `![end]`.
+Note down the end of the second partition (in thise case 21219327). Call this `![end]`.
 
     laptop $ sudo losetup -d /dev/loop0
     laptop $ sudo truncate -s $(((![end]+1)*512)) ![image file]
