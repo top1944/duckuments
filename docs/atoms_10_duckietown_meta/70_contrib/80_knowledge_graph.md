@@ -4,20 +4,51 @@
 
 ### Atoms
 
-\begin{definition}[Atom]
+\begin{definition}[Atom]\label{def:atom}
 An *atom* is a concrete resource (text, video) that is the smallest
 unit that is individually addressable. It is indivisible.
 \end{definition}
 
+Each atom as a type, as follows:
+
+<!--
 Examples of atoms include:
 
-- text (usually referred to as "chapters");
-- setup instructions;
-- demo instructions;
-- exercises;
-- lecture slides;
-- lecture videos.
 
+    - `theory`;
+    - `setup`: setup instructions;
+    - `demo`: demo instructions;
+    - `exercise`: exercises;
+    - `slides`: lecture slides;
+    - `video`: lecture videos, instruction videos.
+    - `reference`: manuals about specific software; "how to solder".
+-->
+
+    text
+      text/theory
+      text/setup
+      text/demo
+      text/exercise
+      text/reference
+      text/instructor-guide
+      text/quiz
+    video
+      video/lecture
+      video/instructable
+      video/screencast
+      video/demo
+
+<!--
+slides
+
+Resources:
+    markdown
+    pdf
+    image jpg
+
+
+  "An atom is made up of resources (markdown source, images, other attachments, etc.), but these resources are not indexable by themselves. They are always presented as part of an atom."
+-->
 
 ### Semantic graph of atoms {#atoms-graphs}
 
@@ -36,7 +67,7 @@ The graph has four different types of edges:
 
 A "module" is an abstraction from the point of view of the teacher.
 
-\begin{definition}[Module]
+\begin{definition}[Module]\label{def:module}
 A *module* is a directed graph, where the nodes are either atoms or other modules,
 and the edges can be of the four types described in [](#atoms-graphs).
 \end{definition}
@@ -54,7 +85,7 @@ Each atom has the following **properties**:
 
 - An **ID** (alphanumeric + `-` and '_'). The ID is used for cross-referencing.
   It is the same in all languages.
-- A **type**, one of `text`, `setup`, `demo`, `exercise`.
+- A **type**, as above.
 
 There might be different **versions** of each atom. This is used primarily
 for dealing with translations of texts, different representations of the same image,
@@ -100,7 +131,7 @@ Here is an example of a header with all the attributes:
  <figcaption>`calibration.en.md`</figcaption>
 
 ``` .markdown
-# Odometry calibration {#odometry-calibration  lang=en-US type=demo status=ready}
+# Odometry calibration {#odometry-calibration  lang=en-US type='text/theory' status=ready}
 
 This first paragraph will be used as the "summary" for this text.
 
@@ -115,7 +146,7 @@ And this is how the Italian translation would look like:
  <figcaption>`calibration.it.md`</figcaption>
 
 ``` .markdown
-# Calibrazione dell'odometria {#odometry-calibration  lang=it type=demo status=draft}
+# Calibrazione dell'odometria {#odometry-calibration  lang=it type='text/theory' status=draft}
 
 Questo paragrafo sarà usato come un sommario del testo.
 

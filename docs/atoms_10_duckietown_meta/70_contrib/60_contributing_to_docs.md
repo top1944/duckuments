@@ -204,6 +204,7 @@ Next, install the necessary Javascript libraries using `npm`:
     $ cd $DUCKUMENTS
     $ npm install MathJax-node jsdom@9.3 less
 
+  
 
 ### Troubleshooting `nodejs` installation problems
 

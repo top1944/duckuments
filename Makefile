@@ -7,6 +7,7 @@ out_pdf=$(dist_dir)/duckiebook.pdf
 
 tmp_files=out/tmp
 tmp_files2=out/tmp2
+tex-symbols=docs/symbols.tex
 
 all: compile compile-pdf
 
@@ -46,6 +47,7 @@ compile-pdf:
 		--src docs/ \
 		--stylesheet v_manual_blurb_ready \
 		--mathjax 1 \
+		--symbols $(tex-symbols) \
 		-o $(tmp_files2) \
 		--output_file $(out_html2).tmp -c "config echo 1; rparmake"
 
@@ -74,6 +76,7 @@ compile-html:
 		--src docs/ \
 		--stylesheet v_manual_split \
 		--mathjax 0 \
+		--symbols $(tex-symbols) \
 		-o $(tmp_files) \
 		--output_file $(out_html).tmp -c "config echo 1; config colorize 1; rparmake"
 
@@ -85,6 +88,7 @@ compile-html-slow:
 		--src docs/ \
 		--stylesheet v_manual_split \
 		--mathjax 0 \
+		--symbols $(tex-symbols) \
 		-o $(tmp_files) \
 		--output_file $(out_html).tmp -c "config echo 1; config colorize 0; rmake"
 
@@ -98,4 +102,4 @@ compile-html-slow:
 split:
 	rm -f $(dist_dir)/duckiebook/*html
 	python -m mcdp_docs.split $(out_html) $(dist_dir)/duckiebook
-	python -m mcdp_docs.add_mathjax $(dist_dir)/duckiebook/*html
+	python -m mcdp_docs.add_mathjax --preamble $(tex-symbols) $(dist_dir)/duckiebook/*html
