@@ -143,7 +143,6 @@ I2C:
     duckiebot $ sudo apt install -y i2c-tools
 
 
-
 ## Install Edimax driver
 
 First, mark the kernel packages as not upgradeable:
@@ -338,6 +337,35 @@ into this line:
 
     %sudo   ALL=(ALL:ALL) NOPASSWD:ALL
 
+## Clean up
+
+You can use the command `dpigs` to find out which packages take
+lots of space.
+
+    sudo apt install wajig  debian-goodies
+
+Either:
+
+    $ wajig large
+    $ dpigs -H -n 20
+
+Stuff to remove:
+
+    $ sudo apt remove thunderbird
+    $ sudo apt remove libreoffice-\*
+    $ sudo apt remove openjdk-8-jre-headless
+    $ sudo apt remove fonts-noto-cjk
+    $ sudo apt remove brasero
+
+At the end, remove extra dependencies:
+
+    $ sudo apt autoremove
+
+And remove the `apt` cache using:
+
+    $ sudo apt clean
+
+The total size should be around 6.6GB.
 
 ## Ubuntu user configuration
 

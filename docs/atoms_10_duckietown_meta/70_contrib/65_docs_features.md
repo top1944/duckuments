@@ -43,6 +43,17 @@ This is an example proposition: &#36;2x = x + x&#36;.
 TODO: other LaTeX features supported
 
 
+## LaTeX symbols 
+
+The LaTeX symbols definitions are in a file called [`docs/symbols.tex`][symbols].
+
+
+[symbols]: https://github.com/duckietown/duckuments/blob/master/docs/symbols.tex
+
+
+Put all definitions there; if they are centralized it is easier to check
+that they are coherent.
+
 ## Variables in command lines and command output
 
 Use the syntax "<code><span>!</span>[name]</code>" for describing the variables in the code.

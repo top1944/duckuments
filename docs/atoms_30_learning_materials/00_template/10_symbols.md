@@ -4,16 +4,6 @@ Assigned: Andrea
 
 
 
-## LaTeX symbols repository
-
-The LaTeX symbols definitions are in a file called [`docs/symbols.tex`][symbols].
-
-
-[symbols]: https://github.com/duckietown/duckuments/blob/master/docs/symbols.tex
-
-
-Put all definitions there; if they are centralized it is easier to check
-that they are coherent.
 
 ## Conventions
 
