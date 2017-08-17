@@ -13,9 +13,9 @@ The idea is to add to `what-the-duck` all the tests that can be automated.
 
 The documentation about to do that is not ready yet.
 
-The current tests are available in the file:
+<!-- The current tests are available in the file:
 
-    ./catkin_ws/src/f23-LED/led_detection/include/what_the_duck/list_of_checks.py
+    ./catkin_ws/src/what_the_duck/list_of_checks.py -->
 
 
 
@@ -54,7 +54,15 @@ Here's the list of tests already added:
     ✓  Joystick detected
     ✓  Environment variable DUCKIETOWN_ROOT
     ✓  ${DUCKIETOWN_ROOT} exists
+    ✓  Environment variable DUCKIETOWN_FLEET
+    ✓  ${DUCKIETOWN_FLEET} exists
+    ✓  ${DUCKIETOWN_FLEET}/scuderia.yaml exists
+    ✓  ${DUCKIETOWN_FLEET}/scuderia.yaml is valid
+    ✓  machines file is valid
     ✓  Wifi network configured
+    ✓  Python: No CamelCase
+    ✓  Python: No tab chars
+    ✓  Python:  No half merges
 
 ## List of tests to add
 
@@ -66,16 +74,12 @@ Please add below any configuration test that can be automated:
 * Make sure that packages such as `python-roslaunch`
   are not installed. (The user is invited to install it when `roslaunch` is not found!)
 
-* Repository remote does not start with `https`.
-
 * Editor is set to `vim`.
 
 * They put the right MAC address in the network configuration
 
-* Git LFS is installed.
-
 * Ubuntu user is in group video, input, i2c (even if run from other user.)
 
-* There is some free disk space.
+* There is at least X.YGB of free disk space.
 
 * If the SD is larger than 8GB, the disk has been resized.

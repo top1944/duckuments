@@ -432,6 +432,7 @@ Add the following lines to `~ubuntu/.bashrc`:
 
     export EDITOR=vim
 
+
 ### Creating the image
 
 You may now want to create an image that you can share with your friends. They will think you are cool because they won't have to
@@ -448,3 +449,23 @@ except you will invert the `if` and `of` destinations
 You may want to subsequently shrink the image, for example if your friends have smaller SD cards than you.
 
 See: The procedure of how to shrink an image is explained in [](#howto-shrink-image)
+
+
+## Additions since last image
+
+Note here the additions since the last image was created.
+
+- [Install Git LFS](#git-lfs-install)
+
+Create a file
+
+    /etc/duckietown-image.yaml
+
+Containing these lines
+
+    base: Ubuntu 16.04.2
+    date: ![DATE]
+    comments: |
+        ![any comments you have]
+
+So that we know which image is currently in used

@@ -224,16 +224,3 @@ In doubt, these lines fix the permissions for your `.ssh` directory.
 
     $ chmod 0700 ~/.ssh
     $ chmod 0700 ~/.ssh/*
-
-
-
-## SCP
-
-TODO: to write
-
-
-### Download a file with SCP {#howto-download-file-with-scp}
-
-## RSync
-
-TODO: to write

@@ -31,7 +31,7 @@ The size is 2.5 GB.
 
 You can use:
 
-    $ wget ![URL above]
+    $ curl -o duckiebot-RPI3-AC-aug10.img.xz ![URL above]
 
 Uncompress the file:
 
@@ -268,7 +268,7 @@ you can use all of the space available. Achieve this with:
 and then reboot
 
     duckiebot $ sudo shutdown -r now
-    
+
 once rebooted you can test whether this was successful by doing
 
     duckiebot $ df -lh
@@ -287,7 +287,7 @@ tmpfs           432M     0  432M   0% /sys/fs/cgroup
 tmpfs            87M   24K   87M   1% /run/user/1000
 /dev/sda1        29G  5.3G   24G  19% /media/ubuntu/44A7-9E91
 ```
-You should see that the Size of your `/dev/sda1` partition is "close" to the side of your SD card. 
+You should see that the Size of your `/dev/sda1` partition is "close" to the side of your SD card.
 
 
 ## Create your user {#create-user-on-duckiebot}

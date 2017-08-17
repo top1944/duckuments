@@ -23,9 +23,9 @@ or refer to [](#prop:example).
 This is an example proposition: $2x = x + x$.
 \end{proposition}
 
-The above was written as in [](#fig:code).
+The above was written as in [](#code:latex-code).
 
-<pre figure-id="fig:code" figure-caption='Use of LaTeX code.'>
+<pre figure-id="code:latex-code" figure-caption='Use of LaTeX code.'>
 You can use &#36;\LaTeX&#36; math, environment, and references.
 For example, take a look at
 
@@ -43,7 +43,7 @@ This is an example proposition: &#36;2x = x + x&#36;.
 TODO: other LaTeX features supported
 
 
-## LaTeX symbols 
+## LaTeX symbols
 
 The LaTeX symbols definitions are in a file called [`docs/symbols.tex`][symbols].
 
@@ -174,6 +174,39 @@ To refer to the figure, use an empty link:
 The code will put a reference to "Figure XX".
 
 
+## Subfigures
+
+You can also create subfigures, using the following syntax.
+
+``` .html
+<div figure-id="fig:big">
+    <figcaption>Caption of big figure</figcaption>
+
+    <div figure-id="subfig:first">
+        <figcaption>Caption 1</figcaption>
+        <p>Content of first subfig</p>
+    </div>
+
+    <div figure-id="subfig:second">
+        <figcaption>Caption 2</figcaption>
+        <p>Content of second subfig</p>
+    </div>
+</div>
+```
+
+<div figure-id="fig:big">
+    <figcaption>Caption of big figure</figcaption>
+
+    <div figure-id="subfig:first">
+        <figcaption>Caption 1</figcaption>
+        <p>Content of first subfig</p>
+    </div>
+
+    <div figure-id="subfig:second">
+        <figcaption>Caption 2</figcaption>
+        <p>Content of second subfig</p>
+    </div>
+</div>
 
 ## Shortcut for tables
 
@@ -201,6 +234,40 @@ gives the following result:
     <span>C</span>
     <span>D</span>
 </col2>
+
+### `labels-row1`  and `labels-row1`
+
+Use the classes `labels-row1`  and `labels-row1` to make pretty tables like the following.
+
+`labels-row1`: the first row is the headers.
+
+`labels-col1`: the first column is the headers.
+
+<col3 figure-id="tab:mytable-col1" class="labels-col1">
+    <figcaption>Using <code>class="labels-col1"</code></figcaption>
+    <span>header A </span>
+    <span>B</span>
+    <span>C</span>
+    <span>header D</span>
+    <span>E</span>
+    <span>F</span>
+    <span>header G</span>
+    <span>H</span>
+    <span>I</span>
+</col3>
+
+<col3 figure-id="tab:mytable-row1" class="labels-row1">
+    <figcaption>Using <code>class="labels-row1"</code></figcaption>
+    <span>header A</span>
+    <span>header B</span>
+    <span>header C</span>
+    <span>D</span>
+    <span>E</span>
+    <span>F</span>
+    <span>G</span>
+    <span>H</span>
+    <span>I</span>
+</col3>
 
 
 ## Troubleshooting
