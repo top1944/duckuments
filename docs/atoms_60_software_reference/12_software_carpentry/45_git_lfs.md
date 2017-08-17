@@ -11,11 +11,8 @@ See instructions at:
 
 ## Ubuntu 16 installation
 
-Following:
-
-> https://github.com/git-lfs/git-lfs/wiki/Installation
-
-Run the following:
+Following [these instructions](https://github.com/git-lfs/git-lfs/wiki/Installation),
+run the following:
 
     $ sudo add-apt-repository ppa:git-core/ppa
     $ curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
