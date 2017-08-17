@@ -7,8 +7,6 @@ There are also some additional features that make it possible to create
 publication-worthy materials.
 
 
-
-
 ## Embedded LaTeX
 
 You can use $\LaTeX$ math, environment, and references. For example, take a look at
@@ -243,18 +241,21 @@ Use the classes `labels-row1`  and `labels-row1` to make pretty tables like the 
 
 `labels-col1`: the first column is the headers.
 
-<col3 figure-id="tab:mytable-col1" class="labels-col1">
+<col4 figure-id="tab:mytable-col1" class="labels-col1">
     <figcaption>Using <code>class="labels-col1"</code></figcaption>
     <span>header A </span>
     <span>B</span>
     <span>C</span>
+    <span>1</span>
     <span>header D</span>
     <span>E</span>
     <span>F</span>
+    <span>2</span>
     <span>header G</span>
     <span>H</span>
     <span>I</span>
-</col3>
+    <span>3</span>
+</col4>
 
 <col3 figure-id="tab:mytable-row1" class="labels-row1">
     <figcaption>Using <code>class="labels-row1"</code></figcaption>
@@ -267,23 +268,72 @@ Use the classes `labels-row1`  and `labels-row1` to make pretty tables like the 
     <span>G</span>
     <span>H</span>
     <span>I</span>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
 </col3>
 
+## Linking to documentation from inside and outside the documentation
 
-## Troubleshooting
+### Establishing names of headers {#establishing}
 
-Symptom: "Invalid XML"
+You give IDs to headers using the format:
 
-Resolution: "Markdown" doesn't mean that you can put anything in a file. Except
-for the code blocks, it must be valid XML. For example, if you use "&gt;" and
-"&lt;" without quoting, it will likely cause a compile error.
+    ### ![header title] {#![topic ID]}
 
-Symptom: "Tabs are evil"
+For example, for this subsection, we have used:
 
-Resolution: Do not use tab characters. The error message in this case is quite
-helpful in telling you exactly where the tabs are.
+    ### Establishing names of headers {#establishing}
+
+With this, we have given this header the ID "`establishing`".
+
+### Linking from the documentation to the documentation
+
+You can use the syntax:
+
+    [](#![topic ID])
+
+to refer to the header.
+
+You can also use some slightly more complex syntax that also allows
+to link to only the name, only the number or both ([](#tab:link-examples)).
+
+<col1 figure-id="tab:link-examples" figure-caption="Syntax for referring to sections.">
+    <s><code>See [](#establishing).</code></s>
+    <s>See <a href="#establishing"></a></s>
+    <code>See &lt;a class="only_name" href="#establishing"&gt;&lt;/a&gt;.</code>
+    <s>See <a class="only_name" href="#establishing"></a>.</s>
+    <code>See &lt;a class="only_number" href="#establishing"&gt;&lt;/a&gt;.</code>
+    <s>See <a class="only_number" href="#establishing"></a>.</s>
+    <code>See &lt;a class="number_name" href="#establishing"&gt;&lt;/a&gt;.</code>
+    <s>See <a class="number_name" href="#establishing"></a>.</s>
+</col1>
 
 
-Symptom: The error message contains `ValueError: Suspicious math fragment 'KEYMATHS000ENDKEY'`
 
-Resolution: You probably have forgotten to indent a command line by at least 4 spaces. The dollar in the command line is now being confused for a math formula.
+
+
+<style>
+#tab\:link-examples td {
+    text-align: left;
+}
+</style>
+
+### Linking to the documentation from outside the documentation
+
+You are encouraged to put links to the documentation from the code or scripts.
+
+To do so, use links of the form:
+
+    http://purl.org/dth/![topic ID]
+
+Here "`dth`" stands for "Duckietown Help". This link will get redirected to
+the corresponding document on the website.
+
+For example, you might have a script whose output is:
+
+    $ rosrun mypackage myscript
+    Error. I cannot find the scuderia file.
+    See: http://purl.org/dth/scuderia
+
+When the user clicks on the link, they will be redirected to [](#scuderia).

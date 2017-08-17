@@ -69,10 +69,7 @@ Here's the list of tests already added:
 Please add below any configuration test that can be automated:
 
 * Check that all the `rosX` command
-  resolve to a file`/opt/ros/kinetic/bin/rosX`.
-
-* Make sure that packages such as `python-roslaunch`
-  are not installed. (The user is invited to install it when `roslaunch` is not found!)
+  resolve to a file `/opt/ros/kinetic/bin/rosX`.
 
 * Editor is set to `vim`.
 
@@ -83,3 +80,7 @@ Please add below any configuration test that can be automated:
 * There is at least X.YGB of free disk space.
 
 * If the SD is larger than 8GB, the disk has been resized.
+
+* Done `sudo rosdep init`
+
+<!-- * .forward file -->
