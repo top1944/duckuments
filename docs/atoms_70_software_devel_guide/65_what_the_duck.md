@@ -60,15 +60,22 @@ Here's the list of tests already added:
 
 Please add below any configuration test that can be automated:
 
-
 * Check that all the `rosX` command
   resolve to a file`/opt/ros/kinetic/bin/rosX`.
 
 * Make sure that packages such as `python-roslaunch`
   are not installed. (The user is invited to install it when `roslaunch` is not found!)
 
-* Repository remote is not `https`.
+* Repository remote does not start with `https`.
 
 * Editor is set to `vim`.
 
 * They put the right MAC address in the network configuration
+
+* Git LFS is installed.
+
+* Ubuntu user is in group video, input, i2c (even if run from other user.)
+
+* There is some free disk space.
+
+* If the SD is larger than 8GB, the disk has been resized.
