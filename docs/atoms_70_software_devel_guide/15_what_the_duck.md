@@ -13,9 +13,9 @@ The idea is to add to `what-the-duck` all the tests that can be automated.
 
 The documentation about to do that is not ready yet.
 
-The current tests are available in the file:
+<!-- The current tests are available in the file:
 
-    ./catkin_ws/src/f23-LED/led_detection/include/what_the_duck/list_of_checks.py
+    ./catkin_ws/src/what_the_duck/list_of_checks.py -->
 
 
 
@@ -55,6 +55,9 @@ Here's the list of tests already added:
     ✓  Environment variable DUCKIETOWN_ROOT
     ✓  ${DUCKIETOWN_ROOT} exists
     ✓  Wifi network configured
+    ✓  No CamelCase
+    ✓  No tab chars
+    ✓  No half merges
 
 ## List of tests to add
 

@@ -1,30 +1,44 @@
-# Configuration needed
+# Configuration
 
 This chapter explains what are the assumptions about the configuration.
 
-Note: The "Setup" parts are "imperative" (do this, do that); this is the "declarative" part, which explaines what is a correct configuration of the file.
+While the "Setup" parts are "imperative" (do this, do that); this is the "declarative" part, which explains what are the properties of a correct configuration (but it does not explain how to get there).
 
-See also: The tool `what-the-duck` checks these conditions. If you make a change from the existing conditions, make sure that it gets implemented in `what-the-duck` by filing an issue.
+See also: The tool `what-the-duck` checks these conditions ([](#what-the-duck)). If you make a change from the existing conditions, make sure that it gets implemented in `what-the-duck` by filing an issue.
 
-## Variables {#variabes}
+## Environment variables {#variabes}
 
 You need to have set up the variables in [](#tab:environment-variables).
 
-<col3 figure-id="tab:environment-variables">
-    <figcaption>Environment variables for Fall 2017</figcaption>
+<col3 figure-id="tab:environment-variables" class='labels-row1'>
+    <figcaption>Environment variables used by the software</figcaption>
 
     <s>variable</s>
     <s>reasonable value</s>
     <s>contains</s>
 
-    <s>DUCKIETOWN_ROOT</s>
+    <s><code>DUCKIETOWN_ROOT</code></s>
     <s><code>~/duckietown</code></s>
     <s><code>Software</code> repository</s>
 
-    <s>DUCKIEFLEET_ROOT</s>
+    <s><code>DUCKIEFLEET_ROOT</code></s>
     <s><code>~/duckiefleet</code></s>
-    <s>repository that contains <code>scuderia.yaml</code></s>
+    <s>A repository that contains <code>scuderia.yaml</code> and other
+    team-specific configuration. </s>
 </col3>
+
+<style>
+#tab\:environment-variables {
+    font-size: 80%;
+}
+#tab\:environment-variables td {
+    text-align: left;
+}
+#tab\:environment-variables td:nth-child(3) {
+    display: block;
+    width: 20em;
+}
+</style>
 
 ### Duckietown root directory `DUCKIETOWN_ROOT`
 
@@ -40,10 +54,10 @@ For self-guided learners, this is an arbitrary repository to create.
 
 ## The scuderia file {#scuderia-file}
 
-In the <code>&#36;{DUCKIETOWN_FLEET}</code> directory,
+In the <code>&#36;{DUCKIEFLEET_ROOT}</code> directory,
 there needs to exist a file called:
 
-    ${DUCKIETOWN_FLEET}/scuderia.yaml
+    ${DUCKIEFLEET_ROOT}/scuderia.yaml
 
 The file must contain YAML entries of the type:
 
@@ -69,13 +83,15 @@ Explanations of the fields:
 * `![owner_duckietown_id]`: the owner's globally-unique Duckietown ID.
 
 
-## People file {#people-file}
-
-TODO: Describe the people database
+## People database {#people-file}
 
 Assigned: Andrea
 
-## The globally-unique Duckietown ID
+
+TODO: Describe the people database; this is the evolution of the yaml files
+
+
+### The globally-unique Duckietown ID
 
 This is a globally-unique ID for people in the Duckietown project.
 

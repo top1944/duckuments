@@ -34,7 +34,7 @@ something else by using the configuration tool that appears when you type
 
 Commands to use windows:
 
-<col3 class='command-table' figure-id="tab:commands-windows" figure-caption="Windows">
+<col3 class='command-table labels-row1' figure-id="tab:commands-windows" figure-caption="Windows">
     <s></s>
     <s>Using function keys</s>
     <s>Using escape sequences</s>
@@ -67,7 +67,7 @@ Commands to use windows:
 
 Commands to use panes (windows split in two or more):
 
-<col3 class='command-table' figure-id="tab:commands-panes">
+<col3 class='command-table labels-row1' figure-id="tab:commands-panes">
 
     <figcaption>Commands for panes</figcaption>
 
@@ -100,7 +100,7 @@ Commands to use panes (windows split in two or more):
 Other commands:
 
 
-<col3 class='command-table' figure-id="tab:commands-other" figure-caption="Other">
+<col3 class='command-table labels-row1' figure-id="tab:commands-other" figure-caption="Other">
     <s></s>
     <s>Using function keys</s>
     <s>Using escape sequences</s>

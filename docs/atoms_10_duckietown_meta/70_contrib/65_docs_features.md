@@ -43,7 +43,7 @@ This is an example proposition: &#36;2x = x + x&#36;.
 TODO: other LaTeX features supported
 
 
-## LaTeX symbols 
+## LaTeX symbols
 
 The LaTeX symbols definitions are in a file called [`docs/symbols.tex`][symbols].
 
@@ -201,6 +201,36 @@ gives the following result:
     <span>C</span>
     <span>D</span>
 </col2>
+
+### `labels-row1`  and `labels-row1`
+
+Use the classes `labels-row1`  and `labels-row1` to make pretty tables like the following.
+
+<col3 figure-id="tab:mytable-col1" class="labels-col1">
+    <figcaption>Using <code>class="labels-col1"</code></figcaption>
+    <span>A</span>
+    <span>B</span>
+    <span>C</span>
+    <span>D</span>
+    <span>E</span>
+    <span>F</span>
+    <span>G</span>
+    <span>H</span>
+    <span>I</span>
+</col3>
+
+<col3 figure-id="tab:mytable-row1" class="labels-row1">
+    <figcaption>Using <code>class="labels-row1"</code></figcaption>
+    <span>A</span>
+    <span>B</span>
+    <span>C</span>
+    <span>D</span>
+    <span>E</span>
+    <span>F</span>
+    <span>G</span>
+    <span>H</span>
+    <span>I</span>
+</col3>
 
 
 ## Troubleshooting
