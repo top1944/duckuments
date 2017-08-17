@@ -54,10 +54,15 @@ Here's the list of tests already added:
     ✓  Joystick detected
     ✓  Environment variable DUCKIETOWN_ROOT
     ✓  ${DUCKIETOWN_ROOT} exists
+    ✓  Environment variable DUCKIETOWN_FLEET
+    ✓  ${DUCKIETOWN_FLEET} exists
+    ✓  ${DUCKIETOWN_FLEET}/scuderia.yaml exists
+    ✓  ${DUCKIETOWN_FLEET}/scuderia.yaml is valid
+    ✓  machines file is valid
     ✓  Wifi network configured
-    ✓  No CamelCase
-    ✓  No tab chars
-    ✓  No half merges
+    ✓  Python: No CamelCase
+    ✓  Python: No tab chars
+    ✓  Python:  No half merges
 
 ## List of tests to add
 

@@ -82,6 +82,11 @@ Explanations of the fields:
 * `![username]`: the name of the Linux user on the robot, from which to run programs.
 * `![owner_duckietown_id]`: the owner's globally-unique Duckietown ID.
 
+## The `machines` file
+
+The `machines` file is created using:
+
+    $ rosrun duckietown create-machines-file
 
 ## People database {#people-file}
 
