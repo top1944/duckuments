@@ -31,7 +31,7 @@ The size is 2.5 GB.
 
 You can use:
 
-    $ curl -o duckiebot-RPI3-AC-aug10.img.xz ![URL above]
+    $ wget ![URL above]
 
 Uncompress the file:
 
@@ -257,6 +257,37 @@ change has persisted:
 
     $ hostname
     ![robot name]
+
+## Expand your filesystem {#expand-filesystem}
+
+If your SD card is larger than the image, you'll want to expand the filesystem on your robot so that
+you can use all of the space available. Achieve this with:
+
+    duckiebot $ sudo raspi-config --expand-rootfs
+
+and then reboot
+
+    duckiebot $ sudo shutdown -r now
+    
+once rebooted you can test whether this was successful by doing
+
+    duckiebot $ df -lh
+
+the output should give you something like:
+
+```
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        29G  7.8G   21G  28% /
+devtmpfs        427M     0  427M   0% /dev
+tmpfs           432M  316K  431M   1% /dev/shm
+tmpfs           432M   12M  420M   3% /run
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           432M     0  432M   0% /sys/fs/cgroup
+/dev/mmcblk0p1   63M   21M   43M  34% /boot
+tmpfs            87M   24K   87M   1% /run/user/1000
+/dev/sda1        29G  5.3G   24G  19% /media/ubuntu/44A7-9E91
+```
+You should see that the Size of your `/dev/sda1` partition is "close" to the side of your SD card. 
 
 
 ## Create your user {#create-user-on-duckiebot}

@@ -1,0 +1,253 @@
+\documentclass[12pt]{article}
+
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+\graphicspath{{../figures/}}
+
+
+\title{Lane Filter}
+\author{Liam Paull}
+\date{}
+
+
+\begin{document}
+\maketitle
+
+{\bf Overview}: The purpose of this document is to describe the lane filter module that filters the individual line segment detections and produces an estimate of the position and angle of the car within the lane. The general approach is similar to a histogram filter. Each detected segment uniquely defines a position and orientation of the robot within the lane. Therefore, each segment gets a ``vote'' that is used to build a measurement likelihood function for each incoming image. The posterior belief of the position and angle of the car in the lane is then determined using a Bayes' Filter. The mode of distribution (MAP estimate) is reported as the current position and orientation or if the distribution has entropy above a threshold then it is reported that no consensus was found (indicating that we aren't sure what's going on probably better to transfer control back to human). 
+
+\vspace{0.5cm}
+{\bf Assumptions}: There is an assumption that the lane colors on right and left are different (currently assuming left=yellow, right=white). However, there is no assumption that the vehicle is actually \textit{in} the lane. A visual depiciton of the basic setup is shown in Fig. \ref{fig:car_on_road}.
+
+\begin{figure}[htb]
+\centering
+\def\svgwidth{10cm}
+\input{../figures/car_on_road.pdf_tex}
+\caption{The car looking at a lane}
+\label{fig:car_on_road}
+\end{figure}
+
+
+\vspace{0.5cm}
+{\bf Input}: The lane detectors receives a list of $N$ segments we will refer to them here as $s^{1:N}$ and the corresponding ROS msg is given by:
+\begin{verbatim}
+duckietown_msgs/Segment[] segments                                                       
+uint8 WHITE=0
+uint8 YELLOW=1
+uint8 RED=2
+uint8 color
+\end{verbatim}
+where each segment, $s^i$ is specified by two points $p^i_1,p^i_2$ (either in pixel space or in the body frame of the robot):
+\begin{verbatim}
+duckietown_msgs/Pixel[2] pixels                                                          
+geometry_msgs/Point[2] points 
+\end{verbatim}
+Here we are assuming that the segments have been pre-rectified and treat them as if they are points on the 2D plane as shown in Fig. \ref{fig:lane}. The convention is that \textit{as you travel from point 1 to point 2 along a segment, the colored lane should be on your right hand side}. Each point is on the ground plane and therefore specified in $\mathcal{R}^2$: $p^i_1 \triangleq [x^i_1,y^i_1]$ where we use the convention of 
+
+\begin{figure}[htb]
+\centering
+\def\svgwidth{10cm}
+\input{../figures/lane.pdf_tex}
+\caption{Top-down view of the car in the lane}
+\label{fig:lane}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\def\svgwidth{3cm}
+\input{../figures/segments.pdf_tex}
+\caption{A lane with segments indicated that are the output of the line detection module.d}
+\label{fig:segments}
+\end{figure}
+
+\vspace{0.5cm}
+{\bf Output}: The output should be a lane reading ROS msg of the form:
+\begin{verbatim}
+float32 d   #lateral offset
+float32 sigma_d
+float32 phi #heading error
+float32 sigma_phi
+int32 status
+#Enum for status
+int32 NORMAL=0
+int32 ERROR=1
+\end{verbatim}
+
+
+\section{Proposed Method}
+
+The filtering method proposed is a direct application of the Bayes' filter. Let's review first:
+
+\subsection{Background - The Bayes' Filter}
+
+Material taken mostly from \cite{prob_robotics}.
+Define the posterior belief about state $x_t$ as:
+\begin{equation}
+bel(x_t)\triangleq p(x_t|z_{1:t},u_{1:t},x_0)
+\end{equation}
+The posterior belief is updated recursively using the following two step predict-update cycle:
+\begin{equation}
+\begin{split}
+\bar{bel}(x_t)&=\int p(x_t|x_{t-1},u_t)bel(x_{t-1})dx_{t-1} \\
+bel(x_t)&=\nu p(z_t|x_t)\bar{bel}(x_t)
+\end{split}
+\label{eq:bayes}
+\end{equation}
+which is repeated over the entire domain of $x_t$. The probability density function (pdf) $p(x_t|x_{t-1},u_t)$ is the process model and dictates how to use the \textit{control inputs} and the previous state to get to the current state. The pdf $p(z_t|x_t)$ is the measurement model and specifies the measurement likelihood - or the probability that we would get measurement $z_t$ given that we are at state $x_t$. The value of $\nu$ is such that the result is a valid pdf that sums to 1 (it is a normalization factor that accounts for $p(z_t)$ in Bayes rule).
+
+\subsection{Preliminaries}
+The state of the car in the lane at time $t$ should be represented by the tuple: $x_t \triangleq [d_t,\phi_t]^T$, where $d_t$ is the lateral displacement of the car in the lane (with the $d=0$ line being defined as the center of the lane) and the $\phi_t$ is the angle relative to the center axis. The width of the lane should be defined as $w$ and the widths of the right (white) and left (yellow) lanes will be defined as $l_W$ and $l_Y$.
+
+The control $u_t$ is represented by estimates linear and angular velocity ($v_t$ and $\omega_t$ respectively) of the vehicle: $u_t=[v_t,\omega_t]^T$.
+
+\subsection{The Process Model}
+
+The process model in this case is fairly straightforward and is largely determined by geometry:
+\begin{equation}
+\begin{split}
+d_t&=d_{t-1}+\Delta{t}v_t\sin{\phi_{t-1}} + \eta_1 \\
+\phi_t&=\phi_t + \Delta{t}\omega_t + \eta_2
+\end{split}
+\label{eq:process_model}
+\end{equation}
+where $\eta_1 \sim \mathcal{N}(0,\sigma_1)$ and $\eta_2 \sim \mathcal{N}(0,\sigma_2)$ are normally distributed random variables.
+
+Three options are available for dealing with the control inputs:
+\begin{enumerate}
+\item Assume they are zero (zero-velocity) model and hope the noise terms can account for the vehicle motion
+\item Infer the linear velocity, $v_t$, only - either from some sensor or from a mapping from control inputs
+\item Infer the linear and angular velocities - either from some sensor of from a mapping from control inputs
+\end{enumerate}
+
+The other issue is how to select the noise covariances, $\sigma_1$ and $\sigma_2$.
+
+If we define the zero-noise process model in vector form:
+\begin{equation}
+f(x_{t-1},u_t) = \begin{bmatrix} d_{t-1}+\Delta{t}v_t\sin{\phi_{t-1}}  \\ \phi_t + \Delta{t}\omega_t \end{bmatrix}
+\label{eq:f}
+\end{equation}
+and stack the covariances into matrix: $\Sigma = \begin{bmatrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{bmatrix}$ then the final probabilistic process model can be compactly written as:
+\begin{equation}
+p(x_t|x_{t-1},u_t) = \mathcal{N}\left(x_t;f(x_{t-1},u_t),\Sigma\right)
+\label{eq:final_process}
+\end{equation}
+which is applied in \eqref{eq:bayes}.
+
+
+\subsection{The Measurement Model}
+
+Each incoming {\bf list of segments} constitutes a single measurement. Each segment allows us to uniquely estimate the lateral displacement and relative angle of the vehicle in the lane. However, it is expected that there will be many outliers. Therefore processing each segment as an individual measurement is not desirable since these outliers are likely to cause rapid divergence of the estimate. Instead, we propose that each segment produces a ``vote'' where these votes are binned in a histogram and the entire histrogram represents the measurement likelihood. This has the additional advantage that it is non-paramentric (assumes nothing about the distribution of the pdf) and can therefore handle multi-modal and non-Gaussian distributions. 
+
+The process to obtain a single vote from a segment is outlined in Algorithm \ref{a:generate_vote} and is based on geometry. 
+
+
+\begin{algorithm}[htb] %[t]
+\caption{Generate\_Vote}
+\label{a:generate_vote}
+\begin{algorithmic}[1]
+\REQUIRE A single segment in the body frame $s^i$
+\ENSURE  The corresponding position and angle in the lane indicated by the segment: $d^i$,$\phi^i$.
+\STATE $d^i = 0.5(x_1^i + x_2^i)$
+\IF {$s^i.color == WHITE$}
+  \STATE $d^i -= w/2$
+  \IF {$x^i_2 > x^i_1$}
+    \STATE $d^i -= l_W$
+  \ENDIF
+\ELSE
+  \STATE $d^i += w/2$
+  \IF {$x^i_2 > x^i_1$}
+    \STATE $d^i += l_Y$
+  \ENDIF
+\ENDIF
+\STATE $\phi_i = \pi/2 - \text{atan2}\left(\frac{|x^i_2 - x^i_1|}{y^i_2-y^i_1}\right)$
+\end{algorithmic}
+\end{algorithm}
+
+The process in Algorithm \ref{a:generate_vote} is repeated for each incoming segment. The results are added to a histogram as shown in Fig. \ref{fig:measurement_likelihood}. Once all of the segments have been processed, the histogram is normalized and then used as the pdf to perform the measurement update.
+
+
+\begin{figure}[htb]
+\centering
+\def\svgwidth{7cm}
+\input{../figures/measurement_likelihood.pdf_tex}
+\caption{The measurement likelihood as a result of processing one list of segments. Each green dot corresponds to a vote generated by an individual segment.}
+\label{fig:measurement_likelihood}
+\end{figure}
+
+
+\subsection{Applying the Bayes' Filter}
+
+Now we synthesize eveything to produce the proposed lane filter. An overview is given in Alg \ref{a:lane_filter}.
+
+The filter requires some prior to begin: $bel(x_0)$. In initial development, this should be a zero mean Gaussian with low covariance (assuming that you place the car correctly in the lane at the start of the test). Subsequently, in the case of transitioning from an open-loop behavior to a lane following behavior, this could be transmitted from the ``intersection localizer''. 
+
+The main loop itereates over every state in the domain $dom(x)$ which is defined as:
+\begin{equation}
+dom(x) = d_{min}:\Delta{d}:d_{max},\phi_{min}:\Delta{\phi}:\phi_{max}
+\end{equation}
+where $\Delta{d}$ and $\Delta{\phi}$ are parameters that specify the bin size in the histogram as shown in Fig. \ref{fig:measurement_likelihood}.
+
+\begin{algorithm}[h!] %[t]
+\caption{Lane\_Filter}
+\label{a:lane_filter}
+\begin{algorithmic}[1]
+\STATE $bel(x_0) \gets \mathcal{N}(x_0;0,\Sigma_0)$
+\STATE $t\gets 0$
+\WHILE{In Lane Following Mode}
+  \STATE Read/Infer control values $u_t$
+  \STATE Read incoming list of segments $s^{1:N}$
+  \FORALL {Segment $s^i$}
+    \STATE $(d^i,\phi^i) \gets \text{Generate\_Vote}(s^i)$
+    \STATE Add $(d^i,\phi^i)$ to histogram
+  \ENDFOR
+  \STATE Normalize histogram to generate $p(z_t|x_t)$
+  \FORALL {$x_t \in dom(x_t)$}
+    \STATE Generate $p(x_t|x_{t-1},u_t)$ from \eqref{eq:f} and \eqref{eq:final_process}
+    \STATE $\bar{bel}(x_t) \gets \displaystyle\sum_{dom(x_{t-1})} p(x_t|x_{t-1},u_t)bel(x_{t-1})$
+    \STATE $bel(x_t) \gets \nu p(z_t|x_t)\bar{bel}(x_t)$
+  \ENDFOR
+  \STATE $t \gets t+1$
+\ENDWHILE
+\end{algorithmic}
+\end{algorithm}
+
+
+
+
+\subsection{Entropy Threshold}
+
+The lane filter should also output a status. This status is generated by evaluating the Shannon entropy of the posterior belief:
+\begin{equation}
+H(bel(x)) = -E[\log(bel(x)]
+\end{equation}
+if the posterior entropy is higher (high entropy is equivalent to high uncertainty) than a threshold $H_{min}$ then the status of the filter will be reported as ``ERROR''.
+This threshold should be used to trigger the transition from and open loop behavior to a lane following behavior. Additionally, if an ``ERROR'' status is reported during lane following mode then control of the vehicle should transfer back to the joystick. 
+
+
+\subsection{Summary of Parameters}
+
+\begin{table}[htb]
+  \begin{tabular}{| c | p{10cm} |}
+\hline
+    {\bf Symbol} & {\bf Meaning} \\ \hline
+    $\sigma_1,\sigma_1$ & The noise covariances in the process model. \\ \hline
+    $d_{min},d_{max}$ & The minimum and maximum displacement from the center of the line. Empirically this shoud constitute the error in the conroller beyond which we cannot recover \\ \hline
+    $\phi_{min},\phi_{max} $ & The minimum and maximum anglular offset in the lane beyond which we cannot recover.  \\ \hline
+    $\Delta{d},\Delta{\phi}$ & The bin sizes in the $d$ and $\phi$ directions \\ \hline
+    $H_{min}$ & The minimum allowable posterior entropy to consider the output of the lane filter to be valid.  \\ \hline
+  \end{tabular}
+  \caption{Summary of Paraneters Used in Lane Filter}
+\end{table}
+
+
+
+\end{document}
