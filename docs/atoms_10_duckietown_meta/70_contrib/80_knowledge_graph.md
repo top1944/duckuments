@@ -248,6 +248,13 @@ of semantic links:
 #tab\:links {
     font-size: smaller;
 }
+#tab\:links code {
+    font-size: 50%;
+}
+#tab\:links td:first-child {
+    display:block;
+    width: 10em;
+}
 #tab\:links td {
     text-align: left;
     padding-bottom: 0.5em;

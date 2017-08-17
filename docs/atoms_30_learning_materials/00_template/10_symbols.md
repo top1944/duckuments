@@ -43,6 +43,10 @@ Here are some useful symbols.
 States and poses:
 
 <col3 figure-id='tab:states' figure-caption="Poses and states" class='symbols labels-row1'>
+    <s>command</s>
+    <s>result</s>
+    <s></s>
+
     <code>\pose</code>
     <s>$\pose_t \in \SEtwo$</s>
     <s>Pose of the robot in the plane</s>
