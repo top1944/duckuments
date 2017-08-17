@@ -2,14 +2,13 @@
 
 This describes Git LFS.
 
-## Installation {#git-lfs-install}
-
+## Generic installation instructions {#git-lfs-install}
 
 See instructions at:
 
 > [https://git-lfs.github.com/](https://git-lfs.github.com/)
 
-## Ubuntu 16 installation
+## Ubuntu 16 installation (laptop)
 
 Following [these instructions](https://github.com/git-lfs/git-lfs/wiki/Installation),
 run the following:
@@ -21,6 +20,14 @@ run the following:
 
 <!-- $ git lfs install -->
 
+## Ubuntu 16 Mate installation (Raspberry Pi 3)
+
+Note: unresolved issues.
+
+The instructions above do not work.
+
+Following [this](https://bioinfoexpert.com/2016/08/25/installation-of-git-lfs-on-ubuntu-rpi2-armf/), the error 
+that appears is that golang on the Pi is 1.6 instead it should be 1.7.
 
 ### Troubleshooting
 
