@@ -67,10 +67,7 @@ Here's the list of tests already added:
 ## List of tests to add
 
 Please add below any configuration test that can be automated:
-
-* Check that all the `rosX` command
-  resolve to a file `/opt/ros/kinetic/bin/rosX`.
-
+ 
 * Editor is set to `vim`.
 
 * They put the right MAC address in the network configuration
