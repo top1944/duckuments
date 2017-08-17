@@ -67,8 +67,6 @@ Please add below any configuration test that can be automated:
 * Make sure that packages such as `python-roslaunch`
   are not installed. (The user is invited to install it when `roslaunch` is not found!)
 
-* Repository remote is not `https`.
-
 * Editor is set to `vim`.
 
 * They put the right MAC address in the network configuration

@@ -1,3 +1,0 @@
-# Compilers {#compilers}
-
-Assigned: Andrea

@@ -1,8 +1,7 @@
-# Shells
+# Byobu {#byobu}
 
 Assigned: Andrea
 
-## Byobu
 
 You need to learn to use Byobu. It will save you much time later.
 
@@ -10,17 +9,24 @@ See also: See the screencast on the website [http://byobu.co/][web-byobu].
 
 [web-byobu]: http://byobu.co/
 
-### Advantages of using Byobu
+
+## Alternatives
+
+[GNU Screen][web-screen] is fine as well.
+
+[web-screen]: https://en.wikipedia.org/wiki/GNU_Screen
+
+## Advantages of using Byobu
 
 TODO: To write
 
-### Installation
+## Installation
 
 On Ubuntu, install using:
 
     $ sudo apt install byobu
 
-### Quick command reference
+## Quick command reference
 
 You can change the escape sequence from <kbd>Ctrl</kbd>-<kbd>A</kbd> to
 something else by using the configuration tool that appears when you type
@@ -120,7 +126,7 @@ Other commands:
 }
 </style>
 
-### OS X
+## Commands on OS X
 
 Scroll up and down using
 <kbd>fn</kbd><kbd>option</kbd><kbd>↑</kbd>
@@ -133,9 +139,3 @@ Highlight using <kbd>alt</kbd>
 <!-- Shift+<arrow keys> switches between panes. Shift+Alt+<arrow keys> changes the current pane size. -->
 
 <!-- Byobu tips: don't forget F2 (or ctrl-a C) in byobu will open a terminal in a new tab. Alternatively, you can also Shift+F2 to split the current tab into two horizontally. -->
-
-### Alternatives
-
-[GNU Screen][web-screen] is fine as well.
-
-[web-screen]: https://en.wikipedia.org/wiki/GNU_Screen

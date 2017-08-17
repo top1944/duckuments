@@ -1,21 +1,23 @@
-# Editors {#editors}
+
+# VIM {#vim}
 
 Assigned: Andrea
 
-## VIM
 
 To do quick changes to files, especially when logged remotely,
 we suggest you use the VI editor, or more precisely, VIM ("VI iMproved").
 
+## External documentation
+
 See: [A VIM tutorial](http://www.openvim.com/).
 
-### Installation
+## Installation
 
 Install like this:
 
     $ sudo apt install vim
 
-### Suggested configuration
+## Suggested configuration
 
 Suggested `~/.vimrc`:
 
@@ -28,11 +30,11 @@ Suggested `~/.vimrc`:
 
 <!-- autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,( -->
 
-### Visual mode
+## Visual mode
 
 TODO: to write
 
-### Indenting using VIM
+## Indenting using VIM
 
 Use the <kbd>&gt;</kbd> command to indent.
 
@@ -46,11 +48,3 @@ To mark a block of lines and indent it, use <kbd>V</kbd>.
 For example, use <kbd>V</kbd><kbd>J</kbd><kbd>J</kbd><kbd>&gt;</kbd> to indent 3 lines.
 
 Use <kbd>&lt;</kbd> to dedent.
-
-## Atom
-
-TODO: to write
-
-## Eclipse
-
-TODO: to write

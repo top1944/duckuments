@@ -430,3 +430,9 @@ Add the following lines to `~ubuntu/.bashrc`:
     echo ""
 
     export EDITOR=vim
+
+
+
+## Additions since last image
+
+[Install Git LFS](#git-lfs-install)

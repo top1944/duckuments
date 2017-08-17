@@ -1,4 +1,4 @@
-# Source code control with Git
+# Source code control with Git {#git-reference}
 
 Assigned: Andrea
 
@@ -72,7 +72,6 @@ Solution:
 
     $ git remote remove origin
     $ git remote add origin git@github.com:duckietown/Software.git
-
 
 
 ### Problem 1: `git push` complains about upstream
