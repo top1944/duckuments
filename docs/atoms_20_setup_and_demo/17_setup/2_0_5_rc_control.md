@@ -65,20 +65,20 @@ Then, build the workspace using:
 
 See also: For more information about `catkin_make`, see [](#catkin_make).
 
-XXX AC: I had to run it twice. The first time it complained:
+Note: there is a known bug, for which it fails the first time on the Raspberry Pi. Try again; it will work.
 
-```
-In file included from /home/andrea/duckietown/catkin_ws/src/apriltags_ros/apriltags_ros/src/apriltag_detector.cpp:1:0:
-/home/andrea/duckietown/catkin_ws/src/apriltags_ros/apriltags_ros/include/apriltags_ros/apriltag_detector.h:6:41: fatal error: duckietown_msgs/BoolStamped.h: No such file or directory
-```
+
 
 
 <!-- (you have to be under the `catkin_ws` folder to invoke `catkin_make`) -->
 
-## Add your vehicle to the machines file {#edit-machines-file}
+## Add your vehicle to the scuderia file {#edit-machines-file}
 
-TODO: Automate this part
+Add your vehicle to the scuderia file.
 
+See: See [](#scuderia).
+
+<!--
 On the robot edit the file
 
     ~/duckietown/catkin_ws/src/duckietown/machines
@@ -102,7 +102,7 @@ So, he would add this line:
 
     <machine name="emma" address="emma.local" user="andrea" env-loader="$(arg env_script_path)"/>
 
-Commit and push the new machines file. (XXX No, don't commit the machines file.)
+Commit and push the new machines file. (XXX No, don't commit the machines file.) -->
 
 
 ## Test that the joystick is detected {#test-joystick}
