@@ -40,7 +40,7 @@ TODO: add Red Hat video
 
 ## Learn about the educational experience
 
-These papers present a more formal description of the technical side of the projecrt as well as the educational side.
+These papers present a more formal description of the technical side of the project as well as the educational side.
 
 This paper [](#bib:tani16duckietown) describes the course design for Duckietown: learning objectives, teaching methods, etc.
 
