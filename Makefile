@@ -65,11 +65,14 @@ compile-pdf:
 update-mcdp:
 	-git -C mcdp/ pull
 
-compile: update-mcdp
+update-software:
+	-git -C duckietown pull
+
+compile: update-mcdp update-software
 	$(MAKE) compile-html
 	$(MAKE) split
 
-compile-slow: update-mcdp
+compile-slow: update-mcdp update-software
 	$(MAKE) compile-html-slow
 	$(MAKE) split
 
