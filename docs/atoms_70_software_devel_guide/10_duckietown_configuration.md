@@ -54,6 +54,8 @@ For self-guided learners, this is an arbitrary repository to create.
 
 ## The scuderia file {#scuderia}
 
+<!-- do not change the ID "scuderia", it's linked in the code -->
+
 In the <code>&#36;{DUCKIEFLEET_ROOT}</code> directory,
 there needs to exist a file called:
 
@@ -82,7 +84,9 @@ Explanations of the fields:
 * `![username]`: the name of the Linux user on the robot, from which to run programs.
 * `![owner_duckietown_id]`: the owner's globally-unique Duckietown ID.
 
-## The `machines` file
+## The `machines` file {#machines}
+
+<!-- do not change the ID "machines"; it's linked in the code -->
 
 The `machines` file is created using:
 

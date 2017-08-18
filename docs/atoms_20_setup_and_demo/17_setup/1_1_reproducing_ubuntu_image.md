@@ -158,7 +158,7 @@ Then, download and install the Edimax driver from [this repository](https://gith
     $ cd rtl8822bu
     $ make
     $ sudo make install
-    
+
 
 
 ## Install ROS
@@ -350,7 +350,7 @@ into this line:
 You can use the command `dpigs` to find out which packages take
 lots of space.
 
-    sudo apt install wajig  debian-goodies
+    $ sudo apt install wajig  debian-goodies
 
 Either:
 
@@ -469,8 +469,6 @@ See: The procedure of how to shrink an image is explained in [](#howto-shrink-im
 
 Note here the additions since the last image was created.
 
-- [Install Git LFS](#git-lfs-install).
-
 Create a file
 
     /etc/duckietown-image.yaml
@@ -483,3 +481,9 @@ Containing these lines
         ![any comments you have]
 
 So that we know which image is currently in used.
+
+Install `ntpdate`:
+
+    $ sudo apt install ntpdate
+
+Note: We should install Git LFS on the Raspberry Pi, but so far AC did not have any luck. See [](#git-lfs-install).

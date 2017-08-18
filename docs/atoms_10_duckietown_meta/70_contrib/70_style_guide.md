@@ -26,6 +26,16 @@ The following holds for all technical writing.
 
 > Better: "The password is `ubuntu`."
 
+> Bad: "To create a ROS pkg..."
+
+> Better: "To create a ROS package..."
+
+- Python is capitalized when used as a name.
+
+> Bad: "If you are using python..."
+
+> Better: "If you are using Python..."
+
 - Do not use emojis.
 
 - Do not use ALL CAPS.

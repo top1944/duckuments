@@ -29,7 +29,7 @@ This video is a Duckumentary about the first version of the class, during Spring
 
 <div figure-id="fig:duckumentary">
     <figcaption>The Duckumentary</figcaption>
-    TODO
+    TODO: Add Duckumentary
 </div>
 
 See also this documentary by Red Hat:

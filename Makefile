@@ -9,6 +9,8 @@ tmp_files=out/tmp
 tmp_files2=out/tmp2
 tex-symbols=docs/symbols.tex
 
+src="docs:duckietown/catkin_ws/src"
+
 all: compile compile-pdf
 
 .PHONY: $(out_html)
@@ -44,7 +46,7 @@ $(out_html): $(wildcard docs/**/*md)
 compile-pdf:
 	# mathjax is 1 in this case
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
-		--src docs/ \
+		--src $(src) \
 		--stylesheet v_manual_blurb_ready \
 		--mathjax 1 \
 		--symbols $(tex-symbols) \
@@ -63,17 +65,22 @@ compile-pdf:
 update-mcdp:
 	-git -C mcdp/ pull
 
-compile: update-mcdp
+update-software:
+	-git -C duckietown pull
+
+compile: update-mcdp update-software
 	$(MAKE) compile-html
 	$(MAKE) split
 
-compile-slow: update-mcdp
+compile-slow: update-mcdp update-software
 	$(MAKE) compile-html-slow
 	$(MAKE) split
 
+
+
 compile-html:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
-		--src docs/ \
+		--src $(src) \
 		--stylesheet v_manual_split \
 		--mathjax 0 \
 		--symbols $(tex-symbols) \
@@ -85,7 +92,7 @@ compile-html:
 
 compile-html-slow:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
-		--src docs/ \
+		--src $(src) \
 		--stylesheet v_manual_split \
 		--mathjax 0 \
 		--symbols $(tex-symbols) \
