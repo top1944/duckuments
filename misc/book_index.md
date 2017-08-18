@@ -32,9 +32,14 @@ body {
         <s>Contains all documents in the project.</s>
 
 
+        <s></s>
+        <s></s>
+        <s></s>
+        
     <s>Fall 2017</s>
     <s>coming soon</s>
     <s>For the students in Fall 2017 (ETHZ, UdeM, TTIC, NCTU)</s>
+
 
 
     <s>Graduate-level</s>

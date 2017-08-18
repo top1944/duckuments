@@ -26,9 +26,7 @@ Results:
 
 </div>
 
-
 TODO: Add a different "Tools" section in the table (e.g., solderer), or add in the resoruces beginning snippet; Differentiate pricing for bulk vs detail purchase (?)
-
 
 ## Bill of materials
 
@@ -55,7 +53,7 @@ TODO: Add a different "Tools" section in the table (e.g., solderer), or add in t
     <s>[4 Nylon Hex Nuts (M2.5)](https://tinyurl.com/ydy4znem)</s>                         <s>USD 0.02/piece</s>
     <s>[4 Nylon Screws (M2.5x10)](https://tinyurl.com/ya2uo9so)</s>                         <s>USD 0.05/piece</s>
     <s>[2 Zip Ties (300x5mm)](https://tinyurl.com/yb8v3nns)</s>                         <s>USD 8.99</s>
-    <s>[Wifi Augmenter](https://tinyurl.com/ycvu7ok3) (`D17-0+w`)</s><s>USD 20</s>
+    <s>[5-GHz Wifi Adapter](https://tinyurl.com/ycvu7ok3) (`D17-0+w`)</s><s>USD 20</s>
     <s>[Joypad](https://tinyurl.com/y9klooef) (`D17-0+j`)</s>                         <s>USD 10.50</s>
     <s>[20 Female-Female Jumper Wires (300mm)](https://www.adafruit.com/products/793) (`D17-1`)</s>                         <s>USD 8</s>
     <s>[Male-Male Jumper Wire (150mm)](https://www.adafruit.com/products/1957)  (`D17-1`)</s>                         <s>USD 1.95</s>
@@ -103,9 +101,9 @@ The price for this in the US is about USD 15-30.
      <img src="magician_chassis.jpg" style='width: 15em'/>
 </div>
 
-## Raspberry Pi 3 - Model B (RPI-3)
+## Raspberry Pi 3 - Model B
 
-The RPI-3 is the central computer of the Duckiebot. Duckiebot version `D17` uses Model B ([](#fig:rpi3b)) (A1.2GHz 64-bit quad-core ARMv8 CPU, 1GB RAM), a small but powerful computer.
+The Raspberry Pi is the central computer of the Duckiebot. Duckiebot version `D17` uses Model B ([](#fig:rpi3b)) (A1.2GHz 64-bit quad-core ARMv8 CPU, 1GB RAM), a small but powerful computer.
 
 <div figure-id="fig:rpi3b" figure-caption="The Raspberry Pi 3 Model B">
      <img src="rpi3b.png" style='width: 15em'/>
@@ -115,7 +113,7 @@ The price for this in the US is about USD 35.
 
 ### Power Supply
 
-We want a hard-wired power source (5VDC, 2.4A, Micro USB) to supply the RPI-3 ([](#fig:power_supply)).
+We want a hard-wired power source (5VDC, 2.4A, Micro USB) to supply the Raspberry Pi ([](#fig:power_supply)).
 
 <div figure-id="fig:power_supply" figure-caption="The Power Supply">
      <img src="power_supply.png" style='width: 15em'/>
@@ -125,7 +123,7 @@ The price for this in the US is about USD 5-10.
 
 ### Heat Sinks
 
-The RPI-3 will heat up significantly during use. It is warmly recommended to add heat sinks, as in  [](#fig:heat_sinks). Since we will be stacking HATs on top of the RPI-3 with 15 mm standoffs, the maximum height of the heat sinks should be well below 15 mm. The chip dimensions are 15x15 mm and 10x10 mm.
+The Raspberry Pi will heat up significantly during use. It is warmly recommended to add heat sinks, as in  [](#fig:heat_sinks). Since we will be stacking HATs on top of the Raspberry Pi with 15 mm standoffs, the maximum height of the heat sinks should be well below 15 mm. The chip dimensions are 15x15mm and 10x10mm.
 
 <div figure-id="fig:heat_sinks" figure-caption="The Heat Sinks">
      <img src="heat_sinks.png" style='width: 15em'/>
@@ -133,7 +131,7 @@ The RPI-3 will heat up significantly during use. It is warmly recommended to add
 
 ###  Class 10 MicroSD Card
 
-The MicroSD card ([](#fig:SDcard)) is the hard disk of the RPI-3. 16 Gigabytes of capacity are sufficient for the system image.
+The MicroSD card ([](#fig:SDcard)) is the hard disk of the Raspberry Pi. 16 Gigabytes of capacity are sufficient for the system image.
 
 <div figure-id="fig:SDcard" figure-caption="The MicroSD card">
      <img src="SDcard.png" style='width: 15em'/>
@@ -141,7 +139,7 @@ The MicroSD card ([](#fig:SDcard)) is the hard disk of the RPI-3. 16 Gigabytes o
 
 ###  Mirco SD card reader
 
-A MicroSD card reader ([](#fig:microsd-reader)) is useful to copy the system image to a Duckiebot from a computer to the RPI-3 microSD card, when the computer does not have a native SD card slot.
+A microSD card reader ([](#fig:microsd-reader)) is useful to copy the system image to a Duckiebot from a computer to the Raspberry Pi microSD card, when the computer does not have a native SD card slot.
 
 <div figure-id="fig:microsd-reader" figure-caption="The Mirco SD card reader">
      <img src="microsd-reader.png" style='width: 15em'/>
@@ -175,13 +173,13 @@ The camera mount ([](#fig:camera_mount)) serves to keep the camera looking forwa
 
 A longer (300 mm) camera cable [](#fig:long_camera_cable) make assembling the Duckiebot easier, allowing for more freedom in the relative positioning of camera and computational stack.
 
-<div figure-id="fig:long_camera_cable" figure-caption="A 300 mm camera cable for the RPI-3">
+<div figure-id="fig:long_camera_cable" figure-caption="A 300 mm camera cable for the Raspberry Pi">
      <img src="long_camera_cable.png" style='width: 15em'/>
 </div>
 
-## Wifi Augmenter
+## 5-GHz Wifi Adapter
 
-The Edimax AC1200 EW-7822ULC wifi adpater ([](#fig:edimax)) boosts the connectivity of the Duckiebot, especially useful in busy Duckietowns (e.g., classroom).
+The Edimax AC1200 EW-7822ULC 5-GHz WiFi adpater ([](#fig:edimax)) boosts the connectivity of the Duckiebot, especially useful in busy Duckietowns (e.g., classroom).
 
 <div figure-id="fig:edimax" figure-caption="The Edimax AC1200 EW-7822ULC wifi adapter">
      <img src="edimax.png" style='width: 15em'/>
@@ -191,11 +189,13 @@ The Edimax AC1200 EW-7822ULC wifi adpater ([](#fig:edimax)) boosts the connectiv
 
 The joypad is used to manually remote control the Duckiebot. Any 2.4 GHz wireless controller (with a _tiny_ USB dongle) will do.
 
-The model link in the table ([](#fig:joystick)) does not include batteries (2 AA 1.5V)!
+The model link in the table ([](#fig:joystick)) does not include batteries (required: 2 AA 1.5V).
 
 <div figure-id="fig:joystick" figure-caption="A Wireless Joypad">
      <img src="joystick.png" style='width: 15em'/>
 </div>
+
+TODO: Add figure with 2 AA batteries
 
 ## DC Stepper Motor HAT
 
@@ -208,7 +208,7 @@ We use the DC Stepper motor HAT ([](#fig:joystick)) to control the DC motors tha
 
 ### Stacking Headers
 
-We use long 20x2 stacking headers ([](#figure:stacking_header)) to connect the RPI-3 with the other HATs, creating a stack. This item will require [soldering](0_5_soldering_boards.md) to be functional.
+We use long 20x2 stacking headers ([](#figure:stacking_header)) to connect the Raspberry Pi with the other HATs, creating a stack. This item will require [soldering](0_5_soldering_boards.md) to be functional.
 
 In configuration `D17-1`, we need 2 stacking headers.
 
@@ -231,7 +231,7 @@ We choose this battery because it has a good combination of size (to fit in the 
 
 ## Standoffs, Nuts and Screws
 
-We use non electrically conductive standoffs (M2.5 12mm F 6mm M), nuts (M2.5), and screws (M2.5x10mm) to hold the RPI-3 to the chassis and the HATs stacked on top of the RPI-3.
+We use non electrically conductive standoffs (M2.5 12mm F 6mm M), nuts (M2.5), and screws (M2.5x10mm) to hold the Raspberry Pi to the chassis and the HATs stacked on top of the Raspberry Pi.
 
 In configuration `D17-0` and `D17-0+w` or `D17-0+j`, the Duckiebot requires 8 standoffs, 4 nuts and 4 screws.
 
@@ -251,7 +251,7 @@ Two 300x5mm zip ties are going to be useful to keep the battery at the lower dec
 
 ## LEDs
 
-In configuration `D17-1`, the Duckiebot is equipped with 5 RGB LEDs. LEDs can be used to signal to other Duckiebots, or just make cool patterns!
+In configuration `D17-1`, the Duckiebot is equipped with 5 RGB LEDs. LEDs can be used to signal to other Duckiebots, or just make _fancy_ patterns.
 
 The pack of LEDs linked in the table above holds 10 LEDs, enough for two Duckiebots.
 
