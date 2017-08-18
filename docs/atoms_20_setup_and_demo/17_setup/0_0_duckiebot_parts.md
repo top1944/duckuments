@@ -26,9 +26,7 @@ Results:
 
 </div>
 
-
-
-
+TODO: Add a different "Tools" section in the table (e.g., solderer), or add in the resoruces beginning snippet; Differentiate pricing for bulk vs detail purchase (?)
 
 ## Bill of materials
 
