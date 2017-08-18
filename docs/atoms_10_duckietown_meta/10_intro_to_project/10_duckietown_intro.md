@@ -62,7 +62,7 @@ Can you do it by night?
 
 ## Learn about the educational experience
 
-These papers present a more formal description of the technical side of the projecrt as well as the educational side.
+These papers present a more formal description of the technical side of the project as well as the educational side.
 
 
 <cite class='pub-ref-desc' id='bib:tani16duckietown'>
