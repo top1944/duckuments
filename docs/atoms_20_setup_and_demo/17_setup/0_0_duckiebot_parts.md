@@ -55,7 +55,7 @@ TODO: Add a different "Tools" section in the table (e.g., solderer), or add in t
     <s>[4 Nylon Hex Nuts (M2.5)](https://tinyurl.com/ydy4znem)</s>                         <s>USD 0.02/piece</s>
     <s>[4 Nylon Screws (M2.5x10)](https://tinyurl.com/ya2uo9so)</s>                         <s>USD 0.05/piece</s>
     <s>[2 Zip Ties (300x5mm)](https://tinyurl.com/yb8v3nns)</s>                         <s>USD 8.99</s>
-    <s>[5 GHz Wifi Adapter](https://tinyurl.com/ycvu7ok3) (`D17-0+w`)</s><s>USD 20</s>
+    <s>[5-GHz Wifi Adapter](https://tinyurl.com/ycvu7ok3) (`D17-0+w`)</s><s>USD 20</s>
     <s>[Joypad](https://tinyurl.com/y9klooef) (`D17-0+j`)</s>                         <s>USD 10.50</s>
     <s>[20 Female-Female Jumper Wires (300mm)](https://www.adafruit.com/products/793) (`D17-1`)</s>                         <s>USD 8</s>
     <s>[Male-Male Jumper Wire (150mm)](https://www.adafruit.com/products/1957)  (`D17-1`)</s>                         <s>USD 1.95</s>
@@ -125,7 +125,7 @@ The price for this in the US is about USD 5-10.
 
 ### Heat Sinks
 
-The Raspberry Pi will heat up significantly during use. It is warmly recommended to add heat sinks, as in  [](#fig:heat_sinks). Since we will be stacking HATs on top of the Raspberry Pi with 15 mm standoffs, the maximum height of the heat sinks should be well below 15 mm. The chip dimensions are 15x15 mm and 10x10 mm.
+The Raspberry Pi will heat up significantly during use. It is warmly recommended to add heat sinks, as in  [](#fig:heat_sinks). Since we will be stacking HATs on top of the Raspberry Pi with 15 mm standoffs, the maximum height of the heat sinks should be well below 15 mm. The chip dimensions are 15x15mm and 10x10mm.
 
 <div figure-id="fig:heat_sinks" figure-caption="The Heat Sinks">
      <img src="heat_sinks.png" style='width: 15em'/>
@@ -141,7 +141,7 @@ The MicroSD card ([](#fig:SDcard)) is the hard disk of the Raspberry Pi. 16 Giga
 
 ###  Mirco SD card reader
 
-A MicroSD card reader ([](#fig:microsd-reader)) is useful to copy the system image to a Duckiebot from a computer to the Raspberry Pi microSD card, when the computer does not have a native SD card slot.
+A microSD card reader ([](#fig:microsd-reader)) is useful to copy the system image to a Duckiebot from a computer to the Raspberry Pi microSD card, when the computer does not have a native SD card slot.
 
 <div figure-id="fig:microsd-reader" figure-caption="The Mirco SD card reader">
      <img src="microsd-reader.png" style='width: 15em'/>
@@ -179,9 +179,9 @@ A longer (300 mm) camera cable [](#fig:long_camera_cable) make assembling the Du
      <img src="long_camera_cable.png" style='width: 15em'/>
 </div>
 
-## 5 GHz Wifi Adapter
+## 5-GHz Wifi Adapter
 
-The Edimax AC1200 EW-7822ULC 5 Ghz WiFi adpater ([](#fig:edimax)) boosts the connectivity of the Duckiebot, especially useful in busy Duckietowns (e.g., classroom).
+The Edimax AC1200 EW-7822ULC 5-GHz WiFi adpater ([](#fig:edimax)) boosts the connectivity of the Duckiebot, especially useful in busy Duckietowns (e.g., classroom).
 
 <div figure-id="fig:edimax" figure-caption="The Edimax AC1200 EW-7822ULC wifi adapter">
      <img src="edimax.png" style='width: 15em'/>
@@ -191,11 +191,13 @@ The Edimax AC1200 EW-7822ULC 5 Ghz WiFi adpater ([](#fig:edimax)) boosts the con
 
 The joypad is used to manually remote control the Duckiebot. Any 2.4 GHz wireless controller (with a _tiny_ USB dongle) will do.
 
-The model link in the table ([](#fig:joystick)) does not include batteries (2 AA 1.5V)!
+The model link in the table ([](#fig:joystick)) does not include batteries (required: 2 AA 1.5V).
 
 <div figure-id="fig:joystick" figure-caption="A Wireless Joypad">
      <img src="joystick.png" style='width: 15em'/>
 </div>
+
+TODO: Add figure with 2 AA batteries
 
 ## DC Stepper Motor HAT
 
