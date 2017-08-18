@@ -106,9 +106,19 @@ The attributes are:
 
 Each atom version has:
 
-- A **status**: one of `draft`, `ready`.
+- A **status** value: one of `draft`, `beta`, `ready`, `to-update` ([](#tab:status)).
 - A human-readable **title**.
 - A human-readable **summary** (1 short paragraph).
+
+<col2 figure-id="tab:status">
+    <figcaption>Status codes</figcaption>
+    <s>`draft`</s> <s>We just started working on it, and it is not ready
+                      for public consumption.</s>
+    <s>`beta`</s>  <s>Early reviewers should look at it now.</s>
+    <s>`ready`</s> <s>The document is ready for everybody.</s>
+    <s>`to-update`</s> <s>A new pass is needed on this document, because
+    it is not up to date anymore.</s>
+</col2>
 
 ## Markdown format for text-like atoms
 

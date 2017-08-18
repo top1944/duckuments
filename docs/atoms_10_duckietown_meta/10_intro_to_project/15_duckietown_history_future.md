@@ -1,29 +1,82 @@
 # Duckietown history and future
 
-Assigned: Liam
-
 ## The beginnings of Duckietown
 
-Duckietown started as an MIT class during Spring 2016.
+The original Duckietown class was at MIT in 2016.
 
-## Duckietown around the world
+<div figure-id="fig:MIT-class">
+    <img src="duckietown-mit.jpg" class='group-photo'/>
+    <figcaption>Part of the first MIT class, during the final demo.</figcaption>
+</div>
 
-### Taiwan
+<div figure-id="fig:v1">
+    <figcaption>The need for autonomy</figcaption>
+    <dtvideo src="vimeo:152233002"/>
+</div>
 
-### RPI
+<div figure-id="fig:v2">
+    <figcaption>Advertisement</figcaption>
+    <dtvideo src="vimeo:152499589"/>
+</div>
 
-### Chile
 
-### Duckietown High School
+<div figure-id="fig:v4">
+    <figcaption>The elves of Duckietown</figcaption>
+    <dtvideo src="vimeo:149916365"/>
+</div>
 
-## Coming up
 
-In 2017, the class will be offered contemporaneously at:
+<!--
+<div class="videos">
+  <iframe src="https://player.vimeo.com/video/152233002" class="embed-responsive-item" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  <iframe src="https://player.vimeo.com/video/152499589" class="embed-responsive-item" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  <iframe src="https://player.vimeo.com/video/152825632" class="embed-responsive-item" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  <iframe src="https://player.vimeo.com/video/149916365" class="embed-responsive-item" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+</div> -->
 
-* ETH Zurich
-* University of Montreal
-* University of Chicago
 
-as well as:
+## University-level classes in 2016
 
-XXX
+Later that year, the Duckietown platform was also used in these classes:
+
+- [NCTU 2016](2016/16-NCTU/) - Prof. Nick Wang;
+- [RPI 2016](2016/16-RPI/) - Prof. John Wen;
+
+<div figure-id="fig:NCTU">
+   <img src="duckietown-taiwan.jpg" class='group-photo'/>
+   <figcaption>Duckietown at NCTU in 2016</figcaption>
+</div>
+
+<style>
+.group-photo {
+    max-width: 80%;
+}
+</style>
+
+## University-level classes in 2017
+
+In 2017, these four courses will be taught together, with the students interacting among institutions:
+
+- [ETH Zürich 2017](2017/17-ETHZ/) - Prof. Emilio Frazzoli, Dr. Andrea Censi;
+- [University of Montreal, 2017](2017/17-Montreal/) - Prof. Liam Paull;
+- [TTI/Chicago 2017](2017/17-TTI-Chicago/) - Prof. Matthew Walter;
+- National Chiao Tung University, Taiwan - Prof. Nick Wang's course;
+
+Furthermore, the Duckietown platform is used also in the following universities:
+
+- RPI (Jeff Trinkle)
+- National Chiao Tung University, Taiwan - Prof. Yon-Ping Chen's *Dynamic system simulation and implementation*.
+- Chosun University, Korea - Prof. Woosuk Sung's course;
+- Petra Christian University, Indonesia - Prof. Resmana Lim's *Mobile Robot Design Course*
+- National Tainan Normal University, Taiwan - Prof. Jen-Jee Chen's *Vehicle to Everything* (V2X) Course;
+- Yuan Zhu University, Taiwan - Prof. Kan-Lin Hsiung's Control course;
+
+
+
+## Chile
+
+TODO: to write
+
+## Duckietown High School
+
+TODO: to write

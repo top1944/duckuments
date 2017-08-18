@@ -22,27 +22,48 @@ In addition, the Duckietown platform has been used as a research platform.
 
 <!-- Duckietown has been recently incorporated as a non-profit foundation. -->
 
-## Results obtained so far
+## Learn about the Duckietown educational experience
 
-While we are at the early phases of the project, many people have been used the
-materials in the past year.
+This video is a Duckumentary about the first version of the class, during Spring 2016. The Duckumentary was shot by Chris Welch.
+
+
+<div figure-id="fig:duckumentary">
+    <figcaption>The Duckumentary</figcaption>
+    TODO
+</div>
+
+See also this documentary by Red Hat:
+
+<div figure-id="fig:road-to-autonomy">
+    <figcaption>The road to autonomy</figcaption>
+    <dtvideo src="vimeo:219731087"/>
+</div>
+
+If you'd like to know more about the educational experience, [](#bib:tani16duckietown) describes the course design for Duckietown: learning objectives, teaching methods, etc.
+
 
 ## Learn about the platform
 
 The best way to get a sense of how the platform looks is to watch
 these videos. They show off the capabilities of the platform.
 
-TODO: add 4 "cool" videos currently in the home page
+If you would like to know more, the paper [](#bib:paull17duckietown) describes the Duckiebot and its software. (With 29 authors, we made the record for a robotics conference!)
 
-This video is part of the Red Hat documentary:
+TODO: add the video here that we showed at ICRA.
 
-TODO: add Red Hat video
+
+Can you do it by night?
+
+<div figure-id="fig:v3">
+    <figcaption>Cool Duckietown by night</figcaption>
+    <dtvideo src="vimeo:152825632"/>
+</div>
+
 
 ## Learn about the educational experience
 
 These papers present a more formal description of the technical side of the projecrt as well as the educational side.
 
-This paper [](#bib:tani16duckietown) describes the course design for Duckietown: learning objectives, teaching methods, etc.
 
 <cite class='pub-ref-desc' id='bib:tani16duckietown'>
     <span class="author"><a href='https://eapsweb.mit.edu/people/jtani'>Jacopo Tani</a>, <a href='http://people.csail.mit.edu/lpaull/'>Liam Paull</a>, <a href='https://eapsweb.mit.edu/people/zuber/'>Maria Zuber</a>, <a href='http://danielarus.csail.mit.edu/'>Daniela Rus</a>, <a href='http://www.mit.edu/~jhow/'>Jonathan How</a>, <a href='https://marinerobotics.mit.edu/'>John Leonard</a>, and <span class="author-ac">Andrea Censi</span>.</span>
@@ -60,10 +81,6 @@ This paper [](#bib:tani16duckietown) describes the course design for Duckietown:
     }</pre>
 </cite>
 
-This video is a Duckumentary about the first version of the class, during Spring 2016.
-The Duckumentary was shot by Chris Welch.
-
-TODO: Duckumentary about the release.
 
 <style>
 img.icon {
@@ -86,10 +103,6 @@ img.icon {
     .pub-ref-bibtex-link { display: none; }
 }
 </style>
-
-## Learn about the platform
-
-The paper [](#bib:paull17duckietown) describes the Duckiebot and its software. With 29 authors, we made the record for a robotics conference.
 
 <cite class='pub-ref-desc' id='bib:paull17duckietown'>
     <span class="author"><a href='http://people.csail.mit.edu/lpaull/'>Liam Paull</a>, <a href='https://eapsweb.mit.edu/people/jtani'>Jacopo Tani</a>, Heejin Ahn, Javier Alonso-Mora, Luca Carlone, Michal Cap, Yu Fan Chen, Changhyun Choi, Jeff Dusek, Daniel Hoehener, Shih-Yuan Liu, Michael Novitzky, Igor Franzoni Okuyama, Jason Pazis, Guy Rosman, Valerio Varricchio, Hsueh-Cheng Wang, Dmitry Yershov, Hang Zhao, Michael Benjamin, <a href='http://web.mit.edu/chrisc/www/Home.html'>Christopher Carr</a>, <a href='https://eapsweb.mit.edu/people/zuber/'>Maria Zuber</a>, <a href='http://karaman.mit.edu/'>Sertac Karaman</a>, <a href='http://ares.lids.mit.edu/'>Emilio Frazzoli</a>, <a href='http://www.mit.edu/~ddv/'>Domitilla Del Vecchio</a>, <a href='http://danielarus.csail.mit.edu/'>Daniela Rus</a>, <a href='http://www.mit.edu/~jhow/'>Jonathan How</a>, <a href='https://marinerobotics.mit.edu/'>John Leonard</a>, and <span class="author-ac">Andrea Censi</span>.</span>

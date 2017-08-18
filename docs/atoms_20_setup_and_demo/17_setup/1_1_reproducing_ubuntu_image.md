@@ -154,6 +154,13 @@ First, mark the kernel packages as not upgradeable:
 
 Then, download and install the Edimax driver from [this repository](https://github.com/duckietown/rtl8822bu).
 
+    $ git clone git@github.com:duckietown/rtl8822bu.git
+    $ cd rtl8822bu
+    $ make
+    $ sudo make install
+    
+
+
 ## Install ROS
 
 Install ROS.

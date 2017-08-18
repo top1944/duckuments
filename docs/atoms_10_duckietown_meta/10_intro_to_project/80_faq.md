@@ -1,6 +1,6 @@
-# Frequently Asked Questions {#faq}
+## Frequently Asked Questions {#faq}
 
-## General questions
+### General questions
 
 Q: What is Duckietown?
 
@@ -26,13 +26,13 @@ Q: How can I help?
 If you would like to help actively, please email [duckietown@mit.edu](mailto:duckietown@mit.edu).
 
 
-## FAQ by students / independent learners
+### FAQ by students / independent learners
 
 Q:I want to build my own Duckiebot. How do I get started?
 
 TODO: to write
 
-## FAQ by instructors
+### FAQ by instructors
 
 Q: How large a class can it be? I teach large classes.
 

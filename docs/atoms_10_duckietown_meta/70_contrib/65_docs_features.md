@@ -337,3 +337,35 @@ For example, you might have a script whose output is:
     See: http://purl.org/dth/scuderia
 
 When the user clicks on the link, they will be redirected to [](#scuderia).
+
+## Embedding videos {#embedding-videos}
+
+It is possible to embed Vimeo videos in the documentation.
+
+Note: Do not upload Vimeo videos to your account; they should all be
+posted on the same Duckietown Engineering account.
+
+Depending on the output media, the result will change:
+
+* On the online book, the result is that a player is embedded.
+* On the e-book version, the result is that a thumbnail is produced, with a lin to the video;
+* (TODO) On the print version, a thumbnail is produced with a QR code linking to the video.
+
+
+This is the syntax:
+
+    <dtvideo src="vimeo:![vimeo ID]"/>
+
+For example, this code:
+
+    <div figure-id="fig:example-embed">
+        <figcaption>Cool Duckietown by night</figcaption>
+        <dtvideo src="vimeo:152825632"/>
+    </div>
+
+produces this result:
+
+<div figure-id="fig:example-embed">
+    <figcaption>Cool Duckietown by night</figcaption>
+    <dtvideo src="vimeo:152825632"/>
+</div>
