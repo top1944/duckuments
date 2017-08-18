@@ -11,9 +11,9 @@ It is then processed by a series of scripts to create this output:
 * [a publication-quality PDF][master-pdf];
 * [an online HTML version, split in multiple pages and with comments boxes][master-split].
 
-[master-pdf]: https://book.duckietown.org/master/duckiebook.pdf
-[master-html]: https://book.duckietown.org/master/duckiebook.html
-[master-split]: https://book.duckietown.org/master/duckiebook/index.html
+[master-pdf]: http://book.duckietown.org/master/duckiebook.pdf
+[master-html]: http://book.duckietown.org/master/duckiebook.html
+[master-split]: http://book.duckietown.org/master/duckiebook/index.html
 <!-- * [HTML (single-page)][master-html]; -->
 
 ## Editing links
