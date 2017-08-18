@@ -19,7 +19,7 @@ things are a bit more ready.
 
 Q: How can I start?
 
-See the section First Steps.
+See the section [First Steps]{#first-steps}.
 
 Q: How can I help?
 
