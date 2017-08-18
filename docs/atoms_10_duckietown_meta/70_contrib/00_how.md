@@ -1,1 +1,1 @@
-# Meta - How to contribute {#part:contribute}
+# How to contribute to Duckietown {#part:contribute}

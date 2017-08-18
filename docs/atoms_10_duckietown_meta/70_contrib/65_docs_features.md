@@ -309,13 +309,14 @@ to link to only the name, only the number or both ([](#tab:link-examples)).
     <s>See <a class="number_name" href="#establishing"></a>.</s>
 </col1>
 
-
-
-
-
 <style>
 #tab\:link-examples td {
     text-align: left;
+    margin-bottom: 5pt;
+}
+
+#tab\:link-examples td:nth-child(2n) {
+    margin-bottom: 10pt;
 }
 </style>
 
@@ -342,15 +343,8 @@ When the user clicks on the link, they will be redirected to [](#scuderia).
 
 It is possible to embed Vimeo videos in the documentation.
 
-Note: Do not upload Vimeo videos to your account; they should all be
-posted on the same Duckietown Engineering account.
-
-Depending on the output media, the result will change:
-
-* On the online book, the result is that a player is embedded.
-* On the e-book version, the result is that a thumbnail is produced, with a lin to the video;
-* (TODO) On the print version, a thumbnail is produced with a QR code linking to the video.
-
+Note: Do not upload the videos to your personal Vimeo account; they must all be
+posted to the Duckietown Engineering account.
 
 This is the syntax:
 
@@ -369,3 +363,10 @@ produces this result:
     <figcaption>Cool Duckietown by night</figcaption>
     <dtvideo src="vimeo:152825632"/>
 </div>
+
+
+Depending on the output media, the result will change:
+
+* On the online book, the result is that a player is embedded.
+* On the e-book version, the result is that a thumbnail is produced, with a link to the video;
+* On the deadtree version, a thumbnail is produced with a QR code linking to the video (TODO).

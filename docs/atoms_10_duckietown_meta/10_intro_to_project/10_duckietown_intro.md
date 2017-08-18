@@ -1,4 +1,4 @@
-# Meta - The Duckietown project {#part:duckietown-project}
+#  The Duckietown project {#part:duckietown-project}
 
 # What is Duckietown?
 
@@ -39,7 +39,7 @@ See also this documentary by Red Hat:
     <dtvideo src="vimeo:219731087"/>
 </div>
 
-If you'd like to know more about the educational experience, [](#bib:tani16duckietown) describes the course design for Duckietown: learning objectives, teaching methods, etc.
+If you'd like to know more about the educational experience, [](#bib:tani16duckietown) present a more formal description of the course design for Duckietown: learning objectives, teaching methods, etc.
 
 
 ## Learn about the platform
@@ -60,9 +60,6 @@ Can you do it by night?
 </div>
 
 
-## Learn about the educational experience
-
-These papers present a more formal description of the technical side of the project as well as the educational side.
 
 
 <cite class='pub-ref-desc' id='bib:tani16duckietown'>
