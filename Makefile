@@ -57,8 +57,8 @@ compile-pdf:
 
 	prince --javascript -o /tmp/duckiebook.pdf $(out_html2)
 
-	pdftk A=/tmp/duckiebook.pdf B=blank.pdf cat A1-end B output /tmp/duckiebook2.pdf keep_final_id
-	pdftk /tmp/duckiebook2.pdf update_info blank-metadata output $(out_pdf)
+	pdftk A=/tmp/duckiebook.pdf B=misc/blank.pdf cat A1-end B output /tmp/duckiebook2.pdf keep_final_id
+	pdftk /tmp/duckiebook2.pdf update_info misc/blank-metadata output $(out_pdf)
 
 	# open $(out_pdf)
 
@@ -66,14 +66,18 @@ update-mcdp:
 	-git -C mcdp/ pull
 
 compile: update-mcdp
+	$(MAKE) index
 	$(MAKE) compile-html
 	$(MAKE) split
 
 compile-slow: update-mcdp
+	$(MAKE) index
 	$(MAKE) compile-html-slow
 	$(MAKE) split
 
-
+index:
+	mcdp-render -D misc book_index
+	cp misc/book_index.html duckuments-dist/index.html
 
 compile-html:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
