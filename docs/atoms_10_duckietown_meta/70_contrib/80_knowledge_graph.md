@@ -38,6 +38,8 @@ Examples of atoms include:
       video/screencast
       video/demo
 
+
+
 <!--
 slides
 
@@ -104,9 +106,19 @@ The attributes are:
 
 Each atom version has:
 
-- A **status**: one of `draft`, `ready`.
+- A **status** value: one of `draft`, `beta`, `ready`, `to-update` ([](#tab:status)).
 - A human-readable **title**.
 - A human-readable **summary** (1 short paragraph).
+
+<col2 figure-id="tab:status">
+    <figcaption>Status codes</figcaption>
+    <code>draft</code> <s>We just started working on it, and it is not ready
+                      for public consumption.</s>
+    <code>beta</code>  <s>Early reviewers should look at it now.</s>
+    <code>ready</code> <s>The document is ready for everybody.</s>
+    <code>to-update</code> <s>A new pass is needed on this document, because
+    it is not up to date anymore.</s>
+</col2>
 
 ## Markdown format for text-like atoms
 
@@ -131,7 +143,7 @@ Here is an example of a header with all the attributes:
  <figcaption>`calibration.en.md`</figcaption>
 
 ``` .markdown
-# Odometry calibration {#odometry-calibration  lang=en-US type='text/theory' status=ready}
+# Odometry calibration {#odometry-calibration lang=en-US type='text/theory' status=ready}
 
 This first paragraph will be used as the "summary" for this text.
 
@@ -146,7 +158,7 @@ And this is how the Italian translation would look like:
  <figcaption>`calibration.it.md`</figcaption>
 
 ``` .markdown
-# Calibrazione dell'odometria {#odometry-calibration  lang=it type='text/theory' status=draft}
+# Calibrazione dell'odometria {#odometry-calibration lang=it type='text/theory' status=draft}
 
 Questo paragrafo sarà usato come un sommario del testo.
 
@@ -236,12 +248,10 @@ of semantic links:
     <s><pre><code>Recommended: It is better if you have setup Wifi as in []<span></span>(#setup-wifi).</code></pre></s>
 
     <s>Reference</s>
-    <s><pre><code>Reference: For more information about <code>rostopic</code>,
-    see []<span></span>(#rostopic).</code></pre></s>
+    <s><pre><code>Reference: For more information about <code>rostopic</code>, see []<span></span>(#rostopic).</code></pre></s>
 
     <s>See also</s>
-    <s><pre><code>See also: If you are interested in feature detection, you might
-    want to learn about [SIFT](#SIFT).</code></pre></s>
+    <s><pre><code>See also: If you are interested in feature detection, you might want to learn about [SIFT](#SIFT).</code></pre></s>
 </col2>
 
 <style>
@@ -249,7 +259,7 @@ of semantic links:
     font-size: smaller;
 }
 #tab\:links code {
-    font-size: 50%;
+    font-size: 80%;
 }
 #tab\:links td:first-child {
     display:block;

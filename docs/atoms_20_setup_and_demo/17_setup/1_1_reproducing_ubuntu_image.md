@@ -154,6 +154,13 @@ First, mark the kernel packages as not upgradeable:
 
 Then, download and install the Edimax driver from [this repository](https://github.com/duckietown/rtl8822bu).
 
+    $ git clone git@github.com:duckietown/rtl8822bu.git
+    $ cd rtl8822bu
+    $ make
+    $ sudo make install
+    
+
+
 ## Install ROS
 
 Install ROS.
@@ -432,8 +439,16 @@ Add the following lines to `~ubuntu/.bashrc`:
 
     export EDITOR=vim
 
+## Check that all required packages were installed
 
-### Creating the image
+At this point, before you copy/distribute the image, create a user,
+install the software, and make sure that `what-the-duck` does not complain
+about any missing package.
+
+(Ignore `what-the-duck`'s errors about things that are not set up yet, like
+users.)
+
+## Creating the image
 
 You may now want to create an image that you can share with your friends. They will think you are cool because they won't have to
 duplicate all of the work that you just did. Luckily this is easy. Just power down the duckiebot with:
@@ -442,20 +457,19 @@ duplicate all of the work that you just did. Luckily this is easy. Just power do
 
 and put the SD card back in your laptop.
 
-See: The procedure of how to burn an image is explained in [](#howto-burn-image)
-
-except you will invert the `if` and `of` destinations
+See: The procedure of how to burn an image is explained in
+[](#howto-burn-image); except you will invert the `if` and `of` destinations.
 
 You may want to subsequently shrink the image, for example if your friends have smaller SD cards than you.
 
-See: The procedure of how to shrink an image is explained in [](#howto-shrink-image)
+See: The procedure of how to shrink an image is explained in [](#howto-shrink-image).
 
 
-## Additions since last image
+## Some additions since last image to add in the next image
 
 Note here the additions since the last image was created.
 
-- [Install Git LFS](#git-lfs-install)
+- [Install Git LFS](#git-lfs-install).
 
 Create a file
 
@@ -468,4 +482,4 @@ Containing these lines
     comments: |
         ![any comments you have]
 
-So that we know which image is currently in used
+So that we know which image is currently in used.

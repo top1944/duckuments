@@ -52,7 +52,7 @@ For self-guided learners, this is an arbitrary repository to create.
 
 [duckiefleet-repo]: https://github.com/duckietown/duckiefleet-fall2017
 
-## The scuderia file {#scuderia-file}
+## The scuderia file {#scuderia}
 
 In the <code>&#36;{DUCKIEFLEET_ROOT}</code> directory,
 there needs to exist a file called:
@@ -65,7 +65,7 @@ The file must contain YAML entries of the type:
        username: ![username]
        owner_duckietown_id: ![owner duckietown ID]
 
-A minimal example is in [](#code:scuderia-minimal)
+A minimal example is in [](#code:scuderia-minimal).
 
 <div figure-id="code:scuderia-minimal" markdown="1">
 <figcaption>Minimal scuderia file</figcaption>

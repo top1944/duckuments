@@ -113,13 +113,14 @@ Let the image file be `![image file]`.
 Run the command:
 
     laptop $ sudo fdisk -l ![image file]
-should give you something like:
+
+It should give you something like:
 ```
 Device                       Boot  Start      End  Sectors  Size Id Type
 duckiebot-RPI3-LP-aug15.img1        2048   131071   129024   63M  c W95 FAT32 (LBA)
 duckiebot-RPI3-LP-aug15.img2      131072 21219327 21088256 10.1G 83 Linux
 ```
-Take note of the start of the Linux partition (in our case 131072), let's call it `![start]`
+Take note of the start of the Linux partition (in our case 131072), let's call it `![start]`.
 Now we are going to mount the Linux partition from the image:
 
     laptop $ sudo losetup /dev/loop0 imagename.img -o $((![start]*512))
@@ -134,7 +135,7 @@ that is equal to the minimum size plus 20MB
 Note: This didn't work well for me - I had to add much more than 20MB for it to work.
 
 Click the "Apply" check mark. *Before* closing the final screen click through the arrows in the dialogue box
-to find a line such a *"resize2fs -p /dev/loop0 1410048K"*. Take note of the new size of your partition. Let's
+to find a line such a "`resize2fs -p /dev/loop0 1410048K`". Take note of the new size of your partition. Let's
 call it `![new size]`.
 
 Now remove the loopback on the 2nd partition and setup a loopback on the whole image and run `fdisk`:

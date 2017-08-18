@@ -142,6 +142,26 @@ use:
 This will be faster. However, sometimes it might get confused. At that point,
 do `make clean`.
 
+## Troubleshooting compilation
+
+Symptom: "Invalid XML"
+
+Resolution: "Markdown" doesn't mean that you can put anything in a file. Except
+for the code blocks, it must be valid XML. For example, if you use
+"<code>&gt;</code>" and "<code>&lt;</code>" without quoting, it will likely
+cause a compile error.
+
+Symptom: "Tabs are evil"
+
+Resolution: Do not use tab characters. The error message in this case is quite
+helpful in telling you exactly where the tabs are.
+
+
+Symptom: The error message contains `ValueError: Suspicious math fragment 'KEYMATHS000ENDKEY'`
+
+Resolution: You probably have forgotten to indent a command line by at least 4 spaces. The dollar in the command line is now being confused for a math formula.
+
+
 ## The workflow to edit documentation.
 
 This is the workflow:
@@ -204,7 +224,7 @@ Next, install the necessary Javascript libraries using `npm`:
     $ cd $DUCKUMENTS
     $ npm install MathJax-node jsdom@9.3 less
 
-  
+
 
 ### Troubleshooting `nodejs` installation problems
 
