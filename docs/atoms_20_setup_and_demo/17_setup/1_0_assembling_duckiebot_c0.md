@@ -1,11 +1,11 @@
-# Assembling the Duckiebot `C0` {#assembling-duckiebot}
+# Assembling the Duckiebot `C0` {#assembling-duckiebot-c0}
 
 Assigned: Shiying
 
 <div class='requirements' markdown="1">
 
 Requires: Duckiebot `D17-C0` parts.
-The acquisition process is explained in [](#acquiring-parts).
+The acquisition process is explained in [](#acquiring-parts-c0).
 
 Requires: Time: about ??? minutes.
 

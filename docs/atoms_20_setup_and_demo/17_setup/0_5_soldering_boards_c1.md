@@ -1,4 +1,4 @@
-# Soldering boards for `C0`
+# Soldering boards for `C1` {#soldering-boards-c1}
 
 Assigned: Shiying
 
@@ -6,7 +6,8 @@ Assigned: Shiying
 
 Resources necessaries:
 
-- ...
+- Requires: Duckiebot `C1` parts.
+The acquisition process is explained in [](#acquiring-parts-c1).
 - Time: ??? minutes
 
 Results:
