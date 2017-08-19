@@ -107,7 +107,7 @@ Note: Majority of content taken from [here](http://www.aoakley.com/articles/2015
 
 We are going to use the tool `gparted` so make sure it's installed
 
-    laptop $ sudo apt-get install gparted
+    laptop $ sudo apt install gparted
 
 Let the image file be `![image file]`.
 Run the command:

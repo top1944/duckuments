@@ -23,6 +23,244 @@ Assigned: Andrea
 
 
 
+
+# Every day Linux
+
+
+## `cd` {#cd}
+TODO: to write
+
+## `sudo` {#sudo}
+TODO: to write
+
+## `ls` {#ls}
+
+TODO: to write
+
+## `cp` {#cp}
+
+TODO: to write
+
+## `mkdir` {#mkdir}
+
+TODO: to write
+
+## `touch` {#touch}
+
+TODO: to write
+
+## `reboot` {#reboot}
+
+TODO: to write
+
+## `shutdown` {#shutdown}
+TODO: to write
+
+
+## `rm` {#rm}
+
+TODO: to write
+
+# Users
+
+
+
+## `passwd` {#passwd}
+
+TODO: to write
+
+# UNIX tools
+
+
+## `cat` {#cat}
+
+TODO: to write
+
+
+## `tee` {#tee}
+
+TODO: to write
+
+## `truncate` {#truncate}
+
+TODO: to write
+
+# Linux disks and files
+
+## `fdisk` {#fdisk}
+
+TODO: to write
+
+
+## `mount` {#mount}
+
+TODO: to write
+
+## `umount` {#umount}
+
+TODO: to write
+
+
+## `losetup` {#losetup}
+
+TODO: to write
+
+
+## `gparted` {#gparted}
+
+TODO: to write
+
+
+## `dd` {#dd}
+
+TODO: to write
+
+
+## `sync` {#sync}
+
+TODO: to write
+
+
+## `df` {#df}
+
+TODO: to write
+
+# Other administration commands
+
+
+## `visudo` {#visudo}
+TODO: to write
+
+## `update-alternatives` {#update-alternatives}
+TODO: to write
+
+## `udevadm` {#udevadm}
+TODO: to write
+
+## `systemctl` {#systemctl}
+
+TODO: to write
+
+
+
+# Make
+
+## `make` {#make}
+TODO: to write
+
+
+# Python-related tools
+
+## `virtualenv` {#virtualenv}
+
+TODO: to write
+
+## `pip` {#pip}
+TODO: to write
+
+
+# Raspberry-PI commands
+
+## `raspi-config` {#raspi-config}
+TODO: to write
+
+## `vcgencmd` {#vcgencmd}
+TODO: to write
+
+## `raspistill` {#raspistill}
+TODO: to write
+
+
+## `jstest` {#jstest}
+TODO: to write
+
+## `swapon` {#swapon}
+TODO: to write
+
+## `mkswap` {#mkswap}
+TODO: to write
+
+
+
+# Users and permissions
+
+## `chmod` {#chmod}
+TODO: to write
+
+## `groups` {#groups}
+TODO: to write
+
+## `adduser` {#adduser}
+TODO: to write
+
+## `useradd` {#useradd}
+TODO: to write
+
+
+# Downloading
+
+
+## `curl` {#curl}
+TODO: to write
+
+
+## `sha256sum` {#sha256sum}
+TODO: to write
+
+
+## `xz` {#xz}
+TODO: to write
+
+# Shells and environments
+
+## `source` {#source}
+TODO: to write
+
+## `which` {#which}
+
+TODO: to write
+
+## `export` {#export}
+
+TODO: to write
+
+# Other misc commands
+
+
 ## `pgrep`
+
+TODO: to write
+
+
+## `npm` {#npm}
+
+TODO: to write
+
+
+## `nodejs` {#nodejs}
+
+TODO: to write
+
+
+## `ntpdate` {#ntpdate}
+
+TODO: to write
+
+
+## `chsh` {#chsh}
+
+TODO: to write
+
+
+## `echo` {#echo}
+
+TODO: to write
+
+
+## `sh` {#sh}
+
+TODO: to write
+
+## `fc-cache` {#fc-cache}
 
 TODO: to write

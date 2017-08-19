@@ -2,17 +2,9 @@
 
 Assigned: Andrea
 
-
 You need to learn to use Byobu. It will save you much time later.
 
-See also: See the screencast on the website [http://byobu.co/][web-byobu].
-
-[web-byobu]: http://byobu.co/
-
-
-## Alternatives
-
-[GNU Screen][web-screen] is fine as well.
+(Alternatives such as [GNU Screen][web-screen] are fine as well.)
 
 [web-screen]: https://en.wikipedia.org/wiki/GNU_Screen
 
@@ -25,6 +17,12 @@ TODO: To write
 On Ubuntu, install using:
 
     $ sudo apt install byobu
+
+## Documentation
+
+See also: See the screencast on the website [http://byobu.co/][web-byobu].
+
+[web-byobu]: http://byobu.co/
 
 ## Quick command reference
 

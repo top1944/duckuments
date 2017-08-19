@@ -224,3 +224,9 @@ In doubt, these lines fix the permissions for your `.ssh` directory.
 
     $ chmod 0700 ~/.ssh
     $ chmod 0700 ~/.ssh/*
+
+
+
+## `ssh-keygen` {#ssh-keygen}
+
+TODO: to write

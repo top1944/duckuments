@@ -24,9 +24,15 @@ TODO: to write
 Make sure that you know:
 
 
+
+## `hostname` {#hostname}
+
+TODO: to write
+
+
 ## Visualizing information about the network
 
-### `ping`: are you there?
+### `ping`: are you there? {#ping}
 
 TODO: to write
 

@@ -1,17 +1,8 @@
 
 
-Andrea's notes:
 
+- ROSNode library
 
-1 ROS talker
-
-2 Measure the latency and frequency of the node
-
-3 Measure the latency of another node
-
-4 Plotting information
-
-5 Parameters
 
 
 concepts.yaml

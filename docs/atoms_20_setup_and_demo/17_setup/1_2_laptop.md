@@ -97,7 +97,7 @@ Install redshift and run it.
 
 Set to "autostart" from the icon.
 
-### Installation of the duckuments system
+## Installation of the duckuments system
 
 Optional but very encouraged: install the duckuments system.
 This will allow you to have a local copy of the documentation

@@ -1,24 +1,66 @@
-# How to write a ROS node in Python for Duckietown {#ros-python-howto}
+# Minimal ROS node - `pkg_name` {#ros-python-howto}
 
 Assigned: Andrea
 
-This document outline the process of writing a ROS package and nodes in Python. It is recommend that you duplicate the `pkg_name` folder and edit the content of the files to make your own package.
+This document outline the process of writing a ROS package and nodes in Python.
 
-## Package related Files
+
+[talker-py]: https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/talker.py
+[CMakeLists-txt]: https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/CMakeLists.txt
+[setup-py]: https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/setup.py
+[package-xml]: https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/package.xml
+[util-py]: https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/include/pkg_name/util.py
+
+To follow along, it is recommend that you duplicate the `pkg_name` folder and edit the content of the files to make your own package.
+
+## The files in the package
 
 ### `CMakeLists.txt`
 
-Yes, you still need to have a `CMakeLists.txt` file even if you are just using Python code in your package. But don't worry, it's pretty straight-forward. For a simple package, you only have to pay attention to the following parts.
+We start with [`CMakeLists.txt`][CMakeLists-txt].
 
-At line 2 `project(pkg_name)`, this defines the name of the project.
+Every ROS package needs a file `CMakeLists.txt`, even if you are just using Python code in your package.
 
-Line 7 to 10, the `find_package`. You will have to specify the packages on which your package is dependent. In duckietown, most packages should depend on `duckietown_msgs` to make use of the customized messages.
+See also: documentation about CMakeLists.txt XXX
 
-Line 21, `catkine_python_setup()` tells catkin to setup Python-related stuff for this package.
+For a Python package, you only have to pay attention to the following parts.
+
+The line:
+
+    project(pkg_name)
+
+defines the name of the project.
+
+The `find_package` lines:
+
+    find_package(catkin REQUIRED COMPONENTS
+      roscpp
+      rospy
+      duckietown_msgs # Every duckietown packages must use this.
+      std_msgs
+    )
+
+You will have to specify the packages on which your package is dependent.
+
+In Duckietown, most packages depend on `duckietown_msgs` to make use of the customized messages.
+
+The line:
+
+    catkine_python_setup()
+
+tells `catkin` to setup Python-related stuff for this package.
+
+See also: [ROS documentation about `setup.py`][setuppy]
+
+[setuppy]: http://docs.ros.org/api/catkin/html/user_guide/setup_dot_py.html)
 
 ### `package.xml`
 
-This files defines the meta data of the package. catkin makes use of it to flush out the dependency tree and figures out the order of compiling. Pay attention to the following parts.
+The file [`package.xml`][package-xml] defines the meta data of the package.
+
+Catkin makes use of it to flush out the dependency tree and figures out the order of compiling.
+
+Pay attention to the following parts.
 
 <code>&lt;name&gt;</code> defines the name of the package. It has to match the project name in `CMakeLists.txt`.
 
@@ -30,25 +72,35 @@ This files defines the meta data of the package. catkin makes use of it to flush
 
 ### `setup.py`
 
-This configures the Python modules in this package.
+The file [`setup.py`][setup-py] configures the Python modules in this package.
 
 The part to pay attention to is
-
 
     setup_args = generate_distutils_setup(
         packages=['pkg_name'],
         package_dir={'': 'include'},
     )
 
-The `packages` is set to a list of strings of the name of the folders inside the `include` folder. The convention is to set the folder name the same as the package name. Here it's the `include/pkg_name` folder. You should put ROS-independent and/or reusable module (for other packages) in the `include/pkg_name` folder. Python files under this folder (for example, the `util.py`) will be available to scripts in the catkin workspace (this package and other packages too) through
+The `packages` parameter is set to a list of strings of the name of the folders inside the `include` folder.
 
+The convention is to set the folder name the same as the package name. Here it's the `include/pkg_name` folder.
+
+You should put ROS-independent and/or reusable module (for other packages) in the `include/pkg_name` folder.
+
+Python files in this folder (for example, the `util.py`) will be available to scripts in the `catkin` workspace (this package and other packages too).
+
+To use these modules from other packages, use:
 
     from pkg_name.util import *
 
 
-## Writing a node
+## Writing a node: `talker.py`
 
-Let's look at `src/talker.py` as an example. ROS nodes are put under the `src` folder and they have to be made executable to function properly. You can do so by`chmod +x talker.py`.
+Let's look at [`src/talker.py`][talker-py] as an example.
+
+ROS nodes are put under the `src` folder and they have to be made executable to function properly.
+
+See: You use `chmod` for this; see [](#chmod).
 
 ### Header
 
@@ -56,21 +108,30 @@ Header:
 
     #!/usr/bin/env python
     import rospy
-    from pkg_name.util import HelloGoodbye #Imports module. Not limited to modules in this package.
-    from std_msgs.msg import String #Imports msg
+    # Imports module. Not limited to modules in this package.
+    from pkg_name.util import HelloGoodbye
+    # Imports msg
+    from std_msgs.msg import String
 
-`#!/usr/bin/env python`, this specify that the script is written in Python. Every ROS node in python should start with this line (or else it won't work properly.)
+The first line, `#!/usr/bin/env python`, specifies that the script is written in Python.
 
-`import rospy` imports the rospy module necessary for all ROS nodes in Python.
+Every ROS node in Python must start with this line.
 
-`from pkg_name.util import HelloGoodbye` imports HelloGoodby defined in the file `pkg_name/include/pkg_name/util.py`. Note that you can also include modules provided by other packages giving that you specify dependency in `CMakeLists.txt` and `package.xml`.
+The line `import rospy` imports the `rospy` module necessary for all ROS nodes in Python.
 
-`from std_msgs.msg import String` imports the `String` message defined in the `std_msgs` package. Note that you can use `rosmsg show std_msgs/String `
-in a terminal to lookup the defintion of `String.msg`.
+The line `from pkg_name.util import HelloGoodbye` imports the class `HelloGoodbye` defined in the file [`pkg_name/util.py`][util-py].
+
+Note that you can also include modules provided by other packages, if you
+specify the dependency in `CMakeLists.txt` and `package.xml`.
+
+The line `from std_msgs.msg import String` imports the `String` message defined in the `std_msgs` package.
+
+Note that you can use `rosmsg show std_msgs/String `
+in a terminal to lookup the definition of `String.msg`.
 
 ### Main
 
-Main:
+This is the main file:
 
     if __name__ == '__main__':
         # Initialize the node with rospy
@@ -86,27 +147,30 @@ Main:
         rospy.spin()
 
 
-`rospy.init_node('talker', anonymous=False)` initialize a node named `talker`. Note that this name can be overwritten by a launch file. The launch file can also push this node down namespaces. If the `anonymous` argument is set to `True` then a random string of numbers will be append to the name of the node. Usually we don't use anonymous nodes.
+The line `rospy.init_node('talker', anonymous=False)` initializes a node named `talker`.
 
-`node = Talker()` creates an instance of the Talker object. More details in the next section.
+Note that this name can be overwritten by a launch file. The launch file can also push this node down namespaces. If the `anonymous` argument is set to `True` then a random string of numbers will be append to the name of the node. Usually we don't use anonymous nodes.
 
-`rospy.on_shutdown(node.on_shutdown)` ensures that the `node.on_shutdown` will be called when the node is shutdown.
+The line `node = Talker()` creates an instance of the Talker object. More details in the next section.
 
-`rospy.spin()` blocks to keep the script alive. This makes sure the node stays alive and all the publication/subscriptions work correctly.
+The line `rospy.on_shutdown(node.on_shutdown)` ensures that the `node.on_shutdown` will be called when the node is shutdown.
 
-### Talker
+The line `rospy.spin()` blocks to keep the script alive. This makes sure the node stays alive and all the publication/subscriptions work correctly.
 
-Talker:
+## The `Talker` class
 
+We now discuss the `Talker` class in [`talker.py`][talker-py].
+
+<!--
     class Talker(object):
         def __init__(self):
             # Save the name of the node
             self.node_name = rospy.get_name()
 
-            rospy.loginfo("[%s] Initialzing." %(self.node_name))
+            rospy.loginfo("[%s] Initializing." % (self.node_name))
 
             # Setup publishers
-            self.pub_topic_a = rospy.Publisher("~topic_a",String, queue_size=1)
+            self.pub_topic_a = rospy.Publisher("~topic_a", String, queue_size=1)
             # Setup subscriber
             self.sub_topic_b = rospy.Subscriber("~topic_b", String, self.cbTopic)
             # Read parameters
@@ -116,9 +180,10 @@ Talker:
 
             rospy.loginfo("[%s] Initialzed." %(self.node_name))
 
-        def setupParameter(self,param_name,default_value):
+        def setupParameter(self, param_name, default_value):
             value = rospy.get_param(param_name,default_value)
-            rospy.set_param(param_name,value) #Write to parameter server for transparancy
+            # Write to parameter server for transparancy
+            rospy.set_param(param_name,value)
             rospy.loginfo("[%s] %s = %s " %(self.node_name,param_name,value))
             return value
 
@@ -134,40 +199,46 @@ Talker:
 
         def on_shutdown(self):
             rospy.loginfo("[%s] Shutting down." %(self.node_name))
+ -->
 
 ### Constructor
 
-Constructor:
+In the constructor, we have:
 
     self.node_name = rospy.get_name()
 
-saves the name of the node. Including the name of the node in printouts makes them more informative.
+saves the name of the node.
 
-    rospy.loginfo("[%s] Initialzing." %(self.node_name))
+This allows to include the name of the node in printouts to make them more informative. For example:
 
-prints to ROS info.
+    rospy.loginfo("[%s] Initializing." % (self.node_name))
 
 
-    self.pub_topic_a = rospy.Publisher("~topic_a",String, queue_size=1)
+The line:
+
+    self.pub_topic_a = rospy.Publisher("~topic_a", String, queue_size=1)
 
 defines a publisher which publishes a `String` message to the topic `~topic_a`. Note that the `~` in the name of topic under the namespace of the node. More specifically, this will actually publishes to `talker/topic_a` instead of just `topic_a`. The `queue_size` is usually set to 1 on all publishers.
 
 See: For more details see [`rospy` overview: publisher and subscribers](http://wiki.ros.org/rospy/Overview/Publishers%20and%20Subscribers).
 
+The line:
 
     self.sub_topic_b = rospy.Subscriber("~topic_b", String, self.cbTopic)
 
 defines a subscriber which expects a `String` message and subscribes to `~topic_b`. The message will be handled by the `self.cbTopic` callback function. Note that similar to the publisher, the `~` in the topic name puts the topic under the namespace of the node. In this case the subscriber actually subscribes to the topic `talker/topic_b`.
 
-It is strongly encouraged that a node always publishers and subscribes to topics under their `node_name` namespace. In other words, always put a `~` in front of the topic names when you defines a publisher or a subscriber. They can be easily remapped in a launch file. This makes the node more modular and minimizes the possibility of confusion and naming conflicts. See the launch file section for how remapping works.
+It is strongly encouraged that a node always publishers and subscribes to topics under their `node_name` namespace. In other words, always put a `~` in front of the topic names when you defines a publisher or a subscriber. They can be easily remapped in a launch file. This makes the node more modular and minimizes the possibility of confusion and naming conflicts. See [the launch file section][howto-launch-file] for how remapping works.
 
+The line
 
-    self.pub_timestep = self.setupParameter("~pub_timestep",1.0)
+    self.pub_timestep = self.setupParameter("~pub_timestep", 1.0)
 
 Sets the value of `self.pub_timestep` to the value of the parameter `~pub_timestep`. If the parameter doesn't exist (not set in the launch file), then set it to the default value `1.0`. The `setupParameter` function also writes the final value to the parameter server. This means that you can `rosparam list` in a terminal to check the actual values of parameters being set.
 
+The line:
 
-    self.timer = rospy.Timer(rospy.Duration.from_sec(self.pub_timestep),self.cbTimer)
+    self.timer = rospy.Timer(rospy.Duration.from_sec(self.pub_timestep), self.cbTimer)
 
 defines a timer that calls the `self.cbTimer` function every `self.pub_timestep` seconds.
 
@@ -188,14 +259,13 @@ Everyt ime the timer ticks, a message is generated and published.
 
 Contents:
 
-
     def cbTopic(self,msg):
         rospy.loginfo("[%s] %s" %(self.node_name,msg.data))
 
 
 Every time a message is published to `~topic_b`, the `cbTopic` function is called. It simply prints the messae using `rospy.loginfo`.
 
-## Launch File
+## Launch File {#howto-launch-file}
 
 You should always write a launch file to launch a node. It also serves as a documentation on the I/O of the node.
 
@@ -215,8 +285,7 @@ which overwrites `rospy.init_node()` in the `__main__` of `talker.py`. The
 `pkg` and `type` specify the package and the script of the node, in this case
 it's `talke.py`.
 
-Don't forget the `.py` in the end (and remember to make the
-file executable through `chmod`).
+Don't forget the `.py` in the end (and remember to make the file executable through `chmod`).
 
 The `output="screen"` direct all the
 `rospy.loginfo` to the screen, without this you won't see any printouts (useful
@@ -234,10 +303,8 @@ will have the same effect. This is redundant in this case but very useful when y
 
 First of all, you have to `catkin_make` the package even if it only uses Python. `catkin` makes sure that the modules in the include folder and the messages are available to the whole workspace. You can do so by
 
-
-    $ cd ~/duckietown/catkin_ws
+    $ cd ${DUCKIETOWN_ROOT}/catkin_ws
     $ catkin_make
-
 
 Ask ROS to re-index the packages so that you can auto-complete most things.
 
@@ -249,12 +316,12 @@ Now you can launch the node by the launch file.
 
 You should see something like this in the terminal:
 
-    ... logging to /home/shihyuan/.ros/log/d4db7c80-b272-11e5-8800-5c514fb7f0ed/roslaunch-Wolverine-15961.log
+    ... logging to /home/![username]/.ros/log/d4db7c80-b272-11e5-8800-5c514fb7f0ed/roslaunch-![robot name]-15961.log
     Checking log directory for disk usage. This may take awhile.
     Press Ctrl-C to interrupt
     Done checking log file disk usage. Usage is 1GB.
 
-    started roslaunch server http://Wolverine.local:33925/
+    started roslaunch server http://![robot name].local:33925/
 
     SUMMARY
     ========
@@ -287,7 +354,8 @@ You should see something like this in the terminal:
     [INFO] [WallTime: 1451864200.781453] [/talker] Goodbye, duckietown.
 
 
-Open another terminal and
+
+Open another terminal and run:
 
     $ rostopic list
 
@@ -297,12 +365,11 @@ You should see
     /rosout_agg
     /talker/topic_a
 
-
-In the same terminal:
+In the same terminal, run:
 
     $ rosparam list
 
-You should see `/talker/pub_timestep`
+You should see the list of parameters, including `/talker/pub_timestep`.
 
 You can see the parameters and the values of the `talker` node with
 

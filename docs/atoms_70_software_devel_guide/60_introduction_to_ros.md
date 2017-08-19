@@ -67,11 +67,32 @@ TODO: to write
 
 TODO: to write
 
-### `catkin_make` {#catkin_make}
+## `catkin_make` {#catkin_make}
 
 TODO: to write
 
-### Troubleshooting
+## `rosrun` {#rosrun}
+
+TODO: to write
+
+## `rostest` {#rostest}
+
+TODO: to write
+
+## `rospack` {#rospack}
+
+TODO: to write
+
+## `rosparam` {#rosparam}
+
+TODO: to write
+
+
+## `rosdep` {#rosdep}
+
+TODO: to write
+
+## Troubleshooting ROS
 
 Symptom: `![computer] is not in your SSH known_hosts file`
 

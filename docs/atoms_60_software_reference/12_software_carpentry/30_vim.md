@@ -17,6 +17,11 @@ Install like this:
 
     $ sudo apt install vim
 
+
+## `vi` {#vi}
+
+TODO: to write
+
 ## Suggested configuration
 
 Suggested `~/.vimrc`:

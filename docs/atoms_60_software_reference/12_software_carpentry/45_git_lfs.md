@@ -16,7 +16,7 @@ run the following:
     $ sudo add-apt-repository ppa:git-core/ppa
     $ curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
     $ sudo apt update
-    $ sudo apt-get install git-lfs
+    $ sudo apt install git-lfs
 
 <!-- $ git lfs install -->
 
@@ -26,7 +26,7 @@ Note: unresolved issues.
 
 The instructions above do not work.
 
-Following [this](https://bioinfoexpert.com/2016/08/25/installation-of-git-lfs-on-ubuntu-rpi2-armf/), the error 
+Following [this](https://bioinfoexpert.com/2016/08/25/installation-of-git-lfs-on-ubuntu-rpi2-armf/), the error
 that appears is that golang on the Pi is 1.6 instead it should be 1.7.
 
 ### Troubleshooting
