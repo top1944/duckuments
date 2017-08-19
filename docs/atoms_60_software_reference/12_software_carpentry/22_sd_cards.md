@@ -1,6 +1,6 @@
 # SD Cards tools {#sdcards}
 
-### Testing SD Card and disk speed {#test-sd-card-speed}
+## Testing SD Card and disk speed {#test-sd-card-speed}
 
 Test SD Card (or any disk) speed using the following commands,
 which write to a file called `![filename]`.
@@ -138,28 +138,28 @@ Click the "Apply" check mark. *Before* closing the final screen click through th
 to find a line such a "`resize2fs -p /dev/loop0 1410048K`". Take note of the new size of your partition. Let's
 call it `![new size]`.
 
-Now remove the loopback on the 2nd partition and setup a loopback on the whole image and run `fdisk`:
+Now remove the loopback on the second partition and setup a loopback on the whole image and run `fdisk`:
 
     laptop $ sudo losetup -d /dev/loop0
     laptop $ sudo losetup /dev/loop0 ![image file]
     laptop $ sudo fdisk /dev/loop0
 
-    Command (m for help): *d*
-    Partition number (1,2, default 2): *2*
-    Command (m for help): *n*
+    Command (m for help): ![enter d]
+    Partition number (1,2, default 2): ![enter 2]
+    Command (m for help): ![enter n]
     Partition type
     p   primary (1 primary, 0 extended, 3 free)
     e   extended (container for logical partitions)
-    Select (default p): *p*
-    Partition number (2-4, default 2): *2*
-    First sector (131072-62521343, default 131072): *![start]*
-    Last sector, +sectors or +size{K,M,G,T,P} (131072-62521343, default 62521343): *+![new size]*
+    Select (default p): ![enter p]
+    Partition number (2-4, default 2): ![enter 2]
+    First sector (131072-62521343, default 131072): ![start]
+    Last sector, +sectors or +size{K,M,G,T,P} (131072-62521343, default 62521343): +![new size]K
 
-(Note: on the last line to include the `+` and the `K` as part of the size.)
+Note: on the last line include the `+` and the `K` as part of the size.
 
     Created a new partition 2 of type 'Linux' and of size 10.1 GiB.
 
-    Command (m for help): *w*
+    Command (m for help): ![enter w]
     The partition table has been altered.
     Calling ioctl() to re-read partition table.
     Re-reading the partition table failed.: Invalid argument
@@ -178,7 +178,7 @@ Device       Boot  Start      End  Sectors  Size Id Type
 /dev/loop0p1        2048   131071   129024   63M  c W95 FAT32 (LBA)
 /dev/loop0p2      131072 21219327 21088256 10.1G 83 Linux
 ```
-Note down the end of the second partition (in thise case 21219327). Call this `![end]`.
+Note down the end of the second partition (in this case 21219327). Call this `![end]`.
 
     laptop $ sudo losetup -d /dev/loop0
     laptop $ sudo truncate -s $(((![end]+1)*512)) ![image file]

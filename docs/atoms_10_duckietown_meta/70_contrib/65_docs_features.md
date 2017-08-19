@@ -7,6 +7,14 @@ There are also some additional features that make it possible to create
 publication-worthy materials.
 
 
+## Markdown
+
+The Duckiebook is written in a Markdown dialect.
+
+See: [A tutorial on Markdown][tutorial].
+
+[tutorial]: https://www.markdowntutorial.com/
+
 ## Embedded LaTeX
 
 You can use $\LaTeX$ math, environment, and references. For example, take a look at
@@ -369,4 +377,25 @@ Depending on the output media, the result will change:
 
 * On the online book, the result is that a player is embedded.
 * On the e-book version, the result is that a thumbnail is produced, with a link to the video;
-* On the deadtree version, a thumbnail is produced with a QR code linking to the video (TODO).
+* On the dead-tree version, a thumbnail is produced with a QR code linking to the video (TODO).
+
+
+## Bibliography
+
+You need to have installed `bibtex2html`.
+
+The system supports Bibtex files.
+
+Place `*.bib` files anywhere in the directory.
+
+Then you can refer to them using the syntax:
+
+    [](#bib:![bibtex ID])
+
+For example:
+
+    Please see [](#bib:siciliano07handbook).
+
+Will result in:
+
+> Please see [](#bib:siciliano07handbook).

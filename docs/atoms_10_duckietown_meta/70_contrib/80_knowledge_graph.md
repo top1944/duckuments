@@ -1,5 +1,7 @@
 # Knowledge graph {#knowledge-graph lang=en status=draft type=text}
 
+Note: This chapter describes something that is not implemented yet.
+
 ## Formalization
 
 ### Atoms

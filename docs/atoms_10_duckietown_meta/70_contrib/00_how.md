@@ -1,1 +1,1 @@
-# How to contribute to Duckietown {#part:contribute}
+# Duckumentation documentation {#part:contribute}

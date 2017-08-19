@@ -36,7 +36,7 @@ a Github account with working public keys.
 
 <!-- See: The documentation for that is in XXX. -->
 
-### Dependencies
+### Dependencies (Ubuntu 16.04)
 
 On Ubuntu 16.04, these are the dependencies to install:
 
@@ -44,6 +44,9 @@ On Ubuntu 16.04, these are the dependencies to install:
     $ sudo apt install libffi6 libffi-dev
     $ sudo apt install python-dev python-numpy python-matplotlib
     $ sudo apt install virtualenv
+    $ sudo apt install bibtex2html
+
+
 
 ### Download the `duckuments` repo
 
