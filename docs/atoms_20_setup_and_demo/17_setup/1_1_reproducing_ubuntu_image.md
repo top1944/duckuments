@@ -12,9 +12,9 @@ However, this documentation might be useful if you would like to port the softwa
 
 Resources necessaries:
 
-- Internet connection to download the packages.
-- A PC running any Linux with an SD card reader.
-- Time: about 20 minutes.
+Requires: Internet connection to download the packages.
+Requires: A PC running any Linux with an SD card reader.
+Requires: Time: about 20 minutes.
 
 Results:
 

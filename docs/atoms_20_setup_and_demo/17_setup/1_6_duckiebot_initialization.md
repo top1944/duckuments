@@ -5,13 +5,12 @@ Assigned: Andrea
 
 <div class='requirements' markdown="1">
 
-Prerequisites:
+Requires: An SD card of dimensions at least 32 GB.
 
-- An SD card of dimensions at least 32 GB.
-- A computer with an internet connection, an SD card reader, and 35 GB of free space.
-- A mounted Duckiebot in configuration `D17-C0`.
+Requires: A computer with an internet connection, an SD card reader, and 35 GB of free space.
 
-Requires: This is the result of [](#assembling-duckiebot).
+Requires: An assembled Duckiebot in configuration `D17-C0`.
+This is the result of [](#assembling-duckiebot).
 
 Result:
 

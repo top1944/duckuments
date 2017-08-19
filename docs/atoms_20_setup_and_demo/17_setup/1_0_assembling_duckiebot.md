@@ -4,13 +4,12 @@ Assigned: Shiying
 
 <div class='requirements' markdown="1">
 
-Resources necessaries:
+Requires: Duckiebot `D17-C0` parts.
+The acquisition process is explained in [](#acquiring-parts).
 
-- Duckiebot `D17-C0` parts.
+Requires: Time: about ??? minutes.
 
-Requires: The acquisition process is explained in [](#acquiring-parts).
-
-- Time: about ??? minutes.
+TODO: estimate time.
 
 Results:
 

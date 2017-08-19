@@ -4,20 +4,13 @@ Assigned: Andrea
 
 <div class='requirements' markdown='1'>
 
-Prerequisites:
+Requires: Laptop configured, according to [](#setup-laptop).
 
-* You have configured the laptop.
+Requires: You have configured the Duckiebot. The procedure is documented in [](#setup-duckiebot).
 
-Requires: The procedure is documented in [](#setup-laptop).
-
-* You have configured the Duckiebot.
-
-Requires: The procedure is documented in [](#setup-duckiebot).
-
-* You have created a Github account and configured public keys,
-  both for the laptop and for the Duckiebot.
-
-Requires: The procedure is documented in [](#github-access).
+Requires: You have created a Github account and configured public keys,
+both for the laptop and for the Duckiebot.
+The procedure is documented in [](#github-access).
 
 Results:
 

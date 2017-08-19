@@ -1,0 +1,14 @@
+
+
+- id: feature-detection
+  title: |
+    This is a module about feature detection.
+  includes:
+  - module-introduction
+  - feature-detection-theory
+  - feature-detection-demo
+  - feature-detection-exercise
+
+- id: fall2017
+  includes:
+  - 
