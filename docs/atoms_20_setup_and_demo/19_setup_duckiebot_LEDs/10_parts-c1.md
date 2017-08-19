@@ -125,9 +125,10 @@ These items require [soldering](0_5_soldering_boards_c1.md).
 
 <div figure-id="fig:headers" figure-caption="The Headers">
      <img src="placeholder.png" style='width: 15em'/>
-</div>w
+</div>
 
 <div figure-id="fig:resistors" figure-caption="The Resistors">
      <img src="placeholder.png" style='width: 15em'/>
 </div>
 
+TODO: Missing figures.

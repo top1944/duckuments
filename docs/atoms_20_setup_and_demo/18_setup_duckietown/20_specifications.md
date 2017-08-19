@@ -1,4 +1,4 @@
-# The Duckietown specification
+# The Duckietown specification {#duckietown-specs}
 
 Assigned: Liam?
 

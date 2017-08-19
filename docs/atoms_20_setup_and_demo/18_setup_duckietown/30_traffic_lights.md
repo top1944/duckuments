@@ -1,1 +1,0 @@
-# Traffic lights {#traffic-lights}
