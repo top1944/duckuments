@@ -8,7 +8,7 @@ Requires: Duckiebot `C1` parts.
 The acquisition process is explained in [](#acquiring-parts-c1).
 
 Requires: Soldering `C1` parts.
-The soldering process is explained in [](#sodlering-boards-c1).
+The soldering process is explained in [](#soldering-boards-c1).
 
 Requires: Time: about ??? minutes.
 

@@ -1,6 +1,6 @@
 # Acquiring the parts for the Duckiebot `C0` {#acquiring-parts-c0}
 
-The trip begins with acquiring the parts. Here, we provide a link to all bits and pieces that are needed to build a Duckiebot, along with their price tag.
+The trip begins with acquiring the parts. Here, we provide a link to all bits and pieces that are needed to build a Duckiebot, along with their price tag. If you are wondering what is the difference between different Duckiebot configurations, read [this](#duckiebot-configurations).
 
 In general, keep in mind that:
 
@@ -14,15 +14,16 @@ In general, keep in mind that:
 
 
 <div class='requirements' markdown="1">
- 
+Requires: 
+- Cost: USD 169 + Shipping Fees (minimal configuration `C0`)
+- Time: 15 days (average shipping for cheapest choice of components)
 
-Requires: Cost: USD 169 + Shipping Fees (minimal configuration `C0`)
-Requires: Time: 15 days (average shipping for cheapest choice of components)
 
 Results:
+- A kit of parts ready to be assembled in a `C0` or `C0+wjd` configuration.
 
--  A kit of parts ready to be assembled in a `C0` or `C0+wjd` configuration.
-
+Next Steps: 
+- After receiving these components, you are ready to do some [soldering](#soldering-boards-c0) before [assembling](#assembling-duckiebot-c0) your `C0` or `C0+wjd` Duckiebot.
 </div>
 
 TODO: Add a different "Tools" section in the table (e.g., solderer), or add in the resoruces beginning snippet; Differentiate pricing for bulk vs detail purchase (?)
@@ -48,9 +49,9 @@ TODO: Add a different "Tools" section in the table (e.g., solderer), or add in t
     <s>[Stacking Header](https://www.adafruit.com/product/2223)</s><s>USD 2.50/piece</s>
     <s>[Battery](https://tinyurl.com/ya7otc76)</s>                         <s>USD 20</s>
     <s>[16 Nylon Standoffs (M2.5 12mm F 6mm M](https://tinyurl.com/y9uy73b2)</s>                         <s>USD 0.05/piece</s>
-    <s>[4 Nylon Hex Nuts (M2.5)](https://tinyurl.com/ydy4znem)</s>                         <s>USD 0.02/piece</s>
-    <s>[4 Nylon Screws (M2.5x10)](https://tinyurl.com/ya2uo9so)</s>                         <s>USD 0.05/piece</s>
-    <s>[2 Zip Ties (300x5mm)](https://tinyurl.com/yb8v3nns)</s>                         <s>USD 8.99</s>
+    <s>[4 Nylon Hex Nuts (M2.5)](https://tinyurl.com/ydy4znem)</s>                      <s>USD 0.02/piece</s>
+    <s>[4 Nylon Screws (M2.5x10)](https://tinyurl.com/ya2uo9so)</s>                     <s>USD 0.05/piece</s>
+    <s>[2 Zip Ties (300x5mm)](https://tinyurl.com/yb8v3nns)</s>                         <s>USD 9</s>
     <s>[Wireless Adapter (5 GHz)](https://tinyurl.com/ycvu7ok3) (`C0+w`)</s><s>USD 20</s>
     <s>[Joypad](https://tinyurl.com/y9klooef) (`C0+j`)</s>                         <s>USD 10.50</s>
     <s>[Tiny 32GB USB Flash Drive](https://tinyurl.com/ycao6men) (`C0+d`)</s>                         <s>USD 12.50</s>
@@ -166,7 +167,7 @@ We use the DC Stepper motor HAT ([](#fig:joystick)) to control the DC motors tha
 
 ### Stacking Headers
 
-We use a long 20x2 stacking header ([](#figure:stacking_header)) to connect the Raspberry Pi with the DC Stepper Motor HAT. This item will require [soldering](0_5_soldering_boards_c0.md) to be functional.
+We use a long 20x2 stacking header ([](#figure:stacking_header)) to connect the Raspberry Pi with the DC Stepper Motor HAT. This item will require [soldering](#soldering-boards-c0) to be functional.
 
 <div figure-id="fig:stacking_header" figure-caption="The Stacking Headers">
      <img src="stacking_header.png" style='width: 15em'/>
@@ -195,7 +196,7 @@ The Duckiebot requires 8 standoffs, 4 nuts and 4 screws.
 
 ## Zip Tie
 
-Two 300x5mm zip ties are going to be useful to keep the battery at the lower deck from moving around.
+Two 300x5mm zip ties are needed to keep the battery at the lower deck from moving around.
 
 <div figure-id="fig:zipties" figure-caption="The zip ties">
      <img src="zipties.png" style='width: 15em'/>

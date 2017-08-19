@@ -1,17 +1,18 @@
 # Duckiebot configurations {#duckiebot-configurations}
 
+Here we define the different Duckiebot hardware configurations, and describe their functionalities. This is a good starting point if you are wondering what parts you should purchase to get started. Once you have decided which configuration best suits your needs, you can proceed to purchasing the components for a [`C0+wjd`](#acquiring-parts-c0) or [`C1`](#acquiring-parts-c1) Duckiebot.  
 
 ## Configuration list
 
-Configuration `C0`: Only camera and motors. 
+- Configuration `C0`: Only camera and motors.  
 
-Configuration `C0+w`: `C0`, plus an additional wireless adapter.
+- Configuration `C0+w`: `C0`, plus an additional wireless adapter.
 
-Configuration `C0+j`: `C0`, plus an additional wireless joypad for remote control.
+- Configuration `C0+j`: `C0`, plus an additional wireless joypad for remote control.
 
-Configuration `C0+d`: `C0`, plus an additional USB drive.
+- Configuration `C0+d`: `C0`, plus an additional USB drive.
 
-Configuration `C1`: `C0+wjd`, plus LEDs and bumpers. 
+- Configuration `C1`: `C0+wjd`, plus LEDs and bumpers. 
 
 
 ## Configuration functionality
@@ -42,7 +43,7 @@ TODO: Insert pic of assembled Duckiebot in `C0+d` configuration.
 
 ### `C0+wjd`
 
-The upgrades of the minimal `C0` version are not mutually exclusive. We will refer to `C0+xyz` when multiple add-ons to the minimal version are considered.
+The upgrades of the minimal `C0` version are not mutually exclusive. We will refer to `C0+wjd` when any or all of the add-ons to the minimal version are considered.
 
 TODO: Insert pic of assembled Duckiebot in `C0+wjd` configuration.
 

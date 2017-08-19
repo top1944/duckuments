@@ -4,10 +4,14 @@ Assigned: Shiying
 
 <div class='requirements' markdown="1">
 
-Resources necessaries:
+Resources necessary:
 
-- Requires: Duckiebot `C1` parts.
+Requires: 
+- Duckiebot `C1` parts.
 The acquisition process is explained in [](#acquiring-parts-c1).
+The configurations are described in [](#duckiebot-configurations).
+
+Requires: 
 - Time: ??? minutes
 
 Results:
