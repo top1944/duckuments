@@ -3,13 +3,10 @@
 
 <div class='requirements' markdown='1'>
 
-Prerequisites:
+Requires: You have configured the Duckiebot.
+The procedure is documented in [](#setup-duckiebot).
 
-* You have configured the Duckiebot.
-
-Requires: The procedure is documented in [](#setup-duckiebot).
-
-* You know the basics of ROS (launch files, `roslaunch`, topics, `rostopic`).
+Requires: You know the basics of ROS (launch files, `roslaunch`, topics, `rostopic`).
 
 TODO: put reference
 

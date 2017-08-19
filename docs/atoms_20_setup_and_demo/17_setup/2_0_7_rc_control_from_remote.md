@@ -4,11 +4,8 @@ Assigned: Andrea
 
 <div class='requirements' markdown='1'>
 
-Prerequisites:
-
-* You can run the joystick demo from the Raspberry Pi.
-
-Requires: The procedure is documented in [](#rc-control).
+Requires: You can run the joystick demo from the Raspberry Pi.
+The procedure is documented in [](#rc-control).
 
 Results:
 

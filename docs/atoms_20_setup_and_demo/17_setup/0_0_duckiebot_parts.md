@@ -9,16 +9,15 @@ In general, keep in mind that:
 - Substitutions are OK for the mechanical components,
   and not OK for all the electronics, unless you are OK in writing
   some software.
-- Buying the parts for more than one Duckiebot makes each one cheaper than buying only one. 
+- Buying the parts for more than one Duckiebot makes each one cheaper than buying only one.
 
 
 
 <div class='requirements' markdown="1">
+ 
 
-Resources necessaries:
-
-- Cost: USD 193.50 + Shipping Fees (configuration `D17-0`)
-- Time: 15 days (average shipping for cheapest choice of components)
+Requires: Cost: USD 193.50 + Shipping Fees (configuration `D17-0`)
+Requires: Time: 15 days (average shipping for cheapest choice of components)
 
 Results:
 
@@ -72,7 +71,7 @@ TODO: Add a different "Tools" section in the table (e.g., solderer), or add in t
     <s>Total for `D17-0` configuration</s>                         <s>USD 191.50</s>
         <s>Total for `D17-0+w` configuration</s>                         <s>USD 211.50</s>
             <s>Total for `D17-0+j` configuration</s>                         <s>USD 222</s>
-    <s>Total for `D17-1` configuration</s>                         <s>USD 281+Bumpers</s>        
+    <s>Total for `D17-1` configuration</s>                         <s>USD 281+Bumpers</s>
  </col2>
 
 </div>
@@ -147,7 +146,7 @@ A microSD card reader ([](#fig:microsd-reader)) is useful to copy the system ima
 
 ###  Tiny 32GB USB Flash Drive
 
-This "external" hard drive ([](#fig:USBdrive)) is very convenient to store logs during experiments and later port them to a workstation for analysis. It provides storage capacity and faster data transfer than the MicroSD card.   
+This "external" hard drive ([](#fig:USBdrive)) is very convenient to store logs during experiments and later port them to a workstation for analysis. It provides storage capacity and faster data transfer than the MicroSD card.
 
 <div figure-id="fig:USBdrive" figure-caption="The Tiny 32GB USB Flash Drive">
      <img src="USBdrive.png" style='width: 15em'/>
@@ -199,7 +198,7 @@ TODO: Add figure with 2 AA batteries
 
 ## DC Stepper Motor HAT
 
-We use the DC Stepper motor HAT ([](#fig:joystick)) to control the DC motors that drive the wheels. This item will require [soldering](0_5_soldering_boards.md) to be functional. 
+We use the DC Stepper motor HAT ([](#fig:joystick)) to control the DC motors that drive the wheels. This item will require [soldering](0_5_soldering_boards.md) to be functional.
 
 <div figure-id="fig:motor_hat" figure-caption="The Stepper Motor HAT">
      <img src="motor_hat.png" style='width: 15em'/>
@@ -298,7 +297,7 @@ In configuration `D17-1`, 20 Female-Female Jumper Wires ([](#figure:ff_wires)) a
 
 These bumpers are designed to keep the LEDs in place and are therefore used only in configuration `D17-1`. They are custom designed parts, so they must be produced and cannot be bought. We used laser cutting facilities. Our design files are available [here].
 
-TODO: add links to .sldprt files once confirmed final version 
+TODO: add links to .sldprt files once confirmed final version
 
 <div figure-id="fig:bumpers" figure-caption="The Bumpers">
      <img src="placeholder.png" style='width: 15em'/>
@@ -312,8 +311,8 @@ TODO: add links to .sldprt files once confirmed final version
  2 16 pin male header
 
  1 12 pin male header
- 
- 1 3 pin male header 
+
+ 1 3 pin male header
 
  1 2 pin female shunt jumper
 
@@ -331,4 +330,4 @@ These items will require [soldering](0_5_soldering_boards.md) to be functional.
      <img src="placeholder.png" style='width: 15em'/>
 </div>
 
-TODO: Clean up 
+TODO: Clean up

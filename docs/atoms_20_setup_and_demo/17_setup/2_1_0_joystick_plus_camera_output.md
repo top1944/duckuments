@@ -4,19 +4,14 @@ Assigned: Andrea
 
 <div class='requirements' markdown='1'>
 
-Prerequisites:
+Requires: You can run the joystick demo remotely. The procedure is documented
+in [](#rc-launched-remotely).
 
-* You can run the joystick demo remotely.
+Requires: You can read the camera data from ROS. The procedure is documented in
+[](#read-camera-data).
 
-Requires: The procedure is documented in [](#rc-launched-remotely).
-
-* You can read the camera data from ROS.
-
-Requires: The procedure is documented in [](#read-camera-data).
-
-* You know how to get around in Byobu.
-
-Reference: You can find the Byobu tutorial in [](#byobu).
+Requires: You know how to get around in Byobu. You can find the Byobu tutorial
+in [](#byobu).
 
 Results:
 
@@ -31,8 +26,9 @@ We are assuming that the joystick demo in [](#rc-launched-remotely) worked.
 
 We are assuming that the procedure in [](#read-camera-data) succeeded.
 
-We also assume that you terminated all instances of `roslaunch` with <kbd>Ctrl</kbd>-<kbd>C</kbd>,
-so that currently there is nothing running in any window.
+We also assume that you terminated all instances of `roslaunch` with
+<kbd>Ctrl</kbd>-<kbd>C</kbd>, so that currently there is nothing running in any
+window.
 
 <!--
 Joystick + camera output in remote laptop
