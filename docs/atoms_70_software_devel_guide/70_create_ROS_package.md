@@ -1,18 +1,33 @@
-# How to create a ROS package
+# ROS package verification
+
+This chapter describes formally what makes a conforming ROS package in the
+Duckietown software architecture.
 
 
+## Naming
 
+☐ For exercises packages, the name of the package must be `package_![handle]`.
 
+## `package.xml`
 
+☐ There is a `package.xml` file.
 
-## Conforming ROS package checklist
+Better: Checked by `what-the-duck`.
 
-☐ The name of the package is `package_![handle]`
-
-☐ The directory is in …
+## Messages
 
 ☐ The messages are called ….
 
-☐ there is a readme file
+## Readme file
+
+☐ There is a `README.md` file
+
+Better: Checked by `what-the-duck`.
+
+## Launch files
 
 ☐ there is the first launch file
+
+## Test files
+
+TODO: to write

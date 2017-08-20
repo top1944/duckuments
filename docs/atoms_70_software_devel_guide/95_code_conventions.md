@@ -5,6 +5,8 @@
 
 Never use tabs in the file.
 
+Better: checked by what-the-duck.
+
 Indentation is 4 spaces.
 
 Lines should be below 90 characters.
@@ -14,7 +16,6 @@ All files have an encoding declared.
 Executable files start with:
 
     #!/usr/bin/env python
-
 
 Comments refer to the next line.
 

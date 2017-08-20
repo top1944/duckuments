@@ -1,4 +1,4 @@
-# Introduction to ROS {#introduction_to_ros}
+# ROS installation and reference {#introduction_to_ros}
 
 Assigned: Liam
 
@@ -87,10 +87,19 @@ TODO: to write
 
 TODO: to write
 
-
 ## `rosdep` {#rosdep}
 
 TODO: to write
+
+## `roswtf` {#roswtf}
+
+TODO: to write
+
+## `rosbag` {#rosbag}
+
+
+    $ rosbag reindex ![bag file]
+
 
 ## Troubleshooting ROS
 
@@ -100,3 +109,8 @@ See [this thread][known_host]. Remove the `known_hosts` file and make sure you
 have followed the instructions in [](#ssh-local-configuration).
 
 [known_host]: https://answers.ros.org/question/41446/a-is-not-in-your-ssh-known_hosts-file/
+
+
+## Other materials about ROS.
+
+See also: [A gentle introduction to ROS](https://cse.sc.edu/~jokane/agitr/)
