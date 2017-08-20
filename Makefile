@@ -47,7 +47,7 @@ compile-pdf:
 	# mathjax is 1 in this case
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src $(src) \
-		--stylesheet v_manual_blurb_ready \
+		--stylesheet v_manual_blurb \
 		--mathjax 1 \
 		--symbols $(tex-symbols) \
 		-o $(tmp_files2) \
