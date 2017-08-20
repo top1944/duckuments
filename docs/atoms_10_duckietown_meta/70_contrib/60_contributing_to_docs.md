@@ -44,7 +44,8 @@ On Ubuntu 16.04, these are the dependencies to install:
     $ sudo apt install libffi6 libffi-dev
     $ sudo apt install python-dev python-numpy python-matplotlib
     $ sudo apt install virtualenv
-    $ sudo apt install bibtex2html
+    $ sudo apt install bibtex2html pdftk
+    $ sudo apt install bibtex2html pdftk
 
 
 
@@ -236,21 +237,26 @@ The only pain point  in the installation procedure has been the installation of 
 Do **not** use `sudo` for installation. It will cause problems.
 
 If you use `sudo`, you probably have to delete a bunch of directories,
-such as: `RBROOT/node_modules`, `~/.npm`, and `~/.node_modules`, if they exist.
+such as: `~/duckuments/node_modules`, `~/.npm`, and `~/.node_modules`, if they exist.
 
 ### Installing Prince
 
 Install PrinceXML from [this page](https://www.princexml.com/download/).
 
 ### Installing fonts
-
+<!--
 Download STIX fonts from [this site][stix].
 
 [stix]: https://sourceforge.net/projects/stixfonts/files/latest/download
 
 Unzip and copy the ttf to `~/.fonts`:
 
-    $ cp -R STIXv2.0.0 ~/.fonts
+    $ cp -R STIXv2.0.0 ~/.fonts -->
+
+Copy the `~/duckuments/fonts` directory in `~/.fonts`:
+
+    $ mkdir -p ~/.fonts    # create if not exists
+    $ cp -R ~/duckuments/fonts ~/.fonts
 
 and then rebuild the font cache using:
 

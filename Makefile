@@ -47,7 +47,7 @@ compile-pdf:
 	# mathjax is 1 in this case
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src $(src) \
-		--stylesheet v_manual_blurb_ready \
+		--stylesheet v_manual_blurb \
 		--mathjax 1 \
 		--symbols $(tex-symbols) \
 		-o $(tmp_files2) \
@@ -79,8 +79,9 @@ compile-slow: update-mcdp update-software
 	$(MAKE) split
 
 index:
-	mcdp-render -D misc book_index
-	cp misc/book_index.html duckuments-dist/index.html
+	# XXX: requires node
+	#mcdp-render -D misc book_index
+	#cp misc/book_index.html duckuments-dist/index.html
 
 compile-html:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
@@ -112,5 +113,13 @@ compile-html-slow:
 
 split:
 	rm -f $(dist_dir)/duckiebook/*html
-	python -m mcdp_docs.split $(out_html) $(dist_dir)/duckiebook
-	python -m mcdp_docs.add_mathjax --preamble $(tex-symbols) $(dist_dir)/duckiebook/*html
+	mcdp-split \
+		--filename $(out_html) \
+		--output_dir $(dist_dir)/duckiebook \
+		-o $(tmp_files)/split \
+		-c "clean; config echo 1; config colorize 1; rparmake" \
+		--mathjax \
+		--preamble $(tex-symbols) \
+		--disqus
+	#
+	# python -m mcdp_docs.add_mathjax --preamble $(tex-symbols) $(dist_dir)/duckiebook/*html

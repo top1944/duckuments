@@ -2,9 +2,13 @@
 
 This chapter explains what are the assumptions about the configuration.
 
-While the "Setup" parts are "imperative" (do this, do that); this is the "declarative" part, which explains what are the properties of a correct configuration (but it does not explain how to get there).
+While the "Setup" parts are "imperative" (do this, do that); this is the
+"declarative" part, which explains what are the properties of a correct
+configuration (but it does not explain how to get there).
 
-See also: The tool `what-the-duck` checks these conditions ([](#what-the-duck)). If you make a change from the existing conditions, make sure that it gets implemented in `what-the-duck` by filing an issue.
+he tool `what-the-duck` ([](#what-the-duck)) checks some of these conditions.
+If you make a change from the existing conditions, make sure that it gets
+implemented in `what-the-duck` by filing an issue.
 
 ## Environment variables {#variabes}
 
@@ -25,7 +29,6 @@ You need to have set up the variables in [](#tab:environment-variables).
     <s><code>~/duckiefleet</code></s>
     <s>A repository that contains <code>scuderia.yaml</code> and other
     team-specific configuration. </s>
-
 
     <s><code>DUCKIETOWN_DATA</code></s>
     <s><code>~/duckietown-data</code></s>

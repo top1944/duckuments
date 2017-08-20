@@ -201,10 +201,17 @@ TODO: to write
 
 
 ## `curl` {#curl}
+
+TODO: to write
+
+
+## `wget` {#wget}
+
 TODO: to write
 
 
 ## `sha256sum` {#sha256sum}
+
 TODO: to write
 
 
