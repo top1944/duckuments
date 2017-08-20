@@ -1,3 +1,0 @@
-# Duckietown Assembly
-
-Assigned: Shiying

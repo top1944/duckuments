@@ -7,7 +7,7 @@
 Duckietown is a robotics educations and outreach effort.
 
 The most tangible goal of the project is to provide a low-cost educational platform for learning autonomy, consisting of the Duckiebots, an autonomous robot, and the Duckietowns,
-the infrastructure in which the Duckiebots navigates.
+the infrastructure in which the Duckiebots navigate.
 
 However, we focus on the *learning experience* as a whole, by providing a set of modules teaching plans and other guides, as well as a curated role-play experience.
 
