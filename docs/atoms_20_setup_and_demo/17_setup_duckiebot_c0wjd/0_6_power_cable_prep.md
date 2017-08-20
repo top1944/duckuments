@@ -28,7 +28,7 @@ To begin with, find a male USB-A to anything cable.
 
 If you have purchased the suggested components listed in [](#acquiring-parts-c0), you can use the longer USB cable contained inside the battery package ([](#figure:battery-pack-usb-cables)), which will be used as an example in these instructions.  
 
-<div figure-id="fig:battery-pack-usb-cables" figure-caption="The two USB cable in the suggested battery pack.">
+<div figure-id="fig:battery-pack-usb-cables" figure-caption="The two USB cables in the suggested battery pack.">
      <img src="battery-pack-usb-cables.jpg" style='width: 15em'/>
 </div>
 
@@ -72,9 +72,21 @@ Once the bottom part of the external cable is removed, you will have isolated th
      <img src="stripped-the-outside.jpg" style='width: 15em'/>
 </div>
 
-## Step 3: Find the power wires
+## Step 3: Strip the wires {#strip-the-power-wires}
 
-If you are using the USB-A cable from the suggested battery pack, black and red are the power wires and green and white are instead for data. Continue reading from [](#chap:strip-the-power-wires). 
+Make sure the USB cable is _unplugged_ from any power source before proceeding. 
+
+Once you have isolated the wires, strip them, and use the scissors to cut off the data wires (green and white, central positions) ([](#figure:strip-power-wires)). 
+
+<div figure-id="fig:strip-power-wires" figure-caption="Strip the power wires and cut the data wires.">
+     <img src="strip-power-wires.jpg" style='width: 15em'/>
+</div>
+
+If you are not using the suggested cable, or want to verify which are the data and power wires, continue reading. 
+
+## Step 4: Find the power wires
+
+If you are using the USB-A cable from the suggested battery pack, black and red are the power wires and green and white are instead for data.
 
 If you are using a different USB cable, or are curious to verify which the power wires are, continue reading here. 
 
@@ -84,23 +96,11 @@ Plug the USB port inside a power source, e.g., the Duckiebot's battery. You can 
      <img src="testing-voltage-usb-cable-power-wires.jpg" style='width: 15em'/>
 </div>
 
-## Step 4: Strip the power wires {#chap:strip-the-power-wires}
-
-_Unplug_ the USB cable from any power source before proceeding. 
-
-Once you have identified the power cables, strip them, and use the scissors to cut off the data cables ([](#figure:strip-power-wires)). 
-
-<div figure-id="fig:strip-power-wires" figure-caption="Strip the power wires and cut the data wires.">
-     <img src="strip-power-wires.jpg" style='width: 15em'/>
-</div>
-
 ## Step 5: Test correct operation
 
-You are now ready to secure the power wires to the DC motor HAT power pins. 
+You are now ready to secure the power wires to the DC motor HAT power pins. To do so though, you need to have soldered the boards first. If you have not done so yet, proceed to [](#soldering-boards-c0). 
 
-If you have not done so yet, proceed to [](#soldering-boards-c0). 
-
-If you have soldered your boards already, you may test if everything works. Connect the battery with the DC motor HAT by making sure you plug the black wire in the pin labeled with a minus: `-` and the red wire to the plus: `+` ([](#figure:final-result-power-c0)).
+If you have soldered the boards already, you may test correct functionality of the newly crafted cable. Connect the battery with the DC motor HAT by making sure you plug the black wire in the pin labeled with a minus: `-` and the red wire to the plus: `+` ([](#figure:final-result-power-c0)).
 
 <div figure-id="fig:final-result-power-c0" figure-caption="Connnect the power wires to the DC motor HAT">
      <img src="final-result-power-c0.jpg" style='width: 15em'/>

@@ -19,7 +19,7 @@ Next Steps:
  [Assemblying](#duckietown-assembly) a Duckietown.
 </div>
 
-TODO: Add "Tools" section?
+TODO: Figure out costs
 
 ## Bill of materials
 
@@ -32,7 +32,7 @@ TODO: Add "Tools" section?
     <s>[Duct tape - Red](https://tinyurl.com/ybyc8qrq)</s>                       <s>USD 8.50/roll</s>
     <s>[Duct tape - White](https://tinyurl.com/ydhtzjb4)</s>                       <s>USD 8.50/roll</s>
     <s>[Duct tape - Yellow](http://www.identi-tape.com/duct-tape1.html)</s>               <s>USD 8/roll</s>
-    <s>[Traffic signs](https://tinyurl.com/y7nh3ayz)</s>                         <s>USD 18.50/13 pieces</s>  
+    <s>[Traffic signs](https://tinyurl.com/y7nh3ayz)</s>                         <s>USD 18.50/13 pieces</s>
     <s>Total for $\text{Duckietown}/m^2$</s>                         <s>USD ??</s>
  </col2>
 

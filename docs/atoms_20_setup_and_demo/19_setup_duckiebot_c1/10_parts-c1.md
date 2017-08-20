@@ -13,7 +13,7 @@ In general, keep in mind that:
 <div class='requirements' markdown="1">
 Requires:
 - A Duckiebot in `C0+wjd` configuration. 
-- Cost: USD 69 + Bumpers manufacturing solution
+- Cost: USD 77 + Bumpers manufacturing solution
 - Time: 21 Days (LED board manufacturing and shipping time)
 
 Results:
