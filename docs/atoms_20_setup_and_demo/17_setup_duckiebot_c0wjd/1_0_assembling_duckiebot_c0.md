@@ -11,6 +11,9 @@ The acquisition process is explained in [](#acquiring-parts-c0).
 - Having soldered the `C0+wjd` parts.
 The soldering process is explained in [](#soldering-boards-c0).
 
+- Having prepared the power cable.
+The power cable preparation is explained in [](#power-cable-prep-c0).
+
 - Time: about ??? minutes.
 
 TODO: estimate time.

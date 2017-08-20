@@ -42,7 +42,7 @@ TODO: Add a different "Tools" section in the table (e.g., solderer), or add in t
     <s>[300mm Camera Cable](https://www.adafruit.com/product/1648)</s>                         <s>USD 2</s>
     <s>[Raspberry Pi 3 - Model B](https://tinyurl.com/ycsujzb9)</s>                         <s>USD 35</s>
     <s>[Heat Sinks](https://tinyurl.com/yayj2qen)</s>                         <s>USD 5</s>
-    <s>[Power supply](https://www.adafruit.com/product/1995)</s>                         <s>USD 7.50</s>
+    <s>[Power supply for Raspberry Pi](https://www.adafruit.com/product/1995)</s>                         <s>USD 7.50</s>
     <s>[16 GB Class 10 MicroSD Card](https://tinyurl.com/ydawrgdx)</s>                         <s>USD 10</s>
     <s>[Mirco SD card reader](https://www.adafruit.com/product/939)</s><s>USD 6 </s>
     <s>[Stepper Motor HAT](https://tinyurl.com/y7qurpcw)</s>                         <s>USD 22.50</s>
@@ -63,6 +63,8 @@ TODO: Add a different "Tools" section in the table (e.g., solderer), or add in t
  </col2>
 
 </div>
+
+TODO: modify to account for new USB to wires power solution. 
 
 <style>
 #materials {

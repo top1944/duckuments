@@ -13,7 +13,7 @@ In general, keep in mind that:
 <div class='requirements' markdown="1">
 Requires:
 - A Duckiebot in `C0+wjd` configuration. 
-- Cost: USD 69 + Bumpers manufacturing solution
+- Cost: USD 77 + Bumpers manufacturing solution
 - Time: 21 Days (LED board manufacturing and shipping time)
 
 Results:
@@ -30,10 +30,11 @@ Next Steps:
 <div markdown="1">
 
  <col2 id='materials' figure-id="tab:materials" figure-caption="Bill of materials">
-    <s>[20 Female-Female Jumper Wires (300mm)](https://www.adafruit.com/products/793) </s>                         <s>USD 8</s>
-    <s>[Male-Male Jumper Wire (150mm)](https://www.adafruit.com/products/1957)  </s>                         <s>USD 1.95</s>
     <s>[LEDs](https://www.adafruit.com/product/848) </s>                         <s>USD 10</s>
     <s>[LED HAT](https://tinyurl.com/ydh9wqp5) </s><s>USD 28.20 for 3 pieces</s>
+    <s>[Power Cable](https://tinyurl.com/yaptpssu) </s><s>USD 7.80</s>
+    <s>[20 Female-Female Jumper Wires (300mm)](https://www.adafruit.com/products/793) </s>         <s>USD 8</s>
+    <s>[Male-Male Jumper Wire (150mm)](https://www.adafruit.com/products/1957)  </s>                         <s>USD 1.95</s>
     <s>[PWM/Servo HAT](https://tinyurl.com/yd8bdl2r) </s>                         <s>USD 17.50</s>
     <s>[Bumpers]() </s><s>TBD (custom made)</s>
     <s>[40 pin female header](https://www.adafruit.com/products/2222) </s>                   <s>USD 1.50</s>
@@ -45,8 +46,8 @@ Next Steps:
     <s>[5 200 Ohm resistors](https://tinyurl.com/yaramn3g) </s><s>USD 0.10/piece</s>
     <s>[10 130 Ohm resistors](https://tinyurl.com/y9vz2b9v) </s><s>USD 0.10/piece</s>
     <s>Total for `C0+wjd` configuration</s> <s>USD 212</s>
-    <s>Total for `C1` components</s>                         <s>USD 69 + Bumpers</s>
-    <s>Total for `C1` configuration</s>                         <s>USD 281+Bumpers</s>
+    <s>Total for `C1` components</s>                         <s>USD 77 + Bumpers</s>
+    <s>Total for `C1` configuration</s>                         <s>USD 299+Bumpers</s>
  </col2>
 
 </div>
@@ -88,6 +89,14 @@ The PWM/Servo HAT ([](#figure:servo_hat)) mates to the LED HAT and provides the 
 
 <div figure-id="fig:servo_hat" figure-caption="The PWM-Servo HAT">
      <img src="servo_hat.png" style='width: 15em'/>
+</div>
+
+### Power Cable
+
+To power the PWM/Servo HAT from the battery, we use a short (30cm) angled male USB-A to 5.5/2.1mm DC power jack cable ([](#figure:power-cable-usb-to-jack)). 
+
+<div figure-id="fig:power-cable-usb-to-jack" figure-caption="The 30cm angled USB to 5.5/2.1mm power jack cable.">
+     <img src="power-cable-usb-to-jack.png" style='width: 15em'/>
 </div>
 
 ### Male-Male Jumper Wires
