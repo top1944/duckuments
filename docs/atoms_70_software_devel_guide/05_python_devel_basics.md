@@ -1,4 +1,4 @@
-# Python development basics
+# Python
 
 ## Background reading
 

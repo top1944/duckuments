@@ -25,6 +25,11 @@ You need to have set up the variables in [](#tab:environment-variables).
     <s><code>~/duckiefleet</code></s>
     <s>A repository that contains <code>scuderia.yaml</code> and other
     team-specific configuration. </s>
+
+
+    <s><code>DUCKIETOWN_DATA</code></s>
+    <s><code>~/duckietown-data</code></s>
+    <s>Contains data for unit tests (Dropbox folder)</s>
 </col3>
 
 <style>

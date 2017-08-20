@@ -31,7 +31,8 @@ that appears is that golang on the Pi is 1.6 instead it should be 1.7.
 
 ### Troubleshooting
 
-Symptom: The binaries are not installed.
+Symptom: The binary files are not downloaded. In their place, there
+are short "pointer" files.
 
 If you have installed LFS after pulling the repository and you see
 only the pointer files, do:
