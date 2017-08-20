@@ -79,8 +79,9 @@ compile-slow: update-mcdp update-software
 	$(MAKE) split
 
 index:
-	mcdp-render -D misc book_index
-	cp misc/book_index.html duckuments-dist/index.html
+	# XXX: requires node
+	#mcdp-render -D misc book_index
+	#cp misc/book_index.html duckuments-dist/index.html
 
 compile-html:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
