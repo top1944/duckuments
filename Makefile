@@ -19,19 +19,19 @@ all: compile compile-pdf
 checks: check-duckietown-software check-programs
 
 check-programs:
-	@which -s pdftk || ( \
+	@which  pdftk || ( \
 		echo "You need to install pdftk."; \
 		exit 1)
-	@which -s bibtex2html || ( \
+	@which  bibtex2html || ( \
 		echo "You need to install bibtex2html."; \
 		exit 2)
 
-	@which -s mcdp-render || ( \
+	@which  mcdp-render || ( \
 		echo "The program mcdp-render is not found"; \
 		echo "You are not in the virtual environment."; \
 		exit 3)
 
-	@which -s mcdp-split || ( \
+	@which  mcdp-split || ( \
 		echo "The program mcdp-split is not found"; \
 		echo "You need to run 'python setup.py develop' from mcdp/."; \
 		exit 4)
