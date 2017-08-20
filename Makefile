@@ -113,5 +113,13 @@ compile-html-slow:
 
 split:
 	rm -f $(dist_dir)/duckiebook/*html
-	python -m mcdp_docs.split $(out_html) $(dist_dir)/duckiebook
-	python -m mcdp_docs.add_mathjax --preamble $(tex-symbols) $(dist_dir)/duckiebook/*html
+	mcdp-split \
+		--filename $(out_html) \
+		--output_dir $(dist_dir)/duckiebook \
+		-o $(tmp_files)/split \
+		-c "clean; config echo 1; config colorize 1; rparmake" \
+		--mathjax \
+		--preamble $(tex-symbols) \
+		--disqus
+	#
+	# python -m mcdp_docs.add_mathjax --preamble $(tex-symbols) $(dist_dir)/duckiebook/*html
