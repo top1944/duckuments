@@ -43,7 +43,7 @@ TODO: Add a different "Tools" section in the table (e.g., solderer), or add in t
     <s>[Raspberry Pi 3 - Model B](https://tinyurl.com/ycsujzb9)</s>                         <s>USD 35</s>
     <s>[Heat Sinks](https://tinyurl.com/yayj2qen)</s>                         <s>USD 5</s>
     <s>[Power supply](https://www.adafruit.com/product/1995)</s>                         <s>USD 7.50</s>
-    <s>[16 GB Class 10 MicroSD Card](https://www.adafruit.com/product/2693)</s>                         <s>USD 20</s>
+    <s>[16 GB Class 10 MicroSD Card](https://tinyurl.com/ydawrgdx)</s>                         <s>USD 10</s>
     <s>[Mirco SD card reader](https://www.adafruit.com/product/939)</s><s>USD 6 </s>
     <s>[Stepper Motor HAT](https://tinyurl.com/y7qurpcw)</s>                         <s>USD 22.50</s>
     <s>[Stacking Header](https://www.adafruit.com/product/2223)</s><s>USD 2.50/piece</s>
@@ -55,9 +55,9 @@ TODO: Add a different "Tools" section in the table (e.g., solderer), or add in t
     <s>[Wireless Adapter (5 GHz)](https://tinyurl.com/ycvu7ok3) (`C0+w`)</s><s>USD 20</s>
     <s>[Joypad](https://tinyurl.com/y9klooef) (`C0+j`)</s>                         <s>USD 10.50</s>
     <s>[Tiny 32GB USB Flash Drive](https://tinyurl.com/ycao6men) (`C0+d`)</s>                         <s>USD 12.50</s>
-    <s>Total for `C0` configuration</s>                         <s>USD 169</s>
-    <s>Total for `C0+w` configuration</s>                         <s>USD 189</s>
-    <s>Total for `C0+j` configuration</s>                         <s>USD 179.50</s>
+    <s>Total for `C0` configuration</s>                         <s>USD 159</s>
+    <s>Total for `C0+w` configuration</s>                         <s>USD 179</s>
+    <s>Total for `C0+j` configuration</s>                         <s>USD 169.50</s>
     <s>Total for `C0+d` configuration</s>                         <s>USD 171.50</s>
     <s>Total for `C0+wjd` configuration</s>                         <s>USD 212</s>
  </col2>
