@@ -1,4 +1,4 @@
-# Lane filter {#lane-filter-desc}
+# Parallel autonomy {#lane-filter-desc}
 
 <!-- Do not use #lane_filter, that's the package -->
 

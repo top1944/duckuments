@@ -1,5 +1,9 @@
-# Duckietown Software architecture {#part:duckietown-software}
+# Duckietown system {#part:duckietown-software}
 
-This part describes the Duckietown algorithms/architecture,
-but without the software details, which have been already
+This part describes the Duckietown algorithms and system architecture.
+
+We do not go in the software details.
+The implementation details have been already
 talked about at length in [](#part:development).
+
+We do give links to the ROS packages implementing the functionality.

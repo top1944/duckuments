@@ -100,6 +100,10 @@ TODO: to write
 
     $ rosbag reindex ![bag file]
 
+## `roscore` {#roscore}
+
+TODO: to write
+ 
 
 ## Troubleshooting ROS
 

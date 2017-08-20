@@ -8,12 +8,48 @@ out_pdf=$(dist_dir)/duckiebook.pdf
 tmp_files=out/tmp
 tmp_files2=out/tmp2
 tex-symbols=docs/symbols.tex
+duckietown-software=duckietown
 
-src="docs:duckietown/catkin_ws/src"
+src="docs:$(duckietown-software)/catkin_ws/src"
 
 all: compile compile-pdf
 
-.PHONY: $(out_html)
+.PHONY: $(out_html) checks check-duckietown-software check-programs
+
+checks: check-duckietown-software check-programs
+
+check-programs:
+	@which -s pdftk || ( \
+		echo "You need to install pdftk."; \
+		exit 1)
+	@which -s bibtex2html || ( \
+		echo "You need to install bibtex2html."; \
+		exit 2)
+
+	@which -s mcdp-render || ( \
+		echo "The program mcdp-render is not found"; \
+		echo "You are not in the virtual environment."; \
+		exit 3)
+
+	@which -s mcdp-split || ( \
+		echo "The program mcdp-split is not found"; \
+		echo "You need to run 'python setup.py develop' from mcdp/."; \
+		exit 4)
+
+
+
+check-duckietown-software:
+	@if [ -d $(duckietown-software) ] ; \
+	then \
+	     echo '';\
+	else \
+		echo 'Please create a link "$(duckietown-software)" to the Software repository.'; \
+		echo '(This is used to include the package documentation)'; \
+		echo ''; \
+		echo '      ln -s DUCKIETOWN_ROOT $(duckietown-software)'; \
+		echo ''; \
+		exit 1; \
+	fi;
 
 duckuments-dist:
 	# clone branch "dist"
@@ -43,7 +79,7 @@ clean:
 $(out_html): $(wildcard docs/**/*md)
 	$(MAKE) compile
 
-compile-pdf:
+compile-pdf: checks
 	# mathjax is 1 in this case
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src $(src) \
@@ -65,10 +101,10 @@ compile-pdf:
 update-mcdp:
 	-git -C mcdp/ pull
 
-update-software:
-	-git -C duckietown pull
+update-software: checks
+	-git -C $(duckietown-software) pull
 
-compile: update-mcdp update-software
+compile: checks update-mcdp update-software
 	$(MAKE) index
 	$(MAKE) compile-html
 	$(MAKE) split
