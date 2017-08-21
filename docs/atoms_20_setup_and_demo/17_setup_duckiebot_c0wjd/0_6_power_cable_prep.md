@@ -98,7 +98,7 @@ Plug the USB port inside a power source, e.g., the Duckiebot's battery. You can 
 
 ## Step 5: Test correct operation
 
-You are now ready to secure the power wires to the DC motor HAT power pins. To do so though, you need to have soldered the boards first. If you have not done so yet, proceed to [](#soldering-boards-c0). 
+You are now ready to secure the power wires to the DC motor HAT power pins. To do so though, you need to have soldered the boards first. If you have not done so yet, read [](#soldering-boards-c0). 
 
 If you have soldered the boards already, you may test correct functionality of the newly crafted cable. Connect the battery with the DC motor HAT by making sure you plug the black wire in the pin labeled with a minus: `-` and the red wire to the plus: `+` ([](#figure:final-result-power-c0)).
 
