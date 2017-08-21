@@ -36,6 +36,8 @@ a Github account with working public keys.
 
 <!-- See: The documentation for that is in XXX. -->
 
+We are also going to assume that you have installed the `duckietown/software` in `~/duckietown`.
+
 ### Dependencies (Ubuntu 16.04)
 
 On Ubuntu 16.04, these are the dependencies to install:
