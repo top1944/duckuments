@@ -46,6 +46,48 @@ This is an example proposition: &#36;2x = x + x&#36;.
 &#92;end{proposition}
 </pre>
 
+For the LaTeX environments to work properly you *must* add a `\label`
+declaration inside. Moreover, the label must have a prefix that is adequate
+to the environment. For example, for a proposition, you must insert `\label{def:![name]}`
+inside.
+
+The following table shows the list of the LaTeX environments supported
+and the label prefix that they need.
+
+<col2 figure-id="tab:environments" figure-caption="LaTeX environments and label prefixes">
+    <code>definition</code>
+    <code>def:![name]</code>
+    <code>proposition</code>
+    <code>prop:![name]</code>
+    <code>remark</code>
+    <code>rem:![name]</code>
+    <code>problem</code>
+    <code>prob:![name]</code>
+    <code>theorem</code>
+    <code>thm:![name]</code>
+    <code>lemma</code>
+    <code>lem:![name]</code>
+</col2>
+
+
+Examples of all environments follow.
+
+
+\begin{definition}\label{def:lorem}Lorem\end{definition}
+
+\begin{proposition}\label{prop:lorem}Lorem\end{proposition}
+
+\begin{remark}\label{rem:lorem}Lorem\end{remark}
+
+\begin{problem}\label{prob:lorem}Lorem\end{problem}
+
+\begin{example}\label{exa:lorem}Lorem\end{example}
+
+\begin{theorem}\label{thm:lorem}Lorem\end{theorem}
+
+\begin{lemma}\label{lem:lorem}Lorem\end{lemma}
+
+
 TODO: other LaTeX features supported
 
 
@@ -399,3 +441,31 @@ For example:
 Will result in:
 
 > Please see [](#bib:siciliano07handbook).
+
+<!--
+## Special paragraphs
+
+These are the
+
+'TODO: ': 'todo',
+        'TOWRITE: ': 'special-par-towrite',
+        'Task: ': 'special-par-task',
+        'Remark: ': 'special-par-remark',
+        'Note: ': 'special-par-note',
+        'Symptom: ': 'special-par-symptom',
+        'Resolution: ': 'special-par-resolution',
+        'Bad:': 'special-par-bad',
+        'Better:': 'special-par-better',
+        'Warning:': 'special-par-warning',
+        'Q:': 'special-par-question',
+        'A:': 'special-par-answer',
+        "Assigned: ": 'special-par-assigned',
+        "Maintainer: ": 'special-par-maintainer',
+
+        # Reference and See are the same thing
+        'See: ': 'special-par-see',
+        'Reference: ': 'special-par-see',
+
+        'Requires: ': 'special-par-requires',
+        'Recommended: ': 'special-par-recommended',
+        'See also: ': 'special-par-see-also', -->

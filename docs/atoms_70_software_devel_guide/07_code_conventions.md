@@ -3,19 +3,47 @@
 
 ## Python {#code-conventions-python}
 
-Never use tabs in the file.
+### Tabs {#no-tabs}
 
-Better: checked by what-the-duck.
+Never use tabs in Python file.
+
+The tab characters are evil in Python code. Please be *very* careful in changing them.
+
+Do *not* use a tool to do it (e.g. "Convert tabs to spaces"); it will get it wrong.
+
+Better: checked by `what-the-duck`.
+
+### Spaces
 
 Indentation is 4 spaces.
 
-Lines should be below 90 characters.
+### Line lengths {max-line-length}
+
+Lines should be below 85 characters.
+
+Better: `what-the-duck` report those above 100 characters.
+
+This is just a symptom of a bigger problem.
+
+The problem here is that you do not do how to program well,
+therefore you create programs with longer lines.
+
+Do not go and try to shorten the lines; the line length is just the symptom.
+Rather, ask somebody to take a look at the code and tell you how to make it better.
+
+### Encoding lines
 
 All files have an encoding declared.
+
+    # -*- coding: utf-8 -*-
+
+### Sha-bang lines
 
 Executable files start with:
 
     #!/usr/bin/env python
+
+### Comments
 
 Comments refer to the next line.
 
