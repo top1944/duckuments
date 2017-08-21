@@ -18,10 +18,12 @@ all: compile compile-pdf
 
 checks: check-duckietown-software check-programs
 
-check-programs:
+check-programs-pdf:
 	@which  pdftk || ( \
 		echo "You need to install pdftk."; \
 		exit 1)
+
+check-programs:
 	@which  bibtex2html || ( \
 		echo "You need to install bibtex2html."; \
 		exit 2)
@@ -79,7 +81,7 @@ clean:
 $(out_html): $(wildcard docs/**/*md)
 	$(MAKE) compile
 
-compile-pdf: checks
+compile-pdf: checks check-programs-pdf
 	# mathjax is 1 in this case
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src $(src) \
