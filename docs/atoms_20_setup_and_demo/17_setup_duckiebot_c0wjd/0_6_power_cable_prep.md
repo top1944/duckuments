@@ -40,7 +40,11 @@ Put the shorter cable back in the box, and open the longer cable ([](#figure:lon
 
 ## Step 2: Cut the cable
 
-Make sure the USB cable is _not_ plugged in to anything. Take the scissors and cut it ([](#figure:cut-the-cable)) at the desired length from the USB-A port.  
+<div class="check" markdown="1">
+Make sure the USB cable is _unplugged_ from any power source before proceeding. 
+</div>
+
+ Take the scissors and cut it ([](#figure:cut-the-cable)) at the desired length from the USB-A port.  
 
 <div figure-id="fig:cut-the-cable" figure-caption="Cut the USB cable using the scissors.">
      <img src="cut-the-cable.jpg" style='width: 15em'/>
@@ -74,7 +78,9 @@ Once the bottom part of the external cable is removed, you will have isolated th
 
 ## Step 3: Strip the wires {#strip-the-power-wires}
 
+<div class="check" markdown="1">
 Make sure the USB cable is _unplugged_ from any power source before proceeding. 
+</div>
 
 Once you have isolated the wires, strip them, and use the scissors to cut off the data wires (green and white, central positions) ([](#figure:strip-power-wires)). 
 
