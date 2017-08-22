@@ -95,9 +95,9 @@ If you are not using the suggested cable, or want to verify which are the data a
 
 If you are using the USB-A cable from the suggested battery pack, black and red are the power wires and green and white are instead for data.
 
-If you are using a different USB cable, or are curious to verify which the power wires are, continue reading here.
+If you are using a different USB cable, or are curious to verify that black and red actually are the power cables, take a multimeter and continue reading.
 
-Plug the USB port inside a power source, e.g., the Duckiebot's battery. You can use some scotch tape to keep the cable from moving while probing the different pairs of wires with a multimeter. The voltage across the pair of power cables will be roughly twice the voltage between a power and data cable. The pair of data cables with have no voltage differential across them. If you are using the suggested Duckiebot battery as power source, you will measure around 5V across the power cables ([](#figure:testing-voltage-usb-cable-power-wires)).
+Plug the USB port inside a power source, e.g., the Duckiebot's battery. You can use some scotch tape to keep the cable from moving while probing the different pairs of wires with a multimeter. The voltage across the pair of power cables will be roughly twice the voltage between a power and data cable. The pair of data cables will have no voltage differential across them. If you are using the suggested Duckiebot battery as power source, you will measure around 5V across the power cables ([](#figure:testing-voltage-usb-cable-power-wires)).
 
 <div figure-id="fig:testing-voltage-usb-cable-power-wires" figure-caption="Finding which two wires are for power.">
      <img src="testing-voltage-usb-cable-power-wires.jpg" style='width: 15em'/>
