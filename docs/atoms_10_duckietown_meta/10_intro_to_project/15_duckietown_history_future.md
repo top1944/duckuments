@@ -39,8 +39,9 @@ The original Duckietown class was at MIT in 2016.
 
 Later that year, the Duckietown platform was also used in these classes:
 
-- [NCTU 2016](2016/16-NCTU/) - Prof. Nick Wang;
-- [RPI 2016](2016/16-RPI/) - Prof. John Wen;
+- [National Chiao Tung University 2016](#NCTU_2016), Taiwan - Prof. Nick Wang;
+- [Tsinghua University](#Tsinghua_2016), People's Republic of China - Prof. (Samuel) Qing-Shan Jia's *Computer Networks with Applications* course;
+- [Rennselaer Polytechnic Institute 2016](#RPI_2016) - Prof. John Wen;
 
 <div figure-id="fig:NCTU">
    <img src="duckietown-taiwan.jpg" class='group-photo'/>
@@ -64,14 +65,12 @@ In 2017, these four courses will be taught together, with the students interacti
 
 Furthermore, the Duckietown platform is used also in the following universities:
 
-- RPI (Jeff Trinkle)
+- Rennselaer Polytechnic Institute (Jeff Trinkle)
 - National Chiao Tung University, Taiwan - Prof. Yon-Ping Chen's *Dynamic system simulation and implementation*.
 - Chosun University, Korea - Prof. Woosuk Sung's course;
 - Petra Christian University, Indonesia - Prof. Resmana Lim's *Mobile Robot Design Course*
 - National Tainan Normal University, Taiwan - Prof. Jen-Jee Chen's *Vehicle to Everything* (V2X) Course;
 - Yuan Zhu University, Taiwan - Prof. Kan-Lin Hsiung's Control course;
-
-
 
 ## Chile
 

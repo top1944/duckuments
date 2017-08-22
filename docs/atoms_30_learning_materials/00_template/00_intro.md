@@ -190,8 +190,6 @@ The external references mentioned in this chapter should be listed here.
 
 TODO: How to implement scalable difficulty? Suggestion: lets start from the graduate level that we need. We will then create seperate files for the 'undergrad' and 'high-school' versions, simplfying the 'graduate' level files.
 
-
-
 TODO: auto-compilation of references section
 
 
