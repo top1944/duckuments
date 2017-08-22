@@ -57,13 +57,13 @@ Comments, better:
     from std_msgs.msg import String
 
 
-# Logging
+## Logging
 
 For logging, import this logger:
 
     from duckietown_utils import logger
 
-# Exceptions
+## Exceptions
 
     DTConfigException
 
@@ -71,7 +71,7 @@ For logging, import this logger:
     compact = True
 
 
-# Scripts
+## Scripts
 
 
     def summary():
