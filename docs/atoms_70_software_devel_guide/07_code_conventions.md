@@ -55,3 +55,28 @@ Comments, better:
 
     # This is my long comment
     from std_msgs.msg import String
+
+
+# Logging
+
+For logging, import this logger:
+
+    from duckietown_utils import logger
+
+# Exceptions
+
+    DTConfigException
+
+    raise_wrapped
+    compact = True
+
+
+# Scripts
+
+
+    def summary():
+        fs = get_all_configuration_files()
+
+
+    if __name__ == '__main__':
+        wrap_script_entry_point(summary)

@@ -14,25 +14,29 @@ In general, keep in mind that:
 
 
 <div class='requirements' markdown="1">
-Requires: 
-- Cost: USD 169 + Shipping Fees (minimal configuration `C0`)
-- Time: 15 days (average shipping for cheapest choice of components)
 
+Requires: Cost: USD 169 + Shipping Fees (minimal configuration `C0`)
 
-Results:
-- A kit of parts ready to be assembled in a `C0` or `C0+wjd` configuration.
+Requires: Time: 15 days (average shipping for cheapest choice of components)
 
-Next Steps: 
+Results: A kit of parts ready to be assembled in a `C0` or `C0+wjd` configuration.
+
+Next Steps:
+
 - After receiving these components, you are ready to do some [soldering](#soldering-boards-c0) before [assembling](#assembling-duckiebot-c0) your `C0` or `C0+wjd` Duckiebot.
+
 </div>
 
 TODO: Add a different "Tools" section in the table (e.g., solderer), or add in the resoruces beginning snippet; Differentiate pricing for bulk vs detail purchase (?)
 
 ## Bill of materials
 
-[//]: #   (<s>[4 Spacers (M3x5)](https://tinyurl.com/y9sjzm4r)</s><s>USD</s>)
-[//]: #   (<s>[4 Screws (M3x10)](https://tinyurl.com/y9sjzm4r)</s><s>USD</s>)
-[//]: #   (We can make the minimal configuration cheaper by USD20 removing the 16GB Class 10 MicroSD Card and stick with default)
+<!--
+(<s>[4 Spacers (M3x5)](https://tinyurl.com/y9sjzm4r)</s><s>USD</s>)
+(<s>[4 Screws (M3x10)](https://tinyurl.com/y9sjzm4r)</s><s>USD</s>)
+(We can make the minimal configuration cheaper by USD20 removing the 16GB Class 10 MicroSD Card and stick with default)
+-->
+
 <div markdown="1">
 
  <col2 id='materials' figure-id="tab:materials" figure-caption="Bill of materials">
@@ -64,7 +68,7 @@ TODO: Add a different "Tools" section in the table (e.g., solderer), or add in t
 
 </div>
 
-TODO: modify to account for new USB to wires power solution. 
+TODO: modify to account for new USB to wires power solution.
 
 <style>
 #materials {
@@ -237,4 +241,3 @@ Iin configuration `C0+d`, the Duckiebot is equppied with a "external" hard drive
 <div figure-id="fig:USBdrive" figure-caption="The Tiny 32GB USB Flash Drive">
      <img src="USBdrive.png" style='width: 15em'/>
 </div>
-

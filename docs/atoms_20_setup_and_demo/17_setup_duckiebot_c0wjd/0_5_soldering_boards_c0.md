@@ -6,13 +6,9 @@ Assigned: Shiying
 
 Resources necessary:
 
-Requires: 
-- Duckiebot `C0+wjd` parts.
-The acquisition process is explained in [](#acquiring-parts-c0).
-The configurations are described in [](#duckiebot-configurations).
+Requires:  Duckiebot `C0+wjd` parts. The acquisition process is explained in [](#acquiring-parts-c0). The configurations are described in [](#duckiebot-configurations).
 
-Requires: 
-- Time: ??? minutes
+Requires: Time: ??? minutes
 
 Results:
 

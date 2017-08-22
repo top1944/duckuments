@@ -33,6 +33,10 @@ You need to have set up the variables in [](#tab:environment-variables).
     <s><code>DUCKIETOWN_DATA</code></s>
     <s><code>~/duckietown-data</code></s>
     <s>Contains data for unit tests (Dropbox folder)</s>
+
+    <s><code>DUCKIETOWN_CONFIG_SEQUENCE</code></s>
+    <s><code>defaults:baseline:vehicle:user</code></s>
+    <s>The <a href="#easy_node">configuration sequence for EasyNode</a></s>
 </col3>
 
 <style>
@@ -113,3 +117,43 @@ TODO: Describe the people database; this is the evolution of the yaml files
 This is a globally-unique ID for people in the Duckietown project.
 
 It is equal to the Slack username.
+
+
+## Modes of operation
+
+There are 3 modes of operation:
+
+1. `MODE-normal`: Everything runs on the robot.
+2. `MODE-offload`: Drivers run on the robot, but heavy computation runs on the laptop.
+3. `MODE-bag`: The data is provided from a bag file, and computation runs on the laptop.
+
+<!-- 4. `MODE-unittest`: This is the case where many unit tests are run in parallel, on the cloud.  -->
+
+<col4 class='labels-row1' id='operation-modes' figure-id="tab:operation-modes" figure-caption="Operation modes">
+
+    <s>mode name</s>
+    <s>who is the ROS master</s>
+    <s>where data comes from</s>
+    <s>where heavy computation happen</s>
+
+    <code>MODE-normal</code>
+    <code>duckiebot</code>
+    <s>Drivers on Duckiebot</s>
+    <code>duckiebot</code>
+
+    <code>MODE-offload</code>
+    <code>duckiebot</code>
+    <s>Drivers on Duckiebot</s>
+    <code>laptop</code>
+
+    <code>MODE-bag</code>
+    <code>laptop</code>
+    <s>Bag file</s>
+    <code>laptop</code>
+</col4>
+
+<style>
+#operation-modes {
+font-size: 70%;
+}
+</style>

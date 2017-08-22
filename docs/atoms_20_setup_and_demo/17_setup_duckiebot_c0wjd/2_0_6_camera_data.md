@@ -10,9 +10,7 @@ Requires: You know the basics of ROS (launch files, `roslaunch`, topics, `rostop
 
 TODO: put reference
 
-Results:
-
-* You know that the camera works under ROS.
+Results: You know that the camera works under ROS.
 
 </div>
 

@@ -9,12 +9,9 @@ Requires: Laptop configured, according to [](#setup-laptop).
 Requires: You have configured the Duckiebot. The procedure is documented in [](#setup-duckiebot).
 
 Requires: You have created a Github account and configured public keys,
-both for the laptop and for the Duckiebot.
-The procedure is documented in [](#github-access).
+both for the laptop and for the Duckiebot. The procedure is documented in [](#github-access).
 
-Results:
-
-* You can run the joystick demo.
+Results: You can run the joystick demo.
 
 </div>
 

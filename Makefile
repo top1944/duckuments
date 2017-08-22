@@ -81,7 +81,7 @@ clean:
 $(out_html): $(wildcard docs/**/*md)
 	$(MAKE) compile
 
-compile-pdf: checks check-programs-pdf	
+compile-pdf: checks check-programs-pdf
 	# mathjax is 1 in this case
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src $(src) \
@@ -150,14 +150,12 @@ compile-html-slow:
 	# open $@
 
 split:
-	rm -f $(dist_dir)/duckiebook/*html
+	# rm -f $(dist_dir)/duckiebook/*html
 	mcdp-split \
 		--filename $(out_html) \
 		--output_dir $(dist_dir)/duckiebook \
 		-o $(tmp_files)/split \
-		-c "clean; config echo 1; config colorize 1; rparmake" \
+		-c " config echo 1; config colorize 1; rparmake" \
 		--mathjax \
 		--preamble $(tex-symbols) \
 		--disqus
-	#
-	# python -m mcdp_docs.add_mathjax --preamble $(tex-symbols) $(dist_dir)/duckiebook/*html

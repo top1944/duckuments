@@ -13,9 +13,7 @@ Requires: You can read the camera data from ROS. The procedure is documented in
 Requires: You know how to get around in Byobu. You can find the Byobu tutorial
 in [](#byobu).
 
-Results:
-
-* You can run the joystick demo from your laptop and see the camera
+Results: You can run the joystick demo from your laptop and see the camera
   image on the laptop.
 
 </div>

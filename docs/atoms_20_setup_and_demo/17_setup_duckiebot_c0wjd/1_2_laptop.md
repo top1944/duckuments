@@ -11,13 +11,9 @@ Requires: A laptop with free disk space.
 
 Requires: Internet connection to download the Ubuntu image.
 
-Requires: About ??? minutes XXX.
+Requires: About ??? minutes.
 
-TODO: estimate time
-
-Results:
-
-- A laptop ready to be used for Duckietown.
+Results: A laptop ready to be used for Duckietown.
 
 </div>
 

@@ -7,9 +7,7 @@ Assigned: Andrea
 Requires: You can run the joystick demo from the Raspberry Pi.
 The procedure is documented in [](#rc-control).
 
-Results:
-
-* You can run the joystick demo from your laptop.
+Results: You can run the joystick demo from your laptop.
 
 </div>
 
