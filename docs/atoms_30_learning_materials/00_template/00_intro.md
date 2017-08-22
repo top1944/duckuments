@@ -60,7 +60,7 @@ In this section we crisply define the problem object of this chapter. It serves 
 Let:
 
 \begin{align} \label{eq:LTIsys}
-\dot{\state_t} &= A\state_t+Bu_t \\
+\dot{\state}_t &= A\state_t+Bu_t \\
 y &= C\state_t+Du_t
  \end{align}
 
@@ -74,8 +74,6 @@ D &= 0.
 \end{align}
 
 [...]
-
-TODO: fix uncentered dot in $\dot{\state_t}$
 
 as shown in ([](#figure:the-bigger-picture)).
 
