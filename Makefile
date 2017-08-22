@@ -81,7 +81,7 @@ clean:
 $(out_html): $(wildcard docs/**/*md)
 	$(MAKE) compile
 
-compile-pdf: checks check-programs-pdf
+compile-pdf: checks check-programs-pdf	
 	# mathjax is 1 in this case
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src $(src) \

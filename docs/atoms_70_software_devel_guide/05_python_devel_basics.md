@@ -22,3 +22,7 @@ Install using:
     scipy
     opencv
     ...
+
+## Context managers {#python-context-manager}
+
+TODO: to write
