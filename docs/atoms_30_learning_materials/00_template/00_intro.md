@@ -5,7 +5,8 @@ Assigned: Jacopo
 Theory chapters benefit from a standardized exposition. Here, we define the template for these chapters.
 
 TODO: Define new classes for:
-- 'required-reading' (must read - red color), 
+
+- 'required-reading' (must read - red color),
 - 'suggested-reading' (best if read - orange)
 - 'additional-reading' (for curious users - green)
 - 'example' (pop-up box in soothing color (blue?) similar to 'check': stop and think about this for a second). Keep in mind that: (a) color blind people might be confused by red/green. Use additional visual cue (thick/dashed/dotted boundary boxes?); (b) book could be printed in b/w only.
@@ -14,20 +15,21 @@ TODO: Define new classes for:
 
 Start with a brief introduction of the discussed topic, describing its place in the bigger picture, justifying the reading constraints/guidelines below. Write it as if the reader knew the relevant terminology. For example:
 
-PID control is the simplest approach to making a system behave in a desired way rather than how it would naturally behave. It is simple because the measured output is directly feedbacked, as opposed to, e.g., the system's states. The control signal is obtained as a weighted sum of the tracking error (*P*roportional term), its integral over time (*I*ntegrative term) and its instantaneous derivative (*D*erivative term), from which the appellative of PID control. The tracking error is defined as the instantaneous difference between a reference and a measured system output.    
+PID control is the simplest approach to making a system behave in a desired way rather than how it would naturally behave. It is simple because the measured output is directly feedbacked, as opposed to, e.g., the system's states. The control signal is obtained as a weighted sum of the tracking error (*P*roportional term), its integral over time (*I*ntegrative term) and its instantaneous derivative (*D*erivative term), from which the appellative of PID control. The tracking error is defined as the instantaneous difference between a reference and a measured system output.
 
 <div class="check" markdown="1">
 Required Reading: Insert here a list of topics and suggested resources related to _necessary_ knowledge in order to understand the content presented. Example:
 
-- If you are not familiar with the terminology above (system, plant, output, reference, ...), you must read: [autonomy overview](#autonomy_overview)
+If you are not familiar with the terminology above (system, plant, output, reference, ...), you must read: [autonomy overview](#autonomy_overview)
 
-- If you are not familiar with how to obtain a system, you must read: 
--- [basic kinematics](#basic_kinematics)
--- [basic dynamics](#basic_dynamics).
--- [linear algebra](#linear_algebra)
--- [State space representations]()
--- [Linear Time Invariant Systems]()
--- [...]
+If you are not familiar with how to obtain a system, you must read:
+- [basic kinematics](#basic_kinematics)
+- [basic dynamics](#basic_dynamics).
+- [linear algebra](#linear_algebra)
+- [State space representations]()
+- [Linear Time Invariant Systems]()
+- ...
+
 </div>
 
 <div class="check" markdown="1">
@@ -65,7 +67,7 @@ y &= C\state_t+Du_t
  be the LTI model of the Duckiebot's plant, with $x \in \statesp$, $y \in \mathbb{R}^p$ and $u \in \mathbb{R}^m$. We recall ([Duckiebot Modeling]()) that:
 
 \begin{align}
-A &= \left[  \begin{array}{ccc} a_{11}  & \dots & a_{1n} \\ \vdots & \ddots & \vdots \\ a_{n1}  & \dots & a_{nn} \end{array} \right] \\ 
+A &= \left[  \begin{array}{ccc} a_{11}  & \dots & a_{1n} \\ \vdots & \ddots & \vdots \\ a_{n1}  & \dots & a_{nn} \end{array} \right] \\
 B &= \left[ b_1 \,\, \dots \,\, b_m \right]^T \\
 C &=  \left[ c_1 \ \,\, \dots \,\, c_p \right] \\
 D &= 0.
@@ -84,6 +86,7 @@ as shown in ([](#figure:the-bigger-picture)).
 ## Introduced Notions {#theory-chapter-template-notions}
 
 ### Section 1: title-1 (e.g.: Definitions)
+
 
 - Definition 1: A reference signal $\tilde{y}_t \in \mathcal{L}_2(\mathcal{T})$ is ...
 
@@ -114,9 +117,11 @@ Overshoot, Module at resonance, Settling Time, Rising Time
 ...
 
 <div class="check" markdown="1">
-This is a TBD 'example' class application: 
 
-For example, when a Duckiebot 'overshoots', it means that [...] and the following will happen [...]. 
+This is a TBD 'example' class application:
+
+For example, when a Duckiebot 'overshoots', it means that [...] and the following will happen [...].
+
 </div>
 
 ### Section N: title-N (e.g.: Saving the world with PID)
@@ -154,7 +159,7 @@ TODO: It might make sense to decouple the examples from the the theory (as we ar
 
 ## Pointers to Exercises {#theory-chapter-template-exercises-pointers}
 
-Here we just add references to the suggested exercises, defined in the appropriate [exercise chapters](#part:exercises). 
+Here we just add references to the suggested exercises, defined in the appropriate [exercise chapters](#part:exercises).
 
 
 ## Conclusions
@@ -175,6 +180,7 @@ Further Reading: insert here reference resources for the interested reader:
 - learn all there is to know about PID: [Isidori-1]()
 - become a linear algebra master: [Matrix cookbook](http://www2.imm.dtu.dk/pubdb/views/edoc_download.php/3274/pdf/imm3274.pdf)
 - [...]
+
 </div>
 
 
@@ -197,5 +203,3 @@ TODO: add "next" in top right corner of every page
 
 
 TODO: add "click to enlarge pic" functionality
-
-
