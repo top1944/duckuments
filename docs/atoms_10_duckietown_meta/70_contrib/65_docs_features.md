@@ -74,20 +74,44 @@ and the label prefix that they need.
 
 Examples of all environments follow.
 
+<div class='example-usage' markdown="1">
+
+    \begin{definition}\label{def:lorem}Lorem\end{definition}
 
 \begin{definition}\label{def:lorem}Lorem\end{definition}
 
+    \begin{proposition}\label{prop:lorem}Lorem\end{proposition}
+
 \begin{proposition}\label{prop:lorem}Lorem\end{proposition}
+
+    \begin{remark}\label{rem:lorem}Lorem\end{remark}
 
 \begin{remark}\label{rem:lorem}Lorem\end{remark}
 
+    \begin{problem}\label{prob:lorem}Lorem\end{problem}
+
 \begin{problem}\label{prob:lorem}Lorem\end{problem}
+
+    \begin{example}\label{exa:lorem}Lorem\end{example}
 
 \begin{example}\label{exa:lorem}Lorem\end{example}
 
+    \begin{theorem}\label{thm:lorem}Lorem\end{theorem}
+
 \begin{theorem}\label{thm:lorem}Lorem\end{theorem}
 
+    \begin{lemma}\label{lem:lorem}Lorem\end{lemma}
+
 \begin{lemma}\label{lem:lorem}Lorem\end{lemma}
+
+    I can also refer to all of them:
+    [](#def:lorem),
+    [](#prop:lorem),
+    [](#rem:lorem),
+    [](#prob:lorem),
+    [](#exa:lorem),
+    [](#thm:lorem),
+    [](#lem:lorem).
 
 I can also refer to all of them:
 [](#def:lorem),
@@ -96,7 +120,9 @@ I can also refer to all of them:
 [](#prob:lorem),
 [](#exa:lorem),
 [](#thm:lorem),
-[](#lem:lorem),
+[](#lem:lorem).
+
+</div>
 
 ## LaTeX equations {#latex-equations}
 
@@ -372,7 +398,7 @@ Use the classes `labels-row1`  and `labels-row1` to make pretty tables like the 
     <span>3</span>
 </col3>
 
-## Linking to documentation from inside and outside the documentation
+## Linking to documentation
 
 ### Establishing names of headers {#establishing}
 
@@ -716,7 +742,6 @@ List of requirements at the beginning of setup chapter.
 
 ## Referring to Github files
 
-Note: This is not implemented yet.
 
 You can refer to files in the repository by using:
 
@@ -730,7 +755,7 @@ The available keys are:
 - `branch` (optional) the repository branch; defaults to `master`;
 - `from_text` (optional);
 - `from_line` (optional);
-- `to_text` (optional); 
+- `to_text` (optional);
 - `to_line` (optional).
 
 
