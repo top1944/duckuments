@@ -160,10 +160,13 @@ For example, to obtain:
 
 Use the following:
 
-<pre><code>
+<pre trim="1">
+<code trim="1">
 For example, to obtain:
 
-    &#36; ssh <span>!</span>[robot name].local</code>
+    &#36; ssh <span>!</span>[robot name].local
+
+</code>
 </pre>
 
 </div>
