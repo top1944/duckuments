@@ -1,5 +1,7 @@
 # Linear algebra {#linear_algebra}
 
+TODO: This Section is work in progress.
+
 Assigned: Jacopo
 
 <!--Start with a brief introduction of the discussed topic, describing its place in the bigger picture, justifying the reading constraints/guidelines below. Write it as if the reader knew the relevant terminology. -->
@@ -73,7 +75,6 @@ f(x_1 + x_2) &= f(x_1) + f(x_2) \label{eq:lin2}
 Condition \eqref{eq:lin1} is referred to as the property of _homogeneity_ (of order 1), while condition \eqref{eq:lin2} is referred to as _additivity_.
 
 \begin{remark}[Superposition Principle]\label{rem:lin-superposition}
-
 Conditions \eqref{eq:lin1} and \eqref{eq:lin2} can be merged to express the same meaning through:
 \begin{align}
 f(ax_1 + bx_2) = af(x_1) + bf(x_2), \forall x_i \in \mathbb{X}, i = \{1,2\}, \forall a,b \in \mathbb{R} \label{eq:linearity}.
@@ -143,13 +144,15 @@ We define the length, or _modulus_, of a vector $\textbf{v} \in \mathbb{R}^n$ as
 \end{align}
 \end{definition} 
 
-\begin{remark}[Superposition Principle]\label{rem:lin-superposition}
-
+\begin{remark}[2-norm]\label{rem:2norm}
+Generally speaking, it is not always possible to define the length of a vector ([addref]()). But when it is possible (e.g., [Hilbert spaces]()), and in Duckietown it always is, there are many ways to define it. The most common and intuitive definition is the _Euclidian-_ or _2-norm_, which is defined above in \eqref{eq:vec2norm}.  
 \end{remark}
 
 
+
+
+
 - Definition of:
-- inner product
 - norms
 - p-norm, $\infty$-norm
 - unit vector
@@ -161,7 +164,7 @@ We define the length, or _modulus_, of a vector $\textbf{v} \in \mathbb{R}^n$ as
 ### Vector algebra
 
 - sum of vectors
-- dot product
+- dot product /  inner product
 - cross product
 - 
 
@@ -229,7 +232,7 @@ Definitions:
 
 - general expression
 
-#### Left and Right Inverse
+#### Left and Right Inverse (topic for advanced-linear-algebra?)
 
 - what if the matrix is not square? (topic for advanced-linear-algebra?)
 - Moore-Penrose pseudo-inverse
@@ -237,8 +240,8 @@ Definitions:
 #### Eigenvalues and Eigenvectors
 
 - for square matrices
-- for rectangular matrices
-- singular value decomposition SVD
+- for rectangular matrices (topic for advanced-linear-algebra?)
+- singular value decomposition SVD (topic for advanced-linear-algebra?)
 
 ## Matrix as representation of linear (vector) spaces
 
@@ -250,7 +253,7 @@ Definitions:
 - Null space
 - Range/image
 
-### Prefered spaces (matrix diagonalization)
+### Preferred spaces (matrix diagonalization)
 
 - show how to diagonalize matrices and why it is relevant (it will come in handy for state space representation chapter chapter)
 
