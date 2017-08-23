@@ -98,6 +98,9 @@ Other distributions: If you are not on Ubuntu 16, depending on your system, you 
 
     $ pip install numpy matplotlib
 
+You also should run:
+
+    $ pip install -U SystemCmd==2.0.0
 
 ## Compiling the documentation
 
