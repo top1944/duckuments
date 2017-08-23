@@ -26,13 +26,6 @@ The original Duckietown class was at MIT in 2016.
 </div>
 
 
-<!--
-<div class="videos">
-  <iframe src="https://player.vimeo.com/video/152233002" class="embed-responsive-item" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-  <iframe src="https://player.vimeo.com/video/152499589" class="embed-responsive-item" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-  <iframe src="https://player.vimeo.com/video/152825632" class="embed-responsive-item" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-  <iframe src="https://player.vimeo.com/video/149916365" class="embed-responsive-item" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-</div> -->
 
 
 ## University-level classes in 2016

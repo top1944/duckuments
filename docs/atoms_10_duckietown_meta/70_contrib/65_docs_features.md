@@ -712,3 +712,45 @@ Check that you didn't forget anything.
 List of requirements at the beginning of setup chapter.
 
 </div>
+
+
+## Referring to Github files
+
+Note: This is not implemented yet.
+
+You can refer to files in the repository by using:
+
+    See [this file](github:org=![org],repo=![repo],path=![path],branch=![branch],frag=![frag]).
+
+The keys are
+
+- `org`: organization name (e.g. `duckietown`);
+- `repo`: repository name (e.g. `Software`);
+- `path`: the filename. Can be just the file name or also include directories;
+- `branch`: the repository branch; defaults to `master`;
+- `from_text` (optional)
+- `from_line` (optional)
+- `to_text` (optional)
+- `to_line` (optional)
+
+
+
+For example, you can [refer to this exact line][line] by using:
+
+[line]: github:org=duckietown,path=65_docs_features.md,repo=duckuments,from_text=For%20example
+
+
+    See [this file](github:org=duckietown,repo=duckuments,path=65_docs_features.md,from_text=For%20example)
+
+[interval]: github:org=duckietown,path=65_docs_features.md,repo=duckuments,from_text=For%20example,to_text=display-file
+
+You can also [refer to a range][interval].
+
+
+You can copy the contents of a file by using:
+
+    <display-file src="github:path=65_docs_features.md"/>
+
+To copy only part of the contents, use:
+
+    <display-file src="..." from="To copy only" to "use"/>
