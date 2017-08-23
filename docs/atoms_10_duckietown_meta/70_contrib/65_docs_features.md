@@ -113,8 +113,8 @@ This uses `align` and contains  \eqref{eq:two} and \eqref{eq:three}.
       &= c \label{eq:three}
 \end{align}
 
-<pre>
-<code>
+<pre trim="1">
+<code trim="1">
 We can refer to equations, such as \eqref{eq:one}:
 
 \<span/>begin{equation}
@@ -194,7 +194,7 @@ Other symbols to escape are shown in [](#tab:escapes).
 
 Use the `kbd` element for keystrokes.
 
-<div class="example" markdown="1">
+<div class="example-usage" markdown="1">
 
 For example, to obtain:
 
@@ -309,8 +309,8 @@ are expanded in tables with 2, 3, 4 or 5 columns.
 
 The following code:
 
-<pre>
-<code>
+<pre trim="1">
+<code trim="1">
 &lt;col2 figure-id="tab:mytable" figure-caption="My table"&gt;
     &lt;span&gt;A&lt;/span&gt;
     &lt;span&gt;B&lt;/span&gt;
@@ -450,6 +450,8 @@ This is the syntax:
 
     <dtvideo src="vimeo:![vimeo ID]"/>
 
+<div class="example-usage" markdown="1">
+
 For example, this code:
 
     <div figure-id="fig:example-embed">
@@ -459,9 +461,11 @@ For example, this code:
 
 produces this result:
 
-<div figure-id="fig:example-embed">
+ <div figure-id="fig:example-embed">
     <figcaption>Cool Duckietown by night</figcaption>
     <dtvideo src="vimeo:152825632"/>
+ </div>
+
 </div>
 
 
@@ -511,8 +515,8 @@ Syntax:
 You can insert comments using the HTML syntax for comments:
 any text between "<code>&lt;!--</code>" and "<code>--&gt;</code>" is ignored.
 
-<pre>
-<code>
+<pre trim="1">
+<code trim="1">
 # My section
 
 &lt;!-- this text is ignored --&gt;
@@ -521,30 +525,187 @@ Let's start by...
 </code>
 </pre>
 
-<!--
-## Special paragraphs
 
-These are the
 
-'TODO: ': 'todo',
-        'TOWRITE: ': 'special-par-towrite',
-        'Task: ': 'special-par-task',
-        'Remark: ': 'special-par-remark',
-        'Note: ': 'special-par-note',
-        'Symptom: ': 'special-par-symptom',
-        'Resolution: ': 'special-par-resolution',
-        'Bad:': 'special-par-bad',
-        'Better:': 'special-par-better',
-        'Warning:': 'special-par-warning',
-        'Q:': 'special-par-question',
-        'A:': 'special-par-answer',
-        "Assigned: ": 'special-par-assigned',
-        "Maintainer: ": 'special-par-maintainer',
+## Special paragraphs tags {#special-paragraphs}
 
-        # Reference and See are the same thing
-        'See: ': 'special-par-see',
-        'Reference: ': 'special-par-see',
+The system supports parsing of some special paragraphs.
 
-        'Requires: ': 'special-par-requires',
-        'Recommended: ': 'special-par-recommended',
-        'See also: ': 'special-par-see-also', -->
+Note that some of these might be redundant.
+
+For now, documenting what is implemented.
+
+### Todos, task markers
+
+    TODO: todo
+
+TODO: todo
+
+    TOWRITE: towrite
+
+TOWRITE: towrite
+
+    Task: task
+
+Task: task
+
+    Assigned: assigned
+
+Assigned: assigned
+
+
+
+### Notes and remarks
+
+    Remark: remark
+
+Remark: remark
+
+    Note: note
+
+Note: note
+
+    Symptom: symptom
+
+Symptom: symptom
+
+    Warning: warning
+
+Warning: warning
+
+
+### Troubleshooting
+
+    Symptom: symptom
+
+Symptom: symptom
+
+    Resolution: resolution
+
+Resolution: resolution
+
+### Guidelines
+
+    Bad: bad
+
+Bad: bad
+
+    Better: better
+
+Better: better
+
+### Questions and answers
+
+    Q: question
+
+Q: question
+
+    A: answer
+
+A: answer
+
+
+### Authors, maintainers, point of contact
+
+    Maintainer: maintainer
+
+Maintainer: maintainer
+
+    Author: author
+
+Author: author
+
+    Point of contact: point of contact
+
+Point of contact: point of contact
+
+    Slack channel: slack channel
+
+Slack channel: slack channel
+
+
+### References
+
+
+    See: see
+
+See: see
+
+    Reference: reference
+
+Reference: reference
+
+    Requires: requires
+
+Requires: requires
+
+    Recommended: recommended
+
+Recommended: recommended
+
+    See also: see also
+
+See also: see also
+
+<style>
+#special-paragraphs\:section pre {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+
+}
+</style>
+
+## Div environments {#div-environments}
+
+For these, note the rules:
+
+- You must include `markdown="1"`.
+- There must be an empty line after the first `div` and before the closing `/div`.
+
+### Example usage
+
+    <div class='example-usage' markdown="1">
+
+    This is how you can use `rosbag`:
+
+        $ rosbag play log.bag
+
+    </div>
+
+<div class='example-usage' markdown="1">
+
+This is how you can use `rosbag`:
+
+
+    $ rosbag play log.bag
+
+</div>
+
+### Check
+
+
+    <div class='check' markdown="1">
+
+    Check that you didn't forget anything.
+
+    </div>
+
+<div class='check' markdown="1">
+
+Check that you didn't forget anything.
+
+</div>
+
+### Requirements
+
+    <div class='requirements' markdown="1">
+
+    List of requirements at the beginning of setup chapter.
+
+    </div>
+
+<div class='requirements' markdown="1">
+
+List of requirements at the beginning of setup chapter.
+
+</div>

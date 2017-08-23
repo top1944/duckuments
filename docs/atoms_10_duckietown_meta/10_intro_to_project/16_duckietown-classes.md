@@ -1,6 +1,6 @@
 # Duckietown classes {#duckietown-classes}
 
-Duckietown is an international effort. Many educational institutions have adopted the platform and used to teach robotics and related subjects. If you have used Duckietown in any of your course and cannot find a mention to it here, contact us. 
+Duckietown is an international effort. Many educational institutions have adopted the platform and used to teach robotics and related subjects. If you have used Duckietown in any of your course and cannot find a mention to it here, contact us.
 
 TODO: add contact email
 
@@ -20,16 +20,16 @@ Instructors: _plenty_
 
 Educational Level: Graduate
 
-Time period: 
+Time period:
 
-Link: 
+Link:
 
 Highlights: Role-playing experience (Duckietown Engineering Co.), public demo
 
-Summary: 
+Summary:
 
 <div figure-id="fig:2016_MIT">
-   <img src="placeholder.jpg" class='group-photo'/>
+   <img src="placeholder.png" class='group-photo'/>
    <figcaption>Duckietown at MIT in 2016</figcaption>
 </div>
 
@@ -42,11 +42,11 @@ Course title:
 
 Instructors: Prof. Nick Wang
 
-Educational Level: 
+Educational Level:
 
 Time period:
 
-Link: 
+Link:
 
 Summary:
 
@@ -61,11 +61,11 @@ Course title:
 
 Instructors:
 
-Educational Level: 
+Educational Level:
 
 Time period:
 
-Link: 
+Link:
 
 Summary:
 
@@ -80,11 +80,11 @@ Course title:
 
 Instructors:
 
-Educational Level: 
+Educational Level:
 
 Time period:
 
-Link: 
+Link:
 
 Summary:
 
