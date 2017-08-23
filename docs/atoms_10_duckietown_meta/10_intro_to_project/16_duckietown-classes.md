@@ -97,4 +97,4 @@ Highlights:
 
 
 
-TODO: Let each institution fill their own section
+TODO: Ask each institution to fill their own section
