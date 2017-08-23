@@ -50,7 +50,7 @@ This is an example proposition: &#36;2x = x + x&#36;.
 
 For the LaTeX environments to work properly you *must* add a `\label`
 declaration inside. Moreover, the label must have a prefix that is adequate
-to the environment. For example, for a proposition, you must insert `\label{def:![name]}`
+to the environment. For example, for a proposition, you must insert `\label{prop:![name]}`
 inside.
 
 The following table shows the list of the LaTeX environments supported
