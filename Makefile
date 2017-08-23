@@ -62,7 +62,7 @@ automatic-compile:
 	$(MAKE) clean
 	$(MAKE) compile-slow
 	-$(MAKE) upload
-	$(MAKE) compile-pdf
+	$(MAKE) compile-pdf-slow
 	-$(MAKE) upload
 
 upload:
@@ -80,6 +80,24 @@ clean:
 
 $(out_html): $(wildcard docs/**/*md)
 	$(MAKE) compile
+
+compile-pdf-slow: checks check-programs-pdf
+	# mathjax is 1 in this case
+	DISABLE_CONTRACTS=1 mcdp-render-manual \
+		--src $(src) \
+		--stylesheet v_manual_blurb \
+		--mathjax 1 \
+		--symbols $(tex-symbols) \
+		-o $(tmp_files2) \
+		--output_file $(out_html2).tmp -c "config echo 1; config colorize 0; rmake"
+
+	python -m mcdp_docs.add_edit_links < $(out_html2).tmp > $(out_html2)
+
+	prince --javascript -o /tmp/duckiebook.pdf $(out_html2)
+
+	pdftk A=/tmp/duckiebook.pdf B=misc/blank.pdf cat A1-end B output /tmp/duckiebook2.pdf keep_final_id
+	pdftk /tmp/duckiebook2.pdf update_info misc/blank-metadata output $(out_pdf)
+
 
 compile-pdf: checks check-programs-pdf
 	# mathjax is 1 in this case
@@ -114,7 +132,7 @@ compile: checks update-mcdp update-software
 compile-slow: update-mcdp update-software
 	$(MAKE) index
 	$(MAKE) compile-html-slow
-	$(MAKE) split
+	$(MAKE) split-slow
 
 index:
 	# XXX: requires node
@@ -149,6 +167,16 @@ compile-html-slow:
 	prince --javascript -o $@ $<
 	# open $@
 
+split-slow:
+	# rm -f $(dist_dir)/duckiebook/*html
+	mcdp-split \
+		--filename $(out_html) \
+		--output_dir $(dist_dir)/duckiebook \
+		-o $(tmp_files)/split \
+		-c " config echo 1; config colorize 0; rmake" \
+		--mathjax \
+		--preamble $(tex-symbols) \
+		--disqus
 split:
 	# rm -f $(dist_dir)/duckiebook/*html
 	mcdp-split \
