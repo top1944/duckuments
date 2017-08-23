@@ -51,9 +51,9 @@ Later that year, the Duckietown platform was also used in these classes:
 
 In 2017, these four courses will be taught together, with the students interacting among institutions:
 
-- [ETH Zürich 2017](2017/17-ETHZ/) - Prof. Emilio Frazzoli, Dr. Andrea Censi;
+- [ETH Zürich 2017](#2017-ETHZ) - Prof. Emilio Frazzoli, Dr. Andrea Censi;
 - [University of Montreal, 2017](#2017-UdM) - Prof. Liam Paull;
-- [TTI/Chicago 2017](2017/17-TTI-Chicago/) - Prof. Matthew Walter;
+- [TTI/Chicago 2017](#2017-TTIC) - Prof. Matthew Walter;
 - National Chiao Tung University, Taiwan - Prof. Nick Wang's course;
 
 Furthermore, the Duckietown platform is used also in the following universities:
