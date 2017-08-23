@@ -93,8 +93,29 @@ Highlights:
 
 ## 2017
 
+### ETH Zürich {#2017-ETHZ}
+
+Assigned: Censi/Tani
+
+### Université de Montréal {#2017-UdM}
+
+Location: Montreal
+
+Course title:  IFT 6080 Sujets en exploitation des ordinateurs
+
+Instructors: Liam Paull
+
+Educational Level: Graduate
+
+Time period: Sept. - Dec. 2017
+
+Link: [Official Course Website](http://duckietown.org/classes/2017/17-Montreal/)
+
+Summary: 12 students admitted spanning across Université de Montréal, École Polytechnic, McGill University and Concordia University
+
+Highlights:
 
 
+### Toyota Technological Institute at Chicago / University of Chicago {#2017-TTIC}
 
-
-TODO: Ask each institution to fill their own section
+Assigned: Matt Walter
