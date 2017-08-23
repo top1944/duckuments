@@ -6,12 +6,14 @@ Theory chapters benefit from a standardized exposition. Here, we define the temp
 
 TODO: Define new classes for:
 
-- 'required-reading' (must read - red color),
-- 'suggested-reading' (best if read - orange)
-- 'additional-reading' (for curious users - green)
-- 'example' (pop-up box in soothing color (blue?) similar to 'check': stop and think about this for a second). Keep in mind that: (a) color blind people might be confused by red/green. Use additional visual cue (thick/dashed/dotted boundary boxes?); (b) book could be printed in b/w only.
+- 'required-reading' (must read, hard contraint, do not proceed if violated),
+- 'suggested-reading' (best if read, weak constraint, provides extra Duckiepoints)
+- 'additional-reading' (for curious users, no contraint, just a pointer)
+- 'lets-think' (stop and think, visual interrupt, attention regainer/grabber). 
 
 ## Example Title: PID control {#pid-example-theory-label}
+
+[//]: # (Start copying and pasting template from here)
 
 Start with a brief introduction of the discussed topic, describing its place in the bigger picture, justifying the reading constraints/guidelines below. Write it as if the reader knew the relevant terminology. For example:
 
@@ -38,15 +40,15 @@ Suggested Reading: Insert here a list of topics and suggested resources related 
 
 If you want to know more about the subtleties of PID control, you can read the following:
 
-- Definitions of Stability, Performances and Robustness: [reference-7](), ...
+- Definitions of Stability, Performances and Robustness: [](#bib:placeholder), ...
 
-- observability/detectability and controllability/reachability: [reference-1](), [reference-2](), ...
+- observability/detectability and controllability/reachability: [](#bib:placeholder)
 
-- Discrete time PID: [reference-4](),
+- Discrete time PID: [](#bib:placeholder)
 
-- Bode diagrams: [reference-5](), ...
+- Bode diagrams: [](#bib:placeholder)
 
-- Nyquist plots: [reference-6](), ...
+- Nyquist plots: [](#bib:placeholder)
 
 - [...]
 
@@ -59,10 +61,10 @@ In this section we crisply define the problem object of this chapter. It serves 
 
 Let:
 
-\begin{align} \label{eq:LTIsys}
-\dot{\state}_t &= A\state_t+Bu_t \\
-y &= C\state_t+Du_t
- \end{align}
+\begin{align}
+\dot{\state}_t = A\state_t+Bu_t \tag{$\cal{S}$}\\
+y = C\state_t+Du_t
+\end{align}
 
  be the LTI model of the Duckiebot's plant, with $x \in \statesp$, $y \in \mathbb{R}^p$ and $u \in \mathbb{R}^m$. We recall ([Duckiebot Modeling]()) that:
 
@@ -75,6 +77,15 @@ D &= 0.
 
 [...]
 
+Remember you can use the `problem` environment of $\LaTeX$ to formally state a problem:
+
+\begin{problem}[PID]\label{prob:label-prob}
+Given a system $\cal{S}$ and measurements of the output $\tilde{y}_t = y_t + n_t, n_t ~ \cal{N}(0,\sigma)$, find a set of PID coefficients that meet the specified requirements for: 
+- stability, 
+- performance, 
+- robustness.
+\end{problem}
+
 as shown in ([](#figure:the-bigger-picture)).
 
 <div figure-id="fig:the-bigger-picture" figure-caption="A classical block diagram for PID control. We like to use a lot of clear figures in the Duckiebook.">
@@ -85,22 +96,27 @@ as shown in ([](#figure:the-bigger-picture)).
 
 ### Section 1: title-1 (e.g.: Definitions)
 
+\begin{definition}[Reference signals]\label{def:def-label}
+A reference signal $\tilde{y}_t \in \mathcal{L}_2(\mathcal{T})$ is ...
+\end{definition}
 
-- Definition 1: A reference signal $\tilde{y}_t \in \mathcal{L}_2(\mathcal{T})$ is ...
+[](#def-label) is very important.
 
 <div class="check" markdown="1">
 Insert 'random' checks to keep the reader's attention up:
-if you can't be woken up in the middle of the night and rememeber the definition of $\mathcal{L}_2(\cdot)$, read: [another math text]()
+if you can't be woken up in the middle of the night and rememeber the definition of $\mathcal{L}_2(\cdot)$, read: [](#bib:placeholder)
 </div>
 
-- Definition 2: [...]
+\begin{definition}[Another definition]\label{def:another-def-label}
+Lorem
+\end{definition}
 
 ### Section 2: title-2 (e.g.: Output feedback)
 
 Now that we know what we're talking about, lets get in the meat of the problem. Here is what is happening:
 
-[...math, math, oh math...]
-
+\[ \cal{Lorem}
+\]
 
 ### Section 3: title-3 (e.g.: Tuning the controller)
 
@@ -112,7 +128,7 @@ How do we know if the PID controller designed above is doing well? We need to de
 
 Overshoot, Module at resonance, Settling Time, Rising Time
 
-...
+[...]
 
 <div class="check" markdown="1">
 
@@ -124,7 +140,7 @@ For example, when a Duckiebot 'overshoots', it means that [...] and the followin
 
 ### Section N: title-N (e.g.: Saving the world with PID)
 
-And this is how to save the world with PID...
+And finally, this is how you save the world, in theory.
 
 ## Examples {#theory-chapter-template-examples}
 
@@ -153,8 +169,6 @@ More Duckiebot related examples
 
 [...]
 
-TODO: It might make sense to decouple the examples from the the theory (as we are doing for the exercises), as an example may be explanatory for different theory chapters.
-
 ## Pointers to Exercises {#theory-chapter-template-exercises-pointers}
 
 Here we just add references to the suggested exercises, defined in the appropriate [exercise chapters](#part:exercises).
@@ -175,29 +189,16 @@ Strong of this new knowledge (what have we learned), we can now [...].
 
 Further Reading: insert here reference resources for the interested reader:
 
-- learn all there is to know about PID: [Isidori-1]()
-- become a linear algebra master: [Matrix cookbook](http://www2.imm.dtu.dk/pubdb/views/edoc_download.php/3274/pdf/imm3274.pdf)
+- learn all there is to know about PID: [![bibID]](#bib:placeholder)
+- become a linear algebra master: [Matrix cookbook](#bib:matrix-cookbook)
 - [...]
 
 </div>
 
+[//]: # (End copying and pasting template from here)
 
 ## References {#bibliography-example-theory-label}
 
-The external references mentioned in this chapter should be listed here.
-
-[1] Crazy math paper with lots of arguable math, _W. L. Mathematics_, Nasty Journal, vol. 1, pg. 1-99, 2001.
-
-[2] Isidori-1, ....
-
-[3] Matrix cookbook
-
-TODO: How to implement scalable difficulty? Suggestion: lets start from the graduate level that we need. We will then create seperate files for the 'undergrad' and 'high-school' versions, simplfying the 'graduate' level files.
-
-TODO: auto-compilation of references section
+Do not include a reference chapter. References are automatically compiled to [the Bibliography Section](#bibliography).
 
 
-TODO: add "next" in top right corner of every page
-
-
-TODO: add "click to enlarge pic" functionality

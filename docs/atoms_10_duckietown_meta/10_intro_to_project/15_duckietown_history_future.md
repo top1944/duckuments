@@ -39,9 +39,9 @@ The original Duckietown class was at MIT in 2016.
 
 Later that year, the Duckietown platform was also used in these classes:
 
-- [National Chiao Tung University 2016](#NCTU_2016), Taiwan - Prof. Nick Wang;
-- [Tsinghua University](#Tsinghua_2016), People's Republic of China - Prof. (Samuel) Qing-Shan Jia's *Computer Networks with Applications* course;
-- [Rennselaer Polytechnic Institute 2016](#RPI_2016) - Prof. John Wen;
+- [National Chiao Tung University 2016](#2016-NCTU), Taiwan - Prof. Nick Wang;
+- [Tsinghua University](#2016-Tsinghua), People's Republic of China - Prof. (Samuel) Qing-Shan Jia's *Computer Networks with Applications* course;
+- [Rennselaer Polytechnic Institute 2016](#2016-RPI) - Prof. John Wen;
 
 <div figure-id="fig:NCTU">
    <img src="duckietown-taiwan.jpg" class='group-photo'/>
