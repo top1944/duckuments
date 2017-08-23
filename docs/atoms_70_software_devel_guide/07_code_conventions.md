@@ -31,9 +31,14 @@ therefore you create programs with longer lines.
 Do not go and try to shorten the lines; the line length is just the symptom.
 Rather, ask somebody to take a look at the code and tell you how to make it better.
 
-### Encoding lines
+### Spaces
 
-All files have an encoding declared.
+Indentation is 4 spaces.
+
+
+### The encoding line
+
+All files must have an encoding declared, and this encoding must be `utf-8`:
 
     # -*- coding: utf-8 -*-
 
@@ -80,3 +85,9 @@ For logging, import this logger:
 
     if __name__ == '__main__':
         wrap_script_entry_point(summary)
+
+### Imports
+
+Do not do a star import, like the following:
+
+    from rostest_example.Quacker import *

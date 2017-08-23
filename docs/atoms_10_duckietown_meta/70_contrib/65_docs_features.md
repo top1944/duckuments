@@ -98,6 +98,41 @@ I can also refer to all of them:
 [](#thm:lorem),
 [](#lem:lorem),
 
+## LaTeX equations {#latex-equations}
+
+We can refer to equations, such as \eqref{eq:one}:
+
+\begin{equation}
+    2a = a + a  \label{eq:one}
+\end{equation}
+
+This uses `align` and contains  \eqref{eq:two} and \eqref{eq:three}.
+
+\begin{align}
+    a &= b \label{eq:two} \\
+      &= c \label{eq:three}
+\end{align}
+
+<pre>
+<code>
+We can refer to equations, such as \eqref{eq:one}:
+
+\<span/>begin{equation}
+    2a = a + a          \label{eq:one}
+\<span/>end{equation}
+
+This uses `align` and contains  \eqref{eq:two} and \eqref{eq:three}.
+
+\<span/>begin{align}
+    a &amp;= b       \label{eq:two} \\
+      &amp;= c       \label{eq:three}
+\<span/>end{align}
+</code>
+</pre>
+
+Note that referring to the equations is done using the syntax `\eqref{eq:![name]}`,
+rather than `[](#eq:![name])`.
+
 
 TODO: other LaTeX features supported
 
