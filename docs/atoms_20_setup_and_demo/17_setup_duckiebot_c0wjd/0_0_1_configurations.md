@@ -49,6 +49,6 @@ TODO: Insert pic of assembled Duckiebot in `C0+wjd` configuration.
 
 ### `C1`
 
-This is the ultimate Duckiebot configuration and it includes the necessary hardware for controlling and placing 5 RGB LEDs on the Duckiebot. It is the necessary configuration to enable communication between Duckiebots, hence fleet behaviours (e.g., negotiating corssing an intersection).
+This is the ultimate Duckiebot configuration and it includes the necessary hardware for controlling and placing 5 RGB LEDs on the Duckiebot. It is the necessary configuration to enable communication between Duckiebots, hence fleet behaviours (e.g., negotiating crossing an intersection).
 
 TODO: Insert pic of assembled Duckiebot in `C1` configuration.
