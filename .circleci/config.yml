@@ -32,11 +32,12 @@ jobs:
                 add-apt-repository -y ppa:lyx-devel/release
                 sudo apt-get install lyx
                 lyx --version
-                
+
         - run:
             name: prince
             command:
                 wget https://www.princexml.com/download/prince_11.3-1_ubuntu16.04_amd64.deb
+                
                 dpkg -i prince_11.3-1_ubuntu16.04_amd64.deb
 
         - run:
