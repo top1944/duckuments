@@ -11,7 +11,7 @@ jobs:
             name: deps
             command:
                 apt-get install -y pdftk bibtex2html libxml2-dev libxslt1-dev libffi6 libffi-dev python-dev python-numpy python-matplotlib virtualenv
-                pip install -U decorator>=4.1.0
+                pip install  decorator>=4.1.0
 
         - run:
             name: check out duckuments-dist
