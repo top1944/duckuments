@@ -3,66 +3,49 @@ jobs:
     build:
         docker:
         - image: andreacensi/duckietown-xenial-kinetic:7
-
         steps:
-
         - checkout
-
         - run:
             name: deps
             command:
                 apt-get install -y pdftk bibtex2html libxml2-dev libxslt1-dev libffi6 libffi-dev python-dev python-numpy python-matplotlib virtualenv build-essential graphviz python-numpy python-yaml python-dev graphviz python-numpy python-yaml python-dev python-setproctitle python-psutil python-lxml python-PIL python-matplotlib python-yaml python-pip python-tk idle python-pmw python-imaging
-
                 pip install -U decorator>=4.1.0
                 pip install numpy lxml matplotlib pillow junit_xml
-
         - run:
             name: NPM
             command:
                 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash
-
                 apt-get update
-    #- sudo apt-cache policy nodejs
                 sudo apt-get -qq -y install build-essential nodejs
                 /usr/bin/npm config set loglevel warn
                 /usr/bin/npm --loglevel=silent install -g MathJax-node jsdom@9.3 less
-                #2>/dev/null 1>/dev/null
                 nodejs --version
-                make css
-
+                make css -j
                 add-apt-repository -y ppa:lyx-devel/release
                 sudo apt-get install lyx
                 lyx --version
-
-
         - run:
             name: prince
             command:
                 wget https://www.princexml.com/download/prince_11.3-1_ubuntu16.04_amd64.deb
-
                 dpkg -i prince_11.3-1_ubuntu16.04_amd64.deb
-
         - run:
             name: NPM
             command:
                  npm install MathJax-node jsdom@9.3 less
-
         - run:
             name: check out duckuments-dist
             command:
                 mkdir -p duckuments-dist
-
         - run:
             name: checkout MCDP
             command: |
                 git clone -b duckuments git@github.com:AndreaCensi/mcdp
                 cd mcdp && python setup.py develop
-
         - run:
             name: checkout duckietown repository
             command: |
                 git clone -b master --depth 1 git@github.com:duckietown/Software duckietown
-
         - run:
             name: install fonts
             command:  |
@@ -70,17 +53,14 @@ jobs:
                 fc-cache -f -v
                 fc-list | grep STIX
                 fc-list | grep Symbola
-
         - run:
             name: Compile HTML version
             command: |
                 make compile
-
         - run:
             name: Compile PDF version
             command: |
                 make compile-pdf
-
         - store_artifacts:
               path: duckuments-dist
               destination: duckuments-dist
