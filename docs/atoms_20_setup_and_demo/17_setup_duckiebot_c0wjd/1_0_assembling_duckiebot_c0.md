@@ -31,7 +31,7 @@ _Figure: Components in Duckiebot package.  **Note**: You won’t need the batter
 
 <br/><br/>
 
-## 1. Motor + chassis bottom
+## Motor + chassis bottom
 Insert motor holders on the chassis-bottom and put the motors as below (with the longest screws M3*30 and M3 nuts). Ignore the speed board holder in the image.
 
 ![motors](https://github.com/Shiying99/duckietown_photos/blob/master/motors.jpg)
@@ -45,7 +45,7 @@ _**Note 2**: if your Magician Chassis package has unsoldered motor wires, you wi
 
 <br/><br/>
 
-## 2. Assemble the wheels
+## Assemble the wheels
 Plug in the wheels to the motor as follows (no screws needed):
 
 ![scratch_wheels](https://github.com/Shiying99/duckietown_photos/blob/master/scratch_wheels.png)
@@ -53,14 +53,14 @@ Plug in the wheels to the motor as follows (no screws needed):
 
 <br/><br/>
 
-## 3. Assemble the omni wheels
+## Assemble the omni wheels
 
 ![scratch_omni](https://github.com/Shiying99/duckietown_photos/blob/master/scratch_omni.png)
 ![omni](https://github.com/Shiying99/duckietown_photos/blob/master/omni.jpg)
 
 <br/><br/>
 
-## 4. Put the spacers on the chassis
+## Put the spacers on the chassis
 Put the car upright (omni wheel pointing towards the table) and arrange wires so that they go through the center rectangle. Put **4 spacers with 4 of M3*6 screws** on each corner as below.
 
 ![screws](https://github.com/Shiying99/duckietown_photos/blob/master/chassi_screws.jpg)
