@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.0, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file 'segments.pdf' (pdf, eps, ps)
 %%
@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{184.76833496bp}%
+    \setlength{\unitlength}{144.76833458bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,20 +48,20 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1.96694182)%
+  \begin{picture}(1,2.51041476)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{segments.pdf}}%
-    \put(0.13260892,0.38570259){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s^1$}}}%
-    \put(0.13142183,1.09183837){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s^2$}}}%
-    \put(0.65189253,0.51450937){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s^4$}}}%
-    \put(0.65626641,1.45922952){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s^3$}}}%
+    \put(0.11398852,0.44806501){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s^1$}}}%
+    \put(0.09036916,1.39351715){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s^2$}}}%
+    \put(0.54465707,0.65667011){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s^4$}}}%
+    \put(0.53918732,1.78505479){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s^3$}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{segments.pdf}}%
-    \put(0.00021075,0.05527033){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_1^1$}}}%
-    \put(0.0820831,0.59174819){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_2^1$}}}%
-    \put(0.05584082,0.84104898){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_1^2$}}}%
-    \put(-0.00539104,1.32215661){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_2^2$}}}%
-    \put(0.55881679,1.6808004){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_1^3$}}}%
-    \put(0.7118964,1.16470332){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_2^3$}}}%
-    \put(0.65503836,0.86291784){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_1^4$}}}%
-    \put(0.65503836,0.25497274){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_2^4$}}}%
+    \put(0.03342541,0.11475028){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_1^1$}}}%
+    \put(0.07160653,0.76630244){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_2^1$}}}%
+    \put(0.08232197,1.07343376){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_1^2$}}}%
+    \put(-0.00688061,1.68747313){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_2^2$}}}%
+    \put(0.52533336,2.12310718){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_1^3$}}}%
+    \put(0.63229237,1.44230638){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_2^3$}}}%
+    \put(0.60393281,1.09029293){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_1^4$}}}%
+    \put(0.5486721,0.3254226){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_2^4$}}}%
   \end{picture}%
 \endgroup%

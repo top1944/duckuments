@@ -235,7 +235,7 @@ use the following:
 
 </div>
 
-## Figures
+## Figures {#figures}
 
 For any element, adding an attribute called `figure-id`
 with value `fig:![figure ID]` or `tab:![table ID]`
@@ -330,6 +330,36 @@ You can also create subfigures, using the following syntax.
         <p>Content of second subfig</p>
     </div>
 </div>
+
+
+## Embedding Latex in Figures
+
+To embed latex in your figures, you can add it directly to a file and save it as `![filename].svg` file and save anywhere in the `/docs` directory.
+You can run:
+
+    $ make process-svg-figs
+
+And your svg The file will be compiled into a PDF figure with the LaTeX commands properly interpreted. 
+You can then include the pdf file as normal way (See [](#figures)) using the `![filename].pdf` as the filename in the `img` tag.
+
+
+<div figure-id="fig:inkscape">
+    <figcaption>Embedding LaTeX in images</figcaption>
+
+    <div figure-id="subfig:1">
+        <figcaption>Image saved as svg</figcaption>
+          <img src="sample-no-process.pdf" style='width: 20em'/>
+    </div>
+    <div figure-id="subfig:2">
+        <figcaption>Image as PDF after processing</figcaption>
+          <img src="sample.pdf" style='width: 20em'/>
+    </div>
+</div>
+
+
+Note: in order to compile the figures into pdfs you need to have Inkscape installed. Instructions to download and install are [here](https://inkscape.org/en/release/0.92.2/). 
+
+It can take a bit of work to get the positioning of the code to appear properly on the figure.
 
 ## Shortcut for tables
 
