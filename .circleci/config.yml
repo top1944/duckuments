@@ -10,9 +10,29 @@ jobs:
         - run:
             name: deps
             command:
-                apt-get install -y pdftk bibtex2html libxml2-dev libxslt1-dev libffi6 libffi-dev python-dev python-numpy python-matplotlib virtualenv
+                apt-get install -y pdftk bibtex2html libxml2-dev libxslt1-dev libffi6 libffi-dev python-dev python-numpy python-matplotlib virtualenv build-essential graphviz python-numpy python-yaml python-dev graphviz python-numpy python-yaml python-dev python-setproctitle python-psutil python-lxml python-PIL python-matplotlib python-yaml python-pip python-tk idle python-pmw python-imaging
 
                 pip install -U decorator>=4.1.0
+                pip install numpy lxml matplotlib pillow junit_xml
+
+        - run:
+            name: NPM
+            command:
+                curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash
+
+                apt-get update
+    #- sudo apt-cache policy nodejs
+                sudo apt-get -qq -y install build-essential nodejs
+                /usr/bin/npm config set loglevel warn
+                /usr/bin/npm --loglevel=silent install -g MathJax-node jsdom@9.3 less
+                #2>/dev/null 1>/dev/null
+                nodejs --version
+                make css
+
+                add-apt-repository -y ppa:lyx-devel/release
+                sudo apt-get install lyx
+                lyx --version
+                
         - run:
             name: prince
             command:
