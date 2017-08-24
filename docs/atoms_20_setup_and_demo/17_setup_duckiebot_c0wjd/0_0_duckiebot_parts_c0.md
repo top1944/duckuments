@@ -15,7 +15,7 @@ In general, keep in mind that:
 
 <div class='requirements' markdown="1">
 
-Requires: Cost: USD 169 + Shipping Fees (minimal configuration `C0`)
+Requires: Cost: USD 159 + Shipping Fees (minimal configuration `C0`)
 
 Requires: Time: 15 days (average shipping for cheapest choice of components)
 
@@ -68,8 +68,6 @@ TODO: Add a different "Tools" section in the table (e.g., solderer), or add in t
 
 </div>
 
-TODO: modify to account for new USB to wires power solution.
-
 <style>
 #materials {
     font-size: 80%;
@@ -87,8 +85,6 @@ We chose it because it has a double-decker configuration, and so
 we can put the battery in the lower part.
 
 The chassis pack includes the motors and wheels as well as the structural part.
-
-The price for this in the US is about USD 15-30.
 
 <div figure-id="fig:magician_chassis" figure-caption="The Magician Chassis">
      <img src="magician_chassis.jpg" style='width: 15em'/>
@@ -170,7 +166,6 @@ We use the DC Stepper motor HAT ([](#fig:joystick)) to control the DC motors tha
      <img src="motor_hat.png" style='width: 15em'/>
 </div>
 
-
 ### Stacking Headers
 
 We use a long 20x2 stacking header ([](#figure:stacking_header)) to connect the Raspberry Pi with the DC Stepper Motor HAT. This item will require [soldering](#soldering-boards-c0) to be functional.
@@ -184,7 +179,7 @@ We use a long 20x2 stacking header ([](#figure:stacking_header)) to connect the 
 
 The battery ([](#fig:battery)) provides power to the Duckiebot.
 
-We choose this battery because it has a good combination of size (to fit in the lower deck of the Magician Chassis), high output amperage (2.4A and 2.1A at 5V DC) over two USB outputs, a good capacity (10400 mAh) at an affordable price (USD 20).
+We choose this battery because it has a good combination of size (to fit in the lower deck of the Magician Chassis), high output amperage (2.4A and 2.1A at 5V DC) over two USB outputs, a good capacity (10400 mAh) at an affordable price.
 
 <div figure-id="fig:battery" figure-caption="The Battery">
      <img src="battery.png" style='width: 15em'/>
@@ -212,7 +207,7 @@ Two 300x5mm zip ties are needed to keep the battery at the lower deck from movin
 
 ### Wireless Adapter (5 GHz)
 
-The Edimax AC1200 EW-7822ULC 5 GHz WiFi adpater ([](#fig:edimax)) boosts the connectivity of the Duckiebot, especially useful in busy Duckietowns (e.g., classroom).
+The Edimax AC1200 EW-7822ULC 5 GHz wireless adpater ([](#fig:edimax)) boosts the connectivity of the Duckiebot, especially useful in busy Duckietowns (e.g., classroom).
 
 <div figure-id="fig:edimax" figure-caption="The Edimax AC1200 EW-7822ULC wifi adapter">
      <img src="edimax.png" style='width: 15em'/>
@@ -224,7 +219,9 @@ The Edimax AC1200 EW-7822ULC 5 GHz WiFi adpater ([](#fig:edimax)) boosts the con
 
 The joypad is used to manually remote control the Duckiebot. Any 2.4 GHz wireless controller (with a _tiny_ USB dongle) will do.
 
-The model linked in the table ([](#fig:joystick)) does not include batteries (required: 2 AA 1.5V).
+The model linked in the table ([](#fig:joystick)) does not include batteries.
+
+Requires: 2 AA 1.5V batteries.
 
 <div figure-id="fig:joystick" figure-caption="A Wireless Joypad">
      <img src="joystick.png" style='width: 15em'/>

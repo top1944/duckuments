@@ -1,15 +1,14 @@
 # Chapter template {#theory-chapter-template}
 
-Assigned: Jacopo
+Theory chapters benefit from a standardized exposition. Here, we define the template for these chapters. Rememeber to check [](#sec:documentation-manual) for a comprehensive and up-to-date list of Duckiebook supported features.
 
-Theory chapters benefit from a standardized exposition. Here, we define the template for these chapters.
-
+<!--
 TODO: Define new classes for:
 
-- 'required-reading' (must read, hard contraint, do not proceed if violated),
-- 'suggested-reading' (best if read, weak constraint, provides extra Duckiepoints)
+- 'required-preliminaries' (must read, hard contraint, do not proceed if violated),
+- 'recommended-preliminaries' (best if read, weak constraint, provides extra Duckiepoints)
 - 'additional-reading' (for curious users, no contraint, just a pointer)
-- 'lets-think' (stop and think, visual interrupt, attention regainer/grabber). 
+- 'lets-think' (stop and think, visual interrupt, attention regainer/grabber). -->
 
 ## Example Title: PID control {#pid-example-theory-label}
 
@@ -19,38 +18,35 @@ Start with a brief introduction of the discussed topic, describing its place in 
 
 PID control is the simplest approach to making a system behave in a desired way rather than how it would naturally behave. It is simple because the measured output is directly feedbacked, as opposed to, e.g., the system's states. The control signal is obtained as a weighted sum of the tracking error (*P*roportional term), its integral over time (*I*ntegrative term) and its instantaneous derivative (*D*erivative term), from which the appellative of PID control. The tracking error is defined as the instantaneous difference between a reference and a measured system output.
 
-<div class="check" markdown="1">
+<!--(Dear Santa, I would like class='required-preliminaries' here) -->
+<div class='requirements' markdown="1"> 
+
+Knowledge necessary:
+
 Required Reading: Insert here a list of topics and suggested resources related to _necessary_ knowledge in order to understand the content presented. Example:
 
-If you are not familiar with the terminology above (system, plant, output, reference, ...), you must read: [autonomy overview](#autonomy_overview)
+Requires: Terminology: [autonomy overview](#autonomy_overview)
 
-If you are not familiar with how to obtain a system, you must read:
-- [basic kinematics](#basic_kinematics)
-- [basic dynamics](#basic_dynamics).
-- [linear algebra](#linear_algebra)
-- [State space representations]()
-- [Linear Time Invariant Systems]()
-- ...
+Requires: System Modeling: [basic kinematics](#basic_kinematics), [basic dynamics](#basic_dynamics), [linear algebra](#linear_algebra), [State space representations](), [Linear Time Invariant Systems]()
 
 </div>
 
-<div class="check" markdown="1">
+<!--(Dear Santa, I would like class='recommended-preliminaries' here) -->
+<div class="requirements" markdown="1">
 
 Suggested Reading: Insert here a list of topics and suggested resources related to _recommended_ knowledge in order to better understand the content presented. Example:
 
-If you want to know more about the subtleties of PID control, you can read the following:
+Recommended: Definitions of Stability, Performances and Robustness: [](#bib:placeholder), ...
 
-- Definitions of Stability, Performances and Robustness: [](#bib:placeholder), ...
+Recommended: observability/detectability and controllability/reachability: [](#bib:placeholder)
 
-- observability/detectability and controllability/reachability: [](#bib:placeholder)
+Recommended: Discrete time PID: [](#bib:placeholder)
 
-- Discrete time PID: [](#bib:placeholder)
+Recommended: Bode diagrams: [](#bib:placeholder)
 
-- Bode diagrams: [](#bib:placeholder)
+Recommended: Nyquist plots: [](#bib:placeholder)
 
-- Nyquist plots: [](#bib:placeholder)
-
-- [...]
+Recommended: [...]
 
 </div>
 
@@ -62,8 +58,8 @@ In this section we crisply define the problem object of this chapter. It serves 
 Let:
 
 \begin{align}
-\dot{\state}_t = A\state_t+Bu_t \tag{$\cal{S}$}\\
-y = C\state_t+Du_t
+\dot{\state}_t = A\state_t+Bu_t \\
+y = C\state_t+Du_t              \label{eq:system}
 \end{align}
 
  be the LTI model of the Duckiebot's plant, with $x \in \statesp$, $y \in \mathbb{R}^p$ and $u \in \mathbb{R}^m$. We recall ([Duckiebot Modeling]()) that:
@@ -80,7 +76,7 @@ D &= 0.
 Remember you can use the `problem` environment of $\LaTeX$ to formally state a problem:
 
 \begin{problem}[PID]\label{prob:label-prob}
-Given a system $\cal{S}$ and measurements of the output $\tilde{y}_t = y_t + n_t, n_t ~ \cal{N}(0,\sigma)$, find a set of PID coefficients that meet the specified requirements for: 
+Given a system \eqref{eq:system} and measurements of the output $\tilde{y}_t = y_t + n_t, n_t \textasciitilde \cal{N}(0,\sigma)$, find a set of PID coefficients that meet the specified requirements for: 
 - stability, 
 - performance, 
 - robustness.
@@ -103,8 +99,11 @@ A reference signal $\tilde{y}_t \in \mathcal{L}_2(\mathcal{T})$ is ...
 [](#def-label) is very important.
 
 <div class="check" markdown="1">
+
 Insert 'random' checks to keep the reader's attention up:
+
 if you can't be woken up in the middle of the night and rememeber the definition of $\mathcal{L}_2(\cdot)$, read: [](#bib:placeholder)
+
 </div>
 
 \begin{definition}[Another definition]\label{def:another-def-label}
@@ -120,7 +119,7 @@ Now that we know what we're talking about, lets get in the meat of the problem. 
 
 ### Section 3: title-3 (e.g.: Tuning the controller)
 
-Introduce the 'synthesys through attempts' methodology (a.k.a. tweak until death)
+Introduce the 'synthesis through attempts' methodology (a.k.a. tweak until death)
 
 ### Section 4: title-4 (e.g.: Performance Metrics)
 
@@ -130,11 +129,11 @@ Overshoot, Module at resonance, Settling Time, Rising Time
 
 [...]
 
-<div class="check" markdown="1">
+<div class="example-usage" markdown="1">
 
-This is a TBD 'example' class application:
+This is a 'think about it' interrupt, used as attention grabber:
 
-For example, when a Duckiebot 'overshoots', it means that [...] and the following will happen [...].
+When a Duckiebot 'overshoots', it means that [...] and the following will happen [...].
 
 </div>
 
@@ -185,13 +184,14 @@ Here we just add references to the suggested exercises, defined in the appropria
 
 Strong of this new knowledge (what have we learned), we can now [...].
 
-<div class="check" markdown="1">
+<!--(Dear Santa, I would like class='additional-reading' here) -->
+<div class="requirements" markdown="1">
 
 Further Reading: insert here reference resources for the interested reader:
 
-- learn all there is to know about PID: [![bibID]](#bib:placeholder)
-- become a linear algebra master: [Matrix cookbook](#bib:matrix-cookbook)
-- [...]
+See also: learn all there is to know about PID: [](#bib:placeholder)
+
+See also: become a linear algebra master: [Matrix cookbook](#bib:matrix-cookbook)
 
 </div>
 
@@ -202,3 +202,6 @@ Further Reading: insert here reference resources for the interested reader:
 Do not include a reference chapter. References are automatically compiled to [the Bibliography Section](#bibliography).
 
 
+Author: Jacopo 
+Maintainer: Jacopo
+Point of Contact: Jacopo
