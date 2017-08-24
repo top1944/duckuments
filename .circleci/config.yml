@@ -2,7 +2,7 @@ version: 2
 jobs:
     build:
      docker:
-        - image: andreacensi/duckietown-xenial-kinetic:6
+        - image: andreacensi/duckietown-xenial-kinetic:latest
 
      steps:
         - checkout
@@ -34,8 +34,9 @@ jobs:
             name: install fonts
             command:  |
                 cp -R fonts /usr/share/fonts/duckuments-fonts
-                fc-cache -v
+                fc-cache -f -v
                 fc-list | grep STIX
+                fc-list | grep Symbola
 
         - run:
             name: Compile HTML version
