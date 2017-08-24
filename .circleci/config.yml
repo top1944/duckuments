@@ -1,0 +1,34 @@
+version: 2
+jobs:
+    build:
+     docker:
+        - image: andreacensi/duckietown-xenial-kinetic:6
+
+     steps:
+        - checkout
+
+        - run:
+            name: checkout MCDP
+            command: make duckuments-dist
+            
+        - run:
+            name: build
+            command: |
+                git clone
+
+                make build-parallel
+                vdir $PWD/catkin_ws/devel
+
+        - run:
+            name: run tests
+            command: |
+                # vdir $PWD/catkin_ws/devel
+                # source $PWD/catkin_ws/devel/setup.bash
+                # export DUCKIETOWN_ROOT=$PWD
+                # export HOSTNAME=$HOSTNAME
+                # source environment.sh
+                make comptests
+
+        - store_artifacts:
+              path: duckuments-dist
+              destination: duckuments-dist
