@@ -8,6 +8,11 @@ jobs:
         - checkout
 
         - run:
+            name: deps
+            command:
+                sudo apt install -y pdftk bibtex2html libxml2-dev libxslt1-dev libffi6 libffi-dev python-dev python-numpy python-matplotlib virtualenv
+
+        - run:
             name: checkout MCDP
             command: make duckuments-dist
 
