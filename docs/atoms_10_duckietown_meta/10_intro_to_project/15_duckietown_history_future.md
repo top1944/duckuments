@@ -53,17 +53,17 @@ In 2017, these four courses will be taught together, with the students interacti
 
 - [ETH Zürich 2017](#2017-ETHZ) - Prof. Emilio Frazzoli, Dr. Andrea Censi;
 - [University of Montreal, 2017](#2017-UdM) - Prof. Liam Paull;
-- [TTI/Chicago 2017](#2017-TTIC) - Prof. Matthew Walter;
-- National Chiao Tung University, Taiwan - Prof. Nick Wang's course;
+- [TTI/Chicago 2017](#2017-TTIC) - Prof. Matthew Walter; and
+- National Chiao Tung University, Taiwan - Prof. Nick Wang.
 
 Furthermore, the Duckietown platform is used also in the following universities:
 
 - Rennselaer Polytechnic Institute (Jeff Trinkle)
-- National Chiao Tung University, Taiwan - Prof. Yon-Ping Chen's *Dynamic system simulation and implementation*.
+- National Chiao Tung University, Taiwan - Prof. Yon-Ping Chen's *Dynamic system simulation and implementation* course.
 - Chosun University, Korea - Prof. Woosuk Sung's course;
 - Petra Christian University, Indonesia - Prof. Resmana Lim's *Mobile Robot Design Course*
-- National Tainan Normal University, Taiwan - Prof. Jen-Jee Chen's *Vehicle to Everything* (V2X) Course;
-- Yuan Zhu University, Taiwan - Prof. Kan-Lin Hsiung's Control course;
+- National Tainan Normal University, Taiwan - Prof. Jen-Jee Chen's *Vehicle to Everything* (V2X) course; and
+- Yuan Zhu University, Taiwan - Prof. Kan-Lin Hsiung's Control course.
 
 ## Chile
 

@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.0, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file 'measurement_likelihood.pdf' (pdf, eps, ps)
 %%
@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{480.25456543bp}%
+    \setlength{\unitlength}{480.30143917bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,17 +48,17 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.71577127)%
+  \begin{picture}(1,0.71570141)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{measurement_likelihood.pdf}}%
-    \put(0.50414654,0.01260765){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d=0$}}}%
-    \put(0.85572837,0.01779096){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d_{max}$}}}%
-    \put(0.14081966,0.01593922){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d_{min}$}}}%
-    \put(-0.0020741,0.38273291){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\phi=0$}}}%
-    \put(0.02286189,0.071502){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\phi_{min}$}}}%
-    \put(0.03120771,0.68029938){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\phi_{max}$}}}%
+    \put(0.50409734,0.01260642){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d=0$}}}%
+    \put(0.85564485,0.01778922){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d_{max}$}}}%
+    \put(0.14080592,0.01593766){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d_{min}$}}}%
+    \put(-0.00207389,0.38269556){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\phi=0$}}}%
+    \put(0.02285966,0.07149502){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\phi_{min}$}}}%
+    \put(0.03120467,0.68023298){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\phi_{max}$}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{measurement_likelihood.pdf}}%
-    \put(0.34678599,0.00407499){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\Delta{d}$}}}%
-    \put(0.04183209,0.24052745){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\Delta{\phi}$}}}%
+    \put(0.34675215,0.00407459){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\Delta{d}$}}}%
+    \put(0.04182801,0.24050397){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\Delta{\phi}$}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{measurement_likelihood.pdf}}%
   \end{picture}%
 \endgroup%
