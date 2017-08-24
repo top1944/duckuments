@@ -187,7 +187,7 @@ split-slow:
 		--disqus
 split:
 	# rm -f $(dist_dir)/duckiebook/*html
-	mcdp-split \
+	 mcdp-split \
 		--filename $(out_html) \
 		--output_dir $(dist_dir)/duckiebook \
 		-o $(tmp_files)/split \
