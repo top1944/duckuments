@@ -28,8 +28,6 @@ jobs:
 
                 nodejs --version
 
-                make css -j
-
                 add-apt-repository -y ppa:lyx-devel/release
 
                 apt-get install lyx
