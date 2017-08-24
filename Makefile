@@ -53,6 +53,14 @@ check-duckietown-software:
 		exit 1; \
 	fi;
 
+process-svg-figs:
+	python process_svg_figs.py
+	rm *.tex *.aux *.pdf_tex *.log *_tmp.pdf
+	mv *.pdf docs/generated_pdf_figs
+
+clean-svg-figs:
+	rm docs/generated_pdf_figs/*
+
 duckuments-dist:
 	# clone branch "dist"
 	git clone --depth 3 -b gh-pages git@github.com:duckietown/duckuments.git duckuments-dist
