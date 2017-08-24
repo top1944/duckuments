@@ -20,7 +20,7 @@ Results:  An assembled Duckiebot in configuration `C0+wjd`.
 </div>
 
 # Part A - Assembling the car - bottom part
-<br>
+
 
 Open the Duckiebox package (magician chassis – DG007), and you won’t need them all. Take out the following materials:
 * Chassis-bottom, Chassis-up (1+1 pieces)
@@ -43,10 +43,14 @@ Insert motor holders on the chassis-bottom and put the motors as below (with the
      <img src="motors.jpg" style='width: 15em'/>
 </div>
 
+<div figure-id="scratch_motors" figure-caption=" ">
+     <img src="scratch_motors.png" style='width: 15em'/>
+</div>
 
+<div figure-id="motors1" figure-caption=" ">
+     <img src="motors1.jpg" style='width: 15em'/>
+</div>
 
-![scratch_motors](https://github.com/Shiying99/duckietown_photos/blob/master/scratch_motors.png)
-![motors1](https://github.com/Shiying99/duckietown_photos/blob/master/motors1.jpg)
 _**Note 1**: Orient the motors so that its wires are inward (toward the center of the chassis-bottom) and the black wires are closer to the chassis-bottom. This makes wiring easier later._
 
 _**Note 2**: if your Magician Chassis package has unsoldered motor wires, you will have to solder them first. Check these instructions [make instructions for soldering motor wires]. In this case, your wires will not have the male pin headers on one end. Do not worry, you can still plug them in the stepper motor hat power terminals._
@@ -56,23 +60,38 @@ _**Note 2**: if your Magician Chassis package has unsoldered motor wires, you wi
 ## Assemble the wheels
 Plug in the wheels to the motor as follows (no screws needed):
 
-![scratch_wheels](https://github.com/Shiying99/duckietown_photos/blob/master/scratch_wheels.png)
-![wheels](https://github.com/Shiying99/duckietown_photos/blob/master/wheels.jpg)
+<div figure-id="scratch_wheels" figure-caption=" ">
+     <img src="scratch_wheels.png" style='width: 15em'/>
+</div>
+
+<div figure-id="wheels" figure-caption=" ">
+     <img src="wheels.jpg" style='width: 15em'/>
+</div>
 
 <br/><br/>
 
 ## Assemble the omni wheels
 
-![scratch_omni](https://github.com/Shiying99/duckietown_photos/blob/master/scratch_omni.png)
-![omni](https://github.com/Shiying99/duckietown_photos/blob/master/omni.jpg)
+<div figure-id="scratch_omni" figure-caption=" ">
+     <img src="scratch_omni.png" style='width: 15em'/>
+</div>
+
+<div figure-id="omni" figure-caption=" ">
+     <img src="omni.jpg" style='width: 15em'/>
+</div>
 
 <br/><br/>
 
 ## Put the spacers on the chassis
 Put the car upright (omni wheel pointing towards the table) and arrange wires so that they go through the center rectangle. Put **4 spacers with 4 of M3*6 screws** on each corner as below.
 
-![screws](https://github.com/Shiying99/duckietown_photos/blob/master/chassi_screws.jpg)
-![part_A_finished](https://github.com/Shiying99/duckietown_photos/blob/master/part_A.jpg)
+<div figure-id="screws" figure-caption=" ">
+     <img src="chassi_screws.jpg" style='width: 15em'/>
+</div>
+
+<div figure-id="art_A_finished" figure-caption=" ">
+     <img src="part_A.jpg" style='width: 15em'/>
+</div>
 
 <br/><br/>
 
