@@ -37,6 +37,7 @@ def main():
                 \usepackage{color} \n \
                 '+r'\b'+'egin{document} \n \
                 \pagestyle{empty} \n \
+                \input{docs/symbols.tex} \n \
                 \input{'+pdf_tex_file+'} \n \
                 \end{document}')
                 f.close()
