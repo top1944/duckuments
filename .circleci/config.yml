@@ -2,7 +2,7 @@ version: 2
 jobs:
     build:
      docker:
-        - image: andreacensi/duckietown-xenial-kinetic:latest
+        - image: andreacensi/duckietown-xenial-kinetic:7
 
      steps:
         - checkout
@@ -18,7 +18,7 @@ jobs:
             command:
                 wget https://www.princexml.com/download/prince_11.3-1_ubuntu16.04_amd64.deb
                 dpkg -i prince_11.3-1_ubuntu16.04_amd64.deb
-                
+
         - run:
             name: NPM
             command:
