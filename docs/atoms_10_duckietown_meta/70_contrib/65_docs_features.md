@@ -76,31 +76,47 @@ Examples of all environments follow.
 
 <div class='example-usage' markdown="1">
 
-    \begin{definition}\label{def:lorem}Lorem\end{definition}
+  <pre><code>&#92;begin{definition}   \label{def:lorem}
+Lorem
+&#92;end{definition}</code></pre>
 
-\begin{definition}\label{def:lorem}Lorem\end{definition}
+\begin{definition}    &#92;endlabel{def:lorem}
+Lorem
+&#92;end{definition}
 
-    \begin{proposition}\label{prop:lorem}Lorem\end{proposition}
+  <pre><code>&#92;begin{proposition}   \label{prop:lorem}
+Lorem
+&#92;end{proposition}</code></pre>
 
 \begin{proposition}\label{prop:lorem}Lorem\end{proposition}
 
-    \begin{remark}\label{rem:lorem}Lorem\end{remark}
+  <pre><code>&#92;begin{remark}   \label{rem:lorem}
+Lorem
+&#92;end{remark}</code></pre>
 
 \begin{remark}\label{rem:lorem}Lorem\end{remark}
 
-    \begin{problem}\label{prob:lorem}Lorem\end{problem}
+  <pre><code>&#92;begin{problem}    &#92;endlabel{prob:lorem}
+Lorem
+&#92;end{problem}</code></pre>
 
 \begin{problem}\label{prob:lorem}Lorem\end{problem}
 
-    \begin{example}\label{exa:lorem}Lorem\end{example}
+  <pre><code>&#92;begin{example}   \label{exa:lorem}
+Lorem
+&#92;end{example}</code></pre>
 
 \begin{example}\label{exa:lorem}Lorem\end{example}
 
-    \begin{theorem}\label{thm:lorem}Lorem\end{theorem}
+  <pre><code>&#92;begin{theorem}   \label{thm:lorem}
+Lorem
+&#92;end{theorem}</code></pre>
 
 \begin{theorem}\label{thm:lorem}Lorem\end{theorem}
 
-    \begin{lemma}\label{lem:lorem}Lorem\end{lemma}
+  <pre><code>&#92;begin{lemma}   \label{lem:lorem}
+Lorem
+&#92;end{lemma}</code></pre>
 
 \begin{lemma}\label{lem:lorem}Lorem\end{lemma}
 
@@ -144,14 +160,14 @@ This uses `align` and contains  \eqref{eq:two} and \eqref{eq:three}.
 We can refer to equations, such as \eqref{eq:one}:
 
 \<span/>begin{equation}
-    2a = a + a          \label{eq:one}
+    2a = a + a          &#92;endlabel{eq:one}
 \<span/>end{equation}
 
 This uses `align` and contains  \eqref{eq:two} and \eqref{eq:three}.
 
 \<span/>begin{align}
-    a &amp;= b       \label{eq:two} \\
-      &amp;= c       \label{eq:three}
+    a &amp;= b       &#92;endlabel{eq:two} \\
+      &amp;= c       &#92;endlabel{eq:three}
 \<span/>end{align}
 </code>
 </pre>
@@ -810,7 +826,7 @@ of `pkg_name/src/subscriber_node.py` by using the following syntax:
 
     [link2]: github:org=duckietown,repo=Software,path=pkg_name/src/subscriber_node.py,from_text=Initialize
 
- 
+
 You can also reference a range of lines, using the parameters:
 
 - `to_text` (optional): references the final line, by text;
