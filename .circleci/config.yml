@@ -17,7 +17,7 @@ jobs:
         - run:
             name: check out duckuments-dist
             command:
-                mkdir duckuments-dist
+                mkdir -p duckuments-dist
 
         - run:
             name: checkout MCDP
@@ -31,10 +31,21 @@ jobs:
                 git clone -b master --depth 1 git@github.com:duckietown/Software duckietown
 
         - run:
-            name: run tests
+            name: install fonts
+            command:  |
+                cp -R fonts /usr/share/fonts/duckuments-fonts
+                fc-cache -v
+                fc-list | grep STIX
+
+        - run:
+            name: Compile HTML version
             command: |
-                mkdir -p duckuments-dist
                 make compile
+
+        - run:
+            name: Compile PDF version
+            command: |
+                make compile-pdf
 
         - store_artifacts:
               path: duckuments-dist
