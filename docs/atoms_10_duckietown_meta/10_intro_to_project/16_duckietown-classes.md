@@ -118,4 +118,18 @@ Highlights:
 
 ### Toyota Technological Institute at Chicago / University of Chicago {#2017-TTIC}
 
-Assigned: Matt Walter
+Location: Chicago
+
+Course title:  TTIC 31240 Self-driving Vehicles: Models and Algorithms for Autonomy
+
+Instructors: [Matthew R. Walter](http://ttic.edu/walter)
+
+Educational Level: Undergraduate/Graduate
+
+Time period: Sept. - Dec. 2017
+
+Link: [Official Course Website](http://duckietown.org/classes/2017/17-TTIC/)
+
+Summary: 12 students admitted from TTI-Chicago and the University of Chicago
+
+Highlights:
