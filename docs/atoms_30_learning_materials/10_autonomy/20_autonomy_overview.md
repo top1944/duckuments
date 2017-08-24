@@ -7,12 +7,25 @@ In this chapter we will introduce some basic concepts ubiquitous in autonomous v
 
 ## Autonomous Vehicles in the News {#autonomous-vehicles-news}
 
+These days it is hard to separate the fact from the fiction when it comes to autonomous vehicles, particularly self-driving cars. Virtually every major car manufacturer has pledged to deploy some form of self-driving technology in the next five years. In addition, there are many startups and software companies which are also known to be developing self-driving car technology.
 
+Here's a non-exhaustive list of some of the recent developments:
+
+ - 
 
 
 ## Levels of Autonomy {#autonomy-levels}
 
+Before even discussing any detailed notion of autonomy, we have to specify exactly what we are talking about. In the United States, the governing body is the NHTSA, and they have recently (Oct 2016) redefined the so-called "levels of autonomy" for self-driving vehicles. In broad terms, they are as follows
 
+
+ * **Level 0**: the human driver does everything;
+ * **Level 1**: an automated system on the vehicle can sometimes assist the human
+driver conduct some parts of the driving task;
+ * **Level 2**: an automated system on the vehicle can actually conduct some parts of the driving task, while the human continues to monitor the driving environment and performs the rest of the driving task;
+ * **Level 3**: an automated system can both actually conduct some parts of the driving task and monitor the driving environment in some instances, but the human driver must be ready to take back control when the automated system requests;
+ * **Level 4**: an automated system can conduct the driving task and monitor the driving environment, and the human need not take back control, but the automated system can operate only in certain environments and under certain conditions; and
+ * **Level 5**: the automated system can perform all driving tasks, under all conditions that a human driver could perform them.
 
 
 ## Basic Building Blocks of Autonomy {#basic-blocks}
@@ -43,11 +56,11 @@ First, **calibration** is usually required to convert convert units, for example
 
 We will distiguish between two fundamentally types of calibrations.
 
-\begin{definition}[Intrinsic Calibration]{def:intrinsic-calibration}
+\begin{definition}[Intrinsic Calibration]\label{def:intrinsic-calibration}
 An *intrinsic calibration* is required to determine sensor-specific paramaters that are internal to a specific sensor.
 \end{definition}
 
-\begin{definition}[Extrinsic Calibration]{def:extrinsic-calibration}
+\begin{definition}[Extrinsic Calibration]\label{def:extrinsic-calibration}
 An *extrinsic calibration* is required to determine the external configuration of the sensor with respect to some reference frame.
 \end{definition}
 
@@ -67,13 +80,30 @@ TODO: add a picture with basic feature detections
 
 ### State Estimation {#state-estimation}
 
-Now that we have used our sensors to generate a set of meaningful measurements, we need to combine these measurements together to produce an estimate of the underlying hidden state of the robot and possibly to environment.
+Now that we have used our sensors to generate a set of meaningful measurements, we need to combine these measurements together to produce an estimate of the underlying hidden *state* of the robot and possibly to environment.
+
+\begin{definition}[State]\label{def:state}
+The state $\state_t \in \statesp$ is the value of all variables of intereset at time $t$.
+\end{definition}
+
+What variables are maintained in the statespace $\statesp$ depends on the problem at hand. For example we may just be interested in a single robot's configuration in the plane, in which case $\state_t \equiv \pose_t$. However, in other cases, such as simultaneous localization and mapping, me may also be tracking the map in the state space. 
+
+According to Bayesian principles, any system parameters that are not fully known and deterministic should be maintained in the state space. 
+
+In general, we do not have direct access to values in $\state$, instead we rely on our (noisy) sensor measurements to tell us something about them, and then we *infer* the values. 
 
 
-### Planning and Control {#planning-control}
 
-State->control
 
+
+### Navigation and Planning {#navigation-planning}
+
+State->reference
+
+
+### Control
+
+reference->control value
 
 ### Actuation {#actuation}
 
@@ -87,5 +117,19 @@ Control applied to vehicle
 
 
 ## Advanced Building Blocks of Autonomy {#advanced-blocks}
+
+The basic blocks described 
+
+### Object Detection {#object-detection}
+
+One key requirement is the ability fo 
+
+### Visual Odometry
+
+### SLAM {#slam}
+
+### Scene Segmentation
+
+### Mobility on Demand / Fleet-level optimization {#mobility-on-demand}
 
 
