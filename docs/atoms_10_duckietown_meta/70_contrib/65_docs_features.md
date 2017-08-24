@@ -80,9 +80,7 @@ Examples of all environments follow.
 Lorem
 &#92;end{definition}</code></pre>
 
-\begin{definition}    &#92;endlabel{def:lorem}
-Lorem
-&#92;end{definition}
+\begin{definition}\label{def:lorem}Lorem\end{definition}
 
   <pre><code>&#92;begin{proposition}   \label{prop:lorem}
 Lorem
@@ -96,7 +94,7 @@ Lorem
 
 \begin{remark}\label{rem:lorem}Lorem\end{remark}
 
-  <pre><code>&#92;begin{problem}    &#92;endlabel{prob:lorem}
+  <pre><code>&#92;begin{problem}    &#92;label{prob:lorem}
 Lorem
 &#92;end{problem}</code></pre>
 
@@ -160,14 +158,14 @@ This uses `align` and contains  \eqref{eq:two} and \eqref{eq:three}.
 We can refer to equations, such as \eqref{eq:one}:
 
 \<span/>begin{equation}
-    2a = a + a          &#92;endlabel{eq:one}
+    2a = a + a          &#92;label{eq:one}
 \<span/>end{equation}
 
 This uses `align` and contains  \eqref{eq:two} and \eqref{eq:three}.
 
 \<span/>begin{align}
-    a &amp;= b       &#92;endlabel{eq:two} \\
-      &amp;= c       &#92;endlabel{eq:three}
+    a &amp;= b       &#92;label{eq:two} \\
+      &amp;= c       &#92;label{eq:three}
 \<span/>end{align}
 </code>
 </pre>
@@ -854,16 +852,34 @@ This is done by using the tag `display-file`.
 
 For example, you can put a copy of `pkg_name/src/subscriber_node.py` using:
 
-    <display-file src="github:org=duckietown,repo=Software,path=pkg_name/src/subscriber_node.py"/>
+    <display-file src="
+        github:org=duckietown,
+        repo=Software,
+        path=pkg_name/src/subscriber_node.py
+    "/>
 
 and the result is the following automatically generated listing:
 
-<display-file src="github:org=duckietown,repo=Software,path=pkg_name/src/subscriber_node.py"/>
+<display-file src="github:
+    org=duckietown,
+    repo=Software,
+    path=pkg_name/src/subscriber_node.py
+"/>
 
 If you use the `from_text` and `to_text` (or `from_line` and `to_line`), you can actually display part of a file. For example:
 
-    <display-file src="github:org=duckietown,repo=Software,path=pkg_name/src/subscriber_node.py,from_text=Initialize,to_text=spin"/>
+    <display-file src="
+        github:org=duckietown,
+        repo=Software,
+        path=pkg_name/src/subscriber_node.py,
+        from_text=Initialize,
+        to_text=spin
+        "/>
 
 creates the following automatically generated listing:
 
-<display-file src="github:org=duckietown,repo=Software,path=pkg_name/src/subscriber_node.py,from_text=Initialize,to_text=spin"/>
+<display-file src="github:org=duckietown,
+repo=Software,
+path=pkg_name/src/subscriber_node.py,
+from_text=Initialize,
+to_text=spin"/>

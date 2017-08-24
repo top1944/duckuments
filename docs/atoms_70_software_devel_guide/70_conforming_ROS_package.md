@@ -1,5 +1,7 @@
 # ROS package verification
 
+Assigned: Andrea
+
 This chapter describes formally what makes a conforming ROS package in the
 Duckietown software architecture.
 
