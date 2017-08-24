@@ -20,22 +20,30 @@ Results:  An assembled Duckiebot in configuration `C0+wjd`.
 </div>
 
 # Part A - Assembling the car - bottom part
+<br>
+
 Open the Duckiebox package (magician chassis – DG007), and you won’t need them all. Take out the following materials:
 * Chassis-bottom, Chassis-up (1+1 pieces)
 * Motor (2 pieces), motor holders (4 pieces)
 * Wheels (2 pieces), Omni wheel (1 pieces)
 * all Spacers and screw inside of the packages. Screwdriver (1x)
 
-![duckiebot_components](https://github.com/Shiying99/duckietown_photos/blob/master/duckiebot_components.PNG)
-_Figure: Components in Duckiebot package.  **Note**: You won’t need the battery holder and speed board holder (on the right side). Ignore the speed board holder in the image._
+<div figure-id="duckiebot_components" figure-caption="Components in Duckiebot package.">
+     <img src="duckiebot_components.PNG" style='width: 15em'/>
+</div>
+
+_**Note**: You won’t need the battery holder and speed board holder (on the right side). Ignore the speed board holder in the image._
 
 <br/><br/>
 
 ## Motor + chassis bottom
 Insert motor holders on the chassis-bottom and put the motors as below (with the longest screws M3*30 and M3 nuts). Ignore the speed board holder in the image.
 
-![motors](https://github.com/Shiying99/duckietown_photos/blob/master/motors.jpg)
-_Figure: Components for mounting the motor_
+<div figure-id="motors" figure-caption=" Components for mounting the motor">
+     <img src="motors.jpg" style='width: 15em'/>
+</div>
+
+
 
 ![scratch_motors](https://github.com/Shiying99/duckietown_photos/blob/master/scratch_motors.png)
 ![motors1](https://github.com/Shiying99/duckietown_photos/blob/master/motors1.jpg)
