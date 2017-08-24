@@ -14,8 +14,9 @@ jobs:
                 pip install -U decorator>=4.1.0
 
         - run:
-            name: checkoutduckuments-dist
-            command: make duckuments-dist
+            name: check out duckuments-dist
+            command:
+                mkdir duckuments-dist
 
         - run:
             name: checkout MCDP
