@@ -2,7 +2,7 @@
 
 Assigned: Liam
 
-In this chapter we will introduce some basic concepts ubiquitous in autonomous vehicle navigation. 
+In this chapter we will introduce some basic concepts ubiquitous in autonomous vehicle navigation.
 
 
 ## Autonomous Vehicles in the News {#autonomous-vehicles-news}
@@ -37,17 +37,17 @@ In general, sensors have two major types. *Passive* sensors generate measurement
 
 ### Raw Data Processing {#data-processing}
 
-The raw data that is input from a sensor needs to be  processed in order to become useful and even understandandable to a human. 
+The raw data that is input from a sensor needs to be  processed in order to become useful and even understandandable to a human.
 
 First, **calibration** is usually required to convert convert units, for example from a voltage to a physical quantity. As a simple example consider a thermometer, which measures temperature via an expanding liquid (usually mercury). The calibration is the known mapping from amount of expansion of liquid to temperature. In this case it is a linear mapping and is used to put the markings on the thermometer that make it useful as a sensor.
 
 We will distiguish between two fundamentally types of calibrations.
 
-\begin{definition}[Intrinsic Calibration]{def:intrinsic-calibration}
+\begin{definition}[Intrinsic Calibration]\label{def:intrinsic-calibration}
 An *intrinsic calibration* is required to determine sensor-specific paramaters that are internal to a specific sensor.
 \end{definition}
 
-\begin{definition}[Extrinsic Calibration]{def:extrinsic-calibration}
+\begin{definition}[Extrinsic Calibration]\label{def:extrinsic-calibration}
 An *extrinsic calibration* is required to determine the external configuration of the sensor with respect to some reference frame.
 \end{definition}
 
@@ -87,5 +87,3 @@ Control applied to vehicle
 
 
 ## Advanced Building Blocks of Autonomy {#advanced-blocks}
-
-
