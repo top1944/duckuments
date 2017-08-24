@@ -59,6 +59,7 @@ jobs:
             command:  |
                 cp -R fonts /usr/share/fonts/duckuments-fonts
                 fc-cache -f -v
+                # XXX: failure
                 #fc-list | grep STIX
                 #fc-list | grep Symbola
         - run:
