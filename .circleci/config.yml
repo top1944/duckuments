@@ -1,6 +1,6 @@
 version: 2
 jobs:
-    build:
+  build:
      docker:
         - image: andreacensi/duckietown-xenial-kinetic:7
 
@@ -33,11 +33,12 @@ jobs:
                 sudo apt-get install lyx
                 lyx --version
 
+
         - run:
             name: prince
             command:
                 wget https://www.princexml.com/download/prince_11.3-1_ubuntu16.04_amd64.deb
-                
+
                 dpkg -i prince_11.3-1_ubuntu16.04_amd64.deb
 
         - run:
