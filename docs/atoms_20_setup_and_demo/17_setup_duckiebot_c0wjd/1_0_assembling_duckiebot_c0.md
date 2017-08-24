@@ -19,7 +19,7 @@ Results:  An assembled Duckiebot in configuration `C0+wjd`.
 
 </div>
 
-# Part A - Assembling the car - bottom part
+## Part A - Assembling the car - bottom part
 
 
 Open the Duckiebox package (magician chassis – DG007), and you won’t need them all. Take out the following materials:
@@ -36,7 +36,7 @@ _**Note**: You won’t need the battery holder and speed board holder (on the ri
 
 <br/><br/>
 
-## Motor + chassis bottom
+### Motor + chassis bottom
 Insert motor holders on the chassis-bottom and put the motors as below (with the longest screws M3*30 and M3 nuts). Ignore the speed board holder in the image.
 
 <div figure-id="motors" figure-caption=" Components for mounting the motor">
@@ -57,7 +57,7 @@ _**Note 2**: if your Magician Chassis package has unsoldered motor wires, you wi
 
 <br/><br/>
 
-## Assemble the wheels
+### Assemble the wheels
 Plug in the wheels to the motor as follows (no screws needed):
 
 <div figure-id="scratch_wheels" figure-caption=" ">
@@ -70,7 +70,7 @@ Plug in the wheels to the motor as follows (no screws needed):
 
 <br/><br/>
 
-## Assemble the omni wheels
+### Assemble the omni wheels
 
 <div figure-id="scratch_omni" figure-caption=" ">
      <img src="scratch_omni.png" style='width: 15em'/>
@@ -82,7 +82,7 @@ Plug in the wheels to the motor as follows (no screws needed):
 
 <br/><br/>
 
-## Put the spacers on the chassis
+### Put the spacers on the chassis
 Put the car upright (omni wheel pointing towards the table) and arrange wires so that they go through the center rectangle. Put **4 spacers with 4 of M3*6 screws** on each corner as below.
 
 <div figure-id="screws" figure-caption=" ">
@@ -100,7 +100,7 @@ Put the car upright (omni wheel pointing towards the table) and arrange wires so
 <br/><br/>
 
 
-# Part B - Assembling the RPI-3, camera, and HATs
+## Part B - Assembling the RPI-3, camera, and HATs
 **Materials:**
 * Chassis-up,
 * Camera and camera mount,
