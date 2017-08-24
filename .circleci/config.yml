@@ -16,11 +16,11 @@ jobs:
         - run:
             name: NPM
             command: |
-                curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash
+                curl -sL https://deb.nodesource.com/setup_6.x | bash
 
                 apt-get update
 
-                sudo apt-get -qq -y install build-essential nodejs
+                apt-get -qq -y install build-essential nodejs
 
                 /usr/bin/npm config set loglevel warn
 
@@ -32,7 +32,7 @@ jobs:
 
                 add-apt-repository -y ppa:lyx-devel/release
 
-                sudo apt-get install lyx
+                apt-get install lyx
 
                 lyx --version
         - run:
@@ -44,7 +44,7 @@ jobs:
         - run:
             name: NPM
             command: |
-                 npm install MathJax-node jsdom@9.3 less
+                npm install MathJax-node jsdom@9.3 less
         - run:
             name: check out duckuments-dist
             command: |
