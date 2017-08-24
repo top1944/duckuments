@@ -28,11 +28,9 @@ jobs:
 
                 nodejs --version
 
-                add-apt-repository -y ppa:lyx-devel/release
-
-                apt-get install lyx
-
-                lyx --version
+                #add-apt-repository -y ppa:lyx-devel/release
+                #apt-get install lyx
+                #lyx --version
         - run:
             name: prince
             command: |
