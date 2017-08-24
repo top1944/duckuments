@@ -26,6 +26,11 @@ jobs:
                 cd mcdp && python setup.py develop
 
         - run:
+            name: checkout duckietown repository
+            command: |
+                git clone -b master --depth 1 git@github.com:duckietown/Software duckietown
+
+        - run:
             name: run tests
             command: |
                 mkdir -p duckuments-dist
