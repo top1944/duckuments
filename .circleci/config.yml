@@ -13,7 +13,16 @@ jobs:
                 apt-get install -y pdftk bibtex2html libxml2-dev libxslt1-dev libffi6 libffi-dev python-dev python-numpy python-matplotlib virtualenv
 
                 pip install -U decorator>=4.1.0
-
+        - run:
+            name: prince
+            command:
+                wget https://www.princexml.com/download/prince_11.3-1_ubuntu16.04_amd64.deb
+                dpkg -i prince_11.3-1_ubuntu16.04_amd64.deb
+                
+        - run:
+            name: NPM
+            command:
+                 npm install MathJax-node jsdom@9.3 less
 
         - run:
             name: check out duckuments-dist
