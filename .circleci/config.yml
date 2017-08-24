@@ -59,8 +59,8 @@ jobs:
             command:  |
                 cp -R fonts /usr/share/fonts/duckuments-fonts
                 fc-cache -f -v
-                fc-list | grep STIX
-                fc-list | grep Symbola
+                #fc-list | grep STIX
+                #fc-list | grep Symbola
         - run:
             name: Compile HTML version
             command: |
