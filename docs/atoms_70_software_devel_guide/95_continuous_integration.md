@@ -1,6 +1,6 @@
 # Continuous integration {#continuous-integration}
 
-TODO
+Assigned: Andrea
 
 ## Create a CircleCI account
 

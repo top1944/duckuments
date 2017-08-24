@@ -10,7 +10,7 @@ tmp_files2=out/tmp2
 tex-symbols=docs/symbols.tex
 duckietown-software=duckietown
 
-src="docs:$(duckietown-software)/catkin_ws/src"
+src="docs:$(duckietown-software)/catkin_ws/src:$(duckietown-software)/Makefiles"
 
 all: compile compile-pdf
 
@@ -59,7 +59,7 @@ process-svg-figs:
 	mv *.pdf docs/generated_pdf_figs
 
 clean-svg-figs:
-	rm docs/generated_pdf_figs/*
+	rm -f docs/generated_pdf_figs/*
 
 duckuments-dist:
 	# clone branch "dist"
