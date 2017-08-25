@@ -8,6 +8,7 @@ jobs:
         - run:
             name: deps
             command: |
+                export DEBIAN_FRONTEND=noninteractive 
                 apt install -y gnupg ghostscript
 
                 pip install -U decorator>=4.1.0
