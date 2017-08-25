@@ -54,10 +54,23 @@ check-duckietown-software:
 		exit 1; \
 	fi;
 
-process-svg-figs:
-	python process_svg_figs.py
-	rm *.tex *.aux *.pdf_tex *.log *_tmp.pdf
-	mv *.pdf docs/generated_pdf_figs
+generated_figs=docs/generated_pdf_fig
+
+inkscape2=/Applications/Inkscape.app/Contents//Resources/bin/inkscape
+
+process-svg-clean:
+	-rm -f $(generated_figs)/*pdf
+
+process-svg:
+	@which  inkscape || which $(inkscape2) || ( \
+		echo "You need to install inkscape."; \
+		exit 2)
+	@which  pdfcrop || (echo "You need to install pdfcrop."; exit 1)
+	@which  pdflatex || (echo "You need to install pdflatex."; exit 1)
+
+
+	python -m mcdp_docs.process_svg docs/ $(generated_figs) $(tex-symbols)
+
 
 clean-svg-figs:
 	rm -f docs/generated_pdf_figs/*
@@ -184,8 +197,8 @@ split-slow:
 		-o $(tmp_files)/split \
 		-c " config echo 1; config colorize 0; rmake" \
 		--mathjax \
-		--preamble $(tex-symbols) 
-		
+		--preamble $(tex-symbols)
+
 split:
 	# rm -f $(dist_dir)/duckiebook/*html
 	 mcdp-split \
@@ -194,6 +207,6 @@ split:
 		-o $(tmp_files)/split \
 		-c " config echo 1; config colorize 1; rparmake" \
 		--mathjax \
-		--preamble $(tex-symbols) 
-		
+		--preamble $(tex-symbols)
+
 #--disqus

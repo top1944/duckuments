@@ -52,9 +52,16 @@ On Ubuntu 16.04, these are the dependencies to install:
 
 ### Download the `duckuments` repo
 
-Download the `duckietown/duckuments` repository in that directory:
+Download the `duckietown/duckuments` repository in the `~/duckuments` directory:
 
-    $ git clone git@github.com:duckietown/duckuments ~/duckuments
+    $ git lfs clone --depth 100 git@github.com:duckietown/duckuments duckuments-on-ext4
+
+Here, note we are using `git lfs clone` -- it's much faster, because it downloads
+the Git LFS files in parallel.
+
+If it fails, it means that you do not have Git LFS installed. See [](#git-lfs).
+
+The command `--depth 100` tells it we don't care about the whole history.
 
 
 ### Setup the virtual environment
