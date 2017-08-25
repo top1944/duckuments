@@ -2,13 +2,13 @@ version: 2
 jobs:
     build:
         docker:
-        - image: andreacensi/duckietown-xenial-kinetic:11
+        - image: andreacensi/duckietown-xenial-kinetic:13
         steps:
         - checkout
         - run:
             name: deps
             command: |
-                export DEBIAN_FRONTEND=noninteractive 
+                export DEBIAN_FRONTEND=noninteractive
                 apt install -y gnupg ghostscript
 
                 pip install -U decorator>=4.1.0
