@@ -15,6 +15,29 @@ jobs:
                 pip install -U decorator>=4.1.0
 
                 # pip install  numpy lxml matplotlib pillow junit_xml
+        - run:
+            name: check out duckuments-dist
+            command: |
+                mkdir -p duckuments-dist
+        - run:
+            name: checkout MCDP
+            command: |
+                git clone -b duckuments git@github.com:AndreaCensi/mcdp
+                cd mcdp && python setup.py develop
+        - run:
+            name: checkout duckietown repository
+            command: |
+                git clone -b master --depth 1 git@github.com:duckietown/Software /tmp/git_repos/duckietown/Software/master
+                ln -s /tmp/git_repos/duckietown/Software/master/ duckietown
+        - run:
+            name: Compile HTML version
+            command: |
+                make compile
+
+
+        - store_artifacts:
+              path: duckuments-dist
+              destination: duckuments-dist
 
 
         - run:
@@ -39,28 +62,15 @@ jobs:
                 #apt-get install lyx
                 #lyx --version
         - run:
+            name: NPM
+            command: |
+                npm install MathJax-node jsdom@9.3 less
+        - run:
             name: prince
             command: |
                 wget https://www.princexml.com/download/prince_11.3-1_ubuntu16.04_amd64.deb
 
                 dpkg -i prince_11.3-1_ubuntu16.04_amd64.deb
-        - run:
-            name: NPM
-            command: |
-                npm install MathJax-node jsdom@9.3 less
-        - run:
-            name: check out duckuments-dist
-            command: |
-                mkdir -p duckuments-dist
-        - run:
-            name: checkout MCDP
-            command: |
-                git clone -b duckuments git@github.com:AndreaCensi/mcdp
-                cd mcdp && python setup.py develop
-        - run:
-            name: checkout duckietown repository
-            command: |
-                git clone -b master --depth 1 git@github.com:duckietown/Software duckietown
         - run:
             name: install fonts
             command:  |
@@ -70,13 +80,10 @@ jobs:
                 #fc-list | grep STIX
                 #fc-list | grep Symbola
         - run:
-            name: Compile HTML version
-            command: |
-                make compile
-        - run:
             name: Compile PDF version
             command: |
                 make compile-pdf
+
         - store_artifacts:
-              path: duckuments-dist
-              destination: duckuments-dist
+            path: duckuments-dist
+            destination: duckuments-dist
