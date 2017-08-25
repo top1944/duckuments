@@ -29,7 +29,7 @@ Open the Duckiebox package (magician chassis – DG007), and you won’t need th
 * all Spacers and screw inside of the packages. Screwdriver (1x)
 
 <div figure-id="fig:duckiebot_components" figure-caption="Components in Duckiebot package.">
-     <img src="duckiebot_components.PNG" style='width: 15em'/>
+     <img src="duckiebot_components.png" style='width: 15em'/>
 </div>
 
 _**Note**: You won’t need the battery holder and speed board holder (on the right side). Ignore the speed board holder in the image._
