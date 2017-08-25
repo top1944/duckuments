@@ -8,8 +8,6 @@ jobs:
         - run:
             name: deps
             command: |
-                #apt-get install -y imagemagick pdftk bibtex2html libxml2-dev libxslt1-dev libffi6 libffi-dev python-dev python-numpy python-matplotlib virtualenv build-essential graphviz python-numpy python-yaml python-dev graphviz python-numpy python-yaml python-dev python-setproctitle python-psutil python-lxml python-matplotlib python-yaml python-pip python-tk idle python-pmw python-imaging imagemagick
-
                 apt install -y gnupg
 
                 pip install -U decorator>=4.1.0
@@ -19,10 +17,11 @@ jobs:
         - run:
             command: |
                 mkdir -p out
+                echo ONE
                 convert docs/generated_pdf_fig/sample.pdf out/sample.png
-
+                echo TWO
                 convert -density 100 docs/generated_pdf_fig/sample.pdf out/sample.png
-
+                echo THREE
                 convert -density 100 docs/generated_pdf_fig/sample.pdf -background white -alpha remove -alpha off -shave 1 out/sample.png
         - run:
             name: check out duckuments-dist
