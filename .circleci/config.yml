@@ -14,11 +14,11 @@ jobs:
 
                 # pip install  numpy lxml matplotlib pillow junit_xml
 
-                apt install software-properties-common
+                apt install -y software-properties-common
                 add-apt-repository ppa:git-core/ppa
                 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
                 apt update
-                apt install git-lfs
+                apt install -y git-lfs
 
         - run:
             name: Check Programs
