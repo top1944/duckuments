@@ -18,6 +18,10 @@ jobs:
 
         - run:
             command: |
+                convert docs/generated_pdf_fig/sample.pdf duckuments-dist/sample.png
+
+                convert -density 100 docs/generated_pdf_fig/sample.pdf duckuments-dist/sample.png
+
                 convert -density 100 docs/generated_pdf_fig/sample.pdf -background white -alpha remove -alpha off -shave 1 duckuments-dist/sample.png
         - run:
             name: check out duckuments-dist
