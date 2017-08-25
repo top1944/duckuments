@@ -14,7 +14,7 @@ jobs:
 
                 pip install -U decorator>=4.1.0
 
-                pip install -y numpy lxml matplotlib pillow junit_xml
+                # pip install  numpy lxml matplotlib pillow junit_xml
 
 
         - run:
