@@ -54,14 +54,23 @@ check-duckietown-software:
 		exit 1; \
 	fi;
 
-process-svg-figs:
-	@which  inkscape || ( \
+generated_figs=docs/generated_pdf_fig
+
+inkscape2=/Applications/Inkscape.app/Contents//Resources/bin/inkscape
+
+process-svg-clean:
+	-rm -f $(generated_figs)/*pdf
+
+process-svg:
+	@which  inkscape || which $(inkscape2) || ( \
 		echo "You need to install inkscape."; \
 		exit 2)
+	@which  pdfcrop || (echo "You need to install pdfcrop."; exit 1)
+	@which  pdflatex || (echo "You need to install pdflatex."; exit 1)
 
-	python process_svg_figs.py
-	rm *.tex *.aux *.pdf_tex *.log *_tmp.pdf
-	mv *.pdf docs/generated_pdf_figs
+
+	python -m mcdp_docs.process_svg docs/ $(generated_figs) $(tex-symbols)
+
 
 clean-svg-figs:
 	rm -f docs/generated_pdf_figs/*
