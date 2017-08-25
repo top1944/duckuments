@@ -15,10 +15,13 @@ jobs:
                 # pip install  numpy lxml matplotlib pillow junit_xml
 
                 apt install -y software-properties-common
+                echo adding repository
                 add-apt-repository -y ppa:git-core/ppa
+                echo adding git lfs
                 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+                echo APT update
                 apt update
-                
+                echo APT install
                 apt install -y git-lfs
 
         - run:
