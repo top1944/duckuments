@@ -38,6 +38,15 @@ check-programs:
 		echo "You need to run 'python setup.py develop' from mcdp/."; \
 		exit 4)
 
+	@which  convert || ( \
+		echo "You need to install ImageMagick"; \
+		exit 2)
+
+	@which  gs || ( \
+		echo "You need to install Ghostscript (used by ImageMagick)."; \
+		exit 2)
+
+
 
 
 check-duckietown-software:
