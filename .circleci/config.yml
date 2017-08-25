@@ -17,6 +17,7 @@ jobs:
 
         - run:
             command: |
+                cat ./docs/generated_pdf_fig/sample.pdf
                 git lfs pull
 
         - run:
