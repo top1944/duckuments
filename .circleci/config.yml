@@ -34,11 +34,9 @@ jobs:
             command: |
                 make compile
 
-
         - store_artifacts:
               path: duckuments-dist
               destination: duckuments-dist
-
 
         - run:
             name: NPM
