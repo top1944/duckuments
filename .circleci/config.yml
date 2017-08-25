@@ -16,24 +16,6 @@ jobs:
                 # pip install  numpy lxml matplotlib pillow junit_xml
 
         - run:
-            command: |
-                cat ./docs/generated_pdf_fig/sample.pdf
-                git lfs pull
-
-        - run:
-            command: |
-                vdir ./docs/generated_pdf_fig/sample.pdf
-                md5sum ./docs/generated_pdf_fig/sample.pdf
-                mkdir -p out
-                convert --version
-                echo ONE
-                convert -verbose docs/generated_pdf_fig/sample.pdf out/sample.png
-                echo TWO
-                convert -verbose  -density 100 docs/generated_pdf_fig/sample.pdf out/sample.png
-                echo THREE
-                convert -verbose -density 100 docs/generated_pdf_fig/sample.pdf -background white -alpha remove -alpha off -shave 1 out/sample.png
-
-        - run:
             name: Check Programs
             command: make check-programs
         - run:
