@@ -48,7 +48,8 @@ check-duckietown-software:
 		echo 'Please create a link "$(duckietown-software)" to the Software repository.'; \
 		echo '(This is used to include the package documentation)'; \
 		echo ''; \
-		echo '      ln -s DUCKIETOWN_ROOT $(duckietown-software)'; \
+		echo 'Assuming the usual layout, this is:'; \
+		echo '      ln -s  ~/duckietown $(duckietown-software)'; \
 		echo ''; \
 		exit 1; \
 	fi;
@@ -183,8 +184,8 @@ split-slow:
 		-o $(tmp_files)/split \
 		-c " config echo 1; config colorize 0; rmake" \
 		--mathjax \
-		--preamble $(tex-symbols) \
-		--disqus
+		--preamble $(tex-symbols) 
+		
 split:
 	# rm -f $(dist_dir)/duckiebook/*html
 	 mcdp-split \
@@ -193,5 +194,6 @@ split:
 		-o $(tmp_files)/split \
 		-c " config echo 1; config colorize 1; rparmake" \
 		--mathjax \
-		--preamble $(tex-symbols) \
-		--disqus
+		--preamble $(tex-symbols) 
+		
+#--disqus
