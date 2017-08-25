@@ -183,8 +183,8 @@ split-slow:
 		-o $(tmp_files)/split \
 		-c " config echo 1; config colorize 0; rmake" \
 		--mathjax \
-		--preamble $(tex-symbols) \
-		--disqus
+		--preamble $(tex-symbols) 
+		
 split:
 	# rm -f $(dist_dir)/duckiebook/*html
 	 mcdp-split \
@@ -193,5 +193,6 @@ split:
 		-o $(tmp_files)/split \
 		-c " config echo 1; config colorize 1; rparmake" \
 		--mathjax \
-		--preamble $(tex-symbols) \
-		--disqus
+		--preamble $(tex-symbols) 
+		
+#--disqus
