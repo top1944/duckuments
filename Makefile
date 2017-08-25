@@ -48,7 +48,8 @@ check-duckietown-software:
 		echo 'Please create a link "$(duckietown-software)" to the Software repository.'; \
 		echo '(This is used to include the package documentation)'; \
 		echo ''; \
-		echo '      ln -s DUCKIETOWN_ROOT $(duckietown-software)'; \
+		echo 'Assuming the usual layout, this is:'; \
+		echo '      ln -s  ~/duckietown $(duckietown-software)'; \
 		echo ''; \
 		exit 1; \
 	fi;
