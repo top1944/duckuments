@@ -22,9 +22,8 @@ jobs:
             command: |
                 echo "Before installing NPM"
                 nodejs --version || echo "No nodejs installed"
-
-                curl -sL https://deb.nodesource.com/setup_6.x > a.sh
-                bash a.sh
+                gpg --version
+                curl -sL https://deb.nodesource.com/setup_6.x | sudo bash -E
 
                 apt-get update
 
