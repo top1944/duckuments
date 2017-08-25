@@ -10,11 +10,11 @@ jobs:
             command: |
                 #apt-get install -y imagemagick pdftk bibtex2html libxml2-dev libxslt1-dev libffi6 libffi-dev python-dev python-numpy python-matplotlib virtualenv build-essential graphviz python-numpy python-yaml python-dev graphviz python-numpy python-yaml python-dev python-setproctitle python-psutil python-lxml python-matplotlib python-yaml python-pip python-tk idle python-pmw python-imaging imagemagick
 
-                apt install gnupg
+                apt install -y gnupg
 
                 pip install -U decorator>=4.1.0
 
-                pip install numpy lxml matplotlib pillow junit_xml
+                pip install -y numpy lxml matplotlib pillow junit_xml
 
 
         - run:
@@ -22,7 +22,7 @@ jobs:
             command: |
                 echo "Before installing NPM"
                 nodejs --version || echo "No nodejs installed"
-                
+
                 curl -sL https://deb.nodesource.com/setup_6.x > a.sh
                 bash a.sh
 
