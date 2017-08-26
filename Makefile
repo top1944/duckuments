@@ -86,21 +86,32 @@ clean-svg-figs:
 
 duckuments-dist:
 	# clone branch "dist"
-	git clone --depth 3 -b gh-pages git@github.com:duckietown/duckuments.git duckuments-dist
+	git clone --depth 3  git@github.com:duckietown/duckuments-dist.git duckuments-dist
 
+log=duckuments-dist/compilation.log
 automatic-compile:
 	git pull
-	$(MAKE) clean
+	#$(MAKE) clean
+	touch $(log)
+	echo "\n\nStarting" >> $(log)
+	date >> $(log)
 	$(MAKE) compile-slow
+	echo "  succeded html " >> $(log)
+	
 	-$(MAKE) upload
+	echo "  succeded html upload " >> $(log)
 	$(MAKE) compile-pdf-slow
+	echo "  succeded PDF  " >> $(log)
 	-$(MAKE) upload
-
+	echo "  succeded PDF upload" >> $(log)
+	date >> $(log)
+	echo "Done." >> $(log)
 upload:
 	#git -C duckuments-dist pull -X ours
 	echo ignoring errors
+
 	-git -C duckuments-dist add $(duckuments-branch)
-	-git -C duckuments-dist commit -a -m "automatic compilation"
+	-git -C duckuments-dist commit -a -m "automatic compilation $(shell date)"
 	-git -C duckuments-dist push --force
 
 
