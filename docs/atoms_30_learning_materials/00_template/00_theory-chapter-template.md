@@ -76,7 +76,7 @@ D &= 0.
 Remember you can use the `problem` environment of $\LaTeX$ to formally state a problem:
 
 \begin{problem}[PID]\label{prob:label-prob}
-Given a system \eqref{eq:system} and measurements of the output $\tilde{y}_t = y_t + n_t, n_t \textasciitilde \cal{N}(0,\sigma)$, find a set of PID coefficients that meet the specified requirements for: 
+Given a system \eqref{eq:system} and measurements of the output $\tilde{y}_t = y_t + n_t, n_t \sim \cal{N}(0,\sigma)$, find a set of PID coefficients that meet the specified requirements for: 
 - stability, 
 - performance, 
 - robustness.
