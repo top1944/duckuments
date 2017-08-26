@@ -4,12 +4,11 @@
 
 ## Goals and objectives
 
-Duckietown is a robotics educations and outreach effort.
+Duckietown is a robotics education and outreach effort.
 
-The most tangible goal of the project is to provide a low-cost educational platform for learning autonomy, consisting of the Duckiebots, an autonomous robot, and the Duckietowns,
-the infrastructure in which the Duckiebots navigate.
+The most tangible goal of the project is to provide a low-cost educational platform for learning about autonomous systems, consisting of lectures and other learning material, the Duckiebot autonomous robots, and the Duckietowns, which constitute the infrastructure in which the Duckiebots navigate.
 
-However, we focus on the *learning experience* as a whole, by providing a set of modules teaching plans and other guides, as well as a curated role-play experience.
+We focus on the *learning experience* as a whole, by providing a set of modules, teaching plans, and other guides, as well as a curated role-play experience.
 
 We have two targets:
 
