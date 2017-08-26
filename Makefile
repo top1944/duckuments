@@ -81,8 +81,6 @@ process-svg:
 	python -m mcdp_docs.process_svg docs/ $(generated_figs) $(tex-symbols)
 
 
-clean-svg-figs:
-	rm -f docs/generated_pdf_figs/*
 
 duckuments-dist:
 	# clone branch "dist"

@@ -319,13 +319,11 @@ You can also create subfigures, using the following syntax.
 <div figure-id="fig:big">
     <figcaption>Caption of big figure</figcaption>
 
-    <div figure-id="subfig:first">
-        <figcaption>Caption 1</figcaption>
+    <div figure-id="subfig:first" figure-caption="Caption 1">
         <p>Content of first subfig</p>
     </div>
 
-    <div figure-id="subfig:second">
-        <figcaption>Caption 2</figcaption>
+    <div figure-id="subfig:second" figure-caption="Caption 2">
         <p>Content of second subfig</p>
     </div>
 </div>
@@ -334,13 +332,11 @@ You can also create subfigures, using the following syntax.
 <div figure-id="fig:big">
     <figcaption>Caption of big figure</figcaption>
 
-    <div figure-id="subfig:first">
-        <figcaption>Caption 1</figcaption>
+    <div figure-id="subfig:first" figure-caption="Caption 1">
         <p>Content of first subfig</p>
     </div>
 
-    <div figure-id="subfig:second">
-        <figcaption>Caption 2</figcaption>
+    <div figure-id="subfig:second" figure-caption="Caption 2">
         <p>Content of second subfig</p>
     </div>
 </div>
