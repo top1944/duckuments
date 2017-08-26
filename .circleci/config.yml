@@ -81,12 +81,12 @@ jobs:
             name: NPM
             command: |
                 npm install MathJax-node jsdom@9.3 less
-        - run:
-            name: prince
-            command: |
-                wget https://www.princexml.com/download/prince_11.3-1_ubuntu16.04_amd64.deb
-
-                dpkg -i prince_11.3-1_ubuntu16.04_amd64.deb
+# - run:
+#     name: prince
+#     command: |
+#         wget https://www.princexml.com/download/prince_11.3-1_ubuntu16.04_amd64.deb
+#
+#         dpkg -i prince_11.3-1_ubuntu16.04_amd64.deb
         - run:
             name: install fonts
             command:  |
