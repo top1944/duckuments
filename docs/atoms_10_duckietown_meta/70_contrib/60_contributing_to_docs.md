@@ -191,7 +191,14 @@ Step 2 is there so you know that the bot will not encounter errors.
 
 ## \*Deploying the documentation
 
-Note: This part is now done by a bot, so you don't need to do it manually.
+Note: This part is now done by a bot, so it has been removed by the documentation.
+
+The book is published to a different [repository called `duckuments-dist`](https://github.com/duckietown/duckuments-dist) and from there
+published as `book.duckietown.org`.
+
+
+
+<!-- don't need to do it manually.
 
 To deploy the documentation, jump into the `DUCKUMENTS/duckuments-dist` directory.
 
@@ -207,7 +214,7 @@ then one of the steps before was done incorrectly.
 Now, after triple checking that you are in the `gh-pages` branch, you can
 use `git status` to see the files that were added or modified,
 and simply use `git add`, `git commit` and `git push` to push the files
-to Github.
+to Github. -->
 
 ## \*Compiling the PDF version
 

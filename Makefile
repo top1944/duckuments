@@ -86,7 +86,8 @@ clean-svg-figs:
 
 duckuments-dist:
 	# clone branch "dist"
-	git clone --depth 3  git@github.com:duckietown/duckuments-dist.git duckuments-dist
+	git clone --depth 3 git@github.com:duckietown/duckuments-dist.git duckuments-dist
+
 
 log=duckuments-dist/compilation.log
 automatic-compile:
@@ -97,7 +98,7 @@ automatic-compile:
 	date >> $(log)
 	$(MAKE) compile-slow
 	echo "  succeded html " >> $(log)
-	
+
 	-$(MAKE) upload
 	echo "  succeded html upload " >> $(log)
 	$(MAKE) compile-pdf-slow
