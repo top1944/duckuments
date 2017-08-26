@@ -38,23 +38,53 @@ At [this page](https://circleci.com/gh/duckietown) you can see the summary of th
 
 <img figure-id="fig:circleci" figure-caption="The CircleCI service" src='circleci-screenshot.png' style='width: 70%'/>
 
-## How to make changes to `master`
+## How to make changes to `master`: pull requests
 
 It is not possible to push on to the master branch directly.
 
-The workflow is as follows:
 
-1. You have a private branch, say `andrea-devel`.
-2. You work on your branch.
-3. Push often to your branch. Every time you push, CircleCI will run the tests and let you know if the tests are passing.
-4. When the tests pass, you create a "pull request". You can do this by going to the Github page for your branch and click 
-
- push that branch, and then merge your work using a pull request.
-
-Github will let you merge the pull request only if the tests pass.
+See: [Github documentation about pull requests](https://help.github.com/articles/about-pull-request-merges/).
 
 
-See: [Github documentation](https://help.github.com/articles/about-pull-request-merges/).
+The workflow is as follows.
+
+
+(1) You make a private branch, say `andrea-devel`.
+
+(2) You work on your branch.
+
+(3) Push often to your branch. Every time you push, CircleCI will run the tests and let you know if the tests are passing.
+
+(4) When the tests pass, you create a "pull request". You can do this by going to the Github page for your branch and click on the button "compare and pull request" ([](#fig:compare-and-pull)).
+
+
+<img figure-id="fig:compare-and-pull" figure-caption="Compare and pull request button" src='compare-and-pull.png' style='width: 70%'/>
+
+(5) You now have an opportunity to summarize all the changes you did so far ([](#fig:compare)). Click "create pull request".
+
+<img figure-id="fig:compare" figure-caption="Preparing the pull request" src='compare.png' style='width: 70%'/>
+
+(6) Now the pull request has been created. Other people can see and comment on it. However, it has not been merged yet.
+
+At this point, it might be that it says "Some checks haven't completed yet" ([](#fig:checks-in-progress)).
+Click "details" to see what's going on, or just wait.
+
+<img figure-id="fig:checks-in-progress" figure-caption="Wait for the checks to finish"
+ src='checks-in-progress.png' style='width: 70%'/>
+
+When it's done, you will see either a success message ([](#fig:checks-done)
+or a failure message ([](#fig:checks-failure)).
+
+
+<img figure-id="fig:checks-done" figure-caption="The tests are done"
+ src='checks-done.png' style='width: 70%'/>
+
+<img figure-id="fig:checks-failure" figure-caption="The tests have failed"
+  src='checks-failure.png' style='width: 70%'/>
+
+
+
+
 
 
 # Continuous integration {#continuous-integration}
