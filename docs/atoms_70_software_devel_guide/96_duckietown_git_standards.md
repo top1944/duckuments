@@ -4,7 +4,7 @@
 These are the conventions for the Duckietown repositories.
 
 
-## Never break the build
+## Never break the build {#continuous-integration}
 
 The `Software` and the `duckuments` repository use "continuous integration".
 
@@ -82,10 +82,25 @@ or a failure message ([](#fig:checks-failure)).
 <img figure-id="fig:checks-failure" figure-caption="The tests have failed"
   src='checks-failure.png' style='width: 70%'/>
 
+(7) At this point, you can click "squash and merge" to merge the changes into master ([](#fig:squash)).
+
+
+
+<img figure-id="fig:squash" figure-caption="The final step"
+  src='squash.png' style='width: 70%'/>
+
+
+If you see a message like "merge failed" ([](#merge-failed)), it probably means that somebody pushed into master; merge master into your branch and continue the process.
+
+
+<img figure-id="fig:merge-failed" figure-caption="Merge failed"
+  src='merge-failed.png' style='width: 70%'/>
 
 
 
 
+
+<!--
 
 # Continuous integration {#continuous-integration}
 
@@ -100,8 +115,4 @@ TODO
 [See here][build] to monitor the status of a build.
 
 
-[build]: https://circleci.com/gh/duckietown
-
-## Implementation
-
-TODO
+[build]: https://circleci.com/gh/duckietown -->
