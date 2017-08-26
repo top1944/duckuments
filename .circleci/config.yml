@@ -47,59 +47,54 @@ jobs:
             command: |
                 git clone -b master --depth 1 git@github.com:duckietown/Software /tmp/git_repos/duckietown/Software/master
                 ln -s /tmp/git_repos/duckietown/Software/master/ duckietown
+
         - run:
             name: Compile HTML version
             command: |
-                make compile-slow
+                make compile-html
 
         - store_artifacts:
               path: duckuments-dist
               destination: duckuments-dist
 
-        - run:
-            name: NPM
-            command: |
-                echo "Before installing NPM"
-                nodejs --version || echo "No nodejs installed"
-                gpg --version
-                curl -sL https://deb.nodesource.com/setup_6.x |  bash -E
-
-                apt-get update
-
-                apt-get -qq -y install build-essential nodejs
-
-                /usr/bin/npm config set loglevel warn
-
-                /usr/bin/npm --loglevel=silent install -g MathJax-node jsdom@9.3 less
-
-                nodejs --version
-
-                #add-apt-repository -y ppa:lyx-devel/release
-                #apt-get install lyx
-                #lyx --version
-        - run:
-            name: NPM
-            command: |
-                npm install MathJax-node jsdom@9.3 less
 # - run:
-#     name: prince
+#     name: NPM
 #     command: |
-#         wget https://www.princexml.com/download/prince_11.3-1_ubuntu16.04_amd64.deb
+#         echo "Before installing NPM"
+#         nodejs --version || echo "No nodejs installed"
+#         gpg --version
+#         curl -sL https://deb.nodesource.com/setup_6.x |  bash -E
 #
-#         dpkg -i prince_11.3-1_ubuntu16.04_amd64.deb
-        - run:
-            name: install fonts
-            command:  |
-                cp -R fonts /usr/share/fonts/duckuments-fonts
-                fc-cache -f -v
-                # XXX: failure
-                #fc-list | grep STIX
-                #fc-list | grep Symbola
-        - run:
-            name: Compile PDF version
-            command: |
-                make compile-pdf
-
-        - store_artifacts:
-            path: duckuments-dist
-            destination: duckuments-dist
+#         apt-get update
+#
+#         apt-get -qq -y install build-essential nodejs
+#
+#         /usr/bin/npm config set loglevel warn
+#
+#         /usr/bin/npm --loglevel=silent install -g MathJax-node jsdom@9.3 less
+#
+#         nodejs --version
+#
+#         #add-apt-repository -y ppa:lyx-devel/release
+#         #apt-get install lyx
+#         #lyx --version
+# - run:
+#     name: NPM
+#     command: |
+#         npm install MathJax-node jsdom@9.3 less
+# - run:
+#     name: install fonts
+#     command:  |
+#         cp -R fonts /usr/share/fonts/duckuments-fonts
+#         fc-cache -f -v
+#         # XXX: failure
+#         #fc-list | grep STIX
+#         #fc-list | grep Symbola
+# - run:
+#     name: Compile PDF version
+#     command: |
+#         make compile-pdf
+#
+# - store_artifacts:
+#     path: duckuments-dist
+#     destination: duckuments-dist
