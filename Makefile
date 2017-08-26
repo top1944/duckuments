@@ -86,7 +86,7 @@ clean-svg-figs:
 
 duckuments-dist:
 	# clone branch "dist"
-	git clone --depth 3 -b gh-pages git@github.com:duckietown/duckuments.git duckuments-dist
+	git clone --depth 3 git@github.com:duckietown/duckuments-dist.git duckuments-dist
 
 automatic-compile:
 	git pull

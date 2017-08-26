@@ -182,7 +182,7 @@ TODO: other LaTeX features supported
 The LaTeX symbols definitions are in a file called [`docs/symbols.tex`][symbols].
 
 
-[symbols]: https://github.com/duckietown/duckuments/blob/master/docs/symbols.tex
+[symbols]: github:org=Duckietown,repo=duckuments,path=docs/symbols.tex
 
 
 Put all definitions there; if they are centralized it is easier to check
