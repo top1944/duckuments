@@ -52,8 +52,23 @@ For an autonomous vehicle to function, it must achieve some level of performance
 
 ### Sensors {#sensors}
 
+
 <div figure-id="fig:sensors" figure-caption="Some common sensors used for autonomous navigation">
-  <img src="sensors.pdf" style='width: 30em'/>
+    <div figure-id="subfig:velo" figure-caption="Velodyne 3D Laser Scanner">
+        <img src="velo.svg" style='width: 20ex'/>
+    </div>
+    <div figure-id="subfig:camera" figure-caption="Camera">
+        <img src="camera.svg" style='width: 20ex'/>
+    </div>
+    <div figure-id="subfig:radar" figure-caption="Automotive Radar">
+        <img src="radar.svg" style='width: 20ex'/>
+    </div>
+    <div figure-id="subfig:gps" figure-caption="GPS Receiver">
+        <img src="gps.svg" style='width: 20ex'/>
+    </div>
+    <div figure-id="subfig:imu" figure-caption="Inertial Measurement Unit">
+        <img src="imu.svg" style='width: 20ex'/>
+    </div>
 </div>
 
 
