@@ -38,6 +38,15 @@ check-programs:
 		echo "You need to run 'python setup.py develop' from mcdp/."; \
 		exit 4)
 
+	@which  convert || ( \
+		echo "You need to install ImageMagick"; \
+		exit 2)
+
+	@which  gs || ( \
+		echo "You need to install Ghostscript (used by ImageMagick)."; \
+		exit 2)
+
+
 
 
 check-duckietown-software:
@@ -48,36 +57,62 @@ check-duckietown-software:
 		echo 'Please create a link "$(duckietown-software)" to the Software repository.'; \
 		echo '(This is used to include the package documentation)'; \
 		echo ''; \
-		echo '      ln -s DUCKIETOWN_ROOT $(duckietown-software)'; \
+		echo 'Assuming the usual layout, this is:'; \
+		echo '      ln -s  ~/duckietown $(duckietown-software)'; \
 		echo ''; \
 		exit 1; \
 	fi;
 
-process-svg-figs:
-	python process_svg_figs.py
-	rm *.tex *.aux *.pdf_tex *.log *_tmp.pdf
-	mv *.pdf docs/generated_pdf_figs
+generated_figs=docs/generated_pdf_fig
+
+inkscape2=/Applications/Inkscape.app/Contents//Resources/bin/inkscape
+
+process-svg-clean:
+	-rm -f $(generated_figs)/*pdf
+
+process-svg:
+	@which  inkscape || which $(inkscape2) || ( \
+		echo "You need to install inkscape."; \
+		exit 2)
+	@which  pdfcrop || (echo "You need to install pdfcrop."; exit 1)
+	@which  pdflatex || (echo "You need to install pdflatex."; exit 1)
+
+
+	python -m mcdp_docs.process_svg docs/ $(generated_figs) $(tex-symbols)
+
 
 clean-svg-figs:
 	rm -f docs/generated_pdf_figs/*
 
 duckuments-dist:
 	# clone branch "dist"
-	git clone --depth 3 -b gh-pages git@github.com:duckietown/duckuments.git duckuments-dist
+	git clone --depth 3 git@github.com:duckietown/duckuments-dist.git duckuments-dist
 
+
+log=duckuments-dist/compilation.log
 automatic-compile:
 	git pull
-	$(MAKE) clean
+	#$(MAKE) clean
+	touch $(log)
+	echo "\n\nStarting" >> $(log)
+	date >> $(log)
 	$(MAKE) compile-slow
-	-$(MAKE) upload
-	$(MAKE) compile-pdf-slow
-	-$(MAKE) upload
+	echo "  succeded html " >> $(log)
 
+	-$(MAKE) upload
+	echo "  succeded html upload " >> $(log)
+	$(MAKE) compile-pdf-slow
+	echo "  succeded PDF  " >> $(log)
+	-$(MAKE) upload
+	echo "  succeded PDF upload" >> $(log)
+	date >> $(log)
+	echo "Done." >> $(log)
 upload:
 	#git -C duckuments-dist pull -X ours
 	echo ignoring errors
+
 	-git -C duckuments-dist add $(duckuments-branch)
-	-git -C duckuments-dist commit -a -m "automatic compilation"
+	-git -C duckuments-dist commit -a -m "automatic compilation $(shell date)"
 	-git -C duckuments-dist push --force
 
 
@@ -183,8 +218,8 @@ split-slow:
 		-o $(tmp_files)/split \
 		-c " config echo 1; config colorize 0; rmake" \
 		--mathjax \
-		--preamble $(tex-symbols) \
-		--disqus
+		--preamble $(tex-symbols)
+
 split:
 	# rm -f $(dist_dir)/duckiebook/*html
 	 mcdp-split \
@@ -193,5 +228,6 @@ split:
 		-o $(tmp_files)/split \
 		-c " config echo 1; config colorize 1; rparmake" \
 		--mathjax \
-		--preamble $(tex-symbols) \
-		--disqus
+		--preamble $(tex-symbols)
+
+#--disqus

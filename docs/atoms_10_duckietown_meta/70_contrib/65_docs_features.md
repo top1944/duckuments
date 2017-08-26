@@ -182,7 +182,7 @@ TODO: other LaTeX features supported
 The LaTeX symbols definitions are in a file called [`docs/symbols.tex`][symbols].
 
 
-[symbols]: https://github.com/duckietown/duckuments/blob/master/docs/symbols.tex
+[symbols]: github:org=Duckietown,repo=duckuments,path=docs/symbols.tex
 
 
 Put all definitions there; if they are centralized it is easier to check
@@ -353,7 +353,7 @@ You can run:
 
     $ make process-svg-figs
 
-And your svg The file will be compiled into a PDF figure with the LaTeX commands properly interpreted. 
+And your svg The file will be compiled into a PDF figure with the LaTeX commands properly interpreted.
 You can then include the pdf file as normal way (See [](#figures)) using the `![filename].pdf` as the filename in the `img` tag.
 
 
@@ -362,7 +362,7 @@ You can then include the pdf file as normal way (See [](#figures)) using the `![
 
     <div figure-id="subfig:1">
         <figcaption>Image saved as svg</figcaption>
-          <img src="sample-no-process.pdf" style='width: 20em'/>
+          <img src="sample-no-process.converted.png" style='width: 20em'/>
     </div>
     <div figure-id="subfig:2">
         <figcaption>Image as PDF after processing</figcaption>
@@ -371,7 +371,7 @@ You can then include the pdf file as normal way (See [](#figures)) using the `![
 </div>
 
 
-Note: in order to compile the figures into pdfs you need to have Inkscape installed. Instructions to download and install are [here](https://inkscape.org/en/release/0.92.2/). 
+Note: in order to compile the figures into pdfs you need to have Inkscape installed. Instructions to download and install are [here](https://inkscape.org/en/release/0.92.2/).
 
 It can take a bit of work to get the positioning of the code to appear properly on the figure.
 

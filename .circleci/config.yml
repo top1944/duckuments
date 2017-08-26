@@ -2,21 +2,67 @@ version: 2
 jobs:
     build:
         docker:
-        - image: andreacensi/duckietown-xenial-kinetic:10
+        - image: andreacensi/duckietown-xenial-kinetic:14
         steps:
         - checkout
+
+# - run:
+#     name: deps
+#     command: |
+#         export DEBIAN_FRONTEND=noninteractive
+#         apt install -y gnupg ghostscript
+#
+#         pip install -U decorator>=4.1.0
+#
+#         # pip install  numpy lxml matplotlib pillow junit_xml
+#
+#         apt install -y software-properties-common
+#         echo adding repository
+#         add-apt-repository -y ppa:git-core/ppa
+#         echo adding git lfs
+#         curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+#         echo
+#         apt-key  --version || :
+#         echo APT update
+#         apt update
+#         echo
+#         echo APT install
+#         apt install -y git-lfs
+
         - run:
-            name: deps
+            name: check out duckuments-dist
             command: |
-                apt-get install -y pdftk bibtex2html libxml2-dev libxslt1-dev libffi6 libffi-dev python-dev python-numpy python-matplotlib virtualenv build-essential graphviz python-numpy python-yaml python-dev graphviz python-numpy python-yaml python-dev python-setproctitle python-psutil python-lxml python-matplotlib python-yaml python-pip python-tk idle python-pmw python-imaging
+                mkdir -p duckuments-dist
+        - run:
+            name: checkout MCDP
+            command: |
+                git clone -b duckuments git@github.com:AndreaCensi/mcdp
+                cd mcdp && python setup.py develop
+        - run:
+            name: Check Programs
+            command: |
+                make check-programs
+        - run:
+            name: checkout duckietown repository
+            command: |
+                git clone -b master --depth 1 git@github.com:duckietown/Software /tmp/git_repos/duckietown/Software/master
+                ln -s /tmp/git_repos/duckietown/Software/master/ duckietown
+        - run:
+            name: Compile HTML version
+            command: |
+                make compile-slow
 
-                pip install -U decorator>=4.1.0
+        - store_artifacts:
+              path: duckuments-dist
+              destination: duckuments-dist
 
-                pip install numpy lxml matplotlib pillow junit_xml
         - run:
             name: NPM
             command: |
-                curl -sL https://deb.nodesource.com/setup_6.x | bash
+                echo "Before installing NPM"
+                nodejs --version || echo "No nodejs installed"
+                gpg --version
+                curl -sL https://deb.nodesource.com/setup_6.x |  bash -E
 
                 apt-get update
 
@@ -32,28 +78,15 @@ jobs:
                 #apt-get install lyx
                 #lyx --version
         - run:
-            name: prince
-            command: |
-                wget https://www.princexml.com/download/prince_11.3-1_ubuntu16.04_amd64.deb
-
-                dpkg -i prince_11.3-1_ubuntu16.04_amd64.deb
-        - run:
             name: NPM
             command: |
                 npm install MathJax-node jsdom@9.3 less
-        - run:
-            name: check out duckuments-dist
-            command: |
-                mkdir -p duckuments-dist
-        - run:
-            name: checkout MCDP
-            command: |
-                git clone -b duckuments git@github.com:AndreaCensi/mcdp
-                cd mcdp && python setup.py develop
-        - run:
-            name: checkout duckietown repository
-            command: |
-                git clone -b master --depth 1 git@github.com:duckietown/Software duckietown
+# - run:
+#     name: prince
+#     command: |
+#         wget https://www.princexml.com/download/prince_11.3-1_ubuntu16.04_amd64.deb
+#
+#         dpkg -i prince_11.3-1_ubuntu16.04_amd64.deb
         - run:
             name: install fonts
             command:  |
@@ -63,13 +96,10 @@ jobs:
                 #fc-list | grep STIX
                 #fc-list | grep Symbola
         - run:
-            name: Compile HTML version
-            command: |
-                make compile
-        - run:
             name: Compile PDF version
             command: |
                 make compile-pdf
+
         - store_artifacts:
-              path: duckuments-dist
-              destination: duckuments-dist
+            path: duckuments-dist
+            destination: duckuments-dist

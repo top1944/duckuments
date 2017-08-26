@@ -19,7 +19,7 @@ Results:  An assembled Duckiebot in configuration `C0+wjd`.
 
 </div>
 
-# Part A - Assembling the car - bottom part
+## Part A - Assembling the car - bottom part
 
 
 Open the Duckiebox package (magician chassis – DG007), and you won’t need them all. Take out the following materials:
@@ -28,26 +28,26 @@ Open the Duckiebox package (magician chassis – DG007), and you won’t need th
 * Wheels (2 pieces), Omni wheel (1 pieces)
 * all Spacers and screw inside of the packages. Screwdriver (1x)
 
-<div figure-id="duckiebot_components" figure-caption="Components in Duckiebot package.">
-     <img src="duckiebot_components.PNG" style='width: 15em'/>
+<div figure-id="fig:duckiebot_components" figure-caption="Components in Duckiebot package.">
+     <img src="duckiebot_components.png" style='width: 15em'/>
 </div>
 
 _**Note**: You won’t need the battery holder and speed board holder (on the right side). Ignore the speed board holder in the image._
 
 <br/><br/>
 
-## Motor + chassis bottom
+### Motor + chassis bottom
 Insert motor holders on the chassis-bottom and put the motors as below (with the longest screws M3*30 and M3 nuts). Ignore the speed board holder in the image.
 
-<div figure-id="motors" figure-caption=" Components for mounting the motor">
+<div figure-id="fig:motors" figure-caption=" Components for mounting the motor">
      <img src="motors.jpg" style='width: 15em'/>
 </div>
 
-<div figure-id="scratch_motors" figure-caption=" ">
+<div figure-id="fig:scratch_motors" figure-caption=" ">
      <img src="scratch_motors.png" style='width: 15em'/>
 </div>
 
-<div figure-id="motors1" figure-caption=" ">
+<div figure-id="fig:motors1" figure-caption=" ">
      <img src="motors1.jpg" style='width: 15em'/>
 </div>
 
@@ -57,39 +57,39 @@ _**Note 2**: if your Magician Chassis package has unsoldered motor wires, you wi
 
 <br/><br/>
 
-## Assemble the wheels
+### Assemble the wheels
 Plug in the wheels to the motor as follows (no screws needed):
 
-<div figure-id="scratch_wheels" figure-caption=" ">
+<div figure-id="fig:scratch_wheels" figure-caption=" ">
      <img src="scratch_wheels.png" style='width: 15em'/>
 </div>
 
-<div figure-id="wheels" figure-caption=" ">
+<div figure-id="fig:wheels" figure-caption=" ">
      <img src="wheels.jpg" style='width: 15em'/>
 </div>
 
 <br/><br/>
 
-## Assemble the omni wheels
+### Assemble the omni wheels
 
-<div figure-id="scratch_omni" figure-caption=" ">
+<div figure-id="fig:scratch_omni" figure-caption=" ">
      <img src="scratch_omni.png" style='width: 15em'/>
 </div>
 
-<div figure-id="omni" figure-caption=" ">
+<div figure-id="fig:omni" figure-caption=" ">
      <img src="omni.jpg" style='width: 15em'/>
 </div>
 
 <br/><br/>
 
-## Put the spacers on the chassis
+### Put the spacers on the chassis
 Put the car upright (omni wheel pointing towards the table) and arrange wires so that they go through the center rectangle. Put **4 spacers with 4 of M3*6 screws** on each corner as below.
 
-<div figure-id="screws" figure-caption=" ">
+<div figure-id="fig:screws" figure-caption=" ">
      <img src="chassi_screws.jpg" style='width: 15em'/>
 </div>
 
-<div figure-id="art_A_finished" figure-caption=" ">
+<div figure-id="fig:part_A_finished" figure-caption=" ">
      <img src="part_A.jpg" style='width: 15em'/>
 </div>
 
@@ -100,7 +100,7 @@ Put the car upright (omni wheel pointing towards the table) and arrange wires so
 <br/><br/>
 
 
-# Part B - Assembling the RPI-3, camera, and HATs
+## Part B - Assembling the RPI-3, camera, and HATs
 **Materials:**
 * Chassis-up,
 * Camera and camera mount,
