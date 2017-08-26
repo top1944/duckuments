@@ -2,7 +2,7 @@ version: 2
 jobs:
     build:
         docker:
-        - image: andreacensi/duckietown-xenial-kinetic:14
+        - image: andreacensi/duckietown-xenial-kinetic:17
         steps:
         - checkout
 
@@ -36,7 +36,10 @@ jobs:
         - run:
             name: checkout MCDP
             command: |
-                git clone -b duckuments git@github.com:AndreaCensi/mcdp
+                git lfs clone -b duckuments --depth 1 git@github.com:AndreaCensi/mcdp
+        - run:
+            name: setup MCDP
+            command: |
                 cd mcdp && python setup.py develop
         - run:
             name: Check Programs
