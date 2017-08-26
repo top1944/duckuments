@@ -1,10 +1,10 @@
-# Duckietown Git conventions {#git-conventions}
+# Continuous integration {#continuous-integration}
 
 
 These are the conventions for the Duckietown repositories.
 
 
-## Never break the build {#continuous-integration}
+## Never break the build
 
 The `Software` and the `duckuments` repository use "continuous integration".
 
@@ -21,7 +21,7 @@ We also say that a branch is "green" if the tests pass, or "red" otherwise.
 At all times, you can see this
 as a green dot in different places on Github ([](#fig:green-dot)).
 
-<img  figure-id="fig:green-dot" src='green-dot.png' style='width:12em'/>
+<img  figure-id="fig:green-dot" figure-caption="The green dot is good." src='green-dot.png' style='width:12em'/>
 
 ## How to stay in the green
 
@@ -43,26 +43,28 @@ At [this page](https://circleci.com/gh/duckietown) you can see the summary of th
 It is not possible to push on to the master branch directly.
 
 
-See: [Github documentation about pull requests](https://help.github.com/articles/about-pull-request-merges/).
+See: See the [Github documentation about pull requests](https://help.github.com/articles/about-pull-request-merges/) to learn about the
+general concept.
+
 
 
 The workflow is as follows.
 
 
-(1) You make a private branch, say `andrea-devel`.
+(1) You make a private branch, say `![your name]-devel`.
 
 (2) You work on your branch.
 
-(3) Push often to your branch. Every time you push, CircleCI will run the tests and let you know if the tests are passing.
+(3) You push often to your branch. Every time you push, CircleCI will run the tests and let you know if the tests are passing.
 
 (4) When the tests pass, you create a "pull request". You can do this by going to the Github page for your branch and click on the button "compare and pull request" ([](#fig:compare-and-pull)).
 
 
-<img figure-id="fig:compare-and-pull" figure-caption="Compare and pull request button" src='compare-and-pull.png' style='width: 70%'/>
+<img figure-id="fig:compare-and-pull" figure-caption="Compare and pull request button" src='compare-and-pull.png' style='width: 100%'/>
 
-(5) You now have an opportunity to summarize all the changes you did so far ([](#fig:compare)). Click "create pull request".
+(5) You now have an opportunity to summarize all the changes you did so far ([](#fig:compare)). Then click "create pull request".
 
-<img figure-id="fig:compare" figure-caption="Preparing the pull request" src='compare.png' style='width: 70%'/>
+<img figure-id="fig:compare" figure-caption="Preparing the pull request" src='compare.png' style='width: 100%'/>
 
 (6) Now the pull request has been created. Other people can see and comment on it. However, it has not been merged yet.
 
@@ -70,17 +72,17 @@ At this point, it might be that it says "Some checks haven't completed yet" ([](
 Click "details" to see what's going on, or just wait.
 
 <img figure-id="fig:checks-in-progress" figure-caption="Wait for the checks to finish"
- src='checks-in-progress.png' style='width: 70%'/>
+ src='checks-in-progress.png' style='width: 100%'/>
 
-When it's done, you will see either a success message ([](#fig:checks-done)
+When it's done, you will see either a success message ([](#fig:checks-done))
 or a failure message ([](#fig:checks-failure)).
 
 
 <img figure-id="fig:checks-done" figure-caption="The tests are done"
- src='checks-done.png' style='width: 70%'/>
+ src='checks-done.png' style='width: 100%'/>
 
 <img figure-id="fig:checks-failure" figure-caption="The tests have failed"
-  src='checks-failure.png' style='width: 70%'/>
+  src='checks-failure.png' style='width: 100%'/>
 
 (7) At this point, you can click "squash and merge" to merge the changes into master ([](#fig:squash)).
 
@@ -89,6 +91,8 @@ or a failure message ([](#fig:checks-failure)).
 <img figure-id="fig:squash" figure-caption="The final step"
   src='squash.png' style='width: 70%'/>
 
+
+### Troubleshooting
 
 If you see a message like "merge failed" ([](#merge-failed)), it probably means that somebody pushed into master; merge master into your branch and continue the process.
 
