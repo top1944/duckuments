@@ -31,10 +31,6 @@ therefore you create programs with longer lines.
 Do not go and try to shorten the lines; the line length is just the symptom.
 Rather, ask somebody to take a look at the code and tell you how to make it better.
 
-### Spaces
-
-Indentation is 4 spaces.
-
 
 ### The encoding line
 
