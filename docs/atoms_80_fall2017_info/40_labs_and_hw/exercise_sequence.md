@@ -33,16 +33,30 @@ TODO: to write
 
 ## Exercise: ROS node tutorial
 
-Do the first ROS tutorial at [](#ros-python-howto). Talker/listener/ base `rosparam`.
+### Skills learned
+
+
+* ... Talker/listener/ base `rosparam` XXX
+
+### Instructions
+
+Do the first ROS tutorial at [](#ros-python-howto).
+
+<!--  -->
+
 
 ## Exercise: Basic image operations and testing
 
-Skills learned:
+### Skills learned
+
 
 - Command line arguments.
 - Open and writing files.
 - Image representations (pixels, etc.)
 - OpenCV API.
+
+
+### Instructions
 
 
 Create a program that takes as an argument a JPG file:
@@ -55,15 +69,20 @@ that is flipped around the vertical axis.
 
 ### Useful APIs
 
-TODO:
+TODO: add here pointers to relevant `duckietown_utils` functions.
+
+
+<!--  -->
 
 ## Exercise: Specifications and testing
 
-Skills learned:
+### Skills learned
 
 - Dealing with exceptions.
 - Meaning of exit conditions.
 - Unit tests.
+
+### Instructions
 
 We give you a better specification of a program `image-ops` similar to the previous one.
 
@@ -87,7 +106,7 @@ If the file exists, then the script must create:
 - `![outdir]/flip.jpg`: the file, flipped horizontally.
 - `![outdir]/side-by-side.jpg`: the two files, side by side.
 
-If any other error occurs, the script should exit with error code `3`.
+If any other error occurs, the script should exit with error code `99`.
 
 <div figure-id="fig:example" figure-class="subfigs-floating">
     <img figure-id="subfig:original" src='image-ops-original.jpg'/>
@@ -132,43 +151,62 @@ The output <code>side-by-side.jpg</code>
 
 ### Useful APIs
 
-TODO: Some useful functions that you might want to use
+TODO: Some useful functions that you might want to use are:
 
-#### Testing it works {#image-ops-tester-specification}
+### Testing it works with `image-ops-tester` {#image-ops-tester-specification}
 
 We provide a script called `image-ops-tester` that can be used
-to make sure that you wrote a good `image-ops`.
+to make sure that you wrote a conformant `image-ops`.
 
 Use it as follows:
 
-    $ image-ops-tester ![candidate image-ops program]
+    $ image-ops-tester ![candidate-image-ops]
 
 If the script cannot be found, `image-ops-tester` will return 1.
 
 `image-ops-tester` will return 0 if the program exists and conforms
 to the `image-ops` specification ([](#image-ops-specification)).
 
-Otherwise, it will return errors in the range 10 to 20, for different error conditions,
-each time writing out a comment on the output.
+If it can establish that the program is not good, it will return 11.
 
-### `image-ops-tester`
+
+### Bottom line {nonumber=1}
+
+Things that are not tested are broken.
+
+
+<!--  -->
+
+## Exercise: Who watches the watchmen? (optional)
+
+### Skills learned:
+
+TODO: ...
+
+### Instructions
 
 A good exercise is writing `image-ops-tester` yourself.
 
-However, we already gave you a copy of `image-ops-tester`, which you used in the previous step, so there is not much of a challenge. So...
+However, we already gave you a copy of `image-ops-tester`, which you
+used in the previous step, so there is not much of a challenge. So, let's go one level up, and consider...
 
 ### `image-ops-tester-tester` specification
 
 Write a program `image-ops-tester-tester` that tests whether
-a program conforms to the specification of a `image-ops-tester`.
+a program conforms to the specification of a `image-ops-tester`
+given in [](#image-ops-tester-specification).
 
 The `image-ops-tester-tester` program is called as follows:
 
-    $ image-ops-tester-tester ![candidate image-ops-tester]
+    $ image-ops-tester-tester ![candidate-image-ops-tester]
 
-This must return 0 if everything is ok, or different than 0 otherwise.
+This must return:
 
-#### Testing it works
+- 0 if the candidate conforms to the specification;
+- 1 if it doesn't;
+- another error code if other errors arise.
+
+#### Testing it works with `image-ops-tester-tester-tester`
 
 We provide you with a helpful program called `image-ops-tester-tester-tester`
 that makes sure that a candidate script conforms to the specification of
@@ -180,17 +218,24 @@ Use it as follows:
 
 This should return 0 if everything is ok, or different than 0 otherwise.
 
-### Bottom line
+### Bottom line {nonumber=1}
 
-Things that are not tested are broken.
+Even if things are tested, you can never be sure that the tests themselves work.
 
-And yes, we did write a `image-ops-tester-tester-tester-tester`.
+<!-- TODO: Validation and testing -->
+
 
 ## Exercise: Simple data analysis from a bag
 
+### Skills learned
+
+TODO: to write
+
+### Instructions
+
 Work in the folder `exercises/10_bag1/![username]/`
 
-### Bag analysis
+### Bag analysis: `bag-analyze-topic`
 
 Create a program that summarizes the statistics of data in a bag file.
 
@@ -211,7 +256,7 @@ Example output:
     /topic2   n=3
 
 
-### Bag analysis, complete
+### Bag analysis complete: `bag-analyze-all`
 
 Create a program `bag-analyze-all` that analyzes all the topics in a bag file,
 and outpus the data in YAML format.
@@ -230,7 +275,7 @@ Output in YAML in this format:
             avg:
             med:
 
-#### Useful APIs
+### Useful APIs
 
 * Iterating over topics in a bag.
 * Serializing and deserializing YAML.
@@ -245,20 +290,27 @@ Write a unit test that uses the file `simple.bag`, and runs your program, to che
 
     topic:  jitter: ...
 
-#### Useful new API learned
+### Useful APIs
 
 - How to call other programs (systems_command).
 
-#### Check that it works
+### Check that it works
 
 XXX
 
+<!--  -->
+
 ## Exercise: Bag in, bag out
+
+### Skills learned
+
+* Writing a bag.
+
+### Instructions
 
 In this exercise, we start processing the data from a bag, creating another output bag in the process.
 
-
-### Bag copy
+### Specification for `bag-copy`
 
 Write a program `bag-copy` that reads a bag, and writes a copy of the same bag.
 
@@ -286,9 +338,16 @@ This only writes 1/n messages in the output. (If `n` is 1, the output is the sam
 
 Now process the data with `bag-analyze-topic`: you should see that the statistics have changed.
 
+<!--  -->
+
 ## Exercise: Bag images
 
-Purpose: Read image files from a bag.
+### Skills learned
+
+* Writing images to file.
+
+
+### Instructions
 
 Write a program `bag-thumbnails` that creates thumbnails for some image topic in a bag file.
 
@@ -304,8 +363,13 @@ This should create the files:
 
 ## Exercise: Use our API for arguments
 
-Purpose: We want to learn about the command-line API that we have in Duckietown,
-which makes it easy to create programs with command line arguments.
+### Skills learned
+
+- Learn about the command-line API that we have in Duckietown,
+
+### Instructions
+
+We have a useful API that makes it easy to create programs with command line arguments.
 
 TODO: to write
 
@@ -313,14 +377,16 @@ TODO: to write
 
 * Our API for command line arguments.
 
+<!--  -->
 
 ## Exercise: Instagram filters
 
-Learn about:
+### Skills learned
 
 * Image pixel representation
 * Image manipulation
 
+### Instructions
 
 Write a program `bag-instagram` that applier thumbnails for some image topic in a bag file.
 
@@ -347,16 +413,17 @@ For example:
 
 means that you first have to apply the filter `flip-h`, then the filter `gray-scale`.
 
+<!--  -->
 
 ## Exercise: Bouncing ball
 
-Learned skills:
+### Skills learned
 
 * Show how to visualize data on a bag.
 * Programmatic generation of images.
 * Timestamps generation.
 
-### `bag-bounce`
+### Instructions
 
 Create a program
 
@@ -364,17 +431,22 @@ Create a program
 
 that shows a bouncing ball on the screen, as if it were a billiard
 
-#### Useful new API learned {nonumber=1}
+### Useful new API learned {nonumber=1}
 
 * Our API for command line arguments.
 
 ## Exercise: Visualizing data on image
 
-Learned skills:
+### Skills learned
 
 * Show how to superimpose data on an image.
 
-### `bag-mark-spots`
+
+### Instruction
+
+Write an implementation of `bag-mark-spots`.
+
+### Specification for `bag-mark-spots`
 
 Create a program that for each image, finds the pixels that are closest
 to a certain color, and creates as the output a big red, yellow white spot on them.
@@ -382,12 +454,16 @@ to a certain color, and creates as the output a big red, yellow white spot on th
     $ bag-mark-spots --input ![bag in] --mark "[[255,0,0],255,0,0]," --size 5 --output [bag out]
 
 
+<!--  -->
+
 ## Exercise: Make that into a node
 
-Learned skills:
+### Learned skills
 
 * Abstracting code in interfaces that can be reused.
 * Launch files.
+
+### Instructions
 
 Abstract the analysis above in a way that the same analysis code can be run equally
 from a bag or on the laptop.
@@ -397,15 +473,24 @@ Make a ROS node and two launch files:
 * One runs everything on the Duckiebot, and the output is visualized on the laptop.
 * One runs the processing on the laptop.
 
+
+<!--  -->
+
 ## Exercise: Instagram with EasyAlgo interface
 
-(Do the above using our API for filters.)
+### Learned skills
+
+* Use of our Duckietown API for abstracting algorithms.
+
+### Instructions
+
+TODO: Do the above using our API for filters.
 
 We define the interface `InstagramFilter` and the EasyAlgo configuration files.
 
-### EasyAlgo tutorial
+### See documentation
 
-...
+TODO: pointer to EasyAlgo
 
 ### Use in your code
 
@@ -414,49 +499,70 @@ given the configuration.
 
 TODO: Also introduce the DUCKIETOWN_CONFIG_SEQUENCE.
 
-## Exercise: Instagram with EasyAlgo interface
+
+
 
 ## Milestone: Illumination invariance (anti-instagram)
 
 TODO: Make them run our code, and also visualize what's going on
 
 
-<!-- nuisance -->
+<!--  -->
 
 
 
 ## Exercise: Launch files basics
 
+
+### Learned skills
+
+* Launch files
+
+
+
+<!--  -->
+
+
 ## Exercise: Unit tests
+
+
+### Learned skills
+
+* Write unit tests that can be integrated in our framework.
+
+### Unit tests with nosetests
 
 - Unit tests
 
-## Exercise: ROS tests
+### Unite tests with ROS tests
 
 - Integration with ROS tests
 
-## Exercise: Processing: Analytics
+### Unite tests with comptests
 
-- Measure the latency and frequency of the node
-
-- Measure the latency of another node
 
 ## Exercise: Parameters (standard ROS api)
+
+### Learned skills
 
 - Reading parameters
 - Dynamic modification of parameters
 
 ## Exercise: Parameters (our API)
 
-- Reading parameters
-- Dynamic modification of parameters
+### Learned skills
+
+- Use Duckietown API
 
 
 ## Exercise: Place recognition abstraction
 
-Skills learned:
+### Learned skills
 
 - ...
+
+
+### Instructions
 
 We use the following interface:
 
@@ -487,19 +593,40 @@ Compute the similarity matrix for the
     $ similarity --feature average_color --input ![input.bag]  --output ![dirname]
 
 
+### Bottom line
 
-## Parallel processing
+TODO: to write
+
+
+## Exercise: Parallel processing
+
+### Learned skills
+
+* Do things faster in parallel.
+
+### Instructions
 
 We introduce the support for parallel processing that we have in the APIs.
 
 
-## Adding new test to integration tests
+## Exercise: Adding new test to integration tests
 
 TODO: to write
 
-## Exercise: Place recognition
+### Learned skills
+
+* Do things faster in parallel.
+
+### Instructions
 
 TODO: to write
+
+### Bottom line
+
+TODO: to write
+
+
+
 
 ## Milestone: Lane following
 
