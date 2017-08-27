@@ -337,7 +337,7 @@ We have learned that ...
 -->
 ## Next Steps
 
-- linearization of non linear equations
+- linearization of nonlinear equations
 - state space representations
 - basic kinematics
 - basic dynamics
@@ -351,6 +351,7 @@ Strong of this new knowledge (what have we learned), we can now [...].
 <!--
 Further Reading: insert here reference resources for the interested reader:
 -->
+
 See also: [](#bib:Savov2017)
 
 See also: [Matrix cookbook](#bib:matrix-cookbook)
