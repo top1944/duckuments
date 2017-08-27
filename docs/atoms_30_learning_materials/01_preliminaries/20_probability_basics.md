@@ -59,6 +59,26 @@ Again, considering that we have to RVs, $X$ and $Y$, imagine these two events ar
 Write down the conditional pmf for the scenario just described assuming an oracle tells you that the die roll is even. In other words, what is p(x|EVEN)? (Warning: if you think this is very easy that's good, but don't get over-confident) 
 </div>
 
-The joint 
+The joint and conditional distributions are related by the following (which could be considered a definition of the joint distribution):
+
+\begin{equation}
+p(x,y} = p(x|y)p(y)
+\label{eq:joint}
+\end{equation}
+
+and similarly, the following could be considered a definition of the conditional distribution:
+
+\begin{equation}
+p(x|y) = \frac{p(x,y)}{p(y)} \text{if} p(y) > 0
+\label{eq:condition}
+\end{equation}
+
+In other words, the conditional and joint distributions are inextricably linked (you can't really talk about one without the other).
+
+If two variables are *independent*, then the following relation holds: $p(x,y)=p(x)p(y)$.
+
+### Marginal Distribution
+
+
 
 ### The Gaussian Distribution {#gaussian} 
