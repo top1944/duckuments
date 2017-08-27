@@ -35,33 +35,104 @@ TODO: to write
 
 Do the first ROS tutorial at [](#ros-python-howto). Talker/listener/ base `rosparam`.
 
-## Exercise: Basic image operations
+## Exercise: Basic image operations and testing
 
 Skills learned:
 
-- Arguments.
+- Command line arguments.
 - Open and writing files.
 - Image representations (pixels, etc.)
 - OpenCV API.
+
+
+Create a program that takes as an argument a JPG file:
+
+    $ image-op ![file]
+
+and creates a file called `![file].flipped.jpg`
+that is flipped around the vertical axis.
+
+
+### Useful APIs
+
+TODO:
+
+## Exercise: Specifications and testing
+
+Skills learned:
+
 - Dealing with exceptions.
 - Meaning of exit conditions.
 - Unit tests.
 
+We give you a better specification of a program `image-ops` similar to the previous one.
+
+This time, we specify exactly what should happen. This allows to do automated testing
+of the script.
+
 ### `image-ops` specification {#image-ops-specification}
 
-Create a program that takes as an argument a JPG file:
+The program `image-ops` expects exactly two arguments: a filename (a JPG file)
+and a directory name.
 
-    $ image-ops ![file] ![outdir]
+    $ image-ops ![file] ![outdir-dir]
 
-If the file does not exist, the script must exit with error code `1`.
+If the file does not exist, the script must exit with error code `2`.
 
-If the file exists, then it should be read in memory. Then
-the script should create:
+If the file cannot be decoded, the script must exit with error code `3`.
+
+If the file exists, then the script must create:
 
 - `![outdir]/regular.jpg`: a copy of the initial file
-- `![outdir]/flip-h.jpg`: the file, flipped horizontally.
+- `![outdir]/flip.jpg`: the file, flipped horizontally.
+- `![outdir]/side-by-side.jpg`: the two files, side by side.
 
-If any other error occurs, the script should exit with error code `3`/
+If any other error occurs, the script should exit with error code `3`.
+
+<div figure-id="fig:example" figure-class="subfigs-floating">
+    <img figure-id="subfig:original" src='image-ops-original.jpg'/>
+    <img figure-id="subfig:flip"     src='image-ops-flip.jpg'/>
+    <img figure-id="subfig:side"     src='image-ops-side.jpg'/>
+
+    <div style='clear: both;'></div> <!-- XXX add to template -->
+</div>
+
+<figcaption id="fig:example:caption">
+Example input-output for the program <code>image-ops</code>.
+</figcaption>
+
+<figcaption id="subfig:original:caption">
+The original picture.
+</figcaption>
+
+<figcaption id="subfig:flip:caption">
+The output <code>flip.jpg</code>
+</figcaption>
+
+<figcaption id="subfig:side:caption">
+The output <code>side-by-side.jpg</code>
+</figcaption>
+
+
+
+<style>
+.subfigs-floating div.generated-figure-wrap{
+    display: inline-block;
+    float: left;
+}
+
+.subfigs-floating figcaption { clear: both; }
+
+#fig\:example img {
+    height: 5em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+</style>
+
+### Useful APIs
+
+TODO: Some useful functions that you might want to use
 
 #### Testing it works {#image-ops-tester-specification}
 
@@ -70,10 +141,15 @@ to make sure that you wrote a good `image-ops`.
 
 Use it as follows:
 
-    $ image-ops-tester ![candidate image-ops]
+    $ image-ops-tester ![candidate image-ops program]
 
-The program `image-ops-tests` will return 0 if the script conforms
-to the `image-ops` specification ([](#image-ops-specification})).
+If the script cannot be found, `image-ops-tester` will return 1.
+
+`image-ops-tester` will return 0 if the program exists and conforms
+to the `image-ops` specification ([](#image-ops-specification)).
+
+Otherwise, it will return errors in the range 10 to 20, for different error conditions,
+each time writing out a comment on the output.
 
 ### `image-ops-tester`
 
@@ -81,14 +157,16 @@ A good exercise is writing `image-ops-tester` yourself.
 
 However, we already gave you a copy of `image-ops-tester`, which you used in the previous step, so there is not much of a challenge. So...
 
-### `image-ops-tester-tester`
+### `image-ops-tester-tester` specification
 
 Write a program `image-ops-tester-tester` that tests whether
 a program conforms to the specification of a `image-ops-tester`.
 
+The `image-ops-tester-tester` program is called as follows:
+
     $ image-ops-tester-tester ![candidate image-ops-tester]
 
-This should return 0 if everything is ok, or different than 0 otherwise.
+This must return 0 if everything is ok, or different than 0 otherwise.
 
 #### Testing it works
 
@@ -106,7 +184,7 @@ This should return 0 if everything is ok, or different than 0 otherwise.
 
 Things that are not tested are broken.
 
-
+And yes, we did write a `image-ops-tester-tester-tester-tester`.
 
 ## Exercise: Simple data analysis from a bag
 
@@ -374,7 +452,6 @@ TODO: Make them run our code, and also visualize what's going on
 - Dynamic modification of parameters
 
 
-
 ## Exercise: Place recognition abstraction
 
 Skills learned:
@@ -416,6 +493,9 @@ Compute the similarity matrix for the
 We introduce the support for parallel processing that we have in the APIs.
 
 
+## Adding new test to integration tests
+
+TODO: to write
 
 ## Exercise: Place recognition
 
