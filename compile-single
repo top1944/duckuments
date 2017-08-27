@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-# set -x
+set -x
 
 
 
@@ -8,4 +8,5 @@ mcdp-render \
     --stylesheet v_manual_screen \
     --maindir `dirname $1` \
     --symbols docs/symbols.tex\
+    --forgiving \
     "$1"
