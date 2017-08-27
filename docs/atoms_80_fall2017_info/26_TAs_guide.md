@@ -27,7 +27,7 @@ Point of Contact: XXX
 
 Install the Duckuments, so you can edit these instructions.
 
-See: [](#contribute).
+See: [](#part:contribute).
 
 Point of Contact: XXX
 
@@ -54,7 +54,7 @@ Point of Contact: XXX
 
 Build your Duckiebot according to the instructions.
 
-See: [](#building-duckiebot)
+See: [](#part:building-duckiebot)
 
 Point of Contact: XXX
 

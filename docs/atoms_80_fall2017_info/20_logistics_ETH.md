@@ -1,4 +1,4 @@
-# Additional information for ETH Zürich students {#logistics_ETH}
+# Guidefor ETH Zürich students {#logistics_ETH}
 
 Assigned: Andrea
 
