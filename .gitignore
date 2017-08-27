@@ -64,3 +64,5 @@ duckietown
 misc/book_index.html
 ~$*
 *swp
+docs/*.html
+docs/**/*.html
