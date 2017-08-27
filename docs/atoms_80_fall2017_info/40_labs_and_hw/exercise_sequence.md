@@ -31,7 +31,7 @@ TODO: to write
 TODO: to write
 
 
-## Exercise: ROS node tutorial
+# Exercise: ROS node tutorial
 
 ### Skills learned
 
@@ -45,7 +45,7 @@ Do the first ROS tutorial at [](#ros-python-howto).
 <!--  -->
 
 
-## Exercise: Basic image operations and testing
+# Exercise: Basic image operations and testing
 
 ### Skills learned
 
@@ -74,7 +74,7 @@ TODO: add here pointers to relevant `duckietown_utils` functions.
 
 <!--  -->
 
-## Exercise: Specifications and testing
+# Exercise: Specifications and testing
 
 ### Skills learned
 
@@ -177,7 +177,7 @@ Things that are not tested are broken.
 
 <!--  -->
 
-## Exercise: Who watches the watchmen? (optional)
+# Exercise: Who watches the watchmen? (optional)
 
 ### Skills learned:
 
@@ -225,7 +225,7 @@ Even if things are tested, you can never be sure that the tests themselves work.
 <!-- TODO: Validation and testing -->
 
 
-## Exercise: Simple data analysis from a bag
+# Exercise: Simple data analysis from a bag
 
 ### Skills learned
 
@@ -300,7 +300,7 @@ XXX
 
 <!--  -->
 
-## Exercise: Bag in, bag out
+# Exercise: Bag in, bag out
 
 ### Skills learned
 
@@ -340,7 +340,7 @@ Now process the data with `bag-analyze-topic`: you should see that the statistic
 
 <!--  -->
 
-## Exercise: Bag images
+# Exercise: Bag images
 
 ### Skills learned
 
@@ -361,7 +361,7 @@ This should create the files:
     ![output]/00003.jpg
     ![output]/00004.jpg
 
-## Exercise: Use our API for arguments
+# Exercise: Use our API for arguments
 
 ### Skills learned
 
@@ -379,7 +379,7 @@ TODO: to write
 
 <!--  -->
 
-## Exercise: Instagram filters
+# Exercise: Instagram filters
 
 ### Skills learned
 
@@ -415,7 +415,7 @@ means that you first have to apply the filter `flip-h`, then the filter `gray-sc
 
 <!--  -->
 
-## Exercise: Bouncing ball
+# Exercise: Bouncing ball
 
 ### Skills learned
 
@@ -435,7 +435,7 @@ that shows a bouncing ball on the screen, as if it were a billiard
 
 * Our API for command line arguments.
 
-## Exercise: Visualizing data on image
+# Exercise: Visualizing data on image
 
 ### Skills learned
 
@@ -456,7 +456,7 @@ to a certain color, and creates as the output a big red, yellow white spot on th
 
 <!--  -->
 
-## Exercise: Make that into a node
+# Exercise: Make that into a node
 
 ### Learned skills
 
@@ -476,7 +476,7 @@ Make a ROS node and two launch files:
 
 <!--  -->
 
-## Exercise: Instagram with EasyAlgo interface
+# Exercise: Instagram with EasyAlgo interface
 
 ### Learned skills
 
@@ -511,7 +511,7 @@ TODO: Make them run our code, and also visualize what's going on
 
 
 
-## Exercise: Launch files basics
+# Exercise: Launch files basics
 
 
 ### Learned skills
@@ -523,7 +523,7 @@ TODO: Make them run our code, and also visualize what's going on
 <!--  -->
 
 
-## Exercise: Unit tests
+# Exercise: Unit tests
 
 
 ### Learned skills
@@ -541,21 +541,21 @@ TODO: Make them run our code, and also visualize what's going on
 ### Unite tests with comptests
 
 
-## Exercise: Parameters (standard ROS api)
+# Exercise: Parameters (standard ROS api)
 
 ### Learned skills
 
 - Reading parameters
 - Dynamic modification of parameters
 
-## Exercise: Parameters (our API)
+# Exercise: Parameters (our API)
 
 ### Learned skills
 
 - Use Duckietown API
 
 
-## Exercise: Place recognition abstraction
+# Exercise: Place recognition abstraction
 
 ### Learned skills
 
@@ -598,7 +598,7 @@ Compute the similarity matrix for the
 TODO: to write
 
 
-## Exercise: Parallel processing
+# Exercise: Parallel processing
 
 ### Learned skills
 
@@ -609,7 +609,7 @@ TODO: to write
 We introduce the support for parallel processing that we have in the APIs.
 
 
-## Exercise: Adding new test to integration tests
+# Exercise: Adding new test to integration tests
 
 TODO: to write
 
@@ -632,7 +632,7 @@ TODO: to write
 
 TODO: to write
 
-## Exercise: localization
+# Exercise: localization
 
 TODO: to write
 
@@ -640,7 +640,7 @@ TODO: to write
 
 TODO: to write
 
-## Exercise: group forming
+# Exercise: group forming
 
 TODO: to write
 
@@ -648,11 +648,11 @@ TODO: to write
 
 TODO: to write
 
-## Exercise: Comparison of PID
+# Exercise: Comparison of PID
 
 TODO: to write
 
-## Exercise: RRT
+# Exercise: RRT
 
 TODO: to write
 
@@ -665,7 +665,7 @@ TODO: to write
 TODO: to write
 
 
-## Exercise: Object Detection
+# Exercise: Object Detection
 
 TODO: to write
 
@@ -674,7 +674,7 @@ TODO: to write
 TODO: to write
 
 
-## Exercise: Semantic perception
+# Exercise: Semantic perception
 
 TODO: to write
 
@@ -682,7 +682,7 @@ TODO: to write
 
 TODO: to write
 
-## Exercise: Reacting to obstacles
+# Exercise: Reacting to obstacles
 
 TODO: to write
 
@@ -690,7 +690,7 @@ TODO: to write
 
 TODO: to write
 
-## Exercise: SLAM
+# Exercise: SLAM
 
 TODO: to write
 
@@ -698,7 +698,7 @@ TODO: to write
 
 TODO: to write
 
-## Exercise: fleet
+# Exercise: fleet
 
 TODO: to write
 
