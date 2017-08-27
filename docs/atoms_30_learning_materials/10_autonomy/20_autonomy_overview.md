@@ -23,7 +23,7 @@ Here's a non-exhaustive list of some of companies that are actively developing a
  * [Audi](https://techcrunch.com/2017/06/06/audi-is-the-first-to-test-autonomous-vehicles-in-new-york/)
  * [Nissan's autonomous car](https://www.nissanusa.com/blog/autonomous-drive-car)
  * [Baidu](http://usa.baidu.com/adu/)
- 
+
 
 ## Levels of Autonomy {#autonomy-levels}
 
@@ -53,7 +53,7 @@ For an autonomous vehicle to function, it must achieve some level of performance
 ### Sensors {#sensors}
 
 
-<div figure-id="fig:sensors" figure-caption="Some common sensors used for autonomous navigation">
+<div figure-id="fig:sensors" figure-class="flow-subfigures" figure-caption="Some common sensors used for autonomous navigation">
     <div figure-id="subfig:velo" figure-caption="Velodyne 3D Laser Scanner">
         <img src="velo.svg" style='width: 20ex'/>
     </div>
@@ -71,6 +71,11 @@ For an autonomous vehicle to function, it must achieve some level of performance
     </div>
 </div>
 
+<style>
+
+/*figure.flow-subfigures div.generated-figure-wrap { display: inline-block; }*/
+
+</style>
 
 \begin{definition}[Sensor]\label{def:sensor}
 A *sensor* is a device that or mechanism that is capable of generating a measurement of some external phyiscal quantity
@@ -116,14 +121,14 @@ TODO: add a picture with basic feature detections
 Now that we have used our sensors to generate a set of meaningful measurements, we need to combine these measurements together to produce an estimate of the underlying hidden *state* of the robot and possibly to environment.
 
 \begin{definition}[State]\label{def:state}
-The state $\state_t \in \statesp$ is a *sufficient statistic* of the environment, i.e. it contains all sufficient information required for the robot to carry out its task in that environment. This can (and usually does) include the *configuration* of the robot itself. 
+The state $\state_t \in \statesp$ is a *sufficient statistic* of the environment, i.e. it contains all sufficient information required for the robot to carry out its task in that environment. This can (and usually does) include the *configuration* of the robot itself.
 \end{definition}
 
-What variables are maintained in the statespace $\statesp$ depends on the problem at hand. For example we may just be interested in a single robot's configuration in the plane, in which case $\state_t \equiv \pose_t$. However, in other cases, such as simultaneous localization and mapping, me may also be tracking the map in the state space. 
+What variables are maintained in the statespace $\statesp$ depends on the problem at hand. For example we may just be interested in a single robot's configuration in the plane, in which case $\state_t \equiv \pose_t$. However, in other cases, such as simultaneous localization and mapping, me may also be tracking the map in the state space.
 
-According to Bayesian principles, any system parameters that are not fully known and deterministic should be maintained in the state space. 
+According to Bayesian principles, any system parameters that are not fully known and deterministic should be maintained in the state space.
 
-In general, we do not have direct access to values in $\state$, instead we rely on our (noisy) sensor measurements to tell us something about them, and then we *infer* the values. 
+In general, we do not have direct access to values in $\state$, instead we rely on our (noisy) sensor measurements to tell us something about them, and then we *infer* the values.
 
 
 
@@ -151,11 +156,11 @@ Control applied to vehicle
 
 ## Advanced Building Blocks of Autonomy {#advanced-blocks}
 
-The basic blocks described 
+The basic blocks described
 
 ### Object Detection {#object-detection}
 
-One key requirement is the ability fo 
+One key requirement is the ability fo
 
 ### Visual Odometry
 
@@ -164,5 +169,3 @@ One key requirement is the ability fo
 ### Scene Segmentation
 
 ### Mobility on Demand / Fleet-level optimization {#mobility-on-demand}
-
-
