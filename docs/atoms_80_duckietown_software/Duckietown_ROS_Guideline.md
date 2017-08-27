@@ -31,6 +31,6 @@ When a node can be run on the vehicle or on a laptop, the elemental launch file 
 
 A node should always be launched by calling its corresponding launch file instead of using `rosrun`. This ensures that the node is put under the correct namespace and all the necessary parameters are provided.
 
-Do not use <code>&lt;remapp&gt;</code> in the elemental launch files.
+Do not use <code>&lt;remap&gt;</code> in the elemental launch files.
 
 Do not use <code>&lt;param&gt;</code> in the elemental launch files.
