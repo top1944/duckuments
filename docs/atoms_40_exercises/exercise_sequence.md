@@ -1,8 +1,12 @@
 
 # Exercise: Git and conventions
 
+TODO: move here the exercises we had last year about branching.
 
 # Exercise: Robot setup steps
+
+
+Note: I am not sure these go here. In any case these would be only pointers.
 
 
 ## Milestone: (setup step)
