@@ -194,6 +194,19 @@ compile-html:
 	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
 	python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
 
+compile-html-no-embed:
+	DISABLE_CONTRACTS=1 mcdp-render-manual \
+		--src $(src) \
+		--stylesheet v_manual_split \
+		--mathjax 0 \
+		--symbols $(tex-symbols) \
+		-o $(tmp_files) \
+		--output_file $(out_html).tmp -c "config echo 1; config colorize 1; rparmake"
+
+	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
+	# python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
+	$(MAKE) split
+	
 compile-html-slow:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src $(src) \

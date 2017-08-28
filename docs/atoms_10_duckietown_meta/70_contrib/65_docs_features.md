@@ -779,6 +779,76 @@ List of requirements at the beginning of setup chapter.
 
 </div>
 
+## Notes and questions
+
+There are three environments: "comment", "question", "doubt",
+that result in boxes that can be expanded by the user.
+
+These are the one-paragraph forms:
+
+    Comment: this is a comment on one paragraph.
+
+Comment: this is a comment on one paragraph.
+
+    Question: this is a question on one paragraph.
+
+Question: this is a question on one paragraph.
+
+    Doubt: I have my doubts on one paragraph.
+
+Doubt: I have my doubts  on one paragraph.
+
+These are the multiple-paragraphs forms:
+
+
+    <div class='comment' markdown='1'>
+    A comment...
+
+    A second paragraph...
+    </div>
+
+<div class='comment' markdown='1'>
+A comment...
+
+A second paragraph...
+</div>
+
+
+    <div class='question' markdown='1'>
+    A question...
+
+    A second paragraph...
+    </div>
+
+<div class='question' markdown='1'>
+A question...
+
+A second paragraph...
+</div>
+
+
+    <div class='doubt' markdown='1'>
+    A question...
+
+    Should it not be:
+
+        $ alternative command
+
+    A second paragraph...
+    </div>
+
+
+<div class='doubt' markdown='1'>
+A question...
+
+Should it not be:
+
+    $ alternative command
+
+A second paragraph...
+</div>
+
+
 
 ## Referring to Github files
 

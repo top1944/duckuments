@@ -20,21 +20,29 @@ TODO: add link to Duckumentary.
 
 Sign up on our online accounts. These include:
 
-    - Personal Github account
-    - Being part of the Duckietown Github organization, and the TA team.
-    - Twist
-    - Slack
-    - Google Drive
+- Personal Github account
+- Being part of the Duckietown Github organization, and the TA team.
+- Twist
+- Slack
+- Google Drive
 
 To do this: send an email to Kirsten Bowser, with your GMail address. She will sign you up and send further instructions.
 
 Point of Contact: Kirsten Bowser
+
+### Install Ubuntu
+
+Install Ubuntu 16.06 on your laptop.
+
+See: XXX
 
 ### Duckuments
 
 Install the Duckuments, so you can edit these instructions.
 
 See: [](#part:contribute).
+
+Instead this is in the middle  [](#part:contribute) of a paragraph.
 
 Point of Contact: Andrea
 
@@ -88,10 +96,10 @@ We have the following four documents outside of the duckuments:
 4. [The big TODO list][todo-list]: Where we keep track of things to do.
 
 
-[org-chart]: #
-[lecture-schedule]: #
-[checkoff]: #
-[todo-list]: #
+[org-chart]: https://docs.google.com/spreadsheets/d/18bG3BBsFGZllVeFBh3ygvXacHCO6gckMBqH77yvZnrw/edit?usp=sharing
+[lecture-schedule]: https://docs.google.com/spreadsheets/d/18bG3BBsFGZllVeFBh3ygvXacHCO6gckMBqH77yvZnrw/edit?usp=sharing
+[checkoff]: https://docs.google.com/spreadsheets/d/1uO1aq9zqBpLwo1qOzeBKKbB3CuAQAqM94T8B1AGpCKg/edit?usp=sharing
+[todo-list]: https://docs.google.com/document/d/1PxM9GpcrKCMMhIbwsgW0bpIKcvPVrHwX-skJUEgc4-s/edit?usp=sharing
 
 ## On the interaction with students
 
@@ -100,7 +108,6 @@ TODO: to write
 ## How to ask questions
 
 TODO: to write
-
 ## How to answer questions
 
 TODO: to write
