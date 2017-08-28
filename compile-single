@@ -11,3 +11,5 @@ mcdp-render \
     --symbols docs/symbols.tex\
     --forgiving \
     "$1"
+
+# python -m mcdp_docs.add_edit_links 
