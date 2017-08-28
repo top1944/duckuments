@@ -3,12 +3,16 @@ set -e
 set -x
 
 
+dirname=`dirname $1`
+html=${1%.*}.html
 
 mcdp-render \
     --stylesheet v_manual_screen \
-    --maindir `dirname $1` \
+    --maindir $dirname \
     --mathjax 0 \
-    --config_dirs `dirname $1` \
+    --config_dirs $dirname \
     --symbols docs/symbols.tex\
     --forgiving \
     "$1"
+
+ python -m mcdp_docs.add_mathjax --preamble docs/symbols.tex $html
