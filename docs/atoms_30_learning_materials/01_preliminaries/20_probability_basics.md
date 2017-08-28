@@ -1,14 +1,13 @@
 # Probability basics {#probability_basics}
 
-Assigned: Liam
 
-In this chapter we give a brief review of some basic probabilistic concepts. For a more in depth treatment a textbook such as [](#bib:Papoulis).
+In this chapter we give a brief review of some basic probabilistic concepts. For a more in-depth treatment of the subject we refer the interested reader to a textbook such as [](#bib:Papoulis).
 
 ## Random Variables {#random_variables}
 
-The key underlying concept in probabilistic theory is that of an *event*, such as the output of a random trial. For example, the result of a coin flip turning up HEADS, or the result of rolling a die turning up the number "4".
+The key underlying concept in probabilistic theory is that of an *event*, which is the output of a random trial. For example, the result of a coin flip turning up HEADS, or the result of rolling a die turning up the number "4".
 
-\begin{definition}\label{def:random_variable}
+\begin{definition}[Random Variable]\label{def:random_variable}
 A  (either discrete or continuous) variable that can take on any value that corresponds to the feasible output of a random trial.
 \end{definition}
 
@@ -129,6 +128,24 @@ Two RVs, $X$ and $Y$ may be correlated, we may be able to encapsulate the depend
   <img src="conditional_independence.pdf" style='width:10em; height:auto' />
 </div>
 
+### Moments {#moments}
+
+The $n$th moment of an RV, $X$, is given by $E[X^n]$ where $E[]$ is the expection operator with:
+
+\[
+   E[f(X)] = \sum_\mathcal{X} xf(x)
+\]
+in the discrete case and 
+\[
+   E[f(X)] = \int xf(x) dx
+\]
+in the continuous case.
+
+The 1st moment is the *mean*, $\mu_X=E[X}$. 
+
+The $n$th central moment of an RV, $X$ is given by $E[(X-\mu_X)^n]$. The second central moment is called the *covariance*, $\sigma^2_X=E[(X-\mu_X)^2]$.
+
+
 ### Entropy {#entropy}
 
 \begin{definition}\label{def:entropy}
@@ -148,6 +165,7 @@ As an example, we can easily write out the Shannon entropy associated with a bin
 
 \begin{equation}
 H(X) = -p\log_2 p - (1-p)\log_2 (1-p)
+\label{eq:binary_entropy}
 \end{equation}
 
 
@@ -156,6 +174,8 @@ H(X) = -p\log_2 p - (1-p)\log_2 (1-p)
 </div>
 
 Notice that our highest entropy (uncertainty) about the outcome of the coin flip is when it is a fair coin (equal probability of heads and tails). The entropy decays to 0 as we approach $p=0$ and $p=1$ since in these two cases we have no uncertainty about the outcome of the flip. It should also be clear why the function is symmetrical around the $p=0.5$ value.
+
+
 
 ### The Gaussian Distribution {#gaussian}
 
@@ -173,17 +193,24 @@ We will rarely deal with the univariate case and much more often deal with the m
 
 
 \begin{equation}
-\mathcal{N}(\state|\bmu,\bSigma) = \frac{1}{(2*\pi)^{D/2}|\bSigma|^{1/2}}exp[-\frac{1}{2}(\state-\bmu)^T\bSigma^{-1}(\state - \bmu)]
+\mathcal{N}(\state|\bmu,\bSigma) = \frac{1}{(2*\pi)^{D/2}|\bSigma|^{1/2}}\exp[-\frac{1}{2}(\state-\bmu)^T\bSigma^{-1}(\state - \bmu)]
 \label{eq:gaussianND}
 \end{equation}
 
 
-TODO: why Gaussian 1) Central limit theorem. 2) Maximum entropy
+The value from the exponent: $(\state-\bmu)^T\bSigma^{-1}(\state - \bmu)$ is sometimes written
+$||\state - \bmu||_\bSigma$ and is referred to as the *Mahalanobis distance* or *energy norm*.
 
-TODO: sufficient statistics
+Mathematically, the Gaussian distribution has some nice properties as we will see. But is this the only reason to use this as a distribution. In other words, is the assumption of Gaussianicity a good one?
 
-TODO: moments
+There are two very good reasons to think that the Gaussian distribution is the "right" one to use in a given situation.
+
+1. The *central limit theorem* says that, in the limit, if we sum an increasing number of independent random variables, the distribution approaches Gaussian
+
+2. It can be proven (TODO:ref) that the Gaussian distribution has the maximum entropy subject to a given value for the first and second moments. In other words, for a given mean and variance, it makes the *least* assumptions about the other moments.  
 
 
 Exercise: derive the formula for Gaussian entropy
+
+
 
