@@ -11,16 +11,17 @@ In general, keep in mind that:
 
 
 <div class='requirements' markdown="1">
-Requires:
-- A Duckiebot in `C0+wjd` configuration. 
-- Cost: USD 77 + Bumpers manufacturing solution
-- Time: 21 Days (LED board manufacturing and shipping time)
 
-Results:
-- A kit of parts ready to be assembled in a `C1` configuration Duckiebot.
+Requires: A Duckiebot in `C0+wjd` configuration.
 
-Next Steps: 
-- After receiving these components, you are ready to do some [soldering](#soldering-boards-c1) before [assembling](#assembling-duckiebot-c1) your `C1` Duckiebot.  
+Requires: Cost: USD 77 + Bumpers manufacturing solution
+
+Requires: Time: 21 Days (LED board manufacturing and shipping time)
+
+Results: A kit of parts ready to be assembled in a `C1` configuration Duckiebot.
+
+Next Steps:
+- After receiving these components, you are ready to do some [soldering](#soldering-boards-c1) before [assembling](#assembling-duckiebot-c1) your `C1` Duckiebot.
 </div>
 
 ## Bill of materials
@@ -52,7 +53,7 @@ Next Steps:
 
 </div>
 
-TODO: add links to Bumpers: (a) bumper design files; (b) one-click purchasing option (?) 
+TODO: add links to Bumpers: (a) bumper design files; (b) one-click purchasing option (?)
 
 <style>
 #materials {
@@ -93,7 +94,7 @@ The PWM/Servo HAT ([](#figure:servo_hat)) mates to the LED HAT and provides the 
 
 ### Power Cable
 
-To power the PWM/Servo HAT from the battery, we use a short (30cm) angled male USB-A to 5.5/2.1mm DC power jack cable ([](#figure:power-cable-usb-to-jack)). 
+To power the PWM/Servo HAT from the battery, we use a short (30cm) angled male USB-A to 5.5/2.1mm DC power jack cable ([](#figure:power-cable-usb-to-jack)).
 
 <div figure-id="fig:power-cable-usb-to-jack" figure-caption="The 30cm angled USB to 5.5/2.1mm power jack cable.">
      <img src="power-cable-usb-to-jack.png" style='width: 15em'/>
@@ -128,7 +129,7 @@ TODO: add links to .sldprt files once confirmed final version
 
 ## Headers, resistors and jumper
 
-Upgrading `C0+wjd` to `C1` requires several electrical bits: 5 of 4 pin female header, 2 of 16 pin male headers, 1 of 12 pin male header, 1 of 3 pin male header, 1 of 2 pin female shunt jumper, 5 of 200 Ohm resistors and finally 10 of 130 Ohm resistors. 
+Upgrading `C0+wjd` to `C1` requires several electrical bits: 5 of 4 pin female header, 2 of 16 pin male headers, 1 of 12 pin male header, 1 of 3 pin male header, 1 of 2 pin female shunt jumper, 5 of 200 Ohm resistors and finally 10 of 130 Ohm resistors.
 
 These items require [soldering](0_5_soldering_boards_c1.md).
 

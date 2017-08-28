@@ -6,17 +6,12 @@ Assigned: Shiying
 
 Resources necessary:
 
-Requires: 
-- Duckiebot `C1` parts.
-The acquisition process is explained in [](#acquiring-parts-c1).
+Requires: Duckiebot `C1` parts. The acquisition process is explained in [](#acquiring-parts-c1).
 The configurations are described in [](#duckiebot-configurations).
 
-Requires: 
-- Time: ??? minutes
+Requires: Time: ??? minutes
 
-Results:
-
-- ...
+Results: ...
 
 TODO: finish above
 

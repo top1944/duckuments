@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+set -x
+
+
+
+mcdp-render \
+    --pdf \
+    --stylesheet v_manual_blurb \
+    --maindir `dirname $1` \
+    --config_dirs `dirname $1` \
+    --symbols docs/symbols.tex\
+    --forgiving \
+    "$1"

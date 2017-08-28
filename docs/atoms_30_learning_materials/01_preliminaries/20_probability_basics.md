@@ -10,19 +10,19 @@ In this chapter we give a brief review of some basic probabilistic concepts. For
 
 ## Random Variables {#random_variables}
 
-The key underlying concept in probabilistic theory is that of an *event*, such as the output of a random trial. For example, the result of a coin flip turning up HEADS, or the result of rolling a die turning up the number "4". 
+The key underlying concept in probabilistic theory is that of an *event*, such as the output of a random trial. For example, the result of a coin flip turning up HEADS, or the result of rolling a die turning up the number "4".
 
 \begin{definition}\label{def:random_variable}
 A  (either discrete or continuous) variable that can take on any value that corresponds to the feasible output of a random trial.
 \end{definition}
 
-For example, we could model the event of flipping a fair coin with the random variable $X$. We write the probability that $X$ takes $HEADS$ as $p(X=HEADS)$. The set of all possible values for the variable $X$ is its *domain*, $\mathcal{X}$. In this case, 
+For example, we could model the event of flipping a fair coin with the random variable $X$. We write the probability that $X$ takes $HEADS$ as $p(X=HEADS)$. The set of all possible values for the variable $X$ is its *domain*, $\mathcal{X}$. In this case,
 \[
-    \mathcal{X}=\{HEADS,TAILS}\}.
+    \mathcal{X}=\{HEADS,TAILS\}.
 \]
-     Since $X$ can only take one of two values, it is a *binary* random variable. In the case of a die roll, 
+     Since $X$ can only take one of two values, it is a *binary* random variable. In the case of a die roll,
 \[
-    \mathcal{X}=\{1,2,3,4,5,6\}, 
+    \mathcal{X}=\{1,2,3,4,5,6\},
 \]
 and we refer to this as a *discrete* random variable. If the output is real value or a subset of the real numbers, e.g., $\mathcal{X} = \mathbb{R}$, then we refer to $X$ as a *continuous* random variable.
 
@@ -48,7 +48,7 @@ In the case of continuous RVs, technically the $p(X=x)$ for any value $x$ is zer
 
 ### Joint Probabilities {#joint}
 
-If we have two different RVs representing two different events $X$ and $Y$, then we represent the probability of two distinct events $x \in \mathcal{X}$ and ${y \in \mathcal{Y}$ both happening, which we will denote as following: $p(X=x AND Y=y) = p(x,y)$. The function $p(x,y)$ is called *joint distribution*.
+If we have two different RVs representing two different events $X$ and $Y$, then we represent the probability of two distinct events $x \in \mathcal{X}$ and $y \in \mathcal{Y}$ both happening, which we will denote as following: $p(X=x AND Y=y) = p(x,y)$. The function $p(x,y)$ is called *joint distribution*.
 
 ### Conditional Probabilities {#conditional}
 
@@ -56,8 +56,9 @@ Again, considering that we have to RVs, $X$ and $Y$, imagine these two events ar
 
 
 <div class="check" markdown="1">
-Write down the conditional pmf for the scenario just described assuming an oracle tells you that the die roll is even. In other words, what is p(x|EVEN)? (Warning: if you think this is very easy that's good, but don't get over-confident) 
+Write down the conditional pmf for the scenario just described assuming an oracle tells you that the die roll is even. In other words, what is p(x|EVEN)? (Warning: if you think this is very easy that's good, but don't get over-confident)
 </div>
+
 
 The joint and conditional distributions are related by the following (which could be considered a definition of the joint distribution):
 
@@ -81,4 +82,4 @@ If two variables are *independent*, then the following relation holds: $p(x,y)=p
 
 
 
-### The Gaussian Distribution {#gaussian} 
+### The Gaussian Distribution {#gaussian}
