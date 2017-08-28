@@ -24,6 +24,7 @@ Sign up on our online accounts. These include:
     - Being part of the Duckietown Github organization, and the TA team.
     - Twist
     - Slack
+    - Send an email to Kirsten Bowser (with your gmail address) and ask to be added to the Google Drive 
 
 Point of Contact: XXX
 
