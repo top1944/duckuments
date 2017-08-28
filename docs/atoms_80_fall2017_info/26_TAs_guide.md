@@ -6,7 +6,11 @@ Here are the first steps.
 
 Note that many of these are not sequential and can be done in parallel.
 
-### Duckumentary
+### Learn about Duckietown
+
+Read about Duckietown's history.
+
+See: [](#part:duckietown-project)
 
 Watch the Duckumentary.
 
@@ -85,7 +89,7 @@ TODO: to write
 
 TODO: to write
 
-## Beyond the class
+## Duckietown beyond the class
 
 TODO: to write - used by many others
 
