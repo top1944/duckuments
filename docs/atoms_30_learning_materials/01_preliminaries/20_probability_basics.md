@@ -2,10 +2,6 @@
 
 Assigned: Liam
 
-TODO: Random Variables, PDFs, CDFs, conditioning, marginalization, Bayes' rule, joints, posterior, likelihood, sufficient statistics, entropy, KLD, MI, Gaussian, moments, conditional independence, Markov property, graphical methods? why Gaussian? 1) Central limit theorem. 2) Maximum entropy
-
-Exercise: derive the formula for Gaussian entropy
-
 In this chapter we give a brief review of some basic probabilistic concepts. For a more in depth treatment a textbook such as [](#bib:Papoulis).
 
 ## Random Variables {#random_variables}
@@ -63,7 +59,7 @@ Write down the conditional pmf for the scenario just described assuming an oracl
 The joint and conditional distributions are related by the following (which could be considered a definition of the joint distribution):
 
 \begin{equation}
-p(x,y} = p(x|y)p(y)
+p(x,y) = p(x|y)p(y)
 \label{eq:joint}
 \end{equation}
 
@@ -78,8 +74,94 @@ In other words, the conditional and joint distributions are inextricably linked 
 
 If two variables are *independent*, then the following relation holds: $p(x,y)=p(x)p(y)$.
 
+### Bayes' Rule {#bayes}
+
+Upon closer inspection of \eqref{eq:joint}, we can see that the choice of which variable to condition upon is completely arbitrary. We can write:
+
+\[
+p(y|x)p(x) = p(x,y) = p(x|y)p(y)
+\]
+
+and then after rearranging things we arrive at one of the most important formulas for mobile robotics, Bayes' rule:
+
+\begin{equation}
+p(x|y) = \frac{p(y|x)p(x)}{p(y)}
+\label{eq:bayes}
+\end{equation}
+
+Exactly why this formula is so important will be covered in more detail in later sections (TODO), but we will give an initial intuition here. 
+
+Consider that the variable $X$ represens something that we are trying to estimate but cannot observe directly, and that the variable $Y$ represents a physical measurement that relates to $X$. We want to estimate the distribution over $X$ given the measurement $Y$, $p(x|y)$, which is called the *posterior* distribution. Bayes' rule tells us to do this. 
+For every possible state, you take the probability that this measurement could have been generated, $p(y|x)$, which is called the *measurement likelihood*, you multiply it by the probability of that state being the true state, $p(x)$, which is called the *prior*, and you normalize over the probability of obtaining that measurement from any state, $p(y)$, which is called the *evidence*.
+
+
+<div class="check" markdown="1">
+From Wikipedia:
+Suppose a drug test has a 99% true positive rate and a 99% true negative rate, and that we know that exactly 0.5% of people are using the drug. Given that you the test gives a positive result, what is the probability that this person is actually a user of the drug. 
+
+Answer: $\approx$ 33.2%.
+This answer should surprise you. It highlights the power of the *prior*.
+</div>
+
+
 ### Marginal Distribution
 
+If we already have a joint distribution $p(x,y)$ and we wish to recover the single variable distribution $p(x)$, we must *marginalize* over the variable $Y$. The involves summing (for discrete RVs) or integrating (for continuous RVs) over all values of the variable we wish to marginalize:
+
+\begin{align}
+p(x) &= \sum_{\mathcal{Y}} p(x,y) 
+f(x) &= \int p(x,y) dy
+\end{align}
+
+This can be thought of as projecting a higher dimensional distribution onto a lower dimensional subspace. For example, consider [](#fig:marginals), which shows some data plotted on a 2D scatter plot, and then the marginal histogram plots along each dimension of the data. 
+
+<div figure-id="fig:marginals" figure-caption="A 2D joint data and 2 marginal 1D histogram plots">
+  <img src="marginals.svg" style='width: 30em'/>
+</div>
+
+Marginalization is an important operation since it allows us to reduce the size of our state space in a princpled way.
+
+### Conditional Independence {#cond-independence}
+
+TODO: write
+
+### Markov Propert {#markov}
+
+TODO: write
+
+
+### Entropy {#entropy}
+
+TODO: write
 
 
 ### The Gaussian Distribution {#gaussian}
+
+In mobile robotics we use the Gaussian, or normal, distribution a lot. 
+The 1-D Gaussian distribution pdf is given by:
+
+\begin{equation}
+\mathcal{N}(x|\mu,\sigma^2) = \frac{1}{\sqrt{2\pi \sigma^2}}e^{-\frac{1}{2\sigma^2}(x-\mu)^2}
+\label{eq:gaussian1D}
+\end{equation}
+
+where $\mu$ is called the *mean* of the distribution, and $\sigma$ is called the *standard deviation*. A plot of the 1D Gaussian was previously shown in [](#fig:pdf_cdf).
+
+We will rarely deal with the univariate case and much more often deal with the multi-variate Gaussian:
+
+
+\begin{equation}
+\mathcal{N}(\state|\bmu,\bSigma) = \frac{1}{(2*\pi)^{D/2}|\bSigma|^{1/2}}exp[-\frac{1}{2}(\state-\bmu)^T\bSigma^{-1}(\state - \bmu)]
+\label{eq:gaussian1D}
+\end{equation}
+
+
+TODO: why Gaussian 1) Central limit theorem. 2) Maximum entropy
+
+TODO: sufficient statistics
+
+TODO: moments
+
+
+Exercise: derive the formula for Gaussian entropy
+
