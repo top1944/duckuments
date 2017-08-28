@@ -93,6 +93,12 @@ We have the following four documents outside of the duckuments:
 [checkoff]: #
 [todo-list]: #
 
+### Fill up the questionnaire 
+
+Please fill up the [preliminary questionnaire for TAs]().
+
+TODO: add interactive unit and related questionnaires.
+
 ## On the interaction with students
 
 TODO: to write
