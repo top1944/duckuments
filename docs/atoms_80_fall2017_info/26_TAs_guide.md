@@ -24,9 +24,11 @@ Sign up on our online accounts. These include:
     - Being part of the Duckietown Github organization, and the TA team.
     - Twist
     - Slack
-    - Send an email to Kirsten Bowser (with your gmail address) and ask to be added to the Google Drive 
+    - Google Drive
 
-Point of Contact: XXX
+To do this: send an email to Kirsten Bowser, with your GMail address. She will sign you up and send further instructions.
+
+Point of Contact: Kirsten Bowser
 
 ### Duckuments
 
@@ -34,7 +36,7 @@ Install the Duckuments, so you can edit these instructions.
 
 See: [](#part:contribute).
 
-Point of Contact: XXX
+Point of Contact: Andrea
 
 ### Learn about Git and Github
 
@@ -45,7 +47,7 @@ See: [Good book](https://git-scm.com/book/en/v2)
 
 See: [Git Flow](http://nvie.com/posts/a-successful-git-branching-model/)
 
-Point of Contact: XXX
+Point of Contact: Liam?
 
 ### Continuous integration
 
@@ -53,7 +55,7 @@ Understand the continuous integration system.
 
 See: [Documentation on continuous integration](#continuous-integration).
 
-Point of Contact: XXX
+Point of Contact: Andrea
 
 ### Duckiebot building
 
@@ -61,7 +63,11 @@ Build your Duckiebot according to the instructions.
 
 See: [](#part:building-duckiebot)
 
-Point of Contact: XXX
+Point of Contact: Shiying (ETH)
+
+Point of Contact: ??? (UdeM)
+
+Point of Contact: ??? (TTIC)
 
 As you read the instructions, keep open the Duckuments source, and note any
 discrepancies. You must note any unexpected thing that is not predicted from the
@@ -71,12 +77,21 @@ The idea is that dozens of other people will have to do the same after you, so
 improving the documentation is the best use of your time, and it is much more
 efficient than answering the same question dozens of times.
 
-### Organization chart
+### Other documentation outside of the Duckuments
 
-Familiarize yourself with the organization chart. This is where we assign areas
-of responsibility.
+We have the following four documents outside of the duckuments:
 
-TODO: add link to org chart
+
+1. [Organization chart][org-chart]: This is where we assign areas of responsibility.
+2. [Lecture schedule][lecture-schedule]
+3. [Checkoff spreadsheet][checkoff]
+4. [The big TODO list][todo-list]: Where we keep track of things to do.
+
+
+[org-chart]: #
+[lecture-schedule]: #
+[checkoff]: #
+[todo-list]: #
 
 ## On the interaction with students
 
