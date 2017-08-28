@@ -101,6 +101,12 @@ We have the following four documents outside of the duckuments:
 [checkoff]: https://docs.google.com/spreadsheets/d/1uO1aq9zqBpLwo1qOzeBKKbB3CuAQAqM94T8B1AGpCKg/edit?usp=sharing
 [todo-list]: https://docs.google.com/document/d/1PxM9GpcrKCMMhIbwsgW0bpIKcvPVrHwX-skJUEgc4-s/edit?usp=sharing
 
+### Fill up the questionnaire 
+
+Please fill up the [preliminary questionnaire for TAs]().
+
+TODO: add interactive unit and related questionnaires.
+
 ## On the interaction with students
 
 TODO: to write
