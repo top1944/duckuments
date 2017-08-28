@@ -674,7 +674,7 @@ Q: question
 A: answer
 
 
-### Authors, maintainers, point of contact
+### Authors, maintainers, Point of Contact
 
     Maintainer: maintainer
 
@@ -684,13 +684,13 @@ Maintainer: maintainer
 
 Author: author
 
-    Point of contact: point of contact
+    Point of Contact: Point of Contact name
 
-Point of contact: point of contact
+Point of Contact: Point of Contact name
 
-    Slack channel: slack channel
+    Slack channel: slack channel name
 
-Slack channel: slack channel
+Slack channel: slack channel name
 
 
 ### References

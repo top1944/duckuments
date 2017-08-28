@@ -6,14 +6,14 @@ Assigned: Jacopo
 
 <!--Start with a brief introduction of the discussed topic, describing its place in the bigger picture, justifying the reading constraints/guidelines below. Write it as if the reader knew the relevant terminology. -->
 
-Linear algebra provides the set of mathematical tools to (a) study linear relationships and (b) describe linear spaces. It is a field of mathematics with important ramifications. 
+Linear algebra provides the set of mathematical tools to (a) study linear relationships and (b) describe linear spaces. It is a field of mathematics with important ramifications.
 
 Linearity is an important concept because it is powerful in describing the input-output behaviour of many natural phenomena (or _systems_). As a matter of fact, all those systems that cannot be modeled as linear, still can be approximated as linear to gain an intuition, and sometimes much more, of what is going on.
 
-So, in a way or the other, linear algebra is a starting point for investigating the world around us, and Duckietown is no exception. 
+So, in a way or the other, linear algebra is a starting point for investigating the world around us, and Duckietown is no exception.
 
 <!--(Dear Santa, I would like class='required-preliminaries' here) -->
-<div class='requirements' markdown="1"> 
+<div class='requirements' markdown="1">
 
 Knowledge necessary:
 
@@ -26,14 +26,14 @@ Requires: $\forall$ is a typo for A and $\in$ are Euros? Mathematical symbolic l
 </div>
 TODO: find appropriate references and fill in above
 
-<!--(Dear Santa, I would like class='recommended-preliminaries' here) 
+<!--(Dear Santa, I would like class='recommended-preliminaries' here)
 <div class="requirements" markdown="1">
 
 Suggested Reading: Insert here a list of topics and suggested resources related to _recommended_ knowledge in order to better understand the content presented. Example:
 
 Recommended: Definitions of Stability, Performances and Robustness: [](#bib:placeholder), ...
 
-</div> 
+</div>
 -->
 
 ## Problem Definition {#theory-chapter-template-problem-def}
@@ -43,7 +43,7 @@ In this section we discuss vectors, matrices and linear spaces, along with their
 First, let us define a _function_, as a mapping between _sets_.
 
 \begin{definition}[Set]\label{def:set}
-A set $\mathbb{X} = \{x_1, x_2, \dots\}$ is a well-defined collection of distinct _elements_, or _members_ of the set, $x_i$, $i = 1, 2, \dots$. For the time being, we assume elements to (complex) numbers. 
+A set $\mathbb{X} = \{x_1, x_2, \dots\}$ is a well-defined collection of distinct _elements_, or _members_ of the set, $x_i$, $i = 1, 2, \dots$. For the time being, we assume elements to (complex) numbers.
 \end{definition}
 
 \begin{definition}[Function]\label{def:function}
@@ -54,7 +54,7 @@ A function $f : \mathbb{X} \rightarrow \mathbb{Y}$ is a mapping between the sets
 
 Recommended: Functions can be classified by the nature of the relationship between inputs and outputs in: _injective_, _surjective_ or _bijective_ [add-ref]().
 
-</div> 
+</div>
 TODO: add references
 <!--<div id='def:function' class="definition latex_env" markdown="1">
 
@@ -106,9 +106,9 @@ D &= 0.
 Remember you can use the `problem` environment of $\LaTeX$ to formally state a problem:
 
 \begin{problem}[PID]\label{prob:label-prob}
-Given a system \eqref{eq:system} and measurements of the output $\tilde{y}_t = y_t + n_t, n_t \~ \cal{N}(0,\sigma)$, find a set of PID coefficients that meet the specified requirements for: 
-- stability, 
-- performance, 
+Given a system \eqref{eq:system} and measurements of the output $\tilde{y}_t = y_t + n_t, n_t \~ \cal{N}(0,\sigma)$, find a set of PID coefficients that meet the specified requirements for:
+- stability,
+- performance,
 - robustness.
 \end{problem}
 
@@ -116,7 +116,7 @@ as shown in ([](#figure:the-bigger-picture)).
 
 <div figure-id="fig:the-bigger-picture" figure-caption="A classical block diagram for PID control. We like to use a lot of clear figures in the Duckiebook.">
      <img src="placeholder.png" style='width: 15em'/>
-</div> 
+</div>
 -->
 
 ## Vectors {#theory-chapter-template-notions}
@@ -125,7 +125,7 @@ Let $n$ belong to the set of natural numbers $\mathbb{N}$, i.e., $n \in \mathbb{
 
 \begin{definition}[Vector and components]\label{def:vector}
 
-An $n$-dimensional $\textit{vector}$ is an $n$-tuple:  
+An $n$-dimensional $\textit{vector}$ is an $n$-tuple:
 
 \begin{align} \label{eq:vector}
 \textbf{v} = \left[ \begin{array}{c} v_1 \\ \vdots \\ v_n \end{array} \right] \in \mathbb{R}^{n \times 1} \equiv \mathbb{R}^n,
@@ -138,14 +138,14 @@ of _components_ $v_1, \dots, v_n \in \mathbb{R}$.
 You can immagine a vector as a "directional _number_", or an arrow that starts a certain point and goes in a certain direction (in $\mathbb{R}^n$). In this representation, the _number_ is the length of the arrow, or the _modulus_ of the vector, and it can be derived through the vector's components.
 
 \begin{definition}[Length of a vector]\label{def:vec2norm}
-We define the length, or _modulus_, of a vector $\textbf{v} \in \mathbb{R}^n$ as:  
+We define the length, or _modulus_, of a vector $\textbf{v} \in \mathbb{R}^n$ as:
 \begin{align} \label{eq:vec2norm}
 \|\textbf{v}\| = \sqrt{v_1^2 + \dots + v_n^2} \in \mathbb{R}.
 \end{align}
-\end{definition} 
+\end{definition}
 
 \begin{remark}[2-norm]\label{rem:2norm}
-Generally speaking, it is not always possible to define the length of a vector ([addref]()). But when it is possible (e.g., [Hilbert spaces]()), and in Duckietown it always is, there are many ways to define it. The most common and intuitive definition is the _Euclidian-_ or _2-norm_, which is defined above in \eqref{eq:vec2norm}.  
+Generally speaking, it is not always possible to define the length of a vector ([addref]()). But when it is possible (e.g., [Hilbert spaces]()), and in Duckietown it always is, there are many ways to define it. The most common and intuitive definition is the _Euclidian-_ or _2-norm_, which is defined above in \eqref{eq:vec2norm}.
 \end{remark}
 
 
@@ -159,14 +159,14 @@ Generally speaking, it is not always possible to define the length of a vector (
 
 <div figure-id="fig:vector-breakdown" figure-caption="A vector and its components.">
      <img src="placeholder.png" style='width: 15em'/>
-</div> 
+</div>
 
 ### Vector algebra
 
 - sum of vectors
 - dot product /  inner product
 - cross product
-- 
+-
 
 
 
@@ -228,7 +228,7 @@ Definitions:
 - 3x3
 - nxn
 
-#### Inverse 
+#### Inverse
 
 - general expression
 
@@ -245,7 +245,7 @@ Definitions:
 
 ## Matrix as representation of linear (vector) spaces
 
-- linear system to matrix representation 
+- linear system to matrix representation
 - linearly dependent and independent spaces
 
 ### Fundamental spaces
@@ -326,7 +326,7 @@ In this section we have defined the fundamental concept of linearity and introdu
 
 We have found that matrices are a very convenient way to represent linear spaces, and that the properties of the matrices such as eigenvalues and eigenvectors have important implications in charachterizing these spaces.
 
-These tools are useful because they are at the foundation of _modeling_ of natural phenomena. Modeling will be invaluable in understanding the behaviour of systems, and a powerful tool to _predict_ future behaviours of the system, and _control_ them when needed.  
+These tools are useful because they are at the foundation of _modeling_ of natural phenomena. Modeling will be invaluable in understanding the behaviour of systems, and a powerful tool to _predict_ future behaviours of the system, and _control_ them when needed.
 
 We have learned that ...
 <!--
@@ -337,7 +337,7 @@ We have learned that ...
 -->
 ## Next Steps
 
-- linearization of non linear equations
+- linearization of nonlinear equations
 - state space representations
 - basic kinematics
 - basic dynamics
@@ -351,6 +351,7 @@ Strong of this new knowledge (what have we learned), we can now [...].
 <!--
 Further Reading: insert here reference resources for the interested reader:
 -->
+
 See also: [](#bib:Savov2017)
 
 See also: [Matrix cookbook](#bib:matrix-cookbook)
@@ -358,6 +359,8 @@ See also: [Matrix cookbook](#bib:matrix-cookbook)
 </div>
 
 
-Author: Jacopo 
+Author: Jacopo
+
 Maintainer: Jacopo
+
 Point of Contact: Jacopo

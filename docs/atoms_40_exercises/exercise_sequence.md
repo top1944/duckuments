@@ -1,6 +1,12 @@
 
+# Exercise: Git and conventions
+
+TODO: move here the exercises we had last year about branching.
 
 # Exercise: Robot setup steps
+
+
+Note: I am not sure these go here. In any case these would be only pointers.
 
 
 ## Milestone: (setup step)
@@ -133,7 +139,7 @@ The output <code>side-by-side.jpg</code>
 
 
 
-<style> 
+<style>
 #fig\:example img {
     height: 5em;
     margin-left: 2em;
@@ -167,9 +173,11 @@ If it can establish that the program is not good, it will return 11.
 Things that are not tested are broken.
 
 
+
+
 <!--  -->
 
-# Exercise: Who watches the watchmen? (optional)
+# Exercise: Who watches the watchmen? (optional) {#exercise-watchmen}
 
 ## Skills learned
 

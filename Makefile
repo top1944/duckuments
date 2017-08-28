@@ -19,32 +19,34 @@ all: compile compile-pdf
 checks: check-duckietown-software check-programs
 
 check-programs-pdf:
-	@which  pdftk || ( \
+	@which  pdftk >/dev/null || ( \
 		echo "You need to install pdftk."; \
 		exit 1)
 
 check-programs:
-	@which  bibtex2html || ( \
+	@which  bibtex2html >/dev/null || ( \
 		echo "You need to install bibtex2html."; \
 		exit 2)
 
-	@which  mcdp-render || ( \
+	@which  mcdp-render >/dev/null  || ( \
 		echo "The program mcdp-render is not found"; \
 		echo "You are not in the virtual environment."; \
 		exit 3)
 
-	@which  mcdp-split || ( \
+	@which  mcdp-split >/dev/null  || ( \
 		echo "The program mcdp-split is not found"; \
 		echo "You need to run 'python setup.py develop' from mcdp/."; \
 		exit 4)
 
-	@which  convert || ( \
+	@which  convert >/dev/null  || ( \
 		echo "You need to install ImageMagick"; \
 		exit 2)
 
-	@which  gs || ( \
+	@which  gs >/dev/null  || ( \
 		echo "You need to install Ghostscript (used by ImageMagick)."; \
 		exit 2)
+
+	@echo All programs installed.
 
 
 
@@ -71,11 +73,11 @@ process-svg-clean:
 	-rm -f $(generated_figs)/*pdf
 
 process-svg:
-	@which  inkscape || which $(inkscape2) || ( \
+	@which  inkscape >/dev/null || which $(inkscape2) || ( \
 		echo "You need to install inkscape."; \
 		exit 2)
-	@which  pdfcrop || (echo "You need to install pdfcrop."; exit 1)
-	@which  pdflatex || (echo "You need to install pdflatex."; exit 1)
+	@which  pdfcrop >/dev/null || (echo "You need to install pdfcrop."; exit 1)
+	@which  pdflatex >/dev/null || (echo "You need to install pdflatex."; exit 1)
 
 
 	python -m mcdp_docs.process_svg docs/ $(generated_figs) $(tex-symbols)
