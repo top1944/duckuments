@@ -63,12 +63,12 @@ See: [](#part:building-duckiebot)
 Point of Contact: XXX
 
 As you read the instructions, keep open the Duckuments source, and note any
-discrepancy. You must note any unexpected thing that is not predicted from the
+discrepancies. You must note any unexpected thing that is not predicted from the
 instruction. If you don't understand anything, please note it.
 
 The idea is that dozens of other people will have to do the same after you, so
 improving the documentation is the best use of your time, and it is much more
-inefficient than answering the same question dozens of times.
+efficient than answering the same question dozens of times.
 
 ### Organization chart
 
