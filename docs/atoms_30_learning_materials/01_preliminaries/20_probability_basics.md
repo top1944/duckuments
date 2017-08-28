@@ -123,17 +123,39 @@ Marginalization is an important operation since it allows us to reduce the size 
 
 ### Conditional Independence {#cond-independence}
 
-TODO: write
+Two RVs, $X$ and $Y$ may be correlated, we may be able to encapsulate the dependence through a third random variable $Z$. Therefore, if we know $Z$
 
-### Markov Propert {#markov}
-
-TODO: write
-
+<div figure-id="fig:conditional_independence" figure-caption="A graphical representation of the conditional independence of $X$ and $Y$ given $Z$">
+  <img src="conditional_independence.pdf" style='width:10em; height:auto' />
+</div>
 
 ### Entropy {#entropy}
 
-TODO: write
+\begin{definition}\label{def:entropy}
+The *entropy* of an RV is a scalar measure of the uncertainty about the value the RV. 
+\end{definition}
 
+A common measure of entropy is the *Shannon entropy*, whose value is given by 
+
+\begin{equation}
+H(X)=-E[\log_2 p(x)]
+\label{eq:shannon}
+\end{equation}
+
+This measure originates from communication theory and literally represents how many bits are required to transmit a distribution through a communication channel. For many more details related to information theory we recommend [](#bib:MacKay_book).
+
+As an example, we can easily write out the Shannon entropy associated with a binary RV (e.g. flipping a coin) as a function of the probability that the coin turns up heads (call this $p$):
+
+\begin{equation}
+H(X) = -p\log_2 p - (1-p)\log_2 (1-p)
+\end{equation}
+
+
+<div figure-id="fig:entropy_binary" figure-caption="The Shannon entropy of a binary RV $X$">
+  <img src="entropy.svg" style='width: 30em;'/>
+</div>
+
+Notice that our highest entropy (uncertainty) about the outcome of the coin flip is when it is a fair coin (equal probability of heads and tails). The entropy decays to 0 as we approach $p=0$ and $p=1$ since in these two cases we have no uncertainty about the outcome of the flip. It should also be clear why the function is symmetrical around the $p=0.5$ value.
 
 ### The Gaussian Distribution {#gaussian}
 
@@ -152,7 +174,7 @@ We will rarely deal with the univariate case and much more often deal with the m
 
 \begin{equation}
 \mathcal{N}(\state|\bmu,\bSigma) = \frac{1}{(2*\pi)^{D/2}|\bSigma|^{1/2}}exp[-\frac{1}{2}(\state-\bmu)^T\bSigma^{-1}(\state - \bmu)]
-\label{eq:gaussian1D}
+\label{eq:gaussianND}
 \end{equation}
 
 
