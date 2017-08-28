@@ -51,9 +51,12 @@ Again, considering that we have to RVs, $X$ and $Y$, imagine these two events ar
 
 
 <div class="check" markdown="1">
-Write down the conditional pmf for the scenario just described assuming an oracle tells you that the die roll is even. In other words, what is p(x|EVEN)? (Warning: if you think this is very easy that's good, but don't get over-confident)
+Write down the conditional pmf for the scenario just described assuming an oracle tells you that the die roll is even. In other words, what is p(x|EVEN)?
+
+(Warning: if you think this is very easy that's good, but don't get over-confident.)
 </div>
 
+Comment: I love editing. -AC
 
 The joint and conditional distributions are related by the following (which could be considered a definition of the joint distribution):
 
@@ -70,6 +73,19 @@ p(x|y) = \frac{p(x,y)}{p(y)} \text{if} p(y) > 0
 \end{equation}
 
 In other words, the conditional and joint distributions are inextricably linked (you can't really talk about one without the other).
+
+<div class='comment' markdown="1">
+I don't really have anything to say.
+
+Just wanted to show the comment system.
+
+Note that I can just go and on with my rambling; all this text will be collapsed anyway.
+
+(Keep this comment as an example.)
+
+-AC
+
+</div>
 
 If two variables are *independent*, then the following relation holds: $p(x,y)=p(x)p(y)$.
 
@@ -88,15 +104,15 @@ p(x|y) = \frac{p(y|x)p(x)}{p(y)}
 \label{eq:bayes}
 \end{equation}
 
-Exactly why this formula is so important will be covered in more detail in later sections (TODO), but we will give an initial intuition here. 
+Exactly why this formula is so important will be covered in more detail in later sections (TODO), but we will give an initial intuition here.
 
-Consider that the variable $X$ represens something that we are trying to estimate but cannot observe directly, and that the variable $Y$ represents a physical measurement that relates to $X$. We want to estimate the distribution over $X$ given the measurement $Y$, $p(x|y)$, which is called the *posterior* distribution. Bayes' rule tells us to do this. 
+Consider that the variable $X$ represens something that we are trying to estimate but cannot observe directly, and that the variable $Y$ represents a physical measurement that relates to $X$. We want to estimate the distribution over $X$ given the measurement $Y$, $p(x|y)$, which is called the *posterior* distribution. Bayes' rule tells us to do this.
 For every possible state, you take the probability that this measurement could have been generated, $p(y|x)$, which is called the *measurement likelihood*, you multiply it by the probability of that state being the true state, $p(x)$, which is called the *prior*, and you normalize over the probability of obtaining that measurement from any state, $p(y)$, which is called the *evidence*.
 
 
 <div class="check" markdown="1">
 From Wikipedia:
-Suppose a drug test has a 99% true positive rate and a 99% true negative rate, and that we know that exactly 0.5% of people are using the drug. Given that you the test gives a positive result, what is the probability that this person is actually a user of the drug. 
+Suppose a drug test has a 99% true positive rate and a 99% true negative rate, and that we know that exactly 0.5% of people are using the drug. Given that you the test gives a positive result, what is the probability that this person is actually a user of the drug.
 
 Answer: $\approx$ 33.2%.
 This answer should surprise you. It highlights the power of the *prior*.
@@ -108,11 +124,11 @@ This answer should surprise you. It highlights the power of the *prior*.
 If we already have a joint distribution $p(x,y)$ and we wish to recover the single variable distribution $p(x)$, we must *marginalize* over the variable $Y$. The involves summing (for discrete RVs) or integrating (for continuous RVs) over all values of the variable we wish to marginalize:
 
 \begin{align}
-p(x) &= \sum_{\mathcal{Y}} p(x,y) 
+p(x) &= \sum_{\mathcal{Y}} p(x,y)
 f(x) &= \int p(x,y) dy
 \end{align}
 
-This can be thought of as projecting a higher dimensional distribution onto a lower dimensional subspace. For example, consider [](#fig:marginals), which shows some data plotted on a 2D scatter plot, and then the marginal histogram plots along each dimension of the data. 
+This can be thought of as projecting a higher dimensional distribution onto a lower dimensional subspace. For example, consider [](#fig:marginals), which shows some data plotted on a 2D scatter plot, and then the marginal histogram plots along each dimension of the data.
 
 <div figure-id="fig:marginals" figure-caption="A 2D joint data and 2 marginal 1D histogram plots">
   <img src="marginals.svg" style='width: 30em'/>
@@ -135,13 +151,13 @@ The $n$th moment of an RV, $X$, is given by $E[X^n]$ where $E[]$ is the expectio
 \[
    E[f(X)] = \sum_\mathcal{X} xf(x)
 \]
-in the discrete case and 
+in the discrete case and
 \[
    E[f(X)] = \int xf(x) dx
 \]
 in the continuous case.
 
-The 1st moment is the *mean*, $\mu_X=E[X}$. 
+The 1st moment is the *mean*, $\mu_X=E[X}$.
 
 The $n$th central moment of an RV, $X$ is given by $E[(X-\mu_X)^n]$. The second central moment is called the *covariance*, $\sigma^2_X=E[(X-\mu_X)^2]$.
 
@@ -149,10 +165,10 @@ The $n$th central moment of an RV, $X$ is given by $E[(X-\mu_X)^n]$. The second 
 ### Entropy {#entropy}
 
 \begin{definition}\label{def:entropy}
-The *entropy* of an RV is a scalar measure of the uncertainty about the value the RV. 
+The *entropy* of an RV is a scalar measure of the uncertainty about the value the RV.
 \end{definition}
 
-A common measure of entropy is the *Shannon entropy*, whose value is given by 
+A common measure of entropy is the *Shannon entropy*, whose value is given by
 
 \begin{equation}
 H(X)=-E[\log_2 p(x)]
@@ -179,7 +195,10 @@ Notice that our highest entropy (uncertainty) about the outcome of the coin flip
 
 ### The Gaussian Distribution {#gaussian}
 
-In mobile robotics we use the Gaussian, or normal, distribution a lot. 
+In mobile robotics we use the Gaussian, or normal, distribution a lot.
+
+Comment: The banana distribution is the official distribution in robotics! - AC
+
 The 1-D Gaussian distribution pdf is given by:
 
 \begin{equation}
@@ -207,10 +226,7 @@ There are two very good reasons to think that the Gaussian distribution is the "
 
 1. The *central limit theorem* says that, in the limit, if we sum an increasing number of independent random variables, the distribution approaches Gaussian
 
-2. It can be proven (TODO:ref) that the Gaussian distribution has the maximum entropy subject to a given value for the first and second moments. In other words, for a given mean and variance, it makes the *least* assumptions about the other moments.  
+2. It can be proven (TODO:ref) that the Gaussian distribution has the maximum entropy subject to a given value for the first and second moments. In other words, for a given mean and variance, it makes the *least* assumptions about the other moments.
 
 
 Exercise: derive the formula for Gaussian entropy
-
-
-
