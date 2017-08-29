@@ -91,13 +91,7 @@ or a failure message ([](#fig:checks-failure)).
 (7) At this point, you can click "squash and merge" to merge the changes into master ([](#fig:squash)).
 
 
-
-<<<<<<< HEAD
 <img figure-id="fig:squash" figure-caption="The final step" src='squash.png' style='width: 100%'/>
-=======
-<img figure-id="fig:squash" figure-caption="The final step"
-  src='squash.png' style='width: 100%'/>
->>>>>>> andrea-continous-integration
 
 
 ### Troubleshooting
@@ -105,13 +99,7 @@ or a failure message ([](#fig:checks-failure)).
 If you see a message like "merge failed" ([](#merge-failed)), it probably means that somebody pushed into master; merge master into your branch and continue the process.
 
 
-<<<<<<< HEAD
 <img figure-id="fig:merge-failed" figure-caption="Merge failed" src='merge-failed.png' style='width: 100%'/>
-=======
-<img figure-id="fig:merge-failed" figure-caption="Merge failed"
-  src='merge-failed.png' style='width: 100%'/>
->>>>>>> andrea-continous-integration
-
 
 
 
