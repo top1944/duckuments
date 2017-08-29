@@ -11,6 +11,7 @@ Assigned: Matt
 ### Camera and Lens Geometry
 
 **Topics**:
+
 * Pinhole cameras
 * Geometry of projection: equations of projection; vanishing points; weak perspective; orthographic projection;
 * Lenses: Why?; first-order optics (thin lens); thick lens
@@ -23,6 +24,7 @@ Assigned: Matt
 Note: The discussion of intrinsic and extrinsic models could be moved up to the geometry subsection
 
 **Topics**
+
 * Why calibration?
 * Intrinsic parameters: idealized perspective projection; pixel scaling (square and non-square); offset; skew.
 * Intrinsic model expressed in homogeneous coordinates
