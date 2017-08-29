@@ -21,6 +21,8 @@ Assigned: Matt
 
 ### Camera and Lens Geometry
 
+Note: We could break this up into separate sub-sections for (prospective) projection and lenses.
+
 **Topics**:
 
 * Pinhole cameras (tie into eclipse viewing, accidental cameras)
