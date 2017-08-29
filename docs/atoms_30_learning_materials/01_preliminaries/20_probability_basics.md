@@ -21,7 +21,11 @@ For example, we could model the event of flipping a fair coin with the random va
 \]
 and we refer to this as a *discrete* random variable. If the output is real value or a subset of the real numbers, e.g., $\mathcal{X} = \mathbb{R}$, then we refer to $X$ as a *continuous* random variable.
 
-Consider once again the toin cossing event. If the coin is fair, the have $p(X=HEADS)=p(X=TAILS)=0.5$. Here, the function $p(x)$ is called the *probability mass function* or pmf. The pmf is shown in [](#fig:binary_pmf).
+<div class="comment" markdown="1">
+    Personally, I don't like using math formatting for letters or words that don't denote symbols, e.g., $X = HEADS$ v.s. $X= \text{HEADS}$ - MW
+</div>
+
+Consider once again the coin tossing event. If the coin is fair, the have $p(X=HEADS)=p(X=TAILS)=0.5$. Here, the function $p(x)$ is called the *probability mass function* or pmf. The pmf is shown in [](#fig:binary_pmf).
 
 <div figure-id="fig:binary_pmf" figure-caption="The pmf for a fair coin toss">
   <img src="binary_pmf.svg" style='width: 30em'/>
@@ -43,11 +47,11 @@ In the case of continuous RVs, technically the $p(X=x)$ for any value $x$ is zer
 
 ### Joint Probabilities {#joint}
 
-If we have two different RVs representing two different events $X$ and $Y$, then we represent the probability of two distinct events $x \in \mathcal{X}$ and $y \in \mathcal{Y}$ both happening, which we will denote as following: $p(X=x AND Y=y) = p(x,y)$. The function $p(x,y)$ is called *joint distribution*.
+If we have two different RVs representing two different events $X$ and $Y$, then we represent the probability of two distinct events $x \in \mathcal{X}$ and $y \in \mathcal{Y}$ both happening, which we will denote as following: $p(X=x \; \text{AND} \; Y=y) = p(x,y)$. The function $p(x,y)$ is called *joint distribution*.
 
 ### Conditional Probabilities {#conditional}
 
-Again, considering that we have to RVs, $X$ and $Y$, imagine these two events are linked in some way. For example, $X$ is the numerical output of a die roll and $Y$ is the binary even-odd output of the same die roll. Clearly these two events are linked since they are both uniquely determined by the same underlying event (the rolling of the die). In this case, we say that the RVs are *dependent* on one another. In the event that we know one of events, this gives us some information about the other. We denote this using the following notation $p(X=x GIVEN Y=y = p(x|y)$ and is called the *conditional distribution*.
+Again, considering that we have to RVs, $X$ and $Y$, imagine these two events are linked in some way. For example, $X$ is the numerical output of a die roll and $Y$ is the binary even-odd output of the same die roll. Clearly these two events are linked since they are both uniquely determined by the same underlying event (the rolling of the die). In this case, we say that the RVs are *dependent* on one another. In the event that we know one of events, this gives us some information about the other. We denote this using the following *conditional distribution* $p(X=x \; \text{GIVEN} \; Y=y = p(x|y)$.
 
 
 <div class="check" markdown="1">
@@ -71,6 +75,10 @@ and similarly, the following could be considered a definition of the conditional
 p(x|y) = \frac{p(x,y)}{p(y)} \text{if} p(y) > 0
 \label{eq:condition}
 \end{equation}
+
+<div class="comment" markdown="1">
+We need to add spacing - MW
+</div>
 
 In other words, the conditional and joint distributions are inextricably linked (you can't really talk about one without the other).
 
@@ -106,7 +114,7 @@ p(x|y) = \frac{p(y|x)p(x)}{p(y)}
 
 Exactly why this formula is so important will be covered in more detail in later sections (TODO), but we will give an initial intuition here.
 
-Consider that the variable $X$ represens something that we are trying to estimate but cannot observe directly, and that the variable $Y$ represents a physical measurement that relates to $X$. We want to estimate the distribution over $X$ given the measurement $Y$, $p(x|y)$, which is called the *posterior* distribution. Bayes' rule tells us to do this.
+Consider that the variable $X$ represents something that we are trying to estimate but cannot observe directly, and that the variable $Y$ represents a physical measurement that relates to $X$. We want to estimate the distribution over $X$ given the measurement $Y$, $p(x|y)$, which is called the *posterior* distribution. Bayes' rule lets us to do this.
 For every possible state, you take the probability that this measurement could have been generated, $p(y|x)$, which is called the *measurement likelihood*, you multiply it by the probability of that state being the true state, $p(x)$, which is called the *prior*, and you normalize over the probability of obtaining that measurement from any state, $p(y)$, which is called the *evidence*.
 
 
@@ -142,6 +150,11 @@ Two RVs, $X$ and $Y$ may be correlated, we may be able to encapsulate the depend
 
 <div figure-id="fig:conditional_independence" figure-caption="A graphical representation of the conditional independence of $X$ and $Y$ given $Z$">
   <img src="conditional_independence.pdf" style='width:10em; height:auto' />
+</div>
+
+
+<div class="comment" markdown="1">
+Is there a discussion of graphical models anywhere? Doing a good job of sufficiently describing graphical models and the dependency relations that they express requires careful thought. Without it, we should refer readers to a graphical models text (e.g., Koller and Friedman, even if it is dense)
 </div>
 
 ### Moments {#moments}
