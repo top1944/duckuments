@@ -210,7 +210,8 @@ Notice that our highest entropy (uncertainty) about the outcome of the coin flip
 
 In mobile robotics we use the Gaussian, or normal, distribution a lot.
 
-Comment: The banana distribution is the official distribution in robotics! - AC
+Comment: The banana distribution is the official distribution in robotics! - AC  
+Comment: The banana distribution is Gaussian! http://www.roboticsproceedings.org/rss08/p34.pdf - LP
 
 The 1-D Gaussian distribution pdf is given by:
 
