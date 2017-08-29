@@ -5,14 +5,25 @@ Assigned: Matt
 ### Computer vision: What and why?
 
 
-**Objective**: Discover what is present in the world, where things are, and what actions are taking place from image sequences. In the context of robotics, this corresponds to learning a (probabilistic) world model that encodes the robot's environment, i.e., building a representation of the environment.
+**Topics**:
+
+* **Objective**: Discover what is present in the world, where things are, and what actions are taking place from image sequences. In the context of robotics, this corresponds to learning a (probabilistic) world model that encodes the robot's environment, i.e., building a representation of the environment.
+* History of computer vision
+    * Summer Vision Project
+    * OCR (license plates, signs, checks, mail, etc.)
+    * Face detection
+    * Structure from motion
+    * Dense reconstruction
+    * Augmented reality
+    * Applications to self-driving cars and beyond  
+
 
 
 ### Camera and Lens Geometry
 
 **Topics**:
 
-* Pinhole cameras
+* Pinhole cameras (tie into eclipse viewing, accidental cameras)
 * Geometry of projection: equations of projection; vanishing points; weak perspective; orthographic projection;
 * Lenses: Why?; first-order optics (thin lens); thick lens
 * Review of 3D transformations (translation and rotation); homogeneous transformations
@@ -32,3 +43,14 @@ Note: The discussion of intrinsic and extrinsic models could be moved up to the 
 * Combined expression for intrinsic and extrinsic
 * Calibration targets
 * Calibration models
+
+
+### Image filtering
+
+**Background: Discrete-time signal processing
+
+**Topics**
+
+* Linear filtering and convolutions
+* Oriented filters
+* Convoluton
