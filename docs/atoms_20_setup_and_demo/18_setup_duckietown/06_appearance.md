@@ -15,7 +15,7 @@ Duckietown is built with two layers:
 Note: he visual appearance of the area where the Duckietown is created is variable. If you discover that this appearance is causing negative performance, a "wall" of blank tiles constructed vertically can be used to reduce visual clutterl.
 
 
-## Layer 1
+## Layer 1 - The Tile Layer
 
 Each tile is a 2ft x 2ft square and is able to interlock with the others. 
 
@@ -40,82 +40,109 @@ There are five primary types of tiles as shown in [](#fig:tiles)
 </div>
 
 
-**An intersection comprises one single tile** **and MUST be abutted on all sides by a piece of straight road**. Curved roads can be linked indefinitely but there MUST be a tag visible at the transition from one tile to the next along the path (see apriltags for more info). 
-
-## Tapes
+### Tapes
 
 
 There are 3 colors of tapes: white, yellow, and red. 
 
-### White
+1. White
 
-We assume that a Duckiebot never collides with Duckietown if it never crosses or touches a white tape strip. 
-White tapes must be solid
 
-White tapes should be the full thickness of the roll of duck tape. 
+\begin{proposition}\label{prop:white_tape}
+A Duckiebot never collides with Duckietown if it never crosses or touches a white tape strip.
+\end{proposition}
 
-Width of the tape = 1in
+Here are some facts about the white tapes:
 
-It is also true that, during navigation in a StraightTile, the white stripe is always on the right hand side of lanes. 
+* White tapes must be solid (not dashed)
 
-The edge of each tile with a white piece of tape should also have a small curb (use the edge pieces that come with the mats for this). The purpose of this is to clearly delineate the white lanes and make lanes in adjacent roads less visible from the onboard camera. 
+* Width of the tape = 1in
 
-Moreover, the Duckiebot is not powerful enough to cross the curb, so that failure of one car causes only the current tile to become unavailable. 
+* The white tape is always placed on the right hand side of a lane (we assume that Duckiebots drive on the right hand side of the road)
 
-White lines may also be placed on an intersection tile (in fact this is the only type of a tape that should appear on an intersection tile).
-
-For curved road, the white lane marker is formed by five pieces of white tape, while the inner corner is formed by three pieces, placed according to the specifications in the image below, where the edge pieces are matched to adjacent straight or curved tiles:
+* For curved road, the white lane marker is formed by five pieces of white tape, while the inner corner is formed by three pieces, placed according to the specifications in the image below, where the edge pieces are matched to adjacent straight or curved tiles:
 
 <div figure-id="fig:curved" figure-caption="The specification for a curved road tile">
   <img src="curved_road.png" style='width: 30em; height:auto'/>
 </div>
 
 
-### Yellow
+2. Yellow
 
-On a two-way road, the yellow tape should be dashed. Each piece should have a length of approximately **4in** with a **2in** gap separating each piece. 
+On a two-way road, the yellow tape should be dashed. Each piece should have a length of approximately **2in** with a **1in** gap separating each piece. 
 
+Yellow tapes on curves: see curved road image in white tape section, pieces at tile edges should be in center of lane, piece at the middle of the curve should be approximately 20.5 cm from middle of inner center white piece of tape, with approximated circular arc in between.
 
-TODO: Fig 1: A standard 2-way straight road
+3. Red
 
+Red tapes MAY **only** appear on **intersection** tiles. 
+ The red tape must be the full width of the duck tape roll and should cross the entire lane perpendicular to the lane.
 
+The placement of red tape should always be **under** yellow and white tape
 
-A one-way road can have a solid yellow line on the left and solid white on the right:
+A Duckiebot navigates Duckietown by a sequence of:
 
-TODO: Fig. 2: 1 one-way one lane piece of road - in this case direction of travel is from bottom to top.
-
-example
-
-**Yellow tapes on curves: see curved road image in white tape section, pieces at tile edges should be in center of lane, piece at the middle of the curve should be approximately 20.5 cm from middle of inner center white piece of tape, with approximated circular arc in between.**
-
-### Red
-
-Red tapes MAY **only** appear on **straight road** tiles. A red tape MUST be used whenever the adjacent tile is either a **curved road** or an **intersection** and MUST be placed at the edge of the tile on the edge that abuts the curved road or intersection. The red tape MUST be the full width of the duck tape roll and should cross the entire lane perpendicular to the lane.
-
-The placement of red tape should always be **under** yellow and white tape, as shown in the image above. 
-
-The following is true: a Duckiebot can navigate Duckietown by a sequence of:
-
-* Navigating one or more StraightTiles until a Red Strip appears.
-
-* Wait for the coordination signal
-
-* Execute an open-loop motion.
-
+* Navigating one or more straigh ties until a red tape appears,
+* Wait for the coordination signal,
+* Execute an intersection traversal,
 * Relocalize in a StraightTile. 
-Here are a couple of examples:
 
-TODO: Fig 4: A straight road tile adjacent to a curved road tile requires a red tape. Note the red strip is on the tile from which the car comes. 
 
 The invariant is: if you stop before or ON the red strip, no collisions are possible.
 
-TODO: Fig 5: A ‘T’ intersection
 
-## Topological Constraints During Map Construction
+### Topological Constraints During Map Construction
+
+Here are some topological rule constraints that must be met:
+
+1. An intersection comprises can NOT be adjacent to a curved road tile or another intersection tile.
+
+2. Any two adjacent non-empty tiles must have a feasible path from one to the other **of length two** (i.e. if they are adjacent they must be connected.
+
+Some examples of non-conforming topologies are shown in [](#fig:violates)
+
+<div figure-id="fig:violates" figure-class="flow-subfigures" figure-caption="Some non-conforming Duckietown map topologies">
+    <div figure-id="subfig:violates1" figure-caption="Topology violates rule 2 since the bottom two curved tiles are adjacent but not connected">
+        <img src="violates1.pdf" style='width: 20ex;height:auto'/>
+    </div>
+    <div figure-id="subfig:violates2" figure-caption="Topology violates rule 1 since curved tiles are adjacent to intersection tiles ">
+        <img src="violates2.pdf" style='width: 20ex;height:auto'/>
+    </div>
+    <div figure-id="subfig:violates3" figure-caption="Topology violates rule 2 since left-most tiles are adjacent but not connected">
+        <img src="violates3.pdf" style='width: 20ex;height:auto'/>
+    </div>
+</div>
 
 
-TODO: Liam
+### Parking Lots {#parking}
 
+Note: Experimental
+
+A parking is a place for Duckiebots to go when they are tired and need a rest. 
+A parking lot introduces three additional tile types:
+
+1. **Parking lot entry tile**: This is similar to a straight  tile except with a red stop in the middle. The parking lot sign ([](#fig:parking)) will be visible from this stop line.
+2. **Parking spot tiles**: 
+TODO: the tape on these tiles is currently not yet specified.
+3. **Parking spot access tiles**: 
+TODO: the tape on these tiles is currently not yet specified. 
+
+The following are the rules for a conforming parking lot:
+
+1. One "parking spot" has size one tile. 
+2. From each parking spot, there is a path to go to the parking lot entry tile that does not intersect any other parking spot. (i.e. when a duckiebot is parked, nobody will disturb it).
+3. From any position in any parking spot, a Duckiebot can see at least two orthogonal lines or an sign with an april tag. TODO: this point needs further specification
+
+
+### Launch Tiles {#launch-tiles}
+
+Note: Experimental
+
+A launch tile is used to introduce a new Duckiebot into Duckietown in a controllable way. The launch file should be places adjacent to a turn tile so that a Duckiebot may "merge" into Duckietown once the initialization procedure is complete.
+
+TODO: Specification for tape on the launch tile
+
+A "yield" sign should be visible from the launch tile. 
 
 ## Layer 2 - Signage and Lights
 
@@ -133,106 +160,55 @@ Center of signs are 13cm height with apriltags of 6.5cm sq. and a white border p
 
 The allowable signs are:
 
-<col4 figure-id="tab:signs" figure-caption="Allowable signs">
 
-<span>
-**Sign**
-</span>
-<span>
-**Name**
-</span>
+<div figure-id="fig:signs" figure-caption="Duckietown Traffic Signs">
+  <div figure-id="subfig:stop" figure-caption="stop">
+    <img src="stop.png" style='width:8em;height:auto'/>
+  </div>
+  <div figure-id="subfig:yield" figure-caption="yield">
+    <img src="yield.png" style='width:8em;height:auto'/>
+  </div>
+  <div figure-id="subfig:no-right" figure-caption="no-right-turn">
+    <img src="no-right.png" style='width:8em;height:auto'/>
+  </div>
+  <div figure-id="subfig:no-left" figure-caption="no-left-turn">
+    <img src="no-left.png" style='width:8em;height:auto'/>
+  </div>
+  <div figure-id="subfig:no-enter" figure-caption="do-not-enter">
+    <img src="no-enter.png" style='width:8em;height:auto'/>
+  </div>
+  <div figure-id="subfig:one-way-right" figure-caption="oneway-right">
+    <img src="one-way-right.png" style='width:8em;height:auto'/>
+  </div>
+  <div figure-id="subfig:one-way-left" figure-caption="oneway-left">
+    <img src="one-way-left.png" style='width:8em;height:auto'/>
+  </div>
+  <div figure-id="subfig:4-way-intersect" figure-caption="4-way-intersect">
+    <img src="4-way.png" style='width:8em;height:auto'/>
+  </div>
+  <div figure-id="subfig:3-way-right" figure-caption="right-T-intersect">
+    <img src="3-way-right.png" style='width:8em;height:auto'/>
+  </div>
+  <div figure-id="subfig:3-way-left" figure-caption="left-T-intersect">
+    <img src="3-way-left.png" style='width:8em;height:auto'/>
+  </div>
+  <div figure-id="subfig:t-intersection" figure-caption="T-intersection">
+    <img src="t-intersection.png" style='width:8em;height:auto'/>
+  </div>
+  <div figure-id="subfig:crossing" figure-caption="pedestrian">
+    <img src="crossing.png" style='width:8em;height:auto'/>
+  </div>
+  <div figure-id="subfig:traffic-light" figure-caption="t-light-ahead">
+    <img src="traffic-light.png" style='width:8em;height:auto'/>
+  </div>
+  <div figure-id="subfig:duckie-crossing" figure-caption="duck-crossing">
+    <img src="duckie-crossing.png" style='width:8em;height:auto'/>
+  </div>
+  <div figure-id="subfig:parking" figure-caption="parking">
+    <img src="parking.png" style='width:8em;height:auto'/>
+  </div>
+</div>
 
-<span>
-<img src="stop.png" style='width: 10em'/>
-</span>
-<span>
-stop
-</span>
-<span>
-<img src="yield.png" style='width: 10em'/>
-</span>
-<span>
-yield
-</span>
-<span>
-<img src="no-right.png" style='width: 10em'/>
-</span>
-<span>
-no-right
-</span>
-<span>
-<img src="no-left.png" style='width: 10em'/>
-</span>
-<span>
-no-left-turn
-</span>
-<span>
-<img src="no-enter.png" style='width: 10em'/>
-</span>
-<span>
-do-not-enter
-</span>
-<span>
-<img src="one-way-right.png" style='width: 10em'/>
-</span>
-<span>
-oneway-right
-</span>
-<span>
-<img src="one-way-left.png" style='width: 10em'/>
-</span>
-<span>
-oneway-left
-</span>
-<span>
-<img src="4-way.png" style='width: 10em'/>
-</span>
-<span>
-4-way-intersect
-</span>
-<span>
-<img src="3-way-right.png" style='width: 10em'/>
-</span>
-<span>
-right-T-intersect
-</span>
-<span>
-<img src="3-way-left.png" style='width: 10em'/>
-</span>
-<span>
-left-T-intersect
-</span>
-<span>
-<img src="t-intersection.png" style='width: 10em'/>
-</span>
-<span>
-T-intersection
-</span>
-<span>
-<img src="crossing.png" style='width: 10em'/>
-</span>
-<span>
-pedestrian
-</span>
-<span>
-<img src="traffic-light.png" style='width: 10em'/>
-</span>
-<span>
-t-light-ahead
-</span>
-<span>
-<img src="duckie-crossing.png" style='width: 10em'/>
-</span>
-<span>
-duck-crossing
-</span>
-<span>
-<img src="parking.png" style='width: 10em'/>
-</span>
-<span>
-parking
-</span>
-</col4>
 
 Each sign is printed from the [signs and tags doc](https://drive.google.com/open?id=0B97DoIREKRoqU3RySjNWT0ZKZVU)
 
