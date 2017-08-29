@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c1efdfbe2ec2e2ed4852d7ce214296895f687f9e30e9ac85bc99b8ba1cf954cd
-size 210
+#!/bin/bash
+set -e
+set -x
+
+
+
+mcdp-render \
+    --pdf \
+    --stylesheet v_manual_blurb \
+    --maindir `dirname $1` \
+    --config_dirs `dirname $1` \
+    --symbols docs/symbols.tex\
+    --forgiving \
+    "$1"
