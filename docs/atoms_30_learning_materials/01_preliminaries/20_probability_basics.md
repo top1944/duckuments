@@ -112,7 +112,7 @@ For every possible state, you take the probability that this measurement could h
 
 <div class="check" markdown="1">
 From Wikipedia:
-Suppose a drug test has a 99% true positive rate and a 99% true negative rate, and that we know that exactly 0.5% of people are using the drug. Given that you the test gives a positive result, what is the probability that this person is actually a user of the drug.
+Suppose a drug test has a 99% true positive rate and a 99% true negative rate, and that we know that exactly 0.5% of people are using the drug. Given that a person's test gives a positive result, what is the probability that this person is actually a user of the drug.
 
 Answer: $\approx$ 33.2%.
 This answer should surprise you. It highlights the power of the *prior*.
