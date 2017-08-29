@@ -2,28 +2,43 @@
 
 Assigned: Liam
 
+This document is about the specification for a conforming Duckietown. Any Duckietown not adhering to the rules described here cannot call itself a "Duckietown" since it is not one. Additionally, any Duckietown not adhering to these rules may cause the Duckiebots to fail in unexpected ways. These are a set of rules for which a functional system has been verified.
 
-## Layers {#layers}
+## Overview
 
 Duckietown is built with two layers: 
 
-1. The first layer is the floor layer. The floor is built of interconnected exercise mats with tape on them. 
+1. The first is the *floor layer*. The floor is built of interconnected exercise mats with tape on them. 
 
-2. The second layer is signs and other objects that sit on top of the mats. 
+2. The second layer is the *signal layer* and contains all the signs and other objects that sit on top of the mats. 
 
-Additional note: In the case that Duckietown directly abuts a wall, a perimeter of vertical tiles should be added to reduce visual clutter and false positives.
+Note: he visual appearance of the area where the Duckietown is created is variable. If you discover that this appearance is causing negative performance, a "wall" of blank tiles constructed vertically can be used to reduce visual clutterl.
 
-## Layer 1 - Tiles and Tapes
+
+## Layer 1
 
 Each tile is a 2ft x 2ft square and is able to interlock with the others. 
 
-There are fundamentally three types of tiles as follows:
+There are five primary types of tiles as shown in [](#fig:tiles)
 
-1. StraightTile: Straight road
+<div figure-id="fig:tiles" figure-class="flow-subfigures" figure-caption="The principal tile types in Duckietown">
+    <div figure-id="subfig:straight" figure-caption="Straight tile">
+        <img src="straight_tile2.png" style='width: 20ex'/>
+    </div>
+    <div figure-id="subfig:turn" figure-caption="Turn tile">
+        <img src="90turntile.png" style='width: 20ex'/>
+    </div>
+    <div figure-id="subfig:3-way" figure-caption="3-way intersection tile">
+        <img src="3way_tile.png" style='width: 20ex'/>
+    </div>
+    <div figure-id="subfig:4-way" figure-caption="4-way intersection tile">
+        <img src="4way_tile.png" style='width: 20ex'/>
+    </div>
+    <div figure-id="subfig:empty" figure-caption="Empty tile">
+        <img src="empty_tile.png" style='width: 20ex'/>
+    </div>
+</div>
 
-2. CurvedTile90: Curved road
-
-3. IntersectionTile: Intersection
 
 **An intersection comprises one single tile** **and MUST be abutted on all sides by a piece of straight road**. Curved roads can be linked indefinitely but there MUST be a tag visible at the transition from one tile to the next along the path (see apriltags for more info). 
 
