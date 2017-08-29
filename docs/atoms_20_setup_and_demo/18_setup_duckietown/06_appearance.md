@@ -1,8 +1,9 @@
 # Duckietown Appearance Specification
 
+Assigned: Liam
 
 
-## **Layers**
+## Layers {#layers}
 
 Duckietown is built with two layers: 
 
@@ -12,7 +13,7 @@ Duckietown is built with two layers:
 
 Additional note: In the case that Duckietown directly abuts a wall, a perimeter of vertical tiles should be added to reduce visual clutter and false positives.
 
-# Layer 1 - Tiles and Tapes
+## Layer 1 - Tiles and Tapes
 
 Each tile is a 2ft x 2ft square and is able to interlock with the others. 
 
@@ -26,19 +27,19 @@ There are fundamentally three types of tiles as follows:
 
 **An intersection comprises one single tile** **and MUST be abutted on all sides by a piece of straight road**. Curved roads can be linked indefinitely but there MUST be a tag visible at the transition from one tile to the next along the path (see apriltags for more info). 
 
-## **Tapes**
+## Tapes
+
 
 There are 3 colors of tapes: white, yellow, and red. 
 
 ### White
 
-We assume that a Duckiebot never collides with Duckietown if it never crosses or touches a white tape strip.
-
-White tapes must be solid
+We assume that a Duckiebot never collides with Duckietown if it never crosses or touches a white tape strip. 
+White tapes must be solid
 
 White tapes should be the full thickness of the roll of duck tape. 
 
-Width of the tape = **???**
+Width of the tape = 1in
 
 It is also true that, during navigation in a StraightTile, the white stripe is always on the right hand side of lanes. 
 
@@ -50,27 +51,31 @@ White lines may also be placed on an intersection tile (in fact this is the only
 
 For curved road, the white lane marker is formed by five pieces of white tape, while the inner corner is formed by three pieces, placed according to the specifications in the image below, where the edge pieces are matched to adjacent straight or curved tiles:
 
- ![image alt text](image_0.png)Fig 3: A curved road.
+<div figure-id="fig:curved" figure-caption="The specification for a curved road tile">
+  <img src="curved_road.png" style='width: 30em; height:auto'/>
+</div>
+
 
 ### Yellow
 
-Yellow tape should be **half of the thickness** of the roll of duck tape = ???. On a two-way road, the yellow tape should be dashed. Each piece should have a length of approximately **4in** with a **2in** gap separating each piece. 
+On a two-way road, the yellow tape should be dashed. Each piece should have a length of approximately **4in** with a **2in** gap separating each piece. 
 
-Fig 1: A standard 2-way straight road
 
-	
+TODO: Fig 1: A standard 2-way straight road
+
+
 
 A one-way road can have a solid yellow line on the left and solid white on the right:
 
-Fig. 2: 1 one-way one lane piece of road - in this case direction of travel is from bottom to top.
+TODO: Fig. 2: 1 one-way one lane piece of road - in this case direction of travel is from bottom to top.
 
 example
 
 **Yellow tapes on curves: see curved road image in white tape section, pieces at tile edges should be in center of lane, piece at the middle of the curve should be approximately 20.5 cm from middle of inner center white piece of tape, with approximated circular arc in between.**
 
-## Red
+### Red
 
-Red tapes MAY **only** appear on **straight road** tiles. A red tape MUST be used whenever the adjacent tile is either a **curved road** or an **intersection** and MUST be placed at the edge of the tile on the edge that abuts the curved road or intersection. The red tape MUST be the full width of the duck tape roll and should cross the entire lane perpendicular to the lane. 
+Red tapes MAY **only** appear on **straight road** tiles. A red tape MUST be used whenever the adjacent tile is either a **curved road** or an **intersection** and MUST be placed at the edge of the tile on the edge that abuts the curved road or intersection. The red tape MUST be the full width of the duck tape roll and should cross the entire lane perpendicular to the lane.
 
 The placement of red tape should always be **under** yellow and white tape, as shown in the image above. 
 
@@ -82,19 +87,26 @@ The following is true: a Duckiebot can navigate Duckietown by a sequence of:
 
 * Execute an open-loop motion.
 
-* Relocalize in a StraightTileHere are a couple of examples:
+* Relocalize in a StraightTile. 
+Here are a couple of examples:
 
-**Fig 4: A straight road tile adjacent to a curved road tile requires a red tape. Note the red strip is on the tile from which the car comes. (can we remove these red strips?)**
+TODO: Fig 4: A straight road tile adjacent to a curved road tile requires a red tape. Note the red strip is on the tile from which the car comes. 
 
 The invariant is: if you stop before or ON the red strip, no collisions are possible.
 
-Fig 5: A ‘T’ intersection
+TODO: Fig 5: A ‘T’ intersection
 
-# Layer 2 - Signage and Lights
+## Topological Constraints During Map Construction
 
-**IMPORTANT: **All signage should sit on the raised borders of the roads or be placed beside the white street markings. Under no circumstances should the white (any other tape) be obscured.
 
-* Our signs were printed [from this file](https://drive.google.com/open?id=0B97DoIREKRoqU3RySjNWT0ZKZVU) with these specifications (Mixed B&W and Color, 1-sided, 80# White Cover) at MIT’s CopyTech.
+TODO: Liam
+
+
+## Layer 2 - Signage and Lights
+
+**IMPORTANT:** All signage should sit on the raised borders of the roads or be placed beside the white street markings. Under no circumstances should the white (any other tape) be obscured.
+
+* Our signs were printed [from this file](https://drive.google.com/open?id=0B97DoIREKRoqU3RySjNWT0ZKZVU) with these specifications (Mixed B and W and Color, 1-sided, 80 White Cover) at MIT’s CopyTech.
 
 ## Traffic Signs
 
@@ -106,51 +118,106 @@ Center of signs are 13cm height with apriltags of 6.5cm sq. and a white border p
 
 The allowable signs are:
 
-<table>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>stop (1)</td>
-    <td>yield (2)</td>
-    <td>no-right-turn (3)</td>
-    <td>no-left-turn (4)</td>
-    <td>do-not-enter (5)</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>oneway-right (6)</td>
-    <td>oneway-left (7)</td>
-    <td>4-way-intersect (8)</td>
-    <td>right-T-intersect (9)</td>
-    <td>left-T-intersect (10)</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>T-intersection (11)</td>
-    <td>pedestrian (12)</td>
-    <td>t-light-ahead(13)</td>
-    <td>duck-crossing (14)</td>
-    <td></td>
-  </tr>
-</table>
+<col4 figure-id="tab:signs" figure-caption="Allowable signs">
 
+<span>
+**Sign**
+</span>
+<span>
+**Name**
+</span>
+
+<span>
+<img src="stop.png" style='width: 10em'/>
+</span>
+<span>
+stop
+</span>
+<span>
+<img src="yield.png" style='width: 10em'/>
+</span>
+<span>
+yield
+</span>
+<span>
+<img src="no-right.png" style='width: 10em'/>
+</span>
+<span>
+no-right
+</span>
+<span>
+<img src="no-left.png" style='width: 10em'/>
+</span>
+<span>
+no-left-turn
+</span>
+<span>
+<img src="no-enter.png" style='width: 10em'/>
+</span>
+<span>
+do-not-enter
+</span>
+<span>
+<img src="one-way-right.png" style='width: 10em'/>
+</span>
+<span>
+oneway-right
+</span>
+<span>
+<img src="one-way-left.png" style='width: 10em'/>
+</span>
+<span>
+oneway-left
+</span>
+<span>
+<img src="4-way.png" style='width: 10em'/>
+</span>
+<span>
+4-way-intersect
+</span>
+<span>
+<img src="3-way-right.png" style='width: 10em'/>
+</span>
+<span>
+right-T-intersect
+</span>
+<span>
+<img src="3-way-left.png" style='width: 10em'/>
+</span>
+<span>
+left-T-intersect
+</span>
+<span>
+<img src="t-intersection.png" style='width: 10em'/>
+</span>
+<span>
+T-intersection
+</span>
+<span>
+<img src="crossing.png" style='width: 10em'/>
+</span>
+<span>
+pedestrian
+</span>
+<span>
+<img src="traffic-light.png" style='width: 10em'/>
+</span>
+<span>
+t-light-ahead
+</span>
+<span>
+<img src="duckie-crossing.png" style='width: 10em'/>
+</span>
+<span>
+duck-crossing
+</span>
+<span>
+<img src="parking.png" style='width: 10em'/>
+</span>
+<span>
+parking
+</span>
+</col4>
 
 Each sign is printed from the [signs and tags doc](https://drive.google.com/open?id=0B97DoIREKRoqU3RySjNWT0ZKZVU)
 
@@ -168,13 +235,11 @@ Fig. : Placement of signs to indicate intersection flows should be viewable from
 
 In these figures the arrow is the direction of the sign.
 
-Is this:
-
-equivalent to this? yes
+TODO: add
 
 ### Assembly
 
-Fig : Placement of an apriltag on a sign.
+TODO: Fig : Placement of an apriltag on a sign.
 
 * each street sign must have an april tag according to the [April Tags DB](http://drive.google.com/open?id=1vvrkYaFktDBXyF4E_MMxx3wTX5U5S1ToQBbKSQ6uVoA)
 
@@ -182,7 +247,6 @@ Fig : Placement of an apriltag on a sign.
 
 ### Specs
 
-![image alt text](image_1.png)
 
 * Font: arial. 
 
@@ -244,57 +308,6 @@ The lights MUST be at a height of EXACTLY 20cm  above the center of the tile.
 
 The Pi SHOULD sit on a pole that is based at the corner of the tile outside of the allowable driving region.
 
-### Test Scenario
-
-$ roscore
-
-$ rosbag play ~/Dropbox/duckietown-data/logs/20160122-logs/160122_intersection1/160122-intersection1_ferrari.bag -l
-
-$ rosrun image_transport republish theora in:=ferrari/camera_node/image _image_transp
-
-ort:=compressed out:=rosberrypi_cam/image_raw
-
-$ roslaunch street_name_detector street_name_detector.launch
-
-$ rviz
-
-subscribe
-
-/ferrari/camera_node/image
-
-/street_name_detector/tags_image
-
-street_name_detector_node
-
-* use MSER to detect region proposal
-
-* use FAST keypoints to detect the corners of text strokes.
-
-* Need some hacking for parameters
-
-Estimation:
-
-1. Color (green plate) is not robust, but still useful. Currently using L*a*b color space
-
-2. Text is too small; we need keypoints being detected inside the letters -> suggest to increase the size to 6cm x 18cm (currently 3.81 x 11.43)
-
-3. all "ST" or “AVE” are too small to be detected
-
-![image alt text](image_2.png)
-
-HOW (right) -> should be detectable and decodable (readable)
-
-HOW (left) -> may be detectable but not decodable 
-
- 
-
-![image alt text](image_3.png)
-
-KARAMAN -> region is detected but text is not (too few corners)
-
-![image alt text](image_4.png)
-
-Occlusion -> not detected
 
 ## **Semantics of LEDS**
 
@@ -308,7 +321,6 @@ Assumption:
 
 - 3 frequencies to detect
 
--> <= 5 hz
 
 tail lights: red, **6 hz square wave**
 
