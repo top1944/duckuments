@@ -139,7 +139,7 @@ TODO: add general reference to all learning atmos, folder atoms_30_learning_mate
 An exercise is a practice atom aimed at improving technical skills. Exercises are listed in []().
 \end{definition}
 
-Exercises are targeted to different "things" to which technical skills related. They may be mathematical exercises aimed at practicing a method, or they may be coding exercises aimed at practicing resolutions of hardware implementation challenges.
+Exercises are targeted to different "things" to which technical skills are related. They may be mathematical exercises aimed at practicing a method, or they may be coding exercises aimed at practicing resolutions of hardware implementation challenges.
 
 \begin{definition}[Proof]    \label{def:proof}
 A proof is a practice atom aimed at improving cognitive skills.
