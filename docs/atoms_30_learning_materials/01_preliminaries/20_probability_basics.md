@@ -5,7 +5,7 @@ In this chapter we give a brief review of some basic probabilistic concepts. For
 
 ## Random Variables {#random_variables}
 
-The key underlying concept in probabilistic theory is that of an *event*, which is the output of a random trial. For example, the result of a coin flip turning up HEADS, or the result of rolling a die turning up the number "4".
+The key underlying concept in probabilistic theory is that of an *event*, which is the output of a random trial. Examples of an event include the result of a coin flip turning up HEADS or the result of rolling a die turning up the number "4".
 
 \begin{definition}[Random Variable]\label{def:random_variable}
 A  (either discrete or continuous) variable that can take on any value that corresponds to the feasible output of a random trial.
