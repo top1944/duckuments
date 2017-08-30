@@ -2,7 +2,7 @@ version: 2
 jobs:
     build:
         docker:
-        - image: andreacensi/duckietown-xenial-kinetic:17
+        - image: andreacensi/duckietown-xenial-kinetic:18
         steps:
         - checkout
 
@@ -44,7 +44,7 @@ jobs:
         - run:
             name: Check Programs
             command: |
-                sudo apt install node-less
+                apt install node-less
                 make check-programs
         - run:
             name: checkout duckietown repository
