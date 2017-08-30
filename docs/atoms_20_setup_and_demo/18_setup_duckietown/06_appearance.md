@@ -152,6 +152,8 @@ A "yield" sign should be visible from the launch tile.
 
 ## Traffic Signs
 
+    Recommended: To print and assemble the signs refer to [](#signage)
+
 ### Specs
 
 Center of signs are 13cm height with apriltags of 6.5cm sq. and a white border pasted below them. 
@@ -215,25 +217,31 @@ Each sign is printed from the [signs and tags doc](https://www.dropbox.com/s/np7
 
 ### Placement
 
-Signs MAY appear on the opposite side and at the corner of the adjacent tile from which they are viewed. In the absence of any signs, it is assumed that all network flows are allowed so a sign MUST be placed and visible whenever this is not the case. 
+Signs may appear on the opposite side and at the corner of the adjacent tile from which they are viewed. In the absence of any signs, it is assumed that all network flows are allowed so a sign MUST be placed and visible whenever this is not the case. 
 
-* **to help localization/SLAM**: avoid having 2 signs which are similar and too close to each other (issue with data association). For instance: two consecutive tiles cannot be marked with the same sign
+Signs must only be placed on empty tiles, or next to one of the other tile types if on the border of a map. The sign placements for four different cases are shown in [](#fig:sign-placement). At intersections, from each stop line 2 signs should be clearly visible: 1) the intersection type (traffic light or stop sign) and 2) the intersection topology. 
 
-For example, for the ‘T’ intersection the placement of the sign MUST be as indicated:
+At present, 4-way intersections much be equipped with traffic lights for safe navigation.
 
-Fig. : Placement of signs to indicate intersection flows should be viewable from the stop lines
+<div figure-id="fig:sign-placement" figure-caption="Placement of Traffic Signs">
+  <div figure-id="subfig:4-way-signs" figure-caption="4-way intersection">
+    <img src="4-way-signs.pdf" style='width:15em;height:auto'/>
+  </div>
+  <div figure-id="subfig:3-way-signs" figure-caption="3-way intersection">
+    <img src="3-way-signs.pdf" style='width:15em;height:auto'/>
+  </div>
+  <div figure-id="subfig:2-way-signs-straight" figure-caption="straight road">
+    <img src="2-way-signs-straight.pdf" style='width:15em;height:auto'/>
+  </div>
+  <div figure-id="subfig:2-way-signs-turn" figure-caption="curved road">
+    <img src="2-way-signs-turn.pdf" style='width:15em;height:auto'/>
+  </div>
+</div>
 
-**Examples of conforming intersections**
+On straight and curved roads, additional signs can be added as desired. Their placement is indicated in [](#subfig:2-way-signs-straight) and [](#subfig:2-way-signs-turn). The signs should be placed at the border between two tiles and should face towards oncoming traffic as indicated. 
 
 In these figures the arrow is the direction of the sign.
 
-TODO: add
-
-### Assembly
-
-TODO: Fig : Placement of an apriltag on a sign.
-
-* each street sign must have an april tag according to the [April Tags DB](http://drive.google.com/open?id=1vvrkYaFktDBXyF4E_MMxx3wTX5U5S1ToQBbKSQ6uVoA)
 
 ## Street Name Signs
 
