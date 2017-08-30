@@ -22,7 +22,7 @@ For example, we could model the event of flipping a fair coin with the random va
 and we refer to this as a *discrete* random variable. If the output is real value or a subset of the real numbers, e.g., $\mathcal{X} = \mathbb{R}$, then we refer to $X$ as a *continuous* random variable.
 
 <div class="comment" markdown="1">
-    Personally, I don't like using math formatting for letters or words that don't denote symbols, e.g., $X = HEADS$ v.s. $X= \text{HEADS}$ - MW
+Personally, I don't like using math formatting for letters or words that don't denote symbols, e.g., $X = HEADS$ v.s. $X= \text{HEADS}$ - MW
 </div>
 
 Consider once again the coin tossing event. If the coin is fair, the have $p(X=HEADS)=p(X=TAILS)=0.5$. Here, the function $p(x)$ is called the *probability mass function* or pmf. The pmf is shown in [](#fig:binary_pmf).
@@ -210,7 +210,7 @@ Notice that our highest entropy (uncertainty) about the outcome of the coin flip
 
 In mobile robotics we use the Gaussian, or normal, distribution a lot.
 
-Comment: The banana distribution is the official distribution in robotics! - AC  
+Comment: The banana distribution is the official distribution in robotics! - AC
 Comment: The banana distribution is Gaussian! http://www.roboticsproceedings.org/rss08/p34.pdf - LP
 
 The 1-D Gaussian distribution pdf is given by:

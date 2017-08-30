@@ -1,3 +1,3 @@
-# Theory chapters {#part:theory-chapters}
+# Preliminaries {#part:preliminaries}
 
-These are the theory chapters.
+TODO: to write
