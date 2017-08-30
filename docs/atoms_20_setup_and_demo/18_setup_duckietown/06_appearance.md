@@ -146,13 +146,12 @@ A "yield" sign should be visible from the launch tile.
 
 ## Layer 2 - Signage and Lights
 
-**IMPORTANT:** All signage should sit on the raised borders of the roads or be placed beside the white street markings. Under no circumstances should the white (any other tape) be obscured.
+**IMPORTANT:** All signage should sit with base on the floor and stem coming through the connection between the tiles. Generally, it is advisable to adhere the sign to the floor with double-sided tape. **Under no circumstances should the white (any other tape) be obscured.**
 
-* Our signs were printed [from this file](https://drive.google.com/open?id=0B97DoIREKRoqU3RySjNWT0ZKZVU) with these specifications (Mixed B and W and Color, 1-sided, 80 White Cover) at MIT’s CopyTech.
 
 ## Traffic Signs
 
-    Recommended: To print and assemble the signs refer to [](#signage)
+    Required: To print and assemble the signs refer to [](#signage)
 
 ### Specs
 
@@ -264,75 +263,44 @@ In these figures the arrow is the direction of the sign.
 
 * Text direction: Horizontal for alphabetical languages
 
-* The choice of street name: The names are MIT roboticists’ names (see further below) and popular street names arranged alphabetically. The Word file is [here](https://drive.google.com/open?id=0B97DoIREKRoqU3RySjNWT0ZKZVU)
 
 ### Placement
 
 * **Similar to traffic light**: The street name should sit on a pole that is based at the corner of the tile outside of the allowable driving region. The bottom of the street name should be at a height of 7in, and allow a duckiebot to pass through. The street names should be visible from both sides of the road.
 
-* **to help localization/SLAM**: have a street name every 2 tiles on a straight lane. **There should be a tag at least every 2 tiles but it should not be a street name sign because they are too big**
+Every segment of road must have at least one road name sign.
 
-Fig: The placement of road signs on the roads. There should not be any road signs that are perpendicular to roads.
+Every turn tile should have a road name sign. 
 
-NEW UPDATE:
+The placement of the road name signs is as indicated in [](#fig:name-placement].
 
-* Street name signs should never be perpendicular to the road - they are too big and obtrusive. 
+<div figure-id="fig:name-placement" figure-caption="Placement of Road Name Signs">
+  <div figure-id="subfig:name-signs-turn" figure-caption="Turn">
+    <img src="name-signs-turn.pdf" style='width:15em;height:auto'/>
+  </div>
+  <div figure-id="subfig:name-signs-straight" figure-caption="Straight">
+    <img src="name-signs-straight.pdf" style='width:15em;height:auto'/>
+  </div>
+</div>
 
-    * **NOTE**: If a tag is required for the SLAM 1 tag per 2 tiles rule it should be one of the superfluous traffic sign tags (such as pedestrian crossing)
 
-* Tag and sign relative position: around XXX; printed from the [signs and tags doc](https://drive.google.com/open?id=0B97DoIREKRoqU3RySjNWT0ZKZVU) 
 
-* April tag ids and size are specified in the [April Tags DB](http://drive.google.com/open?id=1vvrkYaFktDBXyF4E_MMxx3wTX5U5S1ToQBbKSQ6uVoA)
+Street name signs should never be perpendicular to the road - they are too big and obtrusive. 
 
-## Localization Signs
 
-### Specs
-
-Localization signs contain only a tag and no traffic or road name sign. The id of these tags is specified in the [April Tags DB](http://drive.google.com/open?id=1vvrkYaFktDBXyF4E_MMxx3wTX5U5S1ToQBbKSQ6uVoA). These signs can be printed from [this document](https://drive.google.com/open?id=0B97DoIREKRoqU3RySjNWT0ZKZVU).
-
-### Placement 
-
-A localization tag should be placed at each corner.
-
-Fig: The placement of localization signs. The should be placed at each corner pointing diagonally towards the center of the tile (not as shown in the figure)
 
 ## Traffic Lights
 
+    Required: The assembly procedure for building the a traffic light is found in [](#traffic-light-assembly)
+
 ### Specs
 
-**???**
+TOWRITE: towrite
 
 ### Placement
 
-The lights MUST be at a height of EXACTLY 20cm  above the center of the tile.
+The lights must be at a height of exactly 20cm  above the center of the intersection tile.
 
-The Pi SHOULD sit on a pole that is based at the corner of the tile outside of the allowable driving region.
+The Pi should sit on a pole that is based at the corner of the tile outside of the allowable driving region.
 
-
-## **Semantics of LEDS**
-
-headlights: white, constant
-
-Assumption:
-
-- **20 fps** to do LED detection
-
-- 1s to decide
-
-- 3 frequencies to detect
-
-
-tail lights: red, **6 hz square wave**
-
-traffic light "GO" = green, 1 hz** square wave**
-
-traffic light "STOP" = red, 1.5 Hz** square wave**
-
-duckie light on top, state 0 = off 
-
-duckie light on top, state 1 = blue, **3 Hz, square wave**
-
-duckie light on top, state 2 = ?, **2.5 Hz square wave**
-
-duckie light on top, state 3 = ?,** ****2 Hz square wave**
 
