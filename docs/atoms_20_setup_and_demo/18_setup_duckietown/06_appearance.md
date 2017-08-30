@@ -1,4 +1,4 @@
-# Duckietown Appearance Specification
+# Duckietown Appearance Specification {#duckietown-specs}
 
 Assigned: Liam
 
@@ -151,7 +151,7 @@ A "yield" sign should be visible from the launch tile.
 
 ## Traffic Signs
 
-    Required: To print and assemble the signs refer to [](#signage)
+Requires: To print and assemble the signs refer to [](#signage)
 
 ### Specs
 
@@ -291,7 +291,7 @@ Street name signs should never be perpendicular to the road - they are too big a
 
 ## Traffic Lights
 
-    Required: The assembly procedure for building the a traffic light is found in [](#traffic-light-assembly)
+Requires: The assembly procedure for building the a traffic light is found in [](#traffic-light-assembly)
 
 ### Specs
 
