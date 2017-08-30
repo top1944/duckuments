@@ -210,7 +210,8 @@ The allowable signs are:
 </div>
 
 
-Each sign is printed from the [signs and tags doc](https://drive.google.com/open?id=0B97DoIREKRoqU3RySjNWT0ZKZVU)
+Each sign is printed from the [signs and tags doc](https://www.dropbox.com/s/np72vupxodpd6gv/Signs_and_tags_V3.docx?dl=0)
+
 
 ### Placement
 
