@@ -15,8 +15,4 @@ Perception:
 Control:
 
 - <a class="number_name" href="#lane_control"/>
-- <a class="number_name" href="#car_supervisor"/>
 - <a class="number_name" href="#dagu_car"/>
-
-
-    
