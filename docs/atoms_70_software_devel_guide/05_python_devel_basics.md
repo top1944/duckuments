@@ -26,3 +26,11 @@ Install using:
 ## Context managers {#python-context-manager}
 
 TODO: to write
+
+## Exception hierarchies
+
+TODO: to write
+
+## Object orientation - Abstract classes, class  hierarchies
+
+TODO: to write

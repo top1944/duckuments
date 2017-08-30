@@ -38,9 +38,8 @@ At [this page](https://circleci.com/gh/duckietown) you can see the summary of th
 
 <div figure-id="fig:circleci">
     <figcaption>The CircleCi service dashboard, available at <a href="https://circleci.com/gh/duckietown">this page.</a></figcaption>
-
     <img figure-caption="The CircleCI service" src='circleci-screenshot.png' style='width: 100%'/>
-
+    <img figure-caption="The CircleCI service" src='circleci-screenshot.png' style='width: 100%'/>
 </div>
 
 ## How to make changes to `master`: pull requests
@@ -92,7 +91,6 @@ or a failure message ([](#fig:checks-failure)).
 (7) At this point, you can click "squash and merge" to merge the changes into master ([](#fig:squash)).
 
 
-
 <img figure-id="fig:squash" figure-caption="The final step" src='squash.png' style='width: 100%'/>
 
 
@@ -102,7 +100,6 @@ If you see a message like "merge failed" ([](#merge-failed)), it probably means 
 
 
 <img figure-id="fig:merge-failed" figure-caption="Merge failed" src='merge-failed.png' style='width: 100%'/>
-
 
 
 
