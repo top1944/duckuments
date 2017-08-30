@@ -44,7 +44,7 @@ jobs:
         - run:
             name: Check Programs
             command: |
-                sudo apt install node-less
+                apt install node-less
                 make check-programs
         - run:
             name: checkout duckietown repository
