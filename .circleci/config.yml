@@ -54,7 +54,7 @@ jobs:
         - run:
             name: Compile HTML version
             command: |
-                make compile-html
+                make compile-html-slow
 
         - store_artifacts:
               path: duckuments-dist
