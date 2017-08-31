@@ -96,12 +96,12 @@ automatic-compile:
 	touch $(log)
 	echo "\n\nStarting" >> $(log)
 	date >> $(log)
-	$(MAKE) compile-slow
+	$(MAKE) compile
 	echo "  succeded html " >> $(log)
 
 	-$(MAKE) upload
 	echo "  succeded html upload " >> $(log)
-	$(MAKE) compile-pdf-slow
+	$(MAKE) compile-pdf
 	echo "  succeded PDF  " >> $(log)
 	-$(MAKE) upload
 	echo "  succeded PDF upload" >> $(log)
