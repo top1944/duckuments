@@ -59,6 +59,11 @@ Note: We currently don't have a preliminary section on signal processing and it'
 
 Note: May want to stick to linear filtering
 
-* Linear filtering and convolutions
+* Motivation (example)
+* Convolution: definition and properties (including differentiation)
+* Linear filters: examples (sharpening and smoothing)
+* Gaussian filters
+    * kernels
+    * properties (convolution with a Gaussian, separability)
 * Oriented filters
 * Convoluton
