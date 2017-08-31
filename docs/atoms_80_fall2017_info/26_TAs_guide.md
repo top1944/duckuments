@@ -45,9 +45,7 @@ Point of Contact: [Kirsten Bowser](mailto:akbowser@gmail.com)
 
 ### Install Ubuntu
 
-Install Ubuntu 16.06 on your laptop.
-
-See: XXX
+Install Ubuntu 16.04 on your laptop.
 
 ### Duckuments
 
