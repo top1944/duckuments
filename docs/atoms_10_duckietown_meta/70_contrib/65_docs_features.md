@@ -182,7 +182,7 @@ TODO: other LaTeX features supported
 The LaTeX symbols definitions are in a file called [`docs/symbols.tex`][symbols].
 
 
-[symbols]: https://github.com/duckietown/duckuments/blob/master/docs/symbols.tex
+[symbols]: github:org=Duckietown,repo=duckuments,path=docs/symbols.tex
 
 
 Put all definitions there; if they are centralized it is easier to check
@@ -319,13 +319,11 @@ You can also create subfigures, using the following syntax.
 <div figure-id="fig:big">
     <figcaption>Caption of big figure</figcaption>
 
-    <div figure-id="subfig:first">
-        <figcaption>Caption 1</figcaption>
+    <div figure-id="subfig:first" figure-caption="Caption 1">
         <p>Content of first subfig</p>
     </div>
 
-    <div figure-id="subfig:second">
-        <figcaption>Caption 2</figcaption>
+    <div figure-id="subfig:second" figure-caption="Caption 2">
         <p>Content of second subfig</p>
     </div>
 </div>
@@ -334,13 +332,11 @@ You can also create subfigures, using the following syntax.
 <div figure-id="fig:big">
     <figcaption>Caption of big figure</figcaption>
 
-    <div figure-id="subfig:first">
-        <figcaption>Caption 1</figcaption>
+    <div figure-id="subfig:first" figure-caption="Caption 1">
         <p>Content of first subfig</p>
     </div>
 
-    <div figure-id="subfig:second">
-        <figcaption>Caption 2</figcaption>
+    <div figure-id="subfig:second" figure-caption="Caption 2">
         <p>Content of second subfig</p>
     </div>
 </div>
@@ -678,7 +674,7 @@ Q: question
 A: answer
 
 
-### Authors, maintainers, point of contact
+### Authors, maintainers, Point of Contact
 
     Maintainer: maintainer
 
@@ -688,13 +684,13 @@ Maintainer: maintainer
 
 Author: author
 
-    Point of contact: point of contact
+    Point of Contact: Point of Contact name
 
-Point of contact: point of contact
+Point of Contact: Point of Contact name
 
-    Slack channel: slack channel
+    Slack channel: slack channel name
 
-Slack channel: slack channel
+Slack channel: slack channel name
 
 
 ### References
@@ -782,6 +778,76 @@ Check that you didn't forget anything.
 List of requirements at the beginning of setup chapter.
 
 </div>
+
+## Notes and questions
+
+There are three environments: "comment", "question", "doubt",
+that result in boxes that can be expanded by the user.
+
+These are the one-paragraph forms:
+
+    Comment: this is a comment on one paragraph.
+
+Comment: this is a comment on one paragraph.
+
+    Question: this is a question on one paragraph.
+
+Question: this is a question on one paragraph.
+
+    Doubt: I have my doubts on one paragraph.
+
+Doubt: I have my doubts  on one paragraph.
+
+These are the multiple-paragraphs forms:
+
+
+    <div class='comment' markdown='1'>
+    A comment...
+
+    A second paragraph...
+    </div>
+
+<div class='comment' markdown='1'>
+A comment...
+
+A second paragraph...
+</div>
+
+
+    <div class='question' markdown='1'>
+    A question...
+
+    A second paragraph...
+    </div>
+
+<div class='question' markdown='1'>
+A question...
+
+A second paragraph...
+</div>
+
+
+    <div class='doubt' markdown='1'>
+    A question...
+
+    Should it not be:
+
+        $ alternative command
+
+    A second paragraph...
+    </div>
+
+
+<div class='doubt' markdown='1'>
+A question...
+
+Should it not be:
+
+    $ alternative command
+
+A second paragraph...
+</div>
+
 
 
 ## Referring to Github files

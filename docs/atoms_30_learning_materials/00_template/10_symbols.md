@@ -13,6 +13,12 @@ Bad: Consider the function $x(t)$.
 
 Better: Consider the function $x_t$.
 
+A **bold** symbol indicates that it is a random variable. A CAPITAL symbol indicates that it is a vector or matrix, and an *italics* symbol (use `\mathcal`) indicates that a symbol defines a set. Therefore the following are some instances:
+
+ * $p(\boldsymbol{x}=x)$ is the probability that the random variable $\boldsymbol{x}$ has the value $x$.
+
+
+
 ## Table of symbols
 
 Here are some useful symbols.

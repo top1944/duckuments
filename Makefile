@@ -19,24 +19,35 @@ all: compile compile-pdf
 checks: check-duckietown-software check-programs
 
 check-programs-pdf:
-	@which  pdftk || ( \
+	@which  pdftk >/dev/null || ( \
 		echo "You need to install pdftk."; \
 		exit 1)
 
 check-programs:
-	@which  bibtex2html || ( \
+	@which  bibtex2html >/dev/null || ( \
 		echo "You need to install bibtex2html."; \
 		exit 2)
 
-	@which  mcdp-render || ( \
+	@which  mcdp-render >/dev/null  || ( \
 		echo "The program mcdp-render is not found"; \
 		echo "You are not in the virtual environment."; \
 		exit 3)
 
-	@which  mcdp-split || ( \
+	@which  mcdp-split >/dev/null  || ( \
 		echo "The program mcdp-split is not found"; \
 		echo "You need to run 'python setup.py develop' from mcdp/."; \
 		exit 4)
+
+	@which  convert >/dev/null  || ( \
+		echo "You need to install ImageMagick"; \
+		exit 2)
+
+	@which  gs >/dev/null  || ( \
+		echo "You need to install Ghostscript (used by ImageMagick)."; \
+		exit 2)
+
+	@echo All programs installed.
+
 
 
 
@@ -62,36 +73,46 @@ process-svg-clean:
 	-rm -f $(generated_figs)/*pdf
 
 process-svg:
-	@which  inkscape || which $(inkscape2) || ( \
+	@which  inkscape >/dev/null || which $(inkscape2) || ( \
 		echo "You need to install inkscape."; \
 		exit 2)
-	@which  pdfcrop || (echo "You need to install pdfcrop."; exit 1)
-	@which  pdflatex || (echo "You need to install pdflatex."; exit 1)
+	@which  pdfcrop >/dev/null || (echo "You need to install pdfcrop."; exit 1)
+	@which  pdflatex >/dev/null || (echo "You need to install pdflatex."; exit 1)
 
 
 	python -m mcdp_docs.process_svg docs/ $(generated_figs) $(tex-symbols)
 
 
-clean-svg-figs:
-	rm -f docs/generated_pdf_figs/*
 
 duckuments-dist:
 	# clone branch "dist"
-	git clone --depth 3 -b gh-pages git@github.com:duckietown/duckuments.git duckuments-dist
+	git clone --depth 3 git@github.com:duckietown/duckuments-dist.git duckuments-dist
 
+
+log=duckuments-dist/compilation.log
 automatic-compile:
 	git pull
-	$(MAKE) clean
+	#$(MAKE) clean
+	touch $(log)
+	echo "\n\nStarting" >> $(log)
+	date >> $(log)
 	$(MAKE) compile-slow
-	-$(MAKE) upload
-	$(MAKE) compile-pdf-slow
-	-$(MAKE) upload
+	echo "  succeded html " >> $(log)
 
+	-$(MAKE) upload
+	echo "  succeded html upload " >> $(log)
+	$(MAKE) compile-pdf-slow
+	echo "  succeded PDF  " >> $(log)
+	-$(MAKE) upload
+	echo "  succeded PDF upload" >> $(log)
+	date >> $(log)
+	echo "Done." >> $(log)
 upload:
 	#git -C duckuments-dist pull -X ours
 	echo ignoring errors
+
 	-git -C duckuments-dist add $(duckuments-branch)
-	-git -C duckuments-dist commit -a -m "automatic compilation"
+	-git -C duckuments-dist commit -a -m "automatic compilation $(shell date)"
 	-git -C duckuments-dist push --force
 
 
@@ -173,6 +194,19 @@ compile-html:
 	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
 	python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
 
+compile-html-no-embed:
+	DISABLE_CONTRACTS=1 mcdp-render-manual \
+		--src $(src) \
+		--stylesheet v_manual_split \
+		--mathjax 0 \
+		--symbols $(tex-symbols) \
+		-o $(tmp_files) \
+		--output_file $(out_html).tmp -c "config echo 1; config colorize 1; rparmake"
+
+	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
+	# python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
+	$(MAKE) split
+	
 compile-html-slow:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src $(src) \
