@@ -28,7 +28,7 @@ Sign up on our online accounts. These include:
 
 To do this: send an email to Kirsten Bowser, with your GMail address. She will sign you up and send further instructions.
 
-Point of Contact: Kirsten Bowser
+Point of Contact: [Kirsten Bowser](mailto:akbowser@gmail.com)
 
 ### Install Ubuntu
 
