@@ -31,6 +31,8 @@ TODO: to write
 
 TODO: to write
 
+TODO: how to catch and re-raise
+
 ## Object orientation - Abstract classes, class  hierarchies
 
 TODO: to write
@@ -45,3 +47,29 @@ Use this recipe if you need to download things:
     download_if_not_exist(url, f)
 
 (Do not commit JPGs and other binary data to the `Software` repository.)
+
+TODO: actually use `urls.yaml`
+
+## IPython
+
+How to enter IPython:
+
+    from IPython import embed()
+
+    a = 10
+    embed() # enters interactive mode
+
+
+## Images
+
+    add_header_to_image(image, s):  Add header to image
+
+    write_jpg_to_file(image, filename)
+
+    make_images_grid
+
+
+## Idioms
+
+
+    segment_list = copy.deepcopy(segment_list)

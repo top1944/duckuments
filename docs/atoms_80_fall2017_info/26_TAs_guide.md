@@ -1,5 +1,23 @@
 # Guide for TAs
 
+## Dramatis personae
+
+These are the TAs:
+
+- Shiying Li (shili@student.ethz.ch)
+- Ercan Selçuk (ercans@student.ethz.ch)
+- Miguel de la Iglesia Valls (dmiguel@student.ethz.ch)
+- Khurana Harshit (hkhurana@student.ethz.ch)
+- Lapandic Dzenan (ldzenan@student.ethz.ch)
+- Marco Erni (merni@ethz.ch)
+
+- Andrea F. Daniele (afdaniele@ttic.edu)
+- Falcon Dai (dai@ttic.edu)
+- Jon Michaux (jmichaux@ttic.edu)
+
+- ??? ??? (Montreal)
+
+
 ## First steps
 
 Here are the first steps.
@@ -8,27 +26,22 @@ Note that many of these are not sequential and can be done in parallel.
 
 ### Learn about Duckietown
 
-Read about Duckietown's history.
+Read about Duckietown's history; watch the Duckumentary.
 
 See: [](#part:duckietown-project)
 
-Watch the Duckumentary.
-
-TODO: add link to Duckumentary.
-
 ### Online accounts
 
-Sign up on our online accounts. These include:
+You have to set up:
 
-- Personal Github account
-- Being part of the Duckietown Github organization, and the TA team.
-- Twist
-- Slack
-- Google Drive
+- A personal Github account
+- A Twist account
+- A Slack account
+- A Google Docs account (Gmail address)
 
-To do this: send an email to Kirsten Bowser, with your GMail address. She will sign you up and send further instructions.
+Send an email to Kirsten Bowser (akbowser@gmail.com), with your GMail address and your Github account. She will give you further instructions.
 
-Point of Contact: Kirsten Bowser
+Point of Contact: Kirsten Bowser (akbowser@gmail.com)
 
 ### Install Ubuntu
 
@@ -38,11 +51,9 @@ See: XXX
 
 ### Duckuments
 
-Install the Duckuments, so you can edit these instructions.
+Install the Duckuments system, so you can edit these instructions.
 
 See: [](#part:contribute).
-
-Instead this is in the middle  [](#part:contribute) of a paragraph.
 
 Point of Contact: Andrea
 
@@ -73,9 +84,9 @@ See: [](#part:building-duckiebot)
 
 Point of Contact: Shiying (ETH)
 
-Point of Contact: ??? (UdeM)
+Point of Contact: TBD (UdeM)
 
-Point of Contact: ??? (TTIC)
+Point of Contact: TBD (TTIC)
 
 As you read the instructions, keep open the Duckuments source, and note any
 discrepancies. You must note any unexpected thing that is not predicted from the
@@ -89,7 +100,6 @@ efficient than answering the same question dozens of times.
 
 We have the following four documents outside of the duckuments:
 
-
 1. [Organization chart][org-chart]: This is where we assign areas of responsibility.
 2. [Lecture schedule][lecture-schedule]
 3. [Checkoff spreadsheet][checkoff]
@@ -101,11 +111,14 @@ We have the following four documents outside of the duckuments:
 [checkoff]: https://docs.google.com/spreadsheets/d/1uO1aq9zqBpLwo1qOzeBKKbB3CuAQAqM94T8B1AGpCKg/edit?usp=sharing
 [todo-list]: https://docs.google.com/document/d/1PxM9GpcrKCMMhIbwsgW0bpIKcvPVrHwX-skJUEgc4-s/edit?usp=sharing
 
-### Fill up the questionnaire 
+<!--
+### Fill up the questionnaire
 
 Please fill up the [preliminary questionnaire for TAs]().
 
 TODO: add interactive unit and related questionnaires.
+
+Point of contact: Jacopo -->
 
 ## On the interaction with students
 
@@ -114,6 +127,7 @@ TODO: to write
 ## How to ask questions
 
 TODO: to write
+
 ## How to answer questions
 
 TODO: to write
