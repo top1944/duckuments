@@ -24,41 +24,44 @@ In addition, the Duckietown platform is also suitable for research.
 
 ## Learn about the Duckietown educational experience
 
-This video is a Duckumentary about the first version of the class, during Spring 2016. The Duckumentary was shot by Chris Welch.
+The video in [](#fig:duckumentary) is the "Duckumentary", a documentary about the first version
+of the class, during Spring 2016. 
 
 
 <div figure-id="fig:duckumentary">
-    <figcaption>The Duckumentary</figcaption>
-    TODO: Add Duckumentary
+    <figcaption>The Duckumentary, created by <a href="https://www.facebook.com/ChrisWelchPhotography/">Chris Welch.</a>
+    </figcaption>
+    <dtvideo src='vimeo:231688769'/>
 </div>
 
-See also this documentary by Red Hat:
+The video in [](#fig:road-to-autonomy) is a documentary created by Red Hat
+on the current developments in self-driving cars.
 
 <div figure-id="fig:road-to-autonomy">
     <figcaption>The road to autonomy</figcaption>
     <dtvideo src="vimeo:219731087"/>
 </div>
 
-If you'd like to know more about the educational experience, [](#bib:tani16duckietown) present a more formal description of the course design for Duckietown: learning objectives, teaching methods, etc.
+
+If you'd like to know more about the educational experience, [](#bib:tani16duckietown) present
+a more formal description of the course design for Duckietown: learning objectives, teaching
+methods, etc.
 
 
 ## Learn about the platform
 
-The best way to get a sense of how the platform looks is to watch
-these videos. They show off the capabilities of the platform.
+<!-- The best way to get a sense of how the platform looks is to watch
+these videos. They show off the capabilities of the platform. -->
 
-If you would like to know more, the paper [](#bib:paull17duckietown) describes the Duckiebot and its software. (With 29 authors, we made the record for a robotics conference!)
+The video in [](#fig:v3) shows some of the functionality of the platform.
 
-TODO: add the video here that we showed at ICRA.
-
-
-Can you do it by night?
+If you would like to know more, the paper [](#bib:paull17duckietown) describes the Duckiebot
+and its software. (With 29 authors, we made the record for a robotics conference!)
 
 <div figure-id="fig:v3">
-    <figcaption>Cool Duckietown by night</figcaption>
-    <dtvideo src="vimeo:152825632"/>
+    <figcaption>Duckietown functionality</figcaption>
+    <dtvideo src="vimeo:231843373"/>
 </div>
-
 
 
 
@@ -77,6 +80,11 @@ Can you do it by night?
         pdf = "http://people.csail.mit.edu/lpaull/publications/Tani_EDU_2016.pdf"
     }</pre>
 </cite>
+
+
+
+
+
 
 
 <style>
