@@ -11,7 +11,7 @@ These are the TAs:
 - Lapandic Dzenan (ldzenan@student.ethz.ch)
 - Marco Erni (merni@ethz.ch)
 
-- Andrea F. Daniele	(afdaniele@ttic.edu)
+- Andrea F. Daniele (afdaniele@ttic.edu)
 - Falcon Dai (dai@ttic.edu)
 - Jon Michaux (jmichaux@ttic.edu)
 
