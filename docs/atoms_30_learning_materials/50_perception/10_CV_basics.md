@@ -2,6 +2,8 @@
 
 Assigned: Matt
 
+For the interested reader, there are several excellent books that discuss fundamental topics in computer vision. These include (in no particular order), [Computer Vision: Algorithims and Applications](#bib:szeliski10) (available online), [Computer Vision: A Modern Approach](#bib:forsyth11) and [Multiple View Geometry in Computer Vision](#bib:hartley04).
+
 ### Computer vision: What and why?
 
 
@@ -49,10 +51,19 @@ Note: The discussion of intrinsic and extrinsic models could be moved up to the 
 
 ### Image filtering
 
-**Background: Discrete-time signal processing
+**Background**: Discrete-time signal processing
+
+Note: We currently don't have a preliminary section on signal processing and it's probably sufficient to point readers to a good reference (e.g., Oppenheim and Schafer).
 
 **Topics**
 
-* Linear filtering and convolutions
+Note: May want to stick to linear filtering
+
+* Motivation (example)
+* Convolution: definition and properties (including differentiation)
+* Linear filters: examples (sharpening and smoothing)
+* Gaussian filters
+    * kernels
+    * properties (convolution with a Gaussian, separability)
 * Oriented filters
 * Convoluton

@@ -41,7 +41,7 @@ You have to set up:
 
 Send an email to Kirsten Bowser (akbowser@gmail.com), with your GMail address and your Github account. She will give you further instructions.
 
-Point of Contact: Kirsten Bowser (akbowser@gmail.com)
+Point of Contact: [Kirsten Bowser](mailto:akbowser@gmail.com)
 
 ### Install Ubuntu
 
