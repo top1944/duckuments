@@ -23,10 +23,10 @@ Results:  An assembled Duckiebot in configuration `C0+wjd`.
 
 
 Open the Duckiebox package (magician chassis – DG007), and you won’t need them all. Take out the following materials:
-* Chassis-bottom, Chassis-up (1+1 pieces)
-* Motor (2 pieces), motor holders (4 pieces)
-* Wheels (2 pieces), Omni wheel (1 pieces)
-* all Spacers and screw inside of the packages. Screwdriver (1x)
+- Chassis-bottom, Chassis-up (1+1 pieces)
+- Motor (2 pieces), motor holders (4 pieces)
+- Wheels (2 pieces), Omni wheel (1 pieces)
+- all Spacers and screw inside of the packages. Screwdriver (1x)
 
 <div figure-id="fig:duckiebot_components" figure-caption="Components in Duckiebot package.">
      <img src="duckiebot_components.png" style='width: 15em'/>
@@ -102,11 +102,11 @@ Put the car upright (omni wheel pointing towards the table) and arrange wires so
 
 ## Part B - Assembling the RPI-3, camera, and HATs
 **Materials:**
-* Chassis-up,
-* Camera and camera mount,
-* M3*10 flathead screws and M3 nuts from the Duckiebot package.
-* 4 M-F Nylon M3x5+6mm standoff spacers, 3x0.5mm screws, Nylon nuts
-* Raspberry Pi 3 – Model B
-* Soldered PWM/Servo HAT and Soldered Stepper Motor HAT,
-* 1 Male-male wire,
-* Standoffs
+- Chassis-up,
+- Camera and camera mount,
+- M3*10 flathead screws and M3 nuts from the Duckiebot package.
+- 4 M-F Nylon M3x5+6mm standoff spacers, 3x0.5mm screws, Nylon nuts
+- Raspberry Pi 3 – Model B
+- Soldered PWM/Servo HAT and Soldered Stepper Motor HAT,
+- 1 Male-male wire,
+- Standoffs
