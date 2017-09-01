@@ -21,7 +21,7 @@ For the interested reader, there are several excellent books that discuss fundam
 
 
 
-### Camera and Lens Geometry
+### Camera geometry
 
 Note: We could break this up into separate sub-sections for (prospective) projection and lenses.
 
@@ -29,10 +29,13 @@ Note: We could break this up into separate sub-sections for (prospective) projec
 
 * Pinhole cameras (tie into eclipse viewing, accidental cameras)
 * Geometry of projection: equations of projection; vanishing points; weak perspective; orthographic projection;
-* Lenses: Why?; first-order optics (thin lens); thick lens
 * Review of 3D transformations (translation and rotation); homogeneous transformations
 * Perspective projection in homogeneous coordinates
 
+### Lenses
+
+* Lenses: Why?; first-order optics (thin lens); thick lens
+* First-order optics (thin lens)
 
 ### Calibration
 
@@ -65,5 +68,3 @@ Note: May want to stick to linear filtering
 * Gaussian filters
     * kernels
     * properties (convolution with a Gaussian, separability)
-* Oriented filters
-* Convoluton
