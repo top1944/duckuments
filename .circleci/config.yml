@@ -2,7 +2,7 @@ version: 2
 jobs:
     build:
         docker:
-        - image: andreacensi/duckietown-xenial-kinetic:17
+        - image: andreacensi/duckietown-xenial-kinetic:18
         steps:
         - checkout
 
@@ -44,6 +44,7 @@ jobs:
         - run:
             name: Check Programs
             command: |
+                apt install -y node-less
                 make check-programs
         - run:
             name: checkout duckietown repository
@@ -54,7 +55,7 @@ jobs:
         - run:
             name: Compile HTML version
             command: |
-                make compile-html
+                make compile-html-slow
 
         - store_artifacts:
               path: duckuments-dist
