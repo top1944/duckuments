@@ -15,7 +15,7 @@ These are the TAs:
 - Falcon Dai (dai@ttic.edu)
 - Jon Michaux (jmichaux@ttic.edu)
 
-- ??? ??? (Montreal)
+- Florian Golemo (fgolemo@gmail.com) (Montreal)
 
 
 ## First steps
