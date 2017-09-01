@@ -6,18 +6,18 @@ This document is about the specification for a conforming Duckietown. Any Duckie
 
 ## Overview
 
-Duckietown is built with two layers: 
+Duckietown is built with two layers:
 
-1. The first is the *floor layer*. The floor is built of interconnected exercise mats with tape on them. 
+1. The first is the *floor layer*. The floor is built of interconnected exercise mats with tape on them.
 
-2. The second layer is the *signal layer* and contains all the signs and other objects that sit on top of the mats. 
+2. The second layer is the *signal layer* and contains all the signs and other objects that sit on top of the mats.
 
 Note: he visual appearance of the area where the Duckietown is created is variable. If you discover that this appearance is causing negative performance, a "wall" of blank tiles constructed vertically can be used to reduce visual clutterl.
 
 
 ## Layer 1 - The Tile Layer
 
-Each tile is a 2ft x 2ft square and is able to interlock with the others. 
+Each tile is a 2ft x 2ft square and is able to interlock with the others.
 
 There are five primary types of tiles as shown in [](#fig:tiles)
 
@@ -43,7 +43,7 @@ There are five primary types of tiles as shown in [](#fig:tiles)
 ### Tapes
 
 
-There are 3 colors of tapes: white, yellow, and red. 
+There are 3 colors of tapes: white, yellow, and red.
 
 1. White
 
@@ -69,13 +69,13 @@ Here are some facts about the white tapes:
 
 2. Yellow
 
-On a two-way road, the yellow tape should be dashed. Each piece should have a length of approximately **2in** with a **1in** gap separating each piece. 
+On a two-way road, the yellow tape should be dashed. Each piece should have a length of approximately **2in** with a **1in** gap separating each piece.
 
 Yellow tapes on curves: see curved road image in white tape section, pieces at tile edges should be in center of lane, piece at the middle of the curve should be approximately 20.5 cm from middle of inner center white piece of tape, with approximated circular arc in between.
 
 3. Red
 
-Red tapes MAY **only** appear on **intersection** tiles. 
+Red tapes MAY **only** appear on **intersection** tiles.
  The red tape must be the full width of the duck tape roll and should cross the entire lane perpendicular to the lane.
 
 The placement of red tape should always be **under** yellow and white tape
@@ -85,7 +85,7 @@ A Duckiebot navigates Duckietown by a sequence of:
 * Navigating one or more straigh ties until a red tape appears,
 * Wait for the coordination signal,
 * Execute an intersection traversal,
-* Relocalize in a StraightTile. 
+* Relocalize in a StraightTile.
 
 
 The invariant is: if you stop before or ON the red strip, no collisions are possible.
@@ -118,18 +118,18 @@ Some examples of non-conforming topologies are shown in [](#fig:violates)
 
 Note: Experimental
 
-A parking is a place for Duckiebots to go when they are tired and need a rest. 
+A parking is a place for Duckiebots to go when they are tired and need a rest.
 A parking lot introduces three additional tile types:
 
 1. **Parking lot entry tile**: This is similar to a straight  tile except with a red stop in the middle. The parking lot sign ([](#fig:parking)) will be visible from this stop line.
-2. **Parking spot tiles**: 
+2. **Parking spot tiles**:
 TODO: the tape on these tiles is currently not yet specified.
-3. **Parking spot access tiles**: 
-TODO: the tape on these tiles is currently not yet specified. 
+3. **Parking spot access tiles**:
+TODO: the tape on these tiles is currently not yet specified.
 
 The following are the rules for a conforming parking lot:
 
-1. One "parking spot" has size one tile. 
+1. One "parking spot" has size one tile.
 2. From each parking spot, there is a path to go to the parking lot entry tile that does not intersect any other parking spot. (i.e. when a duckiebot is parked, nobody will disturb it).
 3. From any position in any parking spot, a Duckiebot can see at least two orthogonal lines or an sign with an april tag. TODO: this point needs further specification
 
@@ -142,7 +142,7 @@ A launch tile is used to introduce a new Duckiebot into Duckietown in a controll
 
 TODO: Specification for tape on the launch tile
 
-A "yield" sign should be visible from the launch tile. 
+A "yield" sign should be visible from the launch tile.
 
 ## Layer 2 - Signage and Lights
 
@@ -155,14 +155,14 @@ Requires: To print and assemble the signs refer to [](#signage)
 
 ### Specs
 
-Center of signs are 13cm height with apriltags of 6.5cm sq. and a white border pasted below them. 
+Center of signs are 13cm height with apriltags of 6.5cm sq. and a white border pasted below them.
 
 ### Type
 
-The allowable signs are:
+The allowable signs are as in [](#fig:signs).
 
 
-<div figure-id="fig:signs" figure-caption="Duckietown Traffic Signs">
+<div figure-id="fig:signs" figure-class="flow-subfigures" figure-caption="Duckietown Traffic Signs">
   <div figure-id="subfig:stop" figure-caption="stop">
     <img src="stop.png" style='width:8em;height:auto'/>
   </div>
@@ -216,13 +216,13 @@ Each sign is printed from the [signs and tags doc](https://www.dropbox.com/s/np7
 
 ### Placement
 
-Signs may appear on the opposite side and at the corner of the adjacent tile from which they are viewed. In the absence of any signs, it is assumed that all network flows are allowed so a sign MUST be placed and visible whenever this is not the case. 
+Signs may appear on the opposite side and at the corner of the adjacent tile from which they are viewed. In the absence of any signs, it is assumed that all network flows are allowed so a sign MUST be placed and visible whenever this is not the case.
 
-Signs must only be placed on empty tiles, or next to one of the other tile types if on the border of a map. The sign placements for four different cases are shown in [](#fig:sign-placement). At intersections, from each stop line 2 signs should be clearly visible: 1) the intersection type (traffic light or stop sign) and 2) the intersection topology. 
+Signs must only be placed on empty tiles, or next to one of the other tile types if on the border of a map. The sign placements for four different cases are shown in [](#fig:sign-placement). At intersections, from each stop line 2 signs should be clearly visible: 1) the intersection type (traffic light or stop sign) and 2) the intersection topology.
 
-At present, 4-way intersections much be equipped with traffic lights for safe navigation.
+At present, 4-way intersections must be equipped with traffic lights for safe navigation.
 
-<div figure-id="fig:sign-placement" figure-caption="Placement of Traffic Signs">
+<div figure-id="fig:sign-placement" figure-class="flow-subfigures" figure-caption="Placement of Traffic Signs">
   <div figure-id="subfig:4-way-signs" figure-caption="4-way intersection">
     <img src="4-way-signs.pdf" style='width:15em;height:auto'/>
   </div>
@@ -237,7 +237,7 @@ At present, 4-way intersections much be equipped with traffic lights for safe na
   </div>
 </div>
 
-On straight and curved roads, additional signs can be added as desired. Their placement is indicated in [](#subfig:2-way-signs-straight) and [](#subfig:2-way-signs-turn). The signs should be placed at the border between two tiles and should face towards oncoming traffic as indicated. 
+On straight and curved roads, additional signs can be added as desired. Their placement is indicated in [](#subfig:2-way-signs-straight) and [](#subfig:2-way-signs-turn). The signs should be placed at the border between two tiles and should face towards oncoming traffic as indicated.
 
 In these figures the arrow is the direction of the sign.
 
@@ -247,7 +247,7 @@ In these figures the arrow is the direction of the sign.
 ### Specs
 
 
-* Font: arial. 
+* Font: arial.
 
 * Color: Perhaps we could start with real-world settings: white as foreground and green as background.
 
@@ -255,7 +255,7 @@ In these figures the arrow is the direction of the sign.
 
 * The rounded corners are modified into 90 degrees.
 
-* Height: sign board height is 1.5 in. (**2.1 in**), 
+* Height: sign board height is 1.5 in. (**2.1 in**),
 
 * Width: Currently 4.5 in for id 500-511. (**6.1 in +1.1 in "ST" or 5.5 in + 1.7 in “AVE”**)
 
@@ -270,11 +270,11 @@ In these figures the arrow is the direction of the sign.
 
 Every segment of road must have at least one road name sign.
 
-Every turn tile should have a road name sign. 
+Every turn tile should have a road name sign.
 
-The placement of the road name signs is as indicated in [](#fig:name-placement].
+The placement of the road name signs is as indicated in [](#fig:name-placement).
 
-<div figure-id="fig:name-placement" figure-caption="Placement of Road Name Signs">
+<div figure-id="fig:name-placement" figure-class="flow-subfigures" figure-caption="Placement of Road Name Signs">
   <div figure-id="subfig:name-signs-turn" figure-caption="Turn">
     <img src="name-signs-turn.pdf" style='width:15em;height:auto'/>
   </div>
@@ -285,7 +285,7 @@ The placement of the road name signs is as indicated in [](#fig:name-placement].
 
 
 
-Street name signs should never be perpendicular to the road - they are too big and obtrusive. 
+Street name signs should never be perpendicular to the road - they are too big and obtrusive.
 
 
 
@@ -302,5 +302,3 @@ TOWRITE: towrite
 The lights must be at a height of exactly 20cm  above the center of the intersection tile.
 
 The Pi should sit on a pole that is based at the corner of the tile outside of the allowable driving region.
-
-

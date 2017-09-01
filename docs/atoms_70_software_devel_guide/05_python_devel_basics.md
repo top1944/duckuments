@@ -31,6 +31,56 @@ TODO: to write
 
 TODO: to write
 
+TODO: how to catch and re-raise
+
 ## Object orientation - Abstract classes, class  hierarchies
 
 TODO: to write
+
+## Downloading resources
+
+Use this recipe if you need to download things:
+
+    from duckietown_utils.download import download_if_not_exist
+    url = 'https://www.dropbox.com/s/bzezpw8ivlfu4b0/frame0002.jpg?dl=0'
+    f = 'local.jpg'
+    download_if_not_exist(url, f)
+
+(Do not commit JPGs and other binary data to the `Software` repository.)
+
+TODO: actually use `urls.yaml`
+
+## IPython
+
+How to enter IPython:
+
+    from IPython import embed()
+
+    a = 10
+    embed() # enters interactive mode
+
+
+## Images
+
+[](python:duckietown_utils.add_header_to_image)
+
+    add_header_to_image(image, s):  Add header to image
+
+[](python:duckietown_utils.write_jpg_to_file)
+
+    write_jpg_to_file(image, filename)
+
+[](python:duckietown_utils.make_images_grid)
+
+    make_images_grid
+
+
+## Idioms
+
+
+    segment_list = copy.deepcopy(segment_list)
+
+
+See: [add_duckietown_header](python:duckietown_utils.add_duckietown_header)
+
+See: [](python:duckietown_utils.download_if_not_exist)

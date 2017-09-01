@@ -2,12 +2,21 @@
 
 ## The beginnings of Duckietown
 
-The original Duckietown class was at MIT in 2016.
+The original Duckietown class was at MIT in 2016 ([](#fig:MIT-class)).
 
 <div figure-id="fig:MIT-class">
-    <img src="duckietown-mit.jpg" class='group-photo'/>
+    <img src="duckietown-mit.jpg" class='fancybox group-photo'/>
     <figcaption>Part of the first MIT class, during the final demo.</figcaption>
 </div>
+
+Duckietown was built by elves ([](#fig:elves)).
+
+<div figure-id="fig:elves">
+    <figcaption>The elves of Duckietown</figcaption>
+    <dtvideo src="vimeo:149916365"/>
+</div>
+
+These are some advertisement videos we used.
 
 <div figure-id="fig:v1">
     <figcaption>The need for autonomy</figcaption>
@@ -19,11 +28,11 @@ The original Duckietown class was at MIT in 2016.
     <dtvideo src="vimeo:152499589"/>
 </div>
 
-
-<div figure-id="fig:v4">
-    <figcaption>The elves of Duckietown</figcaption>
-    <dtvideo src="vimeo:149916365"/>
+<div figure-id="fig:v3">
+    <figcaption>Cool Duckietown by night</figcaption>
+    <dtvideo src="vimeo:152825632"/>
 </div>
+
 
 
 

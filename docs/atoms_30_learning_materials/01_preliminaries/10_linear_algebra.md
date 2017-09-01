@@ -12,6 +12,21 @@ Linearity is an important concept because it is powerful in describing the input
 
 So, in a way or the other, linear algebra is a starting point for investigating the world around us, and Duckietown is no exception.
 
+Note: This chapter is not intended to be a comprehensive compendium of linear algebra. 
+
+See: this reference
+
+See also: this other reference   
+
+TODO: add references
+
+<div class='comment' markdown="1">
+This is an example comment. -JT
+</div>
+
+
+Comment: This is another example comment. -JT
+
 <!--(Dear Santa, I would like class='required-preliminaries' here) -->
 <div class='requirements' markdown="1">
 
@@ -38,12 +53,16 @@ Recommended: Definitions of Stability, Performances and Robustness: [](#bib:plac
 
 ## Problem Definition {#theory-chapter-template-problem-def}
 
-In this section we discuss vectors, matrices and linear spaces, along with their properties. Before introducing the these arguments, we need to formally define what we mean by linearity. The word _linear_ comes from the latin _linearis_, which means _pertaining to or resembling a line_. You should recall that a line is represented by an equation like $y = mx + q$, but here we intend linearity as a property of maps, so there is a little more to linearity than lines (although lines _are_ linear maps indeed). To avoid confusions, let us translate the concept of linearity in mathematical language.
+In this section we discuss vectors, matrices and linear spaces along with their properties. 
 
-First, let us define a _function_, as a mapping between _sets_.
+Before introducing the these arguments, we need to formally define what we mean by linearity. The word _linear_ comes from the latin _linearis_, which means _pertaining to or resembling a line_. You should recall that a line can be represented by an equation like $y = mx + q$, but here we intend linearity as a property of maps, so there is a little more to linearity than lines (although lines _are_ linear maps indeed). 
+
+To avoid confusions, let us translate the concept of linearity in mathematical language.
+
+First, we define a _function_, as a mapping between _sets_.
 
 \begin{definition}[Set]\label{def:set}
-A set $\mathbb{X} = \{x_1, x_2, \dots\}$ is a well-defined collection of distinct _elements_, or _members_ of the set, $x_i$, $i = 1, 2, \dots$. For the time being, we assume elements to (complex) numbers.
+A set $\mathbb{X} = \{x_1, x_2, \dots\}$ is a well-defined collection of distinct _elements_, or _members_ of the set, $x_i$, $i = 1, 2, \dots$. For the time being, we assume elements to be numbers.
 \end{definition}
 
 \begin{definition}[Function]\label{def:function}
@@ -163,7 +182,6 @@ Unit vectors are used to define the directions of the components of a vector, al
      <img src="placeholder.png" style='width: 15em'/>
 </div>
 
-
 <div class="example-usage" markdown="1">
 
 Let $\textbf{v} \in \mathbb{R}^3$ be a vector defined in the Cartesian space. Let, moreover, $(\textbf{i},\textbf{j},\textbf{k})^T$ be the versor of the Cartesian axis, i.e.:
@@ -172,7 +190,7 @@ Let $\textbf{v} \in \mathbb{R}^3$ be a vector defined in the Cartesian space. Le
 \textbf{j} &= [0,1,0]^T; \\ 
 \textbf{k} &= [0,0,1]^T.
 \end{align} 
-Then, a vector can be written equivalently in vector or algebraic form: $\textbf{v} = [v_1, v_2, v_3]^T = v_1\textbf{i} + v_2\textbf{j}+v_3\textbf{k}$. Unit vectors are sometimes explicitly denoted with a hat (`^`), e.g., $[\hat{\textbf{i}}, \hat{\textbf{j}}, \hat{\textbf{k}}]^T$.
+Then, a vector can be written equivalently in vector or algebraic form: $\textbf{v} = [v_1, v_2, v_3]^T = v_1\textbf{i} + v_2\textbf{j}+v_3\textbf{k}$. Unit vectors are sometimes explicitly denoted with a hat (`^`), e.g., $\hat{\textbf{i}}, \hat{\textbf{j}}, \hat{\textbf{k}}$.
 </div>
 
 \begin{remark}[Normalizing vectors]\label{rem:vector-normalizing}
@@ -189,27 +207,105 @@ We here define operations amongst two given vectors defined in the same space: $
 
 #### Vectorial Sum {#vector-sum}
 
-\begin{definition}[Vectorial sum]\label{def:vector-sum}
-\textbf{w} = \textbf{u} + \textbf{v} = (u_1+v_1)\hat{\textbf{i}} + (u_2+v_2)\hat{\textbf{j}} + (u_3+v_3)\hat{\textbf{k}} = 
-\begin{align} \label{eq:vector-sum}
+The sum of two vectors is a vector, and its components are the sum of the two vectors components.
 
+\begin{definition}[Vectorial sum]\label{def:vector-sum}
+\begin{align} \label{eq:vector-sum}
+\textbf{w} = \textbf{u} + \textbf{v} = (u_1+v_1)\hat{\textbf{i}} + (u_2+v_2)\hat{\textbf{j}} + (u_3+v_3)\hat{\textbf{k}}.
 \end{align}
 \end{definition}
 
 \begin{remark}[Sum]\label{rem:sum}
-Remember that mathematical operations come in pairs, which represent the same concept. A _sum_ operation, sometimes more extensively referred to as the _algebric sum_, is the concept of summing, i.e., it includes both addition and subtraction. (A subtraction is nothing but an addition between positive and negative numbers.)
+Mathematical operations come in pairs, which represent the same concept. A _sum_ operation, sometimes more extensively referred to as the _algebric sum_, is the concept of summing, i.e., it includes both addition and subtraction. (A subtraction is nothing but an addition between positive and negative numbers.)
 \end{remark}
 
-#### Vectorial dot product {#vector-dot}
+The "parallelogram law" helps visualize the results of the vectorial sum operation [](#fig:vector-sum).
+
+<div figure-id="fig:vector-sum" figure-caption="The sum of two vectors can be visualized with the parallelogram law.">
+     <img src="placeholder.png" style='width: 15em'/>
+</div>
+
+<div class='comment' markdown="1">
+I don't really have anything to say.
+
+Just wanted to show the comment system.
+
+Note that I can just go and on with my rambling; all this text will be collapsed anyway.
+
+(Keep this comment as an example.)
+
+-AC
+
+</div>
+
+#### Dot, or scalar, product {#vector-dot}
+
+The dot, or scalar, product of two vectors ($\textbf{u}$,$\textbf{v} \in \mathbb{R}^3$) is a scalar ($a \in \mathbb{R}$), equal to the product of the magnitudes of the two vectors times the cosine of the angle between them, $\phi \in [0,2\pi)$.  
+
+\begin{definition}[Scalar product]\label{def:vector-dot-product}
+\begin{align} \label{eq:vector-dot-product}
+a = \textbf{u} \cdot \textbf{v} = \|u\|\|v\|\cos(\phi) \in \mathbb{R}
+\end{align}
+\end{definition}
+
+The dot product is a measure of the _projection_ of vectors on one another ([](#fig:vector-dot-product)).
+
+Note: When the two vectors are perpendicular, or orthogonal, the dot product is zero ($\cos(\pi/2) = 0$). This fact is often used as a test for orthogonality. Orthogonality is an important concept for linear spaces, as the most "efficient" basis are orthogonal.  
+
+<div figure-id="fig:vector-dot-product" figure-caption="The scalar product between two vectors measures the projection of one on each other.">
+     <img src="placeholder.png" style='width: 30em'/>
+</div>
+
+<!-- It is useless to reference ####, as they have no section number. -->
+#### Cross, or vector, product {#vector-cross} 
+
+While the dot product depends on the metric chosen in the space (the Euclidian norm, in our case), the cross product even requires the definition of an orientation, or handedness. 
 
 
 
-#### Vectorial cross product {#vector-cross}
+\begin{definition}[Standard Base]\label{def:standard-basis}
+In the Euclidian space $\mathbb{R}^3$, $\hat{\textbf{i}}, \hat{\textbf{j}}, \hat{\textbf{k}}$ is the standard base, and it is right handed.
+\end{definition}
 
 
+
+The cross, or vector, product between two vectors ($\textbf{u}$, $\textbf{v} \in \mathbb{R}^3$) is a 
+vector that is orthogonal to each of the two vectors, hence is normal, or perpendicular, to the plane containing them. Its magnitude is given by the product of their magnitude times the sine of the angle between them, and its direction is indicated by the normal unit vector ($\hat{\textbf{n}} \in \mathbb{R}^3$), identified by the right hand rule. 
+
+\begin{definition}[Scalar product]\label{def:vector-cross-product}
+\begin{align} \label{eq:vector-cross-product}
+\textbf{w} = \textbf{u} \times \textbf{v} = \|u\|\|v\|\sin(\phi) \textbf{n} 
+\end{align}
+\end{definition}
+
+The components of $\textbf{w}$ can be easilly computed through the Sarrus rule.
+
+Another way to remember the components of a cross product is to immagine the unit vectors $\hat{\textbf{i}}, \hat{\textbf{j}}, \hat{\textbf{k}}$ as if they were placed in order on a wheel ([](#fig:wheel-trick)): 
+
+<div figure-id="fig:wheel-trick" figure-caption="The wheel trick .">
+     <img src="placeholder.png" style='width: 30em'/>
+</div>
+
+The right hand rule ([](#fig:right-hand-rule)) the handy-est way to identify the direction of the vector resulting from a cross product: 
+
+<div figure-id="fig:right-hand-rule" figure-caption="The right hand rule points in the direction of the resulting vector from a cross product.">
+     <img src="placeholder.png" style='width: 30em'/>
+</div>
 
 ### Properties of vectors {#vector-properties}
 
+#### Sum
+
+- commutative
+
+#### Dot product
+
+- commutative
+
+#### Cross product
+
+- anticommutative
+- distributive over scalars
 
 <!--
 \begin{definition}[Reference signals]\label{def:def-label}
@@ -352,7 +448,7 @@ Immagine a spring-mass-damper system...
 
 #### Inverting a well conditioned matrix
 
-#### Inverting a ill conditioned matrix
+#### Inverting an ill conditioned matrix
 
 <!--
 More Duckiebot related examples
