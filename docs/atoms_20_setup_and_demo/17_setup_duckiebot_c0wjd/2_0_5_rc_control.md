@@ -58,41 +58,13 @@ See also: For more information about `catkin_make`, see [](#catkin_make).
 Note: there is a known bug, for which it fails the first time on the Raspberry Pi. Try again; it will work.
 
 
-
-
 <!-- (you have to be under the `catkin_ws` folder to invoke `catkin_make`) -->
 
-## Add your vehicle to the scuderia file {#edit-machines-file}
+## Add your vehicle data to the database {#edit-machines-file}
 
-Add your vehicle to the scuderia file.
+Add your vehicle data to the scuderia file.
 
 See: See [](#scuderia).
-
-<!--
-On the robot edit the file
-
-    ~/duckietown/catkin_ws/src/duckietown/machines
-
-You will see something like this:
-
-    <launch>
-        <arg name="env_script_path" default="~/duckietown/environment.sh"/>
-
-        <machine name="![robot name]" address="![robot name].local" user="![username]"
-                 env-loader="$(arg env_script_path)"/>
-            ...
-        ...
-    </launch>
-
-
-Now, duplicate a &lt;machine&gt; line between &lt;launch&gt; and &lt;/launch&gt;, and replace the name and address string with the name of your vehicle.
-
-For example, for Andrea, `![robot name]` = `emma` and `![username]` = `andrea`.
-So, he would add this line:
-
-    <machine name="emma" address="emma.local" user="andrea" env-loader="$(arg env_script_path)"/>
-
-Commit and push the new machines file. (XXX No, don't commit the machines file.) -->
 
 
 ## Test that the joystick is detected {#test-joystick}
