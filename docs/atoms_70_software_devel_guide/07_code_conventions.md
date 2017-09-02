@@ -5,7 +5,7 @@
 
 ### Tabs {#no-tabs}
 
-Never use tabs in Python file.
+Never use tabs in Python files.
 
 The tab characters are evil in Python code. Please be *very* careful in changing them.
 
