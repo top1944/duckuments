@@ -68,6 +68,17 @@ TODO: Add a different "Tools" section in the table (e.g., solderer), or add in t
 
 </div>
 
+<div markdown="1">
+
+<col2 id='materials-optionals' figure-id="tab:materials-optional" figure-caption="Bill of optional materials">
+<s>[Caster](https://tinyurl.com/y7gnesxn)</s>                         <s>USD 6.55/4 pieces</s>
+<s>[4 Standoffs (M3.5 12mm F-F)](https://tinyurl.com/ybd24t8c)</s>                         <s>USD 0.63/piece</s>
+<s>[8 Screws (M3.5x8mm)](https://tinyurl.com/ych4sfpa)</s>                         <s>USD 4.58/100 pieces</s>
+<s>[8 Split washer lock](https://tinyurl.com/y75onase)</s>                         <s>USD 1.59/100 pieces</s>
+</col2>
+
+</div>
+
 <style>
 #materials {
     font-size: 80%;
@@ -237,4 +248,34 @@ Iin configuration `C0+d`, the Duckiebot is equppied with a "external" hard drive
 
 <div figure-id="fig:USBdrive" figure-caption="The Tiny 32GB USB Flash Drive">
      <img src="USBdrive.png" style='width: 15em'/>
+</div>
+
+## Caster (optional)
+
+The caster ([](#fig:caster)) is an optional component that substitutes the steel omnidirectional wheel that comes in the Magician Chassis package. Although it is not necessary, it provides smoother operations and overall enhanced Duckiebot performance.
+
+<div figure-id="fig:caster" figure-caption="The caster wheel">
+     <img src="caster.png" style='width: 30em'/>
+</div>
+
+To assemble the caster at the right height we will need to purchase:
+
+- 4 standoffs (M3.5 12mm F-F) ([](#fig:caster-standoffs)), 
+- 8 screws (M3.5x8mm) ([](#fig:caster-screws)), and 
+- 8 split lock washers ([](#fig:caster-split-washer)).
+
+<div figure-id="fig:caster-bits">
+    <figcaption>Mechanical bits to assemble the caster wheel.</figcaption>
+
+    <div figure-id="subfig:caster-standoffs" figure-caption="Standoffs for caster wheel.">
+        <img src="caster-standoffs.png" style='width: 30em'/>
+    </div>
+
+    <div figure-id="subfig:caster-screws" figure-caption="Screws for caster wheel.">
+        <img src="caster-screws.png" style='width: 30em'/>
+    </div>
+    
+    <div figure-id="subfig:caster-split-washer" figure-caption="Split lock washers for caster wheel.">
+        <img src="caster-split-washer.png" style='width: 30em'/>
+    </div>
 </div>
