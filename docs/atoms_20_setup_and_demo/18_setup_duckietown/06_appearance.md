@@ -2,7 +2,14 @@
 
 Assigned: Liam
 
-This document is about the specification for a conforming Duckietown. Any Duckietown not adhering to the rules described here cannot call itself a "Duckietown" since it is not one. Additionally, any Duckietown not adhering to these rules may cause the Duckiebots to fail in unexpected ways. These are a set of rules for which a functional system has been verified.
+This document describes the Duckietown specification. Any Duckietown not adhering to the rules described here cannot call itself a "Duckietown", since it is not one. Additionally, any Duckietown not adhering to these rules may cause the Duckiebots to fail in unexpected ways. These are a set of rules for which a functional system has been verified.
+
+## Version history
+
+Note here the changes to the specification, so that we are able to keep in sync
+the different Duckietowns.
+
+* Version 2.0 - current version
 
 ## Overview
 
@@ -10,16 +17,16 @@ Duckietown is built with two layers:
 
 1. The first is the *floor layer*. The floor is built of interconnected exercise mats with tape on them.
 
-2. The second layer is the *signal layer* and contains all the signs and other objects that sit on top of the mats.
+2. The second layer is the *signals layer* and contains all the signs and other objects that sit on top of the mats.
 
-Note: he visual appearance of the area where the Duckietown is created is variable. If you discover that this appearance is causing negative performance, a "wall" of blank tiles constructed vertically can be used to reduce visual clutterl.
+Note: the visual appearance of the area where the Duckietown is created is variable. If you discover that this appearance is causing negative performance, a "wall" of blank tiles constructed vertically can be used to reduce visual clutter.
 
 
 ## Layer 1 - The Tile Layer
 
-Each tile is a 2ft x 2ft square and is able to interlock with the others.
+Each tile is a 2 ft x 2 ft square and is able to interlock with the others.
 
-There are five primary types of tiles as shown in [](#fig:tiles)
+There are five primary types of tiles, as shown in [](#fig:tiles)
 
 <div figure-id="fig:tiles" figure-class="flow-subfigures" figure-caption="The principal tile types in Duckietown">
     <div figure-id="subfig:straight" figure-caption="Straight tile">
@@ -42,11 +49,9 @@ There are five primary types of tiles as shown in [](#fig:tiles)
 
 ### Tapes
 
-
 There are 3 colors of tapes: white, yellow, and red.
 
-1. White
-
+#### White tape
 
 \begin{proposition}\label{prop:white_tape}
 A Duckiebot never collides with Duckietown if it never crosses or touches a white tape strip.
@@ -56,29 +61,34 @@ Here are some facts about the white tapes:
 
 * White tapes must be solid (not dashed)
 
-* Width of the tape = 1in
+* The width of the white tape is 1 inch.
 
-* The white tape is always placed on the right hand side of a lane (we assume that Duckiebots drive on the right hand side of the road)
+* The white tape is always placed on the right hand side of a lane. We assume that the Duckiebots drive on the right hand side of the road.
 
-* For curved road, the white lane marker is formed by five pieces of white tape, while the inner corner is formed by three pieces, placed according to the specifications in the image below, where the edge pieces are matched to adjacent straight or curved tiles:
+Comment: this should be part of the "traffic rules" sections.
+
+* For curved roads, the white lane marker is formed by five pieces of white tape, while the inner corner is formed by three pieces, placed according to the specifications in the image below, where the edge pieces are matched to adjacent straight or curved tiles ([](#fig:curved)).
 
 <div figure-id="fig:curved" figure-caption="The specification for a curved road tile">
   <img src="curved_road.png" style='width: 30em; height:auto'/>
 </div>
 
 
-2. Yellow
+#### Yellow tape
 
-On a two-way road, the yellow tape should be dashed. Each piece should have a length of approximately **2in** with a **1in** gap separating each piece.
+On a two-way road, the yellow tape should be dashed. Each piece should have a length of approximately **2 in** with a **1 in** gap separating each piece.
 
 Yellow tapes on curves: see curved road image in white tape section, pieces at tile edges should be in center of lane, piece at the middle of the curve should be approximately 20.5 cm from middle of inner center white piece of tape, with approximated circular arc in between.
 
-3. Red
+#### Red tape
 
 Red tapes MAY **only** appear on **intersection** tiles.
- The red tape must be the full width of the duck tape roll and should cross the entire lane perpendicular to the lane.
 
-The placement of red tape should always be **under** yellow and white tape
+The red tape must be the full width of the duck tape roll and should cross the entire lane perpendicular to the lane.
+
+Comment: what is the width of the roll? 1 in? - AC
+
+The placement of red tape should always be **under** yellow and white tape.
 
 A Duckiebot navigates Duckietown by a sequence of:
 
@@ -87,19 +97,21 @@ A Duckiebot navigates Duckietown by a sequence of:
 * Execute an intersection traversal,
 * Relocalize in a StraightTile.
 
+The guarantee is:
 
-The invariant is: if you stop before or ON the red strip, no collisions are possible.
-
+\begin{proposition}
+If the Duckiebot stops before or ON the red strip, no collisions are possible.
+\end{proposition}
 
 ### Topological Constraints During Map Construction
 
 Here are some topological rule constraints that must be met:
 
-1. An intersection comprises can NOT be adjacent to a curved road tile or another intersection tile.
+1. An intersection can NOT be adjacent to a curved road tile or another intersection tile.
 
-2. Any two adjacent non-empty tiles must have a feasible path from one to the other **of length two** (i.e. if they are adjacent they must be connected.
+2. Any two adjacent non-empty tiles must have a feasible path from one to the other **of length two**: if they are adjacent, they must be connected.
 
-Some examples of non-conforming topologies are shown in [](#fig:violates)
+Some examples of **non-conforming** topologies are shown in [](#fig:violates).
 
 <div figure-id="fig:violates" figure-class="flow-subfigures" figure-caption="Some non-conforming Duckietown map topologies">
     <div figure-id="subfig:violates1" figure-caption="Topology violates rule 2 since the bottom two curved tiles are adjacent but not connected">
@@ -116,29 +128,32 @@ Some examples of non-conforming topologies are shown in [](#fig:violates)
 
 ### Parking Lots {#parking}
 
-Note: Experimental
+Note: An experimental new development.
 
-A parking is a place for Duckiebots to go when they are tired and need a rest.
+A parking lot is a place for Duckiebots to go when they are tired and need a rest.
+
 A parking lot introduces three additional tile types:
 
 1. **Parking lot entry tile**: This is similar to a straight  tile except with a red stop in the middle. The parking lot sign ([](#fig:parking)) will be visible from this stop line.
 2. **Parking spot tiles**:
-TODO: the tape on these tiles is currently not yet specified.
 3. **Parking spot access tiles**:
-TODO: the tape on these tiles is currently not yet specified.
+
+TODO: the tape on the spot and spot access tiles is currently not yet specified.
 
 The following are the rules for a conforming parking lot:
 
 1. One "parking spot" has size one tile.
-2. From each parking spot, there is a path to go to the parking lot entry tile that does not intersect any other parking spot. (i.e. when a duckiebot is parked, nobody will disturb it).
-3. From any position in any parking spot, a Duckiebot can see at least two orthogonal lines or an sign with an april tag. TODO: this point needs further specification
+2. From each parking spot, there is a path to go to the parking lot entry tile that does not intersect any other parking spot. (i.e. when a Duckiebot is parked, nobody will disturb it).
+3. From any position in any parking spot, a Duckiebot can see at least two orthogonal lines or an sign with an April tag.
+
+TODO: this point needs further specification
 
 
 ### Launch Tiles {#launch-tiles}
 
 Note: Experimental
 
-A launch tile is used to introduce a new Duckiebot into Duckietown in a controllable way. The launch file should be places adjacent to a turn tile so that a Duckiebot may "merge" into Duckietown once the initialization procedure is complete.
+A "launch tile" is used to introduce a new Duckiebot into Duckietown in a controllable way. The launch file should be placed adjacent to a turn tile so that a Duckiebot may "merge" into Duckietow,n once the initialization procedure is complete.
 
 TODO: Specification for tape on the launch tile
 
@@ -148,14 +163,13 @@ A "yield" sign should be visible from the launch tile.
 
 **IMPORTANT:** All signage should sit with base on the floor and stem coming through the connection between the tiles. Generally, it is advisable to adhere the sign to the floor with double-sided tape. **Under no circumstances should the white (any other tape) be obscured.**
 
-
 ## Traffic Signs
 
-Requires: To print and assemble the signs refer to [](#signage)
+Requires: To print and assemble the signs refer to [](#signage).
 
 ### Specs
 
-Center of signs are 13cm height with apriltags of 6.5cm sq. and a white border pasted below them.
+Center of signs are 13 cm height with apriltags of 6.5 cm sq. and a white border pasted below them.
 
 ### Type
 
@@ -299,6 +313,6 @@ TOWRITE: towrite
 
 ### Placement
 
-The lights must be at a height of exactly 20cm  above the center of the intersection tile.
+The lights must be at a height of exactly 20 cm  above the center of the intersection tile.
 
-The Pi should sit on a pole that is based at the corner of the tile outside of the allowable driving region.
+The Raspberry Pi should sit on a pole that is based at the corner of the tile outside of the allowable driving region.

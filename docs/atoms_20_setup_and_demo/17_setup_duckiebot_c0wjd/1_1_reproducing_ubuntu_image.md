@@ -18,9 +18,7 @@ Requires: A PC running any Linux with an SD card reader.
 
 Requires: Time: about 20 minutes.
 
-Results:
-
--  A baseline Ubuntu Mate 16.04.2 image with updated software.
+Results: A baseline Ubuntu Mate 16.04.2 image with updated software.
 
 </div>
 
