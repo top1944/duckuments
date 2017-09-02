@@ -1,7 +1,8 @@
 # Assembling the Duckiebot `C0` {#assembling-duckiebot-c0}
 This document provides detailed instructions for assembling the Duckiebot.
 
-Assigned: Shiyingn Li
+Assigned: Shiying Li
+Point of contact: Shiying Li
 
 <div class='requirements' markdown="1">
 
@@ -19,46 +20,44 @@ Results:  An assembled Duckiebot in configuration `C0+wjd`.
 
 </div>
 
-## Part A - Assembling the car - bottom part
+## Assembling the car - bottom
 
+Open the Magician chassis package and take out the following components:
 
-Open the Duckiebox package (magician chassis – DG007), and you won’t need them all. Take out the following materials:
-
-* Chassis-bottom, Chassis-up (1+1 pieces)
-* Motor (2 pieces), motor holders (4 pieces)
-* Wheels (2 pieces), Omni wheel (1 pieces)
-* all Spacers and screw inside of the packages. Screwdriver (1x)
+* Chassis-bottom (1), Chassis-up (1)
+* DC Motors (2), motor holders (4)
+* Wheels (2 pieces), steel omnidirectional wheel (1) or caster wheel (1)
+* All spacers and screws
+* Screwdriver 
 
 <div figure-id="fig:duckiebot_components" figure-caption="Components in Duckiebot package.">
-     <img src="duckiebot_components.png" style='width: 15em'/>
+     <img src="duckiebot_components.png" style='width: 30em'/>
 </div>
 
-_**Note**: You won’t need the battery holder and speed board holder (on the right side). Ignore the speed board holder in the image._
+Note: You won’t need the battery holder and speed board holder (on the right side in [](#fig:duckiebot_components)).
 
-<br/><br/>
+### Motor + chassis-bottom
 
-### Motor + chassis bottom
-Insert motor holders on the chassis-bottom and put the motors as below (with the longest screws M3*30 and M3 nuts). Ignore the speed board holder in the image.
+Insert the motor holders on the chassis-bottom and put the motors as shown in the figure below (with the longest screws (M3x30) and M3 nuts).
 
 <div figure-id="fig:motors" figure-caption=" Components for mounting the motor">
-     <img src="motors.jpg" style='width: 15em'/>
+     <img src="motors.jpg" style='width: 30em'/>
 </div>
 
 <div figure-id="fig:scratch_motors" figure-caption=" ">
-     <img src="scratch_motors.png" style='width: 15em'/>
+     <img src="scratch_motors.png" style='width: 30em'/>
 </div>
 
 <div figure-id="fig:motors1" figure-caption=" ">
-     <img src="motors1.jpg" style='width: 15em'/>
+     <img src="motors1.jpg" style='width: 30em'/>
 </div>
 
-_**Note 1**: Orient the motors so that its wires are inward (toward the center of the chassis-bottom) and the black wires are closer to the chassis-bottom. This makes wiring easier later._
+Note: Orient the motors so that their wires are inwards, i.e., towards the center of the chassis-bottom. The black wires should be closer to the chassis-bottom to make wiring easier down the line.
 
-_**Note 2**: if your Magician Chassis package has unsoldered motor wires, you will have to solder them first. Check these instructions [make instructions for soldering motor wires]. In this case, your wires will not have the male pin headers on one end. Do not worry, you can still plug them in the stepper motor hat power terminals._
-
-<br/><br/>
+Note: if your Magician Chassis package has unsoldered motor wires, you will have to solder them first. Check these instructions [make instructions for soldering motor wires]. In this case, your wires will not have the male pin headers on one end. Do not worry, you can still plug them in the stepper motor hat power terminals.
 
 ### Assemble the wheels
+
 Plug in the wheels to the motor as follows (no screws needed):
 
 <div figure-id="fig:scratch_wheels" figure-caption=" ">
