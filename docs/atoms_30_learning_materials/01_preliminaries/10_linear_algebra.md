@@ -303,7 +303,7 @@ The right hand rule ([](#fig:right-hand-rule)) the handy-est way to identify the
 - commutative
 
 #### Cross product
-
+it loooooooo
 - anticommutative
 - distributive over scalars
 

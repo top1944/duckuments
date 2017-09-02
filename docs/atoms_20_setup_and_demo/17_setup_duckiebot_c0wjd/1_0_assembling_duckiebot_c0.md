@@ -75,8 +75,6 @@ Plug in the wheels to the motor as follows (no screws needed):
      <img src="wheels.jpg" style='width: 15em'/>
 </div>
 
-<br/><br/>
-
 #### Omnidirectional wheel
 
 The Duckiebot is driven by controlling the wheels attached to the DC motors. Still, it requires a "passive" omnidirectional wheel on the back. 
@@ -92,8 +90,6 @@ The Magician chassis package contains a steel omnidirectional wheel, and the rel
 <div figure-id="fig:omni" figure-caption=" ">
      <img src="omni.jpg" style='width: 15em'/>
 </div>
-
-<br/><br/>
 
 #### Caster wheel
 
@@ -113,12 +109,7 @@ Put the car upright (omni wheel pointing towards the table) and arrange wires so
      <img src="part_A.jpg" style='width: 15em'/>
 </div>
 
-<br/><br/>
-
 The bottom part of the Duckiebot's chassis is now ready. The next step is to assemble the Raspberry Pi on chassis-top part.
-
-<br/><br/>
-
 
 ## Assembling the Raspberry Pi, camera, and HATs
 
@@ -137,7 +128,7 @@ The bottom part of the Duckiebot's chassis is now ready. The next step is to ass
 
 ### Raspberry Pi
 
-The first step is to fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on th eopposite side of the chassis-up. 
+The first step is to fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on the opposite side of the chassis-up. 
 
 <div figure-id="fig:Raspberry_pi3" figure-caption=" ">
      <img src="RPi_3.jpg" style='width: 15em'/>
@@ -156,14 +147,20 @@ The first step is to fasten the nylon standoffs on the Raspberry Pi, and secure 
 </div>
 
 
-#### SD card
+#### Micro SD card
 
-Take the Micro SD card from the Duckiebox and insert it in the right slot on the Raspberry Pi. The SD card slot is just under the display port, on the short side of the PI, on the flipside of where the header pins are.
+Requires: Having the Duckiebot image copied in the Micro SD card. 
 
-TODO: Insert picture showing where to plug in the SD card
+Take the Micro SD card from the Duckiebox and insert its slot on the Raspberry Pi. The SD card slot is just under the display port, on the short side of the PI, on the flipside of where the header pins are.
+
+<div figure-id="fig:microsdcard" figure-caption="The Micro SD card.">
+     <img src="placeholder.jpg" style='width: 15em'/>
+</div>
 
 ### Camera
-#### The Pi end
+
+
+#### The Raspberry Pi end
 
 First, identify the camera cable port on the Pi (between HDMI and power ports) and remove the orange plastic protection (it will be there if the Pi is new) from it. Then, grab the long camera cable (300 mm) and insert in the camera port. To do so, you will need to gently pull up on the black connector (it will slide up) to allow the cable to insert the port. Slide the connector back down to lock the cable in place, making sure it “clicks”.
 
@@ -173,7 +170,7 @@ Protip: Make sure the camera cable is inserted in the right direction! The metal
      <img src="raspi_camera_apart.jpg" style='width: 15em'/>
 </div>
 
-_**Notice**: Insert the cable in the right direction to connect the camera to the Raspberry Pi._
+Note: Insert the cable in the right direction to connect the camera to the Raspberry Pi.
 
 
 
