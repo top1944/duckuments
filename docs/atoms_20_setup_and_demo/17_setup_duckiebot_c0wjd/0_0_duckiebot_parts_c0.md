@@ -21,9 +21,7 @@ Requires: Time: 15 days (average shipping for cheapest choice of components)
 
 Results: A kit of parts ready to be assembled in a `C0` or `C0+wjd` configuration.
 
-Next Steps:
-
-- After receiving these components, you are ready to do some [soldering](#soldering-boards-c0) before [assembling](#assembling-duckiebot-c0) your `C0` or `C0+wjd` Duckiebot.
+Next steps: After receiving these components, you are ready to do some [soldering](#soldering-boards-c0) before [assembling](#assembling-duckiebot-c0) your `C0` or `C0+wjd` Duckiebot.
 
 </div>
 
@@ -260,8 +258,8 @@ The caster ([](#fig:caster)) is an optional component that substitutes the steel
 
 To assemble the caster at the right height we will need to purchase:
 
-- 4 standoffs (M3.5 12mm F-F) ([](#fig:caster-standoffs)), 
-- 8 screws (M3.5x8mm) ([](#fig:caster-screws)), and 
+- 4 standoffs (M3.5 12mm F-F) ([](#fig:caster-standoffs)),
+- 8 screws (M3.5x8mm) ([](#fig:caster-screws)), and
 - 8 split lock washers ([](#fig:caster-split-washer)).
 
 <div figure-id="fig:caster-bits">
@@ -274,7 +272,7 @@ To assemble the caster at the right height we will need to purchase:
     <div figure-id="subfig:caster-screws" figure-caption="Screws for caster wheel.">
         <img src="caster-screws.png" style='width: 30em'/>
     </div>
-    
+
     <div figure-id="subfig:caster-split-washer" figure-caption="Split lock washers for caster wheel.">
         <img src="caster-split-washer.png" style='width: 30em'/>
     </div>
