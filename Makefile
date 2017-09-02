@@ -48,9 +48,6 @@ check-programs:
 
 	@echo All programs installed.
 
-
-
-
 check-duckietown-software:
 	@if [ -d $(duckietown-software) ] ; \
 	then \
@@ -81,7 +78,6 @@ process-svg:
 
 
 	python -m mcdp_docs.process_svg docs/ $(generated_figs) $(tex-symbols)
-
 
 
 duckuments-dist:
@@ -182,6 +178,9 @@ index:
 	#mcdp-render -D misc book_index
 	#cp misc/book_index.html duckuments-dist/index.html
 
+# pdoc=extra
+# --extra $(pdoc) \
+
 compile-html:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src $(src) \
@@ -193,6 +192,8 @@ compile-html:
 
 	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
 	python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
+	# rsync -aP $(pdoc) $(dist_dir)/duckiebook/pdoc
+
 
 compile-html-no-embed:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
@@ -206,7 +207,7 @@ compile-html-no-embed:
 	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
 	# python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
 	$(MAKE) split
-	
+
 compile-html-slow:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src $(src) \
