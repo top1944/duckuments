@@ -7,26 +7,28 @@ In order to uniquely specify a position in some space, we use some numbers, _coo
 ## Definitions
 
 \begin{definition}[Coordinate system]\label{def:coordinate_system}
-A coordinate system is a surjective function mapping from a tuple of reals to some space $S$, respecting the local topology. (The local topology, which is beyond the scope of this chapter, roughly means that "nearby" points has coordinates "close" together.)
+A coordinate system is a surjective function mapping from a tuple of reals to some space $S$, respecting the local topology. (The local topology, which is beyond the scope of this chapter, roughly means that "nearby" points have coordinates "close" together.)
 \end{definition}
 
 ## Examples
+
+Comment: The notion of "name" is a bit vague
 
 Because the ability of _naming_ a point in space is so fundamentally important, we often take that coordinates given by some coordinate system, often a Cartesian coordinate system, as the name of the point.
 
 ### 1D
 
-Take the real number line $\mathbb{R}$ as the space $S$, we can name an arbitrary point $x \in \mathbb{R}$, which happens to be a real number, by itself. So to check with our definition, any two distinct points on the real line would has two distinct coordinates. Furthermore any point has a coordinate. Let's call this coordinate system $A$.
+Consider the real number line $\mathbb{R}$ as the space $S$. We can name an arbitrary point $x \in \mathbb{R}$, which happens to be a real number, by itself. So to check with our definition, any two distinct points on the real line would have two distinct coordinates. Furthermore any point has a coordinate. Let's call this coordinate system $A$.
 
 One should note that the coordinate system given above is not the only possible way to name the points on a real line. We can assign coordinate $-x$ to the point $x \in \mathbb{R}$ and obtain an equally valid coordinate system $B$. To be more specific, given a point $p$ with the coordinate $a$ in the first coordinate system $A$, we know that in the second coordinate system $B$, $p$ would have the coordinate $-a$. Therefore, there is a way to translate between coordinates in the two systems.
 
 ### 2D plane
 
-Take the real plane $\mathbb{R}^2$ as the space $S$. This is an important space as it can be used to represent images (each pixel has a position on the image), and the location of your Duckiebot in Duckietown.
+Consider the real plane $\mathbb{R}^2$ as the space $S$. This is an important space within robotics and beyond. It can be used to represent images, with each pixel having its own position, or the location of your Duckiebot in Duckietown.
 
 #### 2D Cartesian coordinate systems
 
-We can draw two perpendicular lines on the plane $S$. We call these two lines the $x$-axis and the $y$-axis. We assign $(0, 0)$ to the point of intersection, which we call _the origin_. Then we decide on the positive directions and units for each axis and the unit. We will use coordinates $(x, y)$ to specify a point located $x$-many units in the positive $x$-direction and $y$-many units in the positive $y$-direction away from the origin. If we draw the axis-parallel lines with _integral_ $x$ coordinate and lines with integral $y$ coordinate, we obtain a visualization like [](#fig:2d-cartesian).
+We can draw two perpendicular lines on the plane $S$. We call these two lines the $x$-axis and the $y$-axis. We assign $(0, 0)$ to the point of intersection, which we call _the origin_. Then we decide on the positive directions and units for each axis and the unit. We will use coordinates $(x, y)$ to specify a point located $x$-many units in the positive $x$-direction and $y$-many units in the positive $y$-direction away from the origin, respectively. If we draw the axis-parallel lines with _integral_ $x$ coordinate and lines with integral $y$ coordinate, we obtain a visualization similar to that in [](#fig:2d-cartesian).
 
 When representing the location of your Duckiebot in Duckietown, you might decide to choose a corner of the map as the origin and take east as the positive $x$-direction and north as the positive $y$-direction, and 1 meter as the unit length. In this case, a Duckiebot with location $(1, -2)$ would sit at 1 meter east and 2 meters south of the designated corner of the map.
 
@@ -35,12 +37,14 @@ When representing the location of your Duckiebot in Duckietown, you might decide
 </div>
 
 \begin{remark}[Image space]\label{rem:image_space}
-It is customary to put the origin of an image at its top-left corner and positive $x$-direction points to the right and positive $y$-direction points down. Such convention is observed in `OpenCV` and other software libraries.
+It is customary to put the origin of an image at the top-left corner with the $x$-axis being horizontal and increasing to the right and the $y$-axis vertical and increasing downwards. In this way, the $x$ and $y$ coordinates index the column and row, respectively, of a particular pixel in the image. Such a convention is observed in `OpenCV` and other software libraries.
 \end{remark}
 
 #### Polar coordinate systems
 
-An alternative coordinate system for the plane is a polar coordinate system where we specify a point by its direction and distance from a fixed reference point. To set up a polar coordinate system, you first decide on the _pole_, the reference point, then the _polar axis_, the reference direction. We will call the distance from the pole, the _radial coordinate_ or _radius_, commonly denoted by $r$ or $\rho$, and the angle from the polar axis, the _angular coordinate_ or _polar angle_, commonly denoted by $\phi$ or $\theta$. See an example in [](#fig:2d-polar).
+An alternative coordinate system for the plane is the polar coordinate system, where we specify a point by its direction and distance from a fixed reference point. To set up a polar coordinate system, you first decide on the _pole_, the reference point, then the _polar axis_, the reference direction. We will call the distance from the pole, the _radial coordinate_ or _radius_, commonly denoted by $r$ or $\rho$, and the angle from the polar axis, the _angular coordinate_ or _polar angle_, commonly denoted by $\phi$ or $\theta$. See an example in [](#fig:2d-polar).
+
+Comment: The figure uses $\psi$ to denote the angle, where as the text uses $\phi$ and $\theta$.
 
 <div figure-id="fig:2d-polar" figure-caption="A polar coordinate system with pole O and polar axis L.">
      <img src="2d-polar.svg" style='width: 15em'/>
@@ -48,7 +52,9 @@ An alternative coordinate system for the plane is a polar coordinate system wher
 
 Note that in a polar coordinate system, a point has many equally valid names. (Exercise to readers: provide two such points and a few of their coordinates each.)
 
-Now, consider a Cartesian coordinate system $C$ whose origin is at the pole and its positive $x$-direction coincides with the polar axis. It is not hard to convert the polar coordinates to the Cartesian coordinates in $C$. (Exercise to readers: consult [](#fig:2d-polar-to-cart) and write out the conversion formulae.)
+Now, consider a Cartesian coordinate system $C$ whose origin is at the pole and its positive $x$-direction coincides with the polar axis. It is not hard to convert polar coordinates to Cartesian coordinates in $C$. (Exercise to readers: consult [](#fig:2d-polar-to-cart) and write out the conversion formulae.)
+
+Comment: It's nice to have these exercises. You may want to consider using the [formal check div](http://book.duckietown.org/master/duckiebook/sec_documentation_manual.html#subsub:check) for these.
 
 <div figure-id="fig:2d-polar-to-cart" figure-caption="Converting from polar coordinates to Cartesian coordinates.">
   <img src="2d-polar-to-cart.svg" style='width: 15em'/>
@@ -58,11 +64,11 @@ Given the many options, you might wonder which coordinate system to use in any g
 
 ### 3D space
 
-This is an important space since we inhabit a spatially three-dimensional world. It is commonly used to represent spatial information in robotics, such as spatial occupancy map and the location of a flying drone or an underwater robot.
+This is an important space since we live in a three-dimensional world. Since many of our robots operate in this same world, many robots similarly represent coordinates in three dimensions, including unmanned aerial vehicles (UAVs) and autonomous underwater vehicles (AUVs).
 
 #### 3D Cartesian coordinate systems
 
-Suppose the plane is the page or screen you are reading from, which is just a slice through the 3D space around it,  we can extend a 2D Cartesian coordinate system on the plane to 3D by adding a $z$-axis which is perpendicular to the page, i.e., the $z$-, $x$-, and $y$-axis are mutually perpendicular. As done before, we need to choose a positive $z$-direction and there are two choices: coming out of the page or going into the page. They form the right-handed coordinate system or the left-handed coordinate system, respectively. We shall use right-handed coordinate systems unless noted. For more on handedness, see [Wikipedia](https://en.wikipedia.org/wiki/Cartesian_coordinate_system#Orientation_and_handedness). Now the resulting coordinates become $(x, y, z)$, see [](#fig:3d-cart).
+Suppose the plane is the page or screen you are reading from, which is just a slice through the 3D space around it,  we can extend a 2D Cartesian coordinate system on the plane to 3D by adding a $z$-axis that is perpendicular to the page, i.e., the $z$-, $x$-, and $y$-axis are mutually perpendicular. As done before, we need to choose a positive $z$-direction and there are two choices: coming out of the page or going into the page. They form the right-handed coordinate system or the left-handed coordinate system, respectively. We shall use right-handed coordinate systems unless otherwise noted. For more on handedness, see [Wikipedia](https://en.wikipedia.org/wiki/Cartesian_coordinate_system#Orientation_and_handedness). Now the resulting coordinates become $(x, y, z)$, see [](#fig:3d-cart).
 
 <div figure-id="fig:3d-cart" figure-caption="A 3D Cartesian coordinate system.">
   <img src="3d-cart.svg" style='width: 15em'/>
@@ -78,8 +84,14 @@ Similarly, we can extend the polar coordinate systems on the page or screen to 3
 
 ## Extended reading
 
-If you find this topic interesting, there are many more coordinate systems than the ones covered here, such as the [cylindrical coordinate system](https://en.wikipedia.org/wiki/Cylindrical_coordinate_system) in 3D space and [parabolic coordinate system](https://en.wikipedia.org/wiki/Parabolic_coordinates) in 2D space.
+<div class="requirements" markdown="1">
 
+If you find this topic interesting, there are many more coordinate systems than the ones covered here, such as the:
+
+See also: [cylindrical coordinate system](https://en.wikipedia.org/wiki/Cylindrical_coordinate_system) in 3D space and
+
+See also: [parabolic coordinate system](https://en.wikipedia.org/wiki/Parabolic_coordinates) in 2D space.
+</div>
 
 Author: Falcon Dai
 
