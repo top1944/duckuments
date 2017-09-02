@@ -1,4 +1,4 @@
-# Reproducing the image
+# Reproducing the image {#duckiebot-ubuntu-image}
 
 Assigned: Andrea
 
