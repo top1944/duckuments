@@ -212,9 +212,10 @@ Place the camera cable properly when you mount the HAT on the Raspberry Pi.
      <img src="GPIO_header.jpg" style='width: 15em'/>
 </div>
 
-<div figure-id="fig:HAT_ensemble" figure-caption=" ">
-     <img src="HAT_ensemble.jpg" style='width: 15em'/>
+<div figure-id="fig:GPIO_upview" figure-caption=" ">
+     <img src="GPIO_upview.jpg" style='width: 15em'/>
 </div>
+
 
 ### Connect the motor's wires to the terminal
 
@@ -226,5 +227,48 @@ LeftMotor:Red - LeftMotor:Black - RightMotor:Black - RightMotor:Red
 
 _*Notice:*You will need the screwdriver from the Magician Chassis package._
 
+<div figure-id="fig:ServoHAT_wiring" figure-caption=" ">
+     <img src="ServoHAT_wiring.jpg" style='width: 15em'/>
+</div>
+
+<div figure-id="fig:malHead_wire" figure-caption=" ">
+     <img src="malHead_wire.jpg" style='width: 15em'/>
+</div>
+
+### PWM HAT
+Put a Servo/PWM Pi HAT board (in your Duckiebox) with 4 standoffs. Connect the male-male wire to +5V output.
 
 
+<div figure-id="fig:HAT_ensemble" figure-caption=" ">
+     <img src="HAT_ensemble.jpg" style='width: 15em'/>
+</div>
+
+### Battery
+
+Put the battery between the upper and lower decks of the chassis. It is recommended to, secure the battery from moving using zip ties.
+
+
+<div figure-id="fig:HAT_ensemble_sideview" figure-caption=" ">
+     <img src="HAT_ensemble_sideview.jpg" style='width: 15em'/>
+</div>
+
+### Joypad
+
+TODO: Connect the joypad dongle
+TODO: Insert 2AA batteries in the joypad
+TODO: Insert relevant pics
+
+
+### Connect the power cables
+Connect power cables (USB A to 5mm cable in your Duckiebox and USB cable in the battery box). Arrange all the cables properly so that the Duckiebot can run on the way without barrier. 
+
+<div figure-id="fig:powerbank_motor_cable" figure-caption=" ">
+     <img src="powerbank_motor_cable.jpg" style='width: 15em'/>
+</div>
+
+<div figure-id="fig:cable_wiring" figure-caption="TODO: will be replace by a new pic">
+     <img src="cable_wiring.jpg" style='width: 15em'/>
+</div>
+
+
+**Now the assembly part is finished! Let’s move to next step!**
