@@ -25,15 +25,13 @@ That is write 17.4 MB/s, read 22 MB/s.
 
 <div class='requirements' markdown='1'>
 
-Requires:
+Requires: A blank SD card.
 
-- A blank SD card.
-- An image file to burn.
-- An Ubuntu computer with an SD reader.
+Requires: An image file to burn.
 
-Results:
+Requires: An Ubuntu computer with an SD reader.
 
-- A burned image.
+Results: A burned image.
 
 </div>
 
@@ -92,14 +90,11 @@ Note: Use the name of the device, without partitions. i.e., `/dev/mmcblk0`, not
 
 <div class='requirements' markdown='1'>
 
-Requires:
+Requires: An image file to burn.
 
-- An image file to burn.
-- An Ubuntu computer.
+Requires: An Ubuntu computer.
 
-Results:
-
-- A shrunk image.
+Results: A shrunk image.
 
 </div>
 

@@ -10,8 +10,6 @@ However, this documentation might be useful if you would like to port the softwa
 
 <div class='requirements' markdown="1">
 
-Resources necessaries:
-
 Requires: Internet connection to download the packages.
 
 Requires: A PC running any Linux with an SD card reader.
