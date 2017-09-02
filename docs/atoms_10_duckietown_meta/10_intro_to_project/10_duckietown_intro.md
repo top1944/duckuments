@@ -56,7 +56,7 @@ these videos. They show off the capabilities of the platform. -->
 The video in [](#fig:v3) shows some of the functionality of the platform.
 
 If you would like to know more, the paper [](#bib:paull17duckietown) describes the Duckiebot
-and its software. (With 29 authors, we made the record for a robotics conference!)
+and its software. (With 30 authors, we made the record for a robotics conference!)
 
 <div figure-id="fig:v3">
     <figcaption>Duckietown functionality</figcaption>
