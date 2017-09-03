@@ -85,7 +85,7 @@ duckuments-dist:
 	git clone --depth 3 git@github.com:duckietown/duckuments-dist.git duckuments-dist
 
 
-log=duckuments-dist/compilation.log
+log=~/logs/compilation.log
 automatic-compile:
 	git pull
 	touch $(log)
