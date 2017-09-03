@@ -1,6 +1,5 @@
 # Autonomy architectures {#autonomy_architectures}
 
-Note: this is a just a draft
 
 Assigned: Andrea
 
@@ -19,6 +18,8 @@ Components of a robotic system:
 
 
 - The other robots
+
+
 - Other machines
 - The infrastructure:
     * The network
@@ -58,6 +59,6 @@ As an example, consider the problem of annotations loops
 
 ### Centralized vs Distributed
 
-## What we have in Duckietown
+## Examples in Duckietown
 
-- A user interface
+...
