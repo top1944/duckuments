@@ -18,7 +18,7 @@ See: this reference
 
 See also: this other reference
 
-TODO: add references
+TODO: add references throughout all chapter
 
 <!--(Dear Santa, I would like class='required-preliminaries' here) -->
 <div class='requirements' markdown="1">
@@ -32,7 +32,6 @@ Requires: Real numbers are complex for you?: Number theory [addref]()
 Requires: $\forall$ is a typo for A and $\in$ are Euros? [Mathematical symbolic language](k:basic-math-notation).
 
 </div>
-TODO: find appropriate references and fill in above
 
 <!--(Dear Santa, I would like class='recommended-preliminaries' here)
 <div class="requirements" markdown="1">
@@ -44,9 +43,7 @@ Recommended: Definitions of Stability, Performances and Robustness: [](#bib:plac
 </div>
 -->
 
-## Problem Definition {#theory-chapter-template-problem-def}
-
-Comment: Is it really a "problem" definition?
+## Linearity {#linearity}
 
 In this section we discuss vectors, matrices and linear spaces along with their properties.
 
@@ -139,41 +136,45 @@ as shown in ([](#figure:the-bigger-picture)).
 
 Let $n$ belong to the set of natural numbers $\nats$, i.e., $n \in \nats$, and let $a_i \in \reals$, $i = \{1, \dots, n\}$ be real coefficients. While $\reals$ is the set of real numbers, $\reals^n$ is the set of all $n$-tuples of real numbers.
 
-
-Comment: I strongly suggest to avoid the engineering notation of considering
-tuples as "column" vectors. -AC
-
 \begin{definition}[Vector and components]\label{def:vector}
 
 An $n$-dimensional $\textit{vector}$ is an $n$-tuple:
 
 \begin{align} \label{eq:vector}
-\textbf{v} = \left[ \begin{array}{c} v_1 \\ \vdots \\ v_n \end{array} \right] \in \reals^{n \times 1} \equiv \reals^n,
+\avec{v} = \left[ \begin{array}{c} v_1 \\ \vdots \\ v_n \end{array} \right] \in \reals^{n \times 1} \equiv \reals^n,
 \end{align}
 
 of _components_ $v_1, \dots, v_n \in \reals$.
 
 \end{definition}
 
-You can imagine a vector [](#fig:vector-breakdown) as a "directional _number_", or an arrow that starts a certain point and goes in a certain direction (in $\reals^n$). In this representation, the _number_ is the length of the arrow, or the _magnitude_ of the vector (sometimes referred to even as _modulus_, and it can be derived through the vector's components.
+\begin{remark}[Vector notation] \label{rem:vec-tuple-notation}
+A more general notation for tuples can be used when denoting vectors:
+\begin{align} \label{eq:vector-tuple-notation}
+\avec{v} = \tup{v_1, \cdots, v_n}.
+\end{align}
+In these preliminaries, we will adopt the \eqref{eq:vector} "engineering" notation as it arguably simplifies remembering vector-matrix operations ([](#mats-and-vecs)).
+\end{remark}
 
-\begin{definition}[Length of a vector]\label{def:vec2norm}
-We define the length, or _modulus_, of a vector $\textbf{v} \in \reals^n$ as:
-\begin{align} \label{eq:vec2norm}
-\|\textbf{v}\| = \sqrt{v_1^2 + \dots + v_n^2} \in \reals.
+You can imagine a vector [](#fig:vector-breakdown) as a "directional _number_", or an arrow that starts a certain point and goes in a certain direction (in $\reals^n$). In this representation, the _number_ is the length of the arrow, or the _magnitude_ of the vector (sometimes referred to even as _modulus_), and it can be derived through the vector's components.
+
+\begin{definition}[Length of a vector]\label{def:vec-2-norm}
+We define the length, or _modulus_, of a vector $\avec{v} \in \reals^n$ as:
+\begin{align} \label{eq:vec-2-norm}
+\|\avec{v}\| = \sqrt{v_1^2 + \dots + v_n^2} \in \reals.
 \end{align}
 \end{definition}
 
 \begin{remark}[2-norm]\label{rem:2norm}
-Generally speaking, it is not always possible to define the length of a vector ([addref]()). But when it is possible (e.g., in [Hilbert spaces]()), and in Duckietown it always is, there are many ways to define it. The most common and intuitive definition is the _Euclidian-_ or _2-norm_, which is defined above in \eqref{eq:vec2norm}.
+Generally speaking, it is not always possible to define the length of a vector ([addref]()). But when it is possible (e.g., in [Hilbert spaces]()), and in Duckietown it always is, there are many ways to define it. The most common and intuitive definition is the _Euclidian-_ or _2-norm_, which is defined above in \eqref{eq:vec-2-norm}.
 \end{remark}
 
 We will discuss norms more in detail in [](#norms).
 
 \begin{definition}[Unit vector]\label{def:unit-vector}
-A unit vector, or _versor_, is a vector $\textbf{e}$ of of unit length:
+A unit vector, or _versor_, is a vector $\avec{e}$ of of unit length:
 \begin{align} \label{eq:unit-vector}
-\|\textbf{e}\| = 1.
+\|\avec{e}\| = 1.
 \end{align}
 \end{definition}
 
@@ -185,27 +186,27 @@ Unit vectors are used to define the directions of the components of a vector, al
 
 <div class="example-usage" markdown="1">
 
-Let $\textbf{v} \in \reals^3$ be a vector defined in the Cartesian space. Let, moreover, $(\textbf{i},\textbf{j},\textbf{k})^T$ be the versor of the Cartesian axis, i.e.:
+Let $\avec{v} \in \reals^3$ be a vector defined in the Cartesian space. Let, moreover, $(\avec{i},\avec{j},\avec{k})^T$ be the versor of the Cartesian axis, i.e.:
 \begin{align}\label{eq:example-vector-algebraic}
-\textbf{i} &= [1,0,0]^T; \\
-\textbf{j} &= [0,1,0]^T; \\
-\textbf{k} &= [0,0,1]^T.
+\avec{i} &= [1,0,0]^T; \\
+\avec{j} &= [0,1,0]^T; \\
+\avec{k} &= [0,0,1]^T.
 \end{align}
-Then, a vector can be written equivalently in vector or algebraic form: $\textbf{v} = [v_1, v_2, v_3]^T = v_1\textbf{i} + v_2\textbf{j}+v_3\textbf{k}$. Unit vectors are sometimes explicitly denoted with a hat (`^`), e.g., $\hat{\textbf{i}}, \hat{\textbf{j}}, \hat{\textbf{k}}$.
+Then, a vector can be written equivalently in vector or algebraic form: $\avec{v} = [v_1, v_2, v_3]^T = v_1\avec{i} + v_2\avec{j}+v_3\avec{k}$. Unit vectors are sometimes explicitly denoted with a hat (`^`), e.g., $\hat{\avec{i}}, \hat{\avec{j}}, \hat{\avec{k}}$.
 
 </div>
 
 \begin{remark}[Normalizing vectors]\label{rem:vector-normalizing}
 Every vector can be made into a unit vector, or _normalized_, by dividing each of its components by the vector's magnitude:
 \begin{align}\label{eq:vector-normalizing}
-\hat{\textbf{v}} = \frac{\textbf{v}}{\|\textbf{v}\|} = \left[\frac{v_1}{\|\textbf{v}\|}, \frac{v_2}{\|\textbf{v}\|}, \frac{v_3}{\|\textbf{v}\|}\right]^T.
+\hat{\avec{v}} = \frac{\avec{v}}{\|\avec{v}\|} = \left[\frac{v_1}{\|\avec{v}\|}, \frac{v_2}{\|\avec{v}\|}, \frac{v_3}{\|\avec{v}\|}\right]^T.
 \end{align}
 \end{remark}
 
 
 ### Vector algebra {#vector-algebra}
 
-We here define operations amongst two given vectors defined in the same space: $\textbf{u} = [u_1, u_2, u_3]^T, \textbf{v} = [v_1, v_2, v_3]^T \in \reals^3$.
+We here define operations amongst two given vectors defined in the same space: $\avec{u} = [u_1, u_2, u_3]^T, \avec{v} = [v_1, v_2, v_3]^T \in \reals^3$.
 
 #### Vectorial Sum {#vector-sum}
 
@@ -213,7 +214,7 @@ The sum of two vectors is a vector, and its components are the sum of the two ve
 
 \begin{definition}[Vectorial sum]\label{def:vector-sum}
 \begin{align} \label{eq:vector-sum}
-\textbf{u} + \textbf{v} = [u_1+v_1, u_2+v_2, u_3+v_3]^T.
+\avec{u} + \avec{v} = [u_1+v_1, u_2+v_2, u_3+v_3]^T.
 \end{align}
 \end{definition}
 
@@ -230,11 +231,11 @@ The parallelogram law helps visualize the results of the vectorial sum operation
 
 #### Dot, or scalar, product {#vector-dot}
 
-The dot, or scalar, product of two vectors ($\textbf{u}$,$\textbf{v} \in \mathbb{R}^3$) is a scalar ($a \in \mathbb{R}$) equal to the sum of the products of the components of the vectors. Equivalently, it can be expressed as the product of the magnitudes of the two vectors times the cosine of the angle between them, $\phi \in [0,2\pi)$.
+The dot, or scalar, product of two vectors ($\avec{u}$,$\avec{v} \in \mathbb{R}^3$) is a scalar ($a \in \mathbb{R}$) equal to the sum of the products of the components of the vectors. Equivalently, it can be expressed as the product of the magnitudes of the two vectors times the cosine of the angle between them, $\phi \in [0,2\pi)$.
 
 \begin{definition}[Scalar product]\label{def:vector-dot-product}
 \begin{align} \label{eq:vector-dot-product}
-\textbf{u} \cdot \textbf{v} = u_1v_1+u_2v_2+u_3v_3 = \|u\|\|v\|\cos(\phi) \in \mathbb{R}
+\avec{u} \cdot \avec{v} = u_1v_1+u_2v_2+u_3v_3 = \|u\|\|v\|\cos(\phi) \in \mathbb{R}
 \end{align}
 \end{definition}
 
@@ -252,66 +253,66 @@ Note: When the two vectors are perpendicular, or orthogonal, the dot product is 
 While the dot product depends on the metric chosen in the space (the Euclidian norm, in our case), the cross product even requires the definition of an orientation, or handedness.
 
 \begin{proposition}[Standard Basis]\label{prop:standard-basis}
-In the Euclidian space $\mathbb{R}^3$, $\hat{\textbf{i}}, \hat{\textbf{j}}, \hat{\textbf{k}}$ are the unit vectors for the standard basis, which is right handed.
+In the Euclidian space $\mathbb{R}^3$, $\hat{\avec{i}}, \hat{\avec{j}}, \hat{\avec{k}}$ are the unit vectors for the standard basis, which is right handed.
 \end{proposition}
 
 In a right handed reference system such as the standard basis, the right hand rule ([](#fig:right-hand-rule)) is the handy-est way to identify the direction of the vector resulting from a cross product.
 
-ProTip: There is a reason for which it is called the _right hand_ rule. Don't use your left hand because you are holding a pen with the right one.
+ProTip: There is a valid reason for which it is called the _right hand_ rule. Don't use your left hand because you are holding a pen with the right one.
 
 <div figure-id="fig:right-hand-rule" figure-caption="The right hand rule points in the direction of the resulting vector from a cross product.">
      <img src="placeholder.png" style='width: 30em'/>
 </div>
 
-The cross, or vector, product between two vectors ($\textbf{u}$, $\textbf{v} \in \mathbb{R}^3$) is a vector that is orthogonal to each of the two vectors, hence is normal, or perpendicular, to the plane containing them. Its magnitude is given by the product of their magnitude times the sine of the angle between them, and its direction is indicated by the normal unit vector ($\hat{\textbf{n}} \in \mathbb{R}^3$), identified by the right hand rule.
+The cross, or vector, product between two vectors ($\avec{u}$, $\avec{v} \in \mathbb{R}^3$) is a vector that is orthogonal to each of the two vectors, hence is normal, or perpendicular, to the plane containing them. Its magnitude is given by the product of their magnitude times the sine of the angle between them, and its direction is indicated by the normal unit vector ($\hat{\avec{n}} \in \mathbb{R}^3$), identified by the right hand rule.
 
 \begin{definition}[Vector product]\label{def:vector-cross-product}
 \begin{align} \label{eq:vector-cross-product}
-\textbf{u} \times \textbf{v} = [u_2v_3-u_3v_2, u_3v_1-u_1v_3, u_1v_2-u_2v_1]^T = \|u\|\|v\|\sin(\phi) \hat{\textbf{n}}.
+\avec{u} \times \avec{v} = [u_2v_3-u_3v_2, u_3v_1-u_1v_3, u_1v_2-u_2v_1]^T = \|u\|\|v\|\sin(\phi) \hat{\avec{n}}.
 \end{align}
 \end{definition}
 
 \begin{remark}[Geometric interpretation]\label{rem:vec-cross-geom}
-A cross product encodes two pieces on information: a direction, which is _orthogonal_ to the plane spanned by the two vectors, and a magnitude, which is equal to the area of the parallelogram having $\textbf{u}$, and $\textbf{v}$ as sides.
+A cross product encodes two pieces on information: a direction, which is _orthogonal_ to the plane spanned by the two vectors, and a magnitude, which is equal to the area of the parallelogram having $\avec{u}$, and $\avec{v}$ as sides.
 \end{remark}
 
 Note: Keeping \eqref{eq:vector-cross-product} and [](#rem:vec-cross-geom) in mind, it should be intuitive to understand that:
 \begin{align} \label{eq:vec-cross-vv-v0}
-\textbf{v} \times \textbf{v} &= \textbf{0}, \forall \textbf{v} \in \mathbb{R}^n, \\
-\textbf{v} \times \textbf{0} &= \textbf{0}, \forall \textbf{v} \in \mathbb{R}^n.
+\avec{v} \times \avec{v} &= \avec{0}, \forall \avec{v} \in \mathbb{R}^n, \\
+\avec{v} \times \avec{0} &= \avec{0}, \forall \avec{v} \in \mathbb{R}^n.
 \end{align}
 
-Note: The zero vector ($\textbf{0}$) is a vector with zero magnitude, not the same as the number zero ($0$).
+Note: The zero vector ($\avec{0}$) is a vector with zero magnitude, not the same as the number zero ($0$).
 
 <!--
-To obtain the components of $\textbf{w}$ immagine the unit vectors $\hat{\textbf{i}}, \hat{\textbf{j}}, \hat{\textbf{k}}$ as if they were placed on a wheel ([](#fig:wheel-trick)), in this order:
+To obtain the components of $\avec{w}$ immagine the unit vectors $\hat{\avec{i}}, \hat{\avec{j}}, \hat{\avec{k}}$ as if they were placed on a wheel ([](#fig:wheel-trick)), in this order:
 
 <div figure-id="fig:wheel-trick" figure-caption="The wheel trick.">
      <img src="placeholder.png" style='width: 30em'/>
 </div>
 
-Then each component of $\textbf{w}$ is equal to:
+Then each component of $\avec{w}$ is equal to:
 
 \begin{align} \label{eq:vector-cross-product-components}
-\textbf{w} &= \textbf{u} \times \textbf{v} = (u_1)\hat{\textbf{i}} +(u_2)\hat{\textbf{j}} +(u_3)\hat{\textbf{k}} \times (v_1)\hat{\textbf{i}} +(v_2)\hat{\textbf{j}} +(v_3)\hat{\textbf{k}}\\
-&= (u_2v_3-u_3v_2)\hat{\textbf{i}} +(u_3v_1-u_1v_3)\hat{\textbf{j}} +(u_1v_2-u_2v_1)\hat{\textbf{k}}.
+\avec{w} &= \avec{u} \times \avec{v} = (u_1)\hat{\avec{i}} +(u_2)\hat{\avec{j}} +(u_3)\hat{\avec{k}} \times (v_1)\hat{\avec{i}} +(v_2)\hat{\avec{j}} +(v_3)\hat{\avec{k}}\\
+&= (u_2v_3-u_3v_2)\hat{\avec{i}} +(u_3v_1-u_1v_3)\hat{\avec{j}} +(u_1v_2-u_2v_1)\hat{\avec{k}}.
 \end{align}
 -->
 
-Note: Each component of $\textbf{w}$ is the difference of the products of the two _other_ components of $\textbf{u}$, and $\textbf{v}$, in the order given by the chosen handedness of the basis. This combination resembles a _cross_ ([](#fig:cross-product-explanation)), from which the name of _cross product_.
+Note: Each component of $\avec{w}$ is the difference of the products of the two _other_ components of $\avec{u}$, and $\avec{v}$, in the order given by the chosen handedness of the basis. This combination resembles a _cross_ ([](#fig:cross-product-explanation)), from which the name of _cross product_.
 
 <div figure-id="fig:cross-product-explanation" figure-caption="Each component of the resulting vector is the product of the alternated other components, forming a cross.">
      <img src="placeholder.png" style='width: 30em'/>
 </div>
 
-Note: The components of $\textbf{w}$ can be computed through the Sarrus rule (see [](#matrix-algebra)).
+Note: The components of a cross product can be computed through the Sarrus rule (see [](#matrix-determinant)).
 
 As consequence of the vectorial product's definition and right handedness of the basis, the following hold true in the Cartesian space:
 
 \begin{align} \label{eq:sb-cross-products}
-\hat{\textbf{i}} \times \hat{\textbf{j}} &= \hat{\textbf{k}} \\
-\hat{\textbf{j}} \times \hat{\textbf{k}} &= \hat{\textbf{i}} \\
-\hat{\textbf{k}} \times \hat{\textbf{i}} &= \hat{\textbf{j}}.
+\hat{\avec{i}} \times \hat{\avec{j}} &= \hat{\avec{k}} \\
+\hat{\avec{j}} \times \hat{\avec{k}} &= \hat{\avec{i}} \\
+\hat{\avec{k}} \times \hat{\avec{i}} &= \hat{\avec{j}}.
 \end{align}
 
 
@@ -323,34 +324,36 @@ In this section we highlight the properties of vector operations, that derive fr
 
 The vector sum obejs the following:
 
-- $\textbf{u} + \textbf{v} = \textbf{v} + \textbf{u}$,
-- $(\textbf{u} + \textbf{v}) + \textbf{w} = \textbf{u} + (\textbf{v} + \textbf{w})$,
-- $a(\textbf{u} + \textbf{v}) = a\textbf{u} + a\textbf{v}$,
-- $(a+b)\textbf{u} = a\textbf{u} + b\textbf{u}$,
-- $\textbf{u} + \textbf{0} = \textbf{u}$, therefore $\textbf{u} + (-\textbf{u}) = \textbf{0}$.
+- $\avec{u} + \avec{v} = \avec{v} + \avec{u}$,
+- $(\avec{u} + \avec{v}) + \avec{w} = \avec{u} + (\avec{v} + \avec{w})$,
+- $a(\avec{u} + \avec{v}) = a\avec{u} + a\avec{v}$,
+- $(a+b)\avec{u} = a\avec{u} + b\avec{u}$,
+- $\avec{u} + \avec{0} = \avec{u}$, therefore $\avec{u} + (-\avec{u}) = \avec{0}$.
 
 #### Dot product
 
-Letting $\phi \in [0,2\pi)$ be the angle between two vectors $\textbf{u}, \textbf{v}$, the dot product obejs the following:
+Letting $\phi \in [0,2\pi)$ be the angle between two vectors $\avec{u}, \avec{v}$, the dot product obejs the following:
 
-- $\textbf{u} \cdot \textbf{v} = \| \textbf{u} \|\| \textbf{v} \|\cos(\phi)$,
-- $\textbf{u} \cdot \textbf{u} = \| \textbf{u} \|^2$,
-- $\textbf{u} \cdot \textbf{v} = \textbf{v} \cdot \textbf{u}$,
-- $\textbf{u} \cdot (\textbf{v} + \textbf{w}) = \textbf{u} \cdot \textbf{v} + \textbf{u} \cdot \textbf{w}$,
-- $a (\textbf{u} \cdot \textbf{v}) = (a\textbf{u}) \cdot \textbf{v}$,
-- $\textbf{0} \cdot \textbf{u} = 0$
-- $\textbf{u} \cdot \textbf{v}$ = 0 $\iff$ $\textbf{u}=\textbf{0}$, $\textbf{v}=\textbf{0}$, or $\textbf{u} \bot \textbf{v}$.
+- $\avec{u} \cdot \avec{v} = \| \avec{u} \|\| \avec{v} \|\cos(\phi)$,
+- $\avec{u} \cdot \avec{u} = \| \avec{u} \|^2$,
+- $\avec{u} \cdot \avec{v} = \avec{v} \cdot \avec{u}$,
+- $\avec{u} \cdot (\avec{v} + \avec{w}) = \avec{u} \cdot \avec{v} + \avec{u} \cdot \avec{w}$,
+- $a (\avec{u} \cdot \avec{v}) = (a\avec{u}) \cdot \avec{v}$,
+- $\avec{0} \cdot \avec{u} = 0$
+- $\avec{u} \cdot \avec{v}$ = 0 $\iff$ $\avec{u}=\avec{0}$, $\avec{v}=\avec{0}$, or $\avec{u} \bot \avec{v}$.
 
 #### Cross product
 
-Letting $\phi \in [0,2\pi)$ be the angle between two vectors $\textbf{u}, \textbf{v}$, the cross product obejs the following:
+Letting $\phi \in [0,2\pi)$ be the angle between two vectors $\avec{u}, \avec{v}$, the cross product obejs the following:
 
-- $\textbf{u} \times \textbf{v} = \| \textbf{u} \|\| \textbf{v} \|\sin(\phi) \hat{\textbf{n}}$,
-- $\textbf{u} \times \textbf{v} = - \textbf{v} \times \textbf{u}$,
-- $(a\textbf{u}) \times \textbf{v} = \textbf{u} \times (a\textbf{v}) = a(\textbf{u} \times \textbf{v})$,
-- $\textbf{u} \times (\textbf{v} + \textbf{w}) = \textbf{u} \times \textbf{v} + \textbf{u} \times \textbf{w})$,
-- $\textbf{u} \cdot (\textbf{v} \times \textbf{w}) = (\textbf{u} \times \textbf{v}) \cdot \textbf{w}$,
-- $\textbf{u} \times (\textbf{v} + \textbf{w}) = (\textbf{w} \cdot \textbf{u}) \textbf{v} - (\textbf{v} \cdot \textbf{u}) \textbf{w} \neq (\textbf{u} \times \textbf{v}) + \textbf{w}$.
+- $\avec{u} \times \avec{v} = \| \avec{u} \|\| \avec{v} \|\sin(\phi) \hat{\avec{n}}$,
+- $\avec{u} \times \avec{v} = - \avec{v} \times \avec{u}$,
+- $(a\avec{u}) \times \avec{v} = \avec{u} \times (a\avec{v}) = a(\avec{u} \times \avec{v})$,
+- $\avec{u} \times (\avec{v} + \avec{w}) = \avec{u} \times \avec{v} + \avec{u} \times \avec{w}$,
+- $\avec{u} \cdot (\avec{v} \times \avec{w}) = (\avec{u} \times \avec{v}) \cdot \avec{w}$,
+- $\avec{u} \times (\avec{v} + \avec{w}) = (\avec{w} \cdot \avec{u}) \avec{v} - (\avec{v} \cdot \avec{u}) \avec{w} \neq (\avec{u} \times \avec{v}) + \avec{w}$,
+- $\avec{u} \times \avec{v} = 0 \iff \avec{u}=\avec{0}, \avec{v}=\avec{0}$, or $\avec{u} \parallel \avec{v}$.
+
 
 <!--
 \begin{definition}[Reference signals]\label{def:def-label}
@@ -372,15 +375,47 @@ Lorem
 \end{definition}
 -->
 
-#### Orthogonality between vectors {#vector-orthogonality}
-
-
-
 ## Norms {#norms}
 
-- Definition of:
-- norms
-- p-norm, $\infty$-norm
+Other metrics can be defined to measure the "length" of a vector. Here, we report some commonly used norms. For a more in depth discussion of what consitutes a norm, and their properties:
+
+see: [](#norms),
+
+see also: [](#bib:norms)
+
+### $p$-norm {#vec-p-norm}
+
+Let $p \geq 1 \in \reals$. The $p$-norm is defined as: 
+
+\begin{definition}[$p$-norm]\label{def:vec-p-norm}
+\begin{align} \label{eq:vec-p-norm}
+\|\avec{v}\|_p = \displaystyle \left( \sum_{i=1}^{n} |v_i|^p \right)^{\frac{1}{p}}.
+\end{align}
+\end{definition}
+
+The $p$-norm is a generalization of the $2$-norm ($p=2$ in \eqref{eq:p-norm}) introduced above ([](#vec-2-norm)). The following $1$-norm and $\infty$-norm can as well be obtained from \eqref{eq:vec-p-norm} with $p=1$ and $p \rightarrow \infty$ respectively.
+
+### One norm {#vec-one-norm}
+
+The $1$-norm is the sum of the absolute values of a vector's components. It is sometimes referred to as the _Taxicab norm_, or _Manhattan distance_ as it well describes the distance a cab has to travel to get from a zero starting point to a final destination $v_i$ on a grid.
+
+\begin{definition}[$1$-norm]\label{def:vec-one-norm}
+Given a vector $\avec{v} \in \reals^n$, the $1$-norm is defined as:
+\begin{align} \label{eq:vec-one-norm}
+\|\avec{v}\| = \displaystyle \sum_{i=1}^{n}|v_i|.
+\end{align}
+\end{definition}
+
+### $\infty$-norm {#vec-inf-norm}
+
+The infinity norm measures the maximum component, in absolute value, of a vector. 
+
+\begin{definition}[$\infty$-norm]\label{def:vec-inf-norm}
+\begin{align} \label{eq:vec-inf-norm}
+\|\avec{v}\| = \displaystyle \max(|v_1|, \cdots, |v_n|).
+\end{align}
+\end{definition}
+
 
 <!--
 
@@ -402,10 +437,11 @@ And finally, this is how you save the world, in theory.
 
 Here we just add references to the suggested exercises, defined in the appropriate [exercise chapters](#part:exercises).
 
+TODO: add exercises
 
 ## Conclusions
 
-In this section we have defined the fundamental concept of linearity and introduced the mathematical tools pertaining to it, in particular vectors and matrices. Moreover, we have introduced their properties and interpretations as linear spaces.
+In this section we have defined the fundamental concept of linearity and introduced the mathematical tools pertaining to it, in particular vectors and matrices. Moreover, we have introduced their operations and algebrais properties.
 
 We have found that matrices are a very convenient way to represent linear spaces, and that the properties of the matrices such as eigenvalues and eigenvectors have important implications in characterizing these spaces.
 

@@ -1,5 +1,5 @@
 
-# Matrices and vectors
+# Matrices and vectors {#mats-and-vecs}
 
 - matrix-vector product
 
