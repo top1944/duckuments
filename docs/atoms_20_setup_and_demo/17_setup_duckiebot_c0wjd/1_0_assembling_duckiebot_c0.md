@@ -1,8 +1,11 @@
 # Assembling the Duckiebot `C0` {#assembling-duckiebot-c0}
-This document provides detailed instructions for assembling the Duckiebot.
 
 Assigned: Shiying Li
+
 Point of contact: Shiying Li
+
+Once you have received the parts and soldered the necessary components, it is time to assemble them in a Duckiebot. Here, we provide the assembly instructions for configurations `C0+wjd`.
+
 
 <div class='requirements' markdown="1">
 
@@ -12,6 +15,8 @@ Requires: Having soldered the `C0+wjd` parts. The soldering process is explained
 
 Requires: Having prepared the power cable. The power cable preparation is explained in [](#power-cable-prep-c0).
 
+Requires: Having installed the image on the MicroSD card. The instructions on how to reproduce the Duckiebot system image are in [](#duckiebot-ubuntu-image).
+
 Requires: Time: about ??? minutes.
 
 TODO: estimate time.
@@ -20,7 +25,9 @@ Results:  An assembled Duckiebot in configuration `C0+wjd`.
 
 </div>
 
-## Assembling the car - bottom
+Comment: add "next step(s)" as a standard field in the requirements class? -JT 
+
+## Chassis
 
 Open the Magician chassis package and take out the following components:
 
@@ -36,7 +43,7 @@ Open the Magician chassis package and take out the following components:
 
 Note: You won’t need the battery holder and speed board holder (on the right side in [](#fig:duckiebot_components)).
 
-### Motor + chassis-bottom
+### Bottom
 
 Insert the motor holders on the chassis-bottom and put the motors as shown in the figure below (with the longest screws (M3x30) and M3 nuts).
 
@@ -56,7 +63,7 @@ Note: Orient the motors so that their wires are inwards, i.e., towards the cente
 
 Note: if your Magician Chassis package has unsoldered motor wires, you will have to solder them first. Check these instructions [make instructions for soldering motor wires]. In this case, your wires will not have the male pin headers on one end. Do not worry, you can still plug them in the stepper motor hat power terminals.
 
-### Assemble the wheels
+#### Wheels
 
 Plug in the wheels to the motor as follows (no screws needed):
 
@@ -68,9 +75,13 @@ Plug in the wheels to the motor as follows (no screws needed):
      <img src="wheels.jpg" style='width: 15em'/>
 </div>
 
-<br/><br/>
+#### Omnidirectional wheel
 
-### Assemble the omni wheels
+The Duckiebot is driven by controlling the wheels attached to the DC motors. Still, it requires a "passive" omnidirectional wheel on the back. 
+
+If you have purchased the optional caster wheel, read on to the next section. 
+
+The Magician chassis package contains a steel omnidirectional wheel, and the related standoffs and screws to secure it to the chassis-bottom part.  
 
 <div figure-id="fig:scratch_omni" figure-caption=" ">
      <img src="scratch_omni.png" style='width: 15em'/>
@@ -80,9 +91,14 @@ Plug in the wheels to the motor as follows (no screws needed):
      <img src="omni.jpg" style='width: 15em'/>
 </div>
 
-<br/><br/>
+#### Caster wheel
 
-### Put the spacers on the chassis
+
+TODO: add instructions for Caster wheel assembly.
+
+
+### Mounting the spacers
+
 Put the car upright (omni wheel pointing towards the table) and arrange wires so that they go through the center rectangle. Put **4 spacers with 4 of M3*6 screws** on each corner as below.
 
 <div figure-id="fig:screws" figure-caption=" ">
@@ -93,15 +109,11 @@ Put the car upright (omni wheel pointing towards the table) and arrange wires so
      <img src="part_A.jpg" style='width: 15em'/>
 </div>
 
-<br/><br/>
+The bottom part of the Duckiebot's chassis is now ready. The next step is to assemble the Raspberry Pi on chassis-top part.
 
-**We now have a complete bottom part! Don’t put the chassis-up yet. We will put a Raspberry Pi on it first.**
+## Assembling the Raspberry Pi, camera, and HATs
 
-<br/><br/>
-
-
-## Part B - Assembling the RPI-3, camera, and HATs
-
+<!--
 **Materials:**
 
 * Chassis-up,
@@ -112,11 +124,11 @@ Put the car upright (omni wheel pointing towards the table) and arrange wires so
 * Soldered PWM/Servo HAT and Soldered Stepper Motor HAT,
 * 1 Male-male wire,
 * Standoffs
-
+-->
 
 ### Raspberry Pi
 
-Fasten 8 standoffs firstly on a Raspberry Pi and put them on the top of the chassis-up. Then fasten 4 nylon nuts on the opposite side.
+The first step is to fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on the opposite side of the chassis-up. 
 
 <div figure-id="fig:Raspberry_pi3" figure-caption=" ">
      <img src="RPi_3.jpg" style='width: 15em'/>
@@ -135,14 +147,20 @@ Fasten 8 standoffs firstly on a Raspberry Pi and put them on the top of the chas
 </div>
 
 
-#### SD card
+#### Micro SD card
 
-Take the Micro SD card from the Duckiebox and insert it in the right slot on the Raspberry Pi. The SD card slot is just under the display port, on the short side of the PI, on the flipside of where the header pins are.
+Requires: Having the Duckiebot image copied in the Micro SD card. 
 
-TODO: Insert picture showing where to plug in the SD card
+Take the Micro SD card from the Duckiebox and insert its slot on the Raspberry Pi. The SD card slot is just under the display port, on the short side of the PI, on the flipside of where the header pins are.
+
+<div figure-id="fig:microsdcard" figure-caption="The Micro SD card.">
+     <img src="placeholder.jpg" style='width: 15em'/>
+</div>
 
 ### Camera
-#### The Pi end
+
+
+#### The Raspberry Pi end
 
 First, identify the camera cable port on the Pi (between HDMI and power ports) and remove the orange plastic protection (it will be there if the Pi is new) from it. Then, grab the long camera cable (300 mm) and insert in the camera port. To do so, you will need to gently pull up on the black connector (it will slide up) to allow the cable to insert the port. Slide the connector back down to lock the cable in place, making sure it “clicks”.
 
@@ -152,7 +170,7 @@ Protip: Make sure the camera cable is inserted in the right direction! The metal
      <img src="raspi_camera_apart.jpg" style='width: 15em'/>
 </div>
 
-_**Notice**: Insert the cable in the right direction to connect the camera to the Raspberry Pi._
+Note: Insert the cable in the right direction to connect the camera to the Raspberry Pi.
 
 
 

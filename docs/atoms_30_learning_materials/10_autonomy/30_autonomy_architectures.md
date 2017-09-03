@@ -1,45 +1,64 @@
 # Autonomy architectures {#autonomy_architectures}
 
+
 Assigned: Andrea
 
 ## No robot is an island
 
-Note: just some notes
-
 Difference between a robot and a robotic system
 
-Components:
+### Components of a robotic system
 
-- The robot
+Components of a robotic system:
 
-- The infrastructure
--
-The people:
+- The robot:
 
-The other machines:
+  * The hardware
+  * The software
 
 
+- The other robots
+
+
+- Other machines
+- The infrastructure:
+    * The network
+    * The power
+- The people, including
 - The supervisor
 - The safety operator (e.g. safety driver)
 
+## Modern robotic development
+
+The old model:
+
+* planning
+* product development
+* integration, with "system integrators"
+* installation
+* support
+
+Characteristics of new model of development:
+
+
 Continuous integration and development
+
+* Learning from data, acquired by the robot
+* Evaluation
+
+## Example of a modern data
+
+As an example, consider the problem of annotations loops
 
 - The annotators
 - The servers for cloud learning
 - Regression tests
 - Quality control
 
-## What we have in Duckietown
+## Major trade-offs in design
 
-- A user interface
+### Centralized vs Distributed
 
+## Examples in Duckietown
 
-
-## Contracts
-
-
-    API: Types, messages
-    Latency, frequency
-    computation
-    semantics
-    reliability / probability
+...
