@@ -12,9 +12,7 @@ A coordinate system is a surjective function mapping from a tuple of reals to so
 
 ## Examples
 
-Comment: The notion of "name" is a bit vague
-
-Because the ability of _naming_ a point in space is so fundamentally important, we often take that coordinates given by some coordinate system, often a Cartesian coordinate system, as the name of the point.
+Because the ability of _naming_ or specifying a point in space is so fundamentally important, we often take that coordinates given by some coordinate system, often a Cartesian coordinate system, as the name of the point.
 
 ### 1D
 
@@ -42,25 +40,33 @@ It is customary to put the origin of an image at the top-left corner with the $x
 
 #### Polar coordinate systems
 
-An alternative coordinate system for the plane is the polar coordinate system, where we specify a point by its direction and distance from a fixed reference point. To set up a polar coordinate system, you first decide on the _pole_, the reference point, then the _polar axis_, the reference direction. We will call the distance from the pole, the _radial coordinate_ or _radius_, commonly denoted by $r$ or $\rho$, and the angle from the polar axis, the _angular coordinate_ or _polar angle_, commonly denoted by $\phi$ or $\theta$. See an example in [](#fig:2d-polar).
-
-Comment: The figure uses $\psi$ to denote the angle, where as the text uses $\phi$ and $\theta$.
+An alternative coordinate system for the plane is the polar coordinate system, where we specify a point by its direction and distance from a fixed reference point. To set up a polar coordinate system, you first decide on the _pole_, the reference point, then the _polar axis_, the reference direction. We will call the distance from the pole, the _radial coordinate_ or _radius_, commonly denoted by $r$ or $\rho$, and the angle from the polar axis, the _angular coordinate_ or _polar angle_, commonly denoted by $\phi$, $\varphi$ or $\theta$. See an example in [](#fig:2d-polar).
 
 <div figure-id="fig:2d-polar" figure-caption="A polar coordinate system with pole O and polar axis L.">
      <img src="2d-polar.svg" style='width: 15em'/>
 </div>
 
-Note that in a polar coordinate system, a point has many equally valid names. (Exercise to readers: provide two such points and a few of their coordinates each.)
+Note that in a polar coordinate system, a point has many equally valid names.
 
-Now, consider a Cartesian coordinate system $C$ whose origin is at the pole and its positive $x$-direction coincides with the polar axis. It is not hard to convert polar coordinates to Cartesian coordinates in $C$. (Exercise to readers: consult [](#fig:2d-polar-to-cart) and write out the conversion formulae.)
+<div class='check' markdown="1">
+Exercise to readers: provide two such points and a few of their coordinates each.
+</div>
 
-Comment: It's nice to have these exercises. You may want to consider using the [formal check div](http://book.duckietown.org/master/duckiebook/sec_documentation_manual.html#subsub:check) for these.
+Now, consider a Cartesian coordinate system $C$ whose origin is at the pole and its positive $x$-direction coincides with the polar axis. It is not hard to convert polar coordinates to Cartesian coordinates in $C$.
+
+<div class='check' markdown="1">
+Exercise to readers: consult [](#fig:2d-polar-to-cart) and write out the conversion formulae.)
+</div>
 
 <div figure-id="fig:2d-polar-to-cart" figure-caption="Converting from polar coordinates to Cartesian coordinates.">
   <img src="2d-polar-to-cart.svg" style='width: 15em'/>
 </div>
 
-Given the many options, you might wonder which coordinate system to use in any given situation. The answer is a practical one. Choose the one that helps simplify the problem at hand. As a trivial example, consider the equation for a unit circle. In a Cartesian coordinate system, it would be $x^2 + y^2 = 1$ whereas in a polar coordinate system, it would be much simpler: $r = 1$. (Exercise to readers: how about the equation for a straight line in polar coordinates?)
+Given the many options, you might wonder which coordinate system to use in any given situation. The answer is a practical one. Choose the one that helps simplify the problem at hand. As a trivial example, consider the equation for a unit circle. In a Cartesian coordinate system, it would be $x^2 + y^2 = 1$ whereas in a polar coordinate system, it would be much simpler: $r = 1$.
+
+<div class='check' markdown="1">
+Exercise to readers: how about the equation for a straight line in polar coordinates?
+</div>
 
 ### 3D space
 
@@ -76,7 +82,11 @@ Suppose the plane is the page or screen you are reading from, which is just a sl
 
 #### Spherical coordinate systems
 
-Similarly, we can extend the polar coordinate systems on the page or screen to 3D by defining a _zenith direction_ (upwards) perpendicular to the plane, the _polar angle_ to be the angle away from zenith, and the _azimuth angle_ to be the orthogonal projection of a point's angle away from the polar axis on the plane. Together, a point has coordinates $(r, \theta, \phi)$ where $\theta$ denotes the polar angle and $\phi$, the azimuth angle. See [](#fig:3d-spherical). (Exercise to readers: how to convert spherical coordinates to 3D Cartesian coordinates? and back?)
+Similarly, we can extend the polar coordinate systems on the page or screen to 3D by defining a _zenith direction_ (upwards) perpendicular to the plane, the _polar angle_ to be the angle away from zenith, and the _azimuth angle_ to be the orthogonal projection of a point's angle away from the polar axis on the plane. Together, a point has coordinates $(r, \theta, \phi)$ where $\theta$ denotes the polar angle and $\phi$, the azimuth angle. See [](#fig:3d-spherical).
+
+<div class='check' markdown="1">
+Exercise to readers: how to convert spherical coordinates to 3D Cartesian coordinates? and back?
+</div>
 
 <div figure-id="fig:3d-spherical" figure-caption="A spherical coordinate system.">
   <img src="3d-spherical.svg" style='width: 15em'/>
