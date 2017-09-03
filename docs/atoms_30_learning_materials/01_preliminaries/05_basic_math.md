@@ -1,10 +1,10 @@
 # Sets {#sets}
 
-<knowledge-graph>
+<div class='requirements' markdown='1'>
 
 Result: k:sets
 
-</knowledge-graph>
+</div>
 
 ## Definition
 
@@ -17,13 +17,13 @@ A set $\mathbb{X} = \{x_1, x_2, \dots\}$ is a well-defined collection of distinc
 
 # Maps {#maps}
 
-<knowledge-graph>
+<div class='requirements' markdown='1'>
 
 Requires: k:sets
 
 Result: k:maps
 
-</knowledge-graph>
+</div>
 
 ## Definition
 
@@ -53,13 +53,13 @@ TODO: to write
 
 # Numbers
 
-<knowledge-graph>
+<div class='requirements' markdown='1'>
 
 Requires: k:sets
 
 Result: k:natural-numbers, k:integers, k:reals
 
-</knowledge-graph>
+</div>
 
 ## Natural numbers
 

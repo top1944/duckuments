@@ -1,10 +1,10 @@
 # Types {#types}
 
-<knowledge-graph>
+<div class='requirements' markdown='1'>
 Results: k:types
 
 Requires: k:sets
-</knowledge-graph>
+</div>
 
 ## Types vs sets
 

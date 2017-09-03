@@ -2,14 +2,14 @@
 
 Assigned: Andrea Censi
 
-<knowledge-graph>
+<div class='requirements' markdown='1'>
 
 Requires: Understanding of k:time-series
 
 Result: Understanding of the concepts of k:event-based-processing, k:latency,
 k:frequency.
 
-</knowledge-graph>
+</div>
 
 ## Periodic vs event-based processing
 

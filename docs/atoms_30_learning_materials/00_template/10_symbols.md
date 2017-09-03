@@ -84,7 +84,12 @@ Use `\ints` for the integers numbers.
     <code>\tup{a,b,c}</code>
     <s>$\tup{a,b,c}$</s>
     <s> Tuples </s>
-  
+
+
+    <code>\Time</code>
+    <s>$\Time$</s>
+    <s> Time axis </s>
+      
 </col3>
 
 

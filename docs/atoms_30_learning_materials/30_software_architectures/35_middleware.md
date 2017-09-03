@@ -2,13 +2,13 @@
 
 Assigned: Andrea
 
-<knowledge-graph>
+<div class='requirements' markdown='1'>
 
 Requires: Knowledge of k:code-reusability, k:code-abstraction, k:code-encapsulation.
 
 Result: Knowledge of k:middleware, k:marshalling, k:service-discovery.
 
-</knowledge-graph>
+</div>
 
 
 ## Why using middleware
