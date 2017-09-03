@@ -1,6 +1,4 @@
-# Linear algebra basics {#linear_algebra}
-
-Note: This unit is work in progress.
+# Linearity and Vectors {#linear_algebra}
 
 Assigned: Jacopo
 
@@ -355,6 +353,20 @@ Letting $\phi \in [0,2\pi)$ be the angle between two vectors $\avec{u}, \avec{v}
 - $\avec{u} \times \avec{v} = 0 \iff \avec{u}=\avec{0}, \avec{v}=\avec{0}$, or $\avec{u} \parallel \avec{v}$.
 
 
+## Linear dependance {#linear-dep}
+
+\begin{definition}[Linear dependance] \label{def:lin-dep}
+Two or more vectors $\{\avec{v_1},\cdots,\avec{v_n}\}$ are _linearly dependant_ if there exists a set of scalars $\{a_1, \cdots, a_k\}, k \leq n$, that are _not all zero_, such that:
+\[ \label{eq:lin-dep}
+a_1\avec{v_1} + \cdots + a_k\avec{v_k} = \avec{0}.
+\]
+\end{definition}
+
+Note: When \eqref{eq:lin-dep} is true, it is possible to write at least one vector as a linear combination of the others.
+
+\begin{definition}[Linear independance] \label{def:lin-indep}
+Two or more vectors ${\avec{v_1},\cdots,\avec{v_n}}$ are _linearly independant_ if \eqref{eq:lin-dep} can be satisfied only by $k=n$ and $a_i =0, \forall i = 1, \cdots, n$.
+\end{definition}
 <!--
 \begin{definition}[Reference signals]\label{def:def-label}
 A reference signal $\tilde{y}_t \in \mathcal{L}_2(\mathcal{T})$ is ...
@@ -374,47 +386,6 @@ if you can't be woken up in the middle of the night and rememeber the definition
 Lorem
 \end{definition}
 -->
-
-## Norms {#norms}
-
-Other metrics can be defined to measure the "length" of a vector. Here, we report some commonly used norms. For a more in depth discussion of what consitutes a norm, and their properties:
-
-see: [](#norms),
-
-see also: [](#bib:norms)
-
-### $p$-norm {#vec-p-norm}
-
-Let $p \geq 1 \in \reals$. The $p$-norm is defined as: 
-
-\begin{definition}[$p$-norm]\label{def:vec-p-norm}
-\begin{align} \label{eq:vec-p-norm}
-\|\avec{v}\|_p = \displaystyle \left( \sum_{i=1}^{n} |v_i|^p \right)^{\frac{1}{p}}.
-\end{align}
-\end{definition}
-
-The $p$-norm is a generalization of the $2$-norm ($p=2$ in \eqref{eq:p-norm}) introduced above ([](#vec-2-norm)). The following $1$-norm and $\infty$-norm can as well be obtained from \eqref{eq:vec-p-norm} with $p=1$ and $p \rightarrow \infty$ respectively.
-
-### One norm {#vec-one-norm}
-
-The $1$-norm is the sum of the absolute values of a vector's components. It is sometimes referred to as the _Taxicab norm_, or _Manhattan distance_ as it well describes the distance a cab has to travel to get from a zero starting point to a final destination $v_i$ on a grid.
-
-\begin{definition}[$1$-norm]\label{def:vec-one-norm}
-Given a vector $\avec{v} \in \reals^n$, the $1$-norm is defined as:
-\begin{align} \label{eq:vec-one-norm}
-\|\avec{v}\| = \displaystyle \sum_{i=1}^{n}|v_i|.
-\end{align}
-\end{definition}
-
-### $\infty$-norm {#vec-inf-norm}
-
-The infinity norm measures the maximum component, in absolute value, of a vector. 
-
-\begin{definition}[$\infty$-norm]\label{def:vec-inf-norm}
-\begin{align} \label{eq:vec-inf-norm}
-\|\avec{v}\| = \displaystyle \max(|v_1|, \cdots, |v_n|).
-\end{align}
-\end{definition}
 
 
 <!--
@@ -441,25 +412,29 @@ TODO: add exercises
 
 ## Conclusions
 
-In this section we have defined the fundamental concept of linearity and introduced the mathematical tools pertaining to it, in particular vectors and matrices. Moreover, we have introduced their operations and algebrais properties.
+In this section we have defined the fundamental concept of linearity and linear dependance. Moreover, we have introduced vectors, with their operations and algebraic properties.
 
+Vectors and linearity are the base for understanding linear spaces, which are useful because they introduce some fundamental concepts related to the foundation of _modeling_ of natural phenomena. Modeling will be invaluable in understanding the behavior of systems, and a powerful tool to _predict_ future behaviors of the system, and _control_ them when needed.
+
+<!--
 We have found that matrices are a very convenient way to represent linear spaces, and that the properties of the matrices such as eigenvalues and eigenvectors have important implications in characterizing these spaces.
 
 These tools are useful because they are at the foundation of _modeling_ of natural phenomena. Modeling will be invaluable in understanding the behavior of systems, and a powerful tool to _predict_ future behaviors of the system, and _control_ them when needed.
 
-We have learned that ...
+We have learned that ... -->
 <!--
 - What did we do? (recap)
 - What did we find? (analysis)
 - Why is it useful? (synthesis)
 - Final Conclusions (what have we learned)
 -->
+<!--
 ## Next Steps
 
 - linearization of nonlinear equations
 - state space representations
 - basic kinematics
-- basic dynamics
+- basic dynamics -->
 
 
 <!--
