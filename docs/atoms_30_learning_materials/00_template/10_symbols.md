@@ -2,8 +2,6 @@
 
 Assigned: Andrea
 
-
-
 ## Conventions
 
 You should not have to use presentation macros like `\mathcal`, `\boldsymbol`, etc.;
@@ -89,7 +87,7 @@ Use `\ints` for the integers numbers.
     <code>\Time</code>
     <s>$\Time$</s>
     <s> Time axis </s>
-      
+
 </col3>
 
 

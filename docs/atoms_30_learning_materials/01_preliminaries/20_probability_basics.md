@@ -164,15 +164,15 @@ Is there a discussion of graphical models anywhere? Doing a good job of sufficie
 The $n$th moment of an RV, $X$, is given by $E[X^n]$ where $E[]$ is the expection operator with:
 
 \[
-   E[f(X)] = \sum_\aset{X} xf(x)
+   E[f(X)] = \sum_{\aset{X}} x \, f(x)
 \]
 in the discrete case and
 \[
-   E[f(X)] = \int xf(x) dx
+   E[f(X)] = \int x\, f(x) dx
 \]
 in the continuous case.
 
-The 1st moment is the *mean*, $\mu_X=E[X}$.
+The 1st moment is the *mean*, $\mu_X=E[X]$.
 
 The $n$th central moment of an RV, $X$ is given by $E[(X-\mu_X)^n]$. The second central moment is called the *covariance*, $\sigma^2_X=E[(X-\mu_X)^2]$.
 

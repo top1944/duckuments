@@ -88,16 +88,15 @@ duckuments-dist:
 log=duckuments-dist/compilation.log
 automatic-compile:
 	git pull
-	#$(MAKE) clean
 	touch $(log)
 	echo "\n\nStarting" >> $(log)
 	date >> $(log)
-	$(MAKE) compile
+	nice -n 10 $(MAKE) compile
 	echo "  succeded html " >> $(log)
 
 	-$(MAKE) upload
 	echo "  succeded html upload " >> $(log)
-	$(MAKE) compile-pdf
+	nice -n 10 $(MAKE) compile-pdf
 	echo "  succeded PDF  " >> $(log)
 	-$(MAKE) upload
 	echo "  succeded PDF upload" >> $(log)
