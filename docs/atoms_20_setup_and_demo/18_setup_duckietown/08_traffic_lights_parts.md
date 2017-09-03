@@ -18,8 +18,7 @@ Requires: Time: ?? days (average shipping time)
 
 Results:  A kit of parts ready to be assembled in a traffic light.
 
-Next Steps:
-- [Assemblying](#traffic-light-assembly) a traffic light.
+Next Steps: [Assemblying](#traffic-light-assembly) a traffic light.
 </div>
 
 TODO: Estimate time and costs

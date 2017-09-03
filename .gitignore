@@ -66,3 +66,4 @@ misc/book_index.html
 *swp
 docs/*.html
 docs/**/*.html
+.python-version

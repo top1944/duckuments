@@ -10,25 +10,23 @@ In general, keep in mind that:
   and not OK for all the electronics, unless you are OK in writing
   some software.
 - Buying the parts for more than one Duckiebot makes each one cheaper than buying only one.
-
+- For some components, the links we provide contain more bits than actually needed.
 
 
 <div class='requirements' markdown="1">
 
-Requires: Cost: USD 159 + Shipping Fees (minimal configuration `C0`)
+Requires: Cost: USD 174 + Shipping Fees (minimal configuration `C0`)
 
 Requires: Time: 15 days (average shipping for cheapest choice of components)
 
 Results: A kit of parts ready to be assembled in a `C0` or `C0+wjd` configuration.
 
-Next Steps:
-
-- After receiving these components, you are ready to do some [soldering](#soldering-boards-c0) before [assembling](#assembling-duckiebot-c0) your `C0` or `C0+wjd` Duckiebot.
+Next steps: After receiving these components, you are ready to do some [soldering](#soldering-boards-c0) before [assembling](#assembling-duckiebot-c0) your `C0` or `C0+wjd` Duckiebot.
 
 </div>
-
+<!--
 TODO: Add a different "Tools" section in the table (e.g., solderer), or add in the resoruces beginning snippet; Differentiate pricing for bulk vs detail purchase (?)
-
+-->
 ## Bill of materials
 
 <!--
@@ -50,7 +48,7 @@ TODO: Add a different "Tools" section in the table (e.g., solderer), or add in t
     <s>[16 GB Class 10 MicroSD Card](https://tinyurl.com/ydawrgdx)</s>                         <s>USD 10</s>
     <s>[Mirco SD card reader](https://www.adafruit.com/product/939)</s><s>USD 6 </s>
     <s>[Stepper Motor HAT](https://tinyurl.com/y7qurpcw)</s>                         <s>USD 22.50</s>
-    <s>[Stacking Header](https://www.adafruit.com/product/2223)</s><s>USD 2.50/piece</s>
+    <s>[2 Stacking Headers](https://www.adafruit.com/product/2223)</s><s>USD 2.50/piece</s>
     <s>[Battery](https://tinyurl.com/ya7otc76)</s>                         <s>USD 20</s>
     <s>[16 Nylon Standoffs (M2.5 12mm F 6mm M](https://tinyurl.com/y9uy73b2)</s>                         <s>USD 0.05/piece</s>
     <s>[4 Nylon Hex Nuts (M2.5)](https://tinyurl.com/ydy4znem)</s>                      <s>USD 0.02/piece</s>
@@ -59,14 +57,42 @@ TODO: Add a different "Tools" section in the table (e.g., solderer), or add in t
     <s>[Wireless Adapter (5 GHz)](https://tinyurl.com/ycvu7ok3) (`C0+w`)</s><s>USD 20</s>
     <s>[Joypad](https://tinyurl.com/y9klooef) (`C0+j`)</s>                         <s>USD 10.50</s>
     <s>[Tiny 32GB USB Flash Drive](https://tinyurl.com/ycao6men) (`C0+d`)</s>                         <s>USD 12.50</s>
-    <s>Total for `C0` configuration</s>                         <s>USD 159</s>
-    <s>Total for `C0+w` configuration</s>                         <s>USD 179</s>
-    <s>Total for `C0+j` configuration</s>                         <s>USD 169.50</s>
-    <s>Total for `C0+d` configuration</s>                         <s>USD 171.50</s>
-    <s>Total for `C0+wjd` configuration</s>                         <s>USD 212</s>
+    <s>[Caster](https://tinyurl.com/y7gnesxn) (optional)</s>                         <s>USD 6.55/4 pieces</s>
+    <s>[4 Standoffs (M3.5 12mm F-F)](https://tinyurl.com/ybd24t8c) (optional)</s>                         <s>USD 0.63/piece</s>
+    <s>[8 Screws (M3.5x8mm)](https://tinyurl.com/ych4sfpa) (optional)</s>                         <s>USD 4.58/100 pieces</s>
+    <s>[8 Split washer lock](https://tinyurl.com/y75onase) (optional)</s>                         <s>USD 1.59/100 pieces</s>
+    <s>Total for `C0` configuration</s>                         <s>USD 173.6</s>
+    <s>Total for `C0+w` configuration</s>                         <s>USD 193.6</s>
+    <s>Total for `C0+j` configuration</s>                         <s>USD 184.1</s>
+    <s>Total for `C0+d` configuration</s>                         <s>USD 186.1</s>
+    <s>Total for `C0+wjd` configuration</s>                         <s>USD 216.6</s>
  </col2>
 
+Additionally, an optional caster wheel may be equipped for any of the `C0+wjd` configurations.
+
 </div>
+
+Comment: Shall we define another configuration for the caster equipped Duckiebot? -JT 
+
+<!--
+<col2 figure-id="tab:materials-optionals" figure-caption="Bill of optional materials">
+    <span>[Caster](https://tinyurl.com/y7gnesxn)</span>
+    <span>USD 6.55/4 pieces</span>
+    <span>[4 Standoffs (M3.5 12mm F-F)](https://tinyurl.com/ybd24t8c)</span>
+    <span>USD 0.63/piece</span>
+    <span>[8 Screws (M3.5x8mm)](https://tinyurl.com/ych4sfpa)</span>
+    <span>USD 4.58/100 pieces</span>
+    <span>[8 Split washer lock](https://tinyurl.com/y75onase)</span>
+    <span>USD 1.59/100 pieces</span>
+</col2>
+
+<col2 id='materials-optionals' figure-id="tab:materials-optional" figure-caption="Bill of optional materials">
+<s>[Caster](https://tinyurl.com/y7gnesxn)</s>                         <s>USD 6.55/4 pieces</s>
+<s>[4 Standoffs (M3.5 12mm F-F)](https://tinyurl.com/ybd24t8c)</s>                         <s>USD 0.63/piece</s>
+<s>[8 Screws (M3.5x8mm)](https://tinyurl.com/ych4sfpa)</s>                         <s>USD 4.58/100 pieces</s>
+<s>[8 Split washer lock](https://tinyurl.com/y75onase)</s>                         <s>USD 1.59/100 pieces</s>
+</col2>
+-->
 
 <style>
 #materials {
@@ -237,4 +263,34 @@ Iin configuration `C0+d`, the Duckiebot is equppied with a "external" hard drive
 
 <div figure-id="fig:USBdrive" figure-caption="The Tiny 32GB USB Flash Drive">
      <img src="USBdrive.png" style='width: 15em'/>
+</div>
+
+## Caster (optional)
+
+The caster ([](#fig:caster)) is an optional component that substitutes the steel omnidirectional wheel that comes in the Magician Chassis package. Although the caster is not necessary, it provides smoother operations and overall enhanced Duckiebot performance.
+
+<div figure-id="fig:caster" figure-caption="The caster wheel">
+     <img src="caster.png" style='width: 15em'/>
+</div>
+
+To assemble the caster at the right height we will need to purchase:
+
+- 4 standoffs (M3.5 12mm F-F) ([](#fig:caster-standoffs)),
+- 8 screws (M3.5x8mm) ([](#fig:caster-screws)), and
+- 8 split lock washers ([](#fig:caster-split-washer)).
+
+<div figure-id="fig:caster-bits">
+    <figcaption>Mechanical bits to assemble the caster wheel.</figcaption>
+
+    <div figure-id="subfig:caster-standoffs" figure-caption="Standoffs for caster wheel.">
+        <img src="caster-standoffs.png" style='width: 25em'/>
+    </div>
+
+    <div figure-id="subfig:caster-screws" figure-caption="Screws for caster wheel.">
+        <img src="caster-screws.png" style='width: 25em'/>
+    </div>
+
+    <div figure-id="subfig:caster-split-washer" figure-caption="Split lock washers for caster wheel.">
+        <img src="caster-split-washer.png" style='width: 25em'/>
+    </div>
 </div>
