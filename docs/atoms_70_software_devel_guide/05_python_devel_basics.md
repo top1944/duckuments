@@ -64,15 +64,22 @@ How to enter IPython:
 
 [](python:duckietown_utils.add_header_to_image)
 
-    add_header_to_image(image, s):  Add header to image
+```python
+# Add header to image
+add_header_to_image(image, s)
+```
 
 [](python:duckietown_utils.write_jpg_to_file)
 
-    write_jpg_to_file(image, filename)
+```python
+write_jpg_to_file(image, filename)
+```
 
 [](python:duckietown_utils.make_images_grid)
 
-    make_images_grid
+```python
+make_images_grid
+```
 
 
 ## Idioms

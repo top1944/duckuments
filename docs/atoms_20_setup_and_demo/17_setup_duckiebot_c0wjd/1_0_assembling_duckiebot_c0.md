@@ -14,7 +14,7 @@ Requires: Having prepared the power cable. The power cable preparation is explai
 
 Requires: Time: about ??? minutes.
 
-TODO: estimate time. 
+TODO: estimate time.
 
 Results:  An assembled Duckiebot in configuration `C0+wjd`.
 
@@ -28,7 +28,7 @@ Open the Magician chassis package and take out the following components:
 * DC Motors (2), motor holders (4)
 * Wheels (2 pieces), steel omnidirectional wheel (1) or caster wheel (1)
 * All spacers and screws
-* Screwdriver 
+* Screwdriver
 
 <div figure-id="fig:duckiebot_components" figure-caption="Components in Duckiebot package.">
      <img src="duckiebot_components.png" style='width: 30em'/>
@@ -146,7 +146,7 @@ TODO: Insert picture showing where to plug in the SD card
 
 First, identify the camera cable port on the Pi (between HDMI and power ports) and remove the orange plastic protection (it will be there if the Pi is new) from it. Then, grab the long camera cable (300 mm) and insert in the camera port. To do so, you will need to gently pull up on the black connector (it will slide up) to allow the cable to insert the port. Slide the connector back down to lock the cable in place, making sure it “clicks”.
 
-Protip: Make sure the camera cable is inserted in the right direction! The metal pins of the cable should be in contact with the metal terminals in the camera port of the PI. 
+Protip: Make sure the camera cable is inserted in the right direction! The metal pins of the cable should be in contact with the metal terminals in the camera port of the PI.
 
 <div figure-id="fig:raspi_camera_apart" figure-caption=" ">
      <img src="raspi_camera_apart.jpg" style='width: 15em'/>
@@ -162,9 +162,9 @@ If you have purchased the long camera cable, the first thing to do is removing t
 
 Take the rear part of the camera mount and use it hold the camera in place. Note that the camera is just press-fitted to the camera mount, no screws/nuts are needed.
 
-In case you have not purchased the long camera cable, do not worry! It is still very possible to get a working configuration, but you will have little wiggling space and assembly will be a little harder. 
+In case you have not purchased the long camera cable, do not worry! It is still very possible to get a working configuration, but you will have little wiggling space and assembly will be a little harder.
 
-Place the camera on the mount and fasten the camera mount on the chassis-up using M3*10 flathead screws and M3 nuts from the Duckiebox. 
+Place the camera on the mount and fasten the camera mount on the chassis-up using M3*10 flathead screws and M3 nuts from the Duckiebox.
 
 **Protip**: make sure that the camera mount is: (a) geometrically centered on the chassis-up; (b) fastened as forward as it can go; (c) it is tightly fastened. We aim at having a standardized position for the camera and to minimize the wiggling during movement.
 
@@ -187,7 +187,7 @@ _**Notice**: make sure that the cable is oriented in this direction (writing tow
 #### Extending the intra-decks standoffs
 
 
-In order to fit the battery, we will need to extend the Magician Chassis standoffs with the provided nylon standoff spacers. Grab 4 of them, and secure them to one end of the long metal standoffs provided in the Magician Chassis package. 
+In order to fit the battery, we will need to extend the Magician Chassis standoffs with the provided nylon standoff spacers. Grab 4 of them, and secure them to one end of the long metal standoffs provided in the Magician Chassis package.
 
 Secure the extended standoff to the 4 corners of the chassis-bottom.  The nylon standoffs should smoothly screw in the metal ones. If you feel resistance, don’t force it or the nylon screw might break in the metal standoff. In that case, unscrew the nylon spacer and try again.
 
@@ -203,7 +203,7 @@ Secure the extended standoff to the 4 corners of the chassis-bottom.  The nylon 
 
 ### Put a Stepper Motor HAT with 4 standoffs on the top of Raspberry Pi
 
-The GPIO Stacking Header need to be correctly stacked into the pins before fastening the standoffs. It connects the Pi with the HAT. 
+The GPIO Stacking Header need to be correctly stacked into the pins before fastening the standoffs. It connects the Pi with the HAT.
 Place the camera cable properly when you mount the HAT on the Raspberry Pi.
 
 
@@ -235,6 +235,7 @@ _*Notice:*You will need the screwdriver from the Magician Chassis package._
 </div>
 
 ### PWM HAT
+
 Put a Servo/PWM Pi HAT board (in your Duckiebox) with 4 standoffs. Connect the male-male wire to +5V output.
 
 
@@ -259,7 +260,7 @@ TODO: Insert relevant pics
 
 
 ### Connect the power cables
-Connect power cables (USB A to 5mm cable in your Duckiebox and USB cable in the battery box). Arrange all the cables properly so that the Duckiebot can run on the way without barrier. 
+Connect power cables (USB A to 5mm cable in your Duckiebox and USB cable in the battery box). Arrange all the cables properly so that the Duckiebot can run on the way without barrier.
 
 <div figure-id="fig:powerbank_motor_cable" figure-caption=" ">
      <img src="powerbank_motor_cable.jpg" style='width: 15em'/>

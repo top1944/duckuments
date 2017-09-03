@@ -6,7 +6,7 @@ While the "Setup" parts are "imperative" (do this, do that); this is the
 "declarative" part, which explains what are the properties of a correct
 configuration (but it does not explain how to get there).
 
-he tool `what-the-duck` ([](#what-the-duck)) checks some of these conditions.
+The tool `what-the-duck` ([](#what-the-duck)) checks some of these conditions.
 If you make a change from the existing conditions, make sure that it gets
 implemented in `what-the-duck` by filing an issue.
 
@@ -27,16 +27,15 @@ You need to have set up the variables in [](#tab:environment-variables).
 
     <s><code>DUCKIEFLEET_ROOT</code></s>
     <s><code>~/duckiefleet</code></s>
-    <s>A repository that contains <code>scuderia.yaml</code> and other
-    team-specific configuration. </s>
+    <s>Where to look for class-specific information (people DB, robots DB).</s>
 
     <s><code>DUCKIETOWN_DATA</code></s>
     <s><code>~/duckietown-data</code></s>
-    <s>Contains data for unit tests (Dropbox folder)</s>
+    <s>The place where to look for logs.</s>
 
     <s><code>DUCKIETOWN_TMP</code></s>
     <s></s>
-    <s>If set, directory to use for temporary files. If not set, we use the default ( `/tmp`).</s>
+    <s>If set, directory to use for temporary files. If not set, we use the default ( <code>/tmp</code>).</s>
 
     <s><code>DUCKIETOWN_CONFIG_SEQUENCE</code></s>
     <s><code>defaults:baseline:vehicle:user</code></s>
@@ -91,7 +90,7 @@ A minimal example is in [](#code:scuderia-minimal).
 
 <div figure-id="code:scuderia-minimal" markdown="1">
 <figcaption>Minimal scuderia file <code>emma.robot.yaml</code></figcaption>
-``` .yaml
+```yaml
 owner: censi
 hostname: emma
 username: andrea
