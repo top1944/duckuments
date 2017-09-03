@@ -10,9 +10,22 @@ Requires: k:sets
 
 One could define types independently of sets...
 
+## Types of functions
 
+TODO: To write
 
+## Sum types / coproduct
+
+TODO: to write
+
+## In Duckietown
+
+Types of messages
+
+## Historical notes
+
+TODO: to write
 
 ## Further reading
 
-TODO:
+Type theory
