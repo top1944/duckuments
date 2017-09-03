@@ -62,6 +62,10 @@ Use `\ints` for the integers numbers.
   <s>$\amat{M}, \amat{P}$</s>
   <s>Symbols for matrices</s>
 
+  <code>\avec{u}, \avec{v}</code>
+  <s>$\avec{u}, \avec{v}$</s>
+  <s>Symbols for vectors</s>
+
   <code>\nats</code>
   <s>$\nats$</s>
   <s>Natural numbers</s>
