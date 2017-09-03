@@ -9,7 +9,7 @@ Result: k:sets
 ## Definition
 
 \begin{definition}[Set]\label{def:set}
-A set $\mathbb{X} = \{x_1, x_2, \dots\}$ is a well-defined collection of distinct _elements_, or _members_ of the set, $x_i$, $i = 1, 2, \dots$.    
+A set $\aset{X} = \{x_1, x_2, \dots\}$ is a well-defined collection of distinct _elements_, or _members_ of the set, $x_i$, $i = 1, 2, \dots$.
 \end{definition}
 
 
