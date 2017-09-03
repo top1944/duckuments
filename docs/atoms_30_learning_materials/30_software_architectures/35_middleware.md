@@ -4,7 +4,7 @@ Assigned: Andrea
 
 <div class='requirements' markdown='1'>
 
-Requires: Knowledge of k:code-reusability, k:code-abstraction, k:code-encapsulation.
+
 
 Result: Knowledge of k:middleware, k:marshalling, k:service-discovery.
 
@@ -16,6 +16,12 @@ Result: Knowledge of k:middleware, k:marshalling, k:service-discovery.
 * Reusable code
 
 * Abstraction
+
+
+Assumes:
+k:code-reusability,
+k:code-abstraction,
+k:code-encapsulation.
 
 ## What middleware provides
 
@@ -34,9 +40,9 @@ Pinging `.local` addresses
 
 ### Scheduling
 
+Deciding when to do some processing
 
-
-## A few alternatives
+## A few alternatives of robotics middleware
 
 - ROS
 
