@@ -1,6 +1,6 @@
-# Linear algebra {#linear_algebra}
+# Linear algebra basics {#linear_algebra}
 
-TODO: This Section is work in progress.
+Note: This unit is work in progress.
 
 Assigned: Jacopo
 
@@ -8,7 +8,7 @@ Assigned: Jacopo
 
 Linear algebra provides the set of mathematical tools to (a) study linear relationships and (b) describe linear spaces. It is a field of mathematics with important ramifications.
 
-Linearity is an important concept because it is powerful in describing the input-output behaviour of many natural phenomena (or _systems_). As a matter of fact, all those systems that cannot be modeled as linear, still can be approximated as linear to gain an intuition, and sometimes much more, of what is going on.
+Linearity is an important concept because it is powerful in describing the input-output behavior of many natural phenomena (or _systems_). As a matter of fact, all those systems that cannot be modeled as linear, still can be approximated as linear to gain an intuition, and sometimes much more, of what is going on.
 
 So, in a way or the other, linear algebra is a starting point for investigating the world around us, and Duckietown is no exception.
 
@@ -213,7 +213,7 @@ The sum of two vectors is a vector, and its components are the sum of the two ve
 
 \begin{definition}[Vectorial sum]\label{def:vector-sum}
 \begin{align} \label{eq:vector-sum}
-\textbf{w} = \textbf{u} + \textbf{v} = (u_1+v_1)\hat{\textbf{i}} + (u_2+v_2)\hat{\textbf{j}} + (u_3+v_3)\hat{\textbf{k}}.
+\textbf{u} + \textbf{v} = [u_1+v_1, u_2+v_2, u_3+v_3]^T.
 \end{align}
 \end{definition}
 
@@ -221,7 +221,7 @@ The sum of two vectors is a vector, and its components are the sum of the two ve
 Mathematical operations come in pairs, which represent the same concept. A _sum_ operation, sometimes more extensively referred to as the _algebric sum_, is the concept of summing, i.e., it includes both addition and subtraction. (A subtraction is nothing but an addition between positive and negative numbers.)
 \end{remark}
 
-The "parallelogram law" helps visualize the results of the vectorial sum operation [](#fig:vector-sum).
+The parallelogram law helps visualize the results of the vectorial sum operation [](#fig:vector-sum).
 
 <div figure-id="fig:vector-sum" figure-caption="The sum of two vectors can be visualized with the parallelogram law.">
      <img src="placeholder.png" style='width: 15em'/>
@@ -230,11 +230,11 @@ The "parallelogram law" helps visualize the results of the vectorial sum operati
 
 #### Dot, or scalar, product {#vector-dot}
 
-The dot, or scalar, product of two vectors ($\textbf{u}$,$\textbf{v} \in \reals^3$) is a scalar ($a \in \reals$), equal to the product of the magnitudes of the two vectors times the cosine of the angle between them, $\phi \in [0,2\pi)$.
+The dot, or scalar, product of two vectors ($\textbf{u}$,$\textbf{v} \in \mathbb{R}^3$) is a scalar ($a \in \mathbb{R}$) equal to the sum of the products of the components of the vectors. Equivalently, it can be expressed as the product of the magnitudes of the two vectors times the cosine of the angle between them, $\phi \in [0,2\pi)$.
 
 \begin{definition}[Scalar product]\label{def:vector-dot-product}
 \begin{align} \label{eq:vector-dot-product}
-a = \textbf{u} \cdot \textbf{v} = \|u\|\|v\|\cos(\phi) \in \reals
+\textbf{u} \cdot \textbf{v} = u_1v_1+u_2v_2+u_3v_3 = \|u\|\|v\|\cos(\phi) \in \mathbb{R}
 \end{align}
 \end{definition}
 
@@ -251,47 +251,106 @@ Note: When the two vectors are perpendicular, or orthogonal, the dot product is 
 
 While the dot product depends on the metric chosen in the space (the Euclidian norm, in our case), the cross product even requires the definition of an orientation, or handedness.
 
-\begin{definition}[Standard Base]\label{def:standard-basis}
-In the Euclidian space $\reals^3$, $\hat{\textbf{i}}, \hat{\textbf{j}}, \hat{\textbf{k}}$ is the standard base, and it is right handed.
-\end{definition}
+\begin{proposition}[Standard Basis]\label{prop:standard-basis}
+In the Euclidian space $\mathbb{R}^3$, $\hat{\textbf{i}}, \hat{\textbf{j}}, \hat{\textbf{k}}$ are the unit vectors for the standard basis, which is right handed.
+\end{proposition}
 
-The cross, or vector, product between two vectors ($\textbf{u}$, $\textbf{v} \in \reals^3$) is a
-vector that is orthogonal to each of the two vectors, hence is normal, or perpendicular, to the plane containing them. Its magnitude is given by the product of their magnitude times the sine of the angle between them, and its direction is indicated by the normal unit vector ($\hat{\textbf{n}} \in \reals^3$), identified by the right hand rule.
+In a right handed reference system such as the standard basis, the right hand rule ([](#fig:right-hand-rule)) is the handy-est way to identify the direction of the vector resulting from a cross product.
 
-\begin{definition}[Scalar product]\label{def:vector-cross-product}
-\begin{align} \label{eq:vector-cross-product}
-\textbf{w} = \textbf{u} \times \textbf{v} = \|u\|\|v\|\sin(\phi) \textbf{n}
-\end{align}
-\end{definition}
-
-The components of $\textbf{w}$ can be easilly computed through the Sarrus rule.
-
-Another way to remember the components of a cross product is to immagine the unit vectors $\hat{\textbf{i}}, \hat{\textbf{j}}, \hat{\textbf{k}}$ as if they were placed in order on a wheel ([](#fig:wheel-trick)):
-
-<div figure-id="fig:wheel-trick" figure-caption="The wheel trick .">
-     <img src="placeholder.png" style='width: 30em'/>
-</div>
-
-The right hand rule ([](#fig:right-hand-rule)) the handy-est way to identify the direction of the vector resulting from a cross product:
+ProTip: There is a reason for which it is called the _right hand_ rule. Don't use your left hand because you are holding a pen with the right one.
 
 <div figure-id="fig:right-hand-rule" figure-caption="The right hand rule points in the direction of the resulting vector from a cross product.">
      <img src="placeholder.png" style='width: 30em'/>
 </div>
 
+The cross, or vector, product between two vectors ($\textbf{u}$, $\textbf{v} \in \mathbb{R}^3$) is a vector that is orthogonal to each of the two vectors, hence is normal, or perpendicular, to the plane containing them. Its magnitude is given by the product of their magnitude times the sine of the angle between them, and its direction is indicated by the normal unit vector ($\hat{\textbf{n}} \in \mathbb{R}^3$), identified by the right hand rule.
+
+\begin{definition}[Vector product]\label{def:vector-cross-product}
+\begin{align} \label{eq:vector-cross-product}
+\textbf{u} \times \textbf{v} = [u_2v_3-u_3v_2, u_3v_1-u_1v_3, u_1v_2-u_2v_1]^T = \|u\|\|v\|\sin(\phi) \hat{\textbf{n}}.
+\end{align}
+\end{definition}
+
+\begin{remark}[Geometric interpretation]\label{rem:vec-cross-geom}
+A cross product encodes two pieces on information: a direction, which is _orthogonal_ to the plane spanned by the two vectors, and a magnitude, which is equal to the area of the parallelogram having $\textbf{u}$, and $\textbf{v}$ as sides.
+\end{remark}
+
+Note: Keeping \eqref{eq:vector-cross-product} and [](#rem:vec-cross-geom) in mind, it should be intuitive to understand that:
+\begin{align} \label{eq:vec-cross-vv-v0}
+\textbf{v} \times \textbf{v} &= \textbf{0}, \forall \textbf{v} \in \mathbb{R}^n, \\
+\textbf{v} \times \textbf{0} &= \textbf{0}, \forall \textbf{v} \in \mathbb{R}^n.
+\end{align}
+
+Note: The zero vector ($\textbf{0}$) is a vector with zero magnitude, not the same as the number zero ($0$).
+
+<!--
+To obtain the components of $\textbf{w}$ immagine the unit vectors $\hat{\textbf{i}}, \hat{\textbf{j}}, \hat{\textbf{k}}$ as if they were placed on a wheel ([](#fig:wheel-trick)), in this order:
+
+<div figure-id="fig:wheel-trick" figure-caption="The wheel trick.">
+     <img src="placeholder.png" style='width: 30em'/>
+</div>
+
+Then each component of $\textbf{w}$ is equal to:
+
+\begin{align} \label{eq:vector-cross-product-components}
+\textbf{w} &= \textbf{u} \times \textbf{v} = (u_1)\hat{\textbf{i}} +(u_2)\hat{\textbf{j}} +(u_3)\hat{\textbf{k}} \times (v_1)\hat{\textbf{i}} +(v_2)\hat{\textbf{j}} +(v_3)\hat{\textbf{k}}\\
+&= (u_2v_3-u_3v_2)\hat{\textbf{i}} +(u_3v_1-u_1v_3)\hat{\textbf{j}} +(u_1v_2-u_2v_1)\hat{\textbf{k}}.
+\end{align}
+-->
+
+Note: Each component of $\textbf{w}$ is the difference of the products of the two _other_ components of $\textbf{u}$, and $\textbf{v}$, in the order given by the chosen handedness of the basis. This combination resembles a _cross_ ([](#fig:cross-product-explanation)), from which the name of _cross product_.
+
+<div figure-id="fig:cross-product-explanation" figure-caption="Each component of the resulting vector is the product of the alternated other components, forming a cross.">
+     <img src="placeholder.png" style='width: 30em'/>
+</div>
+
+Note: The components of $\textbf{w}$ can be computed through the Sarrus rule (see [](#matrix-algebra)).
+
+As consequence of the vectorial product's definition and right handedness of the basis, the following hold true in the Cartesian space:
+
+\begin{align} \label{eq:sb-cross-products}
+\hat{\textbf{i}} \times \hat{\textbf{j}} &= \hat{\textbf{k}} \\
+\hat{\textbf{j}} \times \hat{\textbf{k}} &= \hat{\textbf{i}} \\
+\hat{\textbf{k}} \times \hat{\textbf{i}} &= \hat{\textbf{j}}.
+\end{align}
+
+
 ### Properties of vectors {#vector-properties}
+
+In this section we highlight the properties of vector operations, that derive from their definitions.
 
 #### Sum
 
-- commutative
+The vector sum obejs the following:
+
+- $\textbf{u} + \textbf{v} = \textbf{v} + \textbf{u}$,
+- $(\textbf{u} + \textbf{v}) + \textbf{w} = \textbf{u} + (\textbf{v} + \textbf{w})$,
+- $a(\textbf{u} + \textbf{v}) = a\textbf{u} + a\textbf{v}$,
+- $(a+b)\textbf{u} = a\textbf{u} + b\textbf{u}$,
+- $\textbf{u} + \textbf{0} = \textbf{u}$, therefore $\textbf{u} + (-\textbf{u}) = \textbf{0}$.
 
 #### Dot product
 
-- commutative
+Letting $\phi \in [0,2\pi)$ be the angle between two vectors $\textbf{u}, \textbf{v}$, the dot product obejs the following:
+
+- $\textbf{u} \cdot \textbf{v} = \| \textbf{u} \|\| \textbf{v} \|\cos(\phi)$,
+- $\textbf{u} \cdot \textbf{u} = \| \textbf{u} \|^2$,
+- $\textbf{u} \cdot \textbf{v} = \textbf{v} \cdot \textbf{u}$,
+- $\textbf{u} \cdot (\textbf{v} + \textbf{w}) = \textbf{u} \cdot \textbf{v} + \textbf{u} \cdot \textbf{w}$,
+- $a (\textbf{u} \cdot \textbf{v}) = (a\textbf{u}) \cdot \textbf{v}$,
+- $\textbf{0} \cdot \textbf{u} = 0$
+- $\textbf{u} \cdot \textbf{v}$ = 0 $\iff$ $\textbf{u}=\textbf{0}$, $\textbf{v}=\textbf{0}$, or $\textbf{u} \bot \textbf{v}$.
 
 #### Cross product
-it loooooooo
-- anticommutative
-- distributive over scalars
+
+Letting $\phi \in [0,2\pi)$ be the angle between two vectors $\textbf{u}, \textbf{v}$, the cross product obejs the following:
+
+- $\textbf{u} \times \textbf{v} = \| \textbf{u} \|\| \textbf{v} \|\sin(\phi) \hat{\textbf{n}}$,
+- $\textbf{u} \times \textbf{v} = - \textbf{v} \times \textbf{u}$,
+- $(a\textbf{u}) \times \textbf{v} = \textbf{u} \times (a\textbf{v}) = a(\textbf{u} \times \textbf{v})$,
+- $\textbf{u} \times (\textbf{v} + \textbf{w}) = \textbf{u} \times \textbf{v} + \textbf{u} \times \textbf{w})$,
+- $\textbf{u} \cdot (\textbf{v} \times \textbf{w}) = (\textbf{u} \times \textbf{v}) \cdot \textbf{w}$,
+- $\textbf{u} \times (\textbf{v} + \textbf{w}) = (\textbf{w} \cdot \textbf{u}) \textbf{v} - (\textbf{v} \cdot \textbf{u}) \textbf{w} \neq (\textbf{u} \times \textbf{v}) + \textbf{w}$.
 
 <!--
 \begin{definition}[Reference signals]\label{def:def-label}
