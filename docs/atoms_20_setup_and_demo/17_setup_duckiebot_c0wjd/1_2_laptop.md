@@ -2,7 +2,6 @@
 
 Assigned: Andrea
 
-
 Before you prepare the Duckiebot, you need to have a laptop with Ubuntu installed.
 
 <div class='requirements' markdown='1'>
@@ -77,11 +76,22 @@ Install ROS on your laptop.
 See: The procedure is given in [](#install-ROS).
 
 
-## Other suggested software
+## Install Liclipse
 
-### Redshift
+Install Liclipse.
 
-This is Flux for Linux. It is an accessibility/lab safety issue: bright screens damage eyes and perturb sleep [](#bib:tosini16).
+See: The procedure is given in [](#install-liclipse)
+
+## Install Atom
+
+Install Atom.
+
+See: The procedure is given in [](#install-atom)
+
+## Install Redshift
+
+Redshift dims the screen at night. This is an accessibility/lab safety issue: bright
+screens damage eyes and perturb sleep [](#bib:tosini16).
 
 <cite id='bib:tosini16'>
     Tosini, G., Ferguson, I., Tsubota, K. <em>Effects of blue light on the circadian system and eye physiology</em>. Molecular Vision, 22, 61–72, 2016 (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4734149/">online</a>).
@@ -93,16 +103,8 @@ Install redshift and run it.
 
 Set to "autostart" from the icon.
 
-## Installation of the duckuments system
 
-Optional but very encouraged: install the duckuments system.
-This will allow you to have a local copy of the documentation
-and easily submit questions and changes.
-
-See: The procedure is documented in [](#sub:installing-docs-system).
-
-
-## Passwordless `sudo`
+## Set up passwordless `sudo`
 
 Set up passwordless `sudo`.
 
@@ -139,3 +141,11 @@ If the step is done correctly, this command should succeed:
 Set up Git locally.
 
 See: The procedure is described in [](#howto-git-local-config).
+
+## Install the duckuments system
+
+Optional but very encouraged: install the duckuments system.
+This will allow you to have a local copy of the documentation
+and easily submit questions and changes.
+
+See: The procedure is documented in [](#sub:installing-docs-system).

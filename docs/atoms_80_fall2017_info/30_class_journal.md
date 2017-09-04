@@ -1,20 +1,6 @@
 # Class journal (ETH)
 
-This unit will be a class journal.
-
-## Before you start the class
-
-TODO: to write
-
-=======
-These are tasks that you can start doing before the class starts.
-
-Install Ubuntu...
-
-Read the following preliminaries:
-
-- ...
-- ...
+This unit is a class journal for ETH.
 
 ## Wed Sep 20
 
