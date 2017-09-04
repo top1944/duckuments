@@ -2,7 +2,9 @@
 
 ## Dramatis personae
 
-These are the TAs:
+These are the TAs.
+
+At ETHZ:
 
 - Shiying Li (shili@student.ethz.ch)
 - Ercan Selçuk (ercans@student.ethz.ch)
@@ -11,16 +13,20 @@ These are the TAs:
 - Lapandic Dzenan (ldzenan@student.ethz.ch)
 - Marco Erni (merni@ethz.ch)
 
+At TTIC:
+
 - Andrea F. Daniele (afdaniele@ttic.edu)
 - Falcon Dai (dai@ttic.edu)
 - Jon Michaux (jmichaux@ttic.edu)
 
-- Florian Golemo (fgolemo@gmail.com) (Montreal)
+At Montreal:
+
+- Florian Golemo (fgolemo@gmail.com)
 
 
 ## First steps
 
-Here are the first steps.
+Here are the first steps for the TAs.
 
 Note that many of these are not sequential and can be done in parallel.
 
