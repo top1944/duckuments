@@ -67,7 +67,7 @@ For self-guided learners, this is an arbitrary repository to create.
 
 [duckiefleet-repo]: https://github.com/duckietown/duckiefleet-fall2017
 
-Comment: Where should this be cloned? LP
+Comment: Where should this be cloned? Does it matter? LP
 
 ## The "scuderia" (vehicle database) {#scuderia}
 <!-- do not change the ID "scuderia", it's linked in the code -->
