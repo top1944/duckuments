@@ -1,40 +1,3 @@
-# Autonomous vehicles {#autonomous-vehicles}
-
-Assigned: Liam
-
-## Autonomous Vehicles in the News {#autonomous-vehicles-news}
-
-These days it is hard to separate the fact from the fiction when it comes to autonomous vehicles, particularly self-driving cars. Virtually every major car manufacturer has pledged to deploy some form of self-driving technology in the next five years. In addition, there are many startups and software companies which are also known to be developing self-driving car technology.
-
-Here's a non-exhaustive list of some of companies that are actively developing autonomous cars:
-
- * [Waymo](https://waymo.com/)
- * [Tesla Autopilot project](https://www.tesla.com/en_CA/autopilot?redirect=no)
- * [Uber Advanced Technologies Group](https://www.uber.com/info/atg/)
- * [Cruise Automation](the recent developments)
- * Apple "Project Titan" (no official details released)
- * [nuTonomy](http://nutonomy.com/)
- * [Toyota Research Institute](http://www.tri.global/) (Broader than just autonomous cars)
- * [Aurora Innovation](https://aurora.tech/)
- * [Zoox](http://zoox.com/)
- * [Audi](https://techcrunch.com/2017/06/06/audi-is-the-first-to-test-autonomous-vehicles-in-new-york/)
- * [Nissan's autonomous car](https://www.nissanusa.com/blog/autonomous-drive-car)
- * [Baidu](http://usa.baidu.com/adu/)
-
-
-## Levels of Autonomy {#autonomy-levels}
-
-Before even discussing any detailed notion of autonomy, we have to specify exactly what we are talking about. In the United States, the governing body is the NHTSA, and they have recently (Oct 2016) redefined the so-called "levels of autonomy" for self-driving vehicles. In broad terms, they are as follows
-
-
- * **Level 0**: the human driver does everything;
- * **Level 1**: an automated system on the vehicle can sometimes assist the human
-driver conduct some parts of the driving task;
- * **Level 2**: an automated system on the vehicle can actually conduct some parts of the driving task, while the human continues to monitor the driving environment and performs the rest of the driving task;
- * **Level 3**: an automated system can both actually conduct some parts of the driving task and monitor the driving environment in some instances, but the human driver must be ready to take back control when the automated system requests;
- * **Level 4**: an automated system can conduct the driving task and monitor the driving environment, and the human need not take back control, but the automated system can operate only in certain environments and under certain conditions; and
- * **Level 5**: the automated system can perform all driving tasks, under all conditions that a human driver could perform them.
-
 # Autonomy overview {#autonomy_overview}
 
 Assigned: Liam
@@ -47,7 +10,7 @@ In this chapter we will introduce some basic concepts ubiquitous in autonomous v
 The minimal basic backbone processing pipeline for autonomous vehicle navigation is shown in [](##fig:autonomy_block_diagram).
 
 <div figure-id="fig:autonomy_block_diagram" figure-caption="The basic building blocks of any autonomous vehicle">
-  <img src="autonomy_overview_block.jpg" style='width: 30em'/>
+  <img src="autonomy_overview_block.jpg" style='width: 30em; height:auto'/>
 </div>
 
 For an autonomous vehicle to function, it must achieve some level of performance for all of these components. The level of performance required depends on the *task* and the *required performance* .In the remainder of this section, we will discuss some of the most basic options. In [the next section](#advanced-blocks) we will briefly introduce some of the more advanced options that are used in state-of-the-art autonomous vehicles.
@@ -58,19 +21,19 @@ For an autonomous vehicle to function, it must achieve some level of performance
 
 <div figure-id="fig:sensors" figure-class="flow-subfigures" figure-caption="Some common sensors used for autonomous navigation">
     <div figure-id="subfig:velo" figure-caption="Velodyne 3D Laser Scanner">
-        <img src="velo.svg" style='width: 20ex'/>
+        <img src="velo.pdf" style='width: 20ex; height: auto'/>
     </div>
     <div figure-id="subfig:camera" figure-caption="Camera">
-        <img src="camera.svg" style='width: 20ex'/>
+        <img src="camera.pdf" style='width: 20ex; height: auto'/>
     </div>
     <div figure-id="subfig:radar" figure-caption="Automotive Radar">
-        <img src="radar.svg" style='width: 20ex'/>
+        <img src="radar.pdf" style='width: 20ex; height: auto'/>
     </div>
     <div figure-id="subfig:gps" figure-caption="GPS Receiver">
-        <img src="gps.svg" style='width: 20ex'/>
+        <img src="gps.pdf" style='width: 20ex; height: auto'/>
     </div>
     <div figure-id="subfig:imu" figure-caption="Inertial Measurement Unit">
-        <img src="imu.svg" style='width: 20ex'/>
+        <img src="imu.pdf" style='width: 20ex; height: auto'/>
     </div>
 </div>
 
@@ -116,7 +79,9 @@ Once we have properly calibrated data in some meaningful units, we often do some
 
 The important property of these features is that they should be as easily to associate as possible across frames. In order to achieve this, the feature descriptors should be invariant to nuissance parameters.
 
-TODO: add a picture with basic feature detections
+<div figure-id="fig:line_detections" figure-caption="Top: A raw image with feature points indicated. Bottom: Lines projected onto ground plane using extrinsic calibration and ground projections">
+    <img src="line_detections.pdf" style='width: 20em; height: auto'/>
+</div>
 
 
 ### State Estimation {#state-estimation}
@@ -133,42 +98,102 @@ According to Bayesian principles, any system parameters that are not fully known
 
 In general, we do not have direct access to values in $\state$, instead we rely on our (noisy) sensor measurements to tell us something about them, and then we *infer* the values.
 
+<div figure-id="fig:lane_following">
+    <figcaption>Lane Following in Duckietown. *Top Right*: Raw image; *Bottom Right*: Line detections; *Top Left*: Line projections and estimate of robot position within the lane (green arrow); *Bottom Left*: Control signals sent to wheels.</figcaption>
+    <dtvideo src="vimeo:232324847"/>
+</div>
 
+The animation in [](#fig:lane_following) shows the lane following procedure. The output of the state estimator produces the **green arrow** in the top left pane.
 
 
 
 ### Navigation and Planning {#navigation-planning}
 
-State->reference
+<div figure-id="fig:nested_control" figure-caption="An example of nested control loops">
+  <img src="keynote_figs.001.jpg" style='width: 30em; height: auto'/>
+</div>
+
+In general we decompose the task of controlling an autonomous vehicle into a series of **nested control loops**. 
+
+
+    
+The loops are called nested since the output of the outer loop is used as the reference input to the inner loop. An example is shown in [](#fig:nested_control).
+
+Recommended: If [](#fig:nested_control) is **VERY** mysterious to you, then you may want to have a quick look in a basic feedback control textbook. For example [](#bib:principles_robot_motion) or [](#bib:planning_algorithms).
+
+In this case we show three loops. At the outer loop, some goal state is provided. The actual state of the robot is used as the feedback. The controller is the block labeled `Navigation and Motion Planning`. The job of this block is generate a **feasible path** from the current state to the goal state. This is executed in **configuration space** rather than the state space (although these two spaces may happen to be the same they are fundamentally conceptually different.
+
+<div figure-id="fig:navigation">
+    <figcaption>Navigation in Duckietown</figcaption>
+    <dtvideo src="vimeo:232333925"/>
+</div>
+
 
 
 ### Control
 
-reference->control value
+The next inner loop of the nested controller in [](#fig:nested_control) is the `Vehicle Controller`, which takes as input the reference trajectory generated by the `Navigation and Motion Planning` block and the current configuration of the robot, and uses the error between the two to generate a control signal. 
+
+The most basic feedback control law (See [](#feedback) is called PID (for proportional, integral, derivative) which will be discussed in [](#PID). For an excellent introduction to this control policy see [](fig:control).
+
+<div figure-id="fig:control">
+    <figcaption>Controlling Self Driving Cars</figcaption>
+    <iframe style='width: 20em; height:auto' src="https://www.youtube.com/embed/4Y7zG48uHRo" frameborder="0" allowfullscreen="true"></iframe>
+</div>
+
+We will also investigate some more advanced non-linear control policies such as [Model Predictive Control](#MPC), which is an optimization based technique. 
 
 ### Actuation {#actuation}
 
-Control applied to vehicle
+The very innermost control loop deals with actually tracking the correct voltage  to be sent to the motors. This is generally executed as close to the hardware level as possible. For example we have a `Stepper Motor HAT` [See the parts list](#acquiring-parts-c0). 
+
 
 
 ### Infrasctructure and Prior Information {#infrastructure}
 
+In general, we can make the autonomous navigation a simpler one by exploiting existing structure, infastructure, and contextual prior knowledge. 
 
+Infrastructure example: Maps or GPS satellites
 
+Structure example: Known color and location of lane markings
+
+Contextual prior knowledge example: Cars tend to follow the *Rules of the Road*
 
 
 ## Advanced Building Blocks of Autonomy {#advanced-blocks}
 
-The basic blocks described
+The basic building blocks enable static navigation in Duckietown. However, many other components are necessary for more realistic scenarios.
 
 ### Object Detection {#object-detection}
 
-One key requirement is the ability fo
+<div figure-id="fig:object_detection" figure-caption="Advanced Autonomy: Object Detection">
+  <img src="stop_sign_detection.pdf" style='width: 20em; height:auto'/>
+</div>
 
-### Visual Odometry
+One key requirement is the ability to detect objects in the world such as but not limited to: signs, other robots, people, etc.
+
 
 ### SLAM {#slam}
 
-### Scene Segmentation
+The simultaneous localization and mapping (SLAM) problem involves simultaneously estimating not only the robot state but also the **map** at the same time, and is a fundamental capability for mobile robotics. In autonomous driving, generally the most common application for SLAM is actual in the map-building task. Once a map is built then it can be pre-loaded and then used for pure localization. A demonstration of this in Duckietown is shown in [](fig:localization). 
 
-### Mobility on Demand / Fleet-level optimization {#mobility-on-demand}
+<div figure-id="fig:localization">
+    <figcaption>Localization in Duckietown</figcaption>
+    <dtvideo src="vimeo:232333888"/>
+</div>
+
+
+### Other Advanced Topics
+
+Other topics that will be covered include:
+
+* Visual-inertial navigation (VINS)
+
+* Fleet management and coordination
+
+* Scene segmentation
+
+* Deep perception 
+
+* Text recognition
+

@@ -69,7 +69,7 @@ The command `--depth 100` tells it we don't care about the whole history.
 ### Setup the virtual environment
 
 Next, we will create a virtual environment using inside  the `~/duckuments`
-directory.
+directory. Make sure you are running Python 2.7.x. Python 3.x is not supported at the moment.
 
 Change into that directory:
 

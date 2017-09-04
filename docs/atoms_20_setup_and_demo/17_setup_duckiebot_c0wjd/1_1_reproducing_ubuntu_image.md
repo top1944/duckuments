@@ -102,6 +102,8 @@ We need to enable the camera and the I2C bus.
 choose "3. Interfacing Options", and enable camera, and I2C.
 
 Also disable the graphical boot
+
+choose "2. Boot Options”, configure option for startup. -->B1. Console Text console
 <!-- In "5. Advanced options", "A3 Memory Split", select 256 MB for the GPU memory. -->
 
 
@@ -136,7 +138,7 @@ Python:
     duckiebot $ sudo apt install -y python-dev ipython python-sklearn python-smbus
     duckiebot $ sudo apt install -y python-termcolor
     duckiebot $ sudo pip install scipy --upgrade
-
+Note: scipy --upgrade(0.19.1) took about an hour with ethernet connection.
 I2C:
 
     duckiebot $ sudo apt install -y i2c-tools
