@@ -51,7 +51,10 @@ Point of Contact: [Kirsten Bowser](mailto:akbowser@gmail.com)
 
 ### Install Ubuntu
 
-Install Ubuntu 16.04 on your laptop.
+Install Ubuntu 16.04 on your laptop,
+and then install ROS, Atom, Liclipse, etc.
+
+See: [](#setup-laptop)
 
 ### Duckuments
 
