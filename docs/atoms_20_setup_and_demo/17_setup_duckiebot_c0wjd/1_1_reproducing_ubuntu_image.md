@@ -138,7 +138,7 @@ Python:
     duckiebot $ sudo apt install -y python-dev ipython python-sklearn python-smbus
     duckiebot $ sudo apt install -y python-termcolor
     duckiebot $ sudo pip install scipy --upgrade
-
+Note: scipy --upgrade(0.19.1) took about an hour with ethernet connection.
 I2C:
 
     duckiebot $ sudo apt install -y i2c-tools
