@@ -6,6 +6,11 @@ This unit will be a class journal.
 
 TODO: to write
 
+=======
+These are tasks that you can start doing before the class starts.
+
+Install Ubuntu...
+
 Read the following preliminaries:
 
 - ...
