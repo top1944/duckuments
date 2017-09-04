@@ -19,7 +19,7 @@ Think about how long would it take to do it without an IDE.
 
 In addition to LiClipse, the one that is suggested for this class,
 there exist:
-
+    
 * PyCharm
 * Eclipse
 
