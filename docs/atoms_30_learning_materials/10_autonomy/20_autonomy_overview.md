@@ -89,9 +89,7 @@ The important property of these features is that they should be as easily to ass
 Now that we have used our sensors to generate a set of meaningful measurements, we need to combine these measurements together to produce an estimate of the underlying hidden *state* of the robot and possibly to environment.
 
 \begin{definition}[State]\label{def:state}
-The state $\state_t \in \statesp$ is a *sufficient statistic* of the environment, i.e. it containBGYHK  L L ;P ['
-
-sJNXD all sufficient information required for the robot to carry out its task in that environment. This can (and usually does) include the *configuration* of the robot itself.
+The state $\state_t \in \statesp$ is a *sufficient statistic* of the environment, i.e. it contains all sufficient information required for the robot to carry out its task in that environment. This can (and usually does) include the *configuration* of the robot itself.
 \end{definition}
 
 What variables are maintained in the statespace $\statesp$ depends on the problem at hand. For example we may just be interested in a single robot's configuration in the plane, in which case $\state_t \equiv \pose_t$. However, in other cases, such as simultaneous localization and mapping, me may also be tracking the map in the state space.
