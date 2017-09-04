@@ -2,7 +2,7 @@
 
 Assigned: Andrea
 
-Comment: I had to install python-frozendict to run the complete-image-pipeline
+Comment: I had to install `python-frozendict` and `python-ruamel.yaml`  to run the complete-image-pipeline
 
 Before you prepare the Duckiebot, you need to have a laptop with Ubuntu installed.
 
