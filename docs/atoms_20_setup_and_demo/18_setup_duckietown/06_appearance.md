@@ -88,11 +88,13 @@ The red tape must be the full width of the duck tape roll and should cross the e
 
 Comment: what is the width of the roll? 1 in? - AC
 
+Comment: Red and White rolls have a 2 inch thickness. Yellow is 1 inch wide. -JT
+
 The placement of red tape should always be **under** yellow and white tape.
 
 A Duckiebot navigates Duckietown by a sequence of:
 
-* Navigating one or more straigh ties until a red tape appears,
+* Navigating one or more straight ties until a red tape appears,
 * Wait for the coordination signal,
 * Execute an intersection traversal,
 * Relocalize in a StraightTile.
