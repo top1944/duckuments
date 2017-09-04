@@ -50,3 +50,11 @@ k:reals:
 k:controller:
 
 k:sensor:
+
+k:vector:
+
+k:linear-algebra-basics:
+    includes:
+    - k:vector
+    - k:matrix
+    - k:vector-matrix

@@ -649,10 +649,6 @@ Remark: remark
 
 Note: note
 
-    Symptom: symptom
-
-Symptom: symptom
-
     Warning: warning
 
 Warning: warning

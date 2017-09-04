@@ -22,9 +22,11 @@ The simplest way to contribute to the documentation is to click any of the "✎"
 
 They link to the "edit" page in Github. There, one can make and commit the edits in only a few seconds.
 
+<!--
 ## Comments
 
 In the multiple-page version, each page also includes a comment box powered by a service called Disqus. This provides a way for people to write comments with a very low barrier. (We would periodically remove the comments.)
+-->
 
 ## Installing the documentation system {#installing-docs-system}
 
