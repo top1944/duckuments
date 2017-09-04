@@ -20,8 +20,7 @@ Requires: Time: 21 Days (LED board manufacturing and shipping time)
 
 Results: A kit of parts ready to be assembled in a `C1` configuration Duckiebot.
 
-Next Steps:
-- After receiving these components, you are ready to do some [soldering](#soldering-boards-c1) before [assembling](#assembling-duckiebot-c1) your `C1` Duckiebot.
+Next Steps: After receiving these components, you are ready to do some [soldering](#soldering-boards-c1) before [assembling](#assembling-duckiebot-c1) your `C1` Duckiebot.
 </div>
 
 ## Bill of materials

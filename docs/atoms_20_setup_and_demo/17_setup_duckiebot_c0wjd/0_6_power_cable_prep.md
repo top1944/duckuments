@@ -6,8 +6,6 @@ It is important to note that these instructions are relevant only for assembling
 
 <div class='requirements' markdown="1">
 
-Resources necessary:
-
 Requires: One male USB-A to anything cable.
 
 Requires: A pair of scissors.

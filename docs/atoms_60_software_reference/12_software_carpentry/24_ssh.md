@@ -34,6 +34,7 @@ Create the directory with the right permissions:
 
     $ mkdir ~/.ssh
     $ chmod 0700 ~/.ssh
+    $ vim ~/.ssh/config
 
 Then add the following lines:
 
@@ -168,18 +169,15 @@ Check that the config file is correct:
 
 <div class='requirements' markdown='1'>
 
-Assumptions:
-
-- You have two computers, called "`![local]`" and "`![remote]`",
+Requires: You have two computers, called "`![local]`" and "`![remote]`",
   with users "`![local-user]`" and "`![remote-user]`".
-- The two computers are on the same network.
-- You have created a keypair for `![local-user]` on `![local]`.
 
- See: This procedure is described in [](#howto-create-key-pair).
+Requires: The two computers are on the same network.
 
-Results:
+Requires: You have created a keypair for `![local-user]` on `![local]`.
+This procedure is described in [](#howto-create-key-pair).
 
-- From the `![local]` computer, `![local-user]` will be able to log in to
+Results: From the `![local]` computer, `![local-user]` will be able to log in to
   `![remote]` computer without a password.
 
 </div>

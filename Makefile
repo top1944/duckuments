@@ -48,9 +48,6 @@ check-programs:
 
 	@echo All programs installed.
 
-
-
-
 check-duckietown-software:
 	@if [ -d $(duckietown-software) ] ; \
 	then \
@@ -83,25 +80,23 @@ process-svg:
 	python -m mcdp_docs.process_svg docs/ $(generated_figs) $(tex-symbols)
 
 
-
 duckuments-dist:
 	# clone branch "dist"
 	git clone --depth 3 git@github.com:duckietown/duckuments-dist.git duckuments-dist
 
 
-log=duckuments-dist/compilation.log
+log=~/logs/compilation.log
 automatic-compile:
 	git pull
-	#$(MAKE) clean
 	touch $(log)
 	echo "\n\nStarting" >> $(log)
 	date >> $(log)
-	$(MAKE) compile-slow
+	nice -n 10 $(MAKE) compile
 	echo "  succeded html " >> $(log)
 
 	-$(MAKE) upload
 	echo "  succeded html upload " >> $(log)
-	$(MAKE) compile-pdf-slow
+	nice -n 10 $(MAKE) compile-pdf
 	echo "  succeded PDF  " >> $(log)
 	-$(MAKE) upload
 	echo "  succeded PDF upload" >> $(log)
@@ -182,6 +177,9 @@ index:
 	#mcdp-render -D misc book_index
 	#cp misc/book_index.html duckuments-dist/index.html
 
+# pdoc=extra
+# --extra $(pdoc) \
+
 compile-html:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src $(src) \
@@ -193,6 +191,8 @@ compile-html:
 
 	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
 	python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
+	# rsync -aP $(pdoc) $(dist_dir)/duckiebook/pdoc
+
 
 compile-html-no-embed:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
@@ -206,7 +206,7 @@ compile-html-no-embed:
 	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
 	# python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
 	$(MAKE) split
-	
+
 compile-html-slow:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src $(src) \

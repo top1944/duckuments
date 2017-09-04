@@ -62,14 +62,32 @@ How to enter IPython:
 
 ## Images
 
-    add_header_to_image(image, s):  Add header to image
+[](python:duckietown_utils.add_header_to_image)
 
-    write_jpg_to_file(image, filename)
+```python
+# Add header to image
+add_header_to_image(image, s)
+```
 
-    make_images_grid
+[](python:duckietown_utils.write_jpg_to_file)
+
+```python
+write_jpg_to_file(image, filename)
+```
+
+[](python:duckietown_utils.make_images_grid)
+
+```python
+make_images_grid
+```
 
 
 ## Idioms
 
 
     segment_list = copy.deepcopy(segment_list)
+
+
+See: [add_duckietown_header](python:duckietown_utils.add_duckietown_header)
+
+See: [](python:duckietown_utils.download_if_not_exist)

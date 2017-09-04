@@ -17,8 +17,8 @@ Requires: Time: ??? days (average shipping time)
 
 Results: A kit of parts ready to be assembled in a Duckietown.
 
-Next Steps:
- [Assemblying](#duckietown-assembly) a Duckietown.
+Next Steps: [Assemblying](#duckietown-assembly) a Duckietown.
+
 </div>
 
 TODO: Figure out costs
