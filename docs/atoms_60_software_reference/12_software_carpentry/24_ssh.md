@@ -34,6 +34,7 @@ Create the directory with the right permissions:
 
     $ mkdir ~/.ssh
     $ chmod 0700 ~/.ssh
+    $ vim ~/.ssh/config
 
 Then add the following lines:
 
