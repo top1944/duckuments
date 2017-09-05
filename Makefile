@@ -86,12 +86,16 @@ duckuments-dist:
 
 
 log=~/logs/compilation.log
+automatic-compile-cleanup:
+	rm ~/lockfile
+	-killall -9 /home/duckietown/scm/duckuments/deploy/bin/python
+	$(MAKE) clean
 automatic-compile:
 	git pull
 	touch $(log)
 	echo "\n\nStarting" >> $(log)
 	date >> $(log)
-	nice -n 10 $(MAKE) compile
+	nice -n 10 $(MAKE) compile-slow
 	echo "  succeded html " >> $(log)
 
 	-$(MAKE) upload
