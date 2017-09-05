@@ -22,9 +22,11 @@ The simplest way to contribute to the documentation is to click any of the "✎"
 
 They link to the "edit" page in Github. There, one can make and commit the edits in only a few seconds.
 
+<!--
 ## Comments
 
 In the multiple-page version, each page also includes a comment box powered by a service called Disqus. This provides a way for people to write comments with a very low barrier. (We would periodically remove the comments.)
+-->
 
 ## Installing the documentation system {#installing-docs-system}
 
@@ -67,7 +69,7 @@ The command `--depth 100` tells it we don't care about the whole history.
 ### Setup the virtual environment
 
 Next, we will create a virtual environment using inside  the `~/duckuments`
-directory.
+directory. Make sure you are running Python 2.7.x. Python 3.x is not supported at the moment.
 
 Change into that directory:
 

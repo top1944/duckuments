@@ -4,8 +4,6 @@ Assigned: Shiying
 
 <div class='requirements' markdown="1">
 
-Resources necessary:
-
 Requires: Duckiebot `C1` parts. The acquisition process is explained in [](#acquiring-parts-c1).
 The configurations are described in [](#duckiebot-configurations).
 
@@ -84,9 +82,8 @@ Instructions:
 
 3. Power the PWM/Servo HAT and Pi connecting them to the battery with the cables included in the duckie box
 
-4. Power the DC/Stepper motor from the PWM/Servo HAT using the male-to-male cable in the duckie box, connect the positive 
+4. Power the DC/Stepper motor from the PWM/Servo HAT using the male-to-male cable in the duckie box, connect the positive
 
 5. connect the Pi to the board
 
 6. Finished!
-

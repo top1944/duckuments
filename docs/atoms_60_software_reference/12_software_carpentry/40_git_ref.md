@@ -102,4 +102,14 @@ Solution:
     $ git push --set-upstream origin ![branch name]
 
 ## `git` {#git}
+
 TODO: to write
+
+
+## `hub` {#hub}
+
+Install `hub` using the [instructions](https://hub.github.com/).
+
+Then you can create a pull request using:
+
+    $ hub pull-request

@@ -85,19 +85,22 @@ duckuments-dist:
 	git clone --depth 3 git@github.com:duckietown/duckuments-dist.git duckuments-dist
 
 
-log=duckuments-dist/compilation.log
+log=~/logs/compilation.log
+automatic-compile-cleanup:
+	rm ~/lockfile
+	-killall -9 /home/duckietown/scm/duckuments/deploy/bin/python
+	$(MAKE) clean
 automatic-compile:
 	git pull
-	#$(MAKE) clean
 	touch $(log)
 	echo "\n\nStarting" >> $(log)
 	date >> $(log)
-	$(MAKE) compile-slow
+	nice -n 10 $(MAKE) compile-slow
 	echo "  succeded html " >> $(log)
 
 	-$(MAKE) upload
 	echo "  succeded html upload " >> $(log)
-	$(MAKE) compile-pdf-slow
+	nice -n 10 $(MAKE) compile-pdf
 	echo "  succeded PDF  " >> $(log)
 	-$(MAKE) upload
 	echo "  succeded PDF upload" >> $(log)

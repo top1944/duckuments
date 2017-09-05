@@ -1,45 +1,85 @@
 # Autonomy architectures {#autonomy_architectures}
 
+
 Assigned: Andrea
+
+<div class='requirements' markdown="1">
+    
+</div>
 
 ## No robot is an island
 
-Note: just some notes
-
 Difference between a robot and a robotic system
 
-Components:
 
-- The robot
+Components of a robotic system:
 
-- The infrastructure
--
-The people:
+- The robot:
 
-The other machines:
+  - The hardware
+  - The software
 
 
-- The supervisor
-- The safety operator (e.g. safety driver)
+- The other robots
 
-Continuous integration and development
+- Other machines
 
-- The annotators
-- The servers for cloud learning
-- Regression tests
-- Quality control
+- The infrastructure:
+    - The network
+    - The power
 
-## What we have in Duckietown
+- The people, including:
 
-- A user interface
+  - The supervisor
+  - The safety operator (e.g. safety driver)
 
 
 
-## Contracts
+## Modern robotic development
+
+The old model of development:
+
+* design
+* product development
+* integration ("system integrators")
+* installation
+* support
+
+Characteristics of new model of development:
+
+- continuous feedback from the users
+- Learning from data, acquired by the robot
+- continuous integration
+- incremental updates
+
+## Example of a modern data pipeline
+
+(Example of an annotator-in-the-loop model.)
+
+As an example, consider the problem of creating an object
+detection system that learns from data.
+
+This system ([](#fig:modern-data)) could be represented as follows:
+
+1. Robot collects data
+2. Developers develop
+3. Models are learned in the cloud
+4. Regression tests in the cloud
+5. Failures are sent to the annotators
+6. The annotated data becomes part of the training set.
 
 
-    API: Types, messages
-    Latency, frequency
-    computation
-    semantics
-    reliability / probability
+<div figure-id="fig:modern-data">
+    <figcaption>Diagram for modern data-based pipeline</figcaption>
+    (annotation)
+</div>
+
+
+## Examples in Duckietown
+
+* A cloud-in-the-loop project is one of the projects available.
+
+
+## Trade-offs and design considerations
+
+### Centralized vs Distributed

@@ -38,8 +38,7 @@ At [this page](https://circleci.com/gh/duckietown) you can see the summary of th
 
 <div figure-id="fig:circleci">
     <figcaption>The CircleCi service dashboard, available at <a href="https://circleci.com/gh/duckietown">this page.</a></figcaption>
-    <img figure-caption="The CircleCI service" src='circleci-screenshot.png' style='width: 100%'/>
-    <img figure-caption="The CircleCI service" src='circleci-screenshot.png' style='width: 100%'/>
+    <img figure-caption="The CircleCI service" src='circleci-screenshot.png' style='width: 100%'/> 
 </div>
 
 ## How to make changes to `master`: pull requests

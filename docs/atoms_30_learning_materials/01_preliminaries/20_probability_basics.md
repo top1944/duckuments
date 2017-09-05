@@ -11,15 +11,17 @@ The key underlying concept in probabilistic theory is that of an *event*, which 
 A  (either discrete or continuous) variable that can take on any value that corresponds to the feasible output of a random trial.
 \end{definition}
 
-For example, we could model the event of flipping a fair coin with the random variable $X$. We write the probability that $X$ takes $HEADS$ as $p(X=HEADS)$. The set of all possible values for the variable $X$ is its *domain*, $\mathcal{X}$. In this case,
+
+
+For example, we could model the event of flipping a fair coin with the random variable $X$. We write the probability that $X$ takes $HEADS$ as $p(X=HEADS)$. The set of all possible values for the variable $X$ is its *domain*, $\aset{X}$. In this case,
 \[
-    \mathcal{X}=\{HEADS,TAILS\}.
+    \aset{X}=\{HEADS,TAILS\}.
 \]
      Since $X$ can only take one of two values, it is a *binary* random variable. In the case of a die roll,
 \[
-    \mathcal{X}=\{1,2,3,4,5,6\},
+    \aset{X}=\{1,2,3,4,5,6\},
 \]
-and we refer to this as a *discrete* random variable. If the output is real value or a subset of the real numbers, e.g., $\mathcal{X} = \mathbb{R}$, then we refer to $X$ as a *continuous* random variable.
+and we refer to this as a *discrete* random variable. If the output is real value or a subset of the real numbers, e.g., $\aset{X} = \reals$, then we refer to $X$ as a *continuous* random variable.
 
 <div class="comment" markdown="1">
 Personally, I don't like using math formatting for letters or words that don't denote symbols, e.g., $X = HEADS$ v.s. $X= \text{HEADS}$ - MW
@@ -33,13 +35,13 @@ Consider once again the coin tossing event. If the coin is fair, the have $p(X=H
 
 Here are some very important properties of $p(x)$:
 - $0\leq p(x) \leq (1)$
-- $\sum_{x\in\mathcal{X}}=1$
+- $\sum_{x\in\aset{X}}=1$
 
 
 In the case of a continuous random variable, we will call this function $f(x)$ and call it a *probability density function*, or pdf.
 
 
-In the case of continuous RVs, technically the $p(X=x)$ for any value $x$ is zero since $\mathcal{X}$ is infinite. To deal with this, we also define another important function, the *cumulative density function*, which is given by $F(x) \triangleq p(X\leq x)$, and now we can define $f(x) \triangleq \frac{d}{dx}F(x)$. A pdf and corresponding cdf are shown in [](#fig:pdf_cdf) (This happens to be a Gaussian distribution, defined more precisely in [](#gaussian).).
+In the case of continuous RVs, technically the $p(X=x)$ for any value $x$ is zero since $\aset{X}$ is infinite. To deal with this, we also define another important function, the *cumulative density function*, which is given by $F(x) \triangleq p(X\leq x)$, and now we can define $f(x) \triangleq \frac{d}{dx}F(x)$. A pdf and corresponding cdf are shown in [](#fig:pdf_cdf) (This happens to be a Gaussian distribution, defined more precisely in [](#gaussian).).
 
 <div figure-id="fig:pdf_cdf" figure-caption="The continuous pdf and cdf">
   <img src="pdf_cdf.svg" style='width: 30em'/>
@@ -47,7 +49,7 @@ In the case of continuous RVs, technically the $p(X=x)$ for any value $x$ is zer
 
 ### Joint Probabilities {#joint}
 
-If we have two different RVs representing two different events $X$ and $Y$, then we represent the probability of two distinct events $x \in \mathcal{X}$ and $y \in \mathcal{Y}$ both happening, which we will denote as following: $p(X=x \; \text{AND} \; Y=y) = p(x,y)$. The function $p(x,y)$ is called *joint distribution*.
+If we have two different RVs representing two different events $X$ and $Y$, then we represent the probability of two distinct events $x \in \aset{X}$ and $y \in \mathcal{Y}$ both happening, which we will denote as following: $p(X=x \; \text{AND} \; Y=y) = p(x,y)$. The function $p(x,y)$ is called *joint distribution*.
 
 ### Conditional Probabilities {#conditional}
 
@@ -162,15 +164,15 @@ Is there a discussion of graphical models anywhere? Doing a good job of sufficie
 The $n$th moment of an RV, $X$, is given by $E[X^n]$ where $E[]$ is the expection operator with:
 
 \[
-   E[f(X)] = \sum_\mathcal{X} xf(x)
+   E[f(X)] = \sum_{\aset{X}} x \, f(x)
 \]
 in the discrete case and
 \[
-   E[f(X)] = \int xf(x) dx
+   E[f(X)] = \int x\, f(x) dx
 \]
 in the continuous case.
 
-The 1st moment is the *mean*, $\mu_X=E[X}$.
+The 1st moment is the *mean*, $\mu_X=E[X]$.
 
 The $n$th central moment of an RV, $X$ is given by $E[(X-\mu_X)^n]$. The second central moment is called the *covariance*, $\sigma^2_X=E[(X-\mu_X)^2]$.
 

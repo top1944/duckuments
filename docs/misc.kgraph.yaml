@@ -1,0 +1,60 @@
+# These are the concepts
+# In the text, they are referred to with prefix k:
+
+k:time-series:
+    name: Time series
+    desc: Understanding of what is a time series.
+
+k:time-series-upsampling:
+    name: Time series up sampling
+    desc:
+
+k:time-series-downsampling:
+    name: Time series down-sampling
+    desc:
+
+k:latency:
+    name: Latency
+    desc: Understanding of what is the latency of a signal from source to sink.
+
+k:frequency:
+    name: Frequency
+    desc: Understanding of what is the frequency (or equivalently, period) of a signal.
+
+k:jitter:
+    name: Jitter
+    desc:
+
+k:event-based-signal-processing:
+    name: Event-based signal processing
+    desc: How to process signals in an event-based fashion.
+
+k:code-reusability:
+    name: Code reusability
+    desc: The idea that it is good to reuse code.
+
+k:code-abstraction:
+    name: Code abstraction
+    desc: The idea that it is good to abstract functionality behind interfaces
+
+k:code-encapsulation:
+    name:
+    desc:
+
+k:natural-numbers:
+
+k:integers:
+
+k:reals:
+
+k:controller:
+
+k:sensor:
+
+k:vector:
+
+k:linear-algebra-basics:
+    includes:
+    - k:vector
+    - k:matrix
+    - k:vector-matrix

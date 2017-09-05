@@ -4,21 +4,32 @@ Assigned: Andrea
 
 This section describes information specific for ETH Zürich students.
 
-TODO: to write
-
 ### Website
 
 All really important information, such as deadlines, is in the
-authoritative website: XXX
+authoritative website
 
 ### Duckiebox distribution
 
-TODO: to write
+The point of contact for Duckiebox distribution is  Shiying Li.
 
 ### Lab access
 
-TODO: To write
+The local Duckietown room is ML J 44.???
 
-### The local TAs
+TODO: opening hours
 
-TODO: to write
+### The local staff
+
+These are the local TAs:
+
+- Shiying Li (shili@student.ethz.ch)
+- Ercan Selçuk (ercans@student.ethz.ch)
+- Miguel de la Iglesia Valls (dmiguel@student.ethz.ch)
+- Khurana Harshit (hkhurana@student.ethz.ch)
+- Lapandic Dzenan (ldzenan@student.ethz.ch)
+- Marco Erni (merni@ethz.ch)
+
+Please contact them on Slack, rather than email.
+
+Also feel free to contact the TAs in Montreal and Chicago.

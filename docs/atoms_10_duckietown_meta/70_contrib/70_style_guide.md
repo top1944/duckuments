@@ -46,6 +46,13 @@ The following holds for all technical writing.
 
 ## Style guide for the Duckietown documentation
 
+- The English version of the documentation is written in American English. Please note that your spell checker might be set to British English.
+
+Bad: behaviour
+Better: behavior
+
+Bad: localisation
+Better: localization
 
 
 - It's ok to use "it's" instead of "it is", "can't" instead of "cannot", etc.
