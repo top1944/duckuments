@@ -75,6 +75,9 @@ There are situations where sometimes you prefer to lose packets.
 
 Assumes: k:udp, k:tcp
 
+### Latency
+
+See: [Latency numbers every programmer should know](https://people.eecs.berkeley.edu/~rcs/research/interactive_latency.html)
 
 
 ## In Duckietown

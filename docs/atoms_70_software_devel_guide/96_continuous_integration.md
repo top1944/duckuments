@@ -18,10 +18,10 @@ If the tests do not pass, then we say that we have "broken the build".
 
 We also say that a branch is "green" if the tests pass, or "red" otherwise.
 
-At all times, you can see this
-as a green dot in different places on Github ([](#fig:green-dot)).
+If you use the Chrome extension [Pointless](https://github.com/felicianotech/pointless),
+you will see a green dot in different places on Github to signify the status of the build ([](#fig:green-dot)).
 
-<img  figure-id="fig:green-dot" figure-caption="The green dot is good." src='green-dot.png' style='width:12em'/>
+<img figure-id="fig:green-dot" figure-caption="The green dot is good." src='green-dot.png' style='width:12em'/>
 
 ## How to stay in the green
 
@@ -38,7 +38,7 @@ At [this page](https://circleci.com/gh/duckietown) you can see the summary of th
 
 <div figure-id="fig:circleci">
     <figcaption>The CircleCi service dashboard, available at <a href="https://circleci.com/gh/duckietown">this page.</a></figcaption>
-    <img figure-caption="The CircleCI service" src='circleci-screenshot.png' style='width: 100%'/> 
+    <img figure-caption="The CircleCI service" src='circleci-screenshot.png' style='width: 100%'/>
 </div>
 
 ## How to make changes to `master`: pull requests
