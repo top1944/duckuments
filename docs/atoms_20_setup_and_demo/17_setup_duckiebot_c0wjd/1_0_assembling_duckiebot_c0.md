@@ -22,33 +22,36 @@ Results:  An assembled Duckiebot in configuration `C0+wjd`.
 ## Part A - Assembling the car - bottom part
 
 
-Open the Duckiebox package (magician chassis – DG007), and you won’t need them all. Take out the following materials:
+Open the Duckiebox package (magician chassis DG007), and you won’t need them all. Take out the following materials:
 
 * Chassis-bottom, Chassis-up (1+1 pieces)
 * Motor (2 pieces), motor holders (4 pieces)
 * Wheels (2 pieces), Omni wheel (1 pieces)
 * all Spacers and screw inside of the packages. Screwdriver (1x)
 
+
 <div figure-id="fig:duckiebot_components" figure-caption="Components in Duckiebot package.">
-     <img src="duckiebot_components.png" style='width: 15em'/>
+    <img src="duckiebot_components.png" style='width: 15em'/>
 </div>
 
-_**Note**: You won’t need the battery holder and speed board holder (on the right side). Ignore the speed board holder in the image._
+_**Note**: You will not need the battery holder and speed board holder (on the right side). Ignore the speed board holder in the image._
 
 <br/><br/>
 
 ### Motor + chassis bottom
 Insert motor holders on the chassis-bottom and put the motors as below (with the longest screws M3*30 and M3 nuts). Ignore the speed board holder in the image.
 
-<div figure-id="fig:motors" figure-caption=" Components for mounting the motor">
-     <img src="motors.jpg" style='width: 15em'/>
+
+<div style="float: left;" figure-id="fig:motors" figure-caption="Components for mounting the motor">
+    <img src="motors.jpg" style='width: 15em'/>
 </div>
 
-<div figure-id="fig:scratch_motors" figure-caption=" ">
-     <img src="scratch_motors.png" style='width: 15em'/>
+<div style="float: right;" figure-id="fig:scratch_motors" figure-caption="The scratch of motors" >
+    <img src="scratch_motors.png" style='width: 15em'/>
 </div>
 
-<div figure-id="fig:motors1" figure-caption=" ">
+
+<div figure-id="fig:motors1" figure-caption="Assembled motors, make sure the orientation of the motors">
      <img src="motors1.jpg" style='width: 15em'/>
 </div>
 
@@ -61,11 +64,11 @@ _**Note 2**: if your Magician Chassis package has unsoldered motor wires, you wi
 ### Assemble the wheels
 Plug in the wheels to the motor as follows (no screws needed):
 
-<div figure-id="fig:scratch_wheels" figure-caption=" ">
+<div figure-id="fig:scratch_wheels" figure-caption="The scratch of wheels">
      <img src="scratch_wheels.png" style='width: 15em'/>
 </div>
 
-<div figure-id="fig:wheels" figure-caption=" ">
+<div figure-id="fig:wheels" figure-caption="Assembled wheels">
      <img src="wheels.jpg" style='width: 15em'/>
 </div>
 
@@ -73,11 +76,11 @@ Plug in the wheels to the motor as follows (no screws needed):
 
 ### Assemble the omni wheels
 
-<div figure-id="fig:scratch_omni" figure-caption=" ">
+<div figure-id="fig:scratch_omni" figure-caption="The scratch of omni wheel">
      <img src="scratch_omni.png" style='width: 15em'/>
 </div>
 
-<div figure-id="fig:omni" figure-caption=" ">
+<div figure-id="fig:omni" figure-caption="Assembled omni wheel">
      <img src="omni.jpg" style='width: 15em'/>
 </div>
 
