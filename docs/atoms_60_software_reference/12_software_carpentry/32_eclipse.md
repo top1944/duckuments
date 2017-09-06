@@ -19,7 +19,7 @@ Think about how long would it take to do it without an IDE.
 
 In addition to LiClipse, the one that is suggested for this class,
 there exist:
-    
+
 * PyCharm
 * Eclipse
 
@@ -113,3 +113,10 @@ It should autocomplete to `what_the_duck`. Press enter; it should jump to the fi
 
 
 </col3>
+
+## Other configuration for Liclipse
+
+From the "Preferences" section:
+
+* Get rid of the minimap on the right.
+* Get rid of spellchecking.
