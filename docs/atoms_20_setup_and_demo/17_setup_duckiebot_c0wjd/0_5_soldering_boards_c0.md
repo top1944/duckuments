@@ -1,5 +1,7 @@
 # Soldering boards for `C0` {#soldering-boards-c0}
 
+General rule in soldering: soldering the components according to the height of components - from lowest to highest 
+
 Assigned: Shiying
 
 <div class='requirements' markdown="1">
@@ -16,49 +18,55 @@ TODO: finish above
 </div>
 
 
-##  DC/Stepper Motor Hat
-([adafruit directions](https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi/assembly))
 
-Parts:
+##  Soldering on DC/Stepper Motor HAT 
+[how to solder on Headers and Terminal Block](https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi/assembly)
+
+In this step you will need the following parts from the duckiebox: 
 
 - [GPIO Stacking Header](http://adafru.it/2223) for A+/B+/Pi 2
 - [Adafruit](http://adafru.it/2348) DC and Stepper Motor HAT for Raspberry Pi - Mini Kit
 
+### Preparing the components
+Take the GPIO stacking header out of duckiebox and sort the following components from Mini Kit:
 
-<img src="image_0.jpg" style='width: 20ex; height: auto'/>
+* Adafruit DC/Stepper Motor HAT for Raspberry Pi
+* 2-pin terminal block (2x), 3-pin terminal block (1x)
 
-<img src="image_1.jpg" style='width: 20ex; height: auto'/>
+<div figure-id="fig:GPIO_Stacking_Header" figure-caption="GPIO_Stacking_Header">
+     <img src="GPIO_Stacking_Header.jpg" style='width: 20ex; height: auto'/>
+</div>
+<div figure-id="fig:DC/Stepper_HAT" figure-caption="DC/Stepper Motor HAT and solder components">
+    <img src="DC_stepper_HAT.jpg" style='width: 20ex; height: auto'/>
+</div>
 
-Instructions:
+
+
+### Soldering instructions
 
 1. Make a 5 pin terminal block by sliding the included 2 pin and 3 pin terminal blocks into each other.
 
-<img src="image_2.jpg" style='width: 20ex; height: auto'/>
+<div figure-id="fig:terminal_block" figure-caption="5 pin terminal_block">
+   <img src="terminal_block.jpg" style='width: 20ex; height: auto'/>
 
+</div>
 
-2. Slide this 5 pin block through the holes just under "M1 GND M2" on the board. Solder it on (we only use two motors and do not need connect anything at the "M3 GND M4" location)
+2. Slide this 5 pin block through the holes just under "M1 GND M2" on the board. Solder it on (we only use two motors and do not need connect anything at the "M3 GND M4" location) ([](#figure:upview_Stepper_Motor))
 
 3. Slide a 2 pin terminal block into the corner for power. Solder it on.
+([](#figure:sideview_terminal))
 
-4. Slide in the GPIO Stacking Header onto the 2x20 grid of holes on the edge opposite opposite the terminal blocks. Solder it on.
+4. Slide in the GPIO Stacking Header onto the 2x20 grid of holes on the edge opposite the terminal blocks and with vice versa direction ([](#figure:GPIO_HAT_orientation)). Solder it on.
 
-## 16-channel PWM/Servo HAT
-([adafruit directions](https://learn.adafruit.com/adafruit-16-channel-pwm-servo-hat-for-raspberry-pi/))
+Note: stick the GPIO Stacking Header from bottom to top, different orientation than terminal blocks (from top to bottom). 
 
-Parts:
+<div figure-id="fig:GPIO_HAT_orientation" figure-caption=" ">
+   <img src="GPIO_HAT_orientation.jpg" style='width: 20ex; height: auto'/>
+</div>
+<div figure-id="fig:sideview_terminal" figure-caption="Side view of finished soldering DC/Stepper Motor HAT">
+   <img src="sideview_Stepper_HAT.jpg" style='width: 20ex; height: auto'/>
+</div>
+<div figure-id="fig:upview_Stepper_Motor" figure-caption="upside view of finished soldering DC/Stepper Motor HAT">
+   <img src="upview_stepper_Motor.jpg" style='width: 20ex; height: auto'/>
+</div>
 
-- [GPIO Stacking Header](http://adafru.it/2223) for A+/B+/Pi 2
-- [Adafruit](http://adafru.it/2327) 16-Channel PWM / Servo HAT for Raspberry Pi - Mini Kit
-
-<img src="image_3.jpg" style='width: 20ex; height: auto'/>
-
-<img src="image_4.jpg" style='width: 20ex; height: auto'/>
-
-
-Instructions
-
-1. Solder the GPIO Stacking Header at the top of the board, where the 2x20 grid of holes is located.
-
-2. Solder the 2 pin terminal block next to the power cable jack
-
-3. Solder the four 3x4 headers onto the edge of the HAT, below the words "Servo/PWM Pi HAT!"
