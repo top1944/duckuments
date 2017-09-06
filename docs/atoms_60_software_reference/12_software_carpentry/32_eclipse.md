@@ -5,7 +5,7 @@
 
 To be productive in coding, you need to have a proper IDE.
 
-Look at how quickly you can create Python files by using an IDE ([](#fig:eclipse)).
+Look at how quickly you can create Python files by using an IDE ([](#fig:eclipse-capability)).
 In this case, the editor is importing the required symbols.
 Think about how long would it take to do it without an IDE.
 
@@ -19,7 +19,7 @@ Think about how long would it take to do it without an IDE.
 
 In addition to LiClipse, the one that is suggested for this class,
 there exist:
-    
+
 * PyCharm
 * Eclipse
 
@@ -113,3 +113,14 @@ It should autocomplete to `what_the_duck`. Press enter; it should jump to the fi
 
 
 </col3>
+
+## Other configuration for Liclipse
+
+From the "Preferences" section, it's suggested to:
+
+* Get rid of the minimap on the right.
+* Get rid of spellchecking.
+
+
+Then, there is the issue of "code completion". This is a love-it-or-hate-it
+issue. The choice is yours. 

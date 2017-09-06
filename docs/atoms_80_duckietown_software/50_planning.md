@@ -6,7 +6,7 @@ TODO: add video here
 
 The packages involved in this functionality are:
 
-- <a class="number_name" href="#localization"/>
+- <a class="number_name" href="#sec:localization"/>
 - <a class="number_name" href="#duckietown_description"/>
 
 
