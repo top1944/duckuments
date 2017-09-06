@@ -5,7 +5,7 @@
 
 To be productive in coding, you need to have a proper IDE.
 
-Look at how quickly you can create Python files by using an IDE ([](#fig:eclipse)).
+Look at how quickly you can create Python files by using an IDE ([](#fig:eclipse-capability)).
 In this case, the editor is importing the required symbols.
 Think about how long would it take to do it without an IDE.
 
