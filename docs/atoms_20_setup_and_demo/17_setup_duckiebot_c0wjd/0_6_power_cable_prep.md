@@ -111,4 +111,5 @@ If you have soldered the boards already, you may test correct functionality of t
      <img src="final-result-power-c0.jpg" style='width: 15em'/>
 </div>
 
+Comment: We need to test this on a working Duckiebot. -JT
 If the green LED turns on, the DC motor HAT is receving power.
