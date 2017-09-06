@@ -1,6 +1,6 @@
 # Assembling the Duckiebot `C0` {#assembling-duckiebot-c0}
 
-Assigned: Shiying 
+Assigned: Shiying
 
 Point of contact: Shiying Li
 
@@ -25,7 +25,7 @@ Results:  An assembled Duckiebot in configuration `C0+wjd`.
 
 </div>
 
-Comment: add "next step(s)" as a standard field in the requirements class? -JT 
+Comment: add "next step(s)" as a standard field in the requirements class? -JT
 
 ## Chassis
 
@@ -81,11 +81,11 @@ Plug in the wheels to the motor as follows (no screws needed):
 
 ### Omnidirectional wheel
 
-The Duckiebot is driven by controlling the wheels attached to the DC motors. Still, it requires a "passive" omnidirectional wheel on the back. 
+The Duckiebot is driven by controlling the wheels attached to the DC motors. Still, it requires a "passive" omnidirectional wheel on the back.
 
-If you have purchased the optional caster wheel, read on to the next section. 
+If you have purchased the optional caster wheel, read on to the next section.
 
-The Magician chassis package contains a steel omnidirectional wheel, and the related standoffs and screws to secure it to the chassis-bottom part.  
+The Magician chassis package contains a steel omnidirectional wheel, and the related standoffs and screws to secure it to the chassis-bottom part.
 
 <div figure-id="fig:scratch_omni" figure-caption="The scratch of omni wheel">
      <img src="scratch_omni.png" style='width: 30em'/>
@@ -132,7 +132,7 @@ Materials:
 
 ### Raspberry Pi
 
-The first step is to fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on the opposite side of the chassis-up. 
+The first step is to fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on the opposite side of the chassis-up.
 
 <div figure-id="fig:Raspberry_pi3" figure-caption=" ">
      <img src="RPi_3.jpg" style='width: 30em'/>
@@ -153,12 +153,12 @@ The first step is to fasten the nylon standoffs on the Raspberry Pi, and secure 
 
 #### Micro SD card
 
-Requires: Having the Duckiebot image copied in the Micro SD card. 
+Requires: Having the Duckiebot image copied in the Micro SD card.
 
 Take the Micro SD card from the Duckiebox and insert its slot on the Raspberry Pi. The SD card slot is just under the display port, on the short side of the PI, on the flipside of where the header pins are.
 
 <div figure-id="fig:microsdcard" figure-caption="The Micro SD card.">
-     <img src="placeholder.jpg" style='width: 30em'/>
+    <img src="placeholder.jpg" style='width: 30em'/>
 </div>
 
 ### Camera

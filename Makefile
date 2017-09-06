@@ -193,6 +193,7 @@ compile-html:
 		-o $(tmp_files) \
 		--output_file $(out_html).tmp -c "config echo 1; config colorize 1; rparmake"
 
+	python -m mcdp_utils_xml.note_errors_inline $(out_html).tmp
 	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
 	python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
 	# rsync -aP $(pdoc) $(dist_dir)/duckiebook/pdoc
@@ -207,6 +208,7 @@ compile-html-no-embed:
 		-o $(tmp_files) \
 		--output_file $(out_html).tmp -c "config echo 1; config colorize 1; rparmake"
 
+	python -m mcdp_utils_xml.note_errors_inline $(out_html).tmp
 	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
 	# python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
 	$(MAKE) split
@@ -220,6 +222,7 @@ compile-html-slow:
 		-o $(tmp_files) \
 		--output_file $(out_html).tmp -c "config echo 1; config colorize 0; rmake"
 
+	python -m mcdp_utils_xml.note_errors_inline $(out_html).tmp
 	python -m mcdp_docs.add_edit_links $(out_html).localcss.html < $(out_html).tmp
 	python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
 
