@@ -31,7 +31,11 @@ Exteroceptive and proprioceptive sensor measurements are noisy, the models that 
 
 ## Robot Representations
 
-The state of the robot typically includes its *pose* $\pose$, a representation that expresses the robot's position and orientation with respect to a fixed global coordinate frame commonly referred to as the "world frame". For rigid-body robots that operate in a plane ($\mathbb{R}^2$), the pose $\pose \in \SEtwo$ consists of the Cartesian coordinates $(x,y)$ that specify the robot's position and the angle $\theta$ that defines it's orientation (yaw). For robots in $\mathbb{R}^3$, including some ground platforms, aerial vehicles, and underwater vehicles, the pose $\pose \in \SEthree$ consists of three Cartesian coordinates $(x, y, z)$ for position, and three Euler angles $\phi, \theta, \psi$ that specify rotation orientation.
+ToDo: Discuss conventions
+
+The state of the robot typically includes its *pose* $\pose$, which specifies the position and orientation of a coordinate frame affixed to the robot to a fixed global coordinate frame commonly referred to as the "world frame". The pose then defines the rigid-body [rigid-body transformation](#transformations) between the two reference frames.
+
+For rigid-body robots that operate in a plane ($\mathbb{R}^2$), the pose $\pose \in \SEtwo$ consists of the Cartesian coordinates $(x,y)$ that specify the robot's position and the angle $\theta$ that defines it's orientation (yaw). For robots in $\mathbb{R}^3$, including some ground platforms, aerial vehicles, and underwater vehicles, the pose $\pose \in \SEthree$ consists of three Cartesian coordinates $(x, y, z)$ for position, and three Euler angles $\phi, \theta, \psi$ that specify rotation orientation.
 
 <div figure-id="fig:robot_pose_2d" figure-caption="The pose of a robot operating in a two-dimensional world.">
   <img src="robot_pose_2d.pdf" style='width: 20em; height:auto'/>
@@ -51,7 +55,7 @@ Discuss specific robot state representation for Duckietown.
 
 ## Environment Representations
 
-There are two standard metric representations of the robot's environment that are commonly used. These include occupancy grid maps and feature-based representations. Occupancy grid maps discretize the world into a set of grid cells (in 2D) and voxels (3D). Associated with each cell is its Cartesian coordinates in the global "world frame", $(x,y)$ in $\mathbb{R}^2$ and $(x,y,z)$ in $\mathbb{R}^3$, and a binary label that indicates whether the cell is occupied, where a value of one denotes that the cell is occupied. Feature-based models constitute the second commonly used environment representation. Feature-based representations model the environment as a collection of landmarks, and parameterize each in terms of the landmark's  position ($(x,y)$ or $(x,y,z)$ in $\mathbb{R}^2 and $\mathbb{R}^3$, respectively) and possibly its orientation.
+The two most commonly used metric representations of the robot's environments are occupancy grid models and feature-based representations. Occupancy grid representations discretize the world into a set of grid cells. Associated with each cell are its Cartesian coordinates in a global reference frame, $(x,y)$ in $\mathbb{R}^2$ and $(x,y,z)$ in $\mathbb{R}^3$, and a binary label that indicates whether the cell is occupied, where a value of one denotes that the cell is occupied. Feature-based models constitute the second commonly used environment representation. Feature-based representations model the environment as a collection of landmarks, and parameterize each in terms of the landmark's  position ($(x,y)$ or $(x,y,z)$ in $\mathbb{R}^2 and $\mathbb{R}^3$, respectively) and possibly its orientation.
 
 
 Discuss:

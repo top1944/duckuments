@@ -16,13 +16,13 @@ Because the ability of _naming_ or specifying a point in space is so fundamental
 
 ### 1D
 
-Consider the real number line $\mathbb{R}$ as the space $S$. We can name an arbitrary point $x \in \mathbb{R}$, which happens to be a real number, by itself. So to check with our definition, any two distinct points on the real line would have two distinct coordinates. Furthermore any point has a coordinate. Let's call this coordinate system $A$.
+Consider the real number line $\reals$ as the space $S$. We can name an arbitrary point $x \in \reals$, which happens to be a real number, by itself. So to check with our definition, any two distinct points on the real line would have two distinct coordinates. Furthermore any point has a coordinate. Let's call this coordinate system $A$.
 
-One should note that the coordinate system given above is not the only possible way to name the points on a real line. We can assign coordinate $-x$ to the point $x \in \mathbb{R}$ and obtain an equally valid coordinate system $B$. To be more specific, given a point $p$ with the coordinate $a$ in the first coordinate system $A$, we know that in the second coordinate system $B$, $p$ would have the coordinate $-a$. Therefore, there is a way to translate between coordinates in the two systems.
+One should note that the coordinate system given above is not the only possible way to name the points on a real line. We can assign coordinate $-x$ to the point $x \in \reals$ and obtain an equally valid coordinate system $B$. To be more specific, given a point $p$ with the coordinate $a$ in the first coordinate system $A$, we know that in the second coordinate system $B$, $p$ would have the coordinate $-a$. Therefore, there is a way to translate between coordinates in the two systems.
 
 ### 2D plane
 
-Consider the real plane $\mathbb{R}^2$ as the space $S$. This is an important space within robotics and beyond. It can be used to represent images, with each pixel having its own position, or the location of your Duckiebot in Duckietown.
+Consider the real plane $\reals^2$ as the space $S$. This is an important space within robotics and beyond. It can be used to represent images, with each pixel having its own position, or the location of your Duckiebot in Duckietown.
 
 #### 2D Cartesian coordinate systems
 
