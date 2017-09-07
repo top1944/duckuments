@@ -1,5 +1,6 @@
-
 # Matrices and vectors {#mats-and-vecs}
+
+Assigned: Jacopo
 
 - matrix-vector product
 
@@ -13,10 +14,9 @@
 - Null space
 - Range/image
 
-
 ### Eigenvalues and Eigenvectors {#eigen}
 
 - for square matrices
 - for rectangular matrices (topic for advanced-linear-algebra?)
 
-### Properties of Matrices {#matrix-properties}
+- condition number of a matrix (?)

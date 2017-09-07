@@ -1,5 +1,3 @@
-
-
 # Matrix diagonalization
 
 - singular value decomposition SVD (topic for advanced-linear-algebra?)
