@@ -181,8 +181,6 @@ index:
 	#mcdp-render -D misc book_index
 	#cp misc/book_index.html duckuments-dist/index.html
 
-# pdoc=extra
-# --extra $(pdoc) \
 
 compile-html:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
@@ -196,7 +194,7 @@ compile-html:
 	python -m mcdp_utils_xml.note_errors_inline $(out_html).tmp
 	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
 	python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
-	# rsync -aP $(pdoc) $(dist_dir)/duckiebook/pdoc
+
 
 
 compile-html-no-embed:
