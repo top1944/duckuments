@@ -56,7 +56,7 @@ On Ubuntu 16.04, these are the dependencies to install:
 
 Download the `duckietown/duckuments` repository in the `~/duckuments` directory:
 
-    $ git lfs clone --depth 100 git@github.com:duckietown/duckuments duckuments-on-ext4
+    $ git lfs clone --depth 100 git@github.com:duckietown/duckuments ~/duckuments
 
 Here, note we are using `git lfs clone` -- it's much faster, because it downloads
 the Git LFS files in parallel.
