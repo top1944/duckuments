@@ -6,7 +6,7 @@ Note: This chapter describes something that is not implemented yet.
 
 ### Atoms
 
-\begin{definition}[Atom]\label{def:atom}
+\begin{definition}[Atom]\label{def:an-atom}
 An *atom* is a concrete resource (text, video) that is the smallest
 unit that is individually addressable. It is indivisible.
 \end{definition}
