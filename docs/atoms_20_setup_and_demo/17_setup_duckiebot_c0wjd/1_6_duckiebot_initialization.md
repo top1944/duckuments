@@ -5,7 +5,7 @@ Assigned: Andrea
 
 <div class='requirements' markdown="1">
 
-Requires: An SD card of dimensions at least ??? GB.
+Requires: An SD card of dimensions at least 16 GB.
 
 Requires: A computer with an internet connection, an SD card reader, and 35 GB of free space.
 
