@@ -309,7 +309,7 @@ Make the user a member of the group `input` and `i2c`
 
 Set the shell `bash`:
 
-    duckiebot $ sudo chsh -s /bin/bash andrea
+    duckiebot $ sudo chsh -s /bin/bash ![username]
 
 
 To set a password, use:
