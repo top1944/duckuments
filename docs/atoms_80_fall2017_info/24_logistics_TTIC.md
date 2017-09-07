@@ -27,5 +27,5 @@ Duckietown labs will take place in the XXX conference room.
 Duckietown is a collaborative effort involving close interaction among students, TAs, mentors, and faculty across several institutions. The local TAs at TTIC are:
 
 * Andrea F. Daniele (afdaniele@ttic.edu)
-* Falcon Dai (dai@tticedu)
+* Falcon Dai (dai@ttic.edu)
 * Jon Michaux (jmichaux@ttic.edu)
