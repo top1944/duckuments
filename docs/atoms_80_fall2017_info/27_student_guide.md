@@ -112,7 +112,7 @@ See: [](#setup-laptop)
 Running things in a virtual machine is possible, but **not supported**.
 
 This means that while there is a way to make it work (in fact,
-Andrea develops in a VMWare virtual machine on OS X), but
+Andrea develops in a VMWare virtual machine on OS X), 
 we cannot guarantee that the instructions will work on a virtual machine,
 and, most importantly, the TAs will *not* help you debug those problems.
 
