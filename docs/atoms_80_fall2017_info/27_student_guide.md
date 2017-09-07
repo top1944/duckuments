@@ -6,20 +6,27 @@
 Choo choo! Welcome aboard! We are so happy you are joining us at Duckietown Online!
 
 ### Slack
-The primary mode of online communication between staff and students is through Slack - a team communication forum that allows the community to collaborate in making Duckietown awesome. Download the app to your computer and leave it open (you'll need it!) If you have not recieved an invite to Slack you need to send a request to akbowser@gmail.com. NOTE: Emails are otherwise forbidden, unless they relate to a private, university-based concern.
+The primary mode of online communication between staff and students is through Slack - a team communication forum that allows the community to collaborate in making Duckietown awesome. Download the app to your computer and leave it open (you'll need it!) If you have not recieved an invite to Slack you need to send a request to akbowser@gmail.com. 
+NOTE: Emails are otherwise forbidden, unless they relate to a private, university-based concern.
+
 
 When you accept your Slack invite please follow these rules:
+
 
 username = last name
 first name = first name
 last name = last name (institution/location)
 
+
 Here is an example. Andrea Censi from ETHZ is '@censi'. His name is 'Andrea Censi (ETHZ)'
+
 
 Check out all the channels in Slack and add yourself to those that pertain or interest you. Be sure to introduce yourself in the General channel. Please add a picture and don't forget to modify your settings to prevent email notifications, they are annoying and defeat the purpose of the communications forum.
 
+
 ### Github
 The next thing you need to do is provide Duckietown HR (Kirsten Bowser) with your git username via Slack. If you don't already have a github account follow these steps:
+
 
 1) Sign up for GitHub https://github.com/
 
@@ -29,10 +36,10 @@ The next thing you need to do is provide Duckietown HR (Kirsten Bowser) with you
 
 4) Your invite should be waiting for you at https://github.com/duckietown
 
-### Google Documents
-We need a Google-compatible email address so that you can view all the necessary Google Docs and Sheets. Send yours to Duckietown HR via (you guessed it!) Slack.
+
 
 If you experience any difficulties don't hesitate to contact Duckietown HR on the #help-accounts channel. 
+
 
 TLDR: Follow naming guidelines in Slack, send github username and gmail address to Duckietown HR via Slack. NO EMAILS.
 
