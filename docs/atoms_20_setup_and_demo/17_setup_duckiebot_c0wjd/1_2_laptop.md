@@ -10,7 +10,7 @@ Requires: A laptop with free disk space.
 
 Requires: Internet connection to download the Ubuntu image.
 
-Requires: About ??? minutes.
+Requires: About 30 minutes.
 
 Results: A laptop ready to be used for Duckietown.
 
