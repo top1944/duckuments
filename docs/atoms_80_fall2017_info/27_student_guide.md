@@ -1,6 +1,6 @@
 # Student guide
 
-## How to get help, how to check and report your progress {#org-sheets}
+## The organization spreadsheet {#org-sheets}
 
 Please familiarize yourself with [this spreadsheet][sheets] and bookmark it
 in your browser.
