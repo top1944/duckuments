@@ -91,9 +91,9 @@ See: [](#part:building-duckiebot)
 
 Point of Contact: Shiying (ETH)
 
-Point of Contact: TBD (UdeM)
+Point of Contact: ??? (UdeM)
 
-Point of Contact: TBD (TTIC)
+Point of Contact: ??? (TTIC)
 
 As you read the instructions, keep open the Duckuments source, and note any
 discrepancies. You must note any unexpected thing that is not predicted from the
@@ -126,7 +126,7 @@ Please fill up the [preliminary questionnaire for TAs]().
 TODO: add interactive unit and related questionnaires.
 
 Point of contact: Jacopo -->
-
+<!--
 ## On the interaction with students
 
 TODO: to write
@@ -143,4 +143,4 @@ TODO: to write
 
 TODO: to write - used by many others
 
-TODO: to write - translations
+TODO: to write - translations -->
