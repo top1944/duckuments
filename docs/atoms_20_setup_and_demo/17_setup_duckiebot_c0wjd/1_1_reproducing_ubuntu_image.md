@@ -389,9 +389,6 @@ You should make the `ubuntu` user belong to the `i2c` and `input` groups:
 
     duckiebot $ sudo adduser ubuntu i2c
     duckiebot $ sudo adduser ubuntu input
-
-XXX: forgot to add to aug20 image:
-
     duckiebot $ sudo adduser ubuntu video
 
 
@@ -471,25 +468,6 @@ You may want to subsequently shrink the image, for example if your friends have 
 See: The procedure of how to shrink an image is explained in [](#howto-shrink-image).
 
 
-## Some additions since last image to add in the next image
-
-Note here the additions since the last image was created.
-
-Create a file
-
-    /etc/duckietown-image.yaml
-
-Containing these lines
-
-    base: Ubuntu 16.04.2
-    date: ![DATE]
-    comments: |
-        ![any comments you have]
-
-So that we know which image is currently in used.
-
-Install `ntpdate`:
-
-    $ sudo apt install ntpdate
+## TODO: Git LFS
 
 Note: We should install Git LFS on the Raspberry Pi, but so far AC did not have any luck. See [](#git-lfs-install).
