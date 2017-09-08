@@ -49,7 +49,7 @@ It is advised that the LED cables are routed through the positions noted in the 
 Front Left, Front Middle, and Front Right LED Wiring suggestion:
 
 <div figure-id="fig:bumper_figure_0">
-    <img src="image_0.jpg" style='width:20em; height:auto'/>
+    <img src="image_0-1.jpg" style='width:20em; height:auto'/>
 </div>
 
 Rear Left LED Wiring Suggestion:
