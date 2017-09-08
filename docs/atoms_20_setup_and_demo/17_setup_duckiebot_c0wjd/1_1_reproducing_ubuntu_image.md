@@ -20,6 +20,8 @@ Results: A baseline Ubuntu Mate 16.04.2 image with updated software.
 
 </div>
 
+Comment: There is absolutely no way this takes 20 minutes. Installing ROS alone takes more than 20 minutes. Budget more like 4 hours for this.
+
 ## Download and uncompress the Ubuntu Mate image
 
 Download the image from the page
