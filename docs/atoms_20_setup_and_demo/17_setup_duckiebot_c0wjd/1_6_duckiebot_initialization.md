@@ -7,7 +7,7 @@ Assigned: Andrea
 
 Requires: An SD card of dimensions at least 16 GB.
 
-Requires: A computer with an internet connection, an SD card reader, and 35 GB of free space.
+Requires: A computer with an internet connection, an SD card reader, and 16 GB of free space.
 
 Requires: An assembled Duckiebot in configuration `D17-C0`. This is the result of [](#assembling-duckiebot-c0).
 
