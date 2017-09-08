@@ -178,7 +178,7 @@ Protip: Make sure the camera cable is inserted in the right direction! The metal
 
 Note: Insert the cable in the right direction to connect the camera to the Raspberry Pi.
 
-
+Comment: insert picture with long camera cable, not short one. -JT
 
 #### The camera end
 
