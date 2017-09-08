@@ -21,25 +21,25 @@ XXX What does it mean "ready to use"?.
 
 On the laptop, download the compressed image at this URL:
 
-> [https://www.dropbox.com/s/1p4am7erdd9e53r/duckiebot-RPI3-AC-aug10.img.xz?dl=1](https://www.dropbox.com/s/1p4am7erdd9e53r/duckiebot-RPI3-AC-aug10.img.xz?dl=1)
+> [https://www.dropbox.com/s/1jgn0chx3hu3a4a/duckiebot-RPI3-AD-sep7.img.xz?dl=1](https://www.dropbox.com/s/1jgn0chx3hu3a4a/duckiebot-RPI3-AD-sep7.img.xz?dl=1)
 
-The size is 2.5 GB.
+The size is 1.7 GB.
 
 You can use:
 
-    $ curl -o duckiebot-RPI3-AC-aug10.img.xz ![URL above]
+    $ curl -o duckiebot-RPI3-AD-sep7.img.xz ![URL above]
 
 Uncompress the file:
 
-    $ xz -d -k duckiebot-RPI3-AC-aug10.img.xz
+    $ xz -d -k duckiebot-RPI3-AD-sep7.img.xz
 
-This will create a file of 32 GB in size.
+This will create a file of 11 GB in size.
 
 To make sure that the image is downloaded correctly, compute its hash
 using the program `sha256sum`:
 
-    $ sha256sum duckiebot-RPI3-AC-aug10.img
-    2ea79b0fc6353361063c89977417fc5e8fde70611e8afa5cbf2d3a166d57e8cf  duckiebot-ac-aug10.img
+    $ sha256sum duckiebot-RPI3-AD-sep7.img
+    681c4653c309df530791dbdbe2e89819def330c20d58d4c4baf5979b02e5b381  duckiebot-RPI3-AD-sep7.img
 
 Compare the hash that you obtain with the hash above. If they are different,
 there was some problem in downloading the image.
@@ -138,7 +138,7 @@ Make note of the name `wlx![AABBCCDDEEFFGG]`.
 Look up the MAC address using the command:
 
     duckiebot $ ifconfig wlx![AABBCCDDEEFFGG]
-    wlx74da38c9caa0 Link encap:Ethernet  HWaddr ![AA:BB:CC:DD:EE:FF:GG]
+    wlx![AABBCCDDEEFFGG] Link encap:Ethernet  HWaddr ![AA:BB:CC:DD:EE:FF:GG]
 
 Then, edit the connection file
 
@@ -273,17 +273,16 @@ the output should give you something like:
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        29G  7.8G   21G  28% /
-devtmpfs        427M     0  427M   0% /dev
-tmpfs           432M  316K  431M   1% /dev/shm
-tmpfs           432M   12M  420M   3% /run
+/dev/root        15G  6.3G  8.2G  44% /
+devtmpfs        303M     0  303M   0% /dev
+tmpfs           431M     0  431M   0% /dev/shm
+tmpfs           431M   12M  420M   3% /run
 tmpfs           5.0M  4.0K  5.0M   1% /run/lock
-tmpfs           432M     0  432M   0% /sys/fs/cgroup
+tmpfs           431M     0  431M   0% /sys/fs/cgroup
 /dev/mmcblk0p1   63M   21M   43M  34% /boot
-tmpfs            87M   24K   87M   1% /run/user/1000
-/dev/sda1        29G  5.3G   24G  19% /media/ubuntu/44A7-9E91
+tmpfs            87M     0   87M   0% /run/user/1000
 ```
-You should see that the Size of your `/dev/sda1` partition is "close" to the side of your SD card.
+You should see that the Size of your `/dev/root` Filesystem is "close" to the size of your SD card.
 
 
 ## Create your user {#create-user-on-duckiebot}
@@ -301,7 +300,7 @@ Make the user an administrator by adding it to the group `sudo`:
 
     duckiebot $ sudo adduser ![username] sudo
 
-Make the user a member of the group `input` and `i2c`
+Make the user a member of the groups `input`, `video`, and `i2c`
 
     duckiebot $ sudo adduser ![username] input
     duckiebot $ sudo adduser ![username] video
