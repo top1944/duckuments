@@ -115,6 +115,8 @@ Put the car upright (omni wheel pointing towards the table) and arrange wires so
 
 The bottom part of the Duckiebot's chassis is now ready. The next step is to assemble the Raspberry Pi on chassis-top part.
 
+Comment: These spacers are not the ones provided in the box, change pic. -JT
+
 ## Assembling the Raspberry Pi, camera, and HATs
 
 <!--
@@ -293,4 +295,4 @@ Connect power cables (USB A to 5mm cable in your Duckiebox and USB cable in the 
 </div>
 
 
-Now the assembly part is finished! Let’s move to next step!
+
