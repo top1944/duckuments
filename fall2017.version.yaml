@@ -1,4 +1,4 @@
-input: duckuments-dist/master/duckiebook.html
+input: duckuments-dist/fall2017/master.html
 output: duckuments-dist/fall2017/duckiebook.html
 recipe:
 - toc
