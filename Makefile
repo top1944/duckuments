@@ -90,6 +90,7 @@ automatic-compile-cleanup:
 	rm ~/lockfile
 	-killall -9 /home/duckietown/scm/duckuments/deploy/bin/python
 	$(MAKE) clean
+	
 automatic-compile:
 	git pull
 	touch $(log)
@@ -97,7 +98,8 @@ automatic-compile:
 	date >> $(log)
 	nice -n 10 $(MAKE) compile-slow
 	echo "  succeded html " >> $(log)
-
+	-$(MAKE) fall2017
+	echo "  succeded fall 2017" >> $(log)
 	-$(MAKE) upload
 	echo "  succeded html upload " >> $(log)
 	nice -n 10 $(MAKE) compile-pdf
@@ -251,3 +253,19 @@ split:
 		--preamble $(tex-symbols)
 
 #--disqus
+
+fall2017-compose:
+	mcdp-docs-compose --config fall2017.version.yaml
+
+fall2017-split:
+	mcdp-split \
+	   --filename duckuments-dist/fall2017/duckiebook.html \
+	   --output_dir duckuments-dist/fall2017/duckiebook \
+	   -o $(tmp_files)/fall2017/split \
+	   -c " config echo 1; config colorize 1; rparmake" \
+	   --mathjax \
+	   --preamble $(tex-symbols)
+
+fall2017:
+	$(MAKE) fall2017-compose
+	$(MAKE) fall2017-split

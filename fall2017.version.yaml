@@ -1,0 +1,11 @@
+input: duckuments-dist/master/duckiebook.html
+output: duckuments-dist/fall2017/duckiebook.html
+recipe:
+- toc
+- add: part:fall-2017
+- add: part:duckietown-project
+- add: part:contribute
+- part: end-materials
+  title: End materials
+  contents:
+  - add: bibliography
