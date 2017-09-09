@@ -180,9 +180,11 @@ compile-slow: update-mcdp update-software
 	$(MAKE) split-slow
 
 index:
+
+index2:
 	# XXX: requires node
-	#mcdp-render -D misc book_index
-	#cp misc/book_index.html duckuments-dist/index.html
+	mcdp-render -D misc book_index
+	cp misc/book_index.html duckuments-dist/index.html
 
 
 compile-html:
