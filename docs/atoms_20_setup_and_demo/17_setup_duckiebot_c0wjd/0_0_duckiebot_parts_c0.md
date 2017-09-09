@@ -50,7 +50,7 @@ TODO: Add a different "Tools" section in the table (e.g., solderer), or add in t
     <s>[Stepper Motor HAT](https://tinyurl.com/y7qurpcw)</s>                         <s>USD 22.50</s>
     <s>[2 Stacking Headers](https://www.adafruit.com/product/2223)</s><s>USD 2.50/piece</s>
     <s>[Battery](https://tinyurl.com/ya7otc76)</s>                         <s>USD 20</s>
-    <s>[16 Nylon Standoffs (M2.5 12mm F 6mm M](https://tinyurl.com/y9uy73b2)</s>                         <s>USD 0.05/piece</s>
+    <s>[16 Nylon Standoffs (M2.5 12mm F 6mm M)](https://tinyurl.com/y9uy73b2)</s>                         <s>USD 0.05/piece</s>
     <s>[4 Nylon Hex Nuts (M2.5)](https://tinyurl.com/ydy4znem)</s>                      <s>USD 0.02/piece</s>
     <s>[4 Nylon Screws (M2.5x10)](https://tinyurl.com/ya2uo9so)</s>                     <s>USD 0.05/piece</s>
     <s>[2 Zip Ties (300x5mm)](https://tinyurl.com/yb8v3nns)</s>                         <s>USD 9</s>
