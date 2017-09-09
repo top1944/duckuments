@@ -90,7 +90,7 @@ automatic-compile-cleanup:
 	rm ~/lockfile
 	-killall -9 /home/duckietown/scm/duckuments/deploy/bin/python
 	$(MAKE) clean
-	
+
 automatic-compile:
 	git pull
 	touch $(log)
@@ -112,7 +112,8 @@ upload:
 	#git -C duckuments-dist pull -X ours
 	echo ignoring errors
 
-	-git -C duckuments-dist add $(duckuments-branch)
+	-git -C duckuments-dist add master
+	-git -C duckuments-dist add fall2017
 	-git -C duckuments-dist commit -a -m "automatic compilation $(shell date)"
 	-git -C duckuments-dist push --force
 
