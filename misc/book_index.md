@@ -48,7 +48,8 @@ body {
 
     <s>Pre-built</s>
     <s>Fall 2017</s>
-    <s>coming soon</s>
+    <s><a href="fall2017/duckiebook/index.html">online</a>,
+        <a href="fall2017/duckiebook.pdf">pdf</a></s>
     <s>For the students in Fall 2017 (ETHZ, UdeM, TTIC, NCTU)</s>
 
 

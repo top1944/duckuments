@@ -90,14 +90,20 @@ automatic-compile-cleanup:
 	rm ~/lockfile
 	-killall -9 /home/duckietown/scm/duckuments/deploy/bin/python
 	$(MAKE) clean
+
 automatic-compile:
 	git pull
 	touch $(log)
 	echo "\n\nStarting" >> $(log)
 	date >> $(log)
-	nice -n 10 $(MAKE) compile-slow
+	nice -n 10 $(MAKE) compile-html-slow
 	echo "  succeded html " >> $(log)
-
+	-$(MAKE) fall2017
+	echo "  succeded fall 2017" >> $(log)
+	-$(MAKE) upload
+	echo "  succeded upload " >> $(log)
+	nice -n 10 $(MAKE) split-slow
+	echo "  succeded split 2017" >> $(log)
 	-$(MAKE) upload
 	echo "  succeded html upload " >> $(log)
 	nice -n 10 $(MAKE) compile-pdf
@@ -110,7 +116,8 @@ upload:
 	#git -C duckuments-dist pull -X ours
 	echo ignoring errors
 
-	-git -C duckuments-dist add $(duckuments-branch)
+	-git -C duckuments-dist add master
+	-git -C duckuments-dist add fall2017
 	-git -C duckuments-dist commit -a -m "automatic compilation $(shell date)"
 	-git -C duckuments-dist push --force
 
@@ -177,9 +184,11 @@ compile-slow: update-mcdp update-software
 	$(MAKE) split-slow
 
 index:
+
+index2:
 	# XXX: requires node
-	#mcdp-render -D misc book_index
-	#cp misc/book_index.html duckuments-dist/index.html
+	mcdp-render -D misc book_index
+	cp misc/book_index.html duckuments-dist/index.html
 
 
 compile-html:
@@ -210,6 +219,7 @@ compile-html-no-embed:
 	python -m mcdp_utils_xml.note_errors_inline $(out_html).tmp
 	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
 	# python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
+	cp $(out_html).localcss.html $(out_html)
 	$(MAKE) split
 
 compile-html-slow:
@@ -250,3 +260,19 @@ split:
 		--preamble $(tex-symbols)
 
 #--disqus
+
+fall2017-compose:
+	mcdp-docs-compose --config fall2017.version.yaml
+
+fall2017-split:
+	mcdp-split \
+	   --filename duckuments-dist/fall2017/duckiebook.html \
+	   --output_dir duckuments-dist/fall2017/duckiebook \
+	   -o $(tmp_files)/fall2017/split \
+	   -c " config echo 1; config colorize 1; rparmake" \
+	   --mathjax \
+	   --preamble $(tex-symbols)
+
+fall2017:
+	$(MAKE) fall2017-compose
+	$(MAKE) fall2017-split

@@ -13,19 +13,20 @@ Result: k:matrices
 </div>
 
 A matrix:
- 
+
  \[
  \amat{A} = \left[  \begin{array}{ccc} a_{11}  & \dots & a_{1n} \\ \vdots & \ddots & \vdots \\ a_{m1}  & \dots & a_{mn} \end{array} \right] \in \reals^{m \times n} \label{eq:matrix}
  \]
- 
- is a table ordered by ($m$) horizontal rows and ($n$) vertical columns. Its elements are typically denoted with lower case latin letters, with subscripts indicating their row and column respectively. For example, $a_{ij}$ is the element of $A$ at the $i^{th}$ row and $j^{th}$ column.
- 
- <div figure-id="fig:matrix" figure-caption="A matrix. This image is taken from [](#bib:wiki-matrix).">
+
+ is a table ordered by ($m$) horizontal rows and ($n$) vertical columns. Its elements are typically denoted with lower case latin letters, with subscripts indicating their row and column respectively. For example, $a_{ij}$ is the element of $A$ at the $i$-th row and $j$-th column.
+
+ <div figure-id="fig:matrix" markdown="1">
+      <figcaption>A matrix. This image is taken from [](#bib:wiki-matrix)</figcaption>
       <img src="matrix.svg" style='width: 15em'/>
  </div>
  
  Note: A vector is a matrix with one column.
- 
+
  <!--
  Before delving in the many and important meanings and interpretations of matrices, we will first introduce some terminology and notable matrices.
  -->
@@ -57,13 +58,13 @@ Note: Square matrices are particularly important.
 ## Diagonal matrix {#mat-diagonal}
 
 \begin{definition}[Diagonal matrix] \label{def:mat-diagonal}
-A diagonal matrix has non zero elements only on its main diagonal. 
+A diagonal matrix has non zero elements only on its main diagonal.
 \begin{align}
-\amat{A} = \left[  \begin{array}{ccc} 
-a_11   & 0        & \dots  & 0 \\ 
-0      & a_22     & \ddots & \vdots \\ 
+\amat{A} = \left[  \begin{array}{ccc}
+a_11   & 0        & \dots  & 0 \\
+0      & a_22     & \ddots & \vdots \\
 \vdots & \ddots   & \ddots & 0 \\
-0      & \dots    & 0      & a_nn 
+0      & \dots    & 0      & a_nn
 \end{array} \right]
 \end{align}
 \end{definition}
@@ -73,11 +74,11 @@ a_11   & 0        & \dots  & 0 \\
 \begin{definition}[Identity matrix] \label{def:mat-identity}
 An identity matrix is a diagonal square matrix with all elements equal to one.
 \begin{align}
-\amat{I} = \left[  \begin{array}{ccc} 
-1   & 0        & \dots  & 0 \\ 
-0      & 1     & \ddots & \vdots \\ 
+\amat{I} = \left[  \begin{array}{ccc}
+1   & 0        & \dots  & 0 \\
+0      & 1     & \ddots & \vdots \\
 \vdots & ddots    & \ddots & 0 \\
-0      & \dots    & 0      & 1 
+0      & \dots    & 0      & 1
 \end{array} \right]
 \end{align}
 \end{definition}
@@ -102,4 +103,3 @@ The null, or Zero, matrix is a matrix whos elements are all zeros.
 - nxn
 
 ## Rank of a matrix {#matrix-rank}
-

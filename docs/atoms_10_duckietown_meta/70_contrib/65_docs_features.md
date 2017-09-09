@@ -560,7 +560,7 @@ Depending on the output media, the result will change:
 * On the dead-tree version, a thumbnail is produced with a QR code linking to the video (TODO).
 
 
-## Bibliography
+## Bibliography support {#bibliography-support}
 
 You need to have installed `bibtex2html`.
 
