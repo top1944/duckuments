@@ -17,9 +17,7 @@ Requires: Having prepared the power cable. The power cable preparation is explai
 
 Requires: Having installed the image on the MicroSD card. The instructions on how to reproduce the Duckiebot system image are in [](#duckiebot-ubuntu-image).
 
-Requires: Time: about ??? minutes.
-
-TODO: estimate time.
+Requires: Time: about 40 minutes.
 
 Results:  An assembled Duckiebot in configuration `C0+wjd`.
 
