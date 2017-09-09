@@ -20,7 +20,7 @@ TODO: finish above
 
 
 ##  Soldering on DC/Stepper Motor HAT 
-[how to solder on Headers and Terminal Block](https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi/assembly)
+[Alternative instructions: how to solder on Headers and Terminal Block](https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi/assembly)
 
 In this step you will need the following parts from the duckiebox: 
 

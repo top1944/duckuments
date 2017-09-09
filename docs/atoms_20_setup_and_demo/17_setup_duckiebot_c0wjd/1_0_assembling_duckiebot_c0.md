@@ -13,13 +13,11 @@ Requires: Duckiebot `C0+wjd` parts. The acquisition process is explained in [](#
 
 Requires: Having soldered the `C0+wjd` parts. The soldering process is explained in [](#soldering-boards-c0).
 
-Requires: Having prepared the power cable. The power cable preparation is explained in [](#power-cable-prep-c0).
+Requires: Having prepared the power cable. The power cable preparation is explained in [](#power-cable-prep-c0). Note: Not necessary if you are proceeding directly to configuration C1.
 
 Requires: Having installed the image on the MicroSD card. The instructions on how to reproduce the Duckiebot system image are in [](#duckiebot-ubuntu-image).
 
-Requires: Time: about ??? minutes.
-
-TODO: estimate time.
+Requires: Time: about 40 minutes.
 
 Results:  An assembled Duckiebot in configuration `C0+wjd`.
 
@@ -115,6 +113,8 @@ Put the car upright (omni wheel pointing towards the table) and arrange wires so
 
 The bottom part of the Duckiebot's chassis is now ready. The next step is to assemble the Raspberry Pi on chassis-top part.
 
+Comment: These spacers are not the ones provided in the box, change pic. -JT
+
 ## Assembling the Raspberry Pi, camera, and HATs
 
 <!--
@@ -176,7 +176,7 @@ Protip: Make sure the camera cable is inserted in the right direction! The metal
 
 Note: Insert the cable in the right direction to connect the camera to the Raspberry Pi.
 
-
+Comment: insert picture with long camera cable, not short one. -JT
 
 #### The camera end
 
@@ -293,4 +293,4 @@ Connect power cables (USB A to 5mm cable in your Duckiebox and USB cable in the 
 </div>
 
 
-Now the assembly part is finished! Let’s move to next step!
+
