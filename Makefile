@@ -209,6 +209,7 @@ compile-html-no-embed:
 	python -m mcdp_utils_xml.note_errors_inline $(out_html).tmp
 	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
 	# python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
+	cp $(out_html).localcss.html $(out_html)
 	$(MAKE) split
 
 compile-html-slow:
