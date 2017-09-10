@@ -1,6 +1,6 @@
-# Student guide: the first steps
+# First Steps for Students
 
-## Onboarding procedure {#onboarding-fall2017}
+## Onboarding Procedure {#onboarding-fall2017}
 
 Welcome aboard! We are so happy you are joining us at Duckietown!
 
@@ -8,47 +8,24 @@ Welcome aboard! We are so happy you are joining us at Duckietown!
 
 The primary mode of online confabulation between staff and students is Slack, a team communication forum that allows the community to collaborate in making Duckietown awesome.
 
-Download the Slack app --- it's much more convenient than using the website.
+Note: Emails are otherwise forbidden, unless they relate to a private, university-based admistrative concern.
 
 If are reading this you should have recieved an invitation to join our Slack - check your inbox. If you have not recieved an invitation to Slack, you need to send an email to Kirsten Bowser &lt;akbowser@gmail.com&gt;.
 
+More details about Slack are available [here](#slack)
 
-Note: Emails are otherwise forbidden, unless they relate to a private, university-based admistrative concern.
 
-
-When you accept your Slack invite, please follow these rules in setting up your profile:
-
-- username = last name
-- first name = first name
-- last name = last name (institution/location)
-
-<div class='example-usage' markdown="1">
-Here is an example: Andrea Censi from ETHZ is `@censi`, his name on Slack is "Andrea Censi (ETHZ)".
-</div>
+A brief synopsis of all of the help related Slack channels is here: [](#slack_channels).
 
 Check out all the channels in Slack, and add yourself to those that pertain or interest you. Be sure to introduce yourself in the General channel.
 
-Please add a picture (relatively professional, so that we can use it for rosters when the time comes.)
-
-Modify your settings to prevent email notifications, they are annoying and defeat the purpose of the communication forum. The point of Slack is that we don't have inboxes full of Duckietown emails.
 
 ### Github
 
 The next thing you need to do is provide Duckietown HR (Kirsten Bowser) with your Github username via Slack.
 
-If you don't already have a Github account, follow these steps:
+If you don't already have a Github account, follow the steps here: [](#github-access)
 
-1) Sign up for [GitHub](https://github.com/).
-
-2) Use the same email associated with your Slack account. Your Github username should be the same as your Slack username if possible, otherwise something similar.
-
-<div class='example-usage' markdown="1">
- `@censi` is the slack handle, the GitHub username is `AndreaCensi`.
-</div>
-
-3) Send your Github username to Duckietown HR via Slack.
-
-4) Next, you need to *accept* the invite to the Duckietown organization. The invite should be waiting for you at the page [https://github.com/duckietown](https://github.com/duckietown).
 
 <!--
 ### Google Documents
@@ -60,9 +37,7 @@ If you experience any difficulties don't hesitate to contact Duckietown HR on th
 TLDR: Follow naming guidelines in Slack, send Github username and gmail address to Duckietown HR via Slack. NO EMAILS. -->
 
 
-## Preparation before the class
-
-### Laptop Hardware
+## Laptop Requirements
 
 You need a laptop with these specifications:
 
@@ -70,7 +45,7 @@ You need a laptop with these specifications:
   See [](#can-we-use-vm) below for a discussion of the virtual machine option.
 - A WiFi interface that supports 5 GHz wireless networks. If you have a 2.4 GHz WiFi, you will not be able to comfortably stream images from the robot; moreover, you will need to adapt certain instructions.
 - Minimum 50 GB of free disk space in addition to the OS. Ideally you have 200 GB+. This is for storing and processing logs.
-- You need (infrequent) access to an SD card reader/writer. A few times in the semester, you will be asked to burn an SD card image.
+
 
 <!-- Ability to store somewhere (at home or somewhere on campus), and to bring regularly to the lab, a box, or “Duckiebox”, of dimensions 30 cm × 30 cm × 60 cm. This box has to be used to contain your Duckiebot and associate materials. -->
 
@@ -79,13 +54,7 @@ good CPU.  You will be developing code that runs on a Raspberry PI. Any laptop
 bought in the last 3 years should be powerful enough. However, having a good
 CPU / lots of RAM makes it faster to run regression tests.
 
-
-### Install Ubuntu on your laptop and related software
-
-Install Ubuntu, ROS, Atom, Liclipse, the Duckuments, etc. on your laptop.
-
-See: The procedure is explained in [](#setup-laptop)
-
+If you do not have a laptop that meets these requirements, please post a note in the channel `help-laptops` and we will resolve the issue.
 
 ### Can I use a virtual machine instead of dual booting? {#can-we-use-vm}
 
@@ -98,10 +67,10 @@ and, most importantly, the TAs will *not* help you debug those problems.
 
 The issues that you will encounter are of two types.
 
-There are performance issues. For example, 3D acceleration might not work in the
+* There are performance issues. For example, 3D acceleration might not work in the
 virtual machine.
 
-Most importantly, there are network configuration issues. These come up late in
+* Most importantly, there are network configuration issues. These come up late in
 the class, when you start connecting the laptop to the Duckiebot. At that
 point, ROS makes certain assumptions about subnets, that might not be satisfied
 by your virtual machine configuration. At that point, you need to be relatively
@@ -121,7 +90,6 @@ If so, then things will probably work ok for you.
 Otherwise, we strongly suggest that you use dual booting instead of a virtual machine.
 
 
-
 ## Start learning
 
 Here's something you can start learning before the class.
@@ -134,14 +102,15 @@ See: [](#part:duckietown-project)
 
 ### Learn about Git and Github
 
-Start learning about Git and Github. You don't have to read the entirety of the
-following references now, but keep them "on your desk" for later reference.
+Start learning about Git and Github. 
 
-See: [Good book](https://git-scm.com/book/en/v2)
-
-See: [Git Flow](http://nvie.com/posts/a-successful-git-branching-model/)
+See: [](#git-reference)
 
 
 ### Math refresher
 
-TODO: to write
+Do a bit of a refresher on some math basics.
+
+Linear Algegra: [](#linear_algebra)
+Probability Basics: [](#probability_basics)
+
