@@ -76,14 +76,14 @@ Action: Ask for clarification on the appropriate Slack channel. For a list of sl
 ### Case: You understand the instructions but you are blocked for some reason
 
 Action: This is more serious than the previous. 
-Open an issue on the [`duckiefleet-fall2017` github page](https://github.com/duckietown/duckiefleet-fall2017/issues). Once the issue is resolved, either you or the appropriate staff member should update the documentation if appropriate. For instructions on this see [](#part:contribute).
+Open an issue [on the `duckiefleet-fall2017` github page](https://github.com/duckietown/duckiefleet-fall2017/issues). Once the issue is resolved, either you or the appropriate staff member should update the documentation if appropriate. For instructions on this see [](#part:contribute).
 
 
 ### Case: You are having a technical issue related to building the documentation
 
-Action: Open an issue on the [duckuments github page](https://github.com/duckietown/duckuments/issues) and provide all necessary information to reproduce it.
+Action: Open an issue [on the `duckuments` github page](https://github.com/duckietown/duckuments/issues) and provide all necessary information to reproduce it.
 
 ### Case: You have found a well-defined defect in the software.
 
 Action: open an issue
-on [the Github issue tracker for the `Software` repository](https://github.com/duckietown/Software/issues) and provide all necessary 
+[on the  `Software` repository github page](https://github.com/duckietown/Software/issues) and provide all necessary information for reproducing the bug.
