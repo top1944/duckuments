@@ -12,7 +12,9 @@ Download the Slack app --- it's much more convenient than using the website.
 
 If are reading this you should have recieved an invitation to join our Slack - check your inbox. If you have not recieved an invitation to Slack, you need to send an email to Kirsten Bowser &lt;akbowser@gmail.com&gt;.
 
+
 Note: Emails are otherwise forbidden, unless they relate to a private, university-based admistrative concern.
+
 
 When you accept your Slack invite, please follow these rules in setting up your profile:
 
