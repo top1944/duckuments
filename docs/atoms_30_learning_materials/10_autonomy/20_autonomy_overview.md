@@ -149,7 +149,7 @@ The very innermost control loop deals with actually tracking the correct voltage
 
 
 
-### Infrastructure and Prior Information {#infrastructure}
+### Infrastructure and Prior Information {#overview-infrastructure}
 
 In general, we can make the autonomous navigation a simpler one by exploiting existing structure, infastructure, and contextual prior knowledge.
 
