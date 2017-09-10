@@ -90,6 +90,7 @@ automatic-compile-cleanup:
 	rm ~/lockfile
 	-killall -9 /home/duckietown/scm/duckuments/deploy/bin/python
 	$(MAKE) clean
+	$(MAKE) fall2017-clean
 
 automatic-compile:
 	git pull
