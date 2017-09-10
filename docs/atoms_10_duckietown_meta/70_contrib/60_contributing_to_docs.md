@@ -1,4 +1,4 @@
-# Contributing to the documentation {#sec:contribute-to-docs}
+# Contributing to the documentation {#sec:contribute-to-docs status=ready}
 
 ## Where the documentation is
 

@@ -1,4 +1,4 @@
-# Features of the documentation writing system {#sec:documentation-manual}
+# Features of the documentation writing system {#sec:documentation-manual status=ready}
 
 The Duckiebook is written in a Markdown dialect. A subset of LaTeX is supported.
 
@@ -798,7 +798,7 @@ List of requirements at the beginning of setup chapter.
 
 </div>
 
-## Notes and questions
+## Notes and questions {#notes-and-questions}
 
 There are three environments: "comment", "question", "doubt",
 that result in boxes that can be expanded by the user.

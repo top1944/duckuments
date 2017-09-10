@@ -90,13 +90,14 @@ automatic-compile-cleanup:
 	rm ~/lockfile
 	-killall -9 /home/duckietown/scm/duckuments/deploy/bin/python
 	$(MAKE) clean
+	$(MAKE) fall2017-clean
 
 automatic-compile:
 	git pull
 	touch $(log)
 	echo "\n\nStarting" >> $(log)
 	date >> $(log)
-	nice -n 10 $(MAKE) compile-html-slow
+	nice -n 10 $(MAKE) compile-html
 	echo "  succeded html " >> $(log)
 	-$(MAKE) fall2017
 	echo "  succeded fall 2017" >> $(log)
@@ -156,7 +157,7 @@ compile-pdf: checks check-programs-pdf
 		--mathjax 1 \
 		--symbols $(tex-symbols) \
 		-o $(tmp_files2) \
-		--output_file $(out_html2).tmp -c "config echo 1; rparmake"
+		--output_file $(out_html2).tmp -c "config echo 1; rparmake n=8"
 
 	python -m mcdp_docs.add_edit_links < $(out_html2).tmp > $(out_html2)
 
@@ -198,7 +199,7 @@ compile-html:
 		--mathjax 0 \
 		--symbols $(tex-symbols) \
 		-o $(tmp_files) \
-		--output_file $(out_html).tmp -c "config echo 1; config colorize 1; rparmake"
+		--output_file $(out_html).tmp -c "config echo 1; config colorize 1; rparmake n=8"
 
 	python add_stylesheet.py $(out_html).tmp style/duckietown.css
 	python -m mcdp_utils_xml.note_errors_inline $(out_html).tmp
@@ -272,7 +273,7 @@ split-imprecise:
 #--disqus
 
 fall2017-clean:
-	rm -rf  $(tmp_files)/fall2017
+	rm -rf out/fall2017
 
 fall2017-prepare:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
@@ -282,12 +283,11 @@ fall2017-prepare:
 		--no_resolve_references \
 		--symbols $(tex-symbols) \
 		-o out/fall2017/prepare \
-		--output_file duckuments-dist/fall2017/one.html -c "config echo 1; config colorize 1; rparmake"
+		--output_file out/fall2017/one.html -c "config echo 1; config colorize 1; rparmake"
 
-	python -m mcdp_utils_xml.note_errors_inline duckuments-dist/fall2017/one.html
-	python -m mcdp_docs.add_edit_links duckuments-dist/fall2017/two.html < duckuments-dist/fall2017/one.html
-	python -m mcdp_docs.embed_css duckuments-dist/fall2017/master.html < duckuments-dist/fall2017/two.html
-
+	python -m mcdp_utils_xml.note_errors_inline out/fall2017/one.html
+	# python -m mcdp_docs.add_edit_links duckuments-dist/fall2017/two.html < duckuments-dist/fall2017/one.html
+	python -m mcdp_docs.embed_css out/fall2017/master.html < out/fall2017/one.html
 
 fall2017-compose:
 	mcdp-docs-compose --config fall2017.version.yaml
@@ -296,7 +296,7 @@ fall2017-split:
 	mcdp-split \
 	   --filename duckuments-dist/fall2017/duckiebook.html \
 	   --output_dir duckuments-dist/fall2017/duckiebook \
-	   -o $(tmp_files)/fall2017/split \
+	   -o out/fall2017/split \
 	   -c " config echo 1; config colorize 1; rparmake" \
 	   --mathjax \
 	   --preamble $(tex-symbols)
