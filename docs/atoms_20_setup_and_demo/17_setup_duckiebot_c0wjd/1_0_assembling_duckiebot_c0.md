@@ -25,6 +25,8 @@ Results:  An assembled Duckiebot in configuration `C0+wjd`.
 
 Comment: add "next step(s)" as a standard field in the requirements class? -JT
 
+Comment: Notes - if we have the bumpers, at what point should we add them? I think that the battery could actually be attached before the levels of the chassis are joined. I found it hard to mount the camera (the holes weren't lining up). the long camera cable is a bit annoying - I folded it and shoved it in between two hats. We should decide if PWM hat is part of this configuration, why not leave it for now and forget about the spliced cable for the class. I found that the screwdriver that comes with the chassis kit is too fat to screw in the wires on the hat. The picture of where to put the ziptie for the battery is not very clear. need something to cut the end of the ziptie with.
+
 ## Chassis
 
 Open the Magician chassis package and take out the following components:
