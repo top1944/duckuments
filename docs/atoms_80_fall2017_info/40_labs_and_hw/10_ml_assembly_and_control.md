@@ -1,4 +1,4 @@
-# Checkoff: Duckiebot Assembly and Configuration
+# Checkoff: Duckiebot Assembly and Configuration {#checkoff_assembly_configuration}
 
 The first job  is to get your Duckiebot put together and up and running. 
 
@@ -6,24 +6,24 @@ Comment: @liam: We should make sure that these tasks are 1-to-1 with the task li
 
 ## Pick up your Duckiebox
 
-There is a checklist inside, you should go through the box and ensure that the parts that are supposed to be in it actually are.
+ There is a checklist inside, you should go through the box and ensure that the parts that are supposed to be in it actually are.
+ TODO: what to do if you are missing something
  
-TODO: what to do if you are missing something
- 
-These units describe the parts that should be in your box:
+Related part of the book: 
 
 * [](#acquiring-parts-c0) 
-* [](#acquiring-parts-c1)  (for UdeM only)
+* [](#acquiring-parts-c1) 
   
+which describe the parts that should be in your box.
 
 ## Soldering your boards
 
-Depending on the institution, you may have to solder your boards. 
+Depending on how kind your instructors/TAs are, you may have to solder your boards. 
  
 Related parts of the book are:
 
 * [](#soldering-boards-c0)
-* [](#soldering-boards-c1) (for UdeM only)
+* [](#soldering-boards-c1)
 
 ## Assemble your Robot
 
@@ -33,7 +33,7 @@ Related parts of the book are:
 
 * [](#assembling-duckiebot-c0)
 * [](#bumper-assembly)
-* [](#assembling-duckiebot-c1)  (for UdeM only)
+* [](#assembling-duckiebot-c1)
 
 
 ## Optional: Reproduce the SD Card Image

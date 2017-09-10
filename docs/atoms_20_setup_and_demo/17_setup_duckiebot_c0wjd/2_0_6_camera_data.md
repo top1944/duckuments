@@ -111,3 +111,6 @@ on the laptop  using `rviz`.
 
 
 use <kbd>Ctrl</kbd>-<kbd>C</kbd> to stop `rostopic`.
+
+
+TODO: Physically focus the camera.
