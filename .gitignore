@@ -67,3 +67,4 @@ misc/book_index.html
 docs/*.html
 docs/**/*.html
 .python-version
+.~lock.*
