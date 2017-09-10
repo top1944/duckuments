@@ -138,11 +138,11 @@ Python:
     duckiebot $ sudo apt install -y python-dev ipython python-sklearn python-smbus
     duckiebot $ sudo apt install -y python-termcolor
     duckiebot $ sudo apt install python-frozendict
-    duckiebot $ sudo apt install python-ruamel.yaml
     duckiebot $ sudo apt install python-tables
     duckiebot $ pip install comptests
     duckiebot $ pip install procgraph
     duckiebot $ sudo pip install scipy --upgrade
+    duckiebot $ sudo pip install ruamel.yaml --upgrade
 Note: scipy --upgrade(0.19.1) took about an hour with ethernet connection.
 
 I2C:
