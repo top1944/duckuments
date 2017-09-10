@@ -96,7 +96,7 @@ automatic-compile:
 	touch $(log)
 	echo "\n\nStarting" >> $(log)
 	date >> $(log)
-	nice -n 10 $(MAKE) compile-html-slow
+	nice -n 10 $(MAKE) compile-html
 	echo "  succeded html " >> $(log)
 	-$(MAKE) fall2017
 	echo "  succeded fall 2017" >> $(log)
@@ -156,7 +156,7 @@ compile-pdf: checks check-programs-pdf
 		--mathjax 1 \
 		--symbols $(tex-symbols) \
 		-o $(tmp_files2) \
-		--output_file $(out_html2).tmp -c "config echo 1; rparmake"
+		--output_file $(out_html2).tmp -c "config echo 1; rparmake n=8"
 
 	python -m mcdp_docs.add_edit_links < $(out_html2).tmp > $(out_html2)
 
@@ -198,7 +198,7 @@ compile-html:
 		--mathjax 0 \
 		--symbols $(tex-symbols) \
 		-o $(tmp_files) \
-		--output_file $(out_html).tmp -c "config echo 1; config colorize 1; rparmake"
+		--output_file $(out_html).tmp -c "config echo 1; config colorize 1; rparmake n=8"
 
 	python add_stylesheet.py $(out_html).tmp style/duckietown.css
 	python -m mcdp_utils_xml.note_errors_inline $(out_html).tmp
