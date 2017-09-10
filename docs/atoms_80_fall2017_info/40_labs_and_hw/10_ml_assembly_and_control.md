@@ -1,4 +1,4 @@
-# Checkoff: Duckiebot Assembly and Configuration {#checkoff_assembly_configuration}
+# Duckiebot Assembly and Configuration {#checkoff_assembly_configuration}
 
 The first job  is to get your Duckiebot put together and up and running. 
 
