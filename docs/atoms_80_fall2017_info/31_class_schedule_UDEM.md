@@ -1,4 +1,4 @@
-# Class Schedule
+# UdeM Class Schedule {#UdeM-schedule}
 
 ## Wed Sept 6
 
@@ -12,12 +12,12 @@ Book materials:
 
 Class (10:30)
 
-Duckiebox distribution. 
+Duckiebox distribution.
 
-[](#checkoff_assembly_configuration) initiated. 
+[](#checkoff_assembly_configuration) initiated.
 Recommended deadline: Mon Sept. 18.
 
 ## Wed Sept 13
 
-Class canceled. 
+Class canceled.
 Continue working on [](#

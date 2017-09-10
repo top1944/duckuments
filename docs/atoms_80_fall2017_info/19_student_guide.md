@@ -1,4 +1,4 @@
-# First Steps for Students
+# First Steps for Students {#first-steps-for-students}
 
 ## Onboarding Procedure {#onboarding-fall2017}
 
@@ -102,7 +102,7 @@ See: [](#part:duckietown-project)
 
 ### Learn about Git and Github
 
-Start learning about Git and Github. 
+Start learning about Git and Github.
 
 See: [](#git-reference)
 
@@ -113,4 +113,3 @@ Do a bit of a refresher on some math basics.
 
 Linear Algegra: [](#linear_algebra)
 Probability Basics: [](#probability_basics)
-
