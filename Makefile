@@ -87,6 +87,7 @@ duckuments-dist:
 
 log=~/logs/compilation.log
 automatic-compile-cleanup:
+	echo "\n\nautomatic-compile-cleanup killing everything" >> $(log)
 	rm ~/lockfile
 	-killall -9 /home/duckietown/scm/duckuments/deploy/bin/python
 	$(MAKE) clean
