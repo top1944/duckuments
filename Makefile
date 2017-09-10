@@ -261,8 +261,26 @@ split:
 
 #--disqus
 
+fall2017-clean:
+	rm -rf  $(tmp_files)/fall2017
+
+fall2017-prepare:
+	DISABLE_CONTRACTS=1 mcdp-render-manual \
+		--src $(src) \
+		--stylesheet v_manual_split \
+		--mathjax 0 \
+		--no_resolve_references \
+		--symbols $(tex-symbols) \
+		-o out/fall2017/prepare \
+		--output_file duckuments-dist/fall2017/one.html -c "config echo 1; config colorize 1; rparmake"
+
+	python -m mcdp_utils_xml.note_errors_inline duckuments-dist/fall2017/one.html
+	python -m mcdp_docs.add_edit_links duckuments-dist/fall2017/two.html < duckuments-dist/fall2017/one.html
+	python -m mcdp_docs.embed_css duckuments-dist/fall2017/master.html < duckuments-dist/fall2017/two.html
+
+
 fall2017-compose:
-	mcdp-docs-compose --config fall2017.version.yaml
+	mcdp-docs-compose --config fall2017.version.yaml 
 
 fall2017-split:
 	mcdp-split \
@@ -274,5 +292,6 @@ fall2017-split:
 	   --preamble $(tex-symbols)
 
 fall2017:
+	$(MAKE) fall2017-prepare
 	$(MAKE) fall2017-compose
 	$(MAKE) fall2017-split

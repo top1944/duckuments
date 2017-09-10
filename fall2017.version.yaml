@@ -1,11 +1,22 @@
-input: duckuments-dist/master/duckiebook.html
+input: duckuments-dist/fall2017/master.html
 output: duckuments-dist/fall2017/duckiebook.html
 recipe:
 - toc
+# Add the entire part
 - add: part:fall-2017
+# Add the entire part
 - add: part:duckietown-project
+# Add the entire part
 - add: part:contribute
+# Create a new part called "End materials"
 - part: end-materials
   title: End materials
   contents:
+  # Add arbitrary units in the part
   - add: bibliography
+- part: appendix
+  title: Some miscellaneous units
+  contents:
+  # These are names of arbitrary units
+  - add: atom
+  - add: liclipse
