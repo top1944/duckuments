@@ -1,4 +1,4 @@
-# UdeM Class Schedule {#UdeM-schedule}
+# UdeM Class Schedule {#schedule_UDEM}
 
 ## Wed Sept 6
 
