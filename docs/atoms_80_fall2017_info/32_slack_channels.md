@@ -5,8 +5,8 @@ This page describes all of the helpful Slack channels and their purposes so that
 ## Channels
 
 <col2 figure-id="tab:slack_channels" figure-caption="Duckietown Slack Channels">
-<span>Channel</span>
-<span>Purpose</span>
+<span>**Channel**</span>
+<span>**Purpose**</span>
 <span>help-accounts</span>
 <span>Info about necessary accounts, such as Slack, Github, etc</span>
 <span>help-assembly</span>
