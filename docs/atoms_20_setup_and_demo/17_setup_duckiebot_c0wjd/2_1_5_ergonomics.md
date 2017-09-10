@@ -14,7 +14,7 @@ problems might be harder to understand if you rely blindly on the shortcuts.
 
 <div class='requirements' markdown="1">
 
-Requires: Time: ??? minutes.
+Requires: Time: 5 minutes.
 
 Results: You will know about some useful shortcuts.
 

@@ -102,7 +102,7 @@ automatic-compile:
 	echo "  succeded fall 2017" >> $(log)
 	-$(MAKE) upload
 	echo "  succeded upload " >> $(log)
-	nice -n 10 $(MAKE) split
+	nice -n 10 $(MAKE) split-imprecise
 	echo "  succeded split " >> $(log)
 	-$(MAKE) upload
 	echo "  succeded html upload " >> $(log)
@@ -258,6 +258,16 @@ split:
 		-c " config echo 1; config colorize 1; rparmake" \
 		--mathjax \
 		--preamble $(tex-symbols)
+split-imprecise:
+	# rm -f $(dist_dir)/duckiebook/*html
+	 mcdp-split \
+		--filename $(out_html) \
+		--faster_but_imprecise \
+		--output_dir $(dist_dir)/duckiebook \
+		-o $(tmp_files)/split \
+		-c " config echo 1; config colorize 1; rparmake" \
+		--mathjax \
+		--preamble $(tex-symbols)
 
 #--disqus
 
@@ -280,7 +290,7 @@ fall2017-prepare:
 
 
 fall2017-compose:
-	mcdp-docs-compose --config fall2017.version.yaml 
+	mcdp-docs-compose --config fall2017.version.yaml
 
 fall2017-split:
 	mcdp-split \
