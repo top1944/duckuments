@@ -1,0 +1,19 @@
+
+- id_test: test1
+  desc: "straight traight"  
+  id_log: "160122_follow1"
+  t0: 1.0s # start from +1.0s
+  t1: 10.0s # end fat +8.0s
+  expectations:
+  	line_detection_node:
+  		detections_white:
+  			min: 20
+  			max: 30
+  		detections_red:
+  			min: 20
+  			max: 30
+  	lane_filter:
+  		entropy:
+  			min: 1
+  			max: 5
+

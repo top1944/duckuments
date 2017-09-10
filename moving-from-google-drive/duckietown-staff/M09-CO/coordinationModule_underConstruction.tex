@@ -1,0 +1,423 @@
+\documentclass[11pt]{article} 
+\usepackage{amsmath} % AMS Math Package
+\usepackage{amsthm} % Theorem Formatting
+\usepackage{amssymb}	% Math symbols such as \mathbb
+\usepackage{graphicx} % Allows for eps images
+%\usepackage[dvips,letterpaper,margin=0.75in,bottom=0.5in]{geometry}
+\usepackage{enumerate}
+\usepackage{hyperref}
+
+%Package for algorithms
+%\usepackage[ruled]{algorithm2e}
+\usepackage{algcompatible}
+\usepackage{algorithm}
+
+\usepackage{color,soul}
+
+%For better algorithms
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+%For colorfull highlights
+\newcommand{\hlc}[2][yellow]{ {\sethlcolor{#1} \hl{#2}} }
+
+
+\theoremstyle{definition}
+\newtheorem*{rem}{Remark}
+
+
+
+
+
+% Sets margins and page size
+\title{Intersection Coordination}
+\author{H.~Ahn \and J.~Alonso-Mora \and M.~Cap \and D.~Hoehener}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+%
+%
+\paragraph{Overview:}
+The autonomous vehicle we are building has three fundamental driving modes, lane following, intersection coordination and intersection navigation, see Figure~\ref{fig:automatonModes}. In this document we describe the intersection coordination mode whose purpose is to achieve coordination with other autonomous vehicles to navigate an intersection and ultimately to guarantee safe navigation through the intersection.
+%
+\begin{figure}[hbt]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{ModeAutomaton.png}
+\end{center}
+\caption{Finite state automaton describing the three driving modes and the transition events.}
+\label{fig:automatonModes}
+\end{figure}
+%
+%
+\paragraph{Assumptions:} The main assumption is that all other vehicles follow the Duckietown traffic code, see \href{https://docs.google.com/document/d/1D2l8ltY2OGA2Mxw9xxaWS9c03nI4h9DkfiE0oqJpllM/edit\#heading=h.p7zatzzcmadz}{Traffic Code}. 
+
+Some intersections have traffic lights. The traffic lights are built such that whenever a vehicle enters the intersection with a green light, all other directions (including the opposite direction) are guaranteed to have a red light until that vehicle exits the intersection.
+
+Finally, the vision of all vehicles is restricted to the field of view of their camera, see Figure~\ref{fig:FieldOfView}.
+%
+\begin{figure}[hbt]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{FieldOfView.png}
+\end{center}
+\caption{The field of view of the camera is restricted to the yellow cone. The angle $\theta$ is the view angle.}
+\label{fig:FieldOfView}
+\end{figure}
+
+
+%
+%
+%
+%
+\section{Basic functionality}
+%
+There are two types of intersections in Duckietown:
+\begin{enumerate}
+\item Intersections with traffic lights;
+\item Intersections with stop signs.
+\end{enumerate}
+The coordination module guarantees safe navigation of intersections of both types in the presence of cooperating vehicles, where cooperation means that the other vehicles follow the Duckietown traffic code. The main requirements for the autonomous vehicle are
+\begin{itemize}
+\item Adhere to the traffic code
+\item Navigate intersections collision free
+\item Liveness, i.e. unless the intersection is always occupied by other vehicles, the autonomous vehicle will eventually pass the intersection.
+\end{itemize}
+%
+To fulfill these requirements we can use the signal lights of the autonomous vehicles, the perception inputs and the capability of the intersection control module that allows for open loop navigation through an intersection.
+%
+%
+%
+\section{Proposed approach}
+%
+Our proposed approach uses basic ideas from resource sharing. In particular, safety is achieved by guaranteeing that the resource, i.e.\ the intersection, is used by at most one car. The advantage of this approach is that it allows to decouple the coordination between vehicles and the actual intersection navigation. Crossing an intersection is therefore a two step process consisting of
+\begin{enumerate}
+\item Resource allocation;
+\item Open loop intersection navigation.
+\end{enumerate}
+
+The previous course module was concerned with intersection navigation. Here we focus on the resource allocation part which works differently for the two types of intersections.
+
+In the case of intersections equipped with traffic lights, the infrastructure already handles most of the resource allocation problem, as at most one direction of traffic has a green light.
+
+The second case, stop sign intersections, is more complicated. Here the signal lights of the autonomous vehicle are used a communication device in order to negotiate with other traffic participants who will use the resource next.
+
+The architecture of the module is depicted in Figure~\ref{fig:ModuleArchitecture}. The coordination switch keeps track of the driving mode and if the system is in coordination mode then it decides based on the type of the intersection which coordination mechanism has to be activated, see Section~\ref{sec:coordSwitch}. The traffic light coordination component handles the coordination for intersections equipped with traffic lights and is discussed in more detail in Section~\ref{sec:trafficL}. The stop sign coordination component handles the coordination for intersections with stop signs. It is described in more detail in Section~\ref{sec:stopSign}. Finally, the intersection exit coordination has to make sure that the vehicle's signal light is being switched off once the vehicle leaves the intersection, Section~\ref{sec:IntExit}.
+%
+\begin{figure}[hbt]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{archPic.png}
+\end{center}
+\caption{Proposed architecture of the module. The coordination switch activates the corresponding coordination mechanism which provides mode update information.}
+\label{fig:ModuleArchitecture}
+\end{figure}
+
+
+%
+%
+%
+%
+\section{Node overview}\label{sec:nodeOverview}
+
+\paragraph{Input:}\footnote{This is currently just a list of inputs. It remains to determine where these inputs come from} The coordination module has six input variables linked to information from the perception system and in addition to this gets the current driving mode from the mission planner:
+\begin{description}
+\item[\texttt{driving\_mode}] Variable indicating in which driving mode the system is. The possible values are \texttt{LANE\_FOLLOWING}, \texttt{COORDINATION} and \texttt{INT\_NAVIGATION};
+\item[\texttt{intersection\_type}] Variable indicating the type of intersection. We consider two types, \texttt{STOP} and \texttt{LIGHT};
+\item[\texttt{traffic\_light\_color}] Variable indicating the color of the traffic light. Value in \texttt{GREEN}, \texttt{YELLOW}, \texttt{RED} or \texttt{NO\_TRAFFIC\_LIGHT};
+\item [\texttt{light\_color}] Variable indicating which color the vehicle's signal light has to take. Value is one of \texttt{GREEN}, \texttt{YELLOW}, \texttt{RED}, \texttt{OFF}; 
+\item[\texttt{right\_vehicle\_LS}] Variable indicating the status of the signal light of the vehicle on the ego-vehicle's right. This can be either \texttt{GREEN}, \texttt{YELLOW}, \texttt{RED}, \texttt{OFF} or \texttt{NO\_CAR};
+\item[\texttt{opposing\_vehicle\_LS}] Variable indicating the status of the signal light of the vehicle coming from the opposing direction of the ego-vehicle. This can be either \texttt{GREEN}, \texttt{YELLOW}, \texttt{RED}, \texttt{OFF} or \texttt{NO\_CAR};
+\end{description}
+\hl{TODO: All the variables corresponding to light states of vehicles should change names (DH)}
+\begin{description}
+\item[\texttt{vehicle\_on\_intersection}] Boolean variable indicating whether there is a vehicle in the field of view of the ego-vehicle on the intersection;\\ \hl{We don't have this input, needs to be removed and not used in the algorithm (DH)}
+\item[\texttt{perception\_status}] Status of the perception system. Can take values in \texttt{CORRECT} or \texttt{DEFECT}.
+\end{description}
+%
+The corresponding ROS message is
+\begin{verbatim}
+#Constants
+uint8 LANE_FOLLOWING = 1
+uint8 COORDINATION = 2
+uint8 INT_NAVIGATION = 3
+uint8 LIGHT = 1
+uint8 STOP = 2
+uint8 NO_TRAFFIC_LIGHT = 0
+uint8 NO_CAR = 0
+uint8 OFF = 1
+uint8 YELLOW = 2
+uint8 GREEN = 3
+uint8 RED = 4
+uint8 DEFECT = 0
+uint8 CORRECT = 1
+
+#Fields
+uint8 driving_mode
+uint8 intersection_type
+uint8 light_color
+uint8 traffic_light_color
+uint8 right_vehicle_LS
+uint8 opposing_vehicle_LS
+bool vehicle_on_intersection
+uint8 perception_status
+\end{verbatim}
+%
+\hl{TODO: Fix this:
+
+These should probably be different topics/messages, since the different pieces of data will come from different sources.  
+
+I guess that \texttt{driving\_mode} will come from some sort of high-level orchestrator. Intersection type will come from some module able to understand semantic annotations on the map and the rest will come from some perception module. (M.~Carp)}
+%
+%
+%
+\paragraph{Output} The output message serves to update the car's signal light color and to inform the motion planer that a mode change would be safe. The outputs are
+\begin{description}
+\item[\texttt{is\_good2go}] Boolean variable indicating whether it is safe to change to the intersection navigation mode;
+\item [\texttt{light\_color}] Variable indicating which color the vehicle's signal light has to take. Value is one of \texttt{GREEN}, \texttt{YELLOW}, \texttt{RED}, \texttt{OFF}.\\ \hl{This variable needs a new name (DH)}
+\end{description}
+%
+The corresponding ROS message is
+\begin{verbatim}
+#Constants
+uint8 OFF = 1
+uint8 YELLOW = 2
+uint8 GREEN = 3
+uint8 RED = 4
+
+#Fields
+bool is_good2go
+uint8 light_color
+\end{verbatim}
+
+%
+%
+%
+%
+\section{Coordination switch}\label{sec:coordSwitch}
+%
+The coordination switch has two tasks:
+\begin{enumerate}
+\item Keep track of the current driving mode;
+\item Select the correct coordination mechanism.
+\end{enumerate}
+Pseudocode is provided in Figure~\ref{fig:pseudoCodeSwitch}.
+%
+%
+\begin{figure}[hbt]
+\begin{center}
+\includegraphics[width=\textwidth]{pseudoCode1.png}
+\caption{Pseudo code for the coordination switch}
+\label{fig:pseudoCodeSwitch}
+\end{center}
+\end{figure}
+%
+%
+%
+%
+\section{Traffic light coordination}\label{sec:trafficL}
+%
+At an intersection equipped with a traffic light the light does most of the coordination as it allocates the intersection to a unique sense of traffic. A vehicle which is in coordination mode, and observes a green traffic light has therefore just to verify whether another car in the same direction of traffic is currently on the intersection. This information is provided by the \texttt{vehicle\_on\_intersection} field as vehicles in the same direction of traffic are visible until they leave the intersection. The pseudocode for this is provided in Algorithm~\ref{Algo:TrafficLight}.
+%
+\begin{algorithm}[hbt]
+\begin{small}
+\caption{Traffic light coordination}\label{Algo:TrafficLight}
+\begin{algorithmic}
+\REQUIRE {VehicleObserver, TrafficLightObserver}
+\STATE is\_good2go $\gets$ false;
+\WHILE{VehicleObserver.vehicle\_on\_intersection == true \textbf{OR} trafficLightObserver.traffic\_light\_color != GREEN}
+\STATE{wait(T\_TRAFFIC\_LIGHT\_WAIT);}
+\ENDWHILE
+\STATE{is\_good2go $\gets$ true;}
+\STATE{publish(is\_good2go)};
+\end{algorithmic}
+\end{small}
+\end{algorithm} 
+%
+
+\hl{TODO: Traffic ligth coordination is a ROS-node and thus the pseudo-code of Algorithm~{\ref{Algo:TrafficLight}} might need to be adapted. Take into account the following discussion:}
+\begin{itemize}
+\item[\hl{JAM}] \hl{if this is a node, you probably want it to just return false, not to be in an waiting loop.}
+\item[\hl{DH}] \hl{It is a node yes. I don't know how to correctly do this. There are two things that seem important to me:}
+\begin{itemize}
+\item  \hl{while waiting in coordination mode the robot has nothing else to do except for sensing, which is done in parallel I assume}
+\item \hl{if \texttt{is\_good2go} is false, then the condition in the while loop should periodically be tested until \texttt{is\_good2go} becomes true.}
+\end{itemize}
+\end{itemize}
+%
+%
+%
+%
+%
+\section{Stop sign coordination}\label{sec:stopSign}
+%
+This section deals with the stop sign coordination block of Fig.~\ref{fig:ModuleArchitecture}, that is, with the coordination mechanism that eventually allows to pass from the intersection coordination mode to the intersection navigation mode, see Fig.~\ref{fig:automatonModes}. We start by providing a baseline solution that guarantees safety, i.e.\ at most one vehicle on the intersection at any given time and this solution also ensures that the vehicle respects the \href{https://docs.google.com/document/d/1D2l8ltY2OGA2Mxw9xxaWS9c03nI4h9DkfiE0oqJpllM/edit}{Duckietown traffic code}. The baseline solution does however not guarantee the liveness property for intersections with more than three incoming lanes. In the second part of the section we provide some indications on how to improve the baseline solution to guarantee liveness even in the case of more than three incoming lanes. 
+
+\subsection{Baseline solution}
+%
+For the baseline solution we assume that within the intersection coordination driving mode the vehicle can have two sub-states which correspond to the current intention of the autonomous vehicle. The sub-states are:
+\begin{enumerate}
+\item[\texttt{GO}] sub-state corresponds to the intention of entering the intersection, i.e.\ change the current driving mode from intersection coordination to intersection navigation;
+\item[\texttt{WAIT}] if the autonomous vehicle yields to some other vehicle on the intersection it is in the \texttt{WAIT} sub-state.
+\end{enumerate}
+% 
+The baseline coordination algorithm is based on three basic principles:
+%
+\begin{enumerate}
+\item Everybody yields to the right;
+\item Everybody uses its signal light to communicate its current intention, i.e.\ its sub-state. We use the convention that a green light corresponds to \texttt{GO} and a yellow light corresponds to \texttt{WAIT};
+\item If another vehicle in the \texttt{GO} sub-state is detected while the ego-vehicle's sub-state is \texttt{GO} then the ego-vehicle changes is sub-state to \texttt{WAIT} and it waits a random amount of time before tying again to go from \texttt{WAIT} to \texttt{GO}.
+\end{enumerate} 
+%
+Notice that when in the \texttt{GO} sub-state, due to perception delays, one cannot pass directly to the intersection navigation driving mode but one has to wait a time T\_SIG\_CONF in order to check whether there are some conflicts. The details are provided in Algorithm~\ref{algo:StopSignCoord}.
+
+\hl{This section needs to be adapted according to the three state solution (DH)}
+%
+%
+%
+%
+\begin{algorithm}[b!]
+\begin{small}
+\caption{Stop sign coordination basic}\label{algo:StopSignCoord}
+\begin{algorithmic}[1]
+\REQUIRE {VehicleObserver}
+\STATE{is\_good2go $\gets$ false;}
+\STATE{light\_color $\gets$ YELLOW; sub-state $\gets$ WAIT;}
+\STATE{seen\_r\_go $\gets$ false; seen\_o\_go $\gets$ false;}
+\STATE{t\_idle $\gets$ 0; publish(light\_color);}
+%starting the loop
+\WHILE{!is\_good2go}
+\STATE{wait(t\_idle);}
+\STATE{\# Case vehicle on intersection}
+\IF{VehicleObserver.vehicle\_on\_intersection}
+	\STATE{t\_idle $\gets$ T\_MAX\_CROSS; sub-state $\gets$ WAIT;}
+	\STATE{seen\_r\_go $\gets$ false; seen\_o\_go $\gets$ false;}
+\ELSE	
+	%case when right vehicle is present
+	\STATE{\# Case right vehicle is present}
+	\IF{VehicleObserver.right\_vehicle\_LS != NO\_CAR}
+		\IF{VehicleObserver.right\_vehicle\_LS == GREEN}
+			\IF{seen\_r\_go}
+				\STATE{t\_idle $\gets$ T\_MAX\_CROSS;}
+				\STATE{seen\_r\_go $\gets$ false; seen\_o\_go $\gets$ false;}
+			\ELSE
+				\STATE{sub-state $\gets$ WAIT; t\_idle $\gets$ T\_SIG\_CONF;}
+				\STATE{seen\_r\_go $\gets$ true; seen\_o\_go $\gets$ false;}
+			\ENDIF
+		\ELSE
+			\STATE{sub-state $\gets$ WAIT; t\_idle $\gets$ T\_STOP\_SIGN\_WAIT;}
+			\STATE{seen\_r\_go $\gets$ false; seen\_o\_go $\gets$ false;}
+		\ENDIF
+	%case when opposing vehicle is yellow
+	\algstore{stopSignBasic:algo}
+\end{algorithmic}
+\end{small}
+\end{algorithm}
+
+\begin{algorithm}[t]
+\begin{small}
+\begin{algorithmic}[1]
+\algrestore{stopSignBasic:algo}
+	\ELSE
+		\STATE{\# Case opposing vehicle is going}
+		\IF{VehicleObserver.opposing\_vehicle\_LS == GREEN}
+			\IF{seen\_o\_go}
+				\STATE{t\_idle $\gets$ T\_MAX\_CROSS;}
+				\STATE{seen\_r\_go $\gets$ false; seen\_o\_go $\gets$ false;}	
+			\ELSE
+				\STATE{sub-state $\gets$ WAIT; t\_idle $\gets$ T\_SIG\_CONF;}
+				\STATE{seen\_r\_go $\gets$ false; seen\_o\_go $\gets$ true;}
+			\ENDIF
+	%rest of the cases
+		\ELSE
+			\IF{sub-state == GO}
+				\STATE{is\_good2go $\gets$ true;}
+			\ELSE
+				\STATE{sub-state $\gets$ GO; t\_idle $\gets$ T\_SIG\_CONF;}
+				\STATE{seen\_r\_go $\gets$ false; seen\_o\_go $\gets$ false;}
+			\ENDIF
+		\ENDIF
+	\ENDIF
+\ENDIF
+\IF{sub-state == WAIT \textbf{AND} light\_color == GREEN}
+	\STATE{t\_idle $\gets$ t\_idle + Rand(0,T\_STOP\_SIGN\_WAIT);}
+	\STATE{light\_color $\gets$ YELLOW; publish(light\_color);}
+	\ENDIF
+\IF{sub-state == GO \textbf{AND} light\_color == YELLOW}	
+	\STATE{light\_color $\gets$ GREEN; publish(light\_color);}
+\ENDIF
+\ENDWHILE
+\STATE{publish(is\_good2go);}
+\end{algorithmic}
+\end{small}
+\end{algorithm} 
+
+
+\begin{algorithm}[h!]
+\begin{small}
+\caption{Stop sign coordination ALTERNATIVE JAM}\label{algo:StopSignCoord2}
+\begin{algorithmic}[1]
+\IF{intersection is free}
+\IF{vehicle in the right}
+	\STATE WAIT
+\ELSIF{vehicle in front}
+	\IF{front = go}
+		\STATE WAIT
+	\ELSIF{front = wait}
+		\STATE GO
+	\ELSE
+		\STATE COORDINATE (wait a random amount of time and try again)
+	\ENDIF
+\ENDIF
+\ENDIF
+\end{algorithmic}
+\end{small}
+\end{algorithm}
+
+%
+%
+%
+%
+%
+%
+\subsection{Improvement of the baseline solution}
+%
+Liveness is an essential property of any algorithm and therefore any solution that does not have this property cannot be considered satisfactory. In order to achieve liveness in the presence of incomplete information (vehicles coming from the left are outside the field of view of the camera) we propose to use a third sub-state \texttt{WARN} whose purpose is to warn other traffic participants that the intersection is occupied. Using this additional information a distributed solution that is safe and has the liveness property is possible.
+%
+\begin{rem}
+\begin{itemize}
+\item It is possible to use different sub-states than those suggested here;
+\item It is possible to add rules to the traffic code if necessary to achieve safety or liveness. The principle is however that the less additions to the traffic code the better your solution;
+\item Bonus points are given also to solutions that are efficient and/or robust.
+\end{itemize}
+\end{rem}
+%
+%
+%
+%
+%
+\section{Intersection exit coordination}\label{sec:IntExit}
+%
+Update the mode information and possibly switch off the LEDs.
+%
+%
+%
+%
+%
+\section{Parameters}
+%
+There are a certain number of parameters that correspond to different idle times:
+%
+\begin{center}
+  \begin{tabular}{ l p{0.5\textwidth} }
+	Parameter & Description\\
+    \hline
+    T\_TRAFFIC\_LIGHT\_WAIT & Idle time between updates of the sensor inputs while waiting at the traffic light\\
+		T\_STOP\_SIGN\_WAIT & Idle time between updates of the sensor inputs while waiting for the right vehicle to pass\\
+		T\_MAX\_CROSS & Upper bound on the time a vehicle needs to pass through the intersection\\
+		T\_SIG\_CONF & Idle time allowing vehicles to detect changes of the LED light status\\
+		\hline
+  \end{tabular}
+\end{center}
+
+
+\end{document}
