@@ -802,11 +802,11 @@ and obtain the name of the commit using the following commands:
 
 
 
-## Common mistakes with Markdown
+## Common mistakes with Markdown {#common-markdown-mistakes}
 
 Here are some common mistakes encountered.
 
-### Not properly starting a list
+### Not properly starting a list {#invalid-list}
 
 There must be an empty line before the list starts.
 
