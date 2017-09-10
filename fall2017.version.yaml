@@ -1,4 +1,4 @@
-input: duckuments-dist/master/duckiebook.html
+input: out/fall2017/master.html
 
 
 recipe:
