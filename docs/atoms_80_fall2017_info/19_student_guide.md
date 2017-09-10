@@ -6,7 +6,7 @@ Welcome aboard! We are so happy you are joining us at Duckietown!
 
 ### Slack
 
-The primary mode of online communication between staff and students is Slack, a team communication forum that allows the community to collaborate in making Duckietown awesome.
+The primary mode of online confabulation between staff and students is Slack, a team communication forum that allows the community to collaborate in making Duckietown awesome.
 
 Download the Slack app --- it's much more convenient than using the website.
 
