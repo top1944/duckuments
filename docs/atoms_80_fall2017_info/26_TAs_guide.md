@@ -89,6 +89,8 @@ Build your Duckiebot according to the instructions.
 
 See: [](#part:building-duckiebot)
 
+See: [](#building-duckiebot) 2
+
 Point of Contact: Shiying (ETH)
 
 Point of Contact: ??? (UdeM)

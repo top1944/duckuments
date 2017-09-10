@@ -1,6 +1,6 @@
 #  The Duckietown project {#part:duckietown-project}
 
-# What is Duckietown?
+# What is Duckietown? {status=beta}
 
 ## Goals and objectives
 
@@ -25,7 +25,7 @@ In addition, the Duckietown platform is also suitable for research.
 ## Learn about the Duckietown educational experience
 
 The video in [](#fig:duckumentary) is the "Duckumentary", a documentary about the first version
-of the class, during Spring 2016. 
+of the class, during Spring 2016.
 
 
 <div figure-id="fig:duckumentary">

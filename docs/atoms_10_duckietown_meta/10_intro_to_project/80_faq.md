@@ -1,4 +1,4 @@
-## Frequently Asked Questions {#faq}
+## Frequently Asked Questions {#faq status=draft}
 
 ### General questions
 
