@@ -15,6 +15,7 @@ See: [A tutorial on Markdown][tutorial].
 [tutorial]: https://www.markdowntutorial.com/
 
 
+
 ## Variables in command lines and command output
 
 Use the syntax "<code><span>!</span>[name]</code>" for describing the variables in the code.
@@ -798,3 +799,35 @@ and obtain the name of the commit using the following commands:
 
     $ git -C ~/duckuments rev-parse HEAD      # commit for duckuments
     $ git -C ~/duckuments/mcdp rev-parse HEAD # commit for mcdp
+
+
+
+## Common mistakes with Markdown
+
+Here are some common mistakes encountered.
+
+### Not properly starting a list
+
+There must be an empty line before the list starts.
+
+This is correct:
+
+    I want to learn:
+
+    - robotics
+    - computer vision
+    - underwater basket weaving
+
+This is incorrect:
+
+    I want to learn:
+    - robotics
+    - computer vision
+    - underwater basket weaving
+
+and it will be rendered as follows:
+
+I want to learn:
+- robotics
+- computer vision
+- underwater basket weaving

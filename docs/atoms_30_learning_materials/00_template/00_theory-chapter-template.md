@@ -3,7 +3,8 @@
 Theory chapters benefit from a standardized exposition. Here, we define the template for these chapters. Rememeber to check [](#sec:documentation-manual) for a comprehensive and up-to-date list of Duckiebook supported features.
 
 <!--
-TODO: Define new classes for:
+
+ TODO: Define new classes for:
 
 - 'required-preliminaries' (must read, hard contraint, do not proceed if violated),
 - 'recommended-preliminaries' (best if read, weak constraint, provides extra Duckiepoints)
@@ -19,7 +20,7 @@ Start with a brief introduction of the discussed topic, describing its place in 
 PID control is the simplest approach to making a system behave in a desired way rather than how it would naturally behave. It is simple because the measured output is directly feedbacked, as opposed to, e.g., the system's states. The control signal is obtained as a weighted sum of the tracking error (*P*roportional term), its integral over time (*I*ntegrative term) and its instantaneous derivative (*D*erivative term), from which the appellative of PID control. The tracking error is defined as the instantaneous difference between a reference and a measured system output.
 
 <!--(Dear Santa, I would like class='required-preliminaries' here) -->
-<div class='requirements' markdown="1"> 
+<div class='requirements' markdown="1">
 
 Knowledge necessary:
 
@@ -76,9 +77,9 @@ D &= 0.
 Remember you can use the `problem` environment of $\LaTeX$ to formally state a problem:
 
 \begin{problem}[PID]\label{prob:label-prob}
-Given a system \eqref{eq:system} and measurements of the output $\tilde{y}_t = y_t + n_t, n_t \sim \cal{N}(0,\sigma)$, find a set of PID coefficients that meet the specified requirements for: 
-- stability, 
-- performance, 
+Given a system \eqref{eq:system} and measurements of the output $\tilde{y}_t = y_t + n_t, n_t \sim \cal{N}(0,\sigma)$, find a set of PID coefficients that meet the specified requirements for:
+- stability,
+- performance,
 - robustness.
 \end{problem}
 
@@ -202,6 +203,8 @@ See also: become a linear algebra master: [Matrix cookbook](#bib:matrix-cookbook
 Do not include a reference chapter. References are automatically compiled to [the Bibliography Section](#bibliography).
 
 
-Author: Jacopo 
+Author: Jacopo
+
 Maintainer: Jacopo
+
 Point of Contact: Jacopo

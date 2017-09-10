@@ -143,6 +143,7 @@ Python:
     duckiebot $ pip install procgraph
     duckiebot $ sudo pip install scipy --upgrade
     duckiebot $ sudo pip install ruamel.yaml --upgrade
+
 Note: scipy --upgrade(0.19.1) took about an hour with ethernet connection.
 
 I2C:

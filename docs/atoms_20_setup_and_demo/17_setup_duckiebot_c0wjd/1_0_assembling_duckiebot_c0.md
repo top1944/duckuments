@@ -279,7 +279,9 @@ Put the battery between the upper and lower decks of the chassis. It is recommen
 ### Joypad
 
 TODO: Connect the joypad dongle
+
 TODO: Insert 2AA batteries in the joypad
+
 TODO: Insert relevant pics
 
 
@@ -293,6 +295,3 @@ Connect power cables (USB A to 5mm cable in your Duckiebox and USB cable in the 
 <div figure-id="fig:cable_wiring" figure-caption="TODO: will be replace by a new pic">
      <img src="cable_wiring.jpg" style='width: 30em'/>
 </div>
-
-
-

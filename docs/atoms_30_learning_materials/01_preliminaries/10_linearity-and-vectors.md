@@ -64,7 +64,7 @@ A function $f : \aset{X} \rightarrow \mathbb{Y}$ is a mapping between the sets $
 Recommended: Functions can be classified by the nature of the relationship between inputs and outputs in: _injective_, _surjective_ or _bijective_ [add-ref]().
 
 </div>
-TODO: add references
+ TODO: add references
 -->
 
 <!--<div id='def:function' class="definition latex_env" markdown="1">
