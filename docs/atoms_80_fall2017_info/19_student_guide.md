@@ -6,13 +6,15 @@ Welcome aboard! We are so happy you are joining us at Duckietown!
 
 ### Slack
 
-The primary mode of online communication between staff and students is Slack, a team communication forum that allows the community to collaborate in making Duckietown awesome.
+The primary mode of online confabulation between staff and students is Slack, a team communication forum that allows the community to collaborate in making Duckietown awesome.
 
 Download the Slack app --- it's much more convenient than using the website.
 
-To get an invitation to join our Slack, you need to send an email to Kirsten Bowser &lt;akbowser@gmail.com&gt;.
+If are reading this you should have recieved an invitation to join our Slack - check your inbox. If you have not recieved an invitation to Slack, you need to send an email to Kirsten Bowser &lt;akbowser@gmail.com&gt;.
+
 
 Note: Emails are otherwise forbidden, unless they relate to a private, university-based admistrative concern.
+
 
 When you accept your Slack invite, please follow these rules in setting up your profile:
 
@@ -28,7 +30,7 @@ Check out all the channels in Slack, and add yourself to those that pertain or i
 
 Please add a picture (relatively professional, so that we can use it for rosters when the time comes.)
 
-Modify your settings to prevent email notifications, they are annoying and defeat the purpose of the communications forum. The point of Slack is that we don't have our email full of Duckietown emails.
+Modify your settings to prevent email notifications, they are annoying and defeat the purpose of the communication forum. The point of Slack is that we don't have inboxes full of Duckietown emails.
 
 ### Github
 
@@ -46,7 +48,7 @@ If you don't already have a Github account, follow these steps:
 
 3) Send your Github username to Duckietown HR via Slack.
 
-4) Next, you need to *accept* the invite to the Duckietown organization. The  invite should be waiting for you at the page [https://github.com/duckietown](https://github.com/duckietown).
+4) Next, you need to *accept* the invite to the Duckietown organization. The invite should be waiting for you at the page [https://github.com/duckietown](https://github.com/duckietown).
 
 <!--
 ### Google Documents

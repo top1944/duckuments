@@ -1,7 +1,8 @@
-# Checkoff: Duckiebot Assembly and Configuration
+# Checkoff: Duckiebot Assembly and Configuration {#checkoff_assembly_configuration}
 
 The first job  is to get your Duckiebot put together and up and running. 
 
+Comment: @liam: We should make sure that these tasks are 1-to-1 with the task list in the checkoff spreadsheet, and remind them what to do. 
 
 ## Pick up your Duckiebox
 

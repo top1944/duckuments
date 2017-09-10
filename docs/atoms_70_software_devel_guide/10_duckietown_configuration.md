@@ -116,6 +116,13 @@ Explanations of the fields:
 
 <!-- do not change the ID "machines"; it's linked in the code -->
 
+Make sure you already set up ROS ([](#build-repo)).
+
+Activate ROS:
+
+    $ cd ~/duckietown
+    $ source environment.sh
+
 The `machines` file is created from the scuderia data using this command:
 
     $ rosrun duckieteam create-machines

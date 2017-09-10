@@ -1,0 +1,77 @@
+Work with robots: Duckietown UROP opportunities
+
+Duckietown is a class on Autonomous Vehicles (2.166).
+
+Duckietown is also a research project.
+Duckietown is also a team-building exercise.
+Duckietown is also a live action role-playing game.
+Duckietown is also performance art.
+Duckietown is also suspected to be the start of a Cult of the Duckie.
+
+Duckietown is all of this and more:
+
+http://facebook.com/duckietown
+http://duckietown.mit.edu/
+
+
+*** Duckietown wants you! ***
+
+Duckietown is looking for undergraduates to help us, as UROP for credit, UROP for pay ($15/h), or other modality to be defined.
+ 
+Must love duckies.
+
+
+### The Duckietown “no burn out” policy ###
+
+Duckietown strives to be a place of joy and relaxed introspection.
+
+This is our “no burn out” policy: We only accept freshmen and sophomores if their freshman/departmental advisors will send us an email containing the sentence “I have reviewed X’s course load, and I think it is a good idea that X spends N hours per week in Duckietown”.
+
+### Positions available ###
+
+We have a variety of positions, suitable for the whole range of seniority, from freshman to senior. We have something for course 2, 6, 16, and everything in between.
+
+This is an incomplete list of possibilities:
+- assembling and maintaining the robot fleet
+- herding duckies
+- QA/writing documentation
+- designing and building Duckietowns
+- tutor the high school students working on Duckietown
+- create websites
+- programming
+- system administration
+- editing a duckumentary
+- social media manager (Facebook/Linkedin/…)
+- being a Duckie Ambassador
+- plus, of course, research-level work in many area of autonomy.
+
+If you want to get an inside view, please contact our previous UROP Jonathan Garcia-Mallen <jogama@mit.edu>, who was performing a large subset of the above during IAP.
+
+### Application instructions ###
+
+Please send an email to hr@duckietown.com filling in the form below.
+
+We will schedule a meeting late next week (probably Thursday or Friday).
+
+Optional: come to the first class, Wed Feb 3, 3pm in 1-246, to get a feel for thb	 be class.
+
+### Form ###
+
+My full legal name: ...
+
+Year:  ...
+
+If freshman/sophomore, academic/departmental advisor name/email:
+
+Major: …
+
+What I want to do with my life:  [1 sentence]
+
+What I want to do in Duckietown: [1 sentence]
+
+Preferred modality: [UROP for credit | UROP for pay | ...]
+
+Availability: [# of hours]
+Constraints: [e.g. after 5pm, all day Friday, etc.]
+
+My love of duckies: [quantitative or qualitative assessment]
