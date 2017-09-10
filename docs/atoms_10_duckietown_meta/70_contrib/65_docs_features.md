@@ -425,9 +425,42 @@ Let's start by...
 
 The system supports parsing of some special paragraphs.
 
-Note that some of these might be redundant.
+Note: some of these might be redundant and will be eliminated. For now,
+I am documenting what is implemented.
 
-For now, documenting what is implemented.
+
+### Special paragraphs must be separated by a line {#empty-line-before-special}
+
+A special paragraph is marked by a special prefix.
+The list of special prefixes is given in the next section.
+
+There must be an empty line before a special paragraph;
+this is because in Markdown a paragraph starts only after an empty line.
+
+This is checked automatically, and the compilation will abort if the mistake is found.
+
+For example, this is invalid:
+
+	See: this book
+	See: this other book
+
+This is correct:
+
+    See: this book
+
+    See: this other book
+
+Similarly, this is invalid:
+
+	Author: author
+	Maintainer: maintainer
+
+and this is correct:
+
+    Author: author
+
+    Maintainer: maintainer
+
 
 ### Todos, task markers
 
