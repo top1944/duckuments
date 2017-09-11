@@ -22,11 +22,10 @@ When you accept your Slack invite, please follow these rules in setting up your 
 Here is an example: Andrea Censi from ETHZ is `@censi`, his name on Slack is "Andrea Censi (ETHZ)".
 </div>
 
-Please add a picture (relatively professional, so that we can use it for rosters when the time comes.)
+Please add a picture (relatively professional, so that we can use it for rosters when the time comes).
 
 
 More details about Slack are available [here](#slack)
-
 
 A brief synopsis of all of the help related Slack channels is here: [](#slack_channels).
 
@@ -35,18 +34,19 @@ Check out all the channels in Slack, and add yourself to those that pertain or i
 
 ### Github
 
-The next thing you need to do is provide Duckietown HR (Kirsten Bowser) with your Github username via Slack.
+The next thing you need to do is provide Duckietown HR (Kirsten Bowser) with your Github username via Slack in a private message.
 
 If you don't already have a Github account, follow these steps:
 
-Sign up for an account on [GitHub](https://github.com).
+1. Sign up for an account on [GitHub](https://github.com).
 
-Use the same email associated with your Slack account. Your Github username should be the same as your Slack username if possible, otherwise something similar.
+2. Use the same email associated with your Slack account. Your Github username should be the same as your Slack username if possible, otherwise something similar.
 
-`@censi` is the slack handle, the GitHub username is `AndreaCensi`.
-Send your Github username to Duckietown HR via Slack on the channel `help-accounts`.
+Example: `@censi` is the slack handle, the GitHub username is `AndreaCensi`.
 
-Next, you need to accept the invite to the Duckietown organization. The invite should be waiting for you at the page https://github.com/duckietown.
+3. Send your Github username to Duckietown HR via Slack in a private message.
+
+4. You need to accept the invite to the Duckietown organization. The invite should be waiting for you at the page https://github.com/duckietown.
 
 <!--
 ### Google Documents
@@ -64,7 +64,9 @@ You need a laptop with these specifications:
 
 - Linux Ubuntu 16.04 installed natively (dual boot), not in a virtual machine.
   See [](#can-we-use-vm) below for a discussion of the virtual machine option.
+
 - A WiFi interface that supports 5 GHz wireless networks. If you have a 2.4 GHz WiFi, you will not be able to comfortably stream images from the robot; moreover, you will need to adapt certain instructions.
+
 - Minimum 50 GB of free disk space in addition to the OS. Ideally you have 200 GB+. This is for storing and processing logs.
 
 
@@ -75,7 +77,7 @@ good CPU.  You will be developing code that runs on a Raspberry PI. Any laptop
 bought in the last 3 years should be powerful enough. However, having a good
 CPU / lots of RAM makes it faster to run regression tests.
 
-If you do not have a laptop that meets these requirements, please post a note in the channel `help-laptops` and we will resolve the issue.
+If you do not have access to a laptop that meets these requirements, please post a note in the channel `help-laptops`.
 
 ### Can I use a virtual machine instead of dual booting? {#can-we-use-vm}
 
@@ -117,7 +119,7 @@ Here's something you can start learning before the class.
 
 ### Learn about Duckietown
 
-Read about Duckietown's history; watch the Duckumentary.
+Read about Duckietown's history and watch the Duckumentary.
 
 See: [](#part:duckietown-project)
 
@@ -128,7 +130,7 @@ Start learning about Git and Github.
 See: [](#git-reference)
 
 
-### Math refresher
+### Math Refresher
 
 Do a bit of a refresher on some math basics.
 
