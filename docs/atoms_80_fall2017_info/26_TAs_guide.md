@@ -87,7 +87,7 @@ Point of Contact: Andrea
 
 Build your Duckiebot according to the instructions.
 
-See: [](#building-duckiebot)
+See: [](#building-duckiebot-c0)
 
 
 Point of Contact: Shiying (ETH)
