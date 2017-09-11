@@ -5,14 +5,21 @@
 Class (11:30)
 
 Slides:
+
 * [Duckietown History Future](https://github.com/duckietown/lectures/blob/master/duckietown_history_future.key)
+
 * [Duckietown Intro](https://github.com/duckietown/lectures/blob/master/duckietown_intro.key)
+
 * [Autonomous Vehicles](https://github.com/duckietown/lectures/blob/master/autonomous_vehicles.key)
+
 * [Autonomy Overview](https://github.com/duckietown/lectures/blob/master/autonomy_overview.key)
 
 Book materials:
+
 * [](#part:duckietown-project)
+
 * [](#autonomous-vehicles)
+
 * [](#autonomy_overview)
 
 ## Friday Sept 8
