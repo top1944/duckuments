@@ -1,13 +1,13 @@
 # Wheel calibration
 
-Assigned: Andrea
+Assigned: Andrea Daniele
 
 <div class='requirements' markdown='1'>
 
 Requires: You can run the joystick demo remotely. The procedure is documented
 in [](#rc-launched-remotely).
 
-Results: Calibrate the wheels of your Duckiebot such that it goes in a straight line
+Results:  Calibrate the wheels of the Duckiebot such that it goes in a straight line
 when you command it to. Set the maximum speed of the Duckiebot.
 
 </div>
@@ -21,7 +21,7 @@ and right wheel, they are exactly the same. In particular, every motor responds
 to a given voltage signal in a slightly different way. Similarly, the wheels
 that we are using look "identical", but they might be slightly different.
 
-If you drive your Duckiebot around using your joystick, you might notice that
+If you drive the Duckiebot around using the joystick, you might notice that
 it doesn’t really go in a straight line when you command it to. This is due to
 those small differences between the motors and the wheels explained above.
 Different motors can cause the left wheel and right wheel to travel at different
@@ -29,8 +29,8 @@ speed even though the motors received the same command signal.
 Similarly, different wheels travel different distances even though the motors
 made the same rotation.
 
-XXX It might be helpful to talk about the ROS Parameter Server here, or at least
-reference another page.
+Comment: It might be helpful to talk about the ROS Parameter Server here, or at least
+reference another page. -AD
 
 
 ## What is the Calibration step?
@@ -43,11 +43,11 @@ The relationship between the velocities and the voltages of left and right motor
 are defined as:
 
 \begin{align*}
-    V_{right} &= (g + t) * (v + \dfrac{1}{2} \omega l ) \\
-    V_{left} &= (g - t) * (v - \dfrac{1}{2} \omega l )
+    V_{\text{right}} &= (g + t) * (v + \dfrac{1}{2} \omega l ) \\
+    V_{\text{left}} &= (g - t) * (v - \dfrac{1}{2} \omega l )
 \end{align*}
 
-where $V_{right}$ and $V_{left}$ are the voltages for the two motors, $g$ is
+where $V_{\text{right}}$ and $V_{\text{left}}$ are the voltages for the two motors, $g$ is
 called *gain*, $t$ is called *trim*, $v$ and $\omega$ are the desired linear
 and the angular velocity of the robot, and $l$ is the distance between the two
 wheels. The gain parameter $g$ controls the maximum speed of the robot.
@@ -68,50 +68,50 @@ parameter by running the command:
 
     duckiebot $ rosservice call /![robot name]/inverse_kinematics_node/set_trim -- ![trim value]
 
-Calibrate the trim parameter by following these steps:
+Calibrate the trim parameter using the following steps.
 
+#### Step 1
 
-#### **Step 1**
-  Make sure that your Duckiebot is ON and connected to the network.
+Make sure that your Duckiebot is ON and connected to the network.
 
-&nbsp;
+#### Step 2
 
-
-#### **Step 2**
 On your Duckiebot, launch the joystick process:
 
     duckiebot $ roslaunch duckietown joystick.launch veh:=![robot name]
-&nbsp;
 
 
-#### **Step 3**
+#### Step 3
+
 Use some tape to create a straight line on the floor ([](#fig:wheel_calibration_line)).
+
 <div figure-id="fig:wheel_calibration_line" figure-caption="Straight line useful for wheel calibration">
      <img src="wheel_calibration_line.jpg" style='width: 30em'/>
-</div>
-&nbsp;
+</div> 
 
 
-#### **Step 4**
-Place your Duckiebot on one end of the tape. Make sure that your Duckiebot is
+#### Step 4
+
+Place your Duckiebot on one end of the tape. Make sure that the Duckiebot is
 perfectly centered with respect to the line.
-&nbsp;
 
+#### Step 5
 
-#### **Step 5**
-Command your Duckiebot to go straight for about 2 meters. Observe your Duckiebot
+Command your Duckiebot to go straight for about 2 meters. Observe the Duckiebot
 from the point where it started moving and annotate on which side of the tape
 the Duckiebot drifted ([](#fig:wheel_calibration_lr_drift)).
+
 <div figure-id="fig:wheel_calibration_lr_drift" figure-caption="Left/Right drift">
   <img src="wheel_calibration_lr_drift.jpg" style='width: 30em'/>
 </div>
-&nbsp;
 
+#### Step 6
 
-#### **Step 6**
 Measure the distance between the tape and the Duckiebot after it traveled for
-about 2 meters ([](#fig:wheel_calibration_measuring_drift)) (Make sure that the
-ruler is orthogonal to the tape).
+about 2 meters ([](#fig:wheel_calibration_measuring_drift)). 
+
+Make sure that the ruler is orthogonal to the tape.
+
 <div figure-id="fig:wheel_calibration_measuring_drift" figure-caption="Measure the amount of drift after 2 meters run">
      <img src="wheel_calibration_measuring_drift.jpg" style='width: 30em'/>
 </div>
@@ -119,30 +119,28 @@ ruler is orthogonal to the tape).
 If the Duckiebot drifted by less than $15$ centimeters you can stop calibrating
 the trim parameter. A drift of $15$ centimeters in a $2$ meters run is good
 enough for Duckietown. If the Duckiebot drifted by more than $15$ centimeters,
-continue with the next step.
-
-&nbsp;
+continue with the next step. 
 
 
-#### **Step 7**
+#### Step 7
+
 If the Duckiebot drifted to the left side of the tape, decrease the value of $t$,
 by running, for example:
 
     duckiebot $ rosservice call /![robot name]/inverse_kinematics_node/set_trim -- -0.1
-&nbsp;
 
 
-#### **Step 8**
+#### Step 8
+
 If the Duckiebot drifted to the right side of the tape, increase the value of
 $t$, by running, for example:
 
     duckiebot $ rosservice call /![robot name]/inverse_kinematics_node/set_trim -- 0.1
-&nbsp;
 
-#### **Step 9**
+
+#### Step 9
+
 Repeat the steps 4-8.
-
-
 
 ### Calibrating the `gain` parameter
 
@@ -151,8 +149,9 @@ running the command:
 
     duckiebot $ rosservice call /![robot name]/inverse_kinematics_node/set_gain -- ![gain value]
 
-Test your Duckiebot for different values of the gain parameter.
+Test the Duckiebot for different values of the gain parameter.
 
+Doubt: @liampaull What is the correct value to use for the gain? -AC
 
 ### Store the calibration
 
@@ -161,5 +160,12 @@ When you are all done, save the parameters by running:
     duckiebot $ rosservice call /![robot name]/inverse_kinematics_node/save_calibration
 
 The first time you save the parameters, this command will create the file
-`src/00-infrastructure/duckietown/config/baseline/calibration/kinematics/![robot name].yaml`.
+
+    src/00-infrastructure/duckietown/config/baseline/calibration/kinematics/![robot name].yaml
+    
 You can add and commit it to the repository.
+
+Note: we are in the process of rewriting the configuration system, so in a while "commit to the repository" 
+is not going to be the right thing to do.
+
+
