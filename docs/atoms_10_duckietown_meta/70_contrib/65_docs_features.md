@@ -441,8 +441,8 @@ This is checked automatically, and the compilation will abort if the mistake is 
 
 For example, this is invalid:
 
-	See: this book
-	See: this other book
+    See: this book
+    See: this other book
 
 This is correct:
 
@@ -452,8 +452,8 @@ This is correct:
 
 Similarly, this is invalid:
 
-	Author: author
-	Maintainer: maintainer
+    Author: author
+    Maintainer: maintainer
 
 and this is correct:
 
