@@ -5,11 +5,10 @@ recipe:
 - toc # magic word for toc
 
 - add: fall-2017
-  title: Fall 2017 General Info
 - part: homeworks
   title: Fall 2017 Checkoffs and Homeworks
   contents:
-    add: checkoff_assembly_configuration
+  - add: checkoff_assembly_configuration
 - add: duckietown-project
 - add: contribute
 - part: theory-background
