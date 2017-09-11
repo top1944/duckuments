@@ -164,7 +164,7 @@ and to the internet, the Raspberry Pi will act as a bridge to the internet.
 
 ## Setting up wireless network configuration
 
-You are connected to the Duckiebot via WiFi, but the Duckiebot also needs to connect to the internet in order to get updates and install some software. There are two options for achieving this:
+You are connected to the Duckiebot via WiFi, but the Duckiebot also needs to connect to the internet in order to get updates and install some software. There are three options for achieving this:
 
 ### Option 1: `duckietown` WiFi 
 
