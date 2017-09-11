@@ -1,3 +1,4 @@
+
 input: out/fall2017/master.html
 
 
@@ -16,27 +17,30 @@ recipe:
 
 - add: duckietown-project
 - add: contribute
+
 - part: theory-background
   title: Theory Background
   contents:
   - add: probability_basics
   - add: linear_algebra
+
 - add: building-duckiebot-c0
 - add: building-duckiebot-c1
 
-- part: end-materials
-  title: End materials
+- part: appendix
+  title: Appendix
   contents:
   - add: bibliography
 
-- part: appendix
-  title: Some miscellaneous units
-  contents:
-  - add: atom
-  - add: liclipse
-
 purl_prefix: http://purl.org/dt/fall2017/
 
+# Removes the sections that have status equal to draft
 remove_status: [draft]
+# remove_status: [] # don't remove anything
+# remove_status: [draft, beta] # remove draft and beta
+
+# if show_removed is true, the removed sections names are kept in the output
+# otherwise they disappear completely
+show_removed: true
 
 output: duckuments-dist/fall2017/duckiebook.html
