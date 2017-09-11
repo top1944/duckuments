@@ -1,4 +1,4 @@
-# Special paragraphs and environments {#special-pars}
+# Special paragraphs and environments {#special-pars status=ready}
 
 ## Special paragraphs tags {#special-paragraphs}
 

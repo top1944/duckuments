@@ -1,4 +1,4 @@
-# Wheel calibration {#wheel-calibration}
+# Wheel calibration {#wheel-calibration status=beta}
 
 Assigned: Andrea Daniele
 
@@ -88,7 +88,7 @@ Use some tape to create a straight line on the floor ([](#fig:wheel_calibration_
 
 <div figure-id="fig:wheel_calibration_line" figure-caption="Straight line useful for wheel calibration">
      <img src="wheel_calibration_line.jpg" style='width: 30em'/>
-</div> 
+</div>
 
 
 #### Step 4
@@ -109,7 +109,7 @@ the Duckiebot drifted ([](#fig:wheel_calibration_lr_drift)).
 #### Step 6
 
 Measure the distance between the tape and the Duckiebot after it traveled for
-about 2 meters ([](#fig:wheel_calibration_measuring_drift)). 
+about 2 meters ([](#fig:wheel_calibration_measuring_drift)).
 
 Comment: It's unclear what is the distance - from where to where. Presumably, center of axle? - AC
 
@@ -122,7 +122,7 @@ Make sure that the ruler is orthogonal to the tape.
 If the Duckiebot drifted by less than $15$ centimeters you can stop calibrating
 the trim parameter. A drift of $15$ centimeters in a $2$ meters run is good
 enough for Duckietown. If the Duckiebot drifted by more than $15$ centimeters,
-continue with the next step. 
+continue with the next step.
 
 
 #### Step 7
@@ -165,10 +165,8 @@ When you are all done, save the parameters by running:
 The first time you save the parameters, this command will create the file
 
     src/00-infrastructure/duckietown/config/baseline/calibration/kinematics/![robot name].yaml
-    
+
 You can add and commit it to the repository.
 
-Note: we are in the process of rewriting the configuration system, so in a while "commit to the repository" 
+Note: we are in the process of rewriting the configuration system, so in a while "commit to the repository"
 is not going to be the right thing to do.
-
-

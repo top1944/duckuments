@@ -1,4 +1,4 @@
-# Duckietown Appearance Specification {#duckietown-specs}
+# Duckietown Appearance Specification {#duckietown-specs status=draft}
 
 Assigned: Liam
 

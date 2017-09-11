@@ -1,4 +1,4 @@
-# Acquiring the parts for the Duckiebot `C0` {#acquiring-parts-c0}
+# Acquiring the parts for the Duckiebot `C0` {#acquiring-parts-c0 status=beta}
 
 The trip begins with acquiring the parts. Here, we provide a link to all bits and pieces that are needed to build a Duckiebot, along with their price tag. If you are wondering what is the difference between different Duckiebot configurations, read [this](#duckiebot-configurations).
 

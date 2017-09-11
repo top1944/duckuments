@@ -1,4 +1,4 @@
-# Advanced Markduck guide
+# Advanced Markduck guide {#duckuments-advanced}
 
 
 ## Embedding videos {#embedding-videos}

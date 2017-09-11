@@ -1,3 +1,3 @@
-# Duckietown Assembly {#duckietown-assembly}
+# Duckietown Assembly {#duckietown-assembly status=draft}
 
 Assigned: Shiying

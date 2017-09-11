@@ -1,4 +1,4 @@
-# Using LaTeX constructs in documentation
+# Using LaTeX constructs in documentation {#using-latex status=ready}
 
 <div class='requirements' markdown="1">
 

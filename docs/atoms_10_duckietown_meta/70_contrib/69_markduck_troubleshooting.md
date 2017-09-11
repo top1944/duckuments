@@ -1,4 +1,4 @@
-# Markduck troubleshooting {#markduck-troubleshooting}
+# Markduck troubleshooting {#markduck-troubleshooting status=ready}
 
 ## Changes don't appear on the website
 

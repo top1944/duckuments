@@ -1,4 +1,4 @@
-# Installing Ubuntu on laptops {#setup-laptop}
+# Installing Ubuntu on laptops {#setup-laptop status=beta}
 
 Assigned: Andrea
 
@@ -109,7 +109,7 @@ See: This procedure is described in [](#howto-passwordless-sudo).
 
 
 Comment: Huh I don't know - this is great for usability, but horrible for security. If you step away from your laptop for a second and don't lock the screen, a nasty person could `sudo rm -rf /`. -FG
- 
+
 ## SSH and Git setup
 
 

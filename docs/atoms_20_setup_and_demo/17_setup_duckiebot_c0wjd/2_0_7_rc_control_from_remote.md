@@ -1,4 +1,4 @@
-# RC control launched remotely {#rc-launched-remotely}
+# RC control launched remotely {#rc-launched-remotely status=beta}
 
 Assigned: Andrea
 
@@ -98,7 +98,7 @@ See also: For more information about `rqt_console`, see [](#rqt_console).
 
 Symptom: `rqt_console` does not show any message.
 
-Resolution: Open `rqt_console`. Go to the Setup window (top-right corner). 
+Resolution: Open `rqt_console`. Go to the Setup window (top-right corner).
 Change the "Rosout Topic" field from `/rosout_agg` to `/rosout`. Confirm.
 
 

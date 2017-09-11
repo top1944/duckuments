@@ -1,4 +1,4 @@
-# Software setup and RC remote control {#rc-control}
+# Software setup and RC remote control {#rc-control status=beta}
 
 Assigned: Andrea
 
@@ -37,7 +37,7 @@ Symptom: Other weird errors.
 Resolution: Probably the time is not set up correctly. Use `ntpdate` as above:
 
     $ sudo ntpdate -u us.pool.ntp.org
-    
+
 Or see the hints in the troubleshooting section on the previous page.
 
 
