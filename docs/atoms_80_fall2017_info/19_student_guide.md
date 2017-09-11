@@ -42,13 +42,13 @@ If you don't already have a Github account, follow these steps:
 
 2) Use the same email associated with your Slack account. Your Github username should be the same as your Slack username if possible, otherwise something similar.
 
-<div class='example-usage' markdown="1">
-Example: `@censi` is the slack handle, the GitHub username is `AndreaCensi`.
-</div>
-
 3) Send your Github username to Duckietown HR via Slack in a private message.
 
 4) You need to accept the invite to the Duckietown organization. The invite should be waiting for you at the page https://github.com/duckietown.
+
+<div class='example-usage' markdown="1">
+Example: `@censi` is the slack handle, the GitHub username is `AndreaCensi`.
+</div>
 
 <!--
 ### Google Documents
