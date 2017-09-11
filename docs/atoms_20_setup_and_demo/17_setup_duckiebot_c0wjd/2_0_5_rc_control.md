@@ -51,6 +51,8 @@ Now we are ready to make the workspace. First you need to source the baseline RO
 
     duckiebot $ source /opt/ros/kinetic/setup.bash
 
+Comment: If you are using ZSH then instead of this, you should call `source /opt/ros/kinetic/setup.bash`.
+
 Then, build the workspace using:
 
     duckiebot $ catkin_make -C catkin_ws/
