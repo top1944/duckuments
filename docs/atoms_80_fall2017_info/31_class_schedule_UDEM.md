@@ -1,4 +1,4 @@
-# Class Schedule
+# UdeM Class Schedule {#schedule_UDEM}
 
 ## Wed Sept 6
 
@@ -19,6 +19,7 @@ Acceptance emails sent
 ## Mon Sept 11
 
 Class (10:30)
+
 
 * Logistics
   * [The Duckiebook](http://book.duckietown.org/fall2017/duckiebook/index.html) 

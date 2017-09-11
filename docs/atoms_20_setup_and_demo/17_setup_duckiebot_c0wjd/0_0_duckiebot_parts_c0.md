@@ -24,9 +24,9 @@ Results: A kit of parts ready to be assembled in a `C0` or `C0+wjd` configuratio
 Next steps: After receiving these components, you are ready to do some [soldering](#soldering-boards-c0) before [assembling](#assembling-duckiebot-c0) your `C0` or `C0+wjd` Duckiebot.
 
 </div>
-<!--
-TODO: Add a different "Tools" section in the table (e.g., solderer), or add in the resoruces beginning snippet; Differentiate pricing for bulk vs detail purchase (?)
--->
+
+TODO: Add a different "Tools" section in the table (e.g., solderer), or add in the resources beginning snippet; Differentiate pricing for bulk vs detail purchase (?)
+
 ## Bill of materials
 
 <!--
@@ -72,7 +72,7 @@ Additionally, an optional caster wheel may be equipped for any of the `C0+wjd` c
 
 </div>
 
-Comment: Shall we define another configuration for the caster equipped Duckiebot? -JT 
+Comment: Shall we define another configuration for the caster equipped Duckiebot? -JT
 
 <!--
 <col2 figure-id="tab:materials-optionals" figure-caption="Bill of optional materials">

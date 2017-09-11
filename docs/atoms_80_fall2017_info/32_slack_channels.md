@@ -4,7 +4,8 @@ This page describes all of the helpful Slack channels and their purposes so that
 
 ## Channels
 
-<col2 figure-id="tab:slack_channels" figure-caption="Duckietown Slack Channels">
+
+<col2 figure-id="tab:slack_channels_list" figure-caption="Duckietown Slack Channels">
 <span>**Channel**</span>
 <span>**Purpose**</span>
 <span>help-accounts</span>
@@ -12,7 +13,7 @@ This page describes all of the helpful Slack channels and their purposes so that
 <span>help-assembly</span>
 <span>Help putting your robot together</span>
 <span>help-camera-calib</span>
-<span>Help doing the instrinsic and extrinsic calibration of your camera </span>
+<span>Help doing the intrinsic and extrinsic calibration of your camera </span>
 <span>help-duckuments</span>
 <span>Help compiling the online documentation</span>
 <span>help-git</span>
@@ -28,5 +29,7 @@ This page describes all of the helpful Slack channels and their purposes so that
 <span>help-ros</span>
 <span>Help with the Robot Operating System (ROS)</span>
 <span>help-wheel-calib</span>
-<span>Help doing your odomtery calibration</span>
+<span>Help doing your odometry calibration</span>
 </col2>
+
+Comment: Note that you can link directly to the channel. (See list in the org sheet.)

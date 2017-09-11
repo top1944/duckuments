@@ -5,6 +5,7 @@ Assigned: Andrea
 ## Background reading
 
 See: [Good book](https://git-scm.com/book/en/v2)
+
 See: [Git Flow](http://nvie.com/posts/a-successful-git-branching-model/)
 
 ## Installation

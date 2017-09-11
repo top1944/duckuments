@@ -1,4 +1,4 @@
-# Git {#git_repos}
+# Git usage guide for Fall 2017 {#fall2017-git}
 
 ## Repositories
 

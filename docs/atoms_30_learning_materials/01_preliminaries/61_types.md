@@ -1,9 +1,11 @@
-# Types {#types}
+# Types {#types status=draft}
 
 <div class='requirements' markdown='1'>
+
 Results: k:types
 
 Requires: k:sets
+
 </div>
 
 ## Types vs sets
