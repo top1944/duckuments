@@ -1,11 +1,16 @@
 # Duckiebot Assembly and Configuration {#checkoff_assembly_configuration}
 
+Slack Channel: help-assembly
+
 The first job  is to get your Duckiebot put together and up and running. 
 
 <!-- Comment: @liam: We should make sure that these tasks are 1-to-1 with the task list in the checkoff spreadsheet, and remind them what to do. 
 -->
 
 ## Pick up your Duckiebox
+
+Slack Channel: help-parts
+
 
  There is a checklist inside, you should go through the box and ensure that the parts that are supposed to be in it actually are.
  TODO: what to do if you are missing something
@@ -28,6 +33,8 @@ Related parts of the book are:
 
 ## Assemble your Robot
 
+Slack Channel: help-assembly
+
 You are ready to put things together now.
 
 Related parts of the book are:
@@ -48,6 +55,8 @@ Related parts of the book are:
  
 ## Setup your laptop
 
+Slack channel: help-laptops
+
 The only officially supported OS is Ubuntu 16.04. If you are not running this OS it is recommended that you make a small partition on your hard drive and install the OS.
 
 Related parts of the book are:
@@ -56,6 +65,8 @@ Related parts of the book are:
 * [](#setup-laptop) 
  
 ## Make your robot move
+ 
+ Slack Channel: help-robot-setup
  
 Now you need to clone the software repo and run things to make your robot move.
  
