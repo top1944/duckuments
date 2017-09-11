@@ -27,7 +27,17 @@ The size is 1.7 GB.
 
 You can use:
 
+    $ wget -O duckiebot-RPI3-AD-sep7.img.xz ![URL above]
+
+<div class="comment" markdown="1">
+
+The original was:
+
     $ curl -o duckiebot-RPI3-AD-sep7.img.xz ![URL above]
+
+It looks like that `curl` cannot be used with Drobpox links because it does not follow redirects.
+</div>
+
 
 Uncompress the file:
 
