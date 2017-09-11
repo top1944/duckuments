@@ -17,7 +17,7 @@ when you command it to. Set the maximum speed of the Duckiebot.
 The motors used on the Duckiebots are called "Voltage-controlled motors".
 This means that the velocity of each motor is directly proportional to the
 voltage it is subject to. Even though we use the same model of motor for left
-and right wheel, they are exactly the same. In particular, every motor responds
+and right wheel, they are not exactly the same. In particular, every motor responds
 to a given voltage signal in a slightly different way. Similarly, the wheels
 that we are using look "identical", but they might be slightly different.
 
