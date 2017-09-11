@@ -164,30 +164,25 @@ and to the internet, the Raspberry Pi will act as a bridge to the internet.
 
 ## Setting up wireless network configuration
 
-XXX This part should not be necessary anymore
+You are connected to the Duckiebot via WiFi, but the Duckiebot also needs to connect to the internet in order to get updates and install some software. There are two options for achieving this:
 
-The Duckiebot is configured by default to connect to a wireless network with
-SSID `duckietown`. If that is not your SSID then you will need to change the
-configuration.
+### Option 1: `duckietown` WiFi 
 
-You can add a new network by editing the file:
+Check with your phone or laptop if there is a WiFi in reach with the name of `duckietown`. If there is, you are all set. The defaut configuration for the Duckiebot is to have one WiFi adapter connect to this network and the other broadcast the access point which you are currently connected to.
 
-    /etc/wpa_supplicant/wpa_supplicant.conf
+### Option 2: `eduroam` WiFi
 
-You will see a block like the following:
+If there should be no `duckietown` network in reach then you have to manually add a network configuration file for the network that you'd like to connect to. Most universities around the world should have to `eduroam` network available. You can use it for connecting your Duckiebot.
 
-    network={
-     ssid="duckietown"
-     scan_ssid=1
-     psk="quackquack"
-     priority=10
-    }
+Save the following block as `TODO: filename eduroam wifi setting`:
 
-Add a new one with your SSID and password.
+    TODO code block for eduroam connection
 
-This assumes you have a roughly similar wireless network setup - if not then
-you might need to change some of the other attributes.
+### Option 3: custom WiFi
 
+If neither `duckietown` nor `eduroam` are available, you can add your own configuration file. Here is an example for a standard WPA2-private home network. Save the following block as `TODO: filename custom wifi setting`:
+
+    TODO code block for custom connection
 
 ## Update the system
 
