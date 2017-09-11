@@ -184,6 +184,8 @@ If neither `duckietown` nor `eduroam` are available, you can add your own config
 
     TODO code block for custom connection
 
+Note: Whichever option you pick, we don't recommend to create or modify the `/etc/wpa_supplicant.conf` file, because this verion of Ubuntu uses the `NetworkManager` service to deal with WiFi connections (and no longer the `wpasupplicant` daemon).
+
 ## Update the system
 
 Next, we need to update to bring the system up to date.
