@@ -13,9 +13,11 @@ Requires: An assembled Duckiebot in configuration `D17-C0`. This is the result o
 
 Results: A Duckiebot that is ready to use.
 
+Comment: What does it mean "ready to use"? -AC
+
 </div>
 
-XXX What does it mean "ready to use"?.
+
 
 ## Acquire and burn the image
 
