@@ -27,7 +27,7 @@ Please add a picture (relatively professional, so that we can use it for rosters
 
 More details about Slack are available [here](#slack)
 
-A brief synopsis of all of the help related Slack channels is here: [](#slack_channels).
+A brief synopsis of all the help-related Slack channels is here: [](#slack_channels).
 
 Check out all the channels in Slack, and add yourself to those that pertain or interest you. Be sure to introduce yourself in the General channel.
 
@@ -135,4 +135,5 @@ See: [](#git-reference)
 Do a bit of a refresher on some math basics.
 
 Linear Algegra: [](#linear_algebra)
+
 Probability Basics: [](#probability_basics)
