@@ -421,3 +421,11 @@ If you see an error that starts like this:
     mmal: Camera is not detected. Please check carefully the camera module is installed correctly.
 
 then, just like it says: "Please check carefully the camera module is installed correctly.".
+
+Symptom: random `wget`, `curl`, `git`, and `apt` calls fail with SSL errors.
+
+Resolution: That's probably actually an issue with your system time. Type the command `timedatectl` into a terminal, hit enter and see if the time is off. If it is, you might wanna follow the intructions from this article: https://raspberrypi.stackexchange.com/questions/59860/time-and-timezone-issues-on-pi
+or entirely uninstall your NTP service and manually grab the time on reboot. It's a bit dirty, but works surprisingly well:
+https://unix.stackexchange.com/questions/251519/setting-time-and-date-without-using-ntp
+
+
