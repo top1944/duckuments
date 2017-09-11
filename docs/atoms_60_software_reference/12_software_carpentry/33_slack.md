@@ -1,5 +1,6 @@
 # Slack {#slack}
 
+
 ## Installing the Slack app on Linux
 
 TODO: to write

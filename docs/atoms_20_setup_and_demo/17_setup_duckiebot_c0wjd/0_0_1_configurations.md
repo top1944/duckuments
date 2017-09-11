@@ -1,10 +1,10 @@
-# Duckiebot configurations {#duckiebot-configurations}
+# Duckiebot configurations {#duckiebot-configurations status=beta}
 
-Here we define the different Duckiebot hardware configurations, and describe their functionalities. This is a good starting point if you are wondering what parts you should purchase to get started. Once you have decided which configuration best suits your needs, you can proceed to purchasing the components for a [`C0+wjd`](#acquiring-parts-c0) or [`C1`](#acquiring-parts-c1) Duckiebot.  
+Here we define the different Duckiebot hardware configurations, and describe their functionalities. This is a good starting point if you are wondering what parts you should purchase to get started. Once you have decided which configuration best suits your needs, you can proceed to purchasing the components for a [`C0+wjd`](#acquiring-parts-c0) or [`C1`](#acquiring-parts-c1) Duckiebot.
 
 ## Configuration list
 
-- Configuration `C0`: Only camera and motors.  
+- Configuration `C0`: Only camera and motors.
 
 - Configuration `C0+w`: `C0`, plus an additional wireless adapter.
 
@@ -12,7 +12,7 @@ Here we define the different Duckiebot hardware configurations, and describe the
 
 - Configuration `C0+d`: `C0`, plus an additional USB drive.
 
-- Configuration `C1`: `C0+wjd`, plus LEDs and bumpers. 
+- Configuration `C1`: `C0+wjd`, plus LEDs and bumpers.
 
 
 ## Configuration functionality
@@ -37,7 +37,7 @@ TODO: Insert pic of assembled Duckiebot in `C0+j` configuration.
 
 ### `C0+d`
 
-In this configuration, the minimal `C0` version is augmented with a USB flash hard drive. This drive is convenient for storing videos (logs) as it provides both extra capacity and faster data transfer rates than the microSD card in the Raspberry Pi. Moreover, it is easy to unplug it from the Duckiebot at the end of teh day and bring it over to a computer for downloading and analyzing stored data.    
+In this configuration, the minimal `C0` version is augmented with a USB flash hard drive. This drive is convenient for storing videos (logs) as it provides both extra capacity and faster data transfer rates than the microSD card in the Raspberry Pi. Moreover, it is easy to unplug it from the Duckiebot at the end of teh day and bring it over to a computer for downloading and analyzing stored data.
 
 TODO: Insert pic of assembled Duckiebot in `C0+d` configuration.
 

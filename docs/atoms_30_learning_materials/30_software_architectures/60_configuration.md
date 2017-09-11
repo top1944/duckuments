@@ -3,7 +3,9 @@
 Assigned: Andrea
 
 <div class='requirements' markdown="1">
+
 Results: How to deal with configuration effectively.
+
 </div>
 
 ## Motivation

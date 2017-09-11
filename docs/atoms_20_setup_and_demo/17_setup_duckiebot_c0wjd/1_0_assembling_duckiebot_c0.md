@@ -1,4 +1,4 @@
-# Assembling the Duckiebot `C0` {#assembling-duckiebot-c0}
+# Assembling the Duckiebot `C0` {#assembling-duckiebot-c0 status=beta}
 
 Assigned: Shiying
 
@@ -13,19 +13,21 @@ Requires: Duckiebot `C0+wjd` parts. The acquisition process is explained in [](#
 
 Requires: Having soldered the `C0+wjd` parts. The soldering process is explained in [](#soldering-boards-c0).
 
-Requires: Having prepared the power cable. The power cable preparation is explained in [](#power-cable-prep-c0).
+Requires: Having prepared the power cable. The power cable preparation is explained in [](#power-cable-prep-c0). Note: Not necessary if you are proceeding directly to configuration C1.
 
 Requires: Having installed the image on the MicroSD card. The instructions on how to reproduce the Duckiebot system image are in [](#duckiebot-ubuntu-image).
 
-Requires: Time: about ??? minutes.
-
-TODO: estimate time.
+Requires: Time: about 40 minutes.
 
 Results:  An assembled Duckiebot in configuration `C0+wjd`.
 
 </div>
 
 Comment: add "next step(s)" as a standard field in the requirements class? -JT
+
+Comment: Notes - if we have the bumpers, at what point should we add them? I think that the battery could actually be attached before the levels of the chassis are joined. I found it hard to mount the camera (the holes weren't lining up). the long camera cable is a bit annoying - I folded it and shoved it in between two hats. We should decide if PWM hat is part of this configuration, why not leave it for now and forget about the spliced cable for the class. I found that the screwdriver that comes with the chassis kit is too fat to screw in the wires on the hat. The picture of where to put the ziptie for the battery is not very clear. need something to cut the end of the ziptie with.
+
+Comment: In general I would recommend having diagonal pliers as well as a few mini screwdrivers at hand. Both can be obtained from a local dollar store for about 6$ total. The pliers / cutters are required either for making your own power cord or for cutting the zipties after they've been attached to the chassis (because they are too long). The screwdrivers are required for tightening the screws on the hats after the cables have been plugged in because the chassis screwdriver is too wide for that.
 
 ## Chassis
 
@@ -279,7 +281,9 @@ Put the battery between the upper and lower decks of the chassis. It is recommen
 ### Joypad
 
 TODO: Connect the joypad dongle
+
 TODO: Insert 2AA batteries in the joypad
+
 TODO: Insert relevant pics
 
 
@@ -293,6 +297,3 @@ Connect power cables (USB A to 5mm cable in your Duckiebox and USB cable in the 
 <div figure-id="fig:cable_wiring" figure-caption="TODO: will be replace by a new pic">
      <img src="cable_wiring.jpg" style='width: 30em'/>
 </div>
-
-
-

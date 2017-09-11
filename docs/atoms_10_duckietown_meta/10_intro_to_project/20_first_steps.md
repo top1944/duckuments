@@ -1,4 +1,4 @@
-# First steps {#first-steps}
+# First steps {#first-steps status=draft}
 
 ## How to get started
 

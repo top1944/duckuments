@@ -1,4 +1,4 @@
-# Traffic lights Parts {#traffic-lights-parts}
+# Traffic lights Parts {#traffic-lights-parts status=draft}
 
 Traffic lights regulate intersections in Duckietown. Here, we provide a link to all bits and pieces that are needed to build a traffic light, along with their price tag. You will need one traffic per either three, or four way intersections. The components listed below meet the appearence specifications described in [](#duckietown-specs).
 

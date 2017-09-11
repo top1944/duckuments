@@ -1,4 +1,4 @@
-# Guide for TAs
+# Guide for TAs {#guide-for-TAs status=beta}
 
 ## Dramatis personae
 
@@ -87,7 +87,8 @@ Point of Contact: Andrea
 
 Build your Duckiebot according to the instructions.
 
-See: [](#part:building-duckiebot)
+See: [](#building-duckiebot-c0)
+
 
 Point of Contact: Shiying (ETH)
 

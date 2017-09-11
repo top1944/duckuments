@@ -87,17 +87,26 @@ duckuments-dist:
 
 log=~/logs/compilation.log
 automatic-compile-cleanup:
-	rm ~/lockfile
+	echo "\n\nautomatic-compile-cleanup killing everything" >> $(log)
+	rm -f ~/lockfile
 	-killall -9 /home/duckietown/scm/duckuments/deploy/bin/python
 	$(MAKE) clean
+	$(MAKE) fall2017-clean
+
 automatic-compile:
 	git pull
 	touch $(log)
 	echo "\n\nStarting" >> $(log)
 	date >> $(log)
-	nice -n 10 $(MAKE) compile-slow
+	nice -n 10 $(MAKE) compile-html
 	echo "  succeded html " >> $(log)
-
+	-$(MAKE) fall2017
+	echo "  succeded fall 2017" >> $(log)
+	-$(MAKE) upload
+	echo "  succeded upload " >> $(log)
+	#nice -n 10 $(MAKE) split-imprecise
+	nice -n 10 $(MAKE) split
+	echo "  succeded split " >> $(log)
 	-$(MAKE) upload
 	echo "  succeded html upload " >> $(log)
 	nice -n 10 $(MAKE) compile-pdf
@@ -110,7 +119,8 @@ upload:
 	#git -C duckuments-dist pull -X ours
 	echo ignoring errors
 
-	-git -C duckuments-dist add $(duckuments-branch)
+	-git -C duckuments-dist add master
+	-git -C duckuments-dist add fall2017
 	-git -C duckuments-dist commit -a -m "automatic compilation $(shell date)"
 	-git -C duckuments-dist push --force
 
@@ -149,7 +159,7 @@ compile-pdf: checks check-programs-pdf
 		--mathjax 1 \
 		--symbols $(tex-symbols) \
 		-o $(tmp_files2) \
-		--output_file $(out_html2).tmp -c "config echo 1; rparmake"
+		--output_file $(out_html2).tmp -c "config echo 1; rparmake n=8"
 
 	python -m mcdp_docs.add_edit_links < $(out_html2).tmp > $(out_html2)
 
@@ -177,9 +187,11 @@ compile-slow: update-mcdp update-software
 	$(MAKE) split-slow
 
 index:
+
+index2:
 	# XXX: requires node
-	#mcdp-render -D misc book_index
-	#cp misc/book_index.html duckuments-dist/index.html
+	mcdp-render -D misc book_index
+	cp misc/book_index.html duckuments-dist/index.html
 
 
 compile-html:
@@ -189,7 +201,7 @@ compile-html:
 		--mathjax 0 \
 		--symbols $(tex-symbols) \
 		-o $(tmp_files) \
-		--output_file $(out_html).tmp -c "config echo 1; config colorize 1; rparmake"
+		--output_file $(out_html).tmp -c "config echo 1; config colorize 1; rparmake n=8"
 
 	python add_stylesheet.py $(out_html).tmp style/duckietown.css
 	python -m mcdp_utils_xml.note_errors_inline $(out_html).tmp
@@ -210,6 +222,7 @@ compile-html-no-embed:
 	python -m mcdp_utils_xml.note_errors_inline $(out_html).tmp
 	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
 	# python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
+	cp $(out_html).localcss.html $(out_html)
 	$(MAKE) split
 
 compile-html-slow:
@@ -248,5 +261,50 @@ split:
 		-c " config echo 1; config colorize 1; rparmake" \
 		--mathjax \
 		--preamble $(tex-symbols)
+split-imprecise:
+	# rm -f $(dist_dir)/duckiebook/*html
+	 mcdp-split \
+		--filename $(out_html) \
+		--faster_but_imprecise \
+		--output_dir $(dist_dir)/duckiebook \
+		-o $(tmp_files)/split \
+		-c " config echo 1; config colorize 1; rparmake" \
+		--mathjax \
+		--preamble $(tex-symbols)
 
 #--disqus
+
+fall2017-clean:
+	rm -rf out/fall2017
+	#rm -rf duckuments-dist/fall2017
+
+fall2017-prepare:
+	DISABLE_CONTRACTS=1 mcdp-render-manual \
+		--src $(src) \
+		--stylesheet v_manual_split \
+		--mathjax 0 \
+		--no_resolve_references \
+		--symbols $(tex-symbols) \
+		-o out/fall2017/prepare \
+		--output_file out/fall2017/one.html -c "config echo 1; config colorize 1; rparmake"
+
+	python -m mcdp_utils_xml.note_errors_inline out/fall2017/one.html
+	# python -m mcdp_docs.add_edit_links duckuments-dist/fall2017/two.html < duckuments-dist/fall2017/one.html
+	python -m mcdp_docs.embed_css out/fall2017/master.html < out/fall2017/one.html
+
+fall2017-compose:
+	mcdp-docs-compose --config fall2017.version.yaml
+
+fall2017-split:
+	mcdp-split \
+	   --filename duckuments-dist/fall2017/duckiebook.html \
+	   --output_dir duckuments-dist/fall2017/duckiebook \
+	   -o out/fall2017/split \
+	   -c " config echo 1; config colorize 1; rparmake" \
+	   --mathjax \
+	   --preamble $(tex-symbols)
+
+fall2017:
+	$(MAKE) fall2017-prepare
+	$(MAKE) fall2017-compose
+	$(MAKE) fall2017-split

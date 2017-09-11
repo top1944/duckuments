@@ -1,4 +1,4 @@
-# RC control launched remotely {#rc-launched-remotely}
+# RC control launched remotely {#rc-launched-remotely status=beta}
 
 Assigned: Andrea
 
@@ -83,11 +83,10 @@ On the laptop, open a new terminal window, and run:
     laptop $ export ROS_MASTER_URI=http://![robot name].local:11311/
     laptop $ rqt_console
 
-XXX AC: I could not see any messages in `rqt_console` - not sure what is wrong.
-
 You should see a nice interface listing all the printouts in real time,
 completed with filters that can help you find that message you are looking for
 in a sea of messages.
+If `rqt_console` does not show any message, check out the *Troubleshooting* section below.
 
 You can use <kbd>Ctrl</kbd>-<kbd>C</kbd> at the terminal where `roslaunch` was executed to stop all the
 nodes launched by the launch file.
@@ -96,6 +95,13 @@ See also: For more information about `rqt_console`, see [](#rqt_console).
 
 
 ## Troubleshooting
+
+Symptom: `rqt_console` does not show any message.
+
+Resolution: Open `rqt_console`. Go to the Setup window (top-right corner).
+Change the "Rosout Topic" field from `/rosout_agg` to `/rosout`. Confirm.
+
+
 
 Symptom: `roslaunch` fails with an error similar to the following:
 

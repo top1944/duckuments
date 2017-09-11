@@ -4,13 +4,11 @@ Assigned: Andrea
 
 ## Background reading
 
-TODO: to write
+See: [Good book](https://git-scm.com/book/en/v2)
 
-- Git
-- GitFlow
+See: [Git Flow](http://nvie.com/posts/a-successful-git-branching-model/)
 
 ## Installation
-
 
 The basic Git program is installed using
 

@@ -1,45 +1,57 @@
-# Duckiebot Initialization {#setup-duckiebot}
+# Duckiebot Initialization {#setup-duckiebot status=beta}
 
 Assigned: Andrea
 
 
 <div class='requirements' markdown="1">
 
-Requires: An SD card of dimensions at least ??? GB.
+Requires: An SD card of dimensions at least 16 GB.
 
-Requires: A computer with an internet connection, an SD card reader, and 35 GB of free space.
+Requires: A computer with an internet connection, an SD card reader, and 16 GB of free space.
 
 Requires: An assembled Duckiebot in configuration `D17-C0`. This is the result of [](#assembling-duckiebot-c0).
 
 Results: A Duckiebot that is ready to use.
 
+Comment: What does it mean "ready to use"? -AC
+
 </div>
 
-XXX What does it mean "ready to use"?.
+
 
 ## Acquire and burn the image
 
 On the laptop, download the compressed image at this URL:
 
-> [https://www.dropbox.com/s/1p4am7erdd9e53r/duckiebot-RPI3-AC-aug10.img.xz?dl=1](https://www.dropbox.com/s/1p4am7erdd9e53r/duckiebot-RPI3-AC-aug10.img.xz?dl=1)
+> [https://www.dropbox.com/s/1jgn0chx3hu3a4a/duckiebot-RPI3-AD-sep7.img.xz?dl=1](https://www.dropbox.com/s/1jgn0chx3hu3a4a/duckiebot-RPI3-AD-sep7.img.xz?dl=1)
 
-The size is 2.5 GB.
+The size is 1.7 GB.
 
 You can use:
 
-    $ curl -o duckiebot-RPI3-AC-aug10.img.xz ![URL above]
+    $ wget -O duckiebot-RPI3-AD-sep7.img.xz ![URL above]
+
+<div class="comment" markdown="1">
+
+The original was:
+
+    $ curl -o duckiebot-RPI3-AD-sep7.img.xz ![URL above]
+
+It looks like that `curl` cannot be used with Drobpox links because it does not follow redirects.
+</div>
+
 
 Uncompress the file:
 
-    $ xz -d -k duckiebot-RPI3-AC-aug10.img.xz
+    $ xz -d -k duckiebot-RPI3-AD-sep7.img.xz
 
-This will create a file of 32 GB in size.
+This will create a file of 11 GB in size.
 
 To make sure that the image is downloaded correctly, compute its hash
 using the program `sha256sum`:
 
-    $ sha256sum duckiebot-RPI3-AC-aug10.img
-    2ea79b0fc6353361063c89977417fc5e8fde70611e8afa5cbf2d3a166d57e8cf  duckiebot-ac-aug10.img
+    $ sha256sum duckiebot-RPI3-AD-sep7.img
+    681c4653c309df530791dbdbe2e89819def330c20d58d4c4baf5979b02e5b381  duckiebot-RPI3-AD-sep7.img
 
 Compare the hash that you obtain with the hash above. If they are different,
 there was some problem in downloading the image.
@@ -55,6 +67,8 @@ Put the SD Card in the Duckiebot.
 Turn on the Duckiebot by connecting the power cable to the battery.
 
 TODO: Add figure
+
+Comment: In general, for the battery: if it's off, a single click on the power button will turn the battery on. When it's on, a single click will show you the charge indicator (4 white lights = full), and holding the button for 3s will turn off the battery. Shutting down the Duckiebot is not recommended because it may cause corruption of the SD card.
 
 ## Connect the Duckiebot to a network
 
@@ -107,10 +121,10 @@ By default, the robot boots into Byobu.
 
 Please see [](#byobu) for an introduction to Byobu.
 
-XXX Not sure it's a good idea to boot into Byobu.
+Doubt: Not sure it's a good idea to boot into Byobu. -??
 
-## (For `C1`) Configure the robot-generated network
-XXX `D17-0+w`
+## (For `D17-0+w`) Configure the robot-generated network
+
 The Duckiebot in configuration `D17-C0+w` can create a WiFi network.
 
 It is a 5 GHz network; this means that you need to have a 5 GHz
@@ -138,7 +152,7 @@ Make note of the name `wlx![AABBCCDDEEFFGG]`.
 Look up the MAC address using the command:
 
     duckiebot $ ifconfig wlx![AABBCCDDEEFFGG]
-    wlx74da38c9caa0 Link encap:Ethernet  HWaddr ![AA:BB:CC:DD:EE:FF:GG]
+    wlx![AABBCCDDEEFFGG] Link encap:Ethernet  HWaddr ![AA:BB:CC:DD:EE:FF:GG]
 
 Then, edit the connection file
 
@@ -162,30 +176,65 @@ and to the internet, the Raspberry Pi will act as a bridge to the internet.
 
 ## Setting up wireless network configuration
 
-XXX This part should not be necessary anymore
+You are connected to the Duckiebot via WiFi, but the Duckiebot also needs to connect to the internet in order to get updates and install some software. There are three options for achieving this:
 
-The Duckiebot is configured by default to connect to a wireless network with
-SSID `duckietown`. If that is not your SSID then you will need to change the
-configuration.
+### Option 1: `duckietown` WiFi
 
-You can add a new network by editing the file:
+Check with your phone or laptop if there is a WiFi in reach with the name of `duckietown`. If there is, you are all set. The defaut configuration for the Duckiebot is to have one WiFi adapter connect to this network and the other broadcast the access point which you are currently connected to.
 
-    /etc/wpa_supplicant/wpa_supplicant.conf
+### Option 2: `eduroam` WiFi {status=draft}
 
-You will see a block like the following:
+If there should be no `duckietown` network in reach then you have to manually add a network configuration file for the network that you'd like to connect to. Most universities around the world should have to `eduroam` network available. You can use it for connecting your Duckiebot.
 
-    network={
-     ssid="duckietown"
-     scan_ssid=1
-     psk="quackquack"
-     priority=10
-    }
+Save the following block as new file in `/etc/NetworkManager/system-connections/eduroam`:
 
-Add a new one with your SSID and password.
+    [connection]
+    id=eduroam
+    uuid=38ea363b-2db3-4849-a9a4-c2aa3236ae29
+    type=wifi
+    permissions=user:oem:;
+    secondaries=
 
-This assumes you have a roughly similar wireless network setup - if not then
-you might need to change some of the other attributes.
+    [wifi]
+    mac-address=![the MAC address of your internal wifi adapter, wlan0]
+    mac-address-blacklist=
+    mac-address-randomization=0
+    mode=infrastructure
+    seen-bssids=
+    ssid=eduroam
 
+    [wifi-security]
+    auth-alg=open
+    group=
+    key-mgmt=wpa-eap
+    pairwise=
+    proto=
+
+    [802-1x]
+    altsubject-matches=
+    eap=ttls;
+    identity=![your eduroam username]@![your eduroam domain]
+    password=![your eduroam password]
+    phase2-altsubject-matches=
+    phase2-auth=pap
+
+    [ipv4]
+    dns-search=
+    method=auto
+
+    [ipv6]
+    addr-gen-mode=stable-privacy
+    dns-search=
+    method=auto
+
+
+### Option 3: custom WiFi {status=draft}
+
+If neither `duckietown` nor `eduroam` are available, you can add your own configuration file. Here is an example for a standard WPA2-private home network. Save the following block as `TODO: filename custom wifi setting`:
+
+    TODO code block for custom connection
+
+Note: Whichever option you pick, we don't recommend to create or modify the `/etc/wpa_supplicant.conf` file, because this verion of Ubuntu uses the `NetworkManager` service to deal with WiFi connections (and no longer the `wpasupplicant` daemon).
 
 ## Update the system
 
@@ -273,17 +322,16 @@ the output should give you something like:
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        29G  7.8G   21G  28% /
-devtmpfs        427M     0  427M   0% /dev
-tmpfs           432M  316K  431M   1% /dev/shm
-tmpfs           432M   12M  420M   3% /run
+/dev/root        15G  6.3G  8.2G  44% /
+devtmpfs        303M     0  303M   0% /dev
+tmpfs           431M     0  431M   0% /dev/shm
+tmpfs           431M   12M  420M   3% /run
 tmpfs           5.0M  4.0K  5.0M   1% /run/lock
-tmpfs           432M     0  432M   0% /sys/fs/cgroup
+tmpfs           431M     0  431M   0% /sys/fs/cgroup
 /dev/mmcblk0p1   63M   21M   43M  34% /boot
-tmpfs            87M   24K   87M   1% /run/user/1000
-/dev/sda1        29G  5.3G   24G  19% /media/ubuntu/44A7-9E91
+tmpfs            87M     0   87M   0% /run/user/1000
 ```
-You should see that the Size of your `/dev/sda1` partition is "close" to the side of your SD card.
+You should see that the Size of your `/dev/root` Filesystem is "close" to the size of your SD card.
 
 
 ## Create your user {#create-user-on-duckiebot}
@@ -301,7 +349,7 @@ Make the user an administrator by adding it to the group `sudo`:
 
     duckiebot $ sudo adduser ![username] sudo
 
-Make the user a member of the group `input` and `i2c`
+Make the user a member of the groups `input`, `video`, and `i2c`
 
     duckiebot $ sudo adduser ![username] input
     duckiebot $ sudo adduser ![username] video
@@ -309,7 +357,7 @@ Make the user a member of the group `input` and `i2c`
 
 Set the shell `bash`:
 
-    duckiebot $ sudo chsh -s /bin/bash andrea
+    duckiebot $ sudo chsh -s /bin/bash ![username]
 
 
 To set a password, use:
@@ -423,3 +471,11 @@ If you see an error that starts like this:
     mmal: Camera is not detected. Please check carefully the camera module is installed correctly.
 
 then, just like it says: "Please check carefully the camera module is installed correctly.".
+
+Symptom: random `wget`, `curl`, `git`, and `apt` calls fail with SSL errors.
+
+Resolution: That's probably actually an issue with your system time. Type the command `timedatectl` into a terminal, hit enter and see if the time is off. If it is, you might want to follow the intructions from [this article][art1],
+or entirely [uninstall your NTP service and manually grab the time on reboot][art2]. It's a bit dirty, but works surprisingly well.
+
+[art1]: https://raspberrypi.stackexchange.com/questions/59860/time-and-timezone-issues-on-pi
+[art2]: https://unix.stackexchange.com/questions/251519/setting-time-and-date-without-using-ntp

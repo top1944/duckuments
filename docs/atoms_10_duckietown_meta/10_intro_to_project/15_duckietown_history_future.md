@@ -1,4 +1,4 @@
-# Duckietown history and future
+# Duckietown history and future {status=beta}
 
 ## The beginnings of Duckietown
 
@@ -37,7 +37,7 @@ These are some advertisement videos we used.
 
 
 
-## University-level classes in 2016
+## University-level classes in 2016 {status=beta}
 
 Later that year, the Duckietown platform was also used in these classes:
 
@@ -74,10 +74,10 @@ Furthermore, the Duckietown platform is used also in the following universities:
 - National Tainan Normal University, Taiwan - Prof. Jen-Jee Chen's *Vehicle to Everything* (V2X) course; and
 - Yuan Zhu University, Taiwan - Prof. Kan-Lin Hsiung's Control course.
 
-## Chile
+## Chile  {status=draft}
 
 TODO: to write
 
-## Duckietown High School
+## Duckietown High School {status=draft}
 
 TODO: to write

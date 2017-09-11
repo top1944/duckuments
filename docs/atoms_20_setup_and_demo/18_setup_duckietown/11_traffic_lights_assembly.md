@@ -1,3 +1,3 @@
-# Traffic lights Assembly {#traffic-light-assembly}
+# Traffic lights Assembly {#traffic-light-assembly status=draft}
 
 Assigned: Shiying

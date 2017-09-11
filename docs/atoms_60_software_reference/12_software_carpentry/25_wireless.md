@@ -1,10 +1,10 @@
 # Wireless networking in Linux
 
-## `iwconfig`
+## `iwconfig` {#iwconfig}
 
 TODO: to write
 
-## `iwlist`
+## `iwlist` {#iwlist}
 
 ### Getting a list of WiFi networks
 

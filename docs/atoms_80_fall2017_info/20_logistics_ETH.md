@@ -1,4 +1,4 @@
-# Guide for ETH Zürich students {#logistics_ETH}
+# Guide for ETH Zürich students {#logistics_ETH status=draft}
 
 Assigned: Andrea
 

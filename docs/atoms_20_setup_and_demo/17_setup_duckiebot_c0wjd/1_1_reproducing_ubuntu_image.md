@@ -1,6 +1,4 @@
-# Reproducing the image {#duckiebot-ubuntu-image}
-
-Assigned: Andrea
+# Reproducing the image {#duckiebot-ubuntu-image status=ready}
 
 These are the instructions to reproduce the Ubuntu image that we use.
 
@@ -14,7 +12,7 @@ Requires: Internet connection to download the packages.
 
 Requires: A PC running any Linux with an SD card reader.
 
-Requires: Time: about 20 minutes.
+Requires: Time: about 4 hours (most of it spent waiting for things to download/compile).
 
 Results: A baseline Ubuntu Mate 16.04.2 image with updated software.
 
@@ -131,14 +129,21 @@ Other:
 
 Development:
 
-    duckiebot $ sudo apt install -y build-essential libblas-dev liblapack-dev libatlas-base-dev gfortran libyaml-cpp-dev
+    duckiebot $ sudo apt install -y build-essential libblas-dev liblapack-dev libatlas-base-dev gfortran libyaml-cpp-dev raspberrypi-kernel-headers
 
 Python:
 
     duckiebot $ sudo apt install -y python-dev ipython python-sklearn python-smbus
     duckiebot $ sudo apt install -y python-termcolor
+    duckiebot $ sudo apt install python-frozendict
+    duckiebot $ sudo apt install python-tables
+    duckiebot $ pip install comptests
+    duckiebot $ pip install procgraph
     duckiebot $ sudo pip install scipy --upgrade
+    duckiebot $ sudo pip install ruamel.yaml --upgrade
+
 Note: scipy --upgrade(0.19.1) took about an hour with ethernet connection.
+
 I2C:
 
     duckiebot $ sudo apt install -y i2c-tools
@@ -167,9 +172,7 @@ Install ROS.
 
 See: The procedure is given in [](#install-ROS).
 
-## Wireless configuration (old version)
-
-XXX This is the old version.
+## Wireless configuration (old version) {status=deprecated}
 
 There are two files that are important to edit.
 
@@ -383,9 +386,6 @@ You should make the `ubuntu` user belong to the `i2c` and `input` groups:
 
     duckiebot $ sudo adduser ubuntu i2c
     duckiebot $ sudo adduser ubuntu input
-
-XXX: forgot to add to aug20 image:
-
     duckiebot $ sudo adduser ubuntu video
 
 
@@ -465,25 +465,6 @@ You may want to subsequently shrink the image, for example if your friends have 
 See: The procedure of how to shrink an image is explained in [](#howto-shrink-image).
 
 
-## Some additions since last image to add in the next image
-
-Note here the additions since the last image was created.
-
-Create a file
-
-    /etc/duckietown-image.yaml
-
-Containing these lines
-
-    base: Ubuntu 16.04.2
-    date: ![DATE]
-    comments: |
-        ![any comments you have]
-
-So that we know which image is currently in used.
-
-Install `ntpdate`:
-
-    $ sudo apt install ntpdate
+## TODO: Git LFS
 
 Note: We should install Git LFS on the Raspberry Pi, but so far AC did not have any luck. See [](#git-lfs-install).

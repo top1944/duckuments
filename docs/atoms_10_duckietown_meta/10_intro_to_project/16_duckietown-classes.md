@@ -1,4 +1,4 @@
-# Duckietown classes {#duckietown-classes}
+# Duckietown classes {#duckietown-classes status=draft}
 
 Duckietown is an international effort. Many educational institutions have adopted the platform and used to teach robotics and related subjects. If you have used Duckietown in any of your course and cannot find a mention to it here, contact us.
 
