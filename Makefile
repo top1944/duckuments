@@ -104,7 +104,8 @@ automatic-compile:
 	echo "  succeded fall 2017" >> $(log)
 	-$(MAKE) upload
 	echo "  succeded upload " >> $(log)
-	nice -n 10 $(MAKE) split-imprecise
+	#nice -n 10 $(MAKE) split-imprecise
+	nice -n 10 $(MAKE) split
 	echo "  succeded split " >> $(log)
 	-$(MAKE) upload
 	echo "  succeded html upload " >> $(log)
