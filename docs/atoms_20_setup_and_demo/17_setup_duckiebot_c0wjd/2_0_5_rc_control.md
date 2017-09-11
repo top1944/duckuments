@@ -37,6 +37,8 @@ Symptom: Other weird errors.
 Resolution: Probably the time is not set up correctly. Use `ntpdate` as above:
 
     $ sudo ntpdate -u us.pool.ntp.org
+    
+Or see the hints in the troubleshooting section on the previous page.
 
 
 ## Set up ROS environment on the Duckiebot {#build-repo}
