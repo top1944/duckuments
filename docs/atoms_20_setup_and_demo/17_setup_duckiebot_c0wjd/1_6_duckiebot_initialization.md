@@ -13,9 +13,11 @@ Requires: An assembled Duckiebot in configuration `D17-C0`. This is the result o
 
 Results: A Duckiebot that is ready to use.
 
+Comment: What does it mean "ready to use"? -AC
+
 </div>
 
-XXX What does it mean "ready to use"?.
+
 
 ## Acquire and burn the image
 
@@ -27,7 +29,17 @@ The size is 1.7 GB.
 
 You can use:
 
+    $ wget -O duckiebot-RPI3-AD-sep7.img.xz ![URL above]
+
+<div class="comment" markdown="1">
+
+The original was:
+
     $ curl -o duckiebot-RPI3-AD-sep7.img.xz ![URL above]
+
+It looks like that `curl` cannot be used with Drobpox links because it does not follow redirects.
+</div>
+
 
 Uncompress the file:
 
@@ -424,6 +436,8 @@ then, just like it says: "Please check carefully the camera module is installed 
 
 Symptom: random `wget`, `curl`, `git`, and `apt` calls fail with SSL errors.
 
-Resolution: That's probably actually an issue with your system time. Type the command `timedatectl` into a terminal, hit enter and see if the time is off. If it is, you might wanna follow the intructions from this article: https://raspberrypi.stackexchange.com/questions/59860/time-and-timezone-issues-on-pi
-or entirely uninstall your NTP service and manually grab the time on reboot. It's a bit dirty, but works surprisingly well:
-https://unix.stackexchange.com/questions/251519/setting-time-and-date-without-using-ntp
+Resolution: That's probably actually an issue with your system time. Type the command `timedatectl` into a terminal, hit enter and see if the time is off. If it is, you might want to follow the intructions from [this article][art1],
+or entirely [uninstall your NTP service and manually grab the time on reboot][art2]. It's a bit dirty, but works surprisingly well.
+
+[art1]: https://raspberrypi.stackexchange.com/questions/59860/time-and-timezone-issues-on-pi
+[art2]: https://unix.stackexchange.com/questions/251519/setting-time-and-date-without-using-ntp

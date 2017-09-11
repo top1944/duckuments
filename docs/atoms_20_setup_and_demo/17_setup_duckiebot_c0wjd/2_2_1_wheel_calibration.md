@@ -57,6 +57,7 @@ between the two motors. With $t > 0$, the right wheel will turn slightly more
 than the left wheel given the same velocity command; with $t < 0$, the left
 wheel will turn slightly more the right wheel.
 
+Comment: $t$ should always be time; bad choice for the parameter name - AC
 
 ## Perform the Calibration
 
@@ -109,6 +110,8 @@ the Duckiebot drifted ([](#fig:wheel_calibration_lr_drift)).
 
 Measure the distance between the tape and the Duckiebot after it traveled for
 about 2 meters ([](#fig:wheel_calibration_measuring_drift)). 
+
+Comment: It's unclear what is the distance - from where to where. Presumably, center of axle? - AC
 
 Make sure that the ruler is orthogonal to the tape.
 
