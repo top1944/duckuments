@@ -1,16 +1,5 @@
 # Slack {#slack}
 
-When you accept your Slack invite, please follow these rules in setting up your profile:
-
-- username = last name
-- first name = first name
-- last name = last name (institution/location)
-
-<div class='example-usage' markdown="1">
-Here is an example: Andrea Censi from ETHZ is `@censi`, his name on Slack is "Andrea Censi (ETHZ)".
-</div>
-
-Please add a picture (relatively professional, so that we can use it for rosters when the time comes.)
 
 ## Installing the Slack app on Linux
 
