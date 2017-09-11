@@ -11,6 +11,12 @@ recipe:
 # Add the entire part
 - add: contribute
 # Create a new part called "End materials"
+- part: theory-background
+  title: Theory Background
+  contents:
+  - add: probability_basics
+  - add: linear_algebra
+- add: building-duckiebot
 - part: end-materials
   title: End materials
   contents:
