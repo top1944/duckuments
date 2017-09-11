@@ -131,7 +131,7 @@ Other:
 
 Development:
 
-    duckiebot $ sudo apt install -y build-essential libblas-dev liblapack-dev libatlas-base-dev gfortran libyaml-cpp-dev
+    duckiebot $ sudo apt install -y build-essential libblas-dev liblapack-dev libatlas-base-dev gfortran libyaml-cpp-dev raspberrypi-kernel-headers
 
 Python:
 
