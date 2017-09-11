@@ -1,4 +1,4 @@
-# Duckiebot Initialization {#setup-duckiebot}
+# Duckiebot Initialization {#setup-duckiebot status=beta}
 
 Assigned: Andrea
 

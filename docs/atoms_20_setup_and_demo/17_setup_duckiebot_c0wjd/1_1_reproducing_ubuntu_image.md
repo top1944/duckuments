@@ -1,4 +1,4 @@
-# Reproducing the image {#duckiebot-ubuntu-image}
+# Reproducing the image {#duckiebot-ubuntu-image status=ready}
 
 These are the instructions to reproduce the Ubuntu image that we use.
 

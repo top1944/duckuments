@@ -1,4 +1,4 @@
-# The Duckuments bot {#duckuments-bot}
+# The Duckuments bot {#duckuments-bot status=beta}
 
 Note: This is an advanced section mainly for Liam.
 

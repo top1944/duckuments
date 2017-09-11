@@ -1,4 +1,4 @@
-# Assembling the Duckiebot `C0` {#assembling-duckiebot-c0}
+# Assembling the Duckiebot `C0` {#assembling-duckiebot-c0 status=beta}
 
 Assigned: Shiying
 

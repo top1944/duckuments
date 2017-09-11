@@ -1,4 +1,4 @@
-# \*Compiling the PDF version
+# \*Compiling the PDF version  {#duckuments-pdf status=ready}
 
 This part describes how to compile the PDF version.
 
