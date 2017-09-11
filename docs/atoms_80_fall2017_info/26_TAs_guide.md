@@ -1,4 +1,4 @@
-# Guide for TAs {#guide-for-TAs}
+# Guide for TAs {#guide-for-TAs status=beta}
 
 ## Dramatis personae
 

@@ -1,4 +1,4 @@
-# Slack Channels {#slack_channels}
+# Slack Channels {#slack_channels status=beta}
 
 This page describes all of the helpful Slack channels and their purposes so that you can figure out where to get help.
 
@@ -32,4 +32,4 @@ This page describes all of the helpful Slack channels and their purposes so that
 <span>Help doing your odometry calibration</span>
 </col2>
 
-Comment: Note that you can link directly to the channel. (See list in the org sheet.)
+Comment: Note that you can link directly to the channel. (See list in the org sheet.) -AC
