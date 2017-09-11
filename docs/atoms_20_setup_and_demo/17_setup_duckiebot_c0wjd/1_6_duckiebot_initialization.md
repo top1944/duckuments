@@ -56,6 +56,8 @@ Turn on the Duckiebot by connecting the power cable to the battery.
 
 TODO: Add figure
 
+Comment: In general, for the battery: if it's off, a single click on the power button will turn the battery on. When it's on, a single click will show you the charge indicator (4 white lights = full), and holding the button for 3s will turn off the battery. Shutting down the Duckiebot is not recommended because it may cause corruption of the SD card.
+
 ## Connect the Duckiebot to a network
 
 You can login to the Duckiebot in two ways:
