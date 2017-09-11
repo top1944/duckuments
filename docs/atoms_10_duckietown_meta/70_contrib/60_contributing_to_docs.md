@@ -184,24 +184,28 @@ Done. A bot will redo the compilation and push it to `book.duckietown.org`.
 
 Step 2 is there so you know that the bot will not encounter errors.
 
-## Troubleshooting compilation
+## Reporting problems
 
-Symptom: "Invalid XML"
+First, see the section <a href="#markduck-troubleshooting" class='name_number'></a> for
+common problems and their resolution.
 
-Resolution: "Markdown" doesn't mean that you can put anything in a file. Except
-for the code blocks, it must be valid XML. For example, if you use
-"<code>&gt;</code>" and "<code>&lt;</code>" without quoting, it will likely
-cause a compile error.
+Please report problems with the duckuments using [the `duckuments` issue tracker][tracker].
+If it is urgent, please tag people (Andrea); otherwise these are processed in batch mode every few days.
 
-Symptom: "Tabs are evil"
-
-Resolution: Do not use tab characters. The error message in this case is quite
-helpful in telling you exactly where the tabs are.
+[tracker]: https://github.com/duckietown/duckuments/issues
 
 
-Symptom: The error message contains `ValueError: Suspicious math fragment 'KEYMATHS000ENDKEY'`
+If you have a problem with a generated PDF, please attach the offending PDF.
 
-Resolution: You probably have forgotten to indent a command line by at least 4 spaces. The dollar in the command line is now being confused for a math formula.
+If you say something like "This happens for Figure 3", then it is hard
+to know which figure you are referencing exactly, because numbering changes
+from commit to commit.
+
+If you want to refer to specific parts of the text, please commit all your work on your branch,
+and obtain the name of the commit using the following commands:
+
+    $ git -C ~/duckuments rev-parse HEAD      # commit for duckuments
+    $ git -C ~/duckuments/mcdp rev-parse HEAD # commit for mcdp
 
 
 

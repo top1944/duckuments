@@ -1,6 +1,6 @@
-# Basic features of the documentation writing system {#documentation-manual status=ready}
+# Basic Markduck guide {#documentation-manual status=ready}
 
-The Duckiebook is written in a Markduck, a Markdown dialect.
+The Duckiebook is written in Markduck, a Markdown dialect.
 
 It supports many features that make it possible to create
 publication-worthy materials.
@@ -39,17 +39,16 @@ For example, to obtain:
 
 </div>
 
-Make sure to quote (with 4 spaces) all command lines.
-Otherwise, the dollar symbol
-confuses the LaTeX interpreter.
+Make sure to quote (with 4 spaces) all command lines. Otherwise, the dollar symbol confuses the
+LaTeX interpreter.
 
 
 
 ## Character escapes
 
-Use the string <q><code>&amp;#36;</code></q> to write the dollar symbol <q><code>&#36;</code></q>, otherwise it
-gets confused with LaTeX math materials. Also notice that you should probably
-use "USD" to refer to U.S. dollars.
+Use the string <q><code>&amp;#36;</code></q> to write the dollar symbol
+<q><code>&#36;</code></q>, otherwise it gets confused with LaTeX math materials. Also notice
+that you should probably use "USD" to refer to U.S. dollars.
 
 Other symbols to escape are shown in [](#tab:escapes).
 
@@ -187,34 +186,6 @@ To make them flow horizontally, add `figure-class="flow-subfigures"` to the exte
     </div>
 </div>
 
-## Embedding Latex in Figures
-
-To embed latex in your figures, you can add it directly to a file and save it as `![filename].svg` file and save anywhere in the `/docs` directory.
-You can run:
-
-    $ make process-svg-figs
-
-And your svg The file will be compiled into a PDF figure with the LaTeX commands properly interpreted.
-You can then include the pdf file as normal way (See [](#figures)) using the `![filename].pdf` as the filename in the `img` tag.
-
-
-<div figure-id="fig:inkscape">
-    <figcaption>Embedding LaTeX in images</figcaption>
-
-    <div figure-id="subfig:1">
-        <figcaption>Image saved as svg</figcaption>
-          <img src="sample-no-process.converted.png" style='width: 20em'/>
-    </div>
-    <div figure-id="subfig:2">
-        <figcaption>Image as PDF after processing</figcaption>
-          <img src="sample.pdf" style='width: 20em'/>
-    </div>
-</div>
-
-
-Note: in order to compile the figures into pdfs you need to have Inkscape installed. Instructions to download and install are [here](https://inkscape.org/en/release/0.92.2/).
-
-It can take a bit of work to get the positioning of the code to appear properly on the figure.
 
 ## Shortcut for tables
 
@@ -297,6 +268,45 @@ For example, for this subsection, we have used:
 
 With this, we have given this header the ID "`establishing`".
 
+
+### How to name IDs - and why it's not automated
+
+Some time ago, if there was a section called
+
+    ## My section
+
+then it would be assigned the ID "my-section".
+
+This behavior has been removed, for several reasons.
+
+One is that if you don't see the ID then you will be tempted to just change the name:
+
+    ## My better section
+
+and silently the ID will be changed to "my-better-section" and all the previous links will be invalidated.
+
+The current behavior is to generate an ugly link like "autoid-209u31j".
+
+This will make it clear that you cannot link using the PURL if you don't assign an ID.
+
+
+Also, I would like to clarify that all IDs are *global* (so it's easy to link stuff, without thinking about namespaces, etc.).
+
+Therefore, please choose descriptive IDs, with at least two IDs.
+
+E.g. if you make a section called
+
+    ## Localization  {#localization}
+
+that's certainly a no-no, because "localization" is too generic.
+
+Better:
+
+    ## Localization {#intro-localization}
+
+Also note that you don't *need* to add IDs to everything, only the things that people could link to. (e.g. not subsubsections)
+
+
 ### Linking from the documentation to the documentation
 
 You can use the syntax:
@@ -352,227 +362,3 @@ For example, you might have a script whose output is:
     See: http://purl.org/dth/scuderia
 
 When the user clicks on the link, they will be redirected to [](#scuderia).
-
-## Embedding videos {#embedding-videos}
-
-It is possible to embed Vimeo videos in the documentation.
-
-Note: Do not upload the videos to your personal Vimeo account; they must all be
-posted to the Duckietown Engineering account.
-
-This is the syntax:
-
-    <dtvideo src="vimeo:![vimeo ID]"/>
-
-<div class="example-usage" markdown="1">
-
-For example, this code:
-
-    <div figure-id="fig:example-embed">
-        <figcaption>Cool Duckietown by night</figcaption>
-        <dtvideo src="vimeo:152825632"/>
-    </div>
-
-produces this result:
-
- <div figure-id="fig:example-embed">
-    <figcaption>Cool Duckietown by night</figcaption>
-    <dtvideo src="vimeo:152825632"/>
- </div>
-
-</div>
-
-
-Depending on the output media, the result will change:
-
-* On the online book, the result is that a player is embedded.
-* On the e-book version, the result is that a thumbnail is produced, with a link to the video;
-* On the dead-tree version, a thumbnail is produced with a QR code linking to the video (TODO).
-
-
-
-## `move-here` tag {#move-here}
-
-If a file contains the tag `move-here`, the fragment pointed
-by the `src` attribute is moved at the place of the tag.
-
-This is used for autogenerated documentation.
-
-Syntax:
-
-    # Node `node`
-
-    <move-here src='#package-node-autogenerated'/>
-
-## Comments
-
-You can insert comments using the HTML syntax for comments:
-any text between "<code>&lt;!--</code>" and "<code>--&gt;</code>" is ignored.
-
-<pre trim="1">
-<code trim="1">
-# My section
-
-&lt;!-- this text is ignored --&gt;
-
-Let's start by...
-</code>
-</pre>
-
-
-
-
-
-
-## Referring to Github files
-
-
-You can refer to files in the repository by using:
-
-    See [this file](github:org=![org],repo=![repo],path=![path],branch=![branch]).
-
-The available keys are:
-
-- `org` (required): organization name (e.g. `duckietown`);
-- `repo` (required): repository name (e.g. `Software`);
-- `path` (required): the filename. Can be just the file name or also include directories;
-- `branch` (optional) the repository branch; defaults to `master`;
-
-
-For example, you can refer to [the file `pkg_name/src/subscriber_node.py`][link1] by using the following syntax:
-
-[link1]: github:org=duckietown,repo=Software,path=pkg_name/src/subscriber_node.py
-
-    See [this file](github:org=duckietown,repo=Software,path=pkg_name/src/subscriber_node.py)
-
-You can also refer to a particular line:
-
-This is done using the following parameters:
-
-- `from_text` (optional): reference the first line containing the text;
-- `from_line` (optional): reference the line by number;
-
-
-For example, you can refer to [the line containing "Initialize"][link2]
-of `pkg_name/src/subscriber_node.py` by using the following syntax:
-
-[link2]: github:org=duckietown,repo=Software,path=pkg_name/src/subscriber_node.py,from_text=Initialize
-
-
-    For example, you can refer to [the line containing "Initialize"][link2]
-    of `pkg_name/src/subscriber_node.py` by using the following syntax:
-
-    [link2]: github:org=duckietown,repo=Software,path=pkg_name/src/subscriber_node.py,from_text=Initialize
-
-
-You can also reference a range of lines, using the parameters:
-
-- `to_text` (optional): references the final line, by text;
-- `to_line` (optional): references the final line, by number.
-
-You cannot give `from_text` and `from_line` at the same time.
-You cannot give a `to_...` without the `from_...`.
-
-For example, [this link refers to a range of lines][interval]: click it to see how Github highlights the lines from "Initialize" to "spin".
-
-[interval]: github:org=duckietown,repo=Software,path=pkg_name/src/subscriber_node.py,from_text=Initialize,to_text=spin
-
-This is the source of the previous paragraph:
-
-    For example, [this link refers to a range of lines][interval]: click it to see how Github highlights the lines from "Initialize" to "spin".
-
-    [interval]: github:org=duckietown,repo=Software,path=pkg_name/src/subscriber_node.py,from_text=Initialize,to_text=spin
-
-
-## Putting code from the repository in line
-
-In addition to referencing the files, you can also copy the contents of a file inside the documentation.
-
-This is done by using the tag `display-file`.
-
-For example, you can put a copy of `pkg_name/src/subscriber_node.py` using:
-
-    <display-file src="
-        github:org=duckietown,
-        repo=Software,
-        path=pkg_name/src/subscriber_node.py
-    "/>
-
-and the result is the following automatically generated listing:
-
-<display-file src="github:
-    org=duckietown,
-    repo=Software,
-    path=pkg_name/src/subscriber_node.py
-"/>
-
-If you use the `from_text` and `to_text` (or `from_line` and `to_line`), you can actually display part of a file. For example:
-
-    <display-file src="
-        github:org=duckietown,
-        repo=Software,
-        path=pkg_name/src/subscriber_node.py,
-        from_text=Initialize,
-        to_text=spin
-        "/>
-
-creates the following automatically generated listing:
-
-<display-file src="github:org=duckietown,
-repo=Software,
-path=pkg_name/src/subscriber_node.py,
-from_text=Initialize,
-to_text=spin"/>
-
-
-## Reporting problems
-
-Please report problems with the duckuments using [the `duckuments` issue tracker][tracker].
-If it is urgent, please tag people (Andrea); otherwise these are processed in batch mode every few days.
-
-[tracker]: https://github.com/duckietown/duckuments/issues
-
-
-If you have a problem with a generated PDF, please attach the offending PDF.
-
-If you say something like "This happens for Figure 3", then it is hard
-to know which figure you are referencing exactly, because numbering changes
-from commit to commit.
-
-If you want to refer to specific parts of the text, please commit all your work on your branch,
-and obtain the name of the commit using the following commands:
-
-    $ git -C ~/duckuments rev-parse HEAD      # commit for duckuments
-    $ git -C ~/duckuments/mcdp rev-parse HEAD # commit for mcdp
-
-
-
-## Common mistakes with Markdown {#common-markdown-mistakes}
-
-Here are some common mistakes encountered.
-
-### Not properly starting a list {#invalid-list}
-
-There must be an empty line before the list starts.
-
-This is correct:
-
-    I want to learn:
-
-    - robotics
-    - computer vision
-    - underwater basket weaving
-
-This is incorrect:
-
-    I want to learn:
-    - robotics
-    - computer vision
-    - underwater basket weaving
-
-and it will be rendered as follows:
-
-I want to learn:
-- robotics
-- computer vision
-- underwater basket weaving

@@ -165,8 +165,6 @@ Note that referring to the equations is done using the syntax `\eqref{eq:![name]
 rather than `[](#eq:![name])`.
 
 
-
-
 ## LaTeX symbols
 
 The LaTeX symbols definitions are in a file called [`docs/symbols.tex`][symbols].
@@ -198,3 +196,40 @@ For example:
 Will result in:
 
 > Please see [](#bib:siciliano07handbook).
+
+## Embedding Latex in Figures through SVG {#svg-figures}
+
+<div class='requirements' markdown="1">
+
+Note: in order to compile the figures into PDFs you need to have Inkscape installed. Instructions to download and install are [here](https://inkscape.org/en/release/0.92.2/).
+
+</div>
+
+
+To embed latex in your figures, you can add it directly to a file and save it as `![filename].svg` file and save anywhere in the `/docs` directory.
+
+You can run:
+
+    $ make process-svg-figs
+
+And the SVG file will be compiled into a PDF figure with the LaTeX commands properly interpreted.
+
+You can then include the PDF file in a normal way ([](#figures)) using `![filename].pdf` as the filename in the `img` tag.
+
+
+<div figure-id="fig:inkscape">
+    <figcaption>Embedding LaTeX in images</figcaption>
+
+    <div figure-id="subfig:1">
+        <figcaption>Image saved as svg</figcaption>
+          <img src="sample-no-process.converted.png" style='width: 20em'/>
+    </div>
+    <div figure-id="subfig:2">
+        <figcaption>Image as PDF after processing</figcaption>
+          <img src="sample.pdf" style='width: 20em'/>
+    </div>
+</div>
+
+
+
+It can take a bit of work to get the positioning of the code to appear properly on the figure.

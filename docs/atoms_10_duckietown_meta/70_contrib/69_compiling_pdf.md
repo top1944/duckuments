@@ -1,5 +1,7 @@
 # \*Compiling the PDF version
 
+This part describes how to compile the PDF version.
+
 Note: The dependencies below are harder to install. If you don't manage
 to do it, then you only lose the ability to compile the PDF. You can do `make compile`
 to compile the HTML version, but you cannot do `make compile-pdf`.

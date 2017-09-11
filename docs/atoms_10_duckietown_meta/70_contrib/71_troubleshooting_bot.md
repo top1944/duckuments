@@ -1,4 +1,4 @@
-# Duckuments bot {#duckuments-bot}
+# The Duckuments bot {#duckuments-bot}
 
 Note: This is an advanced section mainly for Liam.
 
@@ -10,7 +10,7 @@ published as `book.duckietown.org`.
 
 ## Understand what's going on
 
-There is a bot, called `frankfurt.co-design.science`, who is an AWS machine.
+There is a bot, called `frankfurt.co-design.science`, which is an AWS machine (somewhere in Frankfurt).
 
 Every minute, it tries to do the following:
 
