@@ -1,4 +1,4 @@
-# Contributing to the documentation {#sec:contribute-to-docs status=ready}
+# Contributing to the documentation {#contribute-to-docs status=ready}
 
 ## Where the documentation is
 
@@ -129,8 +129,7 @@ Then:
     $ make duckuments-dist
 
 This creates the directory `duckuments-dist`, which contains
-another checked out copy of the repository, but with the branch `gh-pages`, which
-is the branch that is published by Github using the "Github Pages" mechanism.
+the "live" website published by Github using the "Github Pages" mechanism at the URL `book.duckietown.org`.
 
 <div class="check" markdown="1">
 
@@ -159,6 +158,32 @@ use:
 This will be faster. However, sometimes it might get confused. At that point,
 do `make clean`.
 
+### Single-file compilation
+
+There is also the option to compile one single file.
+
+To do this, use:
+
+    $ ./compile-single ![path to .md file]
+
+This is the fastest way to see the results of the editing; however, there are limitations:
+
+- no links to other sections will work.
+- not all images might be found.
+
+
+## The workflow to edit documentation.
+
+This is the basic workflow:
+
+1. Edit the Markdown in the `master` branch of the `duckuments` repository.
+2. Run `make compile` to make sure it compiles.
+3. Commit the Markdown and push on the `master` branch.
+
+Done. A bot will redo the compilation and push it to `book.duckietown.org`.
+
+Step 2 is there so you know that the bot will not encounter errors.
+
 ## Troubleshooting compilation
 
 Symptom: "Invalid XML"
@@ -179,25 +204,6 @@ Symptom: The error message contains `ValueError: Suspicious math fragment 'KEYMA
 Resolution: You probably have forgotten to indent a command line by at least 4 spaces. The dollar in the command line is now being confused for a math formula.
 
 
-## The workflow to edit documentation.
-
-This is the workflow:
-
-1. Edit the Markdown in the `master` branch of the `duckuments` repository.
-2. Run `make compile` to make sure it compiles.
-3. Commit the Markdown and push on the `master` branch.
-
-Done. A bot will redo the compilation and push the changes in the `gh-pages` branch.
-
-Step 2 is there so you know that the bot will not encounter errors.
-
-## \*Deploying the documentation
-
-Note: This part is now done by a bot, so it has been removed by the documentation.
-
-The book is published to a different [repository called `duckuments-dist`](https://github.com/duckietown/duckuments-dist) and from there
-published as `book.duckietown.org`.
-
 
 
 <!-- don't need to do it manually.
@@ -217,78 +223,3 @@ Now, after triple checking that you are in the `gh-pages` branch, you can
 use `git status` to see the files that were added or modified,
 and simply use `git add`, `git commit` and `git push` to push the files
 to Github. -->
-
-## \*Compiling the PDF version
-
-Note: The dependencies below are harder to install. If you don't manage
-to do it, then you only lose the ability to compile the PDF. You can do `make compile`
-to compile the HTML version, but you cannot do `make compile-pdf`.
-
-### Installing `nodejs`
-
-Ensure the latest version (>6) of `nodejs` is installed.
-
-Run:
-
-    $ nodejs --version
-    6.xx
-
-If the version is 4 or less, remove `nodejs`:
-
-    $ sudo apt remove nodejs
-
-Install `nodejs` using [the instructions at this page][nodejs].
-
-[nodejs]: https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
-
-<!-- $ sudo apt install node-less -->
-
-Next, install the necessary Javascript libraries using `npm`:
-
-    $ cd $DUCKUMENTS
-    $ npm install MathJax-node jsdom@9.3 less
-
-
-
-### Troubleshooting `nodejs` installation problems
-
-The only pain point  in the installation procedure has been the installation of `nodejs` packages using `npm`. For some reason, they cannot be installed globally (`npm install -g`).
-
-Do **not** use `sudo` for installation. It will cause problems.
-
-If you use `sudo`, you probably have to delete a bunch of directories,
-such as: `~/duckuments/node_modules`, `~/.npm`, and `~/.node_modules`, if they exist.
-
-### Installing Prince
-
-Install PrinceXML from [this page](https://www.princexml.com/download/).
-
-### Installing fonts
-<!--
-Download STIX fonts from [this site][stix].
-
-[stix]: https://sourceforge.net/projects/stixfonts/files/latest/download
-
-Unzip and copy the ttf to `~/.fonts`:
-
-    $ cp -R STIXv2.0.0 ~/.fonts -->
-
-Copy the `~/duckuments/fonts` directory in `~/.fonts`:
-
-    $ mkdir -p ~/.fonts    # create if not exists
-    $ cp -R ~/duckuments/fonts ~/.fonts
-
-and then rebuild the font cache using:
-
-    $ fc-cache -fv
-
-
-### Compiling the PDF
-
-To compile the PDF, use:
-
-    $ make compile-pdf
-
-This creates the file:
-
-    ./duckuments-dist/master/duckiebook.pdf
