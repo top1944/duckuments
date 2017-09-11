@@ -57,6 +57,7 @@ between the two motors. With $t > 0$, the right wheel will turn slightly more
 than the left wheel given the same velocity command; with $t < 0$, the left
 wheel will turn slightly more the right wheel.
 
+Comment: $t$ should always be time; bad choice for the parameter name - AC
 
 ## Perform the Calibration
 
