@@ -37,8 +37,16 @@ Check out all the channels in Slack, and add yourself to those that pertain or i
 
 The next thing you need to do is provide Duckietown HR (Kirsten Bowser) with your Github username via Slack.
 
-If you don't already have a Github account, follow the steps here: [](#github-access)
+If you don't already have a Github account, follow these steps:
 
+Sign up for an account on [GitHub](https://github.com).
+
+Use the same email associated with your Slack account. Your Github username should be the same as your Slack username if possible, otherwise something similar.
+
+`@censi` is the slack handle, the GitHub username is `AndreaCensi`.
+Send your Github username to Duckietown HR via Slack on the channel `help-accounts`.
+
+Next, you need to accept the invite to the Duckietown organization. The invite should be waiting for you at the page https://github.com/duckietown.
 
 <!--
 ### Google Documents
