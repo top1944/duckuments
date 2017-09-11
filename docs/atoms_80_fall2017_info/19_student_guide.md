@@ -1,4 +1,4 @@
-# First Steps for Students {#first-steps-for-students}
+# The First Steps for Students {#first-steps-for-students}
 
 ## Onboarding Procedure {#onboarding-fall2017}
 

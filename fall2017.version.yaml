@@ -5,10 +5,15 @@ recipe:
 - toc # magic word for toc
 
 - add: fall-2017
-- part: homeworks
-  title: Fall 2017 Checkoffs and Homeworks
-  contents:
-  - add: checkoff_assembly_configuration
+
+# You cannot include the same unit twice - indexing
+# gets all confused. In this case, checkoff_assembly_configuration is already
+# part of "fall-2017" above.
+# - part: homeworks
+#   title: Fall 2017 Checkoffs and Homeworks
+#   contents:
+#   - add: checkoff_assembly_configuration
+
 - add: duckietown-project
 - add: contribute
 - part: theory-background
@@ -18,10 +23,12 @@ recipe:
   - add: linear_algebra
 - add: building-duckiebot-c0
 - add: building-duckiebot-c1
+
 - part: end-materials
   title: End materials
   contents:
   - add: bibliography
+
 - part: appendix
   title: Some miscellaneous units
   contents:
