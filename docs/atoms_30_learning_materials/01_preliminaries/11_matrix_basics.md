@@ -77,7 +77,7 @@ An identity matrix is a diagonal square matrix with all elements equal to one.
 \amat{I} = \left[  \begin{array}{ccc}
 1   & 0        & \dots  & 0 \\
 0      & 1     & \ddots & \vdots \\
-\vdots & ddots    & \ddots & 0 \\
+\vdots & \ddots    & \ddots & 0 \\
 0      & \dots    & 0      & 1
 \end{array} \right]
 \end{align}
