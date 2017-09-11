@@ -186,9 +186,47 @@ Check with your phone or laptop if there is a WiFi in reach with the name of `du
 
 If there should be no `duckietown` network in reach then you have to manually add a network configuration file for the network that you'd like to connect to. Most universities around the world should have to `eduroam` network available. You can use it for connecting your Duckiebot.
 
-Save the following block as `TODO: filename eduroam wifi setting`:
+Save the following block as new file in `/etc/NetworkManager/system-connections/eduroam`:
 
-    TODO code block for eduroam connection
+    [connection]
+    id=eduroam
+    uuid=38ea363b-2db3-4849-a9a4-c2aa3236ae29
+    type=wifi
+    permissions=user:oem:;
+    secondaries=
+
+    [wifi]
+    mac-address=![the MAC address of your internal wifi adapter, wlan0]
+    mac-address-blacklist=
+    mac-address-randomization=0
+    mode=infrastructure
+    seen-bssids=
+    ssid=eduroam
+
+    [wifi-security]
+    auth-alg=open
+    group=
+    key-mgmt=wpa-eap
+    pairwise=
+    proto=
+
+    [802-1x]
+    altsubject-matches=
+    eap=ttls;
+    identity=![your eduroam username]@![your eduroam domain]
+    password=![your eduroam password]
+    phase2-altsubject-matches=
+    phase2-auth=pap
+
+    [ipv4]
+    dns-search=
+    method=auto
+
+    [ipv6]
+    addr-gen-mode=stable-privacy
+    dns-search=
+    method=auto
+
 
 ### Option 3: custom WiFi {status=draft}
 
