@@ -4,13 +4,9 @@ input: out/fall2017/master.html
 recipe:
 - toc # magic word for toc
 
-# Add the entire part
 - add: fall-2017
-# Add the entire part
 - add: duckietown-project
-# Add the entire part
 - add: contribute
-# Create a new part called "End materials"
 - part: theory-background
   title: Theory Background
   contents:
@@ -20,17 +16,15 @@ recipe:
 - part: end-materials
   title: End materials
   contents:
-  # Add arbitrary units in the part
   - add: bibliography
 - part: appendix
   title: Some miscellaneous units
   contents:
-  # These are names of arbitrary units
   - add: atom
   - add: liclipse
 
 purl_prefix: http://purl.org/dt/fall2017/
 
-remove_status: [draft, beta]
+remove_status: [draft]
 
 output: duckuments-dist/fall2017/duckiebook.html

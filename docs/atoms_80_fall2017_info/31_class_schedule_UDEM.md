@@ -4,9 +4,13 @@
 
 Class (11:30)
 
-Slides:
-
+Slides: 
+* [Duckietown History Future](https://github.com/duckietown/lectures/blob/master/duckietown_history_future.key)
+* [Duckietown Intro](https://github.com/duckietown/lectures/blob/master/duckietown_intro.key)
+* [Autonomy Overview](https://github.com/duckietown/lectures/blob/master/autonomy_overview.key)
+ 
 Book materials:
+* 
 
 ## Friday Sept 8
 
@@ -24,7 +28,7 @@ Class (10:30)
 * Logistics
   * [The Duckiebook](http://book.duckietown.org/fall2017/duckiebook/index.html) 
   * Slack ([](#slack_channels))
-  * Git repos ([](#git_repos))
+  * Git repos ([](#fall2017-git))
   * How to get and give help ([](#help))
   * Grading scheme [](http://duckietown.org/classes/2017/17-Montreal/description/)
   
