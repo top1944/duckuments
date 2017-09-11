@@ -109,10 +109,10 @@ By default, the robot boots into Byobu.
 
 Please see [](#byobu) for an introduction to Byobu.
 
-XXX Not sure it's a good idea to boot into Byobu.
+Doubt: Not sure it's a good idea to boot into Byobu. -??
 
-## (For `C1`) Configure the robot-generated network
-XXX `D17-0+w`
+## (For `D17-0+w`) Configure the robot-generated network
+
 The Duckiebot in configuration `D17-C0+w` can create a WiFi network.
 
 It is a 5 GHz network; this means that you need to have a 5 GHz
@@ -166,11 +166,11 @@ and to the internet, the Raspberry Pi will act as a bridge to the internet.
 
 You are connected to the Duckiebot via WiFi, but the Duckiebot also needs to connect to the internet in order to get updates and install some software. There are three options for achieving this:
 
-### Option 1: `duckietown` WiFi 
+### Option 1: `duckietown` WiFi
 
 Check with your phone or laptop if there is a WiFi in reach with the name of `duckietown`. If there is, you are all set. The defaut configuration for the Duckiebot is to have one WiFi adapter connect to this network and the other broadcast the access point which you are currently connected to.
 
-### Option 2: `eduroam` WiFi
+### Option 2: `eduroam` WiFi {status=draft}
 
 If there should be no `duckietown` network in reach then you have to manually add a network configuration file for the network that you'd like to connect to. Most universities around the world should have to `eduroam` network available. You can use it for connecting your Duckiebot.
 
@@ -178,7 +178,7 @@ Save the following block as `TODO: filename eduroam wifi setting`:
 
     TODO code block for eduroam connection
 
-### Option 3: custom WiFi
+### Option 3: custom WiFi {status=draft}
 
 If neither `duckietown` nor `eduroam` are available, you can add your own configuration file. Here is an example for a standard WPA2-private home network. Save the following block as `TODO: filename custom wifi setting`:
 
@@ -427,5 +427,3 @@ Symptom: random `wget`, `curl`, `git`, and `apt` calls fail with SSL errors.
 Resolution: That's probably actually an issue with your system time. Type the command `timedatectl` into a terminal, hit enter and see if the time is off. If it is, you might wanna follow the intructions from this article: https://raspberrypi.stackexchange.com/questions/59860/time-and-timezone-issues-on-pi
 or entirely uninstall your NTP service and manually grab the time on reboot. It's a bit dirty, but works surprisingly well:
 https://unix.stackexchange.com/questions/251519/setting-time-and-date-without-using-ntp
-
-

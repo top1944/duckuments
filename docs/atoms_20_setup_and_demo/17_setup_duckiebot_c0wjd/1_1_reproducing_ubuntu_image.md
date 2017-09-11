@@ -172,9 +172,7 @@ Install ROS.
 
 See: The procedure is given in [](#install-ROS).
 
-## Wireless configuration (old version)
-
-XXX This is the old version.
+## Wireless configuration (old version) {status=deprecated}
 
 There are two files that are important to edit.
 
