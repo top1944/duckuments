@@ -42,10 +42,10 @@ a straight line when you command it to.
 The relationship between the velocities and the voltages of left and right motors
 are defined as:
 
-\[
-    V_{right} = (g + t) * (v + \dfrac{1}{2} \omega l ) \newline
-    V_{left} = (g - t) * (v - \dfrac{1}{2} \omega l )
-\]
+\begin{align*}
+    V_{right} &= (g + t) * (v + \dfrac{1}{2} \omega l ) \\
+    V_{left} &= (g - t) * (v - \dfrac{1}{2} \omega l )
+\end{align*}
 
 where $V_{right}$ and $V_{left}$ are the voltages for the two motors, $g$ is
 called *gain*, $t$ is called *trim*, $v$ and $\omega$ are the desired linear
@@ -60,7 +60,7 @@ wheel will turn slightly more the right wheel.
 
 ## Perform the Calibration
 
-### Calibrating the trim parameter
+### Calibrating the `trim` parameter
 
 The trim parameter is set to $0.00$ by default, under the assumption that both
 motors and wheels are perfectly identical. You can change the value of the trim
@@ -70,37 +70,32 @@ parameter by running the command:
 
 Calibrate the trim parameter by following these steps:
 
-1. Make sure that your Duckiebot is ON and connected to the network.
+#### 1
+Make sure that your Duckiebot is ON and connected to the network.
 
-2. On your Duckiebot, launch the joystick process:
-
+#### 2
+On your Duckiebot, launch the joystick process:
     duckiebot $ roslaunch duckietown joystick.launch veh:=![robot name]
 
-3. Use some tape to create a straight line on the floor ([](#fig:wheel_calibration_line)).
-
+1. Use some tape to create a straight line on the floor ([](#fig:wheel_calibration_line)).
     <div figure-id="fig:wheel_calibration_line" figure-caption="Straight line useful for wheel calibration">
-         <img src="wheel_calibration_line.jpg" style='width: 20em'/>
+         <img src="wheel_calibration_line.jpg" style='width: 30em'/>
     </div>
 
-4. Place your Duckiebot on one end of the tape. Make sure that your Duckiebot is
+1. Place your Duckiebot on one end of the tape. Make sure that your Duckiebot is
 perfectly centered with respect to the line.
-
-5. Command your Duckiebot to go straight for about 2 meters. Observe your Duckiebot
+2. Command your Duckiebot to go straight for about 2 meters. Observe your Duckiebot
 from the point where it started moving and annotate on which side of the tape
 the Duckiebot drifted ([](#fig:wheel_calibration_lr_drift)).
-
     <div figure-id="fig:wheel_calibration_lr_drift" figure-caption="Left/Right drift">
-         <img src="wheel_calibration_lr_drift.jpg" style='width: 20em'/>
+         <img src="wheel_calibration_lr_drift.jpg" style='width: 30em'/>
     </div>
-
-6. Measure the distance between the tape and the Duckiebot after it traveled for
+3. Measure the distance between the tape and the Duckiebot after it traveled for
 about 2 meters ([](#fig:wheel_calibration_measuring_drift)) (Make sure that the
 ruler is orthogonal to the tape).
-
     <div figure-id="fig:wheel_calibration_measuring_drift" figure-caption="Measure the amount of drift after 2 meters run">
-         <img src="wheel_calibration_measuring_drift.jpg" style='width: 20em'/>
+         <img src="wheel_calibration_measuring_drift.jpg" style='width: 30em'/>
     </div>
-
 If the Duckiebot drifted by less than $15$ centimeters you can stop calibrating
 the trim parameter. A drift of $15$ centimeters in a $2$ meters run is good
 enough for Duckietown. If the Duckiebot drifted by more than $15$ centimeters,
@@ -120,7 +115,7 @@ $t$, by running, for example:
 
 
 
-### Calibrating the gain parameter
+### Calibrating the `gain` parameter
 
 The gain parameter is set to $1.00$ by default. You can change its value by
 running the command:
