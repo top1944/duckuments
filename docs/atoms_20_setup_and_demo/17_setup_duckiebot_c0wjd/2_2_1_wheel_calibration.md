@@ -111,6 +111,8 @@ the Duckiebot drifted ([](#fig:wheel_calibration_lr_drift)).
 Measure the distance between the tape and the Duckiebot after it traveled for
 about 2 meters ([](#fig:wheel_calibration_measuring_drift)). 
 
+Comment: It's unclear what is the distance - from where to where. Presumably, center of axle? - AC
+
 Make sure that the ruler is orthogonal to the tape.
 
 <div figure-id="fig:wheel_calibration_measuring_drift" figure-caption="Measure the amount of drift after 2 meters run">
