@@ -21,7 +21,7 @@ The code for the door is XXX. Please do not distribute the code for the door, we
 
 The TA for the class is Florian Golemo. All communications with the course staff should happen through Slack.
 
-The instructor is Prof. Liam Paull who's office is 2347 Pavillion André-Aisenstadt.
+The instructor is Prof. Liam Paull, whose office is 2347 Pavillion André-Aisenstadt.
 
 ## Storing Your Robot
 
