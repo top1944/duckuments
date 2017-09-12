@@ -19,7 +19,7 @@ Comment: What does it mean "ready to use"? -AC
 
 
 
-## Acquire and burn the image
+## Acquire and burn the image {#setup-duckiebot-burn-image}
 
 On the laptop, download the compressed image at this URL:
 
