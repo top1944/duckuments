@@ -1,4 +1,4 @@
-# GNU/Linux general notions {#linux}
+# GNU/Linux general notions {#linux status=draft}
 
 Assigned: Andrea
 

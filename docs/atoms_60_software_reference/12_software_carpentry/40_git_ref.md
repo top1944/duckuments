@@ -1,4 +1,4 @@
-# Source code control with Git {#git-reference}
+# Source code control with Git {#git-reference status=ready}
 
 Assigned: Andrea
 
@@ -99,7 +99,7 @@ Solution:
 
     $ git push --set-upstream origin ![branch name]
 
-## `git` {#git}
+## `git` {#git status=draft}
 
 TODO: to write
 
