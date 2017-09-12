@@ -87,18 +87,39 @@ duckuments-dist:
 
 
 log=~/logs/compilation.log
+log-fall2017=~/logs/fall2017/compilation.log
+
 automatic-compile-cleanup:
 	echo "\n\nautomatic-compile-cleanup killing everything" >> $(log)
-	rm -f ~/lockfile
 	-killall -9 /home/duckietown/scm/duckuments/deploy/bin/python
 	$(MAKE) clean
 	$(MAKE) fall2017-clean
+	rm -f ~/lockfile
+	rm -f ~/lockfile-fall2017
 
 cleanup-repo:
+	echo "\n\n Cleaning up the repo " >> $(log)
+	df -h / >> $(log)
 	git -C duckuments-dist show-ref -s HEAD > duckuments-dist/.git/shallow
 	git -C duckuments-dist reflog expire --expire=0 --all
 	git -C duckuments-dist prune
 	git -C duckuments-dist prune-packed
+	echo "\nafter cleanup\n" >> $(log)
+	df -h / >> $(log)
+
+
+automatic-compile-fall2017:
+	git pull
+	touch $(log-fall2017)
+	echo "\n\n Starting" >> $(log-fall2017)
+	date >> $(log-fall2017)
+	-$(MAKE) fall2017
+	echo "  succeded fall 2017" >> $(log-fall2017)
+	-$(MAKE) upload 
+	echo "  succeded upload" >> $(log-fall2017)
+	date >> $(log-fall2017)
+	echo "Done." >> $(log-fall2017)
+
 
 automatic-compile:
 	git pull
@@ -122,6 +143,8 @@ automatic-compile:
 	echo "  succeded PDF upload" >> $(log)
 	date >> $(log)
 	echo "Done." >> $(log)
+
+
 upload:
 	#git -C duckuments-dist pull -X ours
 	echo ignoring errors
