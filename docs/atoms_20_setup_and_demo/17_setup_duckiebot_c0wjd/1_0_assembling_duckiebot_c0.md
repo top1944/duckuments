@@ -32,9 +32,9 @@ Comment: add "next step(s)" as a standard field in the requirements class? -JT
 Open the Magician chassis package and take out the following components:
 
 
-* Chassis-bottom (1), Chassis-up (1)
-* DC Motors (2), motor holders (4)
-* Wheels (2 pieces), steel omnidirectional wheel (1) or caster wheel (1)
+* Chassis-bottom (1x), Chassis-up (1x)
+* DC Motors (2x), motor holders (4x)
+* Wheels (2x), steel omnidirectional wheel (1x) or caster wheel (1x)
 * All spacers and screws
 * Screwdriver
 
@@ -119,18 +119,6 @@ Comment: These spacers are not the ones provided in the box, change pic. -JT
 
 ## Assembling the Raspberry Pi, camera, and HATs
 
-<!--
-Materials:
-
-* Chassis-up,
-* Camera and camera mount,
-* M3*10 flathead screws and M3 nuts from the Duckiebot package.
-* 4 M-F Nylon M3x5+6mm standoff spacers, 3x0.5mm screws, Nylon nuts
-* Raspberry Pi 3 – Model B
-* Soldered PWM/Servo HAT and Soldered Stepper Motor HAT,
-* 1 Male-male wire,
-* Standoffs
--->
 
 ### Raspberry Pi
 
@@ -159,8 +147,12 @@ Requires: Having the Duckiebot image copied in the Micro SD card.
 
 Take the Micro SD card from the Duckiebox and insert its slot on the Raspberry Pi. The SD card slot is just under the display port, on the short side of the PI, on the flipside of where the header pins are.
 
-<div figure-id="fig:microsdcard" figure-caption="The Micro SD card.">
-    <img src="placeholder.jpg" style='width: 30em'/>
+<div figure-id="fig:microsdcard" figure-caption="The Micro SD card and SD_card readers.">
+    <img src="SD_card.jpg" style='width: 30em'/>
+</div>
+
+<div figure-id="fig:microsdcard" figure-caption="display port and inserted SD card">
+    <img src="RASPI_SD.jpg" style='width: 30em'/>
 </div>
 
 ### Camera
@@ -178,7 +170,11 @@ Protip: Make sure the camera cable is inserted in the right direction! The metal
 
 Note: Insert the cable in the right direction to connect the camera to the Raspberry Pi.
 
-Comment: insert picture with long camera cable, not short one. -JT
+<div figure-id="fig:camera_with_long_cable" figure-caption="camera with long cable">
+     <img src="ziptied_top_camera.jpg" style='width: 30em'/>
+</div>
+
+
 
 #### The camera end
 
@@ -197,7 +193,7 @@ Protip: make sure that the camera mount is: (a) geometrically centered on the ch
 </div>
 
 
-_Notice: make sure that the cable is oriented in this direction (writing towards the CPU). Otherwise you will have to disassemble the whole thing later._
+Note: make sure that the cable is oriented in this direction (writing towards the CPU). Otherwise you will have to disassemble the whole thing later.
 
 ### Assemble chassis-bottom and chassis-up
 
@@ -216,8 +212,8 @@ In order to fit the battery, we will need to extend the Magician Chassis standof
 Secure the extended standoff to the 4 corners of the chassis-bottom.  The nylon standoffs should smoothly screw in the metal ones. If you feel resistance, don’t force it or the nylon screw might break in the metal standoff. In that case, unscrew the nylon spacer and try again.
 
 
-<div figure-id="fig:standoff_extender" figure-caption=" ">
-     <img src="standoff_extender.jpg" style='width: 30em'/>
+<div figure-id="fig:standoff_extender" figure-caption="4 nylon M3*5 Standoff Spacer and 4 M3*10 screws">
+     <img src="extended_standoff.jpg" style='width: 30em'/>
 </div>
 
 <div figure-id="fig:extender_chassis" figure-caption=" ">
@@ -245,27 +241,19 @@ Place the camera cable properly when you mount the HAT on the Raspberry Pi.
 #### We are using M1 and M2. The left (in robot frame) motor is connected to M1 and the right motor is connected to M2. If you have followed Part A correctly, the wiring order will look like as following pictures:
 LeftMotor:Red - LeftMotor:Black - RightMotor:Black - RightMotor:Red
 
-
-####  Find a male-male wire (power from HAT to HAT) and connect it to +5V input as below. The other end will be connected to the upper layer, which delivers the power to the motor HAT.
-
-_Notice:You will need the screwdriver from the Magician Chassis package._
+Note:You will need the screwdriver from the Magician Chassis package.
 
 <div figure-id="fig:ServoHAT_wiring" figure-caption=" ">
      <img src="ServoHAT_wiring.jpg" style='width: 30em'/>
 </div>
 
+
+<!---
+####  Find a male-male wire (power from HAT to HAT) and connect it to +5V input as below. The other end will be connected to the upper layer, which delivers the power to the motor HAT.--
 <div figure-id="fig:malHead_wire" figure-caption=" ">
      <img src="malHead_wire.jpg" style='width: 30em'/>
 </div>
-
-### PWM HAT
-
-Put a Servo/PWM Pi HAT board (in your Duckiebox) with 4 standoffs. Connect the male-male wire to +5V output.
-
-
-<div figure-id="fig:HAT_ensemble" figure-caption=" ">
-     <img src="HAT_ensemble.jpg" style='width: 30em'/>
-</div>
+-->
 
 ### Battery
 
@@ -278,21 +266,31 @@ Put the battery between the upper and lower decks of the chassis. It is recommen
 
 ### Joypad
 
-TODO: Connect the joypad dongle
-TODO: Insert 2AA batteries in the joypad
-TODO: Insert relevant pics
+For each Joypad there is a corresponding Joypad dongle. Don't lose the dongle! Otherwise you will need to buy a new Joypad.
+<div figure-id="fig:joypad" figure-caption="All components in the Joypad package">
+     <img src="joypad.jpg" style='width: 30em'/>
+</div>
+
+Insert the joypad dongle into one of the USB port. 
+<div figure-id="fig:joypad_dongle" figure-caption="">
+     <img src="joypad_dongle.jpg" style='width: 30em'/>
+</div>
+
+Insert 2AA batteries on the backside of the joypad
+<div figure-id="fig:joypack_battery" figure-caption="joypad and 2AA batteries">
+     <img src="joypack_battery.jpg" style='width: 30em'/>
+</div>
 
 
 ### Connect the power cables
-Connect power cables (USB A to 5mm cable in your Duckiebox and USB cable in the battery box). Arrange all the cables properly so that the Duckiebot can run on the way without barrier.
+You are now ready to secure the prepared power wires in [](#power-cable-prep-c0). to the DC motor HAT power pins.
 
-<div figure-id="fig:powerbank_motor_cable" figure-caption=" ">
-     <img src="powerbank_motor_cable.jpg" style='width: 30em'/>
+Connect the battery with the DC motor HAT by making sure you plug the black wire in the pin labeled with a minus: - and the red wire to the plus: + ([](#figure:final-result-power-c0)).
+
+Arrange all the cables properly so that the Duckiebot can run on the way without barrier.
+
+<div figure-id="fig:Stepper_cable" figure-caption="Insert the prepared power wire to DC motor HAT power pins.">
+     <img src="Stepper_cable.jpg" style='width: 30em'/>
 </div>
-
-<div figure-id="fig:cable_wiring" figure-caption="TODO: will be replace by a new pic">
-     <img src="cable_wiring.jpg" style='width: 30em'/>
-</div>
-
 
 
