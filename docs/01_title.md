@@ -1,5 +1,5 @@
 
-<h1 notoc nonumber id='booktitle'>The Duckiebook</h1>
+<h1 notoc nonumber id='booktitle' status='ready'>The Duckiebook</h1>
 
 <p style='text-align: center'>
     From kits of parts to an autonomous fleet<br/>
