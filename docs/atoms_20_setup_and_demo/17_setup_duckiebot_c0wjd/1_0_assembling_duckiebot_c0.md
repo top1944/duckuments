@@ -132,11 +132,14 @@ Materials:
 * Soldered PWM/Servo HAT and Soldered Stepper Motor HAT,
 * 1 Male-male wire,
 * Standoffs
+* Heat sinks
 -->
 
 ### Raspberry Pi
 
-The first step is to fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on the opposite side of the chassis-up.
+Before attaching anything to the Raspberry Pi you should add the heat sinks to it. There are 2 small sinks and a big one. The big one best fits onto the processor (the big "Broadcom"-labeled chip in the center of the top of the Raspberry Pi), and other two sinks you can attach to the small chip that is to the right of the Broadcom chip and to the one on the underside of the Raspberry Pi. Note that the chip on the underside is bigger than the heat sink. Just mount the heat sink in the center and make sure all of them are attached tightly.
+
+When this is done fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on the opposite side of the chassis-up.
 
 <div figure-id="fig:Raspberry_pi3" figure-caption=" ">
      <img src="RPi_3.jpg" style='width: 30em'/>
