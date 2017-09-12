@@ -16,6 +16,7 @@ all: compile compile-pdf
 
 .PHONY: $(out_html) checks check-duckietown-software check-programs
 
+
 checks: check-duckietown-software check-programs
 
 check-programs-pdf:
@@ -92,6 +93,12 @@ automatic-compile-cleanup:
 	-killall -9 /home/duckietown/scm/duckuments/deploy/bin/python
 	$(MAKE) clean
 	$(MAKE) fall2017-clean
+
+cleanup-repo:
+	git -C duckuments-dist show-ref -s HEAD > duckuments-dist/.git/shallow
+	git -C duckuments-dist reflog expire --expire=0 --all
+	git -C duckuments-dist prune
+	git -C duckuments-dist prune-packed
 
 automatic-compile:
 	git pull
