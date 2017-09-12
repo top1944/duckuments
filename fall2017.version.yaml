@@ -18,16 +18,26 @@ recipe:
 - add: duckietown-project
 - add: contribute
 
-- part: theory-background
+- make-part: theory-background
   title: Theory Background
   contents:
   - add: probability_basics
   - add: linear_algebra
 
+- make-part: intro-to-autonomy
+  title: Introduction to autonomy
+  contents:
+  - add: representations
+
+
+# Add the entire part
 - add: building-duckiebot-c0
+  except: # except wheel-calibration
+  - wheel-calibration
+
 - add: building-duckiebot-c1
 
-- part: appendix
+- make-part: appendix
   title: Appendix
   contents:
   - add: bibliography
