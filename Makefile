@@ -128,10 +128,10 @@ automatic-compile:
 	date >> $(log)
 	nice -n 10 $(MAKE) compile-html
 	echo "  succeded html " >> $(log)
-	-$(MAKE) fall2017
-	echo "  succeded fall 2017" >> $(log)
-	-$(MAKE) upload
-	echo "  succeded upload " >> $(log)
+	#-$(MAKE) fall2017
+	#echo "  succeded fall 2017" >> $(log)
+	#-$(MAKE) upload
+	#echo "  succeded upload " >> $(log)
 	#nice -n 10 $(MAKE) split-imprecise
 	nice -n 10 $(MAKE) split
 	echo "  succeded split " >> $(log)
