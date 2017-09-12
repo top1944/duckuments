@@ -90,8 +90,10 @@ duckuments-dist:
 	git clone --depth 3 git@github.com:duckietown/duckuments-dist.git duckuments-dist
 
 
-log=~/logs/compilation.log
-log-fall2017=~/logs/fall2017/compilation.log
+log=misc/bot/logs/generic.log
+log-master-html=misc/bot/logs/master-html/compilation.log
+log-master-pdf=misc/bot/logs/master-pdf/compilation.log
+log-fall2017=misc/bot/logs/fall2017/compilation.log
 
 automatic-compile-cleanup:
 	echo "\n\nautomatic-compile-cleanup killing everything" >> $(log)
@@ -125,32 +127,32 @@ automatic-compile-fall2017:
 	echo "Done." >> $(log-fall2017)
 
 
-automatic-compile-master:
+automatic-compile-master-html:
 	git pull
-	touch $(log)
-	echo "\n\nStarting" >> $(log)
-	date >> $(log)
+	touch $(log-master-html)
+	echo "\n\nStarting" >> $(log-master-html)
+	date >> $(log-master-html)
 	nice -n 10 $(MAKE) master-html
-	echo "  succeded html " >> $(log)
+	echo "  succeded html " >> $(log-master-html)
 	#-$(MAKE) fall2017
 	#echo "  succeded fall 2017" >> $(log)
 	#-$(MAKE) upload
 	#echo "  succeded upload " >> $(log)
 	#nice -n 10 $(MAKE) split-imprecise
 	nice -n 10 $(MAKE) master-split
-	echo "  succeded split " >> $(log)
+	echo "  succeded split " >> $(log-master-html)
 	-$(MAKE) upload
-	echo "  succeded html upload " >> $(log)
-	date >> $(log)
-	echo "Done." >> $(log)
+	echo "  succeded html upload " >> $(log-master-html)
+	date >>$(log-master-html)
+	echo "Done." >> $(log-master-html)
 
 automatic-compile-master-pdf:
 	nice -n 10 $(MAKE) master-pdf
-	echo "  succeded PDF  " >> $(log)
+	echo "  succeded PDF  " >> $(log-master-pdf)
 	-$(MAKE) upload
-	echo "  succeded PDF upload" >> $(log)
-	date >> $(log)
-	echo "Done." >> $(log)
+	echo "  succeded PDF upload" >> $(log-master-pdf)
+	date >>  $(log-master-pdf)
+	echo "Done." >> $(log-master-pdf)
 
 
 upload:

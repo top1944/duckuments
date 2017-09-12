@@ -4,7 +4,6 @@ set -ux
 jobname=$1
 target=$2
 
-# ROOT=/home/duckietown/scm/duckuments
 ROOT=$(realpath `dirname $0`/../..)
 
 LOCKS=$ROOT/misc/bot/locks
@@ -13,7 +12,7 @@ LOCK=$LOCKS/$jobname
 
 mkdir -p $LOGS/$jobname
 LOG1=$LOGS/$jobname/last.log
-LOG2=$LOGS/$jobname/`date +\%Y\%m\%d\%H\%M\%S`
+LOG2=$LOGS/$jobname/`date +\%Y\%m\%d\%H\%M\%S`.log
 
 echo Job name: $jobname
 echo Target: $target
