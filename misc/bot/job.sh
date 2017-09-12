@@ -12,7 +12,7 @@ LOCK=$LOCKS/$jobname
 
 mkdir -p $LOGS/$jobname
 LOG1=$LOGS/$jobname/last.log
-LOG2=$LOGS/$jobname/`date +\%Y\%m\%d\%H\%M\%S`.log
+LOG2=$LOGS/$jobname/`date +\%Y-\%m-\%d__\%H-\%M-\%S`.log
 
 echo Job name: $jobname
 echo Target: $target
