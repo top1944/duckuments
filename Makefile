@@ -219,15 +219,7 @@ update-software: checks
 
 compile: checks update-mcdp update-software
 	$(MAKE) master
-	# $(MAKE) compile-html
-	# $(MAKE) split
 
-# compile-slow: update-mcdp update-software
-# 	$(MAKE) index
-# 	$(MAKE) compile-html-slow
-# 	$(MAKE) split-slow
-
-# index:
 
 index:
 	mcdp-render -D misc book_index
