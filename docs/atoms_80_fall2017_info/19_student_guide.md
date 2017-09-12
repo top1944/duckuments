@@ -10,7 +10,7 @@ The primary mode of online confabulation between staff and students is Slack, a 
 
 Note: Emails are otherwise forbidden, unless they relate to a private, university-based admistrative concern.
 
-If are reading this you should have received an invitation to join our Slack - check your inbox. If you have not received an invitation to Slack, you need to send an email to Kirsten Bowser &lt;akbowser@gmail.com&gt;.
+If you are reading this you should have received an invitation to join our Slack - check your inbox. If you have not received an invitation to Slack, you need to send an email to Kirsten Bowser &lt;akbowser@gmail.com&gt;.
 
 When you accept your Slack invite, please follow these rules in setting up your profile:
 
