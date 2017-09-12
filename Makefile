@@ -285,6 +285,16 @@ master:
 master-clean:
 	rm -rf out/master
 
+circle:
+	DISABLE_CONTRACTS=1 mcdp-render-manual \
+		--src $(src) \
+		--stylesheet v_manual_split \
+		--mathjax 0 \
+		--symbols $(tex-symbols) \
+		-o out/master/html \
+		--output_file out/master/data/1.html \
+		-c "config echo 1; config colorize 0; rparmake n=4"
+
 master-html:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src $(src) \
