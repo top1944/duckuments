@@ -68,3 +68,5 @@ docs/*.html
 docs/**/*.html
 .python-version
 .~lock.*
+misc/bot/locks
+misc/bot/logs
