@@ -28,4 +28,4 @@ touch $LOG2
 
 
 /usr/bin/flock -n $LOCK \
-/bin/bash -c "source $ROOT/deploy/bin/activate && make -C $ROOT $target 2>&1 | tee $LOG1 | tee $LOG2"
+/bin/bash -c "source $ROOT/deploy/bin/activate && nice -n 10 make -C $ROOT $target 2>&1 | tee $LOG1 | tee $LOG2"
