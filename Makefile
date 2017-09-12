@@ -115,7 +115,7 @@ automatic-compile-fall2017:
 	date >> $(log-fall2017)
 	-$(MAKE) fall2017
 	echo "  succeded fall 2017" >> $(log-fall2017)
-	-$(MAKE) upload 
+	-$(MAKE) upload
 	echo "  succeded upload" >> $(log-fall2017)
 	date >> $(log-fall2017)
 	echo "Done." >> $(log-fall2017)
@@ -207,100 +207,114 @@ update-software: checks
 	-git -C $(duckietown-software) pull
 
 compile: checks update-mcdp update-software
-	$(MAKE) index
-	$(MAKE) compile-html
-	$(MAKE) split
+	$(MAKE) master
+	# $(MAKE) compile-html
+	# $(MAKE) split
 
-compile-slow: update-mcdp update-software
-	$(MAKE) index
-	$(MAKE) compile-html-slow
-	$(MAKE) split-slow
+# compile-slow: update-mcdp update-software
+# 	$(MAKE) index
+# 	$(MAKE) compile-html-slow
+# 	$(MAKE) split-slow
+
+# index:
 
 index:
-
-index2:
-	# XXX: requires node
 	mcdp-render -D misc book_index
 	cp misc/book_index.html duckuments-dist/index.html
 
 
-compile-html:
-	DISABLE_CONTRACTS=1 mcdp-render-manual \
-		--src $(src) \
-		--stylesheet v_manual_split \
-		--mathjax 0 \
-		--symbols $(tex-symbols) \
-		-o $(tmp_files) \
-		--output_file $(out_html).tmp -c "config echo 1; config colorize 1; rparmake n=8"
 
-	python add_stylesheet.py $(out_html).tmp style/duckietown.css
-	python -m mcdp_utils_xml.note_errors_inline $(out_html).tmp
-	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
-	python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
-
-
-
-compile-html-no-embed:
-	DISABLE_CONTRACTS=1 mcdp-render-manual \
-		--src $(src) \
-		--stylesheet v_manual_split \
-		--mathjax 0 \
-		--symbols $(tex-symbols) \
-		-o $(tmp_files) \
-		--output_file $(out_html).tmp -c "config echo 1; config colorize 1; rparmake"
-
-	python -m mcdp_utils_xml.note_errors_inline $(out_html).tmp
-	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
-	# python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
-	cp $(out_html).localcss.html $(out_html)
-	$(MAKE) split
-
-compile-html-slow:
-	DISABLE_CONTRACTS=1 mcdp-render-manual \
-		--src $(src) \
-		--stylesheet v_manual_split \
-		--mathjax 0 \
-		--symbols $(tex-symbols) \
-		-o $(tmp_files) \
-		--output_file $(out_html).tmp -c "config echo 1; config colorize 0; rmake"
-
-	python -m mcdp_utils_xml.note_errors_inline $(out_html).tmp
-	python -m mcdp_docs.add_edit_links $(out_html).localcss.html < $(out_html).tmp
-	python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
+#
+# compile-html-no-embed:
+# 	DISABLE_CONTRACTS=1 mcdp-render-manual \
+# 		--src $(src) \
+# 		--stylesheet v_manual_split \
+# 		--mathjax 0 \
+# 		--symbols $(tex-symbols) \
+# 		-o $(tmp_files) \
+# 		--output_file $(out_html).tmp -c "config echo 1; config colorize 1; rparmake"
+#
+# 	python -m mcdp_utils_xml.note_errors_inline $(out_html).tmp
+# 	python -m mcdp_docs.add_edit_links  $(out_html).localcss.html < $(out_html).tmp
+# 	# python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
+# 	cp $(out_html).localcss.html $(out_html)
+# 	$(MAKE) split
+#
+# compile-html-slow:
+# 	DISABLE_CONTRACTS=1 mcdp-render-manual \
+# 		--src $(src) \
+# 		--stylesheet v_manual_split \
+# 		--mathjax 0 \
+# 		--symbols $(tex-symbols) \
+# 		-o $(tmp_files) \
+# 		--output_file $(out_html).tmp -c "config echo 1; config colorize 0; rmake"
+#
+# 	python -m mcdp_utils_xml.note_errors_inline $(out_html).tmp
+# 	python -m mcdp_docs.add_edit_links $(out_html).localcss.html < $(out_html).tmp
+# 	python -m mcdp_docs.embed_css $(out_html) < $(out_html).localcss.html
 
 %.pdf: %.html
 	prince --javascript -o $@ $<
 	# open $@
 
-split-slow:
+# split-slow:
+# 	# rm -f $(dist_dir)/duckiebook/*html
+# 	mcdp-split \
+# 		--filename $(out_html) \
+# 		--output_dir $(dist_dir)/duckiebook \
+# 		-o $(tmp_files)/split \
+# 		-c " config echo 1; config colorize 0; rmake" \
+# 		--mathjax \
+# 		--preamble $(tex-symbols)
+
+master:
+	$(MAKE) master-html
+	$(MAKE) master-split
+
+master-clean:
+	rm -rf out/master
+
+master-html:
+	DISABLE_CONTRACTS=1 mcdp-render-manual \
+		--src $(src) \
+		--stylesheet v_manual_split \
+		--mathjax 0 \
+		--symbols $(tex-symbols) \
+		-o out/master/html \
+		--output_file out/master/data/1.html \
+		-c "config echo 1; config colorize 1; rparmake n=8"
+
+	python add_stylesheet.py out/master/data/1.html style/duckietown.css
+	python -m mcdp_utils_xml.note_errors_inline out/master/data/1.html
+	python -m mcdp_docs.add_edit_links out/master/data/localcss.html < out/master/data/1.html
+	python -m mcdp_docs.embed_css out/master/data/duckiebook.html < out/master/data/localcss.html
+	python -m mcdp_docs.extract_assets  \
+		--input out/master/data/duckiebook.html  \
+		--output duckuments-dist/master/duckiebook.html \
+		--assets duckuments-dist/master/duckiebook/assets
+
+master-split:
 	# rm -f $(dist_dir)/duckiebook/*html
-	mcdp-split \
-		--filename $(out_html) \
-		--output_dir $(dist_dir)/duckiebook \
-		-o $(tmp_files)/split \
-		-c " config echo 1; config colorize 0; rmake" \
+	 mcdp-split \
+		--filename out/master/data/duckiebook.html \
+		--output_dir duckuments-dist/master/duckiebook \
+		-o out/master/split \
+		-c " config echo 1; config colorize 1; rparmake" \
 		--mathjax \
 		--preamble $(tex-symbols)
 
-split:
-	# rm -f $(dist_dir)/duckiebook/*html
-	 mcdp-split \
-		--filename $(out_html) \
-		--output_dir $(dist_dir)/duckiebook \
-		-o $(tmp_files)/split \
-		-c " config echo 1; config colorize 1; rparmake" \
-		--mathjax \
-		--preamble $(tex-symbols)
-split-imprecise:
-	# rm -f $(dist_dir)/duckiebook/*html
-	 mcdp-split \
-		--filename $(out_html) \
-		--faster_but_imprecise \
-		--output_dir $(dist_dir)/duckiebook \
-		-o $(tmp_files)/split \
-		-c " config echo 1; config colorize 1; rparmake" \
-		--mathjax \
-		--preamble $(tex-symbols)
+
+
+# split-imprecise:
+# 	# rm -f $(dist_dir)/duckiebook/*html
+# 	 mcdp-split \
+# 		--filename $(out_html) \
+# 		--faster_but_imprecise \
+# 		--output_dir $(dist_dir)/duckiebook \
+# 		-o $(tmp_files)/split \
+# 		-c " config echo 1; config colorize 1; rparmake" \
+# 		--mathjax \
+# 		--preamble $(tex-symbols)
 
 #--disqus
 
@@ -333,6 +347,11 @@ fall2017-split:
 	   -c " config echo 1; config colorize 1; rparmake" \
 	   --mathjax \
 	   --preamble $(tex-symbols)
+
+	python -m mcdp_docs.extract_assets  \
+		--input duckuments-dist/fall2017/duckiebook.html \
+		--output duckuments-dist/fall2017/duckiebook.html \
+		--assets duckuments-dist/fall2017/duckiebook/assets
 
 fall2017:
 	$(MAKE) fall2017-prepare
