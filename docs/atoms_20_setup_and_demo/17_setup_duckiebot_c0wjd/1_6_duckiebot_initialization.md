@@ -23,19 +23,19 @@ Comment: What does it mean "ready to use"? -AC
 
 On the laptop, download the compressed image at this URL:
 
-> [https://www.dropbox.com/s/1jgn0chx3hu3a4a/duckiebot-RPI3-AD-sep7.img.xz?dl=1](https://www.dropbox.com/s/1jgn0chx3hu3a4a/duckiebot-RPI3-AD-sep7.img.xz?dl=1)
+> [https://www.dropbox.com/s/ckpqpp0cav3aucb/duckiebot-RPI3-AD-2017-09-12.img.xz?dl=1](https://www.dropbox.com/s/ckpqpp0cav3aucb/duckiebot-RPI3-AD-2017-09-12.img.xz?dl=1)
 
 The size is 1.7 GB.
 
 You can use:
 
-    $ wget -O duckiebot-RPI3-AD-sep7.img.xz ![URL above]
+    $ wget -O duckiebot-RPI3-AD-2017-09-12.img.xz ![URL above]
 
 <div class="comment" markdown="1">
 
 The original was:
 
-    $ curl -o duckiebot-RPI3-AD-sep7.img.xz ![URL above]
+    $ curl -o duckiebot-RPI3-AD-2017-09-12.img.xz ![URL above]
 
 It looks like that `curl` cannot be used with Drobpox links because it does not follow redirects.
 </div>
@@ -43,15 +43,15 @@ It looks like that `curl` cannot be used with Drobpox links because it does not 
 
 Uncompress the file:
 
-    $ xz -d -k duckiebot-RPI3-AD-sep7.img.xz
+    $ xz -d -k duckiebot-RPI3-AD-2017-09-12.img.xz
 
 This will create a file of 11 GB in size.
 
 To make sure that the image is downloaded correctly, compute its hash
 using the program `sha256sum`:
 
-    $ sha256sum duckiebot-RPI3-AD-sep7.img
-    681c4653c309df530791dbdbe2e89819def330c20d58d4c4baf5979b02e5b381  duckiebot-RPI3-AD-sep7.img
+    $ sha256sum duckiebot-RPI3-AD-2017-09-12.img
+    c21a4cea17069bae6689dd36f81fe8463696959566d164e74ed475e3f1ad446d  duckiebot-RPI3-AD-2017-09-12.img
 
 Compare the hash that you obtain with the hash above. If they are different,
 there was some problem in downloading the image.
