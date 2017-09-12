@@ -9,7 +9,7 @@ It contains links to the the syllabus and description and other important info.
 
 ## Class Schedule
 
-The authoritative class schedule will be tracked here [](#schedule_UDEM).
+The authoritative class schedule will be tracked [here](#schedule_UDEM).
 This will contain all lecture material, homeworks, checkoffs, and labs.
 
 ## Lab Access
