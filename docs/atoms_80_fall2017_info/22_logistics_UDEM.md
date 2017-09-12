@@ -4,7 +4,7 @@ This unit contains all necessary info specific for students at Univeristé de Mo
 
 ## Website
 
-The official course website is [](http://duckietown.org/classes/2017/17-Montreal/).
+[This is the official course website](http://duckietown.org/classes/2017/17-Montreal/).
 It contains links to the the syllabus and description and other important info.
 
 ## Class Schedule
