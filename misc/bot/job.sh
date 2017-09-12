@@ -11,9 +11,7 @@ LOCKS=$ROOT/misc/bot/locks
 LOGS=$ROOT/misc/bot/logs
 LOCK=$LOCKS/$jobname
 
-mkdir -p $LOCKS/$jobname
 mkdir -p $LOGS/$jobname
-
 LOG1=$LOGS/$jobname/last.log
 LOG2=$LOGS/$jobname/`date +\%Y\%m\%d\%H\%M\%S`
 
