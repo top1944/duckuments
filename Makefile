@@ -12,10 +12,14 @@ duckietown-software=duckietown
 
 src="docs:$(duckietown-software)/catkin_ws/src:$(duckietown-software)/Makefiles"
 
-all: compile compile-pdf
+all:
+	@echo "To compile master:     make master"
+	@echo "To clean:              make master-clean"
+	@echo "To compile fall2017:   make fall2017"
+	@echo "To clean:              make fall2017-clean"
+	@echo "To compile pdf:        make master-pdf"
 
 .PHONY: $(out_html) checks check-duckietown-software check-programs
-
 
 checks: check-duckietown-software check-programs
 
@@ -92,7 +96,7 @@ log-fall2017=~/logs/fall2017/compilation.log
 automatic-compile-cleanup:
 	echo "\n\nautomatic-compile-cleanup killing everything" >> $(log)
 	-killall -9 /home/duckietown/scm/duckuments/deploy/bin/python
-	$(MAKE) clean
+	$(MAKE) master-clean
 	$(MAKE) fall2017-clean
 	rm -f ~/lockfile
 	rm -f ~/lockfile-fall2017
@@ -121,23 +125,27 @@ automatic-compile-fall2017:
 	echo "Done." >> $(log-fall2017)
 
 
-automatic-compile:
+automatic-compile-master:
 	git pull
 	touch $(log)
 	echo "\n\nStarting" >> $(log)
 	date >> $(log)
-	nice -n 10 $(MAKE) compile-html
+	nice -n 10 $(MAKE) master-html
 	echo "  succeded html " >> $(log)
 	#-$(MAKE) fall2017
 	#echo "  succeded fall 2017" >> $(log)
 	#-$(MAKE) upload
 	#echo "  succeded upload " >> $(log)
 	#nice -n 10 $(MAKE) split-imprecise
-	nice -n 10 $(MAKE) split
+	nice -n 10 $(MAKE) master-split
 	echo "  succeded split " >> $(log)
 	-$(MAKE) upload
 	echo "  succeded html upload " >> $(log)
-	nice -n 10 $(MAKE) compile-pdf
+	date >> $(log)
+	echo "Done." >> $(log)
+
+automatic-compile-master-pdf:
+	nice -n 10 $(MAKE) master-pdf
 	echo "  succeded PDF  " >> $(log)
 	-$(MAKE) upload
 	echo "  succeded PDF upload" >> $(log)
@@ -163,40 +171,43 @@ clean:
 $(out_html): $(wildcard docs/**/*md)
 	$(MAKE) compile
 
-compile-pdf-slow: checks check-programs-pdf
+# compile-pdf-slow: checks check-programs-pdf
+# 	# mathjax is 1 in this case
+# 	DISABLE_CONTRACTS=1 mcdp-render-manual \
+# 		--src $(src) \
+# 		--stylesheet v_manual_blurb \
+# 		--mathjax 1 \
+# 		--symbols $(tex-symbols) \
+# 		-o $(tmp_files2) \
+# 		--output_file $(out_html2).tmp -c "config echo 1; config colorize 0; rmake"
+#
+# 	python -m mcdp_docs.add_edit_links < $(out_html2).tmp > $(out_html2)
+#
+# 	prince --javascript -o /tmp/duckiebook.pdf $(out_html2)
+#
+# 	pdftk A=/tmp/duckiebook.pdf B=misc/blank.pdf cat A1-end B output /tmp/duckiebook2.pdf keep_final_id
+# 	pdftk /tmp/duckiebook2.pdf update_info misc/blank-metadata output $(out_pdf)
+
+compile-pdf:
+	$(MAKE) master-pdf
+
+master-pdf: checks check-programs-pdf
 	# mathjax is 1 in this case
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src $(src) \
 		--stylesheet v_manual_blurb \
 		--mathjax 1 \
 		--symbols $(tex-symbols) \
-		-o $(tmp_files2) \
-		--output_file $(out_html2).tmp -c "config echo 1; config colorize 0; rmake"
+		-o out/master/pdf \
+		--output_file out/master/pdf/duckiebook.html -c "config echo 1; rparmake n=8"
 
-	python -m mcdp_docs.add_edit_links < $(out_html2).tmp > $(out_html2)
+	python -m mcdp_docs.add_edit_links <  out/master/pdf/duckiebook.html > out/master/pdf/b.html
 
-	prince --javascript -o /tmp/duckiebook.pdf $(out_html2)
+	prince --javascript -o out/master/pdf/duckiebook1.pdf out/master/pdf/b.html
 
-	pdftk A=/tmp/duckiebook.pdf B=misc/blank.pdf cat A1-end B output /tmp/duckiebook2.pdf keep_final_id
-	pdftk /tmp/duckiebook2.pdf update_info misc/blank-metadata output $(out_pdf)
+	pdftk A=out/master/pdf/duckiebook1.pdf B=misc/blank.pdf cat A1-end B output out/master/pdf/duckiebook2.pdf keep_final_id
+	pdftk out/master/pdf/duckiebook2.pdf update_info misc/blank-metadata output duckuments-dist/master/duckiebook.pdf
 
-
-compile-pdf: checks check-programs-pdf
-	# mathjax is 1 in this case
-	DISABLE_CONTRACTS=1 mcdp-render-manual \
-		--src $(src) \
-		--stylesheet v_manual_blurb \
-		--mathjax 1 \
-		--symbols $(tex-symbols) \
-		-o $(tmp_files2) \
-		--output_file $(out_html2).tmp -c "config echo 1; rparmake n=8"
-
-	python -m mcdp_docs.add_edit_links < $(out_html2).tmp > $(out_html2)
-
-	prince --javascript -o /tmp/duckiebook.pdf $(out_html2)
-
-	pdftk A=/tmp/duckiebook.pdf B=misc/blank.pdf cat A1-end B output /tmp/duckiebook2.pdf keep_final_id
-	pdftk /tmp/duckiebook2.pdf update_info misc/blank-metadata output $(out_pdf)
 
 	# open $(out_pdf)
 
