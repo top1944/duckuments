@@ -51,6 +51,7 @@ remove_status: [draft]
 
 # if show_removed is true, the removed sections names are kept in the output
 # otherwise they disappear completely
-show_removed: true
+# show_removed: true
+show_removed: false
 
 output: duckuments-dist/fall2017/duckiebook.html
