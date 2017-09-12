@@ -103,6 +103,10 @@ automatic-compile-cleanup:
 	rm -f ~/lockfile
 	rm -f ~/lockfile-fall2017
 
+	echo "\n\nautomatic-compile-cleanup killing everything\n\n" >> $(log-master-html)
+	echo "\n\nautomatic-compile-cleanup killing everything\n\n" >> $(log-master-pdf)
+	echo "\n\nautomatic-compile-cleanup killing everything\n\n" >> $(log-fall2017)
+
 cleanup-repo:
 	echo "\n\n Cleaning up the repo " >> $(log)
 	df -h / >> $(log)
@@ -166,12 +170,14 @@ upload:
 
 
 clean:
-	rm -rf $(tmp_files)
-	rm -rf $(tmp_files2)
+	$(MAKE) master-clean
+
+	# rm -rf $(tmp_files)
+	# rm -rf $(tmp_files2)
 	#rm -rf $(dist_dir)/duckiebook/*html
 
-$(out_html): $(wildcard docs/**/*md)
-	$(MAKE) compile
+# $(out_html): $(wildcard docs/**/*md)
+# 	$(MAKE) compile
 
 # compile-pdf-slow: checks check-programs-pdf
 # 	# mathjax is 1 in this case
