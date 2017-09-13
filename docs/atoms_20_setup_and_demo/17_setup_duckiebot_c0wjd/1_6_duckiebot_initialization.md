@@ -19,23 +19,23 @@ Comment: What does it mean "ready to use"? -AC
 
 
 
-## Acquire and burn the image
+## Acquire and burn the image {#setup-duckiebot-burn-image}
 
 On the laptop, download the compressed image at this URL:
 
-> [https://www.dropbox.com/s/1jgn0chx3hu3a4a/duckiebot-RPI3-AD-sep7.img.xz?dl=1](https://www.dropbox.com/s/1jgn0chx3hu3a4a/duckiebot-RPI3-AD-sep7.img.xz?dl=1)
+> [https://www.dropbox.com/s/ckpqpp0cav3aucb/duckiebot-RPI3-AD-2017-09-12.img.xz?dl=1](https://www.dropbox.com/s/ckpqpp0cav3aucb/duckiebot-RPI3-AD-2017-09-12.img.xz?dl=1)
 
 The size is 1.7 GB.
 
 You can use:
 
-    $ wget -O duckiebot-RPI3-AD-sep7.img.xz ![URL above]
+    $ wget -O duckiebot-RPI3-AD-2017-09-12.img.xz ![URL above]
 
 <div class="comment" markdown="1">
 
 The original was:
 
-    $ curl -o duckiebot-RPI3-AD-sep7.img.xz ![URL above]
+    $ curl -o duckiebot-RPI3-AD-2017-09-12.img.xz ![URL above]
 
 It looks like that `curl` cannot be used with Drobpox links because it does not follow redirects.
 </div>
@@ -43,15 +43,15 @@ It looks like that `curl` cannot be used with Drobpox links because it does not 
 
 Uncompress the file:
 
-    $ xz -d -k duckiebot-RPI3-AD-sep7.img.xz
+    $ xz -d -k duckiebot-RPI3-AD-2017-09-12.img.xz
 
 This will create a file of 11 GB in size.
 
 To make sure that the image is downloaded correctly, compute its hash
 using the program `sha256sum`:
 
-    $ sha256sum duckiebot-RPI3-AD-sep7.img
-    681c4653c309df530791dbdbe2e89819def330c20d58d4c4baf5979b02e5b381  duckiebot-RPI3-AD-sep7.img
+    $ sha256sum duckiebot-RPI3-AD-2017-09-12.img
+    c21a4cea17069bae6689dd36f81fe8463696959566d164e74ed475e3f1ad446d  duckiebot-RPI3-AD-2017-09-12.img
 
 Compare the hash that you obtain with the hash above. If they are different,
 there was some problem in downloading the image.
@@ -235,6 +235,49 @@ If neither `duckietown` nor `eduroam` are available, you can add your own config
     TODO code block for custom connection
 
 Note: Whichever option you pick, we don't recommend to create or modify the `/etc/wpa_supplicant.conf` file, because this verion of Ubuntu uses the `NetworkManager` service to deal with WiFi connections (and no longer the `wpasupplicant` daemon).
+
+Find the SSID of your Wi-Fi network. It is usually the name of the wifi network. Example: BELL343. Let's call it ![WIFINAME] 
+To find the seen-bssed, run 
+
+    $ sudo iw wlan0 scan | egrep "^BSS|SSID:"
+    
+The AA:BB:CC:DD:EE:FF address above `SSID: BELL343` is your seen-bssed. Let's call it ![WIFIBSS]
+
+Save the following block as new file in `/etc/NetworkManager/system-connections/BELL343`:
+
+    [connection]
+    id=![WIFINAME]
+    uuid=d8aa333b-2db3-4849-a9a4-c2aa3236ae29
+    type=wifi
+    permissions=
+    secondaries=
+    timestamp=1502254646
+
+    [wifi]
+    mac-address=
+    mac-address-blacklist=
+    mac-address-randomization=0
+    mode=infrastructure
+    seen-bssed=![WIFIBSS]
+    ssid=![WIFINAME]
+
+    [wifi-security]
+    group=
+    key-mgmt=wpa-psk
+    pairwise=
+    proto=
+    psk=![WIFIPWD]
+
+    [ipv4]
+    dns-search=
+    method=auto
+
+    [ipv6]
+    addr-gen-mode=stable-privacy
+    dns-search=
+    ip6-privacy=0
+    method=auto
+
 
 ## Update the system
 

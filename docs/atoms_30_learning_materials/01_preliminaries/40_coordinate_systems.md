@@ -1,4 +1,4 @@
-# Coordinate systems {#coordinate_systems}
+# Coordinate systems {#coordinate_systems status=beta}
 
 ## Motivation
 
