@@ -12,11 +12,11 @@ This page describes all of the helpful Slack channels and their purposes so that
 <span>Info about necessary accounts, such as Slack, Github, etc</span>
 <code>help-assembly</code>
 <span>Help putting your robot together</span>
-<code>help-camera-calib</codecode>
+<code>help-camera-calib</code>
 <span>Help doing the intrinsic and extrinsic calibration of your camera </span>
 <code>help-duckuments</code>
 <span>Help compiling the online documentation</span>
-<code>help-git</codecode>
+<code>help-git</code>
 <span>Help with git</span>
 <code>help-infrastructure</code>
 <span>Help with software infrastructure, such as Makefiles, unit tests, continuous integration, etc.</span>

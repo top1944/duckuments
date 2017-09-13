@@ -20,7 +20,7 @@ Results: A Duckiebot with bumpers attached
 The following should be included in your parts envelope (See image below for these components):
 
 * 1x front bumper
-* 1x rear bumper
+* 1x rear bumperco
 * 2x rear bumper brace
 * 8x M3x10 pan head screws (McMaster #: 92005A120)
 * 8x M3 nuts (McMaster #: 90591A250)
