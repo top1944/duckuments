@@ -1,6 +1,11 @@
 # Soldering boards for `C1` {#soldering-boards-c1}
+<<<<<<< HEAD
 Note: General rule in soldering
 * soldering the components according to the height of components - from lowest to highest
+=======
+
+
+>>>>>>> 7d4eb37246fba87c21d753ae2fa3c47d72e55ae3
 
 Assigned: Shiying
 
@@ -17,17 +22,24 @@ TODO: finish above
 
 </div>
 
+## General rules
+
+General rule in soldering:
+
+* soldering the components according to the height of components - from lowest to highest
 
 ## 16-channel PWM/Servo HAT
 
 ([alternative instructions: how to solder on the PWM/Servo HAT](https://learn.adafruit.com/adafruit-16-channel-pwm-servo-hat-for-raspberry-pi/))
 
 
-### Prepare the components 
-Put the following components on the table according the Figure 
+### Prepare the components
+
+Put the following components on the table according the Figure
+
 * [GPIO Stacking Header](http://adafru.it/2223) for A+/B+/Pi 2
-* [Adafruit](http://adafru.it/2327) Mini Kit of 16-Channel PWM / Servo HAT for Raspberry Pi 
-    * 3x4 headers (4x) 
+* [Adafruit](http://adafru.it/2327) Mini Kit of 16-Channel PWM / Servo HAT for Raspberry Pi
+    * 3x4 headers (4x)
     * 2-pin terminal block
     * 16-Channel PWM / Servo HAT for Raspberry Pi (1x)
 
@@ -37,21 +49,24 @@ Put the following components on the table according the Figure
 </div>
 
 ### Soldering instructions
+
 1. Solder the 2 pin terminal block next to the power cable jack
 2. Solder the four 3x4 headers onto the edge of the HAT, below the words "Servo/PWM Pi HAT!"
-
 3. Solder the GPIO Stacking Header at the top of the board, where the 2x20 grid of holes is located.
 
 
 ## LSD board
 
-TODO: add LSD board image, top and bottom
-<img src="image_5.png" style='width: §: 20ex; height: auto'/>
+TODO: add LSD board image, top and bottom.
 
-<img src="image_6.png" style='width: 20ex; height:auto'/>
+<img src="image_5.png" style='width: 20ex; height: auto'/>
+
+<img src="image_6.png" style='width: 20ex; height: auto'/>
 
 ### Prepare the components
-Put the following components according the figure on the table: 
+
+Put the following components according the figure on the table:
+
 * 1 x 40 pin female header
 * 5 x 4 pin female header
 * 2 x 16 pin male header
@@ -68,11 +83,11 @@ Put the following components according the figure on the table:
 
 ### Soldering instructions
 
-1. Put the resistors on the top of the board according to silkscreen markings, solder it on from the bottom side. 
-Tips: 
+1. Put the resistors on the top of the board according to silkscreen markings, solder it on from the bottom side.
+
+Tips:
+
 1. Solder all female headers to the bottom of the board. Alignment becomes easy if the  female headers are plugged into the PWM heat, and the LSD board rests on top.
-
-
 
 3. Solder all male headers to the top of the board. Male header positions are outlined on the silkscreen.
 

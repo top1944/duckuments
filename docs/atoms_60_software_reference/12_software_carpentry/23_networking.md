@@ -1,4 +1,4 @@
-# Networking tools {#networking}
+# Networking tools {#networking status=draft}
 
 Assigned: Andrea
 
@@ -36,7 +36,7 @@ TODO: to write
 
 TODO: to write
 
-### `ifconfig`
+### `ifconfig` {#ifconfig}
 
 TODO: to write
 

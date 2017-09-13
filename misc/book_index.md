@@ -37,7 +37,9 @@ body {
     <s>"Master"</s>
 
 
-    <s><a href="master/duckiebook/index.html">online</a>,
+    <s>
+        <a href="master/duckiebook/index.html">multi-page</a>,
+        <a href="master/duckiebook.html">single-page</a>,
         <a href="master/duckiebook.pdf">pdf</a></s>
         <s>Contains all documents in the project.</s>
 
@@ -48,9 +50,11 @@ body {
 
     <s>Pre-built</s>
     <s>Fall 2017</s>
-    <s>coming soon</s>
+    <s>
+        <a href="fall2017/duckiebook/index.html">multi-page</a>,
+        <a href="fall2017/duckiebook.html">single-page</a>,
+        <a href="fall2017/duckiebook.pdf">pdf</a></s>
     <s>For the students in Fall 2017 (ETHZ, UdeM, TTIC, NCTU)</s>
-
 
     <s></s>
     <s>Graduate-level</s>

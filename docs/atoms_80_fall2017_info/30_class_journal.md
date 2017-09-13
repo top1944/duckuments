@@ -1,4 +1,4 @@
-# Class journal (ETH)
+# Class journal (ETH) {#ETH-journal status=draft}
 
 This unit is a class journal for ETH.
 

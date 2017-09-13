@@ -1,6 +1,4 @@
-# Getting and giving help
-
-## Roster
+# Organization {#roster status=beta}
 
 The following roster shows the teaching staff.
 
@@ -97,8 +95,8 @@ The colored boxes have the following meaning:
 - Green: done. The person is done with the task.
 - n/a: the task is not applicable to the person. (Certain tasks are staff-only.)
 
-If there is a problem for a task, please add a comment, and in the comment
-explain the problem. If the problem is solved, remember to remove the comment.
+<!-- If there is a problem for a task, please add a comment, and in the comment
+explain the problem. If the problem is solved, remember to remove the comment. -->
 
 Students do not have (at least for now) editing access to the spreadsheet.
 Therefore, it's the TAs that periodically update the spreadsheet.
@@ -107,103 +105,3 @@ At any time, if a student has a blocking problem with a task, they (or the TA) s
 put a comment, we'll make sure that their issue is resolved.
 
 [sheets]: https://docs.google.com/spreadsheets/d/1uO1aq9zqBpLwo1qOzeBKKbB3CuAQAqM94T8B1AGpCKg/edit?usp=sharing
-
-
-
-## Getting help and giving help
-
-### Primary points of contact
-
-The organization chart ([](#org-sheets)) lists the primary contact for each area.
-
-<!--
-For each topic, there are three columns: a "manager", a point of contact for the Americas,
-and a point of contact for Europe.
-
-The manager is the person in charge of keeping track of the status of the area.
-(There might be other people working on that area/functionality, but they are not listed there.)
-
-The points of contact are the people that are responsible to answer questions from the students.
-There is 2, so one is awake at all times.
-
-Note that if you are in Europe, it is fine to ask for help to the Americas point of contact,
-and vice versa. It's all a big class.
-
-On each rows, there is also a pointer to the appropriate Slack channel, if any, to discuss. -->
-
-### Point of contacts for specific documents
-
-Certain documents have specific points of contacts, listed at the top.
-These override the listing in the organization chart.
-
-### Problems while following instructions
-
-If you encounter a problem when you are following the instructions,
-you have the moral obligation to edit the Markdown and insert a comment.
-
-The goal for the instructions is that anybody is able to follow them.
-Last year, we managed to have two 15-year-old students
-reproduce the Duckiebot from instructions.
-
-See: How to edit the documentation is explained in [](#part:contribute).
-In particular, the notation on how to insert a comment is explained in [](#notes-and-questions).
-
-Note that because we use Git, we can always keep track of changes, and there
-is no risk of causing damage.
-
-If you encounter typos, feel free to edit them directly.
-
-Feel free to add additional explanations.
-
-
-#### How to deal with mistakes in instructions
-
-One thing that is very delicate is dealing with mistakes in the instructions.
-
-A few times the following happened: there is a sequence of commands `cmd1;cmd2;cmd3`
-and `cmd2` has a mistake, and `cmd2b` is the right one, so that the sequence
-of commands is `cmd1;cmd2b;cmd3`. In those situations we first just corrected
-the command `cmd2`.
-
-However, that created a problem: now half of the students had used `cmd1;cmd2;cmd3`
-and half of the students had used `cmd1;cmd2b;cmd3`: the states had diverged.
-Now chaos might arise, because there is the possibility of "forks".
-
-Therefore, if a mistaken instruction is found, rather than just fixing the mistake,
-please add an addendum at the end of the section.
-
-For example: "Note that instruction `cmd2` is wrong; it should be `cmd2b`. To fix
-this, please enter then command `cmd4`".
-
-Later, when everybody has gone through the instructions, the mistake is
-fixed and the addendum is deleted.
-
-
-
-### Well-defined software defects
-
-If you encounter a software defect, then open an issue
-on [the Github issue tracker for the `Software` repository][issues-Software].
-
-### Problems with the documentation system itself
-
-We have a very powerful, but experimental system for writing the documentation
-and eventually create the "Duckietown magic book".
-
-If you encounter an issue, please open an issue on the [Github issue tracker for the `duckuments` repository][issues-duckuments].
-
-[issues-duckuments]: github.com/duckietown/duckuments/issues
-[issues-Software]: github.com/duckietown/Software/issues
-
-
-### Problems with the hardware
-
-If you have problems with the hardware, please contact the local hardware representative,
-as listed in the [organization chart][org-chart].
-
-### Help with accounts and permissions
-
-For accounts and permissions help, please contact Kirsten on Slack, in the channel `#help-accounts`.
-
-
-[org-chart]: https://docs.google.com/spreadsheets/d/18bG3BBsFGZllVeFBh3ygvXacHCO6gckMBqH77yvZnrw/edit?usp=sharing

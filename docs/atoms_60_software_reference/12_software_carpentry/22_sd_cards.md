@@ -1,4 +1,4 @@
-# SD Cards tools {#sdcards}
+# SD Cards tools {#sdcards status=ready}
 
 ## Testing SD Card and disk speed {#test-sd-card-speed}
 

@@ -1,6 +1,4 @@
-# Reproducing the image {#duckiebot-ubuntu-image}
-
-Assigned: Andrea
+# Reproducing the image {#duckiebot-ubuntu-image status=ready}
 
 These are the instructions to reproduce the Ubuntu image that we use.
 
@@ -14,13 +12,11 @@ Requires: Internet connection to download the packages.
 
 Requires: A PC running any Linux with an SD card reader.
 
-Requires: Time: about 20 minutes.
+Requires: Time: about 4 hours (most of it spent waiting for things to download/compile).
 
 Results: A baseline Ubuntu Mate 16.04.2 image with updated software.
 
 </div>
-
-Comment: There is absolutely no way this takes 20 minutes. Installing ROS alone takes more than 20 minutes. Budget more like 4 hours for this.
 
 ## Download and uncompress the Ubuntu Mate image
 
@@ -133,18 +129,19 @@ Other:
 
 Development:
 
-    duckiebot $ sudo apt install -y build-essential libblas-dev liblapack-dev libatlas-base-dev gfortran libyaml-cpp-dev
+    duckiebot $ sudo apt install -y build-essential libblas-dev liblapack-dev libatlas-base-dev gfortran libyaml-cpp-dev raspberrypi-kernel-headers
 
 Python:
 
     duckiebot $ sudo apt install -y python-dev ipython python-sklearn python-smbus
     duckiebot $ sudo apt install -y python-termcolor
     duckiebot $ sudo apt install python-frozendict
-    duckiebot $ sudo apt install python-ruamel.yaml
     duckiebot $ sudo apt install python-tables
     duckiebot $ pip install comptests
     duckiebot $ pip install procgraph
     duckiebot $ sudo pip install scipy --upgrade
+    duckiebot $ sudo pip install ruamel.yaml --upgrade
+
 Note: scipy --upgrade(0.19.1) took about an hour with ethernet connection.
 
 I2C:
@@ -175,9 +172,7 @@ Install ROS.
 
 See: The procedure is given in [](#install-ROS).
 
-## Wireless configuration (old version)
-
-XXX This is the old version.
+## Wireless configuration (old version) {status=deprecated}
 
 There are two files that are important to edit.
 

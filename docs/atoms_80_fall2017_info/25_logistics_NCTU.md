@@ -1,4 +1,4 @@
-# Guide for NCTU students {#logistics_NCTU}
+# Guide for NCTU students {#logistics_NCTU status=draft}
 
 Assigned: Nick
 

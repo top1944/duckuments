@@ -1,4 +1,4 @@
-# Software setup and RC remote control {#rc-control}
+# Software setup and RC remote control {#rc-control status=beta}
 
 Assigned: Andrea
 
@@ -38,6 +38,8 @@ Resolution: Probably the time is not set up correctly. Use `ntpdate` as above:
 
     $ sudo ntpdate -u us.pool.ntp.org
 
+Or see the hints in the troubleshooting section on the previous page.
+
 
 ## Set up ROS environment on the Duckiebot {#build-repo}
 
@@ -48,6 +50,8 @@ All the following commands should be run in the `~/duckietown` directory:
 Now we are ready to make the workspace. First you need to source the baseline ROS environment:
 
     duckiebot $ source /opt/ros/kinetic/setup.bash
+
+Comment: If you are using ZSH then instead of this, you should call `source /opt/ros/kinetic/setup.bash`.
 
 Then, build the workspace using:
 
@@ -62,10 +66,12 @@ Note: there is a known bug, for which it fails the first time on the Raspberry P
 
 ## Add your vehicle data to the database {#edit-machines-file}
 
-Add your vehicle data to the scuderia file.
+You need to set up the vehicle database, and add your Duckiebot as vehicle. This is not optional and required in order to launch any ROS scripts. This has several steps:
 
-See: See [](#scuderia).
-
+- clone the relevant `duckiefleet` repository into `~/catkin_ws/src/`, see [](#duckiefleet-directory-duckiefleet_root) to find the right duckiefleet repository
+- `cd` into the cloned repo and further into `robots/`.
+- `cp` the file `emma.robot.yaml` to `yourname.robot.yaml`, where `yourname` is the hostname of your Duckiebot. Then edit the copied file to represent your Duckiebot (see [](#scuderia)).
+- generate the machines file, as described here: see [](#machines).
 
 ## Test that the joystick is detected {#test-joystick}
 

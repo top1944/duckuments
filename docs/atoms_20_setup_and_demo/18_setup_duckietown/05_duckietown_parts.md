@@ -1,4 +1,4 @@
-# Duckietown parts {#duckietown_parts}
+# Duckietown parts {#duckietown_parts status=draft}
 
 Duckietowns are the cities where Duckiebots drive. Here, we provide a link to all bits and pieces that are needed to build a Duckietown, along with their price tag. Note that while the topography of the map is highly customable, we recommend using the components listed below. Before purchasing components for a Duckietown, read [](#duckietown-specs) to understand how Duckietowns are built.
 

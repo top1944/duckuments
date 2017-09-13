@@ -1,6 +1,5 @@
-# Soldering boards for `C0` {#soldering-boards-c0}
+# Soldering boards for `C0` {#soldering-boards-c0 status=beta}
 
-General rule in soldering: soldering the components according to the height of components - from lowest to highest 
 
 Assigned: Shiying
 
@@ -17,17 +16,22 @@ TODO: finish above
 
 </div>
 
+## General  tips
 
 
-##  Soldering on DC/Stepper Motor HAT 
+General rule in soldering: soldering the components according to the height of components - from lowest to highest.
+
+##  Soldering on DC/Stepper Motor HAT
+
 [Alternative instructions: how to solder on Headers and Terminal Block](https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi/assembly)
 
-In this step you will need the following parts from the duckiebox: 
+In this step you will need the following parts from the duckiebox:
 
 - [GPIO Stacking Header](http://adafru.it/2223) for A+/B+/Pi 2
 - [Adafruit](http://adafru.it/2348) DC and Stepper Motor HAT for Raspberry Pi - Mini Kit
 
 ### Preparing the components
+
 Take the GPIO stacking header out of duckiebox and sort the following components from Mini Kit:
 
 * Adafruit DC/Stepper Motor HAT for Raspberry Pi
@@ -58,7 +62,7 @@ Take the GPIO stacking header out of duckiebox and sort the following components
 
 4. Slide in the GPIO Stacking Header onto the 2x20 grid of holes on the edge opposite the terminal blocks and with vice versa direction ([](#figure:GPIO_HAT_orientation)). Solder it on.
 
-Note: stick the GPIO Stacking Header from bottom to top, different orientation than terminal blocks (from top to bottom). 
+Note: stick the GPIO Stacking Header from bottom to top, different orientation than terminal blocks (from top to bottom).
 
 <div figure-id="fig:GPIO_HAT_orientation" figure-caption=" ">
    <img src="GPIO_HAT_orientation.jpg" style='width: 20ex; height: auto'/>
@@ -69,4 +73,3 @@ Note: stick the GPIO Stacking Header from bottom to top, different orientation t
 <div figure-id="fig:upview_Stepper_Motor" figure-caption="upside view of finished soldering DC/Stepper Motor HAT">
    <img src="upview_stepper_Motor.jpg" style='width: 20ex; height: auto'/>
 </div>
-

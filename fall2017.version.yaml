@@ -1,0 +1,57 @@
+
+input: out/fall2017/master.html
+
+
+recipe:
+- toc # magic word for toc
+
+- add: fall-2017
+
+# You cannot include the same unit twice - indexing
+# gets all confused. In this case, checkoff_assembly_configuration is already
+# part of "fall-2017" above.
+# - part: homeworks
+#   title: Fall 2017 Checkoffs and Homeworks
+#   contents:
+#   - add: checkoff_assembly_configuration
+
+- add: duckietown-project
+- add: contribute
+
+- make-part: theory-background
+  title: Theory Background
+  contents:
+  - add: probability_basics
+  - add: linear_algebra
+
+- make-part: intro-to-autonomy
+  title: Introduction to autonomy
+  contents:
+  - add: representations
+
+
+# Add the entire part
+- add: building-duckiebot-c0
+  except: # except wheel-calibration
+  - wheel-calibration
+
+- add: building-duckiebot-c1
+
+- make-part: appendix
+  title: Appendix
+  contents:
+  - add: bibliography
+
+purl_prefix: http://purl.org/dt/fall2017/
+
+# Removes the sections that have status equal to draft
+remove_status: [draft]
+# remove_status: [] # don't remove anything
+# remove_status: [draft, beta] # remove draft and beta
+
+# if show_removed is true, the removed sections names are kept in the output
+# otherwise they disappear completely
+# show_removed: true
+show_removed: false
+
+output: duckuments-dist/fall2017/duckiebook.html

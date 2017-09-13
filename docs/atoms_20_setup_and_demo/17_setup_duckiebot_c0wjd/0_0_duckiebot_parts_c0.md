@@ -1,4 +1,4 @@
-# Acquiring the parts for the Duckiebot `C0` {#acquiring-parts-c0}
+# Acquiring the parts for the Duckiebot `C0` {#acquiring-parts-c0 status=beta}
 
 The trip begins with acquiring the parts. Here, we provide a link to all bits and pieces that are needed to build a Duckiebot, along with their price tag. If you are wondering what is the difference between different Duckiebot configurations, read [this](#duckiebot-configurations).
 
@@ -24,9 +24,9 @@ Results: A kit of parts ready to be assembled in a `C0` or `C0+wjd` configuratio
 Next steps: After receiving these components, you are ready to do some [soldering](#soldering-boards-c0) before [assembling](#assembling-duckiebot-c0) your `C0` or `C0+wjd` Duckiebot.
 
 </div>
-<!--
-TODO: Add a different "Tools" section in the table (e.g., solderer), or add in the resoruces beginning snippet; Differentiate pricing for bulk vs detail purchase (?)
--->
+
+TODO: Add a different "Tools" section in the table (e.g., solderer), or add in the resources beginning snippet; Differentiate pricing for bulk vs detail purchase (?)
+
 ## Bill of materials
 
 <!--
@@ -50,7 +50,7 @@ TODO: Add a different "Tools" section in the table (e.g., solderer), or add in t
     <s>[Stepper Motor HAT](https://tinyurl.com/y7qurpcw)</s>                         <s>USD 22.50</s>
     <s>[2 Stacking Headers](https://www.adafruit.com/product/2223)</s><s>USD 2.50/piece</s>
     <s>[Battery](https://tinyurl.com/ya7otc76)</s>                         <s>USD 20</s>
-    <s>[16 Nylon Standoffs (M2.5 12mm F 6mm M](https://tinyurl.com/y9uy73b2)</s>                         <s>USD 0.05/piece</s>
+    <s>[16 Nylon Standoffs (M2.5 12mm F 6mm M)](https://tinyurl.com/y9uy73b2)</s>                         <s>USD 0.05/piece</s>
     <s>[4 Nylon Hex Nuts (M2.5)](https://tinyurl.com/ydy4znem)</s>                      <s>USD 0.02/piece</s>
     <s>[4 Nylon Screws (M2.5x10)](https://tinyurl.com/ya2uo9so)</s>                     <s>USD 0.05/piece</s>
     <s>[2 Zip Ties (300x5mm)](https://tinyurl.com/yb8v3nns)</s>                         <s>USD 9</s>
@@ -72,7 +72,7 @@ Additionally, an optional caster wheel may be equipped for any of the `C0+wjd` c
 
 </div>
 
-Comment: Shall we define another configuration for the caster equipped Duckiebot? -JT 
+Comment: Shall we define another configuration for the caster equipped Duckiebot? -JT
 
 <!--
 <col2 figure-id="tab:materials-optionals" figure-caption="Bill of optional materials">

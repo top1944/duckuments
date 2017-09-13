@@ -108,9 +108,14 @@ The attributes are:
 
 Each atom version has:
 
-- A **status** value: one of `draft`, `beta`, `ready`, `to-update` ([](#tab:status)).
+
 - A human-readable **title**.
 - A human-readable **summary** (1 short paragraph).
+
+
+### Status values {#status-values}
+
+Each atom has a **status** value, one of the values described in [](#tab:status).
 
 <col2 figure-id="tab:status">
     <figcaption>Status codes</figcaption>
@@ -120,9 +125,11 @@ Each atom version has:
     <code>ready</code> <s>The document is ready for everybody.</s>
     <code>to-update</code> <s>A new pass is needed on this document, because
     it is not up to date anymore.</s>
+    <code>deprecated</code> <s>The document is ready for everybody.</s>
 </col2>
 
-## Markdown format for text-like atoms
+
+## Markdown format for text-like atoms {#markdown-header}
 
 For the text-like resources, they are described in Markdown files.
 
@@ -135,9 +142,9 @@ Each file starts with a `H1` header. The contents is the title.
 The header has the following attributes:
 
 1. The ID. (`{#ID}`)
-2. The language is given by an attribute `lang` (`{lang=en-US}`).
-3. The type is given by an attribute `type` (`{type=demo}`).
-3. The status is given by an attribute `status` (`{status=draft}`).
+2. The status is given by an attribute `status`, which should be value of the values in [](#tab:status).
+2. (Optional) The language is given by an attribute `lang` (`{lang=en-US}`).
+3. (Optional) The type is given by an attribute `type` (`{type=demo}`).
 
 Here is an example of a header with all the attributes:
 

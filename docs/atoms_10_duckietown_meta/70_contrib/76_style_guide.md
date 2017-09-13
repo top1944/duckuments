@@ -1,4 +1,4 @@
-# Documentation style guide
+# Documentation style guide {#style-guide status=ready}
 
 This chapter describes the conventions for writing the technical documentation.
 
@@ -49,9 +49,11 @@ The following holds for all technical writing.
 - The English version of the documentation is written in American English. Please note that your spell checker might be set to British English.
 
 Bad: behaviour
+
 Better: behavior
 
 Bad: localisation
+
 Better: localization
 
 

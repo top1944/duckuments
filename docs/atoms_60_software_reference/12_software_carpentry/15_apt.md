@@ -1,4 +1,4 @@
-# Ubuntu packaging with APT {#apt}
+# Ubuntu packaging with APT {#apt status=draft}
 
 ## `apt install`
 
@@ -33,8 +33,10 @@ TODO: to write
 
 
 ## `wajig` {#wajig}
+
 TODO: to write
 
 
 ## `dpigs` {#dpigs}
+
 TODO: to write

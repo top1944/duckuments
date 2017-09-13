@@ -1,4 +1,4 @@
-# GNU/Linux general notions {#linux}
+# GNU/Linux general notions {#linux status=draft}
 
 Assigned: Andrea
 
@@ -28,9 +28,11 @@ Assigned: Andrea
 
 
 ## `cd` {#cd}
+
 TODO: to write
 
 ## `sudo` {#sudo}
+
 TODO: to write
 
 ## `ls` {#ls}
@@ -54,6 +56,7 @@ TODO: to write
 TODO: to write
 
 ## `shutdown` {#shutdown}
+
 TODO: to write
 
 
@@ -129,12 +132,15 @@ TODO: to write
 
 
 ## `visudo` {#visudo}
+
 TODO: to write
 
 ## `update-alternatives` {#update-alternatives}
+
 TODO: to write
 
 ## `udevadm` {#udevadm}
+
 TODO: to write
 
 ## `systemctl` {#systemctl}
@@ -146,6 +152,7 @@ TODO: to write
 # Make
 
 ## `make` {#make}
+
 TODO: to write
 
 
@@ -156,28 +163,35 @@ TODO: to write
 TODO: to write
 
 ## `pip` {#pip}
+
 TODO: to write
 
 
 # Raspberry-PI commands
 
 ## `raspi-config` {#raspi-config}
+
 TODO: to write
 
 ## `vcgencmd` {#vcgencmd}
+
 TODO: to write
 
 ## `raspistill` {#raspistill}
+
 TODO: to write
 
 
 ## `jstest` {#jstest}
+
 TODO: to write
 
 ## `swapon` {#swapon}
+
 TODO: to write
 
 ## `mkswap` {#mkswap}
+
 TODO: to write
 
 
@@ -185,15 +199,19 @@ TODO: to write
 # Users and permissions
 
 ## `chmod` {#chmod}
+
 TODO: to write
 
 ## `groups` {#groups}
+
 TODO: to write
 
 ## `adduser` {#adduser}
+
 TODO: to write
 
 ## `useradd` {#useradd}
+
 TODO: to write
 
 
@@ -216,11 +234,13 @@ TODO: to write
 
 
 ## `xz` {#xz}
+
 TODO: to write
 
 # Shells and environments
 
 ## `source` {#source}
+
 TODO: to write
 
 ## `which` {#which}

@@ -1,4 +1,4 @@
-# Assembling the Duckiebot `C0` {#assembling-duckiebot-c0}
+# Assembling the Duckiebot `C0` {#assembling-duckiebot-c0 status=beta}
 
 Assigned: Shiying
 
@@ -13,19 +13,21 @@ Requires: Duckiebot `C0+wjd` parts. The acquisition process is explained in [](#
 
 Requires: Having soldered the `C0+wjd` parts. The soldering process is explained in [](#soldering-boards-c0).
 
-Requires: Having prepared the power cable. The power cable preparation is explained in [](#power-cable-prep-c0).
+Requires: Having prepared the power cable. The power cable preparation is explained in [](#power-cable-prep-c0). Note: Not necessary if you are proceeding directly to configuration C1.
 
 Requires: Having installed the image on the MicroSD card. The instructions on how to reproduce the Duckiebot system image are in [](#duckiebot-ubuntu-image).
 
-Requires: Time: about ??? minutes.
-
-TODO: estimate time.
+Requires: Time: about 40 minutes.
 
 Results:  An assembled Duckiebot in configuration `C0+wjd`.
 
 </div>
 
 Comment: add "next step(s)" as a standard field in the requirements class? -JT
+
+Comment: Notes - if we have the bumpers, at what point should we add them? I think that the battery could actually be attached before the levels of the chassis are joined. I found it hard to mount the camera (the holes weren't lining up). the long camera cable is a bit annoying - I folded it and shoved it in between two hats. We should decide if PWM hat is part of this configuration, why not leave it for now and forget about the spliced cable for the class. I found that the screwdriver that comes with the chassis kit is too fat to screw in the wires on the hat. The picture of where to put the ziptie for the battery is not very clear. need something to cut the end of the ziptie with.
+
+Comment: In general I would recommend having diagonal pliers as well as a few mini screwdrivers at hand. Both can be obtained from a local dollar store for about 6$ total. The pliers / cutters are required either for making your own power cord or for cutting the zipties after they've been attached to the chassis (because they are too long). The screwdrivers are required for tightening the screws on the hats after the cables have been plugged in because the chassis screwdriver is too wide for that.
 
 ## Chassis
 
@@ -119,10 +121,28 @@ Comment: These spacers are not the ones provided in the box, change pic. -JT
 
 ## Assembling the Raspberry Pi, camera, and HATs
 
+<<<<<<< HEAD
+=======
+<!--
+Materials:
+
+* Chassis-up,
+* Camera and camera mount,
+* M3*10 flathead screws and M3 nuts from the Duckiebot package.
+* 4 M-F Nylon M3x5+6mm standoff spacers, 3x0.5mm screws, Nylon nuts
+* Raspberry Pi 3 – Model B
+* Soldered PWM/Servo HAT and Soldered Stepper Motor HAT,
+* 1 Male-male wire,
+* Standoffs
+* Heat sinks
+-->
+>>>>>>> 7d4eb37246fba87c21d753ae2fa3c47d72e55ae3
 
 ### Raspberry Pi
 
-The first step is to fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on the opposite side of the chassis-up.
+Before attaching anything to the Raspberry Pi you should add the heat sinks to it. There are 2 small sinks and a big one. The big one best fits onto the processor (the big "Broadcom"-labeled chip in the center of the top of the Raspberry Pi). One of the small ones can be attached to the small chip that is right next to the Broadcom chip. The third heat sink is optional and can be attached to the chip on the underside of the Raspberry Pi. Note that the chip on the underside is bigger than the heat sink. Just mount the heat sink in the center and make sure all of them are attached tightly.
+
+When this is done fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on the opposite side of the chassis-up.
 
 <div figure-id="fig:Raspberry_pi3" figure-caption=" ">
      <img src="RPi_3.jpg" style='width: 30em'/>
@@ -266,6 +286,7 @@ Put the battery between the upper and lower decks of the chassis. It is recommen
 
 ### Joypad
 
+<<<<<<< HEAD
 For each Joypad there is a corresponding Joypad dongle. Don't lose the dongle! Otherwise you will need to buy a new Joypad.
 <div figure-id="fig:joypad" figure-caption="All components in the Joypad package">
      <img src="joypad.jpg" style='width: 30em'/>
@@ -280,6 +301,13 @@ Insert 2AA batteries on the backside of the joypad
 <div figure-id="fig:joypack_battery" figure-caption="joypad and 2AA batteries">
      <img src="joypack_battery.jpg" style='width: 30em'/>
 </div>
+=======
+TODO: Connect the joypad dongle
+
+TODO: Insert 2AA batteries in the joypad
+
+TODO: Insert relevant pics
+>>>>>>> 7d4eb37246fba87c21d753ae2fa3c47d72e55ae3
 
 
 ### Connect the power cables
@@ -287,6 +315,7 @@ You are now ready to secure the prepared power wires in [](#power-cable-prep-c0)
 
 Connect the battery with the DC motor HAT by making sure you plug the black wire in the pin labeled with a minus: - and the red wire to the plus: + ([](#figure:final-result-power-c0)).
 
+<<<<<<< HEAD
 Arrange all the cables properly so that the Duckiebot can run on the way without barrier.
 
 <div figure-id="fig:Stepper_cable" figure-caption="Insert the prepared power wire to DC motor HAT power pins.">
@@ -294,3 +323,8 @@ Arrange all the cables properly so that the Duckiebot can run on the way without
 </div>
 
 
+=======
+<div figure-id="fig:cable_wiring" figure-caption="TODO: will be replace by a new pic">
+     <img src="cable_wiring.jpg" style='width: 30em'/>
+</div>
+>>>>>>> 7d4eb37246fba87c21d753ae2fa3c47d72e55ae3

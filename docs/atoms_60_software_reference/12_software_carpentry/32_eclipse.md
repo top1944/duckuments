@@ -1,4 +1,4 @@
-# Liclipse {#liclipse}
+# Liclipse {#liclipse status=ready}
 
 
 ## Why using IDEs
@@ -123,4 +123,4 @@ From the "Preferences" section, it's suggested to:
 
 
 Then, there is the issue of "code completion". This is a love-it-or-hate-it
-issue. The choice is yours. 
+issue. The choice is yours.
