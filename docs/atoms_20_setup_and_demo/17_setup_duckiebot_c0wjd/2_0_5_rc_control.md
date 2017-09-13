@@ -64,14 +64,32 @@ Note: there is a known bug, for which it fails the first time on the Raspberry P
 
 <!-- (you have to be under the `catkin_ws` folder to invoke `catkin_make`) -->
 
-## Add your vehicle data to the database {#edit-machines-file}
 
-You need to set up the vehicle database, and add your Duckiebot as vehicle. This is not optional and required in order to launch any ROS scripts. This has several steps:
+## Clone the duckiefleet repository (updated Sep 12) {#clone-duckiefleet fstatus=beta}
 
-- clone the relevant `duckiefleet` repository into `~/catkin_ws/src/`, see [](#duckiefleet-directory-duckiefleet_root) to find the right duckiefleet repository
-- `cd` into the cloned repo and further into `robots/`.
-- `cp` the file `emma.robot.yaml` to `yourname.robot.yaml`, where `yourname` is the hostname of your Duckiebot. Then edit the copied file to represent your Duckiebot (see [](#scuderia)).
-- generate the machines file, as described here: see [](#machines).
+Clone the relevant `duckiefleet` repository into `~/duckiefleet`.
+
+See see [](#duckiefleet-directory) to find the right `duckiefleet` repository.
+
+In `~/.bashrc` set `DUCKIEFLEET_ROOT` to point to the directory:
+
+    export DUCKIEFLEET_ROOT=~/duckiefleet
+
+
+## Add your vehicle data to the robot database {#edit-machines-file status=beta}
+
+Next, you need to add your robot to the vehicles database.  This is not optional and required in order to launch any ROS scripts.
+
+You have already a copy of the vehicles database in `$DUCKIEFLEET_ROOT/robots`.
+
+Copy the file `emma.robot.yaml` to `![robotname].robot.yaml`, where `![robotname]`
+is your robot's hostname. Then edit the copied file to represent your Duckiebot.
+
+See: For information about the format, see [](#scuderia).
+
+Finally, generate the machines file.
+
+See: The procedure is listed here: [](#machines).
 
 ## Test that the joystick is detected {#test-joystick}
 
