@@ -237,7 +237,7 @@ TODO: to write
 
 TODO: to write
 
-# Shells and environments
+# Shells and environments {#linux-shells status=draft}
 
 ## `source` {#source}
 
@@ -251,7 +251,7 @@ TODO: to write
 
 TODO: to write
 
-# Other misc commands
+# Other misc commands {#linux-misc status=draft}
 
 
 ## `pgrep`
