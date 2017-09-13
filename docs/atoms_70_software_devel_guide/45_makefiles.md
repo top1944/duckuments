@@ -1,4 +1,4 @@
-# Makefile system {#makefiles}
+# Makefile system {#makefiles status=ready}
 
 Assigned: Andrea
 
