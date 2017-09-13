@@ -41,6 +41,19 @@ Resolution: Probably the time is not set up correctly. Use `ntpdate` as above:
 Or see the hints in the troubleshooting section on the previous page.
 
 
+## Update the system
+
+If you installed the Operating System on the Duckiebot as described in [](#duckiebot-ubuntu-image),
+you can skip this section and jump to [](#build-repo).
+If you installed the Operating System on the Duckiebot by burning the image as described in 
+[](#setup-duckiebot-burn-image), then you need to install the new dependencies by running the command:
+
+    duckiebot $ cd ~/duckietown
+    duckiebot $ /bin/bash ./dependencies_since_image.sh
+
+This command will install all the dependencies that are not in the image that you burned on the SD card.
+
+
 ## Set up ROS environment on the Duckiebot {#build-repo}
 
 All the following commands should be run in the `~/duckietown` directory:

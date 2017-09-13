@@ -1,4 +1,4 @@
-# The Duckietown Bookshelf
+# The Duckietown Bookshelf {status=ready}
 
 <style>
 body {

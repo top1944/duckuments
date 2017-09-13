@@ -100,9 +100,8 @@ automatic-compile-cleanup:
 	-killall -9 /home/duckietown/scm/duckuments/deploy/bin/python
 	$(MAKE) master-clean
 	$(MAKE) fall2017-clean
-	rm -f ~/lockfile
-	rm -f ~/lockfile-fall2017
-
+	rm -f misc/bot/locks/*
+	rm -f /home/duckietown/scm/duckuments/duckuments-dist/.git/index.lock
 	echo "\n\nautomatic-compile-cleanup killing everything\n\n" >> $(log-master-html)
 	echo "\n\nautomatic-compile-cleanup killing everything\n\n" >> $(log-master-pdf)
 	echo "\n\nautomatic-compile-cleanup killing everything\n\n" >> $(log-fall2017)
