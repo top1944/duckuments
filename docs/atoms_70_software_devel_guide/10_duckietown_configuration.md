@@ -1,4 +1,4 @@
-# Configuration
+# Configuration {#configuration-files status=beta}
 
 This chapter explains what are the assumptions about the configuration.
 
@@ -10,7 +10,7 @@ The tool `what-the-duck` ([](#what-the-duck)) checks some of these conditions.
 If you make a change from the existing conditions, make sure that it gets
 implemented in `what-the-duck` by filing an issue.
 
-## Environment variables (Updated Sept 12) {#env-variables}
+## Environment variables (updated Sept 12) {#env-variables}
 
 You need to have set up the variables in [](#tab:environment-variables).
 
@@ -58,7 +58,7 @@ Note: The way to set these up is to add them in the file `~/.bashrc` (`export ![
 }
 </style>
 
-### Duckietown root directory `DUCKIETOWN_ROOT` {#duckietown-directory}
+### Duckietown root directory `DUCKIETOWN_ROOT` {#duckietown-directory status=draft}
 
 TODO: to write
 
@@ -129,22 +129,24 @@ The `machines` file is created from the scuderia data using this command:
 
     $ rosrun duckieteam create-machines
 
-## People database {#people-file}
+## People database {#people-file status=draft}
 
 Assigned: Andrea
 
 
-TODO: Describe the people database; this is the evolution of the yaml files
+TODO: Describe the people database.
 
 
-### The globally-unique Duckietown ID
+### The globally-unique Duckietown ID {status=to-update}
 
 This is a globally-unique ID for people in the Duckietown project.
 
 It is equal to the Slack username.
 
+Comment: There is no Slack username anymore, so we should change this to some other convention. -AC
 
-## Modes of operation
+
+## Modes of operation {#modes-of-operation status=draft}
 
 There are 3 modes of operation:
 

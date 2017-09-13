@@ -45,7 +45,7 @@ Or see the hints in the troubleshooting section on the previous page.
 
 If you installed the Operating System on the Duckiebot as described in [](#duckiebot-ubuntu-image),
 you can skip this section and jump to [](#build-repo).
-If you installed the Operating System on the Duckiebot by burning the image as described in 
+If you installed the Operating System on the Duckiebot by burning the image as described in
 [](#setup-duckiebot-burn-image), then you need to install the new dependencies by running the command:
 
     duckiebot $ cd ~/duckietown
@@ -54,7 +54,7 @@ If you installed the Operating System on the Duckiebot by burning the image as d
 This command will install all the dependencies that are not in the image that you burned on the SD card.
 
 
-## Set up ROS environment on the Duckiebot {#build-repo}
+## Set up the ROS environment on the Duckiebot {#build-repo}
 
 All the following commands should be run in the `~/duckietown` directory:
 
@@ -78,7 +78,7 @@ Note: there is a known bug, for which it fails the first time on the Raspberry P
 <!-- (you have to be under the `catkin_ws` folder to invoke `catkin_make`) -->
 
 
-## Clone the duckiefleet repository (updated Sep 12) {#clone-duckiefleet fstatus=beta}
+## Clone the duckiefleet repository (updated Sep 12) {#clone-duckiefleet status=recently-updated}
 
 Clone the relevant `duckiefleet` repository into `~/duckiefleet`.
 
@@ -89,11 +89,11 @@ In `~/.bashrc` set `DUCKIEFLEET_ROOT` to point to the directory:
     export DUCKIEFLEET_ROOT=~/duckiefleet
 
 
-## Add your vehicle data to the robot database {#edit-machines-file status=beta}
+## Add your vehicle data to the robot database (updated Sep 12) {#edit-machines-file status=recently-updated}
 
 Next, you need to add your robot to the vehicles database.  This is not optional and required in order to launch any ROS scripts.
 
-You have already a copy of the vehicles database in `$DUCKIEFLEET_ROOT/robots`.
+You have already a copy of the vehicles database in the folder `robots` of `DUCKIEFLEET_ROOT`.
 
 Copy the file `emma.robot.yaml` to `![robotname].robot.yaml`, where `![robotname]`
 is your robot's hostname. Then edit the copied file to represent your Duckiebot.

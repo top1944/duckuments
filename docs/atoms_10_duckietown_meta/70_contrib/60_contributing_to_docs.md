@@ -111,7 +111,7 @@ You also should run:
 
     $ pip install -U SystemCmd==2.0.0
 
-## Compiling the documentation
+## Compiling the documentation (updated Sep 12) {status=recently-updated }
 
 <div class="check" markdown="1">
 
@@ -126,9 +126,9 @@ this by checking which `python` is active:
 Then:
 
     $ cd ~/duckuments
-    $ make duckuments-dist
+    $ mkdir duckuments-dist
 
-This creates the directory `duckuments-dist`, which contains
+<!-- This creates the directory `duckuments-dist`, which contains
 the "live" website published by Github using the "Github Pages" mechanism at the URL `book.duckietown.org`.
 
 <div class="check" markdown="1">
@@ -138,9 +138,9 @@ At this point, please make sure that you have these two `.git` folders:
     ~/duckuments/.git
     ~/duckuments/duckuments-dist/.git
 
-</div>
+</div> -->
 
-To compile the docs, run `make clean compile`:
+To compile the master versions of the docs, run:
 
     $ make clean compile
 
