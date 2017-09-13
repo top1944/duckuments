@@ -24,7 +24,7 @@ Assigned: Andrea
 
 
 
-# Every day Linux
+# Every day Linux {#every-day-linux status=draft}
 
 
 ## `cd` {#cd}
@@ -149,14 +149,14 @@ TODO: to write
 
 
 
-# Make
+# Make {#gnu-make status=draft}
 
 ## `make` {#make}
 
 TODO: to write
 
 
-# Python-related tools
+# Python-related tools {#python-tools status=draft}
 
 ## `virtualenv` {#virtualenv}
 
@@ -167,7 +167,7 @@ TODO: to write
 TODO: to write
 
 
-# Raspberry-PI commands
+# Raspberry-PI commands {#RPI-commands status=draft}
 
 ## `raspi-config` {#raspi-config}
 
@@ -196,7 +196,7 @@ TODO: to write
 
 
 
-# Users and permissions
+# Users and permissions {#users-and-permissions status=draft}
 
 ## `chmod` {#chmod}
 
@@ -215,7 +215,7 @@ TODO: to write
 TODO: to write
 
 
-# Downloading
+# Downloading {#download-utils status=draft}
 
 
 ## `curl` {#curl}
