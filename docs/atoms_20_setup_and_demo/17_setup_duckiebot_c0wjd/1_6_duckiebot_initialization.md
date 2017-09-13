@@ -229,14 +229,14 @@ Save the following block as new file in `/etc/NetworkManager/system-connections/
 
 ### Option 2.b): `eduroam` WiFi (UdeM instructions){status=draft}
 
-Save the following block as new file in `/etc/NetworkManager/system-connections/eduroam-![HOSTNAME]`:
-where host-name is the user name in the duckiebot. (It is the name listed in `/etc/hostname/`)
+Save the following block as new file in `/etc/NetworkManager/system-connections/eduroam-![USERNAME]`:
+where USERNAME is `ubuntu` initially. 
 
     [connection]
     id=eduroam
     uuid=38ea363b-2db3-4849-a9a4-c2aa3236ae29
     type=wifi
-    permissions=user:![HOSTNAME]:;
+    permissions=user:![USERNAME]:;
     secondaries=
 
     [wifi]
@@ -271,6 +271,9 @@ where host-name is the user name in the duckiebot. (It is the name listed in `/e
     dns-search=
     method=auto
 
+After creating this file, change permissions of this file using the command:
+
+    $ chmod 600 /etc/NetworkManager/system-connections/eduroam-![USERNAME]
 
 
 ### Option 3: custom WiFi {status=draft}
