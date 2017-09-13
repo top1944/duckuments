@@ -5,30 +5,30 @@ This page describes all of the helpful Slack channels and their purposes so that
 ## Channels
 
 
-<col2 figure-id="tab:slack_channels_list" figure-caption="Duckietown Slack Channels">
-<span>**Channel**</span>
-<span>**Purpose**</span>
-<span>help-accounts</span>
+<col2 figure-id="tab:slack_channels_list" figure-caption="Duckietown Slack Channels" figure-class="labels-row1">
+<span>Channel</span>
+<span>Purpose</span>
+<code>help-accounts</code>
 <span>Info about necessary accounts, such as Slack, Github, etc</span>
-<span>help-assembly</span>
+<code>help-assembly</code>
 <span>Help putting your robot together</span>
-<span>help-camera-calib</span>
+<code>help-camera-calib</codecode>
 <span>Help doing the intrinsic and extrinsic calibration of your camera </span>
-<span>help-duckuments</span>
+<code>help-duckuments</code>
 <span>Help compiling the online documentation</span>
-<span>help-git</span>
+<code>help-git</codecode>
 <span>Help with git</span>
-<span>help-infrastructure</span>
+<code>help-infrastructure</code>
 <span>Help with software infrastructure, such as Makefiles, unit tests, continuous integration, etc.</span>
-<span>help-laptops</span>
+<code>help-laptops</code>
 <span>Help getting your laptop setup with Ubuntu 16.04</span>
-<span>help-parts</span>
+<code>help-parts</code>
 <span>Help getting the parts for the robot or replacement parts if you broke something</span>
-<span>help-robot-setup</span>
+<code>help-robot-setup</code>
 <span>Help getting the robot setup to do basic things like be driven with a joystick</span>
-<span>help-ros</span>
+<code>help-ros</code>
 <span>Help with the Robot Operating System (ROS)</span>
-<span>help-wheel-calib</span>
+<code>help-wheel-calib</code>
 <span>Help doing your odometry calibration</span>
 </col2>
 
