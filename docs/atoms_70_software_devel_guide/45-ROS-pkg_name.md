@@ -1,4 +1,4 @@
-# Minimal ROS node - `pkg_name` {#ros-python-howto}
+# Minimal ROS node - `pkg_name` {#ros-python-howto status=beta}
 
 Assigned: Andrea
 

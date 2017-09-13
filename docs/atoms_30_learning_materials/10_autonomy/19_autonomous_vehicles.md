@@ -1,4 +1,4 @@
-# Autonomous Vehicles {#autonomous-vehicles}
+# Autonomous Vehicles {#autonomous-vehicles status=draft}
 
 Assigned: Liam
 
@@ -34,4 +34,3 @@ driver conduct some parts of the driving task;
  * **Level 3**: an automated system can both actually conduct some parts of the driving task and monitor the driving environment in some instances, but the human driver must be ready to take back control when the automated system requests;
  * **Level 4**: an automated system can conduct the driving task and monitor the driving environment, and the human need not take back control, but the automated system can operate only in certain environments and under certain conditions; and
  * **Level 5**: the automated system can perform all driving tasks, under all conditions that a human driver could perform them.
-

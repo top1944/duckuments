@@ -1,10 +1,10 @@
-# Duckiebot Assembly and Configuration {#checkoff_assembly_configuration}
+# Duckiebot Assembly and Configuration {#checkoff_assembly_configuration status=ready}
 
 Slack Channel: help-assembly
 
-The first job  is to get your Duckiebot put together and up and running. 
+The first job  is to get your Duckiebot put together and up and running.
 
-<!-- Comment: @liam: We should make sure that these tasks are 1-to-1 with the task list in the checkoff spreadsheet, and remind them what to do. 
+<!-- Comment: @liam: We should make sure that these tasks are 1-to-1 with the task list in the checkoff spreadsheet, and remind them what to do.
 -->
 
 ## Pick up your Duckiebox
@@ -12,24 +12,25 @@ The first job  is to get your Duckiebot put together and up and running.
 Slack Channel: help-parts
 
 
- There is a checklist inside, you should go through the box and ensure that the parts that are supposed to be in it actually are.
- TODO: what to do if you are missing something
- 
-Related part of the book: 
+There is a checklist inside. You should go through the box and ensure that the parts that are supposed to be in it actually are insidde.
 
-* [](#acquiring-parts-c0) 
-* [](#acquiring-parts-c1) 
-  
-which describe the parts that should be in your box.
+TODO: what to do if you are missing something?
+
+These sections describe the parts that are in your box.
+
+See: [](#acquiring-parts-c0)
+
+See: [](#acquiring-parts-c1)
+
+
 
 ## Soldering your boards
 
-Depending on how kind your instructors/TAs are, you may have to solder your boards. 
- 
-Related parts of the book are:
+Depending on how kind your instructors/TAs are, you may have to solder your boards.
 
-* [](#soldering-boards-c0)
-* [](#soldering-boards-c1)
+See: [](#soldering-boards-c0)
+
+See: [](#soldering-boards-c1)
 
 ## Assemble your Robot
 
@@ -37,22 +38,20 @@ Slack Channel: help-assembly
 
 You are ready to put things together now.
 
-Related parts of the book are:
+See: [](#assembling-duckiebot-c0)
 
-* [](#assembling-duckiebot-c0)
-* [](#bumper-assembly)
-* [](#assembling-duckiebot-c1)
+See: [](#bumper-assembly)
+
+See: [](#assembling-duckiebot-c1)
 
 
 ## Optional: Reproduce the SD Card Image
 
 If you are very inexperienced with Linux/Unix/networking etc, then you may find it a valuable experience to reproduce the SD card image to "see how the sausage is made".
 
-Related parts of the book are:
+See: [](#duckiebot-ubuntu-image)
 
-* [](#duckiebot-ubuntu-image)
- 
- 
+
 ## Setup your laptop
 
 Slack channel: help-laptops
@@ -61,15 +60,15 @@ The only officially supported OS is Ubuntu 16.04. If you are not running this OS
 
 Related parts of the book are:
 
-* [](#linux) if you want to make a partition (Instructions needed)
-* [](#setup-laptop) 
- 
-## Make your robot move
- 
- Slack Channel: help-robot-setup
- 
-Now you need to clone the software repo and run things to make your robot move.
- 
-Related parts of the book are:
+See: [](#how-to-partition) if you want to make a partition
 
-* [](#rc-control)
+See: [](#setup-laptop)
+
+
+## Make your robot move
+
+Slack Channel: help-robot-setup
+
+Now you need to clone the software repo and run things to make your robot move.
+
+See: [](#rc-control)

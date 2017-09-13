@@ -81,7 +81,7 @@ TODO: add here pointers to relevant `duckietown_utils` functions.
 
 <!--  -->
 
-# Exercise: Specifications and testing
+# Exercise: Specifications and testing {#exercise-specifications status=draft}
 
 ## Skills learned
 
@@ -361,7 +361,7 @@ This should create the files:
     ![output]/00003.jpg
     ![output]/00004.jpg
 
-# Exercise: Use our API for arguments
+# Exercise: Use our API for arguments {#exercise-arguments-API status=draft}
 
 ## Skills learned
 
@@ -415,7 +415,7 @@ means that you first have to apply the filter `flip-h`, then the filter `gray-sc
 
 <!--  -->
 
-# Exercise: Bouncing ball
+# Exercise: Bouncing ball {#exercise-bouncing-ball status=draft}
 
 ## Skills learned
 
@@ -435,7 +435,7 @@ that shows a bouncing ball on the screen, as if it were a billiard
 
 * Our API for command line arguments.
 
-# Exercise: Visualizing data on image
+# Exercise: Visualizing data on image {#exercise-visualizing-data status=draft}
 
 ## Skills learned
 
@@ -456,7 +456,7 @@ to a certain color, and creates as the output a big red, yellow white spot on th
 
 <!--  -->
 
-# Exercise: Make that into a node
+# Exercise: Make that into a node {#exercise-make-node status=draft}
 
 ## Learned skills
 
@@ -502,7 +502,7 @@ TODO: Also introduce the DUCKIETOWN_CONFIG_SEQUENCE.
 
 
 
-## Milestone: Illumination invariance (anti-instagram)
+# Milestone: Illumination invariance (anti-instagram) {#milestone-illumination-invariance status=draft}
 
 TODO: Make them run our code, and also visualize what's going on
 
@@ -511,7 +511,7 @@ TODO: Make them run our code, and also visualize what's going on
 
 
 
-# Exercise: Launch files basics
+# Exercise: Launch files basics {#exercise-launch-files status=draft}
 
 
 ## Learned skills
@@ -523,7 +523,7 @@ TODO: Make them run our code, and also visualize what's going on
 <!--  -->
 
 
-# Exercise: Unit tests
+# Exercise: Unit tests {#exercise-unit-tests status=draft}
 
 
 ## Learned skills
@@ -541,21 +541,21 @@ TODO: Make them run our code, and also visualize what's going on
 ## Unite tests with comptests
 
 
-# Exercise: Parameters (standard ROS api)
+# Exercise: Parameters (standard ROS api) {#exercise-parameters-ROS status=draft}
 
 ## Learned skills
 
 - Reading parameters
 - Dynamic modification of parameters
 
-# Exercise: Parameters (our API)  {#exercise-parameters status=draft} 
+# Exercise: Parameters (our API)  {#exercise-parameters status=draft}
 
 ## Learned skills
 
 - Use Duckietown API
 
 
-# Exercise: Place recognition abstraction
+# Exercise: Place recognition abstraction {#exercise-place-recognition status=draft}
 
 ## Learned skills
 
@@ -636,7 +636,7 @@ TODO: to write
 
 TODO: to write
 
- 
+
 # Exercise: Ducks in a row {#exercise-duck-in-arow status=draft}
 
 TODO: to write
@@ -648,5 +648,3 @@ TODO: to write
 # Exercise: RRT {#exercise-RRT status=draft}
 
 TODO: to write
-
-

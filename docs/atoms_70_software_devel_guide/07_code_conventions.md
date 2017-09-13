@@ -1,4 +1,4 @@
-# Duckietown code conventions {#code-conventions}
+# Duckietown code conventions {#code-conventions status=ready}
 
 
 ## Python {#code-conventions-python}
@@ -64,7 +64,7 @@ For logging, import this logger:
 
     from duckietown_utils import logger
 
-## Exceptions
+## Exceptions {status=draft}
 
     DTConfigException
 
@@ -72,7 +72,7 @@ For logging, import this logger:
     compact = True
 
 
-## Scripts
+## Scripts {status=draft}
 
 
     def summary():
