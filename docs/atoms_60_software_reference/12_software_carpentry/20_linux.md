@@ -1,4 +1,4 @@
-# GNU/Linux general notions {#linux status=draft}
+# GNU/Linux general notions {#linux-general status=draft}
 
 Assigned: Andrea
 
@@ -88,7 +88,7 @@ TODO: to write
 
 TODO: to write
 
-# Linux disks and files
+# Linux disks and files {#linux-disk-and-files status=draft}
 
 ## `fdisk` {#fdisk}
 
@@ -128,7 +128,7 @@ TODO: to write
 
 TODO: to write
 
-# Other administration commands
+# Other administration commands {#linux-other-admin status=draft}
 
 
 ## `visudo` {#visudo}
