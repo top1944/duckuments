@@ -64,7 +64,7 @@ TODO: to write
 
 TODO: to write
 
-# Users
+# Users {#users-management status=draft}
 
 
 
@@ -72,7 +72,7 @@ TODO: to write
 
 TODO: to write
 
-# UNIX tools
+# UNIX tools {#unix-tools status=draft}
 
 
 ## `cat` {#cat}
@@ -125,6 +125,10 @@ TODO: to write
 
 
 ## `df` {#df}
+
+TODO: to write
+
+## How to make a partition {#how-to-partition status=draft}
 
 TODO: to write
 

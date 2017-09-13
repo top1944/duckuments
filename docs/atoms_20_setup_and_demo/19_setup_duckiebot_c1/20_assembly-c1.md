@@ -1,4 +1,4 @@
-# Assembling the Duckiebot `C1` {#assembling-duckiebot-c1}
+# Assembling the Duckiebot `C1` {#assembling-duckiebot-c1 status=draft}
 
 Assigned: Shiying
 
@@ -21,4 +21,3 @@ Results:
 </div>
 
 Shiying: here will be the instruction about assembling the Duckiebot.
-

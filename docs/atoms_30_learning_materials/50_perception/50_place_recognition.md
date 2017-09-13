@@ -1,3 +1,3 @@
-# Place recognition {#place_recognition}
+# Place recognition {#place_recognition status=draft}
 
 Assigned: Matt

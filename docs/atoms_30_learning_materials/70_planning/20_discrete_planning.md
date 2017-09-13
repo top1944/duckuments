@@ -1,3 +1,3 @@
-# Planning in discrete domains {#discrete_planning}
+# Planning in discrete domains {#discrete_planning status=draft}
 
 Assigned: ETH

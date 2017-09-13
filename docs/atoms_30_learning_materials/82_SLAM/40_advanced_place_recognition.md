@@ -1,3 +1,3 @@
-# Advanced place recognition {#advanced_place_recognition}
+# Advanced place recognition {#advanced_place_recognition status=draft}
 
 Assigned: Liam

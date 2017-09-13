@@ -1,3 +1,3 @@
-# VINS {#VINS}
+# VINS {#VINS status=draft}
 
 Assigned: Liam
