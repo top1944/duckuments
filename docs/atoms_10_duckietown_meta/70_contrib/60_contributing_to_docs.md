@@ -9,7 +9,8 @@ The documentation is written as a series of small files in Markdown format.
 It is then processed by a series of scripts to create this output:
 
 * [a publication-quality PDF][master-pdf];
-* [an online HTML version, split in multiple pages and with comments boxes][master-split].
+* [an online HTML version, split in multiple pages][master-split];
+* [a one-page version][master-html].
 
 [master-pdf]: http://book.duckietown.org/master/duckiebook.pdf
 [master-html]: http://book.duckietown.org/master/duckiebook.html
@@ -196,6 +197,9 @@ This is the basic workflow:
 3. Commit the Markdown and push on the `![yourname]-branch`  branch.
 4. Create a pull request.
 5. Tag the group `duckietown/gardeners`.
+
+
+See: Create a pull request from the command-line using [`hub`](#hub).
 
 ## Reporting problems
 
