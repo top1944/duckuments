@@ -1,5 +1,5 @@
 
-# Exercise: Git and conventions
+# Exercise: Git and conventions {#exercise-git-conventions status=draft}
 
 TODO: move here the exercises we had last year about branching.
 
