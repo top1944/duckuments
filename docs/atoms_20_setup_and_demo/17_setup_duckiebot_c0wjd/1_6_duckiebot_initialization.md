@@ -236,6 +236,49 @@ If neither `duckietown` nor `eduroam` are available, you can add your own config
 
 Note: Whichever option you pick, we don't recommend to create or modify the `/etc/wpa_supplicant.conf` file, because this verion of Ubuntu uses the `NetworkManager` service to deal with WiFi connections (and no longer the `wpasupplicant` daemon).
 
+Find the SSID of your Wi-Fi network. It is usually the name of the wifi network. Example: BELL343. Let's call it ![WIFINAME] 
+To find the seen-bssed, run 
+
+    $ sudo iw wlan0 scan | egrep "^BSS|SSID:"
+    
+The AA:BB:CC:DD:EE:FF address above `SSID: BELL343` is your seen-bssed. Let's call it ![WIFIBSS]
+
+Save the following block as new file in `/etc/NetworkManager/system-connections/BELL343`:
+
+    [connection]
+    id=![WIFINAME]
+    uuid=d8aa333b-2db3-4849-a9a4-c2aa3236ae29
+    type=wifi
+    permissions=
+    secondaries=
+    timestamp=1502254646
+
+    [wifi]
+    mac-address=
+    mac-address-blacklist=
+    mac-address-randomization=0
+    mode=infrastructure
+    seen-bssed=![WIFIBSS]
+    ssid=![WIFINAME]
+
+    [wifi-security]
+    group=
+    key-mgmt=wpa-psk
+    pairwise=
+    proto=
+    psk=![WIFIPWD]
+
+    [ipv4]
+    dns-search=
+    method=auto
+
+    [ipv6]
+    addr-gen-mode=stable-privacy
+    dns-search=
+    ip6-privacy=0
+    method=auto
+
+
 ## Update the system
 
 Next, we need to update to bring the system up to date.
