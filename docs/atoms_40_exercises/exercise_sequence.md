@@ -3,7 +3,7 @@
 
 TODO: move here the exercises we had last year about branching.
 
-# Exercise: Robot setup steps
+# Exercise: Robot setup steps {#exercise-robot-setup status=draft}
 
 
 Note: I am not sure these go here. In any case these would be only pointers.
@@ -38,7 +38,7 @@ TODO: to write
 TODO: to write
 
 
-# Exercise: ROS node tutorial
+# Exercise: ROS node tutorial {#exercise-ROS-node status=draft}
 
 ## Skills learned
 
@@ -52,7 +52,7 @@ Do the first ROS tutorial at [](#ros-python-howto).
 <!--  -->
 
 
-# Exercise: Basic image operations
+# Exercise: Basic image operations {#exercise-basic-image status=draft}
 
 ## Skills learned
 
@@ -177,7 +177,7 @@ Things that are not tested are broken.
 
 <!--  -->
 
-# Exercise: Who watches the watchmen? (optional) {#exercise-watchmen}
+# Exercise: Who watches the watchmen? (optional) {#exercise-watchmen status=draft}
 
 ## Skills learned
 
@@ -225,7 +225,7 @@ Even if things are tested, you can never be sure that the tests themselves work.
 <!-- TODO: Validation and testing -->
 
 
-# Exercise: Simple data analysis from a bag
+# Exercise: Simple data analysis from a bag  {#exercise-bag-analysis status=draft}
 
 ## Skills learned
 
@@ -300,7 +300,7 @@ XXX
 
 <!--  -->
 
-# Exercise: Bag in, bag out
+# Exercise: Bag in, bag out {#exercise-bag-in-out status=draft}
 
 ## Skills learned
 
@@ -340,7 +340,7 @@ Now process the data with `bag-analyze-topic`: you should see that the statistic
 
 <!--  -->
 
-# Exercise: Bag images
+# Exercise: Bag images  {#exercise-bag-images status=draft}
 
 ## Skills learned
 
@@ -379,7 +379,7 @@ TODO: to write
 
 <!--  -->
 
-# Exercise: Instagram filters
+# Exercise: Instagram filters  {#exercise-instagram-filters status=draft}
 
 ## Skills learned
 
@@ -476,7 +476,7 @@ Make a ROS node and two launch files:
 
 <!--  -->
 
-# Exercise: Instagram with EasyAlgo interface
+# Exercise: Instagram with EasyAlgo interface  {#exercise-instagram-easy-algo status=draft}
 
 ## Learned skills
 
@@ -548,7 +548,7 @@ TODO: Make them run our code, and also visualize what's going on
 - Reading parameters
 - Dynamic modification of parameters
 
-# Exercise: Parameters (our API)
+# Exercise: Parameters (our API)  {#exercise-parameters status=draft} 
 
 ## Learned skills
 
@@ -598,7 +598,7 @@ Compute the similarity matrix for the
 TODO: to write
 
 
-# Exercise: Parallel processing
+# Exercise: Parallel processing  {#exercise-parallel-proc status=draft}
 
 ## Learned skills
 
@@ -609,7 +609,7 @@ TODO: to write
 We introduce the support for parallel processing that we have in the APIs.
 
 
-# Exercise: Adding new test to integration tests
+# Exercise: Adding new test to integration tests  {#exercise-integration-test status=draft}
 
 TODO: to write
 
@@ -632,76 +632,21 @@ TODO: to write
 
 TODO: to write
 
-# Exercise: localization
+# Exercise: localization {#exercise-localization status=draft}
 
 TODO: to write
 
-## Milestone: Navigation
+ 
+# Exercise: Ducks in a row {#exercise-duck-in-arow status=draft}
 
 TODO: to write
 
-# Exercise: group forming
+# Exercise: Comparison of PID {#exercise-PIDs status=draft}
 
 TODO: to write
 
-## Milestone: Ducks in a row
-
-TODO: to write
-
-# Exercise: Comparison of PID
-
-TODO: to write
-
-# Exercise: RRT
-
-TODO: to write
-
-## Caffe tutorial
-
-TODO: to write
-
-## Milestone: Object Detection
+# Exercise: RRT {#exercise-RRT status=draft}
 
 TODO: to write
 
 
-# Exercise: Object Detection
-
-TODO: to write
-
-## Milestone: Semantic perception
-
-TODO: to write
-
-
-# Exercise: Semantic perception
-
-TODO: to write
-
-## Milestone: Reacting to obstacles
-
-TODO: to write
-
-# Exercise: Reacting to obstacles
-
-TODO: to write
-
-## Milestone: SLAM demo
-
-TODO: to write
-
-# Exercise: SLAM
-
-TODO: to write
-
-## Milestone: fleet demo
-
-TODO: to write
-
-# Exercise: fleet
-
-TODO: to write
-
-## Project proposals
-
-TODO: to write
