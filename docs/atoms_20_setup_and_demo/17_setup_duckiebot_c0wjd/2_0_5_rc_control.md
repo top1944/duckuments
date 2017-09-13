@@ -82,6 +82,9 @@ Note: there is a known bug, for which it fails the first time on the Raspberry P
 You need to set up the vehicle database, and add your Duckiebot as vehicle. This is not optional and required in order to launch any ROS scripts. This has several steps:
 
 - clone the relevant `duckiefleet` repository into `~/catkin_ws/src/`, see [](#duckiefleet-directory-duckiefleet_root) to find the right duckiefleet repository
+
+Comment: I think the proper directory path for `~/catkin_ws/src/` is `~/duckietown/catkin_ws/src/`
+
 - `cd` into the cloned repo and further into `robots/`.
 - `cp` the file `emma.robot.yaml` to `yourname.robot.yaml`, where `yourname` is the hostname of your Duckiebot. Then edit the copied file to represent your Duckiebot (see [](#scuderia)).
 - generate the machines file, as described here: see [](#machines).
