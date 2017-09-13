@@ -1,4 +1,4 @@
-# Matrix diagonalization
+# Matrix diagonalization {#matrix-diagonalization status=draft}
 
 - singular value decomposition SVD (topic for advanced-linear-algebra?)
 

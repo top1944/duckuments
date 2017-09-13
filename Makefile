@@ -224,7 +224,7 @@ update-mcdp:
 update-software: checks
 	-git -C $(duckietown-software) pull
 
-compile: checks update-mcdp update-software
+compile:
 	$(MAKE) master
 
 
@@ -277,7 +277,7 @@ index:
 # 		--mathjax \
 # 		--preamble $(tex-symbols)
 
-master:
+master: checks update-mcdp update-software
 	$(MAKE) master-html
 	$(MAKE) master-split
 
@@ -373,7 +373,7 @@ fall2017-split:
 		--output duckuments-dist/fall2017/duckiebook.html \
 		--assets duckuments-dist/fall2017/duckiebook/assets
 
-fall2017:
+fall2017: checks update-mcdp update-software
 	$(MAKE) fall2017-prepare
 	$(MAKE) fall2017-compose
 	$(MAKE) fall2017-split
