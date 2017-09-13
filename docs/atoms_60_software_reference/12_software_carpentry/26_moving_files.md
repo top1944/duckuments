@@ -1,4 +1,4 @@
-# Moving files between computers  {status=draft}
+# Moving files between computers  {#moving-files status=draft}
 
 ## SCP
 
