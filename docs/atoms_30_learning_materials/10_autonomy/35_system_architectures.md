@@ -84,7 +84,7 @@ Remark: More formally, the assignment is called a graph homomorphism.
 You will see a concrete example of different ways to map software components
 on logical architectures in one of the first exercises.
 
-Duckietown uses [ROS](#ROS). In ROS, the components are called *nodes*.
+Duckietown uses ROS. In ROS, the components are called *nodes*.
 In ROS, the granularity is at the level of hosts rather than processors.
 In regular vanilla Linux, the kernel decides which physical processor
 executes which process at any time.
