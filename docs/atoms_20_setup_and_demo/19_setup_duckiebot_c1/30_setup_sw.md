@@ -1,4 +1,4 @@
-# `C1` (LEDs) setup {#leds}
+# `C1` (LEDs) setup {#leds status=draft}
 
 Assigned: Shiying?
 
@@ -6,13 +6,13 @@ Assigned: Shiying?
 
 ## Connecting Wires to LEDs
 
-The LEDs are common anode type. The longest pin is called the common. 
-The single pin on the side of common is red channel. 
+The LEDs are common anode type. The longest pin is called the common.
+The single pin on the side of common is red channel.
 The two other pins are Green and Blue channels, with the blue furthest from the common pin.
 
-Use the long wires with two female ends. Attach one to each of the pins on the LED. 
+Use the long wires with two female ends. Attach one to each of the pins on the LED.
 
-To figure out the order to connect them to the LSD hat, use the legend on the silkscreen and the information above. i.e. RX - means the red pin, CX - means the common, GX means the green, and BX means the blue. The "X" varies in number from 1-5 depending on which LED is being connected as discussed in the next section. 
+To figure out the order to connect them to the LSD hat, use the legend on the silkscreen and the information above. i.e. RX - means the red pin, CX - means the common, GX means the green, and BX means the blue. The "X" varies in number from 1-5 depending on which LED is being connected as discussed in the next section.
 
 
 ## Connecting LEDs to LSD Hat
@@ -65,7 +65,6 @@ Rear Right LED Wiring Suggestion:
 </div>
 
 
-##   Final LED tweaks, Confirm LED Function and Placement 
+##   Final LED tweaks, Confirm LED Function and Placement
 
 Adjust the LED terminals (particularly in the front) so that they do not interfere with the wheels. This can be accomplished by bending them up, away from the treads.
- 

@@ -1,4 +1,4 @@
-# Matrix inversions
+# Matrix inversions {#matrix-inversion status=draft}
 
 Assigned: Jacopo
 
@@ -39,6 +39,3 @@ Exercise: Calculate a (square) Matrix Inverse
 Exercise: Inverting a well-conditioned matrix (practice)
 
 Exercise: Inverting an ill-conditioned matrix (practice)
-
-
-

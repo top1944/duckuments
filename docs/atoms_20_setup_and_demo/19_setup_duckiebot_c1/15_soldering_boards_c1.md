@@ -1,4 +1,4 @@
-# Soldering boards for `C1` {#soldering-boards-c1}
+# Soldering boards for `C1` {#soldering-boards-c1 status=draft}
 
 
 

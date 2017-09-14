@@ -144,15 +144,15 @@ automatic-compile-master-html:
 	#nice -n 10 $(MAKE) split-imprecise
 	nice -n 10 $(MAKE) master-split
 	echo "  succeded split " >> $(log-master-html)
-	-$(MAKE) upload
-	echo "  succeded html upload " >> $(log-master-html)
+#	-$(MAKE) upload
+#	echo "  succeded html upload " >> $(log-master-html)
 	date >>$(log-master-html)
 	echo "Done." >> $(log-master-html)
 
 automatic-compile-master-pdf:
 	nice -n 10 $(MAKE) master-pdf
 	echo "  succeded PDF  " >> $(log-master-pdf)
-	-$(MAKE) upload
+#	-$(MAKE) upload
 	echo "  succeded PDF upload" >> $(log-master-pdf)
 	date >>  $(log-master-pdf)
 	echo "Done." >> $(log-master-pdf)

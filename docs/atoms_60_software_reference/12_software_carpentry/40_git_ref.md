@@ -113,6 +113,6 @@ Install `hub` using the [instructions](https://hub.github.com/).
 
 ### Creating pull requests
 
-Then you can create a pull request using:
+You can create a pull request using:
 
     $ hub pull-request -m "![description]"
