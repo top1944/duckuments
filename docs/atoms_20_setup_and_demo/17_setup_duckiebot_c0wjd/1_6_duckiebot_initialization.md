@@ -40,21 +40,20 @@ The original was:
 It looks like that `curl` cannot be used with Drobpox links because it does not follow redirects.
 </div>
 
+To make sure that the image is downloaded correctly, compute its hash
+using the program `sha256sum`:
+
+    $ sha256sum duckiebot-RPI3-AD-2017-09-12.img.xz
+    7136f9049b230de68e8b2d6df29ece844a3f830cc96014aaa92c6d3f247b6130  duckiebot-RPI3-AD-2017-09-12.img.xz
+    
+Compare the hash that you obtain with the hash above. If they are different,
+there was some problem in downloading the image.
 
 Uncompress the file:
 
     $ xz -d -k duckiebot-RPI3-AD-2017-09-12.img.xz
 
 This will create a file of 11 GB in size.
-
-To make sure that the image is downloaded correctly, compute its hash
-using the program `sha256sum`:
-
-    $ sha256sum duckiebot-RPI3-AD-2017-09-12.img
-    c21a4cea17069bae6689dd36f81fe8463696959566d164e74ed475e3f1ad446d  duckiebot-RPI3-AD-2017-09-12.img
-
-Compare the hash that you obtain with the hash above. If they are different,
-there was some problem in downloading the image.
 
 Next, burn the image on disk.
 
