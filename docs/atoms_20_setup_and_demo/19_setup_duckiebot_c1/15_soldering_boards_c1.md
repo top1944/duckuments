@@ -1,11 +1,11 @@
+
 # Soldering boards for `C1` {#soldering-boards-c1}
-<<<<<<< HEAD
+
 Note: General rule in soldering
 * soldering the components according to the height of components - from lowest to highest
-=======
 
+# Soldering boards for `C1` {#soldering-boards-c1 status=draft}
 
->>>>>>> 7d4eb37246fba87c21d753ae2fa3c47d72e55ae3
 
 Assigned: Shiying
 

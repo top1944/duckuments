@@ -1,4 +1,4 @@
-# Chapter template {#theory-chapter-template}
+# Chapter template {#theory-chapter-template status=ready}
 
 Theory chapters benefit from a standardized exposition. Here, we define the template for these chapters. Rememeber to check [](#sec:documentation-manual) for a comprehensive and up-to-date list of Duckiebook supported features.
 

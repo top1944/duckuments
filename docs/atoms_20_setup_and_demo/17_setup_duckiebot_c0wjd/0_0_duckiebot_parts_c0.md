@@ -118,7 +118,7 @@ The chassis pack includes the motors and wheels as well as the structural part.
 
 ## Raspberry Pi 3 - Model B
 
-The Raspberry Pi is the central computer of the Duckiebot. Duckiebots use Model B ([](#fig:rpi3b)) (A1.2GHz 64-bit quad-core ARMv8 CPU, 1GB RAM), a small but powerful computer.
+The Raspberry Pi is the central computer of the Duckiebot. Duckiebots use Model B ([](#fig:rpi3b)) ( A1.2GHz 64-bit quad-core ARMv8 CPU, 1GB RAM), a small but powerful computer.
 
 <div figure-id="fig:rpi3b" figure-caption="The Raspberry Pi 3 Model B">
      <img src="rpi3b.png" style='width: 15em'/>

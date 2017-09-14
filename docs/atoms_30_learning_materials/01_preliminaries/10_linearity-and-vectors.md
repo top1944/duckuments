@@ -1,4 +1,4 @@
-# Linearity and Vectors {#linear_algebra}
+# Linearity and Vectors {#linear_algebra status=draft}
 
 Assigned: Jacopo
 

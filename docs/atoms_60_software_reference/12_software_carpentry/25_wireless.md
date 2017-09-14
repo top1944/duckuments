@@ -1,4 +1,4 @@
-# Wireless networking in Linux {status=ready}
+# Wireless networking in Linux {#wireless-linux status=ready}
 
 ## `iwconfig` {#iwconfig status=draft}
 

@@ -1,4 +1,4 @@
-# Assembling the Duckiebot `C1` {#assembling-duckiebot-c1}
+# Assembling the Duckiebot `C1` {#assembling-duckiebot-c1 status=draft}
 
 Assigned: Shiying
 
@@ -22,7 +22,7 @@ Results:
 
 </div>
 
-Shiying: here will be the instruction about assembling the Duckiebot.
+
 
 Before you continue in this chapter, make sure that you have assembled the duckiebot according the instruction of `C0` configuration.
 
@@ -43,3 +43,4 @@ To power the PWM/Servo HAT from the battery, plugin a short (30cm) angled male U
 <div figure-id="fig:DC_power" figure-caption="Male USB-A to 5.5/2.1mm DC power jack cable">
      <img src="DC_power.jpg" style='width: 30em'/>
 </div>
+

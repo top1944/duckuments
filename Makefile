@@ -100,9 +100,8 @@ automatic-compile-cleanup:
 	-killall -9 /home/duckietown/scm/duckuments/deploy/bin/python
 	$(MAKE) master-clean
 	$(MAKE) fall2017-clean
-	rm -f ~/lockfile
-	rm -f ~/lockfile-fall2017
-
+	rm -f misc/bot/locks/*
+	rm -f /home/duckietown/scm/duckuments/duckuments-dist/.git/index.lock
 	echo "\n\nautomatic-compile-cleanup killing everything\n\n" >> $(log-master-html)
 	echo "\n\nautomatic-compile-cleanup killing everything\n\n" >> $(log-master-pdf)
 	echo "\n\nautomatic-compile-cleanup killing everything\n\n" >> $(log-fall2017)
@@ -145,15 +144,15 @@ automatic-compile-master-html:
 	#nice -n 10 $(MAKE) split-imprecise
 	nice -n 10 $(MAKE) master-split
 	echo "  succeded split " >> $(log-master-html)
-	-$(MAKE) upload
-	echo "  succeded html upload " >> $(log-master-html)
+#	-$(MAKE) upload
+#	echo "  succeded html upload " >> $(log-master-html)
 	date >>$(log-master-html)
 	echo "Done." >> $(log-master-html)
 
 automatic-compile-master-pdf:
 	nice -n 10 $(MAKE) master-pdf
 	echo "  succeded PDF  " >> $(log-master-pdf)
-	-$(MAKE) upload
+#	-$(MAKE) upload
 	echo "  succeded PDF upload" >> $(log-master-pdf)
 	date >>  $(log-master-pdf)
 	echo "Done." >> $(log-master-pdf)
@@ -225,7 +224,7 @@ update-mcdp:
 update-software: checks
 	-git -C $(duckietown-software) pull
 
-compile: checks update-mcdp update-software
+compile:
 	$(MAKE) master
 
 
@@ -278,12 +277,22 @@ index:
 # 		--mathjax \
 # 		--preamble $(tex-symbols)
 
-master:
+master: checks update-mcdp update-software
 	$(MAKE) master-html
 	$(MAKE) master-split
 
 master-clean:
 	rm -rf out/master
+
+circle:
+	DISABLE_CONTRACTS=1 mcdp-render-manual \
+		--src $(src) \
+		--stylesheet v_manual_split \
+		--mathjax 0 \
+		--symbols $(tex-symbols) \
+		-o out/master/html \
+		--output_file out/master/data/1.html \
+		-c "config echo 1; config colorize 0; rparmake n=4"
 
 master-html:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
@@ -364,7 +373,7 @@ fall2017-split:
 		--output duckuments-dist/fall2017/duckiebook.html \
 		--assets duckuments-dist/fall2017/duckiebook/assets
 
-fall2017:
+fall2017: checks update-mcdp update-software
 	$(MAKE) fall2017-prepare
 	$(MAKE) fall2017-compose
 	$(MAKE) fall2017-split

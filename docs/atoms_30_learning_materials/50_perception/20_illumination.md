@@ -1,3 +1,3 @@
-# Illumination invariance {#illumination_invariance}
+# Illumination invariance {#illumination_invariance status=draft}
 
 Assigned: Matt

@@ -1,10 +1,10 @@
-# Autonomy architectures {#autonomy_architectures}
+# Autonomy architectures {#autonomy_architectures status=draft}
 
 
 Assigned: Andrea
 
 <div class='requirements' markdown="1">
-    
+
 </div>
 
 ## No robot is an island

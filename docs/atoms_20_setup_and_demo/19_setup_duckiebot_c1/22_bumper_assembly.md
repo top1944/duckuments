@@ -1,4 +1,4 @@
-# Bumper Assembly {#bumper-assembly}
+# Bumper Assembly {#bumper-assembly status=draft}
 
 
 <div class='requirements' markdown="1">
@@ -20,7 +20,7 @@ Results: A Duckiebot with bumpers attached
 The following should be included in your parts envelope (See image below for these components):
 
 * 1x front bumper
-* 1x rear bumper
+* 1x rear bumperco
 * 2x rear bumper brace
 * 8x M3x10 pan head screws (McMaster #: 92005A120)
 * 8x M3 nuts (McMaster #: 90591A250)
@@ -87,7 +87,7 @@ Locate 4 M3 nuts and 4 M3x10 screws. Place a nut in the wide part of the t-slot 
     <img src="image_10.jpg" style='width:20em; height:auto'/>
 </div>
 
-<div figure-id="fig:bumper_figure_11">    
+<div figure-id="fig:bumper_figure_11">
     <img src="image_11-1.jpg" style='width:20em; height:auto'/>
 </div>
 
@@ -129,7 +129,7 @@ Take the front bumper and carefully press the LEDs into the flexure holders. Tak
     <img src="image_17.jpg" style='width:20em; height:auto'/>
 </div>
 
-Position the bumper so that the nuts align with the t-slots. You may need to loosen or tigthen the screws to align the nuts. You may also need to angle the front bumper when inserting to get it 
+Position the bumper so that the nuts align with the t-slots. You may need to loosen or tigthen the screws to align the nuts. You may also need to angle the front bumper when inserting to get it
 past the camera screws.
 
 <div figure-id="fig:bumper_figure_18">

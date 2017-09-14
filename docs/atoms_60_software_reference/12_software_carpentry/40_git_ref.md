@@ -106,8 +106,13 @@ TODO: to write
 
 ## `hub` {#hub}
 
+
+### Installation
+
 Install `hub` using the [instructions](https://hub.github.com/).
 
-Then you can create a pull request using:
+### Creating pull requests
 
-    $ hub pull-request
+You can create a pull request using:
+
+    $ hub pull-request -m "![description]"
