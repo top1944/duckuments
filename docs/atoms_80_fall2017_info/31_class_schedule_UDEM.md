@@ -20,7 +20,7 @@ Book materials:
 
 * [](#autonomous-vehicles)
 
-* [](#autonomy_overview)
+* [](#autonomy-overview)
 
 ## Friday Sept 8
 
