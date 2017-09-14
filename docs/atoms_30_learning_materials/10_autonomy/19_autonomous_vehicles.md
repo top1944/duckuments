@@ -8,23 +8,24 @@ These days it is hard to separate the fact from the fiction when it comes to aut
 
 Here's a non-exhaustive list of some of companies that are actively developing autonomous cars:
 
- * [Waymo](https://waymo.com/)
- * [Tesla Autopilot project](https://www.tesla.com/en_CA/autopilot?redirect=no)
- * [Uber Advanced Technologies Group](https://www.uber.com/info/atg/)
- * [Cruise Automation](the recent developments)
- * Apple "Project Titan" (no official details released)
- * [nuTonomy](http://nutonomy.com/)
- * [Toyota Research Institute](http://www.tri.global/) (Broader than just autonomous cars)
- * [Aurora Innovation](https://aurora.tech/)
- * [Zoox](http://zoox.com/)
- * [Audi](https://techcrunch.com/2017/06/06/audi-is-the-first-to-test-autonomous-vehicles-in-new-york/)
- * [Nissan's autonomous car](https://www.nissanusa.com/blog/autonomous-drive-car)
- * [Baidu](http://usa.baidu.com/adu/)
-
+* [Waymo](https://waymo.com/) (Alphabet/Google group)
+* [Tesla Autopilot project](https://www.tesla.com/en_CA/autopilot?redirect=no)
+* [Uber Advanced Technologies Group](https://www.uber.com/info/atg/)
+* [Cruise Automation] (the recent developments)
+* [nuTonomy](http://nutonomy.com/)
+* [Toyota Research Institute](http://www.tri.global/) (Broader than just autonomous cars)
+* [Aurora Innovation](https://aurora.tech/)
+* [Zoox](http://zoox.com/)
+* [Audi](https://techcrunch.com/2017/06/06/audi-is-the-first-to-test-autonomous-vehicles-in-new-york/)
+* [Nissan's autonomous car](https://www.nissanusa.com/blog/autonomous-drive-car)
+* [Baidu](http://usa.baidu.com/adu/)
+* Apple "Project Titan" (no official details released)
 
 ## Levels of Autonomy {#autonomy-levels}
 
-Before even discussing any detailed notion of autonomy, we have to specify exactly what we are talking about. In the United States, the governing body is the NHTSA, and they have recently (Oct 2016) redefined the so-called "levels of autonomy" for self-driving vehicles. In broad terms, they are as follows
+Before even discussing any detailed notion of autonomy, we have to specify exactly what we are talking about. In the United States, the governing body is the NHTSA, and they have recently (Oct 2016) redefined the so-called "levels of autonomy" for self-driving vehicles. 
+
+In broad terms, they are as follows
 
 
  * **Level 0**: the human driver does everything;
@@ -34,4 +35,3 @@ driver conduct some parts of the driving task;
  * **Level 3**: an automated system can both actually conduct some parts of the driving task and monitor the driving environment in some instances, but the human driver must be ready to take back control when the automated system requests;
  * **Level 4**: an automated system can conduct the driving task and monitor the driving environment, and the human need not take back control, but the automated system can operate only in certain environments and under certain conditions; and
  * **Level 5**: the automated system can perform all driving tasks, under all conditions that a human driver could perform them.
-

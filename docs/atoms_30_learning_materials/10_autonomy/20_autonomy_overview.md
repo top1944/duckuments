@@ -1,4 +1,4 @@
-# Autonomy overview {#autonomy_overview}
+# Autonomy overview {#autonomy-overview}
 
 Assigned: Liam
 
@@ -13,7 +13,7 @@ The minimal basic backbone processing pipeline for autonomous vehicle navigation
   <img src="autonomy_overview_block.jpg" style='width: 30em; height:auto'/>
 </div>
 
-For an autonomous vehicle to function, it must achieve some level of performance for all of these components. The level of performance required depends on the *task* and the *required performance* .In the remainder of this section, we will discuss some of the most basic options. In [the next section](#advanced-blocks) we will briefly introduce some of the more advanced options that are used in state-of-the-art autonomous vehicles.
+For an autonomous vehicle to function, it must achieve some level of performance for all of these components. The level of performance required depends on the *task* and the *required performance*. In the remainder of this section, we will discuss some of the most basic options. In [the next section](#advanced-blocks) we will briefly introduce some of the more advanced options that are used in state-of-the-art autonomous vehicles.
 
 
 ### Sensors {#sensors}

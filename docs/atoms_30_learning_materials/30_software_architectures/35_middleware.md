@@ -4,9 +4,7 @@ Assigned: Andrea
 
 <div class='requirements' markdown='1'>
 
-
-
-Result: Knowledge of k:middleware, k:marshalling, k:service-discovery.
+Result: Knowledge of middleware, marshalling, service discovery.
 
 </div>
 
