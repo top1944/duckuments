@@ -253,7 +253,7 @@ LeftMotor:Red - LeftMotor:Black - RightMotor:Black - RightMotor:Red
 
 ####  Find a male-male wire (power from HAT to HAT) and connect it to +5V input as below. The other end will be connected to the upper layer, which delivers the power to the motor HAT.
 
-_Notice:You will need the screwdriver from the Magician Chassis package._
+_Notice: In order to fully tighten the screw terminal connectors, you will need a screwdriver with a maxium shaft diameter of 1.9mm. The provided screwdriver exceeds this width, and will not be able to fully tighten the screw terminal. When fastened, the top of the screw head should be seated at least 2mm below the deck of the screw terminal block._
 
 <div figure-id="fig:ServoHAT_wiring" figure-caption=" ">
      <img src="ServoHAT_wiring.jpg" style='width: 30em'/>
