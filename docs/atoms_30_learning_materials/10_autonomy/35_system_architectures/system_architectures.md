@@ -40,11 +40,12 @@ The logical architecture describes:
 - How knows what: other sources of information, such as priors.
 - How information is represented
 
-A logical architecture would also describe what are the representations used. This is explored more fully in [](#representations).
+A logical architecture would also describe what are the representations used.
+This is explored more fully in [the unit about representations](#representations).
 
 ## Actor model
 
-(Brief discussion of actor model)
+TODO: Brief discussion of actor model
 
 
 ## Physical architecture {#physical-architectures}
