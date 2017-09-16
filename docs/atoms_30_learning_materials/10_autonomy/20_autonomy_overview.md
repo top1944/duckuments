@@ -2,7 +2,7 @@
 
 Assigned: Liam
 
-In this chapter we will introduce some basic concepts ubiquitous in autonomous vehicle navigation.
+This unit introduces some basic concepts ubiquitous in autonomous vehicle navigation.
 
 
 ## Basic Building Blocks of Autonomy {#basic-blocks}
@@ -14,7 +14,6 @@ The minimal basic backbone processing pipeline for autonomous vehicle navigation
 </div>
 
 For an autonomous vehicle to function, it must achieve some level of performance for all of these components. The level of performance required depends on the *task* and the *required performance*. In the remainder of this section, we will discuss some of the most basic options. In [the next section](#advanced-blocks) we will briefly introduce some of the more advanced options that are used in state-of-the-art autonomous vehicles.
-
 
 ### Sensors {#sensors}
 
