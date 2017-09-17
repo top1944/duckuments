@@ -94,6 +94,7 @@ log=misc/bot/logs/generic.log
 log-master-html=misc/bot/logs/master-html/compilation.log
 log-master-pdf=misc/bot/logs/master-pdf/compilation.log
 log-fall2017=misc/bot/logs/fall2017/compilation.log
+log-fall2017-pdf=misc/bot/logs/fall2017-pdf/compilation.log
 
 automatic-compile-cleanup:
 	echo "\n\nautomatic-compile-cleanup killing everything" >> $(log)
@@ -151,12 +152,20 @@ automatic-compile-master-html:
 
 automatic-compile-master-pdf:
 	nice -n 10 $(MAKE) master-pdf
+	echo "\n\nStarting" >> $(log-master-pdf)
+	date >> $(log-master-pdf)
 	echo "  succeded PDF  " >> $(log-master-pdf)
 #	-$(MAKE) upload
-	echo "  succeded PDF upload" >> $(log-master-pdf)
 	date >>  $(log-master-pdf)
 	echo "Done." >> $(log-master-pdf)
 
+automatic-compile-fall2017-pdf:
+	echo "\n\nStarting" >> $(log-fall2017-pdf)
+	date >> $(log-fall2017-pdf)
+	nice -n 10 $(MAKE) fall2017-pdf
+	echo "  succeded PDF  " >> $(log-fall2017-pdf)
+	date >>  $(log-fall2017-pdf)
+	echo "Done." >> $(log-fall2017-pdf)
 
 upload:
 	#git -C duckuments-dist pull -X ours
@@ -171,12 +180,7 @@ upload:
 clean:
 	$(MAKE) master-clean
 
-	# rm -rf $(tmp_files)
-	# rm -rf $(tmp_files2)
-	#rm -rf $(dist_dir)/duckiebook/*html
-
-# $(out_html): $(wildcard docs/**/*md)
-# 	$(MAKE) compile
+ 
 
 # compile-pdf-slow: checks check-programs-pdf
 # 	# mathjax is 1 in this case
@@ -214,9 +218,25 @@ master-pdf: checks check-programs-pdf
 
 	pdftk A=out/master/pdf/duckiebook1.pdf B=misc/blank.pdf cat A1-end B output out/master/pdf/duckiebook2.pdf keep_final_id
 	pdftk out/master/pdf/duckiebook2.pdf update_info misc/blank-metadata output duckuments-dist/master/duckiebook.pdf
-
-
 	# open $(out_pdf)
+
+fall2017-pdf: checks check-programs-pdf
+	# mathjax is 1 in this case
+	DISABLE_CONTRACTS=1 mcdp-render-manual \
+		--src $(src) \
+		--stylesheet v_manual_blurb \
+		--mathjax 1 \
+		--symbols $(tex-symbols) \
+		-o out/fall2017/pdf \
+		--output_file out/fall2017/pdf/duckiebook.html -c "config echo 1; rparmake n=8"
+
+	python -m mcdp_docs.add_edit_links <  out/fall2017/pdf/duckiebook.html > out/fall2017/pdf/b.html
+
+	prince --javascript -o out/fall2017/pdf/duckiebook1.pdf out/fall2017/pdf/b.html
+
+	pdftk A=out/fall2017/pdf/duckiebook1.pdf B=misc/blank.pdf cat A1-end B output out/fall2017/pdf/duckiebook2.pdf keep_final_id
+	pdftk out/fall2017/pdf/duckiebook2.pdf update_info misc/blank-metadata output duckuments-dist/fall2017/duckiebook.pdf
+
 
 update-mcdp:
 	-git -C mcdp/ pull
