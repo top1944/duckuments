@@ -173,7 +173,7 @@ upload:
 clean:
 	$(MAKE) master-clean
 
- 
+
 
 # compile-pdf-slow: checks check-programs-pdf
 # 	# mathjax is 1 in this case
@@ -318,7 +318,7 @@ master-html:
 		-c "config echo 1; config colorize 1; rparmake n=8"
 
 	python add_stylesheet.py out/master/data/1.html style/duckietown.css
-	python -m mcdp_utils_xml.note_errors_inline out/master/data/1.html
+	python -m mcdp_utils_xml.note_errors_inline out/master/data/1.html | tee duckuments-dist/master/errors.txt
 	python -m mcdp_docs.add_edit_links out/master/data/localcss.html < out/master/data/1.html
 	python -m mcdp_docs.embed_css out/master/data/duckiebook.html < out/master/data/localcss.html
 	python -m mcdp_docs.extract_assets  \
@@ -365,7 +365,7 @@ fall2017-prepare:
 		-o out/fall2017/prepare \
 		--output_file out/fall2017/one.html -c "config echo 1; config colorize 1; rparmake"
 
-	python -m mcdp_utils_xml.note_errors_inline out/fall2017/one.html
+	python -m mcdp_utils_xml.note_errors_inline out/fall2017/one.html  | tee duckuments-dist/fall2017/errors.txt
 	# python -m mcdp_docs.add_edit_links duckuments-dist/fall2017/two.html < duckuments-dist/fall2017/one.html
 	python -m mcdp_docs.embed_css out/fall2017/master.html < out/fall2017/one.html
 
