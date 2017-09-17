@@ -124,7 +124,7 @@ Doubt: Not sure it's a good idea to boot into Byobu. -??
 
 ## (For `D17-0+w`) Configure the robot-generated network
 
-The Duckiebot in configuration `D17-C0+w` can create a WiFi network.
+The Duckiebot in configuration `C0+w` can create a WiFi network.
 
 It is a 5 GHz network; this means that you need to have a 5 GHz
 WiFi adapter in your laptop.
@@ -156,6 +156,8 @@ Look up the MAC address using the command:
 Then, edit the connection file
 
     /etc/NetworkManager/system-connections/create-5ghz-network
+
+Doubt: where is this file exactly? I can't find the ~/etc folder at all
 
 Make the following changes:
 
