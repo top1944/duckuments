@@ -181,7 +181,7 @@ You are connected to the Duckiebot via WiFi, but the Duckiebot also needs to con
 
 Check with your phone or laptop if there is a WiFi in reach with the name of `duckietown`. If there is, you are all set. The defaut configuration for the Duckiebot is to have one WiFi adapter connect to this network and the other broadcast the access point which you are currently connected to.
 
-### Option 2.a): `eduroam` WiFi (Non-UdeM/McGill instructions){status=draft}
+### Option 2.a): `eduroam` WiFi (Non-UdeM/McGill instructions) {status=draft}
 
 If there should be no `duckietown` network in reach then you have to manually add a network configuration file for the network that you'd like to connect to. Most universities around the world should have to `eduroam` network available. You can use it for connecting your Duckiebot.
 
