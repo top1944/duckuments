@@ -136,11 +136,17 @@ Materials:
 
 ### Raspberry Pi
 
-The first step is to fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on the opposite side of the chassis-up.
+The first step is to install the heat sinks on the Raspberry Pi. Start by removing the covering from the adhesive layer on the bottom on the larger heat sink. Place the larger heat sink on the Broadcom SoC. Repeat this process, placing the smaller heat sink on the LAN chip.
 
-<div figure-id="fig:Raspberry_pi3" figure-caption=" ">
-     <img src="RPi_3.jpg" style='width: 30em'/>
+<div figure-id="fig:Raspberry_pi3_parts" figure-caption=" ">
+     <img src="RPi_3_parts.jpg" style='width: 30em'/>
 </div>
+
+<div figure-id="fig:Raspberry_pi3_heatsinks" figure-caption=" ">
+     <img src="RPi_3_heatsinks.jpg" style='width: 30em'/>
+</div>
+
+Second, fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on the opposite side of the chassis-up.
 
 <div figure-id="fig:SideView_Raspberry_pi3" figure-caption=" ">
      <img src="side_RPi_3.jpg" style='width: 30em'/>
