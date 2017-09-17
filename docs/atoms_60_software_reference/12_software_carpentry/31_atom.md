@@ -1,4 +1,4 @@
-# Atom {#atom}
+# Atom {#atom status=ready}
 
 ## Install Atom {#install-atom}
 

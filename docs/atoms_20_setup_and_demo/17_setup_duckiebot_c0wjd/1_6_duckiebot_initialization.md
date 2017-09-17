@@ -19,42 +19,41 @@ Comment: What does it mean "ready to use"? -AC
 
 
 
-## Acquire and burn the image
+## Acquire and burn the image {#setup-duckiebot-burn-image}
 
 On the laptop, download the compressed image at this URL:
 
-> [https://www.dropbox.com/s/1jgn0chx3hu3a4a/duckiebot-RPI3-AD-sep7.img.xz?dl=1](https://www.dropbox.com/s/1jgn0chx3hu3a4a/duckiebot-RPI3-AD-sep7.img.xz?dl=1)
+> [https://www.dropbox.com/s/ckpqpp0cav3aucb/duckiebot-RPI3-AD-2017-09-12.img.xz?dl=1](https://www.dropbox.com/s/ckpqpp0cav3aucb/duckiebot-RPI3-AD-2017-09-12.img.xz?dl=1)
 
 The size is 1.7 GB.
 
 You can use:
 
-    $ wget -O duckiebot-RPI3-AD-sep7.img.xz ![URL above]
+    $ wget -O duckiebot-RPI3-AD-2017-09-12.img.xz ![URL above]
 
 <div class="comment" markdown="1">
 
 The original was:
 
-    $ curl -o duckiebot-RPI3-AD-sep7.img.xz ![URL above]
+    $ curl -o duckiebot-RPI3-AD-2017-09-12.img.xz ![URL above]
 
 It looks like that `curl` cannot be used with Drobpox links because it does not follow redirects.
 </div>
 
-
-Uncompress the file:
-
-    $ xz -d -k duckiebot-RPI3-AD-sep7.img.xz
-
-This will create a file of 11 GB in size.
-
 To make sure that the image is downloaded correctly, compute its hash
 using the program `sha256sum`:
 
-    $ sha256sum duckiebot-RPI3-AD-sep7.img
-    681c4653c309df530791dbdbe2e89819def330c20d58d4c4baf5979b02e5b381  duckiebot-RPI3-AD-sep7.img
-
+    $ sha256sum duckiebot-RPI3-AD-2017-09-12.img.xz
+    7136f9049b230de68e8b2d6df29ece844a3f830cc96014aaa92c6d3f247b6130  duckiebot-RPI3-AD-2017-09-12.img.xz
+    
 Compare the hash that you obtain with the hash above. If they are different,
 there was some problem in downloading the image.
+
+Uncompress the file:
+
+    $ xz -d -k duckiebot-RPI3-AD-2017-09-12.img.xz
+
+This will create a file of 11 GB in size.
 
 Next, burn the image on disk.
 
@@ -182,7 +181,7 @@ You are connected to the Duckiebot via WiFi, but the Duckiebot also needs to con
 
 Check with your phone or laptop if there is a WiFi in reach with the name of `duckietown`. If there is, you are all set. The defaut configuration for the Duckiebot is to have one WiFi adapter connect to this network and the other broadcast the access point which you are currently connected to.
 
-### Option 2: `eduroam` WiFi {status=draft}
+### Option 2.a): `eduroam` WiFi (Non-UdeM/McGill instructions) {status=draft}
 
 If there should be no `duckietown` network in reach then you have to manually add a network configuration file for the network that you'd like to connect to. Most universities around the world should have to `eduroam` network available. You can use it for connecting your Duckiebot.
 
@@ -227,6 +226,57 @@ Save the following block as new file in `/etc/NetworkManager/system-connections/
     dns-search=
     method=auto
 
+Set the permissions on the new file to 0600.
+
+    sudo chmod 0600 /etc/NetworkManager/system-connections/eduroam
+
+### Option 2.b): `eduroam` WiFi (UdeM/McGill instructions) {status=draft}
+
+Save the following block as new file in `/etc/NetworkManager/system-connections/eduroam-![USERNAME]`:
+where USERNAME is the your logged-in username in the duckiebot. 
+
+    [connection]
+    id=eduroam
+    uuid=38ea363b-2db3-4849-a9a4-c2aa3236ae29
+    type=wifi
+    permissions=user:![USERNAME]:;
+    secondaries=
+
+    [wifi]
+    mac-address=![the MAC address of your internal wifi adapter, wlan0]
+    mac-address-blacklist=
+    mac-address-randomization=0
+    mode=infrastructure
+    seen-bssids=
+    ssid=eduroam
+
+    [wifi-security]
+    auth-alg=open
+    group=
+    key-mgmt=wpa-eap
+    pairwise=
+    proto=
+
+    [802-1x]
+    altsubject-matches=
+    eap=peap;
+    identity=![DGTIC UNIP]
+    password=![DGTIC PWD]
+    phase2-altsubject-matches=
+    phase2-auth=mschapv2
+
+    [ipv4]
+    dns-search=
+    method=auto
+
+    [ipv6]
+    addr-gen-mode=stable-privacy
+    dns-search=
+    method=auto
+
+Set the permissions on the new file to 0600.
+
+    sudo chmod 0600 /etc/NetworkManager/system-connections/eduroam-![USERNAME]
 
 ### Option 3: custom WiFi {status=draft}
 
@@ -235,6 +285,53 @@ If neither `duckietown` nor `eduroam` are available, you can add your own config
     TODO code block for custom connection
 
 Note: Whichever option you pick, we don't recommend to create or modify the `/etc/wpa_supplicant.conf` file, because this verion of Ubuntu uses the `NetworkManager` service to deal with WiFi connections (and no longer the `wpasupplicant` daemon).
+
+Find the SSID of your Wi-Fi network. It is usually the name of the wifi network. Example: BELL343. Let's call it `![WIFINAME]` 
+To find the seen-bssed, run 
+
+    $ sudo iw wlan0 scan | egrep "^BSS|SSID:"
+    
+The AA:BB:CC:DD:EE:FF address above `SSID: BELL343` is your seen-bssed. Let's call it `![WIFIBSS]`
+
+Save the following block as new file in `/etc/NetworkManager/system-connections/BELL343`:
+
+    [connection]
+    id=![WIFINAME]
+    uuid=d8aa333b-2db3-4849-a9a4-c2aa3236ae29
+    type=wifi
+    permissions=
+    secondaries=
+    timestamp=1502254646
+
+    [wifi]
+    mac-address=
+    mac-address-blacklist=
+    mac-address-randomization=0
+    mode=infrastructure
+    seen-bssed=![WIFIBSS]
+    ssid=![WIFINAME]
+
+    [wifi-security]
+    group=
+    key-mgmt=wpa-psk
+    pairwise=
+    proto=
+    psk=![WIFIPWD]
+
+    [ipv4]
+    dns-search=
+    method=auto
+
+    [ipv6]
+    addr-gen-mode=stable-privacy
+    dns-search=
+    ip6-privacy=0
+    method=auto
+
+
+Set the permissions on the new file to 0600.
+
+    sudo chmod 0600 /etc/NetworkManager/system-connections/BELL343
 
 ## Update the system
 

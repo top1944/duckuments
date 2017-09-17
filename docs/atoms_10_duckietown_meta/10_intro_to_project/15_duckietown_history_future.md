@@ -1,4 +1,4 @@
-# Duckietown history and future {status=beta}
+# Duckietown history and future {#duckietown-history-and-future status=beta}
 
 ## The beginnings of Duckietown
 

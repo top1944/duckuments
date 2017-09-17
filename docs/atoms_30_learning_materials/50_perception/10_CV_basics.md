@@ -1,4 +1,4 @@
-# Computer vision basics {#CV_basics}
+# Computer vision basics {#CV_basics status=draft}
 
 Assigned: Matt
 

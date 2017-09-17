@@ -1,4 +1,4 @@
-# Norms {#norms}
+# Norms {#norms status=draft}
 
 Assigned: Jacopo
 
@@ -12,7 +12,7 @@ see also: [](#bib:norms)
 
 ### $p$-norm {#vec-p-norm}
 
-Let $p \geq 1 \in \reals$. The $p$-norm is defined as: 
+Let $p \geq 1 \in \reals$. The $p$-norm is defined as:
 
 \begin{definition}[$p$-norm]\label{def:vec-p-norm}
 \begin{align} \label{eq:vec-p-norm}
@@ -35,7 +35,7 @@ Given a vector $\avec{v} \in \reals^n$, the $1$-norm is defined as:
 
 ### $\infty$-norm {#vec-inf-norm}
 
-The infinity norm measures the maximum component, in absolute value, of a vector. 
+The infinity norm measures the maximum component, in absolute value, of a vector.
 
 \begin{definition}[$\infty$-norm]\label{def:vec-inf-norm}
 \begin{align} \label{eq:vec-inf-norm}

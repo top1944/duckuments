@@ -1,4 +1,4 @@
-# Linearization {#linearization}
+# Linearization {#linearization status=draft}
 
 ## Taylor Series Expansion
 

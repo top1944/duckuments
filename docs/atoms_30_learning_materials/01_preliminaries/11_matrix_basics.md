@@ -1,4 +1,4 @@
-# Matrices basics {#matrix-definitions}
+# Matrices basics {#matrix-definitions status=draft}
 
 Assigned: Jacopo
 
@@ -24,7 +24,7 @@ A matrix:
       <figcaption>A matrix. This image is taken from [](#bib:wiki-matrix)</figcaption>
       <img src="matrix.svg" style='width: 15em'/>
  </div>
- 
+
  Note: A vector is a matrix with one column.
 
  <!--
@@ -77,7 +77,7 @@ An identity matrix is a diagonal square matrix with all elements equal to one.
 \amat{I} = \left[  \begin{array}{ccc}
 1   & 0        & \dots  & 0 \\
 0      & 1     & \ddots & \vdots \\
-\vdots & ddots    & \ddots & 0 \\
+\vdots & \ddots    & \ddots & 0 \\
 0      & \dots    & 0      & 1
 \end{array} \right]
 \end{align}

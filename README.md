@@ -6,4 +6,4 @@ For installation instructions, see the chapter "Contributing to the documentatio
 in the [current version of the Duckiebook][duckiebook].
 
 
-[duckiebook]: http://book.duckietown.org/master/duckiebook/index.html
+[duckiebook]: http://book.duckietown.org/master/duckiebook/index.html 

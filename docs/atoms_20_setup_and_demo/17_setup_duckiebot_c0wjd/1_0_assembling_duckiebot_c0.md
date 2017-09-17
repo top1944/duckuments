@@ -132,11 +132,14 @@ Materials:
 * Soldered PWM/Servo HAT and Soldered Stepper Motor HAT,
 * 1 Male-male wire,
 * Standoffs
+* Heat sinks
 -->
 
 ### Raspberry Pi
 
-The first step is to fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on the opposite side of the chassis-up.
+Before attaching anything to the Raspberry Pi you should add the heat sinks to it. There are 2 small sinks and a big one. The big one best fits onto the processor (the big "Broadcom"-labeled chip in the center of the top of the Raspberry Pi). One of the small ones can be attached to the small chip that is right next to the Broadcom chip. The third heat sink is optional and can be attached to the chip on the underside of the Raspberry Pi. Note that the chip on the underside is bigger than the heat sink. Just mount the heat sink in the center and make sure all of them are attached tightly.
+
+When this is done fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on the opposite side of the chassis-up.
 
 <div figure-id="fig:Raspberry_pi3" figure-caption=" ">
      <img src="RPi_3.jpg" style='width: 30em'/>
@@ -250,7 +253,7 @@ LeftMotor:Red - LeftMotor:Black - RightMotor:Black - RightMotor:Red
 
 ####  Find a male-male wire (power from HAT to HAT) and connect it to +5V input as below. The other end will be connected to the upper layer, which delivers the power to the motor HAT.
 
-_Notice:You will need the screwdriver from the Magician Chassis package._
+_Notice: In order to fully tighten the screw terminal connectors, you will need a screwdriver with a maxium shaft diameter of 1.9mm. The provided screwdriver exceeds this width, and will not be able to fully tighten the screw terminal. When fastened, the top of the screw head should be seated at least 2mm below the deck of the screw terminal block._
 
 <div figure-id="fig:ServoHAT_wiring" figure-caption=" ">
      <img src="ServoHAT_wiring.jpg" style='width: 30em'/>

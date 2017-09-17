@@ -1,4 +1,4 @@
-# ROS installation and reference {#introduction_to_ros}
+# ROS installation and reference {#introduction_to_ros status=ready}
 
 Assigned: Liam
 
@@ -42,20 +42,20 @@ Initialize ROS:
     $ rosdep update
 
 
-## `rqt_console` {#rqt_console}
+## `rqt_console` {#rqt_console status=draft}
 
 TODO: to write
 
 
-## `roslaunch` {#roslaunch}
+## `roslaunch` {#roslaunch status=draft}
 
 TODO: to write
 
-## `rviz` {#rviz}
+## `rviz` {#rviz status=draft}
 
 TODO: to write
 
-## `rostopic` {#rostopic}
+## `rostopic` {#rostopic status=draft}
 
 TODO: to write
 
@@ -67,45 +67,45 @@ TODO: to write
 
 TODO: to write
 
-## `catkin_make` {#catkin_make}
+## `catkin_make` {#catkin_make status=draft}
 
 TODO: to write
 
-## `rosrun` {#rosrun}
+## `rosrun` {#rosrun status=draft}
 
 TODO: to write
 
-## `rostest` {#rostest}
+## `rostest` {#rostest status=draft}
 
 TODO: to write
 
-## `rospack` {#rospack}
+## `rospack` {#rospack status=draft}
 
 TODO: to write
 
-## `rosparam` {#rosparam}
+## `rosparam` {#rosparam status=draft}
 
 TODO: to write
 
-## `rosdep` {#rosdep}
+## `rosdep` {#rosdep status=draft}
 
 TODO: to write
 
-## `roswtf` {#roswtf}
+## `roswtf` {#roswtf status=draft}
 
 TODO: to write
 
-## `rosbag` {#rosbag}
+## `rosbag` {#rosbag status=draft}
 
 
     $ rosbag reindex ![bag file]
 
-## `roscore` {#roscore}
+## `roscore` {#roscore status=draft}
 
 TODO: to write
- 
 
-## Troubleshooting ROS
+
+## Troubleshooting ROS {#troubleshooting-ROS}
 
 Symptom: `![computer] is not in your SSH known_hosts file`
 

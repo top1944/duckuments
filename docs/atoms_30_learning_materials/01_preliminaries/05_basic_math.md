@@ -1,4 +1,4 @@
-# Sets {#sets}
+# Sets {#sets status=draft}
 
 <div class='requirements' markdown='1'>
 
@@ -11,6 +11,7 @@ Result: k:sets
 \begin{definition}[Set]\label{def:set}
 A set $\aset{X} = \{x_1, x_2, \dots\}$ is a well-defined collection of distinct _elements_, or _members_ of the set, $x_i$, $i = 1, 2, \dots$.
 \end{definition}
+
 
 # Maps {#maps}
 
@@ -48,7 +49,7 @@ TODO: to write
 TODO: to write
 
 
-# Numbers
+# Numbers {#numbers status=draft}
 
 <div class='requirements' markdown='1'>
 

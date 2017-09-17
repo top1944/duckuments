@@ -1,4 +1,4 @@
-# Continuous integration {#continuous-integration}
+# Continuous integration {#continuous-integration status=ready}
 
 
 These are the conventions for the Duckietown repositories.

@@ -18,16 +18,30 @@ recipe:
 - add: duckietown-project
 - add: contribute
 
-- part: theory-background
+- make-part: theory-background
   title: Theory Background
   contents:
   - add: probability_basics
   - add: linear_algebra
 
+- make-part: intro-to-autonomy
+  title: Introduction to autonomy
+  contents:
+  - add: autonomous-vehicles
+  - add: autonomy-overview
+  - add: modern-robotic-systems
+  - add: autonomy-architectures
+  - add: representations
+
+
+# Add the entire part
 - add: building-duckiebot-c0
+  except: # except wheel-calibration
+  - wheel-calibration
+
 - add: building-duckiebot-c1
 
-- part: appendix
+- make-part: appendix
   title: Appendix
   contents:
   - add: bibliography
@@ -41,6 +55,7 @@ remove_status: [draft]
 
 # if show_removed is true, the removed sections names are kept in the output
 # otherwise they disappear completely
-show_removed: true
+# show_removed: true
+show_removed: false
 
 output: duckuments-dist/fall2017/duckiebook.html

@@ -201,7 +201,7 @@ Will result in:
 
 <div class='requirements' markdown="1">
 
-Note: in order to compile the figures into PDFs you need to have Inkscape installed. Instructions to download and install are [here](https://inkscape.org/en/release/0.92.2/).
+Requires: In order to compile the figures into PDFs you need to have Inkscape installed. Instructions to download and install are [here](https://inkscape.org/en/release/0.92.2/).
 
 </div>
 

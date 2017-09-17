@@ -17,7 +17,7 @@ when you command it to. Set the maximum speed of the Duckiebot.
 The motors used on the Duckiebots are called "Voltage-controlled motors".
 This means that the velocity of each motor is directly proportional to the
 voltage it is subject to. Even though we use the same model of motor for left
-and right wheel, they are exactly the same. In particular, every motor responds
+and right wheel, they are not exactly the same. In particular, every motor responds
 to a given voltage signal in a slightly different way. Similarly, the wheels
 that we are using look "identical", but they might be slightly different.
 
@@ -108,10 +108,8 @@ the Duckiebot drifted ([](#fig:wheel_calibration_lr_drift)).
 
 #### Step 6
 
-Measure the distance between the tape and the Duckiebot after it traveled for
-about 2 meters ([](#fig:wheel_calibration_measuring_drift)).
-
-Comment: It's unclear what is the distance - from where to where. Presumably, center of axle? - AC
+Measure the distance between the center of the tape and the center of the axle of 
+the Duckiebot after it traveled for about 2 meters ([](#fig:wheel_calibration_measuring_drift)).
 
 Make sure that the ruler is orthogonal to the tape.
 
@@ -119,9 +117,9 @@ Make sure that the ruler is orthogonal to the tape.
      <img src="wheel_calibration_measuring_drift.jpg" style='width: 30em'/>
 </div>
 
-If the Duckiebot drifted by less than $15$ centimeters you can stop calibrating
-the trim parameter. A drift of $15$ centimeters in a $2$ meters run is good
-enough for Duckietown. If the Duckiebot drifted by more than $15$ centimeters,
+If the Duckiebot drifted by less than $10$ centimeters you can stop calibrating
+the trim parameter. A drift of $10$ centimeters in a $2$ meters run is good
+enough for Duckietown. If the Duckiebot drifted by more than $10$ centimeters,
 continue with the next step.
 
 

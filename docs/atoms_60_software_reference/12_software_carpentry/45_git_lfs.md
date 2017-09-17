@@ -1,4 +1,4 @@
-# Git LFS {#git-lfs}
+# Git LFS {#git-lfs status=ready}
 
 This describes Git LFS.
 
@@ -20,7 +20,7 @@ run the following:
 
 <!-- $ git lfs install -->
 
-## Ubuntu 16 Mate installation (Raspberry Pi 3)
+## Raspberry Pi 3 {status=draft}
 
 Note: unresolved issues.
 
@@ -29,7 +29,7 @@ The instructions above do not work.
 Following [this](https://bioinfoexpert.com/2016/08/25/installation-of-git-lfs-on-ubuntu-rpi2-armf/), the error
 that appears is that golang on the Pi is 1.6 instead it should be 1.7.
 
-### Troubleshooting
+## Troubleshooting {#lfs-troubleshooting}
 
 Symptom: The binary files are not downloaded. In their place, there
 are short "pointer" files.
