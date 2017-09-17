@@ -226,6 +226,10 @@ Save the following block as new file in `/etc/NetworkManager/system-connections/
     dns-search=
     method=auto
 
+Set the permissions on the new file to 0600.
+
+    sudo chmod 0600 /etc/NetworkManager/system-connections/eduroam
+
 ### Option 2.b): `eduroam` WiFi (UdeM/McGill instructions){status=draft}
 
 Save the following block as new file in `/etc/NetworkManager/system-connections/eduroam-![USERNAME]`:
@@ -270,7 +274,9 @@ where USERNAME is the your logged-in username in the duckiebot.
     dns-search=
     method=auto
 
+Set the permissions on the new file to 0600.
 
+    sudo chmod 0600 /etc/NetworkManager/system-connections/eduroam-![USERNAME]
 
 ### Option 3: custom WiFi {status=draft}
 
@@ -322,6 +328,10 @@ Save the following block as new file in `/etc/NetworkManager/system-connections/
     ip6-privacy=0
     method=auto
 
+
+Set the permissions on the new file to 0600.
+
+    sudo chmod 0600 /etc/NetworkManager/system-connections/BELL343
 
 ## Update the system
 
