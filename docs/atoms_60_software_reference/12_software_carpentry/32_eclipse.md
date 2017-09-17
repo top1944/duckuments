@@ -42,7 +42,7 @@ Now you can run it using `liclipse`:
 
 When it runs for the first time, choose "use this as default" and click "launch".
 
-Choose "import existing project into workspace". Select the folder `~/duckietown`.
+Choose "Import-> General -> Existing project into workspace". Select the folder `~/duckietown`.
 
 If it asks about interpreters, select "auto config".
 
