@@ -41,7 +41,7 @@ Note: This class we are meeting in rm. 2333 Pavillion André Aisenstadt.
   * Slack ([](#slack_channels))
   * Git repos ([](#fall2017-git))
   * How to get and give help ([](#help))
-  * Grading scheme [](http://duckietown.org/classes/2017/17-Montreal/description/)
+  * [Grading scheme](http://duckietown.org/classes/2017/17-Montreal/description/)
 
 * Student/Staff Introductions
 
