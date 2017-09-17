@@ -40,24 +40,23 @@ sends two different signals to left and right motor such that the robot moves in
 a straight line when you command it to.
 
 The relationship between the velocities and the voltages of left and right motors
-are defined as:
+are:
 
 \begin{align*}
-    V_{\text{right}} &= (g + t) * (v + \dfrac{1}{2} \omega l ) \\
-    V_{\text{left}} &= (g - t) * (v - \dfrac{1}{2} \omega l )
+    V_{\text{right}} &= (g + r) * (v + \dfrac{1}{2} \omega l ) \\
+    V_{\text{left}} &= (g - r) * (v - \dfrac{1}{2} \omega l )
 \end{align*}
 
 where $V_{\text{right}}$ and $V_{\text{left}}$ are the voltages for the two motors, $g$ is
-called *gain*, $t$ is called *trim*, $v$ and $\omega$ are the desired linear
+called *gain*, $r$ is called *trim*, $v$ and $\omega$ are the desired linear
 and the angular velocity of the robot, and $l$ is the distance between the two
 wheels. The gain parameter $g$ controls the maximum speed of the robot.
 With $g > 1.0$, the vehicle goes faster given the same velocity command,
-and for $g < 1.0$ it goes slower. The trim parameter $t$ controls the balance
-between the two motors. With $t > 0$, the right wheel will turn slightly more
-than the left wheel given the same velocity command; with $t < 0$, the left
+and for $g < 1.0$ it goes slower. The trim parameter $r$ controls the balance
+between the two motors. With $r > 0$, the right wheel will turn slightly more
+than the left wheel given the same velocity command; with $r < 0$, the left
 wheel will turn slightly more the right wheel.
 
-Comment: $t$ should always be time; bad choice for the parameter name - AC
 
 ## Perform the Calibration
 
@@ -125,7 +124,7 @@ continue with the next step.
 
 #### Step 7
 
-If the Duckiebot drifted to the left side of the tape, decrease the value of $t$,
+If the Duckiebot drifted to the left side of the tape, decrease the value of $r$,
 by running, for example:
 
     duckiebot $ rosservice call /![robot name]/inverse_kinematics_node/set_trim -- -0.1
@@ -134,7 +133,7 @@ by running, for example:
 #### Step 8
 
 If the Duckiebot drifted to the right side of the tape, increase the value of
-$t$, by running, for example:
+$r$, by running, for example:
 
     duckiebot $ rosservice call /![robot name]/inverse_kinematics_node/set_trim -- 0.1
 
