@@ -51,7 +51,7 @@ When it shows "uncheck settings that should not be changed", just click OK.
 
 ## Set shortcuts for LiClipse
 
-Go to "window/preferences".
+Go to "window/preferences/General/Keys".
 
 Find "print", and unbind it.
 
