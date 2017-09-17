@@ -138,15 +138,8 @@ automatic-compile-master-html:
 	date >> $(log-master-html)
 	nice -n 10 $(MAKE) master-html
 	echo "  succeded html " >> $(log-master-html)
-	#-$(MAKE) fall2017
-	#echo "  succeded fall 2017" >> $(log)
-	#-$(MAKE) upload
-	#echo "  succeded upload " >> $(log)
-	#nice -n 10 $(MAKE) split-imprecise
 	nice -n 10 $(MAKE) master-split
 	echo "  succeded split " >> $(log-master-html)
-#	-$(MAKE) upload
-#	echo "  succeded html upload " >> $(log-master-html)
 	date >>$(log-master-html)
 	echo "Done." >> $(log-master-html)
 
@@ -171,10 +164,10 @@ upload:
 	#git -C duckuments-dist pull -X ours
 	echo ignoring errors
 
-	-git -C duckuments-dist add master
-	-git -C duckuments-dist add fall2017
-	-git -C duckuments-dist commit -a -m "automatic compilation $(shell date)"
-	-git -C duckuments-dist push --force
+	git -C duckuments-dist add master
+	git -C duckuments-dist add fall2017
+	git -C duckuments-dist commit -a -m "automatic compilation $(shell date)"
+	git -C duckuments-dist push --force
 
 
 clean:
