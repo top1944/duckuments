@@ -3,6 +3,10 @@ set -ux
 
 jobname=$1
 target=$2
+delay=$3
+
+echo Sleeping for $delay seconds
+sleep $delay
 
 ROOT=$(realpath `dirname $0`/../..)
 
