@@ -230,7 +230,7 @@ Set the permissions on the new file to 0600.
 
     sudo chmod 0600 /etc/NetworkManager/system-connections/eduroam
 
-### Option 2.b): `eduroam` WiFi (UdeM/McGill instructions){status=draft}
+### Option 2.b): `eduroam` WiFi (UdeM/McGill instructions) {status=draft}
 
 Save the following block as new file in `/etc/NetworkManager/system-connections/eduroam-![USERNAME]`:
 where USERNAME is the your logged-in username in the duckiebot. 
