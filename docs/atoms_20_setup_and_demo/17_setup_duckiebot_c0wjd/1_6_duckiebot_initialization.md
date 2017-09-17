@@ -122,7 +122,7 @@ Please see [](#byobu) for an introduction to Byobu.
 
 Doubt: Not sure it's a good idea to boot into Byobu. -??
 
-## (For `D17-0+w`) Configure the robot-generated network
+## (For `C0+w`) Configure the robot-generated network
 
 The Duckiebot in configuration `D17-C0+w` can create a WiFi network.
 
