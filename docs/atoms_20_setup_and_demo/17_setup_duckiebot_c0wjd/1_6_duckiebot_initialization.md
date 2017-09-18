@@ -157,8 +157,6 @@ Then, edit the connection file
 
     /etc/NetworkManager/system-connections/create-5ghz-network
 
-Doubt: where is this file exactly? I can't find the ~/etc folder at all
-
 Make the following changes:
 
 * Where it says `interface-name=![...]`, put "`wlx![AABBCCDDEEFFGG]`".
@@ -488,9 +486,11 @@ Add the public key to your Github account.
 
 See: The procedure is documented in [](#howto-add-pubkey-to-github).
 
-If the step is done correctly, this command should succeed:
+If the step is done correctly, the following command should succeed and give you a welcome message:
 
     duckiebot $ ssh -T git@github.com
+    Hi ![username]! You've successfully authenticated, but GitHub does not provide shell access.
+ 
 
 ### Local Git configuration
 
@@ -578,3 +578,7 @@ or entirely [uninstall your NTP service and manually grab the time on reboot][ar
 
 [art1]: https://raspberrypi.stackexchange.com/questions/59860/time-and-timezone-issues-on-pi
 [art2]: https://unix.stackexchange.com/questions/251519/setting-time-and-date-without-using-ntp
+
+Symptom: Cannot find `/etc` folder for configuring the Wi-Fi. I only see `Desktop`, `Downloads` when starting up the Duckiebot. 
+
+Resolution: If a directory name starts with `/`, it's not supposed to be in the home directory, but rather at the root of the filesystem. You are currently in `/home/ubuntu`. Type `ls /` to see the folders at the root, including `/etc.  
