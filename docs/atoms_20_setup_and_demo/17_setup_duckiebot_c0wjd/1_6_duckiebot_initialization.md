@@ -577,6 +577,6 @@ or entirely [uninstall your NTP service and manually grab the time on reboot][ar
 [art1]: https://raspberrypi.stackexchange.com/questions/59860/time-and-timezone-issues-on-pi
 [art2]: https://unix.stackexchange.com/questions/251519/setting-time-and-date-without-using-ntp
 
-Symptom: Cannot find `/etc` folder for configuring the Wi-Fi. I only see `/Desktop`, `/Downloads` and `rtl8822bu` when starting up the Duckiebot. 
+Symptom: Cannot find `/etc` folder for configuring the Wi-Fi. I only see `Desktop`, `Downloads` when starting up the Duckiebot. 
 
-Resolution: You are actually in `/home/ubuntu`. Type `cd /` on the Duckiebot, then `ls` to see `/etc.  
+Resolution: If a directory name starts with `/`, it's not supposed to be in the home directory, but rather at the root of the filesystem. You are currently in `/home/ubuntu`. Type `ls /` to see the folders at the root, including `/etc.  
