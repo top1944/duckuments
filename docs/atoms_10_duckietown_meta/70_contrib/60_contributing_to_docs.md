@@ -9,7 +9,8 @@ The documentation is written as a series of small files in Markdown format.
 It is then processed by a series of scripts to create this output:
 
 * [a publication-quality PDF][master-pdf];
-* [an online HTML version, split in multiple pages and with comments boxes][master-split].
+* [an online HTML version, split in multiple pages][master-split];
+* [a one-page version][master-html].
 
 [master-pdf]: http://book.duckietown.org/master/duckiebook.pdf
 [master-html]: http://book.duckietown.org/master/duckiebook.html
@@ -111,7 +112,7 @@ You also should run:
 
     $ pip install -U SystemCmd==2.0.0
 
-## Compiling the documentation
+## Compiling the documentation (updated Sep 12) {#compiling-master status=recently-updated }
 
 <div class="check" markdown="1">
 
@@ -123,12 +124,13 @@ this by checking which `python` is active:
 
 </div>
 
+<!--
 Then:
 
     $ cd ~/duckuments
-    $ make duckuments-dist
+    $ mkdir duckuments-dist
 
-This creates the directory `duckuments-dist`, which contains
+ This creates the directory `duckuments-dist`, which contains
 the "live" website published by Github using the "Github Pages" mechanism at the URL `book.duckietown.org`.
 
 <div class="check" markdown="1">
@@ -138,27 +140,40 @@ At this point, please make sure that you have these two `.git` folders:
     ~/duckuments/.git
     ~/duckuments/duckuments-dist/.git
 
-</div>
+</div> -->
 
-To compile the docs, run `make clean compile`:
+To compile the master versions of the docs, run:
 
-    $ make clean compile
+    $ make master-clean master
 
 To see the result, open the file
 
     ./duckuments-dist/master/duckiebook/index.html
 
-### Incremental compilation
-
 If you want to do incremental compilation, you can omit the `clean` and just
 use:
 
-    $ make compile
+    $ make master
 
 This will be faster. However, sometimes it might get confused. At that point,
-do `make clean`.
+do `make master-clean`.
 
-### Single-file compilation
+### Compiling the Fall 2017 version only (introduced Sep 12) {#compiling-fall2017 status=recently-updated}
+
+To compile the Fall 2017 versions of the docs, run:
+
+    $ make fall2017-clean fall2017
+
+To see the result, open the file
+
+    ./duckuments-dist/master/duckiebook/index.html
+
+
+For incremental compilation, use:
+
+    $ make fall2017
+
+### Single-file compilation {#compile-single-file}
 
 There is also the option to compile one single file.
 
@@ -172,17 +187,19 @@ This is the fastest way to see the results of the editing; however, there are li
 - not all images might be found.
 
 
-## The workflow to edit documentation.
+## The workflow to edit documentation (updated Sep 12) {#workflow status=recently-updated}
 
 This is the basic workflow:
 
-1. Edit the Markdown in the `master` branch of the `duckuments` repository.
-2. Run `make compile` to make sure it compiles.
-3. Commit the Markdown and push on the `master` branch.
+1. Create a branch called `![yourname]-branch` in the `duckuments` repository.
+1. Edit the Markdown in the `![yourname]-branch` branch.
+2. Run `make master` to make sure it compiles.
+3. Commit the Markdown and push on the `![yourname]-branch`  branch.
+4. Create a pull request.
+5. Tag the group `duckietown/gardeners`.
 
-Done. A bot will redo the compilation and push it to `book.duckietown.org`.
 
-Step 2 is there so you know that the bot will not encounter errors.
+See: Create a pull request from the command-line using [`hub`](#hub).
 
 ## Reporting problems
 

@@ -1,5 +1,5 @@
 
-# VIM {#vim}
+# VIM {#vim status=ready}
 
 Assigned: Andrea
 
@@ -18,7 +18,7 @@ Install like this:
     $ sudo apt install vim
 
 
-## `vi` {#vi}
+## `vi` {#vi status=draft}
 
 TODO: to write
 
@@ -35,7 +35,7 @@ Suggested `~/.vimrc`:
 
 <!-- autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,( -->
 
-## Visual mode
+## Visual mode {status=draft}
 
 TODO: to write
 

@@ -1,4 +1,4 @@
-# Probability basics {#probability_basics}
+# Probability basics {#probability_basics status=beta}
 
 
 In this chapter we give a brief review of some basic probabilistic concepts. For a more in-depth treatment of the subject we refer the interested reader to a textbook such as [](#bib:Papoulis).

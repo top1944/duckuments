@@ -1,4 +1,4 @@
-# Sets {#sets}
+# Sets {#sets status=draft}
 
 <div class='requirements' markdown='1'>
 
@@ -15,7 +15,7 @@ A set $\aset{X} = \{x_1, x_2, \dots\}$ is a well-defined collection of distinct 
 
 
 
-# Maps {#maps}
+# Maps {#maps status=draft}
 
 <div class='requirements' markdown='1'>
 
@@ -51,7 +51,7 @@ TODO: to write
 TODO: to write
 
 
-# Numbers
+# Numbers {#numbers status=draft}
 
 <div class='requirements' markdown='1'>
 

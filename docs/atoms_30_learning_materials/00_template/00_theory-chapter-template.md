@@ -1,4 +1,4 @@
-# Chapter template {#theory-chapter-template}
+# Chapter template {#theory-chapter-template status=ready}
 
 Theory chapters benefit from a standardized exposition. Here, we define the template for these chapters. Rememeber to check [](#sec:documentation-manual) for a comprehensive and up-to-date list of Duckiebook supported features.
 
@@ -26,7 +26,7 @@ Knowledge necessary:
 
 Required Reading: Insert here a list of topics and suggested resources related to _necessary_ knowledge in order to understand the content presented. Example:
 
-Requires: Terminology: [autonomy overview](#autonomy_overview)
+Requires: Terminology: [autonomy overview](#autonomy-overview)
 
 Requires: System Modeling: [basic kinematics](#basic_kinematics), [basic dynamics](#basic_dynamics), [linear algebra](#linear_algebra), [State space representations](), [Linear Time Invariant Systems]()
 

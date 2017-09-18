@@ -1,4 +1,4 @@
-# Setup Github access {#github-access}
+# Setup Github access {#github-access status=ready}
 
 Assigned: Andrea
 

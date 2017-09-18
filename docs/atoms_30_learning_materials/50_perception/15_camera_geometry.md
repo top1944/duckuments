@@ -1,4 +1,4 @@
-# Camera geometry
+# Camera geometry {#camera-geometry status=draft}
 
 Assigned: Matt
 

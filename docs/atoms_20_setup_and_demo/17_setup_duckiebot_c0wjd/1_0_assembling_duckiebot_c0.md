@@ -19,15 +19,15 @@ Requires: Having installed the image on the MicroSD card. The instructions on ho
 
 Requires: Time: about 40 minutes.
 
-Results:  An assembled Duckiebot in configuration `C0+wjd`.
+Results: An assembled Duckiebot in configuration `C0+wjd`.
 
 </div>
 
 Comment: add "next step(s)" as a standard field in the requirements class? -JT
 
-Comment: Notes - if we have the bumpers, at what point should we add them? I think that the battery could actually be attached before the levels of the chassis are joined. I found it hard to mount the camera (the holes weren't lining up). the long camera cable is a bit annoying - I folded it and shoved it in between two hats. We should decide if PWM hat is part of this configuration, why not leave it for now and forget about the spliced cable for the class. I found that the screwdriver that comes with the chassis kit is too fat to screw in the wires on the hat. The picture of where to put the ziptie for the battery is not very clear. need something to cut the end of the ziptie with.
+Comment: Notes - if we have the bumpers, at what point should we add them? I think that the battery could actually be attached before the levels of the chassis are joined. I found it hard to mount the camera (the holes weren't lining up). the long camera cable is a bit annoying - I folded it and shoved it in between two hats. We should decide if PWM hat is part of this configuration, why not leave it for now and forget about the spliced cable for the class. I found that the screwdriver that comes with the chassis kit is too fat to screw in the wires on the hat. The picture of where to put the zip tie for the battery is not very clear. need something to cut the end of the zip tie with.
 
-Comment: In general I would recommend having diagonal pliers as well as a few mini screwdrivers at hand. Both can be obtained from a local dollar store for about 6$ total. The pliers / cutters are required either for making your own power cord or for cutting the zipties after they've been attached to the chassis (because they are too long). The screwdrivers are required for tightening the screws on the hats after the cables have been plugged in because the chassis screwdriver is too wide for that.
+Comment: In general I would recommend having diagonal pliers as well as a few mini screwdrivers at hand. Both can be obtained from a local dollar store for about 6$ total. The pliers / cutters are required either for making your own power cord or for cutting the zip ties after they've been attached to the chassis (because they are too long). The screwdrivers are required for tightening the screws on the hats after the cables have been plugged in because the chassis screwdriver is too wide for that.
 
 ## Chassis
 
@@ -132,11 +132,15 @@ Materials:
 * Soldered PWM/Servo HAT and Soldered Stepper Motor HAT,
 * 1 Male-male wire,
 * Standoffs
+* Heat sinks
 -->
 
 ### Raspberry Pi
 
-The first step is to install the heat sinks on the Raspberry Pi. Start by removing the covering from the adhesive layer on the bottom on the larger heat sink. Place the larger heat sink on the Broadcom SoC. Repeat this process, placing the smaller heat sink on the LAN chip.
+Before attaching anything to the Raspberry Pi you should add the heat sinks to it. There are 2 small sinks and a big one. The big one best fits onto the processor (the big "Broadcom"-labeled chip in the center of the top of the Raspberry Pi). One of the small ones can be attached to the small chip that is right next to the Broadcom chip. The third heat sink is optional and can be attached to the chip on the underside of the Raspberry Pi. Note that the chip on the underside is bigger than the heat sink. Just mount the heat sink in the center and make sure all of them are attached tightly.
+
+When this is done fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on the opposite side of the chassis-up.
+
 
 <div figure-id="fig:Raspberry_pi3_parts" figure-caption=" ">
      <img src="RPi_3_parts.jpg" style='width: 30em'/>
@@ -145,8 +149,6 @@ The first step is to install the heat sinks on the Raspberry Pi. Start by removi
 <div figure-id="fig:Raspberry_pi3_heatsinks" figure-caption=" ">
      <img src="RPi_3_heatsinks.jpg" style='width: 30em'/>
 </div>
-
-Second, fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on the opposite side of the chassis-up.
 
 <div figure-id="fig:SideView_Raspberry_pi3" figure-caption=" ">
      <img src="side_RPi_3.jpg" style='width: 30em'/>
@@ -209,14 +211,14 @@ _Notice: make sure that the cable is oriented in this direction (writing towards
 
 ### Assemble chassis-bottom and chassis-up
 
-#### Arrange the motor wires through the chassis-up, which will be connected to Stepper Motor HAT later.
+Arrange the motor wires through the chassis-up, which will be connected to Stepper Motor HAT later.
 
 <div figure-id="fig:bottom_up_enssemble" figure-caption=" ">
      <img src="bottom_up_enssemble.jpg" style='width: 30em'/>
 </div>
 
 
-#### Extending the intra-decks standoffs
+### Extending the intra-decks standoffs
 
 
 In order to fit the battery, we will need to extend the Magician Chassis standoffs with the provided nylon standoff spacers. Grab 4 of them, and secure them to one end of the long metal standoffs provided in the Magician Chassis package.
@@ -250,13 +252,17 @@ Place the camera cable properly when you mount the HAT on the Raspberry Pi.
 
 ### Connect the motor's wires to the terminal
 
-#### We are using M1 and M2. The left (in robot frame) motor is connected to M1 and the right motor is connected to M2. If you have followed Part A correctly, the wiring order will look like as following pictures:
-LeftMotor:Red - LeftMotor:Black - RightMotor:Black - RightMotor:Red
+We are using M1 and M2. The left (in robot frame) motor is connected to M1 and the right motor is connected to M2. If you have followed Part A correctly, the wiring order will look like as following pictures:
+
+- Left Motor: Red
+- Left Motor: Black
+- Right Motor: Black
+- Right Motor:Red
 
 
-####  Find a male-male wire (power from HAT to HAT) and connect it to +5V input as below. The other end will be connected to the upper layer, which delivers the power to the motor HAT.
+Find a male-male wire (power from HAT to HAT) and connect it to +5V input as below. The other end will be connected to the upper layer, which delivers the power to the motor HAT.
 
-_Notice:You will need the screwdriver from the Magician Chassis package._
+Note: In order to fully tighten the screw terminal connectors, you will need a screwdriver with a maximum shaft diameter of 1.9mm. The provided screwdriver exceeds this width, and will not be able to fully tighten the screw terminal. When fastened, the top of the screw head should be seated at least 2mm below the deck of the screw terminal block.
 
 <div figure-id="fig:ServoHAT_wiring" figure-caption=" ">
      <img src="ServoHAT_wiring.jpg" style='width: 30em'/>

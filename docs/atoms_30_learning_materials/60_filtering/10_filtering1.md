@@ -1,4 +1,4 @@
-# Filtering 1 {#filtering1}
+# Filtering 1 {#filtering1 status=draft}
 
 Assigned: Liam
 
@@ -11,5 +11,3 @@ TODO: Graphical representation
 TODO: Kalman Filter
 
 TODO: Extended Kalman Filter
-
-

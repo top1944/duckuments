@@ -1,4 +1,4 @@
-# Working with YAML files
+# Working with YAML files {#working-with-YAML-files status=draft}
 
 YAML files are useful for writing configuration files, and are used a lot
 in Duckietown.

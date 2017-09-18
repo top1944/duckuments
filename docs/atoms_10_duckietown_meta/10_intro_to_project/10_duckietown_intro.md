@@ -1,6 +1,6 @@
 #  The Duckietown project {#part:duckietown-project}
 
-# What is Duckietown? {status=beta}
+# What is Duckietown? {#what-is-duckietown status=beta}
 
 ## Goals and objectives
 

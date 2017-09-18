@@ -4,12 +4,12 @@ This unit contains all necessary info specific for students at Univeristé de Mo
 
 ## Website
 
-The official course website is [](http://duckietown.org/classes/2017/17-Montreal/).
+[This is the official course website](http://duckietown.org/classes/2017/17-Montreal/).
 It contains links to the the syllabus and description and other important info.
 
 ## Class Schedule
 
-The authoritative class schedule will be tracked here [](#schedule_UDEM).
+The authoritative class schedule will be tracked in [](#schedule_UDEM).
 This will contain all lecture material, homeworks, checkoffs, and labs.
 
 ## Lab Access
@@ -21,7 +21,7 @@ The code for the door is XXX. Please do not distribute the code for the door, we
 
 The TA for the class is Florian Golemo. All communications with the course staff should happen through Slack.
 
-The instructor is Prof. Liam Paull who's office is 2347 Pavillion André-Aisenstadt.
+The instructor is Prof. Liam Paull, whose office is 2347 Pavillion André-Aisenstadt.
 
 ## Storing Your Robot
 

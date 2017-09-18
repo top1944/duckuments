@@ -1,4 +1,4 @@
-# Liclipse {#liclipse}
+# Liclipse {#liclipse status=ready}
 
 
 ## Why using IDEs
@@ -42,7 +42,11 @@ Now you can run it using `liclipse`:
 
 When it runs for the first time, choose "use this as default" and click "launch".
 
-Choose "import existing project into workspace". Select the folder `~/duckietown`.
+Choose "Import-> General -> Existing project into workspace". Select the folder `~/duckietown`.
+
+Comment: Only Import -> General -> Projects from Folder or Archive, selecting `~/duckuments` worked for me. JT
+
+Comment: This is not about the duckuments, it's for `duckietown` - AC
 
 If it asks about interpreters, select "auto config".
 
@@ -51,7 +55,7 @@ When it shows "uncheck settings that should not be changed", just click OK.
 
 ## Set shortcuts for LiClipse
 
-Go to "window/preferences".
+Go to "window/preferences/General/Keys".
 
 Find "print", and unbind it.
 
@@ -123,4 +127,4 @@ From the "Preferences" section, it's suggested to:
 
 
 Then, there is the issue of "code completion". This is a love-it-or-hate-it
-issue. The choice is yours. 
+issue. The choice is yours.

@@ -17,7 +17,7 @@ when you command it to. Set the maximum speed of the Duckiebot.
 The motors used on the Duckiebots are called "Voltage-controlled motors".
 This means that the velocity of each motor is directly proportional to the
 voltage it is subject to. Even though we use the same model of motor for left
-and right wheel, they are exactly the same. In particular, every motor responds
+and right wheel, they are not exactly the same. In particular, every motor responds
 to a given voltage signal in a slightly different way. Similarly, the wheels
 that we are using look "identical", but they might be slightly different.
 
@@ -40,24 +40,23 @@ sends two different signals to left and right motor such that the robot moves in
 a straight line when you command it to.
 
 The relationship between the velocities and the voltages of left and right motors
-are defined as:
+are:
 
 \begin{align*}
-    V_{\text{right}} &= (g + t) * (v + \dfrac{1}{2} \omega l ) \\
-    V_{\text{left}} &= (g - t) * (v - \dfrac{1}{2} \omega l )
+    V_{\text{right}} &= (g + r) * (v + \dfrac{1}{2} \omega l ) \\
+    V_{\text{left}} &= (g - r) * (v - \dfrac{1}{2} \omega l )
 \end{align*}
 
 where $V_{\text{right}}$ and $V_{\text{left}}$ are the voltages for the two motors, $g$ is
-called *gain*, $t$ is called *trim*, $v$ and $\omega$ are the desired linear
+called *gain*, $r$ is called *trim*, $v$ and $\omega$ are the desired linear
 and the angular velocity of the robot, and $l$ is the distance between the two
 wheels. The gain parameter $g$ controls the maximum speed of the robot.
 With $g > 1.0$, the vehicle goes faster given the same velocity command,
-and for $g < 1.0$ it goes slower. The trim parameter $t$ controls the balance
-between the two motors. With $t > 0$, the right wheel will turn slightly more
-than the left wheel given the same velocity command; with $t < 0$, the left
+and for $g < 1.0$ it goes slower. The trim parameter $r$ controls the balance
+between the two motors. With $r > 0$, the right wheel will turn slightly more
+than the left wheel given the same velocity command; with $r < 0$, the left
 wheel will turn slightly more the right wheel.
 
-Comment: $t$ should always be time; bad choice for the parameter name - AC
 
 ## Perform the Calibration
 
@@ -108,10 +107,8 @@ the Duckiebot drifted ([](#fig:wheel_calibration_lr_drift)).
 
 #### Step 6
 
-Measure the distance between the tape and the Duckiebot after it traveled for
-about 2 meters ([](#fig:wheel_calibration_measuring_drift)).
-
-Comment: It's unclear what is the distance - from where to where. Presumably, center of axle? - AC
+Measure the distance between the center of the tape and the center of the axle of 
+the Duckiebot after it traveled for about 2 meters ([](#fig:wheel_calibration_measuring_drift)).
 
 Make sure that the ruler is orthogonal to the tape.
 
@@ -119,15 +116,15 @@ Make sure that the ruler is orthogonal to the tape.
      <img src="wheel_calibration_measuring_drift.jpg" style='width: 30em'/>
 </div>
 
-If the Duckiebot drifted by less than $15$ centimeters you can stop calibrating
-the trim parameter. A drift of $15$ centimeters in a $2$ meters run is good
-enough for Duckietown. If the Duckiebot drifted by more than $15$ centimeters,
+If the Duckiebot drifted by less than $10$ centimeters you can stop calibrating
+the trim parameter. A drift of $10$ centimeters in a $2$ meters run is good
+enough for Duckietown. If the Duckiebot drifted by more than $10$ centimeters,
 continue with the next step.
 
 
 #### Step 7
 
-If the Duckiebot drifted to the left side of the tape, decrease the value of $t$,
+If the Duckiebot drifted to the left side of the tape, decrease the value of $r$,
 by running, for example:
 
     duckiebot $ rosservice call /![robot name]/inverse_kinematics_node/set_trim -- -0.1
@@ -136,7 +133,7 @@ by running, for example:
 #### Step 8
 
 If the Duckiebot drifted to the right side of the tape, increase the value of
-$t$, by running, for example:
+$r$, by running, for example:
 
     duckiebot $ rosservice call /![robot name]/inverse_kinematics_node/set_trim -- 0.1
 

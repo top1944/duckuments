@@ -1,4 +1,4 @@
-# Image filtering
+# Image filtering {#image-filtering status=draft}
 
 Assigned: Matt
 

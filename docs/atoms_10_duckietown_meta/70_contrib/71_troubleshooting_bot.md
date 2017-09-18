@@ -1,4 +1,4 @@
-# The Duckuments bot {#duckuments-bot status=beta}
+# The Duckuments bot {#duckuments-bot status=ready}
 
 Note: This is an advanced section mainly for Liam.
 
@@ -19,11 +19,12 @@ Every minute, it tries to do the following:
 1. It compiles the various versions;
 1. It uploads the results to a repository called `duckuments-dist`.
 
-This process takes 5 minutes for an incremental change, and about 20 minutes
+This process takes 4 minutes for an incremental change, and about 10-15 minutes
 for a big change, such as a change in headers IDs, which implies re-checking all cross-references.
 
+<!-- 
 Moreover, every 2 hours, all processes are killed, all intermediate files are deleted,
-and the compilation starts from scratch. This might take about 30 minutes.
+and the compilation starts from scratch. This might take about 30 minutes. -->
 
 ## Logging
 
@@ -56,9 +57,9 @@ and the next iteration will take longer because it starts from scratch.
 
 [The last log][last] is a live version of the compilation log. This might not be tremendously informative because it is very verbose.
 
-[compilation]: http://frankfurt.co-design.science/~duckietown/logs/compilation.log
+[compilation]: http://frankfurt.co-design.science/~duckietown/duckuments/misc/bot/logs/fall2017/compilation.log
 
-[last]: http://frankfurt.co-design.science/~duckietown/logs/last.log
+[last]: http://frankfurt.co-design.science/~duckietown/duckuments/misc/bot/logs/fall2017/last.log
 
 
 ## Debugging Github Pages problems
@@ -66,7 +67,7 @@ and the next iteration will take longer because it starts from scratch.
 Sometimes, it's Github Pages that lags behind.
 
 To check this, the bot also makes available the compilation output as a website
-called `book2.duckietown.org`. You can take any URL starting with `book.duckietown.org`,
-put `book2`, and you will see what is on the server.
+called `book2.duckietown.org`. You can take any URL starting with
+`book.duckietown.org`, put `book2`, and you will see what is on the server.
 
 This can identify if the problem is Github.

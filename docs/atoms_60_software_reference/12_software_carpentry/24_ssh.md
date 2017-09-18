@@ -1,8 +1,8 @@
-# Accessing computers using SSH {#ssh}
+# Accessing computers using SSH {#ssh status=ready}
 
 Assigned: Andrea
 
-## Background reading
+## Background reading {status=draft}
 
 TODO: to write
 
@@ -10,7 +10,7 @@ TODO: to write
 - Public key authentication
 
 
-## Installation of SSH
+## Installation of SSH {status=draft}
 
 This installs the client:
 
@@ -225,6 +225,6 @@ In doubt, these lines fix the permissions for your `.ssh` directory.
 
 
 
-## `ssh-keygen` {#ssh-keygen}
+## `ssh-keygen` {#ssh-keygen status=draft}
 
 TODO: to write
