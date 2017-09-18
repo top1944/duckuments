@@ -131,12 +131,12 @@ Public speaking is a valuable interpersonal skill useful beyond robotics.
 
 </div>
 
-In Duckietown we formalize didactic indivisible units, or [_atoms_](#knowledge-graph), aimed at improving skills through knowledge and practice. Knowledge atoms are listed in [](). We define as practice atoms:
+In Duckietown we formalize didactic indivisible units, or [_atoms_](#knowledge-graph), aimed at improving skills through knowledge and practice. Knowledge atoms are listed in XXX. We define as practice atoms:
 
 TODO: add general reference to all learning atmos, folder atoms_30_learning_material
 
 \begin{definition}[Exercise]    \label{def:exercise}
-An exercise is a practice atom aimed at improving technical skills. Exercises are listed in []().
+An exercise is a practice atom aimed at improving technical skills. Exercises are listed in XXX.
 \end{definition}
 
 Exercises are targeted to different "things" to which technical skills are related. They may be mathematical exercises aimed at practicing a method, or they may be coding exercises aimed at practicing resolutions of hardware implementation challenges.

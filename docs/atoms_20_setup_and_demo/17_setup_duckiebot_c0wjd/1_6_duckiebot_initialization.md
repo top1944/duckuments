@@ -122,9 +122,9 @@ Please see [](#byobu) for an introduction to Byobu.
 
 Doubt: Not sure it's a good idea to boot into Byobu. -??
 
-## (For `D17-0+w`) Configure the robot-generated network
+## (For `C0+w`) Configure the robot-generated network
 
-The Duckiebot in configuration `D17-C0+w` can create a WiFi network.
+The Duckiebot in configuration `C0+w` can create a WiFi network.
 
 It is a 5 GHz network; this means that you need to have a 5 GHz
 WiFi adapter in your laptop.
@@ -181,7 +181,7 @@ You are connected to the Duckiebot via WiFi, but the Duckiebot also needs to con
 
 Check with your phone or laptop if there is a WiFi in reach with the name of `duckietown`. If there is, you are all set. The defaut configuration for the Duckiebot is to have one WiFi adapter connect to this network and the other broadcast the access point which you are currently connected to.
 
-### Option 2.a): `eduroam` WiFi (Non-UdeM/McGill instructions){status=draft}
+### Option 2.a): `eduroam` WiFi (Non-UdeM/McGill instructions) {status=draft}
 
 If there should be no `duckietown` network in reach then you have to manually add a network configuration file for the network that you'd like to connect to. Most universities around the world should have to `eduroam` network available. You can use it for connecting your Duckiebot.
 
@@ -226,7 +226,11 @@ Save the following block as new file in `/etc/NetworkManager/system-connections/
     dns-search=
     method=auto
 
-### Option 2.b): `eduroam` WiFi (UdeM/McGill instructions){status=draft}
+Set the permissions on the new file to 0600.
+
+    sudo chmod 0600 /etc/NetworkManager/system-connections/eduroam
+
+### Option 2.b): `eduroam` WiFi (UdeM/McGill instructions) {status=draft}
 
 Save the following block as new file in `/etc/NetworkManager/system-connections/eduroam-![USERNAME]`:
 where USERNAME is the your logged-in username in the duckiebot. 
@@ -270,7 +274,9 @@ where USERNAME is the your logged-in username in the duckiebot.
     dns-search=
     method=auto
 
+Set the permissions on the new file to 0600.
 
+    sudo chmod 0600 /etc/NetworkManager/system-connections/eduroam-![USERNAME]
 
 ### Option 3: custom WiFi {status=draft}
 
@@ -322,6 +328,10 @@ Save the following block as new file in `/etc/NetworkManager/system-connections/
     ip6-privacy=0
     method=auto
 
+
+Set the permissions on the new file to 0600.
+
+    sudo chmod 0600 /etc/NetworkManager/system-connections/BELL343
 
 ## Update the system
 
@@ -476,9 +486,11 @@ Add the public key to your Github account.
 
 See: The procedure is documented in [](#howto-add-pubkey-to-github).
 
-If the step is done correctly, this command should succeed:
+If the step is done correctly, the following command should succeed and give you a welcome message:
 
     duckiebot $ ssh -T git@github.com
+    Hi ![username]! You've successfully authenticated, but GitHub does not provide shell access.
+ 
 
 ### Local Git configuration
 
@@ -566,3 +578,7 @@ or entirely [uninstall your NTP service and manually grab the time on reboot][ar
 
 [art1]: https://raspberrypi.stackexchange.com/questions/59860/time-and-timezone-issues-on-pi
 [art2]: https://unix.stackexchange.com/questions/251519/setting-time-and-date-without-using-ntp
+
+Symptom: Cannot find `/etc` folder for configuring the Wi-Fi. I only see `Desktop`, `Downloads` when starting up the Duckiebot. 
+
+Resolution: If a directory name starts with `/`, it's not supposed to be in the home directory, but rather at the root of the filesystem. You are currently in `/home/ubuntu`. Type `ls /` to see the folders at the root, including `/etc.  

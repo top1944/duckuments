@@ -14,6 +14,9 @@ Requires: Basic operating systems concepts.
 
 </div>
 
+
+
+
 ## Logical and physical architecture {#logical-vs-physical}
 
 When we design a robotic system, or any cyber-physical system, we distinguish
@@ -50,17 +53,15 @@ TODO: Brief discussion of actor model
 
 ## Physical architecture {#physical-architectures}
 
-Processors
+TODO: Processors
 
-Networks
+TODO: Buses / networks
 
-<!-- In a real-time system, -->
+TODO: Middleware
 
-Middleware
+TODO: Orchestrators
 
-Orchestrators
-
-In ROS that is the `roscore` program.
+TODO: In ROS that is the `roscore` program.
 
 ## Mapping logical architecture onto physical
 
@@ -117,6 +118,8 @@ the heavy computation processes run on the laptop, while the actuation and sensi
 
 ## Further reading
 
-* Daniel Lee book. Describes actor models and computation graphs.
-* A paper about the optimization of computation graph deployments.
-* Some generic reference about real-time systems.
+
+* E. A. Lee and S. A. Seshia, <a href="http://LeeSeshia.org">Embedded Systems -- A Cyber-Physical Systems Approach</a>, MIT Press, Second Edition, 2017.
+
+<!-- * A paper about the optimization of computation graph deployments. XXX
+* Some generic reference about real-time systems. XXX -->
