@@ -213,6 +213,8 @@ Now, from the `![local]` computer, try to log in into the `![remote]` one:
 
 This should succeed, and you should not be asked for a password.
 
+Doubt: You mean ![local] $ ssh ![remote-user]@![remote].local ?
+
 ## Fixing SSH Permissions {#howto-fix-ssh-permissions}
 
 Sometimes, SSH does not work because you have the wrong permissions on some
