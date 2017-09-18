@@ -141,8 +141,13 @@ Before attaching anything to the Raspberry Pi you should add the heat sinks to i
 
 When this is done fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on the opposite side of the chassis-up.
 
-<div figure-id="fig:Raspberry_pi3" figure-caption=" ">
-     <img src="RPi_3.jpg" style='width: 30em'/>
+
+<div figure-id="fig:Raspberry_pi3_parts" figure-caption=" ">
+     <img src="RPi_3_parts.jpg" style='width: 30em'/>
+</div>
+
+<div figure-id="fig:Raspberry_pi3_heatsinks" figure-caption=" ">
+     <img src="RPi_3_heatsinks.jpg" style='width: 30em'/>
 </div>
 
 <div figure-id="fig:SideView_Raspberry_pi3" figure-caption=" ">
