@@ -201,7 +201,7 @@ Will result in:
 
 <div class='requirements' markdown="1">
 
-Requires: In order to compile the figures into PDFs you need to have Inkscape installed. Instructions to download and install are [here](https://inkscape.org/en/release/0.92.2/).
+Requires: In order to compile the figures into PDFs you need to have Inkscape installed. Instructions to download and install Inkscape are [here](https://inkscape.org/en/release/0.92.2/).
 
 </div>
 
@@ -214,7 +214,7 @@ You can run:
 
 And the SVG file will be compiled into a PDF figure with the LaTeX commands properly interpreted.
 
-You can then include the PDF file in a normal way ([](#figures)) using `![filename].pdf` as the filename in the `img` tag.
+You can then include the PDF file in a normal way ([](#figures)) using `![filename].pdf` as the filename in the <code>&lt;img&gt;</code> tag.
 
 
 <div figure-id="fig:inkscape">
@@ -226,7 +226,7 @@ You can then include the PDF file in a normal way ([](#figures)) using `![filena
     </div>
     <div figure-id="subfig:2">
         <figcaption>Image as PDF after processing</figcaption>
-          <img src="sample.pdf" style='width: 20em'/>
+          <img src="sample.pdf" style='width: 20em; height: auto'/>
     </div>
 </div>
 
