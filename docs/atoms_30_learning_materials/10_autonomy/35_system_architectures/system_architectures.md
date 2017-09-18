@@ -118,6 +118,8 @@ the heavy computation processes run on the laptop, while the actuation and sensi
 
 ## Further reading
 
-* Daniel Lee book. Describes actor models and computation graphs. XXX
-* A paper about the optimization of computation graph deployments. XXX
-* Some generic reference about real-time systems. XXX
+
+* E. A. Lee and S. A. Seshia, <a href="http://LeeSeshia.org">Embedded Systems -- A Cyber-Physical Systems Approach</a>, MIT Press, Second Edition, 2017.
+
+<!-- * A paper about the optimization of computation graph deployments. XXX
+* Some generic reference about real-time systems. XXX -->
