@@ -486,9 +486,11 @@ Add the public key to your Github account.
 
 See: The procedure is documented in [](#howto-add-pubkey-to-github).
 
-If the step is done correctly, this command should succeed:
+If the step is done correctly, the following command should succeed and give you a welcome message:
 
     duckiebot $ ssh -T git@github.com
+    Hi ![username]! You've successfully authenticated, but GitHub does not provide shell access.
+ 
 
 ### Local Git configuration
 
