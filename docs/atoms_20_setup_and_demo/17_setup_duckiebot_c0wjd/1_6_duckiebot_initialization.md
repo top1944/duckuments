@@ -491,6 +491,8 @@ See: The procedure is documented in [](#howto-add-pubkey-to-github).
 If the step is done correctly, this command should succeed:
 
     duckiebot $ ssh -T git@github.com
+   
+Comment: What does succeed mean?
 
 ### Local Git configuration
 
