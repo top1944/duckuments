@@ -87,7 +87,7 @@ Occupancy grid representations discretize the world into a set of grid cells. As
 
 Comment: pictures for these two? -AC
 
-Feature-based models constitute the second commonly used environment representation. Feature-based representations model the environment as a collection of landmarks, and parameterize each in terms of the landmark's  position ($(x,y)$ or $(x,y,z)$ in $\reals^2 and $\reals^3$, respectively) and possibly its orientation.
+Feature-based models constitute the second commonly used environment representation. Feature-based representations model the environment as a collection of landmarks, and parameterize each in terms of the landmark's  position ($(x,y)$ or $(x,y,z)$ in $\reals^2$ and $\reals^3$, respectively) and possibly its orientation.
 
 
 Discuss:

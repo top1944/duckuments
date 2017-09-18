@@ -27,6 +27,10 @@ recipe:
 - make-part: intro-to-autonomy
   title: Introduction to autonomy
   contents:
+  - add: autonomous-vehicles
+  - add: autonomy-overview
+  - add: modern-robotic-systems
+  - add: autonomy-architectures
   - add: representations
 
 

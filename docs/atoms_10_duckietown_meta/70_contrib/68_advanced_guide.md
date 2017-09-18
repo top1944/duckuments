@@ -19,7 +19,7 @@ For example, this code:
     <div figure-id="fig:example-embed">
         <figcaption>Cool Duckietown by night</figcaption>
         <dtvideo src="vimeo:152825632"/>
-    </div>
+    </div> 
 
 produces this result:
 

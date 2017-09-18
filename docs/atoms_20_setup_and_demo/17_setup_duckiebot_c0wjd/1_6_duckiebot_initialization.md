@@ -40,21 +40,20 @@ The original was:
 It looks like that `curl` cannot be used with Drobpox links because it does not follow redirects.
 </div>
 
+To make sure that the image is downloaded correctly, compute its hash
+using the program `sha256sum`:
+
+    $ sha256sum duckiebot-RPI3-AD-2017-09-12.img.xz
+    7136f9049b230de68e8b2d6df29ece844a3f830cc96014aaa92c6d3f247b6130  duckiebot-RPI3-AD-2017-09-12.img.xz
+    
+Compare the hash that you obtain with the hash above. If they are different,
+there was some problem in downloading the image.
 
 Uncompress the file:
 
     $ xz -d -k duckiebot-RPI3-AD-2017-09-12.img.xz
 
 This will create a file of 11 GB in size.
-
-To make sure that the image is downloaded correctly, compute its hash
-using the program `sha256sum`:
-
-    $ sha256sum duckiebot-RPI3-AD-2017-09-12.img
-    c21a4cea17069bae6689dd36f81fe8463696959566d164e74ed475e3f1ad446d  duckiebot-RPI3-AD-2017-09-12.img
-
-Compare the hash that you obtain with the hash above. If they are different,
-there was some problem in downloading the image.
 
 Next, burn the image on disk.
 
@@ -123,9 +122,9 @@ Please see [](#byobu) for an introduction to Byobu.
 
 Doubt: Not sure it's a good idea to boot into Byobu. -??
 
-## (For `D17-0+w`) Configure the robot-generated network
+## (For `C0+w`) Configure the robot-generated network
 
-The Duckiebot in configuration `D17-C0+w` can create a WiFi network.
+The Duckiebot in configuration `C0+w` can create a WiFi network.
 
 It is a 5 GHz network; this means that you need to have a 5 GHz
 WiFi adapter in your laptop.
@@ -158,6 +157,8 @@ Then, edit the connection file
 
     /etc/NetworkManager/system-connections/create-5ghz-network
 
+Doubt: where is this file exactly? I can't find the ~/etc folder at all
+
 Make the following changes:
 
 * Where it says `interface-name=![...]`, put "`wlx![AABBCCDDEEFFGG]`".
@@ -182,7 +183,7 @@ You are connected to the Duckiebot via WiFi, but the Duckiebot also needs to con
 
 Check with your phone or laptop if there is a WiFi in reach with the name of `duckietown`. If there is, you are all set. The defaut configuration for the Duckiebot is to have one WiFi adapter connect to this network and the other broadcast the access point which you are currently connected to.
 
-### Option 2.a): `eduroam` WiFi (Non-UdeM/McGill instructions){status=draft}
+### Option 2.a): `eduroam` WiFi (Non-UdeM/McGill instructions) {status=draft}
 
 If there should be no `duckietown` network in reach then you have to manually add a network configuration file for the network that you'd like to connect to. Most universities around the world should have to `eduroam` network available. You can use it for connecting your Duckiebot.
 
@@ -227,7 +228,11 @@ Save the following block as new file in `/etc/NetworkManager/system-connections/
     dns-search=
     method=auto
 
-### Option 2.b): `eduroam` WiFi (UdeM/McGill instructions){status=draft}
+Set the permissions on the new file to 0600.
+
+    sudo chmod 0600 /etc/NetworkManager/system-connections/eduroam
+
+### Option 2.b): `eduroam` WiFi (UdeM/McGill instructions) {status=draft}
 
 Save the following block as new file in `/etc/NetworkManager/system-connections/eduroam-![USERNAME]`:
 where USERNAME is the your logged-in username in the duckiebot. 
@@ -271,7 +276,9 @@ where USERNAME is the your logged-in username in the duckiebot.
     dns-search=
     method=auto
 
+Set the permissions on the new file to 0600.
 
+    sudo chmod 0600 /etc/NetworkManager/system-connections/eduroam-![USERNAME]
 
 ### Option 3: custom WiFi {status=draft}
 
@@ -323,6 +330,10 @@ Save the following block as new file in `/etc/NetworkManager/system-connections/
     ip6-privacy=0
     method=auto
 
+
+Set the permissions on the new file to 0600.
+
+    sudo chmod 0600 /etc/NetworkManager/system-connections/BELL343
 
 ## Update the system
 
