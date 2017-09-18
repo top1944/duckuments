@@ -121,22 +121,6 @@ Comment: These spacers are not the ones provided in the box, change pic. -JT
 
 ## Assembling the Raspberry Pi, camera, and HATs
 
-<<<<<<< HEAD
-=======
-<!--
-Materials:
-
-* Chassis-up,
-* Camera and camera mount,
-* M3*10 flathead screws and M3 nuts from the Duckiebot package.
-* 4 M-F Nylon M3x5+6mm standoff spacers, 3x0.5mm screws, Nylon nuts
-* Raspberry Pi 3 – Model B
-* Soldered PWM/Servo HAT and Soldered Stepper Motor HAT,
-* 1 Male-male wire,
-* Standoffs
-* Heat sinks
--->
->>>>>>> 7d4eb37246fba87c21d753ae2fa3c47d72e55ae3
 
 ### Raspberry Pi
 
@@ -286,7 +270,6 @@ Put the battery between the upper and lower decks of the chassis. It is recommen
 
 ### Joypad
 
-<<<<<<< HEAD
 For each Joypad there is a corresponding Joypad dongle. Don't lose the dongle! Otherwise you will need to buy a new Joypad.
 <div figure-id="fig:joypad" figure-caption="All components in the Joypad package">
      <img src="joypad.jpg" style='width: 30em'/>
@@ -301,13 +284,7 @@ Insert 2AA batteries on the backside of the joypad
 <div figure-id="fig:joypack_battery" figure-caption="joypad and 2AA batteries">
      <img src="joypack_battery.jpg" style='width: 30em'/>
 </div>
-=======
-TODO: Connect the joypad dongle
 
-TODO: Insert 2AA batteries in the joypad
-
-TODO: Insert relevant pics
->>>>>>> 7d4eb37246fba87c21d753ae2fa3c47d72e55ae3
 
 
 ### Connect the power cables
@@ -315,16 +292,12 @@ You are now ready to secure the prepared power wires in [](#power-cable-prep-c0)
 
 Connect the battery with the DC motor HAT by making sure you plug the black wire in the pin labeled with a minus: - and the red wire to the plus: + ([](#figure:final-result-power-c0)).
 
-<<<<<<< HEAD
-Arrange all the cables properly so that the Duckiebot can run on the way without barrier.
+
+Fix all the cables on the Duckiebot so that it can run on the way without barrier.
 
 <div figure-id="fig:Stepper_cable" figure-caption="Insert the prepared power wire to DC motor HAT power pins.">
      <img src="Stepper_cable.jpg" style='width: 30em'/>
 </div>
 
 
-=======
-<div figure-id="fig:cable_wiring" figure-caption="TODO: will be replace by a new pic">
-     <img src="cable_wiring.jpg" style='width: 30em'/>
-</div>
->>>>>>> 7d4eb37246fba87c21d753ae2fa3c47d72e55ae3
+
