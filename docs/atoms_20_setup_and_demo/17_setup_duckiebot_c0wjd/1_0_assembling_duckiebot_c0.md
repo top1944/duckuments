@@ -156,11 +156,11 @@ Requires: Having the Duckiebot image copied in the Micro SD card.
 
 Take the Micro SD card from the Duckiebox and insert its slot on the Raspberry Pi. The SD card slot is just under the display port, on the short side of the PI, on the flipside of where the header pins are.
 
-<div figure-id="fig:microsdcard" figure-caption="The Micro SD card and SD_card readers.">
+<div figure-id="fig:SD_card" figure-caption="The Micro SD card and SD_card readers.">
     <img src="SD_card.jpg" style='width: 30em'/>
 </div>
 
-<div figure-id="fig:microsdcard" figure-caption="display port and inserted SD card">
+<div figure-id="fig:RASPI_SD" figure-caption="display port and inserted SD card">
     <img src="RASPI_SD.jpg" style='width: 30em'/>
 </div>
 
