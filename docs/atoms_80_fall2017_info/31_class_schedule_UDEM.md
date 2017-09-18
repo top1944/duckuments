@@ -1,4 +1,4 @@
-# UdeM Class Schedule {#schedule_UDEM status=ready}
+# UdeM Class Diary {#schedule_UDEM status=ready}
 
 ## Wed Sept 6
 
@@ -6,13 +6,11 @@ Class (11:30)
 
 Slides:
 
-* [Duckietown History Future](https://github.com/duckietown/lectures/blob/master/duckietown_history_future.key)
+* [Duckietown History Future](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-06-udem-duckietown_history_future.key)
 
-* [Duckietown Intro](https://github.com/duckietown/lectures/blob/master/duckietown_intro.key)
+* [Duckietown Intro](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-06-udem-duckietown_intro.key)
 
-* [Autonomous Vehicles](https://github.com/duckietown/lectures/blob/master/autonomous_vehicles.key)
-
-* [Autonomy Overview](https://github.com/duckietown/lectures/blob/master/autonomy_overview.key)
+* [Autonomy Overview](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-06-udem-autonomy_overview.key)
 
 Book materials:
 
@@ -56,3 +54,70 @@ Deadline: Wed Sept. 20
 
 Class canceled.
 Continue working on [](#checkoff_assembly_configuration).
+
+## Mon Setp 18
+
+Class (10:30 - 11:30) 
+
+* General discussion (how are things going? Sorry I was away last week.. anyone need anything?)
+
+* Intro to robotics - Modern robotic systems
+
+* The robot as a system - System architectures
+
+* Decomposing the robotics sytems into smaller pieces - autonomy architectures
+
+* Agreeing on the language that the different pieces "talk" - representations 
+
+* Background on basic probability theory?
+
+Slides:
+
+* [Modern Robotic Systems](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-modern_robotic_systems.key)
+
+* [System Architecture](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-systems_architecture_basics.key)
+
+* [Autonomy Architectures](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-autonomy_architectures.key)
+
+* [Representations for Robotics](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-representations.key)
+
+Book Materials:
+
+* [Modern Robotic Systems](#modern-robotic-systems)
+
+* [System Architecture Basics](#system-architectures-basics)
+
+* [Autonomy Architectures](#autonomy-architectures)
+
+* [Representations](#representations)
+
+* [Probability Basics](#probability_basics)
+
+Lab (11:30 - 12:30)
+
+* Liam will be in 2333 setting up network and building Duckietown.
+
+
+## Wed Sept 20
+
+Class (10:30 - 11:30)
+
+* Robotics middlewares - what are they and basic concepts
+
+* Modern signal processing
+
+* Introduction to the Robot Operating System (ROS)
+
+Lab (11:30 - 12:30)
+
+* Liam will be in 2333 if you need help finishing the Checkoff.
+
+Homeworks and Checkoffs:
+
+* Checkoff initiated (Deadline Wed Sept 27)
+
+* Homework initiated (Deadline Wed Sept 27)
+
+
+*  [](#checkoff_assembly_configuration) due. Deliverable: A video of your robot working (TODO: put where?)
+
