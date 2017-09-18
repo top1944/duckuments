@@ -13,7 +13,7 @@ A set $\aset{X} = \{x_1, x_2, \dots\}$ is a well-defined collection of distinct 
 \end{definition}
 
 
-# Maps {#maps}
+## Maps {#maps}
 
 <div class='requirements' markdown='1'>
 
