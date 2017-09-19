@@ -55,7 +55,7 @@ Position the checkerboard in front of the camera until you see colored lines ove
     Size bar - the observed range in the checkerboard size (forward - backward from the camera direction)
     Skew bar - the relative tilt between the checkerboard and the camera direction
 
-Now move the checkerboard right/left, up/down, and through various degrees of tilt. After each movement, make sure to pause long enough for the checkerboard to become highlighted. Once you have collected enough data, all four indicator bars will turn green. Press the **CALIBRATE** button in the sidebar. Calibration may take a few moments. Note that the screen may dim. Don't worry, the calibration is working.
+Now move the checkerboard right/left, up/down, and tilt the checkerboard through various angles of relative to the image plane. After each movement, make sure to pause long enough for the checkerboard to become highlighted. Once you have collected enough data, all four indicator bars will turn green. Press the **CALIBRATE** button in the sidebar. Calibration may take a few moments. Note that the screen may dim. Don't worry, the calibration is working.
 
 <div figure-id="fig:intrinsic_calibration_calibratestep" figure-caption="">
      <img src="intrinsic_calibration_calibratestep.png" style='width: 30em'/>
@@ -99,8 +99,88 @@ Before moving on to the extrinsic calibration, make sure to kill all running pro
 
 ## Extrinsic calibration
 
-TODO 
+### Setup
 
-## Testing the calibration
+Arrange the Duckiebot and checkerboard according to [](#fig:extrinsic_setup). Note that the axis of the wheels should be aligned with the y-axis.
 
-TODO
+<div figure-id="fig:extrinsic_setup" figure-caption="">
+     <img src="extrinsic_setup.jpg" style='width: 30em'/>
+</div>
+
+[](#fig:extrinsic_view) shows a view of the calibration checkerboard from the Duckiebot. To ensure proper calibration there should be no clutter in the background.
+
+<div figure-id="fig:extrinsic_view" figure-caption="">
+     <img src="extrinsic_view.jpg" style='width: 30em'/>
+</div>
+
+### Calibration
+
+#### Step 1
+
+Open four terminals terminals on the laptop.
+
+#### Step 2
+
+In the first terminal, remotely launch the joystick process:
+
+    laptop $ cd ~/duckietown
+    laptop $ source environment.sh
+    laptop $ roslaunch duckietown joystick.launch veh:=![robot name]
+
+#### Step 3
+
+In the second terminal launch the camera:
+
+    laptop $ cd ~/duckietown
+    laptop $ source environment.sh
+    laptop $ export ROS_MASTER_URI=http://![robot name].local:11311/
+    laptop $ roslaunch duckietown camera.launch raw:=1 veh:=![robot name]
+
+#### Step 4
+
+In the third terminal run the ground projection node:
+
+    laptop $ cd ~/duckietown
+    laptop $ source environment.sh
+    laptop $ export ROS_MASTER_URI=http://![robot name].local:11311/
+    laptop $ roslaunch ground_projection ground_projection.launch veh:=![robot name] local:=1
+
+#### Step 5
+
+In the fourth terminal, check that everything is working properly.
+
+    $ cd ~/duckietown
+    $ source environment.sh
+    $ rostopic list
+
+You should see new ros topics:
+
+    /![robot name]/camera_node/camera_info
+    /![robot name]/camera_node/framerate_high_switch
+    /![robot name]/camera_node/image/compressed
+    /![robot name]/camera_node/image/raw
+    /![robot name]/camera_node/raw_camera_info
+
+The ground_projection node has two services. They are not used during operation. They just provide a command line interface to trigger the extrinsic calibration (and for debugging).
+
+    $ rosservice list
+
+You should see:
+
+    ...
+    /![robot name]/ground_projection/estimate_homography
+    /![robot name]/ground_projection/get_ground_coordinate
+    ...
+
+Now you can estimate the homography by executing the following command:
+
+    $ rosservice call /![robot name]/groundprojection/estimate_homography
+
+This will do the extrinsic calibration and automatically save the file to your laptop:
+
+    ~/duckietown/catkin_ws/src/00-infrastructure/duckietown/config/baseline/calibration/camera_extrinsic/![robot name].yaml
+
+As before, add this file to your local git repository on your laptop, push the changes, and update your the local git repository on your Duckiebot.
+
+Note: we are in the process of rewriting the configuration system, so in a while "commit to the repository"
+is not going to be the right thing to do.
