@@ -43,15 +43,14 @@ Or see the hints in the troubleshooting section on the previous page.
 
 ## Update the system
 
-If you installed the Operating System on the Duckiebot as described in [](#duckiebot-ubuntu-image),
-you can skip this section and jump to [](#build-repo).
-If you installed the Operating System on the Duckiebot by burning the image as described in
-[](#setup-duckiebot-burn-image), then you need to install the new dependencies by running the command:
+The software used for the Duckiebots changes every day, this means that also the dependencies 
+change. In order to check whether your system meets all the requirements for running the software
+and install all the missing packages (if any), we can run the following script:
 
     duckiebot $ cd ~/duckietown
     duckiebot $ /bin/bash ./dependencies_since_image.sh
 
-This command will install all the dependencies that are not in the image that you burned on the SD card.
+This command will install only the packages that are not already installed in your system.
 
 
 ## Set up the ROS environment on the Duckiebot {#build-repo}
