@@ -1,3 +1,3 @@
-# Basic Dynamics {#basic_dynamics status=draft}
+# Basic Cars Dynamics {#basic-car-dynamics status=draft}
 
 Assigned: Jacopo

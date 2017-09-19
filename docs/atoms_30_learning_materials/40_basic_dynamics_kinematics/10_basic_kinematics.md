@@ -1,3 +1,3 @@
-# Basic Kinematics {#basic_kinematics status=draft}
+# Basic Kinematics {#basic-car-kinematics status=draft}
 
 Assigned: Jacopo

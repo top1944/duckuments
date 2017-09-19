@@ -55,7 +55,7 @@ TODO: to write
 
 Requires: k:sets
 
-Result: k:natural-numbers, k:integers, k:reals
+Result: k:naturals, k:integers, k:reals
 
 </div>
 
@@ -63,9 +63,9 @@ Result: k:natural-numbers, k:integers, k:reals
 
 $\nats = \{0, 1, 2, \cdots\}$
 
-The natural numbers are the set positive numbers, including zero. 
+The natural numbers are the set positive numbers, including zero.
 
-Given two natural their addition is always a natural number: 
+Given two natural their addition is always a natural number:
 
 \[ a+b = c \in \nats, \forall a,b \in \nats. \label{eq:intro-nats}\]
 
@@ -80,10 +80,10 @@ For this reason set of integer numbers is defined.
 
 $\ints = \{\cdots, -2, -1, 0, 1, 2, \cdots \}$
 
-The integers are the set of positive and negative natural numbers, including the zero. By definition, the set of integers includes the naturals: $\ints \contains \nats$.
+The integers are the set of positive and negative natural numbers, including the zero. By definition, the set of integers includes the naturals: $\ints \subset \nats$.
 
 The sum (i.e., addition and subtraction) of two integers is always an integer:
-\begin{align} 
+\begin{align}
 a + b &= c \in \ints, \forall a,b \in \nats \\
 a - b &= c \in \ints, \forall a,b \in \nats.
 \end{align}
@@ -91,46 +91,48 @@ a - b &= c \in \ints, \forall a,b \in \nats.
 The multiplication of two integers is always an integer, but the same does not apply for the division operation:
 
 \[
-\frac{a}{b} = c \in \ints \iff a = kb, \k \in \ints, b \neq 0. 
+\frac{a}{b} = c \in \ints \iff a = kb, k \in \ints, b \neq 0.
 \]
 
 For this reason the rational numbers are introduced.
 
 ## Rationals
 
-The set of rational numbers includes all fractions of integers: $\rats = \left{c | \frac{a}{b} = c, a,b \in \ints, b \neq 0 \right}$. 
+The set of rational numbers includes all fractions of integers: $\rats = \{ c | \frac{a}{b} = c, a,b \in \ints, b \neq 0 \}$.
 
-The set of rational number is complete under sum and product (i.e., moltiplication and division), but not under other operations such as the root. E.g., $\srqt(2)$ cannot be expressed as a fraction of two integers. These numbers are not rational, and therefore are defined as irrationals.
+The set of rational number is complete under sum and product (i.e., multiplication and division), but not under other operations such as the root. E.g., $\sqrt{2}$ cannot be expressed as a fraction of two integers. These numbers are not rational, and therefore are defined as irrationals.
 
 ## Irrationals
 
-Irrational numbers are all those numbers that cannot be expressed as a fraction. Notable examples of irrational numbers include the aferementioned $\sqrt{2}$, but even pi ($\pi$) and the Euler number ($e$).
+Irrational numbers are all those numbers that cannot be expressed as a fraction. Notable examples of irrational numbers include the aforementioned $\sqrt{2}$, but even pi ($\pi$) and the Euler number ($e$).
 
 Irrational numbers are not typically referred to as as a set by themselves, rather, the union of the rational and irrational numbers defines the set of _reals_.
 
 ## Reals
 
-The real numbers ($\reals$) are arguably the most used set of numbers, and are often considered the default set if no specification is provided. 
+The real numbers ($\reals$) are arguably the most used set of numbers, and are often considered the default set if no specification is provided.
 
 The real numbers are defined as the union of rational and irrational numbers, and therefore by definition include the integers and the naturals.
 
-The reals are still not complete under all "canonical" operations. In fact, there is no solution to the root (of even index) of a negative number. 
+The reals are still not complete under all "canonical" operations. In fact, there is no solution to the root (of even index) of a negative number.
 
 For this reason, the complex numbers are introduced.  
 
 ## Complex
 
-Complex numbers are defined as the sum of a real and an immaginary part:
+Complex numbers are defined as the sum of a real and an imaginary part:
 
 \[ z = a + ib, a,b \in \reals, i = \sqrt{-1}
 \]
 
-and can be represented on the plane of Gauss, a Cartesian plane featuring the real part of $z$, $Re(z) = a$, on the x-axis and the immaginary part, $Im(z)=b$, on the y-axis ([](#fig:gauss-plane)). 
+and can be represented on the plane of Gauss, a Cartesian plane featuring the real part of $z$, $Re(z) = a$, on the x-axis and the imaginary part, $Im(z)=b$, on the y-axis ([](#fig:gauss-plane)).
 
-Complex numbers introduce the concept of _phase_ of a number, which is related to its "orientation", and are invaluable for describing many natural phenomena such as electricity and applications such as decoders.
+<div figure-id="fig:gauss-plane" figure-caption="The Gaussian plane is used to represent complex numbers">
+     <img src="placeholder.png" style='width: 15em'/>
+</div>
+
+Complex numbers introduce the concept of _phase_ of a number, which is related to its "orientation", and are invaluable for describing many natural phenomena such as electricity and applications such as signal decoders.
 
 For more information on the algebra and properties of natural numbers:
 
 see: [](#intro-algebra-complex).
-
-
