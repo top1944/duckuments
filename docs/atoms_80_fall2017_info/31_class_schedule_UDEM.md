@@ -48,7 +48,8 @@ Note: This class we are meeting in rm. 2333 Pavillion André Aisenstadt.
 * Go through the Duckiebox parts
 
 * [](#checkoff_assembly_configuration) initiated.
-Deadline: Wed Sept. 20
+
+Deadline: **Mon Sept. 25**
 
 ## Wed Sept 13
 
@@ -126,3 +127,19 @@ Homeworks and Checkoffs:
 
 *  [](#checkoff_assembly_configuration) deadline extended to  **Monday Sept 25** 
 
+
+## Mon Sept 25
+
+Class (10:30-11:30)
+
+* Signal Processing
+
+* Microelectronics
+
+* Intro to Networking
+
+Homeworks and Checkoffs:
+
+*  [](#checkoff_assembly_configuration) due.
+
+* New Homework and Checkoff will be announced
