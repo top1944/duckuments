@@ -40,7 +40,7 @@ In the second terminal run the camera calibration:
     $ cd ~/duckietown
     $ source environment.sh
     $ export ROS_MASTER_URI=http://![robot name].local:11311/
-    $ roslaunch duckietown intrinsic_calibration veh:=![robot name] raw:=true
+    $ roslaunch duckietown intrinsic_calibration.launch veh:=![robot name] raw:=true
 
 You should see a display screen open on the laptop ([](#fig:intrinsic_callibration_pre)).
 
