@@ -100,24 +100,29 @@ Lab (11:30 - 12:30)
 
 ## Wed Sept 20
 
-Class (10:30 - 11:30)
+Class (11:30 - 12:30)
 
 * Robotics middlewares - what are they and basic concepts
 
-* Modern signal processing
-
 * Introduction to the Robot Operating System (ROS)
 
-Lab (11:30 - 12:30)
 
-* Liam will be in 2333 if you need help finishing the Checkoff.
+Slides:
+
+* [Software Architectures](#https://github.com/duckietown/lectures/blob/master/2_given/2017-09-20-udem-software_architectures.key)
+
+* [Introduction to ROS](#https://github.com/duckietown/lectures/blob/master/2_given/2017-09-20-udem-introduction_to_ros.key)
+
+Book Materials:
+
+* [Introduction to ROS](#introduction_to_ros)
+
+* [Middlewares](#middleware)
+
+
+Lab (12:30 - 1:30)
 
 Homeworks and Checkoffs:
 
-* Checkoff initiated (Deadline Wed Sept 27)
-
-* Homework initiated (Deadline Wed Sept 27)
-
-
-*  [](#checkoff_assembly_configuration) due. Deliverable: A video of your robot working (TODO: put where?)
+*  [](#checkoff_assembly_configuration) deadline extended to  **Monday Sept 25** 
 
