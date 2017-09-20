@@ -48,7 +48,8 @@ Note: This class we are meeting in rm. 2333 Pavillion André Aisenstadt.
 * Go through the Duckiebox parts
 
 * [](#checkoff_assembly_configuration) initiated.
-Deadline: Wed Sept. 20
+
+Deadline: **Mon Sept. 25**
 
 ## Wed Sept 13
 
@@ -100,24 +101,45 @@ Lab (11:30 - 12:30)
 
 ## Wed Sept 20
 
-Class (10:30 - 11:30)
+Class (11:30 - 12:30)
 
 * Robotics middlewares - what are they and basic concepts
 
-* Modern signal processing
-
 * Introduction to the Robot Operating System (ROS)
 
-Lab (11:30 - 12:30)
 
-* Liam will be in 2333 if you need help finishing the Checkoff.
+Slides:
+
+* [Software Architectures](#https://github.com/duckietown/lectures/blob/master/2_given/2017-09-20-udem-software_architectures.key)
+
+* [Introduction to ROS](#https://github.com/duckietown/lectures/blob/master/2_given/2017-09-20-udem-introduction_to_ros.key)
+
+Book Materials:
+
+* [Introduction to ROS](#introduction_to_ros)
+
+* [Middlewares](#middleware)
+
+
+Lab (12:30 - 1:30)
 
 Homeworks and Checkoffs:
 
-* Checkoff initiated (Deadline Wed Sept 27)
-
-* Homework initiated (Deadline Wed Sept 27)
+*  [](#checkoff_assembly_configuration) deadline extended to  **Monday Sept 25** 
 
 
-*  [](#checkoff_assembly_configuration) due. Deliverable: A video of your robot working (TODO: put where?)
+## Mon Sept 25
 
+Class (10:30-11:30)
+
+* Signal Processing
+
+* Microelectronics
+
+* Intro to Networking
+
+Homeworks and Checkoffs:
+
+*  [](#checkoff_assembly_configuration) due.
+
+* New Homework and Checkoff will be announced
