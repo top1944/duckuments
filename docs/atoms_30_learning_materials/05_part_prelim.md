@@ -1,3 +1,3 @@
-# Autonomy from scratch {#part:theory-chapters}
+# A course in autonomy {#part:theory-chapters}
 
-These are the theory chapters.
+These are the theory units.
