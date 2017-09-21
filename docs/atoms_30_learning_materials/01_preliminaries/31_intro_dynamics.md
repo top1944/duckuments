@@ -1,4 +1,4 @@
-# Dynamics {#dynamics_basic status=draft}
+# Dynamics {#intro-dynamics status=draft}
 
 Assigned: Jacopo
 

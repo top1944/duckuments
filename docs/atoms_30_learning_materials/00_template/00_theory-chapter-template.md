@@ -18,7 +18,7 @@ Required Reading: Insert here a list of topics and suggested resources related t
 
 Requires: Terminology: [autonomy overview](#autonomy-overview)
 
-Requires: System Modeling: [basic kinematics](#basic_kinematics), [basic dynamics](#basic_dynamics), [linear algebra](#linear_algebra), [State space representations](), [Linear Time Invariant Systems]()
+Requires: System Modeling: [basic kinematics](#intro-kinematics), [basic dynamics](#intro-dynamics), [linear algebra](#linear_algebra), [State space representations](), [Linear Time Invariant Systems]()
 
 </div>
 
