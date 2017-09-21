@@ -30,7 +30,7 @@ Result: k:diff-drive-robot-model
 
 ## Preliminaries {#mod-prelim status=draft}
 
-We here briefly recapitulate on the (reference frames)[#reference-frames] that we will use to model the Duckiebot, with the intent of introducing the notation used throughout this chapter.
+We first briefly recapitulate on the (reference frames)[#reference-frames] that we will use to model the Duckiebot, with the intent of introducing the notation used throughout this chapter.
 
 To describe the behavior of a Duckiebot two reference frames will be used:
 
@@ -38,7 +38,7 @@ To describe the behavior of a Duckiebot two reference frames will be used:
 
 - A _body_ (or "robot") frame: a local reference frame fixed with respect to the robot, centered in the midpoint ($A$) of the axis between the wheels. The $x$ axis points in the direction of the front of the robot, and the $y$ axis lies along the axis between the wheels, so to form a right handed reference system. We denote the robot body frame with $\{x_r, y_r\}$.
 
-Note: The robot is assumed to be symmetric, and $x_r$ coincides with axis of symmetry.
+Note: The robot is assumed to be a rigid body, symmetric, and $x_r$ coincides with axis of symmetry.
 
 Note: Quantities described with respect to the inertial or robot frames are denoted as $(\cdot)^I)$ and $(\cdot)^r)$ respectively.
 
