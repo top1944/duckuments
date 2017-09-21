@@ -6,8 +6,8 @@
 
 ## Instructions
 
-Implement the program `bag-decimate` as in the following specification.
- 
+Implement the program `dt-bag-decimate` as in the following specification.
+
 
 ## Bag decimate
 

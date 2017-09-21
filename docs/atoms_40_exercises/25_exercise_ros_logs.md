@@ -26,7 +26,7 @@ Compute, for each topic:
 
 Example output:
 
-    $ bag-analyze ![bag file]
+    $ dt-bag-analyze ![bag file]
     "![topic name]":
         num_messages: 100
         period:

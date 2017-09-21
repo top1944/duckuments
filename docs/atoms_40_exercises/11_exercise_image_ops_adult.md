@@ -13,12 +13,12 @@ Implement the program specified in the following section.
 This time, we specify exactly what should happen for various conditions. This allows to do automated testing of the script.
 
 
-## `image-ops` specification {#image-ops-specification}
+## `dt-image-flip` specification {#image-ops-specification}
 
 The program `image-ops` expects exactly two arguments: a filename (a JPG file)
 and a directory name.
 
-    $ image-ops ![file] ![outdir-dir]
+    $ dt-image-flip ![file] ![outdir-dir]
 
 If the file does not exist, the script must exit with error code `2`.
 
@@ -72,16 +72,16 @@ TODO: Some useful functions that you might want to use are:
 ## Testing it works with `image-ops-tester` {#image-ops-tester-specification}
 
 We provide a script called `image-ops-tester` that can be used
-to make sure that you wrote a conformant `image-ops`.
+to make sure that you wrote a conforming `dt-image-flip`.
 
 Use it as follows:
 
-    $ image-ops-tester ![candidate-image-ops]
+    $ image-ops-tester ![candidate-program]
 
 If the script cannot be found, `image-ops-tester` will return 1.
 
 `image-ops-tester` will return 0 if the program exists and conforms
-to the `image-ops` specification ([](#image-ops-specification)).
+to the specification ([](#image-ops-specification)).
 
 If it can establish that the program is not good, it will return 11.
 

@@ -3,7 +3,7 @@
 
 ## Skills learned
 
-- Command line arguments.
+- Reading command line arguments.
 - Read and write files.
 - Image representations (pixels, etc.)
 - OpenCV/`duckietown_utils` API for reading/writing images.
@@ -11,16 +11,16 @@
 
 ## Instructions
 
-Create an implementation of the program `dt-image-flip` described below.
+Create an implementation of the program `dt-image-flip0` described below.
 
 If this exercise is too easy for you, skip to [](#exercise-specifications).
 
 
 ## Definition
 
-Create a program `dt-image-flip` that takes as an argument a JPG file:
+Create a program `dt-image-flip0` that takes as an argument a JPG file:
 
-    $ dt-image-flip ![file]
+    $ dt-image-flip0 ![file].jpg
 
 and creates a file called `![file].flipped.jpg` that is flipped around the vertical axis.
 
