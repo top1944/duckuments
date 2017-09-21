@@ -1,4 +1,4 @@
-# Basic Kinematics {#car-kinematics status=draft}
+# Kinematics {#car-kinematics status=draft}
 
 In order to build a model of our Duckiebot we need to start from the kinematics, i.e., understanding how is the motion of the center of mass of the Duckiebot related to its geometry and driving mechanism.
 
