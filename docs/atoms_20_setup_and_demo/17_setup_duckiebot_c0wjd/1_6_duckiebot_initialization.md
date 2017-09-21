@@ -480,7 +480,7 @@ Next, create a private/public key pair for the user; call it `![username]@![robo
 
 See: The procedure is documented in [](#howto-create-key-pair).
 
-### Add SSH alias
+### Add SSH alias {#setup-ssh-alias}
 
 Once you have your SSH key pair on both your laptop and your Duckiebot, as well as your new user- and hostname set up on your Duckiebot, then you should set up an SSH alias as described in [](#ssh-aliases). This allows your to log in for example with
 
