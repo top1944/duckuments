@@ -480,6 +480,18 @@ Next, create a private/public key pair for the user; call it `![username]@![robo
 
 See: The procedure is documented in [](#howto-create-key-pair).
 
+### Add SSH alias
+
+Once you have your SSH key pair on both your laptop and your Duckiebot, as well as your new user- and hostname set up on your Duckiebot, then you should set up an SSH alias as described in [](#ssh-aliases). This allows your to log in for example with
+
+    laptop $ ssh ![abc]
+
+instead of 
+
+    laptop $ ssh ![username]@![robot name]
+    
+where you can chose `![abc]` to be any alias / shortcut.
+
 ### Add `![username]`'s public key to Github
 
 Add the public key to your Github account.
@@ -490,7 +502,6 @@ If the step is done correctly, the following command should succeed and give you
 
     duckiebot $ ssh -T git@github.com
     Hi ![username]! You've successfully authenticated, but GitHub does not provide shell access.
- 
 
 ### Local Git configuration
 
