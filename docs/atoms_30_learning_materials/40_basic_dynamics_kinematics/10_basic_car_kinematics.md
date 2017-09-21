@@ -4,7 +4,7 @@ In order to build a model of our Duckiebot we need to start from the kinematics,
 
 A Duckiebot has two DC motors that independently control the front wheels. By applying different torques to the wheels a Duckiebot can turn, go straight (same torque to both wheels) or stay still (no torque to both wheels). This driving configuration is referred to as _differential drive_.
 
-The content of this chapter is taken from [](#bib:diff-drive-car-kinematics).
+The content of this chapter is taken from [](#bib:Dudek10).
 
 <div class='requirements' markdown="1">
 
