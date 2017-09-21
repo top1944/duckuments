@@ -55,7 +55,7 @@ Position the checkerboard in front of the camera until you see colored lines ove
     Size bar - the observed range in the checkerboard size (forward - backward from the camera direction)
     Skew bar - the relative tilt between the checkerboard and the camera direction
 
-Now move the checkerboard right/left, up/down, and tilt the checkerboard through various angles of relative to the image plane. After each movement, make sure to pause long enough for the checkerboard to become highlighted. Once you have collected enough data, all four indicator bars will turn green. Press the **CALIBRATE** button in the sidebar. Calibration may take a few moments. Note that the screen may dim. Don't worry, the calibration is working.
+Also, make sure to focus the image by rotating the mechanical focus ring on the lens of the camera. Now move the checkerboard right/left, up/down, and tilt the checkerboard through various angles of relative to the image plane. After each movement, make sure to pause long enough for the checkerboard to become highlighted. Once you have collected enough data, all four indicator bars will turn green. Press the **CALIBRATE** button in the sidebar. Calibration may take a few moments. Note that the screen may dim. Don't worry, the calibration is working.
 
 <div figure-id="fig:intrinsic_calibration_calibratestep" figure-caption="">
      <img src="intrinsic_calibration_calibratestep.png" style='width: 30em'/>
@@ -86,14 +86,16 @@ Update your local git repository:
 
 Update your local git repository and push the changes to github:
 
+    duckiebot $ git checkout -b ![git username]-devel
     duckiebot $ git add ~/duckietown/catkin_ws/src/00-infrastructure/duckietown/config/baseline/calibration/camera_intrinsic/![robot name].yaml
     duckiebot $ git commit -m "add ![robot name] intrinsic calibration file"
-    duckiebot $ git push
+    duckiebot $ git push origin ![git username]-devel
 
 You can obtain the intrinsic calibration results on your laptop by updating your local git repository on your laptop:
 
     laptop $ cd ~/duckietown
-    laptop $ git pull
+    laptop $ git fetch
+    laptop $ git checkout ![git username]-devel
 
 Before moving on to the extrinsic calibration, make sure to kill all running processes by pressing <kbd>Ctrl</kbd>-<kbd>C</kbd> in each of the terminal windows.
 
