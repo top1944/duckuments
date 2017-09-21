@@ -18,7 +18,7 @@ Results: A laptop ready to be used for Duckietown.
 
 ## Install Ubuntu
 
-Install Ubuntu 16.04.2.
+Install Ubuntu 16.04.3.
 
 See: For instructions, see for example [this online tutorial][tutorial].
 
