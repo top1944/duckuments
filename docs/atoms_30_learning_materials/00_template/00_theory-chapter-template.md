@@ -92,7 +92,7 @@ A reference signal $\tilde{y}_t \in \mathcal{L}_2(\mathcal{T})$ is ...
 
 Insert 'random' checks to keep the reader's attention up:
 
-if you can't be woken up in the middle of the night and rememeber the definition of $\mathcal{L}_2(\cdot)$, read: [](#bib:placeholder)
+if you can't be woken up in the middle of the night and remember the definition of $\mathcal{L}_2(\cdot)$, read: [](#bib:placeholder)
 
 </div>
 
