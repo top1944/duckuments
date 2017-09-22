@@ -5,9 +5,10 @@ Assigned: Dzenan Lapandic
 
 <div class='requirements' markdown='1'>
 
-Requires: XXX
+Requires: You can see the camera image on the laptop. The procedure is documented in
+[](#rc-cam-launched-remotely status=beta).
 
-Results: Calibrated robot
+Results: Calibrated camera of the robot
 
 </div>
 
@@ -17,10 +18,8 @@ Results: Calibrated robot
 
 Make sure your Duckiebot is on, and both your laptop and Duckiebot are
 connected to the duckietown network. Next, download and print a PDF of the
-[calibration checkerboard](https://drive.google.com/open?id=0B1iMTx9IcQVwN2pEcXE4RUF1VVk).
+[calibration checkerboard](github:org=duckietown,repo=Software,path=duckietown/config/baseline/calibration/camera_intrinsic/calibration_pattern.pdf).
 Fix the checkerboard to a planar surface.
-
-TODO: put this PDF directly in `Software`. It is small enough (11 KB). -AC
 
 <div figure-id="fig:calibration_checkerboard" figure-caption="">
      <img src="calibration_checkerboard.png" style='width: 20em'/>
