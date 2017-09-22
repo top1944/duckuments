@@ -40,7 +40,7 @@ To describe the behavior of a Duckiebot two reference frames will be used:
 
 Note: The robot is assumed to be a rigid body, symmetric, and $x_r$ coincides with axis of symmetry.
 
-Note: Quantities described with respect to the inertial or robot frames are denoted as $(\cdot)^I)$ and $(\cdot)^r)$ respectively.
+Note: Quantities described with respect to the inertial or robot frames are denoted as $((\cdot)^I)$ and $((\cdot)^r)$ respectively.
 
 - The center of mass $C^I = (x_c, y_c)$ of the robot is on the $x_r$ axis, at a distance $d$ from $A$, i.e., ($C^r = (d, 0)$);
 - $x^r$ forms an _orientation angle_ $\theta$ with the local horizontal;
