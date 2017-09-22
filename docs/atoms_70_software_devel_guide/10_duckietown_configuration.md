@@ -1,4 +1,4 @@
-# Configuration
+# Configuration {#configuration-files status=beta}
 
 This chapter explains what are the assumptions about the configuration.
 
@@ -10,9 +10,12 @@ The tool `what-the-duck` ([](#what-the-duck)) checks some of these conditions.
 If you make a change from the existing conditions, make sure that it gets
 implemented in `what-the-duck` by filing an issue.
 
-## Environment variables {#variabes}
+## Environment variables (updated Sept 12) {#env-variables}
 
 You need to have set up the variables in [](#tab:environment-variables).
+
+Note: The way to set these up is to add them in the file `~/.bashrc` (`export ![var]="![value]"`). Do not modify the `environment.sh` script.
+
 
 <col3 figure-id="tab:environment-variables" class='labels-row1'>
     <figcaption>Environment variables used by the software</figcaption>
@@ -55,11 +58,11 @@ You need to have set up the variables in [](#tab:environment-variables).
 }
 </style>
 
-### Duckietown root directory `DUCKIETOWN_ROOT`
+### Duckietown root directory `DUCKIETOWN_ROOT` {#duckietown-directory status=draft}
 
 TODO: to write
 
-### Duckiefleet directory `DUCKIEFLEET_ROOT`
+### Duckiefleet directory `DUCKIEFLEET_ROOT` {#duckiefleet-directory}
 
 For Fall 2017, this is the the repository [`duckiefleet-fall2017`][duckiefleet-repo].
 
@@ -67,7 +70,6 @@ For self-guided learners, this is an arbitrary repository to create.
 
 [duckiefleet-repo]: https://github.com/duckietown/duckiefleet-fall2017
 
-Comment: I feel this should be cloned inside `catkin_ws/src` so that we can put calibration files in that repo and ROS will find them
 
 ## The "scuderia" (vehicle database) {#scuderia}
 <!-- do not change the ID "scuderia", it's linked in the code -->
@@ -127,22 +129,24 @@ The `machines` file is created from the scuderia data using this command:
 
     $ rosrun duckieteam create-machines
 
-## People database {#people-file}
+## People database {#people-file status=draft}
 
 Assigned: Andrea
 
 
-TODO: Describe the people database; this is the evolution of the yaml files
+TODO: Describe the people database.
 
 
-### The globally-unique Duckietown ID
+### The globally-unique Duckietown ID {status=to-update}
 
 This is a globally-unique ID for people in the Duckietown project.
 
 It is equal to the Slack username.
 
+Comment: There is no Slack username anymore, so we should change this to some other convention. -AC
 
-## Modes of operation
+
+## Modes of operation {#modes-of-operation status=draft}
 
 There are 3 modes of operation:
 

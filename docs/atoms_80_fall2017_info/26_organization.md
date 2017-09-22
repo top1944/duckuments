@@ -1,4 +1,4 @@
-# Roster {#roster}
+# Organization {#roster status=beta}
 
 The following roster shows the teaching staff.
 
@@ -105,11 +105,3 @@ At any time, if a student has a blocking problem with a task, they (or the TA) s
 put a comment, we'll make sure that their issue is resolved.
 
 [sheets]: https://docs.google.com/spreadsheets/d/1uO1aq9zqBpLwo1qOzeBKKbB3CuAQAqM94T8B1AGpCKg/edit?usp=sharing
-
-
-
-
-
-
-
-

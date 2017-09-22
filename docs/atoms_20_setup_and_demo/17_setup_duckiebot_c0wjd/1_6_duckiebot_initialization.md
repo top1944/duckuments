@@ -1,4 +1,4 @@
-# Duckiebot Initialization {#setup-duckiebot}
+# Duckiebot Initialization {#setup-duckiebot status=beta}
 
 Assigned: Andrea
 
@@ -13,36 +13,47 @@ Requires: An assembled Duckiebot in configuration `D17-C0`. This is the result o
 
 Results: A Duckiebot that is ready to use.
 
+Comment: What does it mean "ready to use"? -AC
+
 </div>
 
-XXX What does it mean "ready to use"?.
 
-## Acquire and burn the image
+
+## Acquire and burn the image {#setup-duckiebot-burn-image}
 
 On the laptop, download the compressed image at this URL:
 
-> [https://www.dropbox.com/s/1jgn0chx3hu3a4a/duckiebot-RPI3-AD-sep7.img.xz?dl=1](https://www.dropbox.com/s/1jgn0chx3hu3a4a/duckiebot-RPI3-AD-sep7.img.xz?dl=1)
+> [https://www.dropbox.com/s/ckpqpp0cav3aucb/duckiebot-RPI3-AD-2017-09-12.img.xz?dl=1](https://www.dropbox.com/s/ckpqpp0cav3aucb/duckiebot-RPI3-AD-2017-09-12.img.xz?dl=1)
 
 The size is 1.7 GB.
 
 You can use:
 
-    $ curl -o duckiebot-RPI3-AD-sep7.img.xz ![URL above]
+    $ wget -O duckiebot-RPI3-AD-2017-09-12.img.xz ![URL above]
 
-Uncompress the file:
+<div class="comment" markdown="1">
 
-    $ xz -d -k duckiebot-RPI3-AD-sep7.img.xz
+The original was:
 
-This will create a file of 11 GB in size.
+    $ curl -o duckiebot-RPI3-AD-2017-09-12.img.xz ![URL above]
+
+It looks like that `curl` cannot be used with Drobpox links because it does not follow redirects.
+</div>
 
 To make sure that the image is downloaded correctly, compute its hash
 using the program `sha256sum`:
 
-    $ sha256sum duckiebot-RPI3-AD-sep7.img
-    681c4653c309df530791dbdbe2e89819def330c20d58d4c4baf5979b02e5b381  duckiebot-RPI3-AD-sep7.img
-
+    $ sha256sum duckiebot-RPI3-AD-2017-09-12.img.xz
+    7136f9049b230de68e8b2d6df29ece844a3f830cc96014aaa92c6d3f247b6130  duckiebot-RPI3-AD-2017-09-12.img.xz
+    
 Compare the hash that you obtain with the hash above. If they are different,
 there was some problem in downloading the image.
+
+Uncompress the file:
+
+    $ xz -d -k duckiebot-RPI3-AD-2017-09-12.img.xz
+
+This will create a file of 11 GB in size.
 
 Next, burn the image on disk.
 
@@ -109,11 +120,11 @@ By default, the robot boots into Byobu.
 
 Please see [](#byobu) for an introduction to Byobu.
 
-XXX Not sure it's a good idea to boot into Byobu.
+Doubt: Not sure it's a good idea to boot into Byobu. -??
 
-## (For `C1`) Configure the robot-generated network
-XXX `D17-0+w`
-The Duckiebot in configuration `D17-C0+w` can create a WiFi network.
+## (For `C0+w`) Configure the robot-generated network
+
+The Duckiebot in configuration `C0+w` can create a WiFi network.
 
 It is a 5 GHz network; this means that you need to have a 5 GHz
 WiFi adapter in your laptop.
@@ -166,25 +177,161 @@ and to the internet, the Raspberry Pi will act as a bridge to the internet.
 
 You are connected to the Duckiebot via WiFi, but the Duckiebot also needs to connect to the internet in order to get updates and install some software. There are three options for achieving this:
 
-### Option 1: `duckietown` WiFi 
+### Option 1: `duckietown` WiFi
 
 Check with your phone or laptop if there is a WiFi in reach with the name of `duckietown`. If there is, you are all set. The defaut configuration for the Duckiebot is to have one WiFi adapter connect to this network and the other broadcast the access point which you are currently connected to.
 
-### Option 2: `eduroam` WiFi
+### Option 2.a): `eduroam` WiFi (Non-UdeM/McGill instructions) {status=draft}
 
 If there should be no `duckietown` network in reach then you have to manually add a network configuration file for the network that you'd like to connect to. Most universities around the world should have to `eduroam` network available. You can use it for connecting your Duckiebot.
 
-Save the following block as `TODO: filename eduroam wifi setting`:
+Save the following block as new file in `/etc/NetworkManager/system-connections/eduroam`:
 
-    TODO code block for eduroam connection
+    [connection]
+    id=eduroam
+    uuid=38ea363b-2db3-4849-a9a4-c2aa3236ae29
+    type=wifi
+    permissions=user:oem:;
+    secondaries=
 
-### Option 3: custom WiFi
+    [wifi]
+    mac-address=![the MAC address of your internal wifi adapter, wlan0]
+    mac-address-blacklist=
+    mac-address-randomization=0
+    mode=infrastructure
+    seen-bssids=
+    ssid=eduroam
+
+    [wifi-security]
+    auth-alg=open
+    group=
+    key-mgmt=wpa-eap
+    pairwise=
+    proto=
+
+    [802-1x]
+    altsubject-matches=
+    eap=ttls;
+    identity=![your eduroam username]@![your eduroam domain]
+    password=![your eduroam password]
+    phase2-altsubject-matches=
+    phase2-auth=pap
+
+    [ipv4]
+    dns-search=
+    method=auto
+
+    [ipv6]
+    addr-gen-mode=stable-privacy
+    dns-search=
+    method=auto
+
+Set the permissions on the new file to 0600.
+
+    sudo chmod 0600 /etc/NetworkManager/system-connections/eduroam
+
+### Option 2.b): `eduroam` WiFi (UdeM/McGill instructions) {status=draft}
+
+Save the following block as new file in `/etc/NetworkManager/system-connections/eduroam-![USERNAME]`:
+where USERNAME is the your logged-in username in the duckiebot. 
+
+    [connection]
+    id=eduroam
+    uuid=38ea363b-2db3-4849-a9a4-c2aa3236ae29
+    type=wifi
+    permissions=user:![USERNAME]:;
+    secondaries=
+
+    [wifi]
+    mac-address=![the MAC address of your internal wifi adapter, wlan0]
+    mac-address-blacklist=
+    mac-address-randomization=0
+    mode=infrastructure
+    seen-bssids=
+    ssid=eduroam
+
+    [wifi-security]
+    auth-alg=open
+    group=
+    key-mgmt=wpa-eap
+    pairwise=
+    proto=
+
+    [802-1x]
+    altsubject-matches=
+    eap=peap;
+    identity=![DGTIC UNIP]
+    password=![DGTIC PWD]
+    phase2-altsubject-matches=
+    phase2-auth=mschapv2
+
+    [ipv4]
+    dns-search=
+    method=auto
+
+    [ipv6]
+    addr-gen-mode=stable-privacy
+    dns-search=
+    method=auto
+
+Set the permissions on the new file to 0600.
+
+    sudo chmod 0600 /etc/NetworkManager/system-connections/eduroam-![USERNAME]
+
+### Option 3: custom WiFi {status=draft}
 
 If neither `duckietown` nor `eduroam` are available, you can add your own configuration file. Here is an example for a standard WPA2-private home network. Save the following block as `TODO: filename custom wifi setting`:
 
     TODO code block for custom connection
 
 Note: Whichever option you pick, we don't recommend to create or modify the `/etc/wpa_supplicant.conf` file, because this verion of Ubuntu uses the `NetworkManager` service to deal with WiFi connections (and no longer the `wpasupplicant` daemon).
+
+Find the SSID of your Wi-Fi network. It is usually the name of the wifi network. Example: BELL343. Let's call it `![WIFINAME]` 
+To find the seen-bssed, run 
+
+    $ sudo iw wlan0 scan | egrep "^BSS|SSID:"
+    
+The AA:BB:CC:DD:EE:FF address above `SSID: BELL343` is your seen-bssed. Let's call it `![WIFIBSS]`
+
+Save the following block as new file in `/etc/NetworkManager/system-connections/BELL343`:
+
+    [connection]
+    id=![WIFINAME]
+    uuid=d8aa333b-2db3-4849-a9a4-c2aa3236ae29
+    type=wifi
+    permissions=
+    secondaries=
+    timestamp=1502254646
+
+    [wifi]
+    mac-address=
+    mac-address-blacklist=
+    mac-address-randomization=0
+    mode=infrastructure
+    seen-bssed=![WIFIBSS]
+    ssid=![WIFINAME]
+
+    [wifi-security]
+    group=
+    key-mgmt=wpa-psk
+    pairwise=
+    proto=
+    psk=![WIFIPWD]
+
+    [ipv4]
+    dns-search=
+    method=auto
+
+    [ipv6]
+    addr-gen-mode=stable-privacy
+    dns-search=
+    ip6-privacy=0
+    method=auto
+
+
+Set the permissions on the new file to 0600.
+
+    sudo chmod 0600 /etc/NetworkManager/system-connections/BELL343
 
 ## Update the system
 
@@ -333,15 +480,28 @@ Next, create a private/public key pair for the user; call it `![username]@![robo
 
 See: The procedure is documented in [](#howto-create-key-pair).
 
+### Add SSH alias {#setup-ssh-alias}
+
+Once you have your SSH key pair on both your laptop and your Duckiebot, as well as your new user- and hostname set up on your Duckiebot, then you should set up an SSH alias as described in [](#ssh-aliases). This allows your to log in for example with
+
+    laptop $ ssh ![abc]
+
+instead of 
+
+    laptop $ ssh ![username]@![robot name]
+    
+where you can chose `![abc]` to be any alias / shortcut.
+
 ### Add `![username]`'s public key to Github
 
 Add the public key to your Github account.
 
 See: The procedure is documented in [](#howto-add-pubkey-to-github).
 
-If the step is done correctly, this command should succeed:
+If the step is done correctly, the following command should succeed and give you a welcome message:
 
     duckiebot $ ssh -T git@github.com
+    Hi ![username]! You've successfully authenticated, but GitHub does not provide shell access.
 
 ### Local Git configuration
 
@@ -408,6 +568,40 @@ Then download `out.jpg` to your computer using `scp` for inspection.
 
 See: For instructions on how to use `scp`, see [](#howto-download-file-with-scp).
 
+## Final touches: duckie logo {#installing-duckietown-logo}
+
+In order to show that your Duckiebot is ready for the task of driving around happy little duckies, the robot has to fly the Duckietown flag. When you are still logged in to the Duckiebot you can download and install the banner like this:
+
+Download the ANSI art file from Github:
+
+    duckiebot $ wget --no-check-certificate -O duckie.art "https://raw.githubusercontent.com/duckietown/Software/master/misc/duckie.art"
+    
+(optional) If you want, you can preview the logo by just outputting it onto the command line:
+
+    duckiebot $ cat duckie.art
+    
+Next up create a new empty text file in your favorite editor and add the code for showing your duckie pride:
+
+Let's say I use `nano`, I open a new file:
+
+    duckiebot $ nano 20-duckie
+
+And in there I add the following code (which by itself just prints the duckie logo):
+
+    #!/bin/sh
+    printf "\n$(cat /etc/update-motd.d/duckie.art)\n"
+    
+Then save and close the file. Finally you have to make this file executable...
+
+    duckiebot $ chmod +x 20-duckie
+
+...and copy both the duckie logo and the script into a specific directory `/etc/update-motd.d` to make it appear when you login via SSH. `motd` stands for "message of the day". This is a mechanism for system administrators to show users news and messages when they login. Every executable script in this directory which has a filename a la `![NN]-![some name]` will get exected when a user logs in, where `![NN]` is a two digit number that indicates the order.
+
+    sudo cp duckie.art /etc/update-motd.d
+    sudo cp 20-duckie /etc/update-motd.d
+    
+Finally log out of SSH via `exit` and log back in to see duckie goodness.
+
 ### Troubleshooting
 
 Symptom: `detected=0`
@@ -424,8 +618,12 @@ then, just like it says: "Please check carefully the camera module is installed 
 
 Symptom: random `wget`, `curl`, `git`, and `apt` calls fail with SSL errors.
 
-Resolution: That's probably actually an issue with your system time. Type the command `timedatectl` into a terminal, hit enter and see if the time is off. If it is, you might wanna follow the intructions from this article: https://raspberrypi.stackexchange.com/questions/59860/time-and-timezone-issues-on-pi
-or entirely uninstall your NTP service and manually grab the time on reboot. It's a bit dirty, but works surprisingly well:
-https://unix.stackexchange.com/questions/251519/setting-time-and-date-without-using-ntp
+Resolution: That's probably actually an issue with your system time. Type the command `timedatectl` into a terminal, hit enter and see if the time is off. If it is, you might want to follow the intructions from [this article][art1],
+or entirely [uninstall your NTP service and manually grab the time on reboot][art2]. It's a bit dirty, but works surprisingly well.
 
+[art1]: https://raspberrypi.stackexchange.com/questions/59860/time-and-timezone-issues-on-pi
+[art2]: https://unix.stackexchange.com/questions/251519/setting-time-and-date-without-using-ntp
 
+Symptom: Cannot find `/etc` folder for configuring the Wi-Fi. I only see `Desktop`, `Downloads` when starting up the Duckiebot. 
+
+Resolution: If a directory name starts with `/`, it's not supposed to be in the home directory, but rather at the root of the filesystem. You are currently in `/home/ubuntu`. Type `ls /` to see the folders at the root, including `/etc.  

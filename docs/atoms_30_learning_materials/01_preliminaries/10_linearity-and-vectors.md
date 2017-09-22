@@ -1,4 +1,4 @@
-# Linearity and Vectors {#linear_algebra}
+# Linearity and Vectors {#linear_algebra status=draft}
 
 Assigned: Jacopo
 
@@ -18,12 +18,7 @@ See also: this other reference
 
 TODO: add references throughout all chapter
 
-<!--(Dear Santa, I would like class='required-preliminaries' here) -->
 <div class='requirements' markdown="1">
-
-Knowledge necessary:
-
-<!--Required Reading: Insert here a list of topics and suggested resources related to _necessary_ knowledge in order to understand the content presented. Example: -->
 
 Requires: Real numbers are complex for you?: Number theory [addref]()
 

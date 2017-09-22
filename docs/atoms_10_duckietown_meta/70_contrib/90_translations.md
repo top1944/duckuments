@@ -1,4 +1,4 @@
-# Translations {status=draft}
+# Translations {#duckuments-translations status=draft}
 
 Note: This part is not implemented yet.
 

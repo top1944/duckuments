@@ -1,4 +1,4 @@
-# Installing Ubuntu on laptops {#setup-laptop}
+# Installing Ubuntu on laptops {#setup-laptop status=beta}
 
 Assigned: Andrea
 
@@ -18,7 +18,7 @@ Results: A laptop ready to be used for Duckietown.
 
 ## Install Ubuntu
 
-Install Ubuntu 16.04.2.
+Install Ubuntu 16.04.3.
 
 See: For instructions, see for example [this online tutorial][tutorial].
 
@@ -109,7 +109,7 @@ See: This procedure is described in [](#howto-passwordless-sudo).
 
 
 Comment: Huh I don't know - this is great for usability, but horrible for security. If you step away from your laptop for a second and don't lock the screen, a nasty person could `sudo rm -rf /`. -FG
- 
+
 ## SSH and Git setup
 
 

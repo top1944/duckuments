@@ -1,3 +1,3 @@
-# Exercises {#part:exercises}
+# Exercises {#part:exercises status=ready}
 
-These are the exercises - things that the students must do.
+These exercises can guide you from the status of a novice coder to experienced roboticist.

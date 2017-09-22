@@ -1,4 +1,4 @@
-# SD Cards tools {#sdcards}
+# SD Cards tools {#sdcards status=ready}
 
 ## Testing SD Card and disk speed {#test-sd-card-speed}
 
@@ -180,6 +180,8 @@ Note down the end of the second partition (in this case 21219327). Call this `![
     laptop $ sudo losetup -d /dev/loop0
     laptop $ sudo truncate -s $(((![end]+1)*512)) ![image file]
 
-You now have a shrunken image file. A further idea is to compress it:
+You now have a shrunken image file.
+
+It might be useful to compress it, before distribution:
 
     laptop $ xz ![image file]

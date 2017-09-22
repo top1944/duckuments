@@ -1,8 +1,8 @@
-# Accessing computers using SSH {#ssh}
+# Accessing computers using SSH {#ssh status=ready}
 
 Assigned: Andrea
 
-## Background reading
+## Background reading {status=draft}
 
 TODO: to write
 
@@ -10,7 +10,7 @@ TODO: to write
 - Public key authentication
 
 
-## Installation of SSH
+## Installation of SSH {status=draft}
 
 This installs the client:
 
@@ -170,9 +170,9 @@ Check that the config file is correct:
 <div class='requirements' markdown='1'>
 
 Requires: You have two computers, called "`![local]`" and "`![remote]`",
-  with users "`![local-user]`" and "`![remote-user]`".
+  with users "`![local-user]`" and "`![remote-user]`". Here, we assume that `![local]` and `![remote]` are complete hostnames (such as `duckiebot.local`.).
 
-Requires: The two computers are on the same network.
+Requires: The two computers are on the same network and they can ping each other.
 
 Requires: You have created a keypair for `![local-user]` on `![local]`.
 This procedure is described in [](#howto-create-key-pair).
@@ -207,6 +207,12 @@ On the `![remote]` computer, edit or create the file:
 
 and add the entire line as above containing the public key.
 
+Now, from the `![local]` computer, try to ping the remote one:
+
+    ![local] $ ping `![remote]`
+
+Note that, above, `![remote]` should be a complete hostname, such as `duckiebot.local`.
+
 Now, from the `![local]` computer, try to log in into the `![remote]` one:
 
     ![local] $ ssh ![remote-user]@![remote]
@@ -225,6 +231,6 @@ In doubt, these lines fix the permissions for your `.ssh` directory.
 
 
 
-## `ssh-keygen` {#ssh-keygen}
+## `ssh-keygen` {#ssh-keygen status=draft}
 
 TODO: to write

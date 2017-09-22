@@ -1,4 +1,4 @@
-# Interlude: Ergonomics
+# Interlude: Ergonomics {#ergonomics status=draft}
 
 Assigned: Andrea
 
@@ -35,7 +35,7 @@ You can use the "`set_ros_master.sh`" script in the repo:
 Note that you need to use `source`; without that, it will not work.
 
 
-## SSH aliases
+## SSH aliases {#ssh-aliases}
 
 Instead of using
 

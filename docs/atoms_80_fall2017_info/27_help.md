@@ -1,4 +1,4 @@
-# Getting and giving help {#help}
+# Getting and giving help {#help status=beta}
 
 ## *Who* to ask for help
 
@@ -33,7 +33,7 @@ These override the listing in the organization chart.
 The ways that we will support each other will depend on the type of situation. Here we will enumerate the different cases. Try to figure out which case is the most appropriate and act accordingly. These are ordered roughly in order of increasing severity.
 
 ### Case: You find a mistake in the documentation
-Action: Please fix it. 
+Action: Please fix it.
 
 The goal for the instructions is that anybody is able to follow them.
 Last year, we managed to have two 15-year-old students
@@ -75,7 +75,7 @@ Action: Ask for clarification on the appropriate Slack channel. For a list of sl
 
 ### Case: You understand the instructions but you are blocked for some reason
 
-Action: This is more serious than the previous. 
+Action: This is more serious than the previous.
 Open an issue [on the `duckiefleet-fall2017` github page](https://github.com/duckietown/duckiefleet-fall2017/issues). Once the issue is resolved, either you or the appropriate staff member should update the documentation if appropriate. For instructions on this see [](#part:contribute).
 
 

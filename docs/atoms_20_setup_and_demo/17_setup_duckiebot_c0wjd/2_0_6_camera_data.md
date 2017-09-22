@@ -1,4 +1,4 @@
-# Reading from the camera {#read-camera-data}
+# Reading from the camera {#read-camera-data status=beta}
 
 
 <div class='requirements' markdown='1'>
@@ -39,6 +39,9 @@ windows. However, using Byobu is the best practice to learn.
 ## First window: launch the camera nodes
 
 In the first window, we will launch the nodes that control the camera.
+All the following commands should be run in the `~/duckietown` directory:
+
+    duckiebot $ cd ~/duckietown
 
 Activate ROS:
 
@@ -63,6 +66,9 @@ See also: For more information about `roslaunch` and "launch files", see [](#ros
 ## Second window: view published topics
 
 Switch to the second window.
+All the following commands should be run in the `~/duckietown` directory:
+
+    duckiebot $ cd ~/duckietown
 
 Activate the ROS environment:
 
@@ -88,7 +94,7 @@ You should see the following topics:
 
 You can use `rostopic hz` to see the statistics about the publishing frequency:
 
-    laptop $ rostopic hz /![robot name]/camera_node/image/compressed
+    duckiebot $ rostopic hz /![robot name]/camera_node/image/compressed
 
 On a Raspberry Pi 3, you should see a number close to 30 Hz:
 
@@ -99,7 +105,7 @@ On a Raspberry Pi 3, you should see a number close to 30 Hz:
 
 You can view the messages in real time with the command `rostopic echo`:
 
-    laptop $ rostopic echo /![robot name]/camera_node/image/compressed
+    duckiebot $ rostopic echo /![robot name]/camera_node/image/compressed
 
 You should see a large sequence of numbers being printed to your terminal.
 

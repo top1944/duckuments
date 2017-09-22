@@ -1,3 +1,3 @@
-# Taking a log
+# Taking a log {#take-a-log status=draft}
 
 Assigned: Andrea

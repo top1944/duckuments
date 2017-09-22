@@ -1,4 +1,4 @@
-# Contributing to the documentation {#sec:contribute-to-docs status=ready}
+# Contributing to the documentation {#contribute-to-docs status=ready}
 
 ## Where the documentation is
 
@@ -9,7 +9,8 @@ The documentation is written as a series of small files in Markdown format.
 It is then processed by a series of scripts to create this output:
 
 * [a publication-quality PDF][master-pdf];
-* [an online HTML version, split in multiple pages and with comments boxes][master-split].
+* [an online HTML version, split in multiple pages][master-split];
+* [a one-page version][master-html].
 
 [master-pdf]: http://book.duckietown.org/master/duckiebook.pdf
 [master-html]: http://book.duckietown.org/master/duckiebook.html
@@ -111,7 +112,7 @@ You also should run:
 
     $ pip install -U SystemCmd==2.0.0
 
-## Compiling the documentation
+## Compiling the documentation (updated Sep 12) {#compiling-master status=recently-updated }
 
 <div class="check" markdown="1">
 
@@ -123,14 +124,14 @@ this by checking which `python` is active:
 
 </div>
 
+<!--
 Then:
 
     $ cd ~/duckuments
-    $ make duckuments-dist
+    $ mkdir duckuments-dist
 
-This creates the directory `duckuments-dist`, which contains
-another checked out copy of the repository, but with the branch `gh-pages`, which
-is the branch that is published by Github using the "Github Pages" mechanism.
+ This creates the directory `duckuments-dist`, which contains
+the "live" website published by Github using the "Github Pages" mechanism at the URL `book.duckietown.org`.
 
 <div class="check" markdown="1">
 
@@ -139,64 +140,90 @@ At this point, please make sure that you have these two `.git` folders:
     ~/duckuments/.git
     ~/duckuments/duckuments-dist/.git
 
-</div>
+</div> -->
 
-To compile the docs, run `make clean compile`:
+To compile the master versions of the docs, run:
 
-    $ make clean compile
+    $ make master-clean master
 
 To see the result, open the file
 
     ./duckuments-dist/master/duckiebook/index.html
 
-### Incremental compilation
-
 If you want to do incremental compilation, you can omit the `clean` and just
 use:
 
-    $ make compile
+    $ make master
 
 This will be faster. However, sometimes it might get confused. At that point,
-do `make clean`.
+do `make master-clean`.
 
-## Troubleshooting compilation
+### Compiling the Fall 2017 version only (introduced Sep 12) {#compiling-fall2017 status=recently-updated}
 
-Symptom: "Invalid XML"
+To compile the Fall 2017 versions of the docs, run:
 
-Resolution: "Markdown" doesn't mean that you can put anything in a file. Except
-for the code blocks, it must be valid XML. For example, if you use
-"<code>&gt;</code>" and "<code>&lt;</code>" without quoting, it will likely
-cause a compile error.
+    $ make fall2017-clean fall2017
 
-Symptom: "Tabs are evil"
+To see the result, open the file
 
-Resolution: Do not use tab characters. The error message in this case is quite
-helpful in telling you exactly where the tabs are.
+    ./duckuments-dist/master/duckiebook/index.html
 
 
-Symptom: The error message contains `ValueError: Suspicious math fragment 'KEYMATHS000ENDKEY'`
+For incremental compilation, use:
 
-Resolution: You probably have forgotten to indent a command line by at least 4 spaces. The dollar in the command line is now being confused for a math formula.
+    $ make fall2017
+
+### Single-file compilation {#compile-single-file}
+
+There is also the option to compile one single file.
+
+To do this, use:
+
+    $ ./compile-single ![path to .md file]
+
+This is the fastest way to see the results of the editing; however, there are limitations:
+
+- no links to other sections will work.
+- not all images might be found.
 
 
-## The workflow to edit documentation.
+## The workflow to edit documentation (updated Sep 12) {#workflow status=recently-updated}
 
-This is the workflow:
+This is the basic workflow:
 
-1. Edit the Markdown in the `master` branch of the `duckuments` repository.
-2. Run `make compile` to make sure it compiles.
-3. Commit the Markdown and push on the `master` branch.
+1. Create a branch called `![yourname]-branch` in the `duckuments` repository.
+1. Edit the Markdown in the `![yourname]-branch` branch.
+2. Run `make master` to make sure it compiles.
+3. Commit the Markdown and push on the `![yourname]-branch`  branch.
+4. Create a pull request.
+5. Tag the group `duckietown/gardeners`.
 
-Done. A bot will redo the compilation and push the changes in the `gh-pages` branch.
 
-Step 2 is there so you know that the bot will not encounter errors.
+See: Create a pull request from the command-line using [`hub`](#hub).
 
-## \*Deploying the documentation
+## Reporting problems
 
-Note: This part is now done by a bot, so it has been removed by the documentation.
+First, see the section <a href="#markduck-troubleshooting" class='name_number'></a> for
+common problems and their resolution.
 
-The book is published to a different [repository called `duckuments-dist`](https://github.com/duckietown/duckuments-dist) and from there
-published as `book.duckietown.org`.
+Please report problems with the duckuments using [the `duckuments` issue tracker][tracker].
+If it is urgent, please tag people (Andrea); otherwise these are processed in batch mode every few days.
+
+[tracker]: https://github.com/duckietown/duckuments/issues
+
+
+If you have a problem with a generated PDF, please attach the offending PDF.
+
+If you say something like "This happens for Figure 3", then it is hard
+to know which figure you are referencing exactly, because numbering changes
+from commit to commit.
+
+If you want to refer to specific parts of the text, please commit all your work on your branch,
+and obtain the name of the commit using the following commands:
+
+    $ git -C ~/duckuments rev-parse HEAD      # commit for duckuments
+    $ git -C ~/duckuments/mcdp rev-parse HEAD # commit for mcdp
+
 
 
 
@@ -217,78 +244,3 @@ Now, after triple checking that you are in the `gh-pages` branch, you can
 use `git status` to see the files that were added or modified,
 and simply use `git add`, `git commit` and `git push` to push the files
 to Github. -->
-
-## \*Compiling the PDF version
-
-Note: The dependencies below are harder to install. If you don't manage
-to do it, then you only lose the ability to compile the PDF. You can do `make compile`
-to compile the HTML version, but you cannot do `make compile-pdf`.
-
-### Installing `nodejs`
-
-Ensure the latest version (>6) of `nodejs` is installed.
-
-Run:
-
-    $ nodejs --version
-    6.xx
-
-If the version is 4 or less, remove `nodejs`:
-
-    $ sudo apt remove nodejs
-
-Install `nodejs` using [the instructions at this page][nodejs].
-
-[nodejs]: https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
-
-<!-- $ sudo apt install node-less -->
-
-Next, install the necessary Javascript libraries using `npm`:
-
-    $ cd $DUCKUMENTS
-    $ npm install MathJax-node jsdom@9.3 less
-
-
-
-### Troubleshooting `nodejs` installation problems
-
-The only pain point  in the installation procedure has been the installation of `nodejs` packages using `npm`. For some reason, they cannot be installed globally (`npm install -g`).
-
-Do **not** use `sudo` for installation. It will cause problems.
-
-If you use `sudo`, you probably have to delete a bunch of directories,
-such as: `~/duckuments/node_modules`, `~/.npm`, and `~/.node_modules`, if they exist.
-
-### Installing Prince
-
-Install PrinceXML from [this page](https://www.princexml.com/download/).
-
-### Installing fonts
-<!--
-Download STIX fonts from [this site][stix].
-
-[stix]: https://sourceforge.net/projects/stixfonts/files/latest/download
-
-Unzip and copy the ttf to `~/.fonts`:
-
-    $ cp -R STIXv2.0.0 ~/.fonts -->
-
-Copy the `~/duckuments/fonts` directory in `~/.fonts`:
-
-    $ mkdir -p ~/.fonts    # create if not exists
-    $ cp -R ~/duckuments/fonts ~/.fonts
-
-and then rebuild the font cache using:
-
-    $ fc-cache -fv
-
-
-### Compiling the PDF
-
-To compile the PDF, use:
-
-    $ make compile-pdf
-
-This creates the file:
-
-    ./duckuments-dist/master/duckiebook.pdf

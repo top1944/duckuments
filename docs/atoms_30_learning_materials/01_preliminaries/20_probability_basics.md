@@ -1,5 +1,4 @@
-# Probability basics {#probability_basics}
-
+# Probability basics {#probability_basics status=beta}
 
 In this chapter we give a brief review of some basic probabilistic concepts. For a more in-depth treatment of the subject we refer the interested reader to a textbook such as [](#bib:Papoulis).
 
@@ -13,19 +12,15 @@ A  (either discrete or continuous) variable that can take on any value that corr
 
 
 
-For example, we could model the event of flipping a fair coin with the random variable $X$. We write the probability that $X$ takes $HEADS$ as $p(X=HEADS)$. The set of all possible values for the variable $X$ is its *domain*, $\aset{X}$. In this case,
+For example, we could model the event of flipping a fair coin with the random variable $X$. We write the probability that $X$ takes HEADS as $p(X=\text{HEADS})$. The set of all possible values for the variable $X$ is its *domain*, $\aset{X}$. In this case,
 \[
-    \aset{X}=\{HEADS,TAILS\}.
+    \aset{X}=\{\text{HEADS},\text{TAILS}\}.
 \]
      Since $X$ can only take one of two values, it is a *binary* random variable. In the case of a die roll,
 \[
     \aset{X}=\{1,2,3,4,5,6\},
 \]
 and we refer to this as a *discrete* random variable. If the output is real value or a subset of the real numbers, e.g., $\aset{X} = \reals$, then we refer to $X$ as a *continuous* random variable.
-
-<div class="comment" markdown="1">
-Personally, I don't like using math formatting for letters or words that don't denote symbols, e.g., $X = HEADS$ v.s. $X= \text{HEADS}$ - MW
-</div>
 
 Consider once again the coin tossing event. If the coin is fair, the have $p(X=HEADS)=p(X=TAILS)=0.5$. Here, the function $p(x)$ is called the *probability mass function* or pmf. The pmf is shown in [](#fig:binary_pmf).
 
@@ -53,16 +48,15 @@ If we have two different RVs representing two different events $X$ and $Y$, then
 
 ### Conditional Probabilities {#conditional}
 
-Again, considering that we have to RVs, $X$ and $Y$, imagine these two events are linked in some way. For example, $X$ is the numerical output of a die roll and $Y$ is the binary even-odd output of the same die roll. Clearly these two events are linked since they are both uniquely determined by the same underlying event (the rolling of the die). In this case, we say that the RVs are *dependent* on one another. In the event that we know one of events, this gives us some information about the other. We denote this using the following *conditional distribution* $p(X=x \; \text{GIVEN} \; Y=y = p(x|y)$.
+Again, considering that we have to RVs, $X$ and $Y$, imagine these two events are linked in some way. For example, $X$ is the numerical output of a die roll and $Y$ is the binary even-odd output of the same die roll. Clearly these two events are linked since they are both uniquely determined by the same underlying event (the rolling of the die). In this case, we say that the RVs are *dependent* on one another. In the event that we know one of events, this gives us some information about the other. We denote this using the following *conditional distribution* $p(X=x \; \text{GIVEN} \; Y=y) \triangleq p(x|y)$.
 
 
 <div class="check" markdown="1">
-Write down the conditional pmf for the scenario just described assuming an oracle tells you that the die roll is even. In other words, what is p(x|EVEN)?
+Write down the conditional pmf for the scenario just described assuming an oracle tells you that the die roll is even. In other words, what is p(x|\text{EVEN})?
 
 (Warning: if you think this is very easy that's good, but don't get over-confident.)
 </div>
 
-Comment: I love editing. -AC
 
 The joint and conditional distributions are related by the following (which could be considered a definition of the joint distribution):
 
@@ -74,28 +68,13 @@ p(x,y) = p(x|y)p(y)
 and similarly, the following could be considered a definition of the conditional distribution:
 
 \begin{equation}
-p(x|y) = \frac{p(x,y)}{p(y)} \text{if} p(y) > 0
+p(x|y) = \frac{p(x,y)}{p(y)} \; \text{if} \; p(y) > 0
 \label{eq:condition}
 \end{equation}
 
-<div class="comment" markdown="1">
-We need to add spacing - MW
-</div>
+
 
 In other words, the conditional and joint distributions are inextricably linked (you can't really talk about one without the other).
-
-<div class='comment' markdown="1">
-I don't really have anything to say.
-
-Just wanted to show the comment system.
-
-Note that I can just go and on with my rambling; all this text will be collapsed anyway.
-
-(Keep this comment as an example.)
-
--AC
-
-</div>
 
 If two variables are *independent*, then the following relation holds: $p(x,y)=p(x)p(y)$.
 

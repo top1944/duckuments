@@ -1,10 +1,10 @@
-# Wireless networking in Linux
+# Wireless networking in Linux {#wireless-linux status=ready}
 
-## `iwconfig` {#iwconfig}
+## `iwconfig` {#iwconfig status=draft}
 
 TODO: to write
 
-## `iwlist` {#iwlist}
+## `iwlist` {#iwlist status=draft}
 
 ### Getting a list of WiFi networks
 

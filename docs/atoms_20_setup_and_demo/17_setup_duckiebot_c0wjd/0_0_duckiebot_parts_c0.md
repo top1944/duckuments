@@ -1,4 +1,4 @@
-# Acquiring the parts for the Duckiebot `C0` {#acquiring-parts-c0}
+# Acquiring the parts for the Duckiebot `C0` {#acquiring-parts-c0 status=beta}
 
 The trip begins with acquiring the parts. Here, we provide a link to all bits and pieces that are needed to build a Duckiebot, along with their price tag. If you are wondering what is the difference between different Duckiebot configurations, read [this](#duckiebot-configurations).
 
@@ -25,7 +25,7 @@ Next steps: After receiving these components, you are ready to do some [solderin
 
 </div>
 
-TODO: Add a different "Tools" section in the table (e.g., solderer), or add in the resources beginning snippet; Differentiate pricing for bulk vs detail purchase (?)
+TODO: Polish, update caster bits
 
 ## Bill of materials
 
@@ -118,7 +118,7 @@ The chassis pack includes the motors and wheels as well as the structural part.
 
 ## Raspberry Pi 3 - Model B
 
-The Raspberry Pi is the central computer of the Duckiebot. Duckiebots use Model B ([](#fig:rpi3b)) (A1.2GHz 64-bit quad-core ARMv8 CPU, 1GB RAM), a small but powerful computer.
+The Raspberry Pi is the central computer of the Duckiebot. Duckiebots use Model B ([](#fig:rpi3b)) ( A1.2GHz 64-bit quad-core ARMv8 CPU, 1GB RAM), a small but powerful computer.
 
 <div figure-id="fig:rpi3b" figure-caption="The Raspberry Pi 3 Model B">
      <img src="rpi3b.png" style='width: 15em'/>

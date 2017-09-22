@@ -1,4 +1,4 @@
-# First Steps for Students {#first-steps-for-students}
+# The First Steps for Students {#first-steps-for-students status=beta}
 
 ## Onboarding Procedure {#onboarding-fall2017}
 
@@ -10,16 +10,12 @@ The primary mode of online confabulation between staff and students is Slack, a 
 
 Note: Emails are otherwise forbidden, unless they relate to a private, university-based admistrative concern.
 
-If are reading this you should have recieved an invitation to join our Slack - check your inbox. If you have not recieved an invitation to Slack, you need to send an email to Kirsten Bowser &lt;akbowser@gmail.com&gt;.
+If you are reading this you should have received an invitation to join our Slack - check your inbox. If you have not received an invitation to Slack, you need to send an email to Kirsten Bowser &lt;akbowser@gmail.com&gt;.
 
-When you accept your Slack invite, please follow these rules in setting up your profile:
-
-- username = last name
-- first name = first name
-- last name = last name (institution/location)
+When you accept your Slack invite, please identify yourself with first and last names followed by a "-" and your affiliation.
 
 <div class='example-usage' markdown="1">
-Here is an example: Andrea Censi from ETHZ is `@censi`, his name on Slack is "Andrea Censi (ETHZ)".
+Andrea Censi - ETHZ
 </div>
 
 Please add a picture (relatively professional, so that we can use it for rosters when the time comes).
@@ -27,7 +23,7 @@ Please add a picture (relatively professional, so that we can use it for rosters
 
 More details about Slack are available [here](#slack)
 
-A brief synopsis of all of the help related Slack channels is here: [](#slack_channels).
+A brief synopsis of all the help-related Slack channels is here: [](#slack_channels).
 
 Check out all the channels in Slack, and add yourself to those that pertain or interest you. Be sure to introduce yourself in the General channel.
 
@@ -38,15 +34,17 @@ The next thing you need to do is provide Duckietown HR (Kirsten Bowser) with you
 
 If you don't already have a Github account, follow these steps:
 
-1. Sign up for an account on [GitHub](https://github.com).
+1) Sign up for an account on [GitHub](https://github.com).
 
-2. Use the same email associated with your Slack account. Your Github username should be the same as your Slack username if possible, otherwise something similar.
+2) Use the same email associated with your Slack account. Your Github username should be the same as your Slack username if possible, otherwise something similar.
 
+3) Send your Github username to Duckietown HR via Slack in a private message.
+
+4) You need to accept the invite to the Duckietown organization. The invite should be waiting for you at the page https://github.com/duckietown.
+
+<div class='example-usage' markdown="1">
 Example: `@censi` is the slack handle, the GitHub username is `AndreaCensi`.
-
-3. Send your Github username to Duckietown HR via Slack in a private message.
-
-4. You need to accept the invite to the Duckietown organization. The invite should be waiting for you at the page https://github.com/duckietown.
+</div>
 
 <!--
 ### Google Documents
@@ -135,4 +133,5 @@ See: [](#git-reference)
 Do a bit of a refresher on some math basics.
 
 Linear Algegra: [](#linear_algebra)
+
 Probability Basics: [](#probability_basics)
