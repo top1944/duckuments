@@ -6,7 +6,7 @@ Assigned: Dzenan Lapandic
 <div class='requirements' markdown='1'>
 
 Requires: You can see the camera image on the laptop. The procedure is documented in
-[](#rc-cam-launched-remotely status=beta).
+[](#rc-cam-launched-remotely).
 
 Results: Calibrated camera of the robot
 
