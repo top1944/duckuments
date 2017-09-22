@@ -72,3 +72,8 @@ Slack Channel: help-robot-setup
 Now you need to clone the software repo and run things to make your robot move.
 
 See: [](#rc-control)
+
+
+## Submit your video
+
+By clicking [here](https://www.dropbox.com/request/XmO5tzlJmuaOVb2gGg2A)
