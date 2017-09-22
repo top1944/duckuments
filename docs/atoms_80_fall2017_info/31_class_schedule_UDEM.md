@@ -110,9 +110,9 @@ Class (11:30 - 12:30)
 
 Slides:
 
-* [Software Architectures](#https://github.com/duckietown/lectures/blob/master/2_given/2017-09-20-udem-software_architectures.key)
+* [Software Architectures](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-20-udem-software_architectures.key)
 
-* [Introduction to ROS](#https://github.com/duckietown/lectures/blob/master/2_given/2017-09-20-udem-introduction_to_ros.key)
+* [Introduction to ROS](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-20-udem-introduction_to_ros.key)
 
 Book Materials:
 
@@ -125,7 +125,7 @@ Lab (12:30 - 1:30)
 
 Homeworks and Checkoffs:
 
-*  [](#checkoff_assembly_configuration) deadline extended to  **Monday Sept 25** 
+*  [](#checkoff_assembly_configuration) deadline extended to  **Monday Sept 25**. Submit by clicking [here](https://www.dropbox.com/request/XmO5tzlJmuaOVb2gGg2A).
 
 
 ## Mon Sept 25
