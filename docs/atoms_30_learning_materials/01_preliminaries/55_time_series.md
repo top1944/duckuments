@@ -4,8 +4,9 @@
 
 Requires: Knowledge of k:tuple
 
-Result: Knowledge of k:time-series, k:time-series-upsampling,
-k:time-series-downsampling.
+Result: Knowledge of time series.
+
+Result: Knowledge of time series operations, such as upsampling and downsampling.
 
 </div>
 
@@ -14,7 +15,7 @@ k:time-series-downsampling.
 \begin{definition}  \label{def:time-series-def}
 
 A \emph{time series} with domain $\aset{X}$ and time domain $\Time$ is a sequence of tuples
-$\tup{t_i, x_i} \in \Time \times \aset{X}$.
+$\tup{t_k, x_k} \in \Time \times \aset{X}$.
 
 \end{definition}
 
