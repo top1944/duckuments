@@ -1,6 +1,9 @@
+
 # Soldering boards for `C1` {#soldering-boards-c1 status=draft}
 
+Note: General rule in soldering
 
+* soldering the components according to the height of components - from lowest to highest
 
 Assigned: Shiying
 
@@ -13,9 +16,9 @@ Requires: Time: ??? minutes
 
 Results: ...
 
-TODO: finish above
-
 </div>
+
+TODO: finish above
 
 ## General rules
 
