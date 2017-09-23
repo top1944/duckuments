@@ -157,8 +157,6 @@ Then, edit the connection file
 
     /etc/NetworkManager/system-connections/create-5ghz-network
 
-Doubt: where is this file exactly? I can't find the ~/etc folder at all
-
 Make the following changes:
 
 * Where it says `interface-name=![...]`, put "`wlx![AABBCCDDEEFFGG]`".
@@ -482,15 +480,28 @@ Next, create a private/public key pair for the user; call it `![username]@![robo
 
 See: The procedure is documented in [](#howto-create-key-pair).
 
+### Add SSH alias {#setup-ssh-alias}
+
+Once you have your SSH key pair on both your laptop and your Duckiebot, as well as your new user- and hostname set up on your Duckiebot, then you should set up an SSH alias as described in [](#ssh-aliases). This allows your to log in for example with
+
+    laptop $ ssh ![abc]
+
+instead of 
+
+    laptop $ ssh ![username]@![robot name]
+    
+where you can chose `![abc]` to be any alias / shortcut.
+
 ### Add `![username]`'s public key to Github
 
 Add the public key to your Github account.
 
 See: The procedure is documented in [](#howto-add-pubkey-to-github).
 
-If the step is done correctly, this command should succeed:
+If the step is done correctly, the following command should succeed and give you a welcome message:
 
     duckiebot $ ssh -T git@github.com
+    Hi ![username]! You've successfully authenticated, but GitHub does not provide shell access.
 
 ### Local Git configuration
 
@@ -557,6 +568,40 @@ Then download `out.jpg` to your computer using `scp` for inspection.
 
 See: For instructions on how to use `scp`, see [](#howto-download-file-with-scp).
 
+## Final touches: duckie logo {#installing-duckietown-logo}
+
+In order to show that your Duckiebot is ready for the task of driving around happy little duckies, the robot has to fly the Duckietown flag. When you are still logged in to the Duckiebot you can download and install the banner like this:
+
+Download the ANSI art file from Github:
+
+    duckiebot $ wget --no-check-certificate -O duckie.art "https://raw.githubusercontent.com/duckietown/Software/master/misc/duckie.art"
+    
+(optional) If you want, you can preview the logo by just outputting it onto the command line:
+
+    duckiebot $ cat duckie.art
+    
+Next up create a new empty text file in your favorite editor and add the code for showing your duckie pride:
+
+Let's say I use `nano`, I open a new file:
+
+    duckiebot $ nano 20-duckie
+
+And in there I add the following code (which by itself just prints the duckie logo):
+
+    #!/bin/sh
+    printf "\n$(cat /etc/update-motd.d/duckie.art)\n"
+    
+Then save and close the file. Finally you have to make this file executable...
+
+    duckiebot $ chmod +x 20-duckie
+
+...and copy both the duckie logo and the script into a specific directory `/etc/update-motd.d` to make it appear when you login via SSH. `motd` stands for "message of the day". This is a mechanism for system administrators to show users news and messages when they login. Every executable script in this directory which has a filename a la `![NN]-![some name]` will get exected when a user logs in, where `![NN]` is a two digit number that indicates the order.
+
+    sudo cp duckie.art /etc/update-motd.d
+    sudo cp 20-duckie /etc/update-motd.d
+    
+Finally log out of SSH via `exit` and log back in to see duckie goodness.
+
 ### Troubleshooting
 
 Symptom: `detected=0`
@@ -578,3 +623,7 @@ or entirely [uninstall your NTP service and manually grab the time on reboot][ar
 
 [art1]: https://raspberrypi.stackexchange.com/questions/59860/time-and-timezone-issues-on-pi
 [art2]: https://unix.stackexchange.com/questions/251519/setting-time-and-date-without-using-ntp
+
+Symptom: Cannot find `/etc` folder for configuring the Wi-Fi. I only see `Desktop`, `Downloads` when starting up the Duckiebot. 
+
+Resolution: If a directory name starts with `/`, it's not supposed to be in the home directory, but rather at the root of the filesystem. You are currently in `/home/ubuntu`. Type `ls /` to see the folders at the root, including `/etc.  

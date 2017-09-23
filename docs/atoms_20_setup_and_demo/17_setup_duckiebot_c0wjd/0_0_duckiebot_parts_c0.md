@@ -25,7 +25,7 @@ Next steps: After receiving these components, you are ready to do some [solderin
 
 </div>
 
-TODO: Add a different "Tools" section in the table (e.g., solderer), or add in the resources beginning snippet; Differentiate pricing for bulk vs detail purchase (?)
+TODO: Polish, update caster bits
 
 ## Bill of materials
 

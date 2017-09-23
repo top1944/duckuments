@@ -53,7 +53,7 @@ In general, sensors have two major types. *Passive* sensors generate measurement
 
 The raw data that is input from a sensor needs to be  processed in order to become useful and even understandandable to a human.
 
-First, **calibration** is usually required to convert convert units, for example from a voltage to a physical quantity. As a simple example consider a thermometer, which measures temperature via an expanding liquid (usually mercury). The calibration is the known mapping from amount of expansion of liquid to temperature. In this case it is a linear mapping and is used to put the markings on the thermometer that make it useful as a sensor.
+First, **calibration** is usually required to convert units, for example from a voltage to a physical quantity. As a simple example consider a thermometer, which measures temperature via an expanding liquid (usually mercury). The calibration is the known mapping from amount of expansion of liquid to temperature. In this case it is a linear mapping and is used to put the markings on the thermometer that make it useful as a sensor.
 
 We will distiguish between two fundamentally types of calibrations.
 
