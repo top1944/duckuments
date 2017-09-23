@@ -103,7 +103,7 @@ TODO: add instructions for Caster wheel assembly.
 
 ### Mounting the spacers
 
-Put the car upright (omni wheel pointing towards the table) and arrange wires so that they go through the center rectangle. Put 4 spacers with 4 of M3*6 screws on each corner as below.
+Put the car upright (omni wheel pointing towards the table) and arrange wires so that they go through the center rectangle. Put 4 spacers with 4 of M3x6 screws on each corner as below.
 
 <div figure-id="fig:screws" figure-caption=" ">
      <img src="chassi_screws.jpg" style='width: 30em'/>
@@ -115,7 +115,6 @@ Put the car upright (omni wheel pointing towards the table) and arrange wires so
 
 The bottom part of the Duckiebot's chassis is now ready. The next step is to assemble the Raspberry Pi on chassis-top part.
 
-Comment: These spacers are not the ones provided in the box, change pic. -JT
 
 ## Assembling the Raspberry Pi, camera, and HATs
 
@@ -150,15 +149,15 @@ When this is done fasten the nylon standoffs on the Raspberry Pi, and secure the
 
 #### Micro SD card
 
-Requires: Having the Duckiebot image copied in the Micro SD card.
+Requires: Having the Duckiebot image copied in the micro SD card.
 
-Take the Micro SD card from the Duckiebox and insert its slot on the Raspberry Pi. The SD card slot is just under the display port, on the short side of the PI, on the flipside of where the header pins are.
+Take the micro SD card from the duckiebox and insert its slot on the Raspberry Pi. The SD card slot is just under the display port, on the short side of the PI, on the flipside of where the header pins are.
 
-<div figure-id="fig:SD_card" figure-caption="The Micro SD card and SD_card readers.">
+<div figure-id="fig:SD_card" figure-caption="The Micro SD card and SD card readers.">
     <img src="SD_card.jpg" style='width: 30em'/>
 </div>
 
-<div figure-id="fig:RASPI_SD" figure-caption="display port and inserted SD card">
+<div figure-id="fig:RASPI_SD" figure-caption="Display port and inserted SD card">
     <img src="RASPI_SD.jpg" style='width: 30em'/>
 </div>
 
@@ -177,7 +176,7 @@ Protip: Make sure the camera cable is inserted in the right direction! The metal
 
 Note: Insert the cable in the right direction to connect the camera to the Raspberry Pi.
 
-<div figure-id="fig:camera_with_long_cable" figure-caption="camera with long cable">
+<div figure-id="fig:camera_with_long_cable" figure-caption="Camera with long cable">
      <img src="ziptied_top_camera.jpg" style='width: 30em'/>
 </div>
 
@@ -270,7 +269,7 @@ Put the battery between the upper and lower decks of the chassis. It is recommen
 
 ### Joypad
 
-For each Joypad there is a corresponding Joypad dongle. Don't lose the dongle! Otherwise you will need to buy a new Joypad.
+For each joypad there is a corresponding joypad dongle. Don't lose the dongle!
 <div figure-id="fig:joypad" figure-caption="All components in the Joypad package">
      <img src="joypad.jpg" style='width: 30em'/>
 </div>
@@ -281,7 +280,7 @@ Insert the joypad dongle into one of the USB port.
 </div>
 
 Insert 2AA batteries on the backside of the joypad
-<div figure-id="fig:joypack_battery" figure-caption="joypad and 2AA batteries">
+<div figure-id="fig:joypack_battery" figure-caption="Joypad and 2x AA batteries">
      <img src="joypack_battery.jpg" style='width: 30em'/>
 </div>
 
