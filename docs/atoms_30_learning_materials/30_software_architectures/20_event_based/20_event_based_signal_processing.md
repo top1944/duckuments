@@ -125,7 +125,7 @@ Processing loop of line detection. Bounded CPU usage. XXX -->
 
 ## Further reading
 
-* A reference on all things event-based (control and signal processing) [](#miskowicz2015event)
+* A reference on all things event-based (control and signal processing) [](#bib:miskowicz2015event)
 
 * A simple discussion of event-based control by K. J. Åström [](#bib:astrom08eventbased)
 

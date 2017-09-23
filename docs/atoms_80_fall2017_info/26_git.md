@@ -68,3 +68,10 @@ The URL to clone is:
     git@github.com:duckietown/XX-exercises.git
 
 Only TAs have write permissions to this repository.
+
+
+## Git policy {#git-policy}
+
+Assigned: Liam?
+
+TODO: When to clone what, when to fork, etc.
