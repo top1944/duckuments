@@ -10,8 +10,12 @@ path = "file://"  + os.path.realpath(stylesheet)
 s = '<link rel="stylesheet" type="text/css" href="%s"/>' % path
 
 before = '</head>'
-data2 = data.replace(before, s+before)
-assert s in data2
+if s in data:
+    print('Already present ' + s)
+else:
 
-with open(filename, 'w') as f:
-    f.write(data2)
+    data2 = data.replace(before, s+before)
+    assert s in data2
+
+    with open(filename, 'w') as f:
+        f.write(data2)
