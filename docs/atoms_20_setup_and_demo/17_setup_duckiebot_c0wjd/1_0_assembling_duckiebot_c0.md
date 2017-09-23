@@ -51,15 +51,15 @@ Insert the motor holders on the chassis-bottom and put the motors as shown in th
 
 
 <div figure-id="fig:motors" figure-caption=" Components for mounting the motor">
-     <img src="motors.jpg" style='width: 20ex; height: auto'/>
+     <img src="motors.jpg" style='width: 30em'/>
 </div>
 
 <div figure-id="fig:scratch_motors" figure-caption=" ">
-     <img src="scratch_motors.png" style='width: 20ex; height: auto'/>
+     <img src="scratch_motors.png" style='width: 30em'/>
 </div>
 
 <div figure-id="fig:motors1" figure-caption=" ">
-     <img src="motors1.jpg" style='width: 20ex; height: auto'/>
+     <img src="motors1.jpg" style='width: 30em'/>
 
 </div>
 
@@ -97,6 +97,16 @@ The Magician chassis package contains a steel omnidirectional wheel, and the rel
 
 #### Caster wheel
 
+As alternative to omnidirection wheel, caster wheel has less friction. 
+
+If you have purchased caster wheel, read this section.
+
+To assemble the caster wheel, the following materials is needed:
+
+* caster wheel
+* 4 standoffs (M3x12mm F-F, 6mm diameter)
+* 8 metal screws (M3x8mm)
+* 8 split lock washers
 
 TODO: add instructions for Caster wheel assembly.
 
@@ -126,23 +136,23 @@ Before attaching anything to the Raspberry Pi you should add the heat sinks to i
 When this is done fasten the nylon standoffs on the Raspberry Pi, and secure them on the top of the chassis-up part by tightening the nuts on the opposite side of the chassis-up.
 
 
-<div figure-id="fig:Raspberry_pi3_parts" figure-caption=" ">
+<div figure-id="fig:Raspberry_pi3_parts" figure-caption="Components for Raspberry Pi3">
      <img src="RPi_3_parts.jpg" style='width: 30em'/>
 </div>
 
-<div figure-id="fig:Raspberry_pi3_heatsinks" figure-caption=" ">
+<div figure-id="fig:Raspberry_pi3_heatsinks" figure-caption="Heat sink on Raspberry Pi3 ">
      <img src="RPi_3_heatsinks.jpg" style='width: 30em'/>
 </div>
 
-<div figure-id="fig:SideView_Raspberry_pi3" figure-caption=" ">
+<div figure-id="fig:SideView_Raspberry_pi3" figure-caption="Standoffs for Raspberry Pi3">
      <img src="side_RPi_3.jpg" style='width: 30em'/>
 </div>
 
-<div figure-id="fig:raspi_chassis_bottom" figure-caption=" ">
+<div figure-id="fig:raspi_chassis_bottom" figure-caption="Attach the nylon huts for the standoffs (Bottom view)">
      <img src="raspi_chassis_bottom.jpg" style='width: 30em'/>
 </div>
 
-<div figure-id="fig:raspi_chassis_up" figure-caption=" ">
+<div figure-id="fig:raspi_chassis_up" figure-caption="Top view of assembled Raspberry Pi3 ">
      <img src="raspi_chassis_up.jpg" style='width: 30em'/>
 </div>
 
@@ -154,11 +164,11 @@ Requires: Having the Duckiebot image copied in the micro SD card.
 Take the micro SD card from the duckiebox and insert its slot on the Raspberry Pi. The SD card slot is just under the display port, on the short side of the PI, on the flipside of where the header pins are.
 
 <div figure-id="fig:SD_card" figure-caption="The Micro SD card and SD card readers.">
-    <img src="SD_card.jpg" style='width: 30em'/>
+    <img src="sd_card.jpg" style='width: 30em'/>
 </div>
 
 <div figure-id="fig:RASPI_SD" figure-caption="Display port and inserted SD card">
-    <img src="RASPI_SD.jpg" style='width: 30em'/>
+    <img src="sd_slot.jpg" style='width: 30em'/>
 </div>
 
 ### Camera
@@ -190,7 +200,7 @@ Take the rear part of the camera mount and use it hold the camera in place. Note
 
 In case you have not purchased the long camera cable, do not worry! It is still very possible to get a working configuration, but you will have little wiggling space and assembly will be a little harder.
 
-Place the camera on the mount and fasten the camera mount on the chassis-up using M3*10 flathead screws and M3 nuts from the Duckiebox.
+Place the camera on the mount and fasten the camera mount on the chassis-up using M3x10 flathead screws and M3 nuts from the Duckiebox.
 
 Protip: make sure that the camera mount is: (a) geometrically centered on the chassis-up; (b) fastened as forward as it can go; (c) it is tightly fastened. We aim at having a standardized position for the camera and to minimize the wiggling during movement.
 
@@ -218,7 +228,7 @@ In order to fit the battery, we will need to extend the Magician Chassis standof
 Secure the extended standoff to the 4 corners of the chassis-bottom.  The nylon standoffs should smoothly screw in the metal ones. If you feel resistance, don’t force it or the nylon screw might break in the metal standoff. In that case, unscrew the nylon spacer and try again.
 
 
-<div figure-id="fig:standoff_extender" figure-caption="4 nylon M3*5 Standoff Spacer and 4 M3*10 screws">
+<div figure-id="fig:standoff_extender" figure-caption="4 nylon M3x5 Standoff Spacer and 4 M3x10 screws">
      <img src="extended_standoff.jpg" style='width: 30em'/>
 </div>
 
