@@ -50,7 +50,7 @@ Today we sent out the onboarding instructions.
 
 Here is a copy of the message we sent by email:
 
-> XXX
+> ...
 
 The next step for the students is to do the onboarding
 instructions in [](#first-steps-for-students).
@@ -83,7 +83,7 @@ TODO:
 Comment: TA: Write here the FAQs that students have.
 
 
-## Wed Sep ???: Duckiebox distribution and group intro {status=draft}
+## Wed Sep ?: Duckiebox distribution and group intro {status=draft}
 
 Note: this is a draft. Don't read it yet!
 
