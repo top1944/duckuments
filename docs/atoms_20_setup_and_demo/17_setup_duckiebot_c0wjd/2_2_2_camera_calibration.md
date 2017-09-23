@@ -5,9 +5,10 @@ Assigned: Dzenan Lapandic
 
 <div class='requirements' markdown='1'>
 
-Requires: XXX
+Requires: You can see the camera image on the laptop. The procedure is documented in
+[](#rc-cam-launched-remotely).
 
-Results: Calibrated robot
+Results: Calibrated camera of the robot
 
 </div>
 
@@ -17,10 +18,8 @@ Results: Calibrated robot
 
 Make sure your Duckiebot is on, and both your laptop and Duckiebot are
 connected to the duckietown network. Next, download and print a PDF of the
-[calibration checkerboard](https://drive.google.com/open?id=0B1iMTx9IcQVwN2pEcXE4RUF1VVk).
+[calibration checkerboard](github:org=duckietown,repo=Software,path=duckietown/config/baseline/calibration/camera_intrinsic/calibration_pattern.pdf).
 Fix the checkerboard to a planar surface.
-
-TODO: put this PDF directly in `Software`. It is small enough (11 KB). -AC
 
 <div figure-id="fig:calibration_checkerboard" figure-caption="">
      <img src="calibration_checkerboard.png" style='width: 20em'/>
@@ -36,18 +35,18 @@ Open three terminals on the laptop.
 
 In the first terminal, remotely launch the joystick process:
 
-    $ cd ~/duckietown
-    $ source environment.sh
-    $ roslaunch duckietown joystick.launch veh:=![robot name]
+    laptop $ cd ~/duckietown
+    laptop $ source environment.sh
+    laptop $ roslaunch duckietown joystick.launch veh:=![robot name]
 
 #### Step 3
 
 In the second terminal run the camera calibration:
 
-    $ cd ~/duckietown
-    $ source environment.sh
-    $ export ROS_MASTER_URI=http://![robot name].local:11311/
-    $ roslaunch duckietown intrinsic_calibration.launch veh:=![robot name] raw:=true
+    laptop $ cd ~/duckietown
+    laptop $ source environment.sh
+    laptop $ source set_ros_master.sh ![robot name]
+    laptop $ roslaunch duckietown intrinsic_calibration.launch veh:=![robot name] raw:=true
 
 You should see a display screen open on the laptop ([](#fig:intrinsic_callibration_pre)).
 
@@ -153,7 +152,7 @@ In the second terminal launch the camera:
 
     laptop $ cd ~/duckietown
     laptop $ source environment.sh
-    laptop $ export ROS_MASTER_URI=http://![robot name].local:11311/
+    laptop $ source set_ros_master.sh ![robot name]
     laptop $ roslaunch duckietown camera.launch raw:=1 veh:=![robot name]
 
 #### Step 4
@@ -162,16 +161,17 @@ In the third terminal run the ground projection node:
 
     laptop $ cd ~/duckietown
     laptop $ source environment.sh
-    laptop $ export ROS_MASTER_URI=http://![robot name].local:11311/
+    laptop $ source set_ros_master.sh ![robot name]
     laptop $ roslaunch ground_projection ground_projection.launch veh:=![robot name] local:=1
 
 #### Step 5
 
 In the fourth terminal, check that everything is working properly.
 
-    $ cd ~/duckietown
-    $ source environment.sh
-    $ rostopic list
+    laptop $ cd ~/duckietown
+    laptop $ source environment.sh
+    laptop $ source set_ros_master.sh ![robot name]
+    laptop $ rostopic list
 
 You should see new ros topics:
 
@@ -183,7 +183,7 @@ You should see new ros topics:
 
 The ground_projection node has two services. They are not used during operation. They just provide a command line interface to trigger the extrinsic calibration (and for debugging).
 
-    $ rosservice list
+    laptop $ rosservice list
 
 You should see something like this:
 
@@ -191,10 +191,17 @@ You should see something like this:
     /![robot name]/ground_projection/estimate_homography
     /![robot name]/ground_projection/get_ground_coordinate
     ...
+If you want to check whether your camera output is similar to the one at the [](#fig:extrinsic_view) you can start `rqt_image_view`:
+
+    laptop $ rosrun rqt_image_view rqt_image_view
+
+In the `rqt_image_view` interface, click on the drop-down list and choose the image topic:
+
+    /![robot name]/camera_node/image/compressed
 
 Now you can estimate the homography by executing the following command:
 
-    $ rosservice call /![robot name]/groundprojection/estimate_homography
+    laptop $ rosservice call /![robot name]/ground_projection/estimate_homography
 
 This will do the extrinsic calibration and automatically save the file to your laptop:
 
