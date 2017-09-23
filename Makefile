@@ -212,6 +212,7 @@ master-pdf: checks check-programs-pdf
 	pdftk A=out/master/pdf/duckiebook1.pdf B=misc/blank.pdf cat A1-end B output out/master/pdf/duckiebook2.pdf keep_final_id
 	pdftk out/master/pdf/duckiebook2.pdf update_info misc/blank-metadata output out/master/pdf/duckiebook3.pdf
 	 ./reduce-pdf-size.sh out/master/pdf/duckiebook3.pdf duckuments-dist/master/duckiebook.pdf
+	 
 fall2017-pdf: checks check-programs-pdf
 	# mathjax is 1 in this case
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
@@ -361,18 +362,24 @@ fall2017-prepare:
 		--no_resolve_references \
 		--symbols $(tex-symbols) \
 		-o out/fall2017/prepare \
-		--output_file out/fall2017/one.html -c "config echo 1; config colorize 1; rparmake"
+		--output_file out/fall2017/data/one.html -c "config echo 1; config colorize 1; rparmake"
 
-	python -m mcdp_utils_xml.note_errors_inline out/fall2017/one.html 2>&1 | tee duckuments-dist/fall2017/errors.txt
+	python -m mcdp_utils_xml.note_errors_inline out/fall2017/data/one.html 2>&1 | tee duckuments-dist/fall2017/errors.txt
 	# python -m mcdp_docs.add_edit_links duckuments-dist/fall2017/two.html < duckuments-dist/fall2017/one.html
-	python -m mcdp_docs.embed_css out/fall2017/master.html < out/fall2017/one.html
+	python -m mcdp_docs.embed_css out/fall2017/data/master.html < out/fall2017/data/one.html
 
 fall2017-compose:
 	mcdp-docs-compose --config fall2017.version.yaml
 
+
+	python -m mcdp_docs.extract_assets  \
+		--input out/fall2017/data/duckiebook.html  \
+		--output duckuments-dist/fall2017/duckiebook.html \
+		--assets duckuments-dist/fall2017/duckiebook/assets
+
 fall2017-split:
 	mcdp-split \
-	   --filename duckuments-dist/fall2017/duckiebook.html \
+	   --filename out/fall2017/data/duckiebook.html \
 	   --output_dir duckuments-dist/fall2017/duckiebook \
 	   -o out/fall2017/split \
 	   -c " config echo 1; config colorize 1; rparmake" \
