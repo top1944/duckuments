@@ -568,6 +568,40 @@ Then download `out.jpg` to your computer using `scp` for inspection.
 
 See: For instructions on how to use `scp`, see [](#howto-download-file-with-scp).
 
+## Final touches: duckie logo {#installing-duckietown-logo}
+
+In order to show that your Duckiebot is ready for the task of driving around happy little duckies, the robot has to fly the Duckietown flag. When you are still logged in to the Duckiebot you can download and install the banner like this:
+
+Download the ANSI art file from Github:
+
+    duckiebot $ wget --no-check-certificate -O duckie.art "https://raw.githubusercontent.com/duckietown/Software/master/misc/duckie.art"
+    
+(optional) If you want, you can preview the logo by just outputting it onto the command line:
+
+    duckiebot $ cat duckie.art
+    
+Next up create a new empty text file in your favorite editor and add the code for showing your duckie pride:
+
+Let's say I use `nano`, I open a new file:
+
+    duckiebot $ nano 20-duckie
+
+And in there I add the following code (which by itself just prints the duckie logo):
+
+    #!/bin/sh
+    printf "\n$(cat /etc/update-motd.d/duckie.art)\n"
+    
+Then save and close the file. Finally you have to make this file executable...
+
+    duckiebot $ chmod +x 20-duckie
+
+...and copy both the duckie logo and the script into a specific directory `/etc/update-motd.d` to make it appear when you login via SSH. `motd` stands for "message of the day". This is a mechanism for system administrators to show users news and messages when they login. Every executable script in this directory which has a filename a la `![NN]-![some name]` will get exected when a user logs in, where `![NN]` is a two digit number that indicates the order.
+
+    sudo cp duckie.art /etc/update-motd.d
+    sudo cp 20-duckie /etc/update-motd.d
+    
+Finally log out of SSH via `exit` and log back in to see duckie goodness.
+
 ### Troubleshooting
 
 Symptom: `detected=0`
