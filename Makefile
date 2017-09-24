@@ -212,9 +212,9 @@ master-pdf: checks check-programs-pdf
 	pdftk A=out/master/pdf/duckiebook1.pdf B=misc/blank.pdf cat A1-end B output out/master/pdf/duckiebook2.pdf keep_final_id
 	pdftk out/master/pdf/duckiebook2.pdf update_info misc/blank-metadata output out/master/pdf/duckiebook3.pdf
 
-	./reduce-pdf-size.sh out/master/pdf/duckiebook3.pdf duckuments-dist/master/duckiebook.pdf.tmp
+	./reduce-pdf-size.sh out/master/pdf/duckiebook3.pdf out/master/pdf/duckiebook4.pdf
 
-	mv duckuments-dist/master/duckiebook.pdf.tmp duckuments-dist/master/duckiebook.pdf
+	cp out/master/pdf/duckiebook4.pdf duckuments-dist/master/duckiebook.pdf
 
 fall2017-pdf: checks check-programs-pdf
 	# mathjax is 1 in this case
@@ -232,8 +232,8 @@ fall2017-pdf: checks check-programs-pdf
 
 	pdftk A=out/fall2017/pdf/duckiebook1.pdf B=misc/blank.pdf cat A1-end B output out/fall2017/pdf/duckiebook2.pdf keep_final_id
 	pdftk out/fall2017/pdf/duckiebook2.pdf update_info misc/blank-metadata output out/fall2017/pdf/duckiebook3.pdf
-	./reduce-pdf-size.sh out/fall2017/pdf/duckiebook3.pdf duckuments-dist/fall2017/duckiebook.pdf.tmp
-	mv duckuments-dist/fall2017/duckiebook.pdf.tmp duckuments-dist/fall2017/duckiebook.pdf
+	./reduce-pdf-size.sh out/fall2017/pdf/duckiebook3.pdf out/fall2017/pdf/duckiebook4.pdf
+	cp out/fall2017/pdf/duckiebook4.pdf duckuments-dist/fall2017/duckiebook.pdf
 
 update-mcdp:
 	-git -C mcdp/ pull
