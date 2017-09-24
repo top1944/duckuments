@@ -22,10 +22,10 @@ This allows to claim an educational discount that will be useful later.
 
 Next, fill in this questionnaire:
 
-TODO: add questionnaire link
+[Preliminary Student Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSenYnqJzaK9390bXfo0Rh6EnpfNDB1VhVhzbB18i7GS9FF6YA/viewform)
 
 Point of contact: if you have problems with this step, please contact
-Jacopo Tani &lt;jtani@mit.edu&gt;.
+Jacopo Tani &lt;tanij@eth.ch&gt;.
 
 ### Accept invite to Github organization Duckietown
 
