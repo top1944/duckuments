@@ -1,54 +1,56 @@
 # Duckiebot configurations {#duckiebot-configurations status=beta}
 
-Here we define the different Duckiebot hardware configurations, and describe their functionalities. This is a good starting point if you are wondering what parts you should purchase to get started. Once you have decided which configuration best suits your needs, you can proceed to purchasing the components for a [`C0+wjd`](#acquiring-parts-c0) or [`C1`](#acquiring-parts-c1) Duckiebot.
+We define different Duckiebot configurations depending on their time of use and hardware components. This is a good starting point if you are wondering what parts you should obtain to get started. Once you have decided which configuration best suits your needs, you can proceed to the detailed descriptions for [`DB17-wjd`](#acquiring-parts-c0) or [`DB17-wjdlc`](#acquiring-parts-c1) Duckiebot.
 
 ## Configuration list
 
-- Configuration `C0`: Only camera and motors.
+The configurations are defined with a root: `DB17-`, indicating the "bare bones" Duckiebot used in the Fall 2017 synchronized course, and an appendix `y` which can be the union (in any order) of any or all of the elements of the optional hardware set $\aset{O} = \{\text{`w`}, \text{`j`}, \text{`d`}, \text{`l`}, `c`}\}$. A `DB17` Duckiebot can navigate autonomously in a Duckietown, but cannot communicate with other Duckiebots.
 
-- Configuration `C0+w`: `C0`, plus an additional wireless adapter.
+The elements of $\aset{O}$ are labels identifying hardware that aids in the development phase and enables the Duckiebot to talk to other Duckiebots. The labels stand for:
 
-- Configuration `C0+j`: `C0`, plus an additional wireless joypad for remote control.
+- `w`: 5 GHz wireless adapter to facilitate streaming of images;
 
-- Configuration `C0+d`: `C0`, plus an additional USB drive.
+- `j`: wireless joypad that facilitates manual remote control;
 
-- Configuration `C1`: `C0+wjd`, plus LEDs and bumpers.
+- `d`: USB drive for additional storage space;
+
+- `l`: includes LEDs, bumpers and the necessary bits to set the LEDs in place. This hardware enables Duckiebot communications and fleet level behaviors. This is a major hardware upgrade;
+
+- `c`: a different castor wheel to replace the preexisting one, providing a smoother drive (in most cases).
+
+<!--
+- Configuration `DB17-w`: `DB17`, plus an additional wireless adapter.
+
+- Configuration `DB17-j`: `DB17`, plus an additional wireless joypad for remote control.
+
+- Configuration `DB17-d`: `DB17`, plus an additional USB drive.
+
+- Configuration `C1`: `DB17-wjd`, plus LEDs and bumpers.
+-->
 
 
 ## Configuration functionality
 
-### `C0`
+### `DB17`
 
-This is the minimal configuration for a Duckiebot. It will be able to navigate a Duckietown, but not communicate with other Duckiebots. It is the configuration of choice for tight budgets or when operation of a single Duckiebot is more of interest than fleet behaviours.
+This is the minimal configuration for a Duckiebot. It will be able to navigate a Duckietown, but not communicate with other Duckiebots. It is the configuration of choice for tight budgets or when operation of a single Duckiebot is more of interest than fleet behaviors.
 
-TODO: Insert pic of assembled Duckiebot in `C0` configuration.
+### `DB17-w`
 
-### `C0+w`
+In this configuration, the minimal `DB17` version is augmented with a 5 GHz wireless adapter, which drastically improves connectivity enabling, e.g., streaming of images. This feature is particularly useful in connection saturated environments, e.g., classrooms.
 
-In this configuration, the minimal `C0` version is augmented with a 5 GHz wireless adapter, which drastically improves connectivity. This feature is particularly useful in connection saturated enviroments, e.g., classrooms.
+### `DB17-j`
 
-TODO: Insert pic of assembled Duckiebot in `C0+w` configuration.
+In this configuration, the minimal `DB17` version is augmented with a 2.4 GHz wireless joypad, used for manual remote control of the Duckiebot. It is particularly useful for getting the Duckiebot our of tight spots or letting younger ones have a drive, in addition to providing handy shortcuts to different functions in development phase.
 
-### `C0+j`
+### `DB17-d`
 
-In this configuration, the minimal `C0` version is augmented with a 2.4 GHz wireless joypad, used for manual remote control of the Duckiebot. It is particularly useful for getting the Duckiebot our of tight spots or letting younger ones have a drive.
+In this configuration, the minimal `DB17` version is augmented with a USB flash hard drive. This drive is convenient for storing videos (logs) as it provides both extra capacity and faster data transfer rates than the microSD card in the Raspberry Pi. Moreover, it is easy to unplug it from the Duckiebot at the end of the day and bring it over to a computer for downloading and analyzing stored data.
 
-TODO: Insert pic of assembled Duckiebot in `C0+j` configuration.
+### `DB17-wjd`
 
-### `C0+d`
+This is the Duckiebot configuration that is first handed out at ETHZ during the Fall 2017 course edition. An upgrade will be provided during the course.
 
-In this configuration, the minimal `C0` version is augmented with a USB flash hard drive. This drive is convenient for storing videos (logs) as it provides both extra capacity and faster data transfer rates than the microSD card in the Raspberry Pi. Moreover, it is easy to unplug it from the Duckiebot at the end of teh day and bring it over to a computer for downloading and analyzing stored data.
+### `DB17-l`
 
-TODO: Insert pic of assembled Duckiebot in `C0+d` configuration.
-
-### `C0+wjd`
-
-The upgrades of the minimal `C0` version are not mutually exclusive. We will refer to `C0+wjd` when any or all of the add-ons to the minimal version are considered.
-
-TODO: Insert pic of assembled Duckiebot in `C0+wjd` configuration.
-
-### `C1`
-
-This is the ultimate Duckiebot configuration and it includes the necessary hardware for controlling and placing 5 RGB LEDs on the Duckiebot. It is the necessary configuration to enable communication between Duckiebots, hence fleet behaviours (e.g., negotiating crossing an intersection).
-
-TODO: Insert pic of assembled Duckiebot in `C1` configuration.
+In this configuration the Duckiebot in equipped with the necessary hardware for controlling and placing 5 RGB LEDs on the Duckiebot. It is the necessary configuration to enable communication between Duckiebots, hence fleet behaviors (e.g., negotiating crossing an intersection).

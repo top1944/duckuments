@@ -1,6 +1,6 @@
-# Acquiring the parts for the Duckiebot `C1` {#acquiring-parts-c1 status=ready}
+# Acquiring the parts for the Duckiebot `DB17-lc` {#acquiring-parts-c1 status=ready}
 
-Upgrading your `C0+wjd` configuration to `C1` starts here, with purchasing the necessary components. We provide a link to all bits and pieces that are needed to build a `C1` Duckiebot, along with their price tag. If you are wondering what is the difference between different Duckiebot configurations, read [](#duckiebot-configurations).
+Upgrading your `DB17` (`DB17-wjd`) configuration to `DB17-lc` (`DB17-wjdlc`) starts here, with purchasing the necessary components. We provide a link to all bits and pieces that are needed to build a `DB17-lc` Duckiebot, along with their price tag. If you are wondering what is the difference between different Duckiebot configurations, read [](#duckiebot-configurations).
 
 In general, keep in mind that:
 
@@ -9,18 +9,17 @@ In general, keep in mind that:
 - Buying the parts for more than one Duckiebot makes each one cheaper than buying only one.
 - A few components in this configuration are custom designed, and might be trickier to obtain.
 
-
 <div class='requirements' markdown="1">
 
-Requires: A Duckiebot in `C0+wjd` configuration.
+Requires: A Duckiebot in `DB17-wjd` configuration.
 
 Requires: Cost: USD 77 + Bumpers manufacturing solution
 
 Requires: Time: 21 Days (LED board manufacturing and shipping time)
 
-Results: A kit of parts ready to be assembled in a `C1` configuration Duckiebot.
+Results: A kit of parts ready to be assembled in a `DB17-lc` configuration Duckiebot.
 
-Next Steps: After receiving these components, you are ready to do some [soldering](#soldering-boards-c1) before [assembling](#assembling-duckiebot-c1) your `C1` Duckiebot.
+Next Steps: After receiving these components, you are ready to do some [soldering](#soldering-boards-c1) before [assembling](#assembling-duckiebot-c1) your `DB17-lc` Duckiebot.
 </div>
 
 ## Bill of materials
@@ -30,24 +29,28 @@ Next Steps: After receiving these components, you are ready to do some [solderin
 <div markdown="1">
 
  <col2 id='materials' figure-id="tab:materials" figure-caption="Bill of materials">
-    <s>[LEDs](https://www.adafruit.com/product/848) </s>                         <s>USD 10</s>
-    <s>[LED HAT](https://tinyurl.com/ydh9wqp5) </s><s>USD 28.20 for 3 pieces</s>
-    <s>[Power Cable](https://tinyurl.com/yaptpssu) </s><s>USD 7.80</s>
-    <s>[20 Female-Female Jumper Wires (300mm)](https://www.adafruit.com/products/793) </s>         <s>USD 8</s>
-    <s>[Male-Male Jumper Wire (150mm)](https://www.adafruit.com/products/1957)  </s>                         <s>USD 1.95</s>
-    <s>[PWM/Servo HAT](https://tinyurl.com/yd8bdl2r) </s>                         <s>USD 17.50</s>
+    <s>[LEDs](https://www.adafruit.com/product/848) (`DB17-l`)</s>                         <s>USD 10</s>
+    <s>[LED HAT](https://tinyurl.com/ydh9wqp5) (`DB17-l`)</s><s>USD 28.20 for 3 pieces</s>
+    <s>[Power Cable](https://tinyurl.com/yaptpssu) (`DB17-l`)</s><s>USD 7.80</s>
+    <s>[20 Female-Female Jumper Wires (300mm)](https://www.adafruit.com/products/793) (`DB17-l`)</s>         <s>USD 8</s>
+    <s>[Male-Male Jumper Wire (150mm)](https://www.adafruit.com/products/1957)  (`DB17-l`)</s>                         <s>USD 1.95</s>
+    <s>[PWM/Servo HAT](https://tinyurl.com/yd8bdl2r) (`DB17-l`)</s>                         <s>USD 17.50</s>
     <s>[Bumpers]() </s><s>TBD (custom made)</s>
-    <s>[40 pin female header](https://www.adafruit.com/products/2222) </s>                   <s>USD 1.50</s>
-    <s>[5 4 pin female header](http://www.digikey.com/product-detail/en/PPTC041LFBN-RC/S7002-ND/810144) </s><s>USD 0.60/piece</s>
-    <s>[2 16 pin male header](http://www.digikey.com/product-detail/en/0022284160/WM50014-16-ND/313801) </s><s>USD 0.61/piece</s>
-    <s>[12 pin male header](http://www.digikey.com/product-detail/en/amphenol-fci/68000-412HLF/609-3266-ND/1878525) </s><s>USD 0.48/piece</s>
-    <s>[3 pin male header](http://www.digikey.com/product-detail/en/M20-9990345/952-2263-ND/3728227) </s><s>USD 0.10/piece</s>
-    <s>[2 pin female shunt jumper](http://www.digikey.com/product-detail/en/382811-8/A26228-ND/293121) </s><s>USD 2/piece</s>
-    <s>[5 200 Ohm resistors](https://tinyurl.com/yaramn3g) </s><s>USD 0.10/piece</s>
-    <s>[10 130 Ohm resistors](https://tinyurl.com/y9vz2b9v) </s><s>USD 0.10/piece</s>
-    <s>Total for `C0+wjd` configuration</s> <s>USD 212</s>
-    <s>Total for `C1` components</s>                         <s>USD 77 + Bumpers</s>
-    <s>Total for `C1` configuration</s>                         <s>USD 299+Bumpers</s>
+    <s>[40 pin female header](https://www.adafruit.com/products/2222) (`DB17-l`)</s>                   <s>USD 1.50</s>
+    <s>[5 4 pin female header](http://www.digikey.com/product-detail/en/PPTC041LFBN-RC/S7002-ND/810144) (`DB17-l`)</s><s>USD 0.60/piece</s>
+    <s>[2 16 pin male header](http://www.digikey.com/product-detail/en/0022284160/WM50014-16-ND/313801) (`DB17-l`)</s><s>USD 0.61/piece</s>
+    <s>[12 pin male header](http://www.digikey.com/product-detail/en/amphenol-fci/68000-412HLF/609-3266-ND/1878525) (`DB17-l`)</s><s>USD 0.48/piece</s>
+    <s>[3 pin male header](http://www.digikey.com/product-detail/en/M20-9990345/952-2263-ND/3728227) (`DB17-l`)</s><s>USD 0.10/piece</s>
+    <s>[2 pin female shunt jumper](http://www.digikey.com/product-detail/en/382811-8/A26228-ND/293121) (`DB17-l`)</s><s>USD 2/piece</s>
+    <s>[5 200 Ohm resistors](https://tinyurl.com/yaramn3g) (`DB17-l`)</s><s>USD 0.10/piece</s>
+    <s>[10 130 Ohm resistors](https://tinyurl.com/y9vz2b9v) (`DB17-l`)</s><s>USD 0.10/piece</s>
+    <s>[Caster](https://tinyurl.com/y7gnesxn) (`DB17-c`)</s>                         <s>USD 6.55/4 pieces</s>
+    <s>[4 Standoffs (M3.5 12mm F-F)](https://tinyurl.com/ybd24t8c) (`DB17-c`)</s>                         <s>USD 0.63/piece</s>
+    <s>[8 Screws (M3.5x8mm)](https://tinyurl.com/ych4sfpa) (`DB17-c`)</s>                         <s>USD 4.58/100 pieces</s>
+    <s>[8 Split washer lock](https://tinyurl.com/y75onase) (`DB17-c`)</s>                         <s>USD 1.59/100 pieces</s>
+    <s>Total for `DB17-wjd` configuration</s> <s>USD 212</s>
+    <s>Total for `DB17-lc` components</s>                         <s>USD 77 + Bumpers</s>
+    <s>Total for `DB17-wjdlc` configuration</s>                         <s>USD 299+Bumpers</s>
  </col2>
 
 </div>
@@ -118,17 +121,17 @@ The Duckiebot needs one male-male jumper wire ([](#figure:mm_wires)) to power th
 
 ## Bumpers
 
-These bumpers are designed to keep the LEDs in place and are therefore used only in configuration `C1`. They are custom designed parts, so they must be produced and cannot be bought. We used laser cutting facilities. Our design files are available [here].
-
-TODO: add links to .sldprt files once confirmed final version
-
+These bumpers are designed to keep the LEDs in place and are therefore used only in configuration `DB17-l`. They are custom designed parts, so they must be produced and cannot be bought. We used laser cutting facilities.
+<!--
+Our design files are available [here].
+-->
 <div figure-id="fig:bumpers" figure-caption="The Bumpers">
      <img src="placeholder.png" style='width: 15em'/>
 </div>
 
 ## Headers, resistors and jumper
 
-Upgrading `C0+wjd` to `C1` requires several electrical bits: 5 of 4 pin female header, 2 of 16 pin male headers, 1 of 12 pin male header, 1 of 3 pin male header, 1 of 2 pin female shunt jumper, 5 of 200 Ohm resistors and finally 10 of 130 Ohm resistors.
+Upgrading `DB17` to `DB17-l` requires several electrical bits: 5 of 4 pin female header, 2 of 16 pin male headers, 1 of 12 pin male header, 1 of 3 pin male header, 1 of 2 pin female shunt jumper, 5 of 200 Ohm resistors and finally 10 of 130 Ohm resistors.
 
 These items require [soldering](0_5_soldering_boards_c1.md).
 
@@ -140,4 +143,34 @@ These items require [soldering](0_5_soldering_boards_c1.md).
      <img src="placeholder.png" style='width: 15em'/>
 </div>
 
-TODO: Missing figures.
+## Caster (`DB17-c`)
+
+The caster ([](#fig:caster)) is an `DB17-c` component that substitutes the steel omnidirectional wheel that comes in the Magician Chassis package. Although the caster is not essential, it provides smoother operations and overall enhanced Duckiebot performance.
+
+<div figure-id="fig:caster" figure-caption="The caster wheel">
+     <img src="caster.png" style='width: 15em'/>
+</div>
+
+To assemble the caster at the right height we will need to purchase:
+
+- 4 standoffs (M3 12mm F-F) ([](#fig:caster-standoffs)),
+- 8 screws (M3x8mm) ([](#fig:caster-screws)), and
+- 8 split lock washers ([](#fig:caster-split-washer)).
+
+<div figure-id="fig:caster-bits">
+    <figcaption>Mechanical bits to assemble the caster wheel.</figcaption>
+
+    <div figure-id="subfig:caster-standoffs" figure-caption="Standoffs for caster wheel.">
+        <img src="caster-standoffs.png" style='width: 25em'/>
+    </div>
+
+    <div figure-id="subfig:caster-screws" figure-caption="Screws for caster wheel.">
+        <img src="caster-screws.png" style='width: 25em'/>
+    </div>
+
+    <div figure-id="subfig:caster-split-washer" figure-caption="Split lock washers for caster wheel.">
+        <img src="caster-split-washer.png" style='width: 25em'/>
+    </div>
+</div>
+
+TODO: missing figures, update caster bits figures

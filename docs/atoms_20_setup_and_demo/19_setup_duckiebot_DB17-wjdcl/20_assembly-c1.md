@@ -1,35 +1,28 @@
-# Assembling the Duckiebot `C1` {#assembling-duckiebot-c1 status=draft}
+# Assembling the Duckiebot `DB17-wjdlc` {#assembling-duckiebot-c1 status=draft}
 
 Assigned: Shiying
 
 <div class='requirements' markdown="1">
 
-Requires: Duckiebot `C1` parts.
+Requires: Duckiebot `DB17` parts.
 The acquisition process is explained in [](#acquiring-parts-c1).
 
-Requires: Soldering `C1` parts.
+Requires: Soldering `DB17` parts.
 The soldering process is explained in [](#soldering-boards-c1).
 
-Requires: Having assembled the duckiebot in configuration `C0`. The acquisition process is explained in [](#assembling-duckiebot-c0).
+Requires: Having assembled the Duckiebot in configuration `DB17`. The acquisition process is explained in [](#assembling-duckiebot-c0).
 
-Requires: Time: about ??? minutes.
+Requires: Time: about 30 minutes.
 
-TODO: estimate time.
-
-Results:
-
--  An assembled Duckiebot in configuration `C1`.
+Results: An assembled Duckiebot in configuration `DB17-wjdlc`.
 
 </div>
 
-
-
-Before you continue in this chapter, make sure that you have assembled the duckiebot according the instruction of `C0` configuration.
+Before you continue in this chapter, make sure that you have assembled the duckiebot according the instruction of `DB17-wjd` configuration.
 
 ## Put PWM HAT with 4 standoffs on the top of Stepper Motor HAT
 
-Put a soldered Servo/PWM HAT board (in your Duckiebox) with 4 standoffs on the top of Stepper Motor HAT. 
-
+Put a soldered Servo/PWM HAT board (in your Duckiebox) with 4 standoffs on the top of Stepper Motor HAT.
 
 <div figure-id="fig:HAT_ensemble" figure-caption=" ">
      <img src="HAT_ensemble.jpg" style='width: 30em'/>
@@ -38,9 +31,10 @@ Put a soldered Servo/PWM HAT board (in your Duckiebox) with 4 standoffs on the t
 
 ### Power Supply for PWM HAT
 
-To power the PWM/Servo HAT from the battery, plugin a short (30cm) angled male USB-A to 5.5/2.1mm DC power jack cable. 
+To power the PWM/Servo HAT from the battery, plugin a short (30cm) angled male USB-A to 5.5/2.1mm DC power jack cable.
 
 <div figure-id="fig:DC_power" figure-caption="Male USB-A to 5.5/2.1mm DC power jack cable">
      <img src="DC_power.jpg" style='width: 30em'/>
 </div>
 
+TODO: finish above, estimate assembly time
