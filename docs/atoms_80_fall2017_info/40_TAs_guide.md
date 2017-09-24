@@ -40,12 +40,12 @@ See: [](#part:duckietown-project)
 
 You have to set up:
 
-- A personal Github account
+- A personal  Github account
 - A Twist account
 - A Slack account
 - A Google Docs account (Gmail address)
 
-Send an email to Kirsten Bowser (akbowser@gmail.com), with your GMail address and your Github account. She will give you further instructions.
+Send an email to Kirsten Bowser (akbowser@gmail.com), with your GMail address and your Github account.  She will give you further instructions.
 
 Point of Contact: [Kirsten Bowser](mailto:akbowser@gmail.com)
 

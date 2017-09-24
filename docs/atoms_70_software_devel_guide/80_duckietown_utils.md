@@ -12,6 +12,9 @@ image processing available in the `duckietown_utils` Python package.
 
 **Description**: Takes an BGR image and writes it as a JPEG file.
 
+Comment: Are we sure that the encoding is right? -AC
+
+
 **Prototype:**
 ```python
 write_image_as_jpg( image, filename )

@@ -5,14 +5,15 @@ Assigned: Andrea Daniele
 ## Skills learned
 
 - Dealing with exceptions.
-- Conventions of exit conditions.
-- Unit tests.
+- Using exit conditions.
+- Verification and unit tests.
 
 ## Instructions
 
-Implement the program specified in the following section.
+Implement the program `dt-image-flip` specified in the following section.
 
-This time, we specify exactly what should happen for various conditions. This allows to do automated testing of the script.
+This time, we specify exactly what should happen for various anomalous conditions.
+This allows to do automated testing of the program.
 
 
 ## `dt-image-flip` specification {#image-ops-specification}
@@ -69,6 +70,9 @@ The output <code>side-by-side.jpg</code>
 ## Useful APIs
 
 ### Images side-by-side
+
+Comment: Good explanation, but shouldn't it go in the previous exercise? -AC
+
 An image loaded using the OpenCV function
 [`imread`](http://docs.opencv.org/2.4/modules/highgui/doc/reading_and_writing_images_and_video.html#imread)
 is stored in memory as a
@@ -78,10 +82,14 @@ memory as a NumPy array with shape `(96, 96, 3)`. The first dimension indicates
 the number of pixels along the `Y-axis`, the second indicates the number of pixels
 along the `X-axis` and the third is known as *number of channels* (e.g., **R**ed,
 **G**reen, and **B**lue).
+
+Comment: Are we sure it is RGB and not BGR? -AC
+
 NumPy provides a utility function called
-[`concatenate`](https://docs.scipy.org/doc/numpy/reference/generated/numpy.concatenate.html)
+[`concatenate`][concatenate]
 that joins a sequence of arrays along a given axis.
 
+[concatenate]: https://docs.scipy.org/doc/numpy/reference/generated/numpy.concatenate.html
 
 ## Testing it works with `image-ops-tester` {#image-ops-tester-specification}
 

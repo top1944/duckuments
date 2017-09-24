@@ -6,7 +6,7 @@ Assigned: Andrea Daniele
 
 * Image pixel representation;
 * Image manipulation;
-* The idea that we can manipulate operations as objects, and refer to them. (higher-order computation);
+* The idea that we can manipulate operations as objects, and refer to them (higher-order computation);
 * The idea that we can compose operations, and sometimes the operations do commute,
   while sometimes they do not.
 

@@ -15,16 +15,16 @@ Create an implementation of `dt-bag-analyze` according to the specification belo
 <!-- Call the script `bag-analyze-![username]`. -->
 
 
-## The `dt-bag-analyze` specification
+## Specification for `dt-bag-analyze`
 
 Create a program that summarizes the statistics of data in a bag file.
 
     $ dt-bag-analyze ![bag file]
 
-Compute, for each topic:
+Compute, for each topic in the bag:
 
 * The total number of messages.
-* The minimum, maximum, average, and median period (in seconds) between successive messages.
+* The minimum, maximum, average, and median interval between successive messages, represented in seconds.
 
 Print out the statistics using the YAML format.
 Example output:
@@ -37,6 +37,7 @@ Example output:
             max: ![value]
             average: ![value]
             median: ![value]
+
 
 ## Useful APIs
 
