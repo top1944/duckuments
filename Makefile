@@ -132,7 +132,7 @@ automatic-compile-fall2017:
 
 
 automatic-compile-master-html:
-	git pull
+	#git pull
 	touch $(log-master-html)
 	echo "\n\nStarting" >> $(log-master-html)
 	date >> $(log-master-html)
