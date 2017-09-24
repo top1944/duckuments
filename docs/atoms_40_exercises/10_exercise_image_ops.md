@@ -4,22 +4,22 @@ Assigned: Andrea Daniele
 
 ## Skills learned
 
-- Reading command line arguments.
-- Read and write files.
-- Image representations (pixels, etc.)
-- OpenCV/`duckietown_utils` API for reading/writing images.
+- Accessing command line arguments.
+- Reading and writing files.
+- Working with pixel-based image representations.
+- OpenCV and `duckietown_utils` API for reading/writing images.
 
 
 ## Instructions
 
-Create an implementation of the program `dt-image-flip0` described below.
+Create an implementation of the program `dt-image-flip0`, specified below.
 
 If this exercise is too easy for you, skip to [](#exercise-specifications).
 
 
-## Definition
+## Specification of `dt-image-flip0`
 
-Create a program `dt-image-flip0` that takes as an argument a JPG file:
+The program `dt-image-flip0` takes as an argument a JPG file with extension `.jpg`:
 
     $ dt-image-flip0 ![file].jpg
 
@@ -54,8 +54,11 @@ that loads an image from a file.
 
 ### Flip an image
 
-The OpenCV library provides a utility function called [`flip`](http://docs.opencv.org/2.4/modules/core/doc/operations_on_arrays.html?highlight=flip#flip)
-that flips an image around vertical, horizontal, or both axes.
+<!-- The OpenCV library provides a utility function called [`flip`](http://docs.opencv.org/2.4/modules/core/doc/operations_on_arrays.html?highlight=flip#flip)
+that flips an image around vertical, horizontal, or both axes. -->
+
+Comment: This is the kind of thing that they need to figure out how to do
+with pixels. -AC
 
 ### Write an image to a file
 
