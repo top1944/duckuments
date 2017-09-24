@@ -46,3 +46,13 @@ You should be able to get a total of 653 frames out of it.
 The [`duckietown_utils`](#duckietown-utils-library)
 package provides the utility function [`rgb_from_ros()`](#duckietown_utils-rgb_from_ros)
 that processes a ROS message and returns the RGB image it contains (if any).
+
+### Color space conversion
+
+In OpenCV, an image can be converted from one color space (e.g., BGR) to another
+supported color space (e.g., RGB). OpenCV provides a list of supported
+conversions. A `ColorConversionCode` defines a conversion between two different
+color spaces. An exhaustive list of color conversion codes can be found
+[here](http://docs.opencv.org/3.3.0/d7/d1b/group__imgproc__misc.html#ga4e0972be5de079fed4e3a10e24ef5ef0).
+The conversion from a color space to another is done with the function
+[`cv.cvtColor`](http://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html#cv2.cvtColor).
