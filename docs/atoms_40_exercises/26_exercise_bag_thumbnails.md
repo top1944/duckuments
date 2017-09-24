@@ -4,13 +4,20 @@ Assigned: Andrea Daniele
 
 ## Skills learned
 
-* Read images from images topics.
+* Reading images from images topic in a bag file.
 
 
 ## Instructions
 
-Write a program `dt-bag-thumbnails` that creates thumbnails for some image stream
+Write a program `dt-bag-thumbnails` as specified below.
+
+
+## Specification for `dt-bag-thumbnails`
+
+The program `dt-bag-thumbnails` creates thumbnails for some image stream
 topic in a bag file.
+
+The syntax is:
 
     $ dt-bag-thumbnails ![bag] ![topic] ![output dir]
 
@@ -36,6 +43,6 @@ You should be able to get a total of 653 frames out of it.
 
 ### Read image from a topic
 
-The [`duckietown_utils`](http://purl.org/dth/duckietown-utils-library)
+The [`duckietown_utils`](#duckietown-utils-library)
 package provides the utility function [`rgb_from_ros()`](#duckietown_utils-rgb_from_ros)
 that processes a ROS message and returns the RGB image it contains (if any).
