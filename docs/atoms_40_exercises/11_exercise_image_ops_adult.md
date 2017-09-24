@@ -1,5 +1,7 @@
 # Exercise: Basic image operations, adult version  {#exercise-specifications status=beta}
 
+Assigned: Andrea Daniele
+
 ## Skills learned
 
 - Dealing with exceptions.
@@ -18,7 +20,7 @@ This time, we specify exactly what should happen for various conditions. This al
 The program `image-ops` expects exactly two arguments: a filename (a JPG file)
 and a directory name.
 
-    $ dt-image-flip ![file] ![outdir-dir]
+    $ dt-image-flip ![file] ![outdir]
 
 If the file does not exist, the script must exit with error code `2`.
 
@@ -27,7 +29,7 @@ If the file cannot be decoded, the script must exit with error code `3`.
 If the file exists, then the script must create:
 
 - `![outdir]/regular.jpg`: a copy of the initial file
-- `![outdir]/flip.jpg`: the file, flipped horizontally.
+- `![outdir]/flip.jpg`: the file, flipped vertically.
 - `![outdir]/side-by-side.jpg`: the two files, side by side.
 
 If any other error occurs, the script should exit with error code `99`.
@@ -63,11 +65,23 @@ The output <code>side-by-side.jpg</code>
 }
 </style>
 
+
 ## Useful APIs
 
-TODO: Some useful functions that you might want to use are:
+### Images side-by-side
+An image loaded using the OpenCV function
+[`imread`](http://docs.opencv.org/2.4/modules/highgui/doc/reading_and_writing_images_and_video.html#imread)
+is stored in memory as a
+[NumPy array](https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.html).
+For example, the image shown above ([](#subfig:original)) will be represented in
+memory as a NumPy array with shape `(96, 96, 3)`. The first dimension indicates
+the number of pixels along the `Y-axis`, the second indicates the number of pixels
+along the `X-axis` and the third is known as *number of channels* (e.g., **R**ed,
+**G**reen, and **B**lue).
+NumPy provides a utility function called
+[`concatenate`](https://docs.scipy.org/doc/numpy/reference/generated/numpy.concatenate.html)
+that joins a sequence of arrays along a given axis.
 
-- ...
 
 ## Testing it works with `image-ops-tester` {#image-ops-tester-specification}
 
