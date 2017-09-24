@@ -11,18 +11,15 @@ The first job  is to get your Duckiebot put together and up and running.
 
 Slack Channel: help-parts
 
+There is a checklist inside. You should go through the box and ensure that the parts that are supposed to be in it actually are inside.
 
-There is a checklist inside. You should go through the box and ensure that the parts that are supposed to be in it actually are insidde.
-
-TODO: what to do if you are missing something?
+If you are missing something, contact your local responsible and ask for help on Slack in the appropriate channel.
 
 These sections describe the parts that are in your box.
 
 See: [](#acquiring-parts-c0)
 
 See: [](#acquiring-parts-c1)
-
-
 
 ## Soldering your boards
 
@@ -73,7 +70,4 @@ Now you need to clone the software repo and run things to make your robot move.
 
 See: [](#rc-control)
 
-
-## Submit your video
-
-By clicking [here](https://www.dropbox.com/request/XmO5tzlJmuaOVb2gGg2A)
+Comment: there is a deadline at this link, but each institution will have different deadlines. Might be a source of entropy -JT

@@ -109,7 +109,7 @@ A few observations stem immediately from \eqref{eq:mod-kin-2}:
 - If $v_r = - v_l$, then the robot "turns on itself", i.e., $d=0$ and $ICC \equiv A$;
 - If $v_r = 0$ (or $v_l = 0$), the rotation happens around the right (left) wheel and $d = L$.
 
-Note: Moreover, a differential drive robot cannot move in the directio
+Note: Moreover, a differential drive robot cannot move in the direction ...
 
 ### Differential drive robot kinematic constraints {#mod-kin-constraint status=beta}
 The kinematic constraints are derived from two assumptions:
