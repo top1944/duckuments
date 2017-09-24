@@ -1,5 +1,6 @@
 # Exercise: Live Instagram {#exercise-instagram-live status=beta}
 
+Assigned: Andrea Daniele
 
 ## Skills learned
 
@@ -15,29 +16,29 @@ Create a ROS node that takes camera images and applies a given operation,
 as specified in the next section.
 
 
-## Specification for the program `dt-instagram-live`
+## Specification for the program `dt-live-instagram`
 
 Create a program `dt-live-instagram` that takes a string argument:
 
-    $ dt-instagram-live ![filters]
+    $ dt-live-instagram ![filters]
 
 This program should do the following:
 
 - Subscribe to the camera images, by finding
 a topic that is called `![...]/compressed`. Call the name of the
-topic `![topic]`
+topic `![topic]`.
 
 - Publish to the topic `![topic]/![filters]` a stream of images
 where the filters are applied to the image.
 
 
-## Useful new APIs
-
-TODO: to write
-
-
 ## Check that it works
 
-TODO: to write
+Run your program
 
-<!--  -->
+    $ dt-live-instagram ![filters]
+
+It might be a good idea to print out the topic selected by your program. Let's
+call it `![topic]`. Run the following command to make sure that your program is working.
+
+    $ rosrun image_view image_view image:="![topic]/![filters]" _image_transport:=compressed

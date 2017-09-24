@@ -60,30 +60,7 @@ How to enter IPython:
     embed() # enters interactive mode
 
 
-## Images
-
-[](python:duckietown_utils.add_header_to_image)
-
-```python
-# Add header to image
-add_header_to_image(image, s)
-```
-
-[](python:duckietown_utils.write_jpg_to_file)
-
-```python
-write_jpg_to_file(image, filename)
-```
-
-[](python:duckietown_utils.make_images_grid)
-
-```python
-make_images_grid
-```
-
-
 ## Idioms
-
 
     segment_list = copy.deepcopy(segment_list)
 

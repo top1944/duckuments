@@ -1,12 +1,14 @@
 # Exercise: Instagram filters  {#exercise-instagram status=beta}
 
+Assigned: Andrea Daniele
+
 ## Skills learned
 
 * Image pixel representation;
 * Image manipulation;
 * The idea that we can manipulate operations as objects, and refer to them. (higher-order computation);
-* The idea that we can compose operations, and sometimes the operations commute,
-  sometimes not.
+* The idea that we can compose operations, and sometimes the operations do commute,
+  while sometimes they do not.
 
 ## Instructions
 
@@ -14,7 +16,7 @@ Create `dt-instagram` as specified below.
 
 ## Specification for `dt-instagram`
 
-Write a program `dt-instagram` that applies a filter to an image.
+Write a program `dt-instagram` that applies a list of filters to an image.
 
 The syntax to invoke the program is:
 
@@ -49,4 +51,35 @@ Here is the list of possible values for the filters, and their effect:
 - `grayscale`: Makes the image grayscale
 - `sepia`: make the image sepia
 
-TODO: add more fun filters
+
+## Useful new APIs
+
+### Color space conversion
+
+In OpenCV, an image can be converted from one color space (e.g., RGB) to another
+supported color space (e.g., GRAY). OpenCV provides a list of supported
+conversions. A `ColorConversionCode` defines a conversion between two different
+color spaces. An exhaustive list of color conversion codes can be found
+[here](http://docs.opencv.org/3.3.0/d7/d1b/group__imgproc__misc.html#ga4e0972be5de079fed4e3a10e24ef5ef0).
+The conversion from a color space to another is done with the function
+[`cv.cvtColor`](http://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html#cv2.cvtColor).
+
+
+### User defined filters
+
+In OpenCV it is possible to define custom filters and apply them to an image.
+A linear filter (e.g., sepia) is defined by a linear 9-dimensional kernel.
+The `sepia` filter is defined as:
+
+\[
+K_{sepia} =
+\begin{bmatrix}
+    0.272 & 0.534 & 0.131 \newline
+    0.349 & 0.686 & 0.168 \newline
+    0.393 & 0.769 & 0.189
+\end{bmatrix}
+\]
+
+A linear kernel describing a color filter defines a linear transformation in the
+color space. A transformation can be applied to an image in OpenCV by using the function
+[`transform()`](http://docs.opencv.org/2.4/modules/core/doc/operations_on_arrays.html#cv2.transform).
