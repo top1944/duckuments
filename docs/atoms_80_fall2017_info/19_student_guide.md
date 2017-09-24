@@ -22,7 +22,7 @@ This allows to claim an educational discount that will be useful later.
 
 Next, fill in this questionnaire:
 
-[Preliminary Student Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSenYnqJzaK9390bXfo0Rh6EnpfNDB1VhVhzbB18i7GS9FF6YA/viewform)
+[Preliminary Student Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSdTo235gCM-GRWKY0EYmfCieC4-FEsO1CqQIqE8EaQz0y8KWA/viewform)
 
 Point of contact: if you have problems with this step, please contact
 Jacopo Tani &lt;tanij@eth.ch&gt;.
