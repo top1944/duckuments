@@ -56,7 +56,7 @@ contact HR representative Kirsten Bowser &lt;akbowser@gmail.com&gt;.
 **What is Slack?** More details about Slack are available [here](#slack).
 In particular, remember to disable email notifications.
 
-**Slack username**. When you accept your Slack invite, please identify yourself with first and last names followed by a "-" and your city.
+**Slack username**. When you accept your Slack invite, please identify yourself with first and last names followed by a "-" and your institution.
 
 <div class='example-usage' markdown="1">
 Andrea Censi - Zurich
