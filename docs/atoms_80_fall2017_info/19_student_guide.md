@@ -1,4 +1,4 @@
-# The First Steps for Students {#first-steps-for-students status=ready}
+# First Steps in Duckietown {#first-steps-for-students status=ready}
 
 ## Onboarding Procedure {#onboarding-fall2017}
 
@@ -23,6 +23,8 @@ This allows to claim an educational discount that will be useful later.
 Next, fill in this questionnaire:
 
 [Preliminary Student Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSenYnqJzaK9390bXfo0Rh6EnpfNDB1VhVhzbB18i7GS9FF6YA/viewform)
+
+**Zurich: Please fill in questionnaire by Tuesday, 3 pm (extended from original deadline of 12pm).**
 
 Point of contact: if you have problems with this step, please contact
 Jacopo Tani &lt;tanij@eth.ch&gt;.
@@ -63,6 +65,15 @@ Andrea Censi - ETHZ
 **Slack channels**. A brief synopsis of all the help-related Slack channels is here: [](#slack_channels).
 
 Check out all the channels in Slack, and add yourself to those that pertain or interest you. Be sure to introduce yourself in the General channel.
+
+##  (optional) Add Duckietown Engineering Linkedin profile
+
+This is an optional step.
+
+If you wish to connect with the Duckietown alumni network, on LinkedIn
+you can join the company "Duckietown Engineering", with the title
+"Vehicle Autonomy Engineer in training". Please keep updated your
+Linkedin profile with any promotions you might receive in the future.
 
 
 
@@ -131,7 +142,7 @@ If so, then things will probably work ok for you.
 
 Otherwise, we strongly suggest that you use dual booting instead of a virtual machine.
 
-## Next steps for ETH students
+## Next steps for people in Zurich
 
 ### Get acquainted with class journal and class logistics
 
@@ -156,6 +167,6 @@ See: See the instructions [in this section](#1709-duckieboxes).
 If you can't come on Wednesday, please contact Shiying.
 
 
-## Next steps for TTIC students
+## Next steps for people in Chicago
 
 TODO:
