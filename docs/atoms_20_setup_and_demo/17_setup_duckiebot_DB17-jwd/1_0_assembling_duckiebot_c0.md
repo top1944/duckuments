@@ -26,15 +26,13 @@ Comment: In general I would recommend having diagonal pliers as well as a few mi
 
 ## Chassis
 
-Open the Magician chassis package and take out the following components:
-
+Open the Magician chassis package [](#fig:duckiebot_components) and take out the following components:
 
 * Chassis-bottom (1x), Chassis-up (1x)
 * DC Motors (2x), motor holders (4x)
-* Wheels (2x), steel omnidirectional wheel (1x) or caster wheel (1x)
+* Wheels (2x), steel omnidirectional wheel (1x)
 * All spacers and screws
 * Screwdriver
-
 
 <div figure-id="fig:duckiebot_components" figure-caption="Components in Duckiebot package.">
      <img src="duckiebot_components.png" style='width: 30em'/>
@@ -45,7 +43,6 @@ Note: You won’t need the battery holder and speed board holder (on the right s
 ### Bottom
 
 Insert the motor holders on the chassis-bottom and put the motors as shown in the figure below (with the longest screws (M3x30) and M3 nuts).
-
 
 <div figure-id="fig:motors" figure-caption=" Components for mounting the motor">
      <img src="motors.jpg" style='width: 30em'/>
