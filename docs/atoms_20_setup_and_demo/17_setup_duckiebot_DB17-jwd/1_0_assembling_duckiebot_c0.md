@@ -1,11 +1,8 @@
 # Assembling the Duckiebot `DB17` {#assembling-duckiebot-c0 status=beta}
 
-Assigned: Shiying
-
 Point of contact: Shiying Li
 
 Once you have received the parts and soldered the necessary components, it is time to assemble them in a Duckiebot. Here, we provide the assembly instructions for configurations `DB17-wjd`.
-
 
 <div class='requirements' markdown="1">
 
@@ -222,7 +219,6 @@ Arrange the motor wires through the chassis-up, which will be connected to Stepp
 
 ### Extending the intra-decks standoffs
 
-
 In order to fit the battery, we will need to extend the Magician Chassis standoffs with the provided nylon standoff spacers. Grab 4 of them, and secure them to one end of the long metal standoffs provided in the Magician Chassis package.
 
 Secure the extended standoff to the 4 corners of the chassis-bottom.  The nylon standoffs should smoothly screw in the metal ones. If you feel resistance, don’t force it or the nylon screw might break in the metal standoff. In that case, unscrew the nylon spacer and try again.
@@ -266,12 +262,9 @@ We are using M1 and M2. The left (in robot frame) motor is connected to M1 and t
      <img src="ServoHAT_wiring.jpg" style='width: 30em'/>
 </div>
 
-
-
 ### Battery
 
-Put the battery between the upper and lower decks of the chassis. It is recommended to, secure the battery from moving using zip ties.
-
+Put the battery between the upper and lower decks of the chassis. It is strongly recommended to secure the battery from moving using zip ties.
 
 <div figure-id="fig:HAT_ensemble_sideview" figure-caption=" ">
      <img src="HAT_ensemble_sideview.jpg" style='width: 30em'/>
@@ -279,22 +272,23 @@ Put the battery between the upper and lower decks of the chassis. It is recommen
 
 ### Joypad
 
-For each joypad there is a corresponding joypad dongle. Don't lose the dongle!
+With each joypad ([](fig:joypad)) comes a joypad dongle ([](fig:joypad_dongle)). Don't lose it!
+
 <div figure-id="fig:joypad" figure-caption="All components in the Joypad package">
      <img src="joypad.jpg" style='width: 30em'/>
 </div>
 
-Insert the joypad dongle into one of the USB port.
+Insert the joypad dongle into one of the USB port of the Raspberry Pi.
+
 <div figure-id="fig:joypad_dongle" figure-caption="">
      <img src="joypad_dongle.jpg" style='width: 30em'/>
 </div>
 
-Insert 2AA batteries on the backside of the joypad
+Insert 2 AA batteries on the back side of the joypad [](#fig:joypack_battery).
+
 <div figure-id="fig:joypack_battery" figure-caption="Joypad and 2x AA batteries">
      <img src="joypack_battery.jpg" style='width: 30em'/>
 </div>
-
-
 
 ### Connect the power cables
 You are now ready to secure the prepared power wires in [](#power-cable-prep-c0). to the DC motor HAT power pins.
