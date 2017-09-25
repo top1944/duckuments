@@ -59,15 +59,16 @@ A: 16.04.* (16.04.03 is the latest at time of this writing)
 
 Q: My laptop is not ready. I'm having problems installing Linux on a partition.
 
-A: Don't worry, take a Duckie, and breath. We have time to fix every issue. Start by asking for help in the #help-laptops channel in Slack. We will address the outstanding issues in the next classes.  
+A: Don't worry, take a Duckie, and, take a breath. We have time to fix every issue. Start by asking for help in the #help-laptops channel in Slack. We will address the outstanding issues in the next classes.
 
 Q: How much space do I need on my Linux partition?
 
-A: $\geq$50GB. $\geq$ 200GB are recommended for easy processing of data (logs) later in the course. If you have less space (say ~100GB), it might be wise to put your hands on an external hard drive to use as storage.
+A: $\geq$50GB. $\geq$ 200GB are recommended for easy processing of data (logs) later in the course. If you have less space (say ~100GB), it might be wise to acquire an external hard drive to use as storage.
 
 Q: Are there going to be Linux training sessions?
 
-A: Maybe. Subject to figuring out the logistics, we might organize an extra "lab" session or produce a support video.
+A: Maybe. We didn't plan for it, but it seems that there is a need.
+Subject to figuring out the logistics, we might organize an extra "lab" session or produce a support video.
 
 
 ## Monday Sep 25, late: Onboarding instructions {status=ready}
