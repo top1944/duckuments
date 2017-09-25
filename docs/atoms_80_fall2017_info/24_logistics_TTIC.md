@@ -11,7 +11,9 @@ The [course website](http://duckietown.org/classes/2017/17-TTIC/) provides a cop
 
 ### Class Schedule
 
-The class schedule is maintained as part of the TTIC Class Diary, which includes details on lecture topics, links to slides, etc.
+Classes take place on Mondays and Wednesdays from 9am-11am in TTIC Room 530. In practice, each class will be divided into an initial lecture period (approximately one hour), followed by a lab session.
+
+The class schedule is maintained as part of the [TTIC Class Diary](#schedule_ttic), which includes details on lecture topics, links to slides, etc.
 
 ### Lab Access
 
