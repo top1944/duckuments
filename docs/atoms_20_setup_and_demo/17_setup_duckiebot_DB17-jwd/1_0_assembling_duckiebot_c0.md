@@ -269,7 +269,7 @@ Put the battery between the upper and lower decks of the chassis. It is strongly
 
 ### Joypad
 
-With each joypad ([](fig:joypad)) comes a joypad dongle ([](fig:joypad_dongle)). Don't lose it!
+With each joypad ([](#fig:joypad)) comes a joypad dongle ([](#fig:joypad_dongle)). Don't lose it!
 
 <div figure-id="fig:joypad" figure-caption="All components in the Joypad package">
      <img src="joypad.jpg" style='width: 30em'/>
@@ -283,15 +283,15 @@ Insert the joypad dongle into one of the USB port of the Raspberry Pi.
 
 Insert 2 AA batteries on the back side of the joypad [](#fig:joypack_battery).
 
-<div figure-id="fig:joypack_battery" figure-caption="Joypad and 2x AA batteries">
+<div figure-id="fig:joypack_battery" figure-caption="Joypad and 2 AA batteries">
      <img src="joypack_battery.jpg" style='width: 30em'/>
 </div>
 
 ### Connect the power cables
+
 You are now ready to secure the prepared power wires in [](#power-cable-prep-c0). to the DC motor HAT power pins.
 
-Connect the battery with the DC motor HAT by making sure you plug the black wire in the pin labeled with a minus: - and the red wire to the plus: + ([](#figure:final-result-power-c0)).
-
+Connect the battery with the DC motor HAT by making sure you plug the black wire in the pin labeled with a minus: `-` and the red wire to the plus: `+` ([](#figure:final-result-power-c0)).
 
 Fix all the cables on the Duckiebot so that it can run on the way without barrier.
 

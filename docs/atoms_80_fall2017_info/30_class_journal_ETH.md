@@ -65,7 +65,7 @@ Please help us making the experience better by [providing feedback (can be anony
 Q: MyStudies is not updated; I am still on the waiting list. What should I do?
 
 A: Nothing. Don't worry, if you have received the onboarding email, you are in the class, even if you
-still appear in the waiting list. We will figure this out with the department. 
+still appear in the waiting list. We will figure this out with the department.
 
 Q: What version of Linux do I need to install?
 
@@ -102,7 +102,7 @@ See: [](#onboarding-fall2017)
 
 ## Wednesday Sep 27: Duckiebox distribution, and getting to know each other {#2017-09-27-duckieboxes}
 
-Goals for today:
+Today we distribute the Duckieboxes and we name the robots. In other words, we perform the _Duckiebox ceremony_.
 
 - getting to know each other;
 - naming the robots;
@@ -111,7 +111,7 @@ Goals for today:
 Note: If you cannot make it to this class for the Duckiebox distribution, please inform the TA, to schedule
 a different time.
 
-### Preparation: choose a name for your robot {#1709-duckieboxes}
+### Preparation, step 1: choose a name for your robot {#1709-duckieboxes}
 
 Before arriving to class, you must think of a name for your robot.
 
@@ -122,9 +122,24 @@ Here are the constraints:
 - It cannot be your own name.
 - It cannot be a generic name like "robot", "duckiebot", "car". It cannot contain brand names.
 
+### Preparation, step 2: prepare a brief elevator pitch {#1710-duckieboxes}
+
+As members of the same community, it is important to get to know a little about each other, so to know who to rely on in times of need.
+
+During the Duckiebox ceremony, you will be asked to walk up to the board, write your name on it, and introduce yourself. Keep it very brief (45-60 seconds), and tell us:
+
+- what is your professional background and expertise / favorite subject;
+- what is the name of your robot;
+- why did you choose to name your robot in that way.
+
+You will then receive a Duckiebox from our senior staff, a simple gesture but of sempiternal glory, for which you have now become a member of the Duckietown community. This important moment will be remembered through a photograph.
+
+Finally, you will bring the Duckiebox to our junior staff, that will apply labels with your name on it in addition to giving you labels with your robot name for future application on your Duckiebot.    
+
 ### Feedback form
 
 Please help us making the experience better by [providing feedback (can be anonymous)](https://tinyurl.com/y77pbv7n)
+
 
 ### Material presented in class {status=draft}
 
