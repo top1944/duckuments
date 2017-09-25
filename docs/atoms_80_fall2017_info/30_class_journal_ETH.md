@@ -1,4 +1,4 @@
-# Zurich diary  {#ETH-journal status=ready}
+# Zurich branch diary  {#ETH-journal status=ready}
 
 ## Wed Sep 20: Welcome to Duckietown! {#2017-09-20-welcome}
 
@@ -80,7 +80,7 @@ A: At least 50 GB; 200 GB are recommended for easy processing of data (logs) lat
 
 Q: Are there going to be Linux training sessions?
 
-A: Maybe. We didn't plan for it, but it seems that there is a need. 
+A: Maybe. We didn't plan for it, but it seems that there is a need.
 Subject to figuring out the logistics, we might organize an extra "lab" session or produce a support video.
 
 

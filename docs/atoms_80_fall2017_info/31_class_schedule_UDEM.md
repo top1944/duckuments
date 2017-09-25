@@ -1,4 +1,4 @@
-# Montréal diary {#schedule_UDEM status=ready}
+# Montréal branch diary {#schedule_UDEM status=ready}
 
 ## Wed Sept 6
 
