@@ -31,7 +31,7 @@ See: [](#fall2017-experience)
 Comment: TA: Write here the FAQs that students have.
 
 
-## Mon Sep 25: Introduction to autonomy
+## Monday Sep 25: Introduction to autonomy
 
 
 ### Material presented in class
@@ -58,27 +58,22 @@ d - Plan for the next months:
 
 ### Questions and answers
 
-Comment: TA: Write here the FAQs that students have.
+TODO: Jacopo
 
 
 
-## Sep 2?: Onboarding instructions {status=ready}
+## Monday Sep 25, late: Onboarding instructions {status=ready}
 
 
-Today we sent out the onboarding instructions.
+At some late hour of the night, we sent out the onboarding instructions.
 
-Here is a copy of the message we sent by email:
+See: [](#onboarding-fall2017)
 
-> ...
-
-The next step for the students is to do the onboarding
-instructions in [](#first-steps-for-students).
+**Please complete the onboarding questionnaire by Tuesday, September 26, 15:00.**
 
 
 
-
-
-## Wed Sep ?: Duckiebox distribution and group intro {status=draft}
+## Wednesday Sep 27: Duckiebox distribution and group intro {status=draft}
 
 Note: this is a draft. Don't read it yet!
 
