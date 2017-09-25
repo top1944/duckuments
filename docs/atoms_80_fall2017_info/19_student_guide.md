@@ -27,7 +27,7 @@ Next, fill in this questionnaire:
 **Zurich: Please fill in questionnaire by Tuesday, 3 pm (extended from original deadline of 12pm).**
 
 Point of contact: if you have problems with this step, please contact
-Jacopo Tani &lt;tanij@eth.ch&gt;.
+Jacopo Tani &lt;tanij@ethz.ch&gt;.
 
 ### Accept invite to Github organization Duckietown
 
