@@ -11,7 +11,7 @@ You can also easily join the ones that you are interested in by
 <span>Channel</span>
 <span>Purpose</span>
 <code>help-accounts</code>
-<span>Info about necessary accounts, such as Slack, Github, etc</span>
+<span>Info about necessary accounts, such as Slack, Github, etc.</span>
 <code>help-assembly</code>
 <span>Help putting your robot together</span>
 <code>help-camera-calib</code>

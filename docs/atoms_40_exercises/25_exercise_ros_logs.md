@@ -6,6 +6,7 @@ Assigned: Andrea Daniele
 
 - Reading Bag files.
 - Statistics functions (mean, median) in Numpy.
+- Use YAML format.
 
 ## Instructions
 
@@ -14,17 +15,18 @@ Create an implementation of `dt-bag-analyze` according to the specification belo
 <!-- Call the script `bag-analyze-![username]`. -->
 
 
-## The `dt-bag-analyze` specification
+## Specification for `dt-bag-analyze`
 
 Create a program that summarizes the statistics of data in a bag file.
 
     $ dt-bag-analyze ![bag file]
 
-Compute, for each topic:
+Compute, for each topic in the bag:
 
 * The total number of messages.
-* The minimum, maximum, average, and median period (in seconds) between successive messages.
+* The minimum, maximum, average, and median interval between successive messages, represented in seconds.
 
+Print out the statistics using the YAML format.
 Example output:
 
     $ dt-bag-analyze ![bag file]
@@ -35,6 +37,7 @@ Example output:
             max: ![value]
             average: ![value]
             median: ![value]
+
 
 ## Useful APIs
 
@@ -65,26 +68,26 @@ Download the ROS bag
 Run your program on it and compare the results:
 
     $ dt-bag-analyze example_rosbag.bag
-    "/tesla/camera_node/camera_info":
-        num_messages: 653
-        period:
-            min: 0.01
-            max: 0.05
-            average: 0.03
-            median: 0.03
+    /tesla/camera_node/camera_info:
+      num_messages: 653
+      period:
+        min: 0.01
+        max: 0.05
+        average: 0.03
+        median: 0.03
 
-        "/tesla/line_detector_node/segment_list":
-        num_messages: 198
-        period:
-            min: 0.08
-            max: 0.17
-            average: 0.11
-            median: 0.10
+    /tesla/line_detector_node/segment_list:
+      num_messages: 198
+      period:
+        min: 0.08
+        max: 0.17
+        average: 0.11
+        median: 0.1
 
-        "/tesla/wheels_driver_node/wheels_cmd":
-        num_messages: 74
-        period:
-            min: 0.02
-            max: 4.16
-            average: 0.26
-            median: 0.11
+    /tesla/wheels_driver_node/wheels_cmd:
+      num_messages: 74
+      period:
+        min: 0.02
+        max: 4.16
+        average: 0.26
+        median: 0.11

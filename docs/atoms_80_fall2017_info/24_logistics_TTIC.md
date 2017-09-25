@@ -2,29 +2,28 @@
 
 Assigned: Matt
 
-TODO: to write
-
 This section describes information specific to TTIC and UChicago students.
 
 ### Website
 
-All really important information, such as deadlines, are available via Canvas:
+The [course website](http://duckietown.org/classes/2017/17-TTIC/) provides a copy of the syllabus, grading information, and details on learning objectives.
 
-[http://canvas.uchicago.edu](http://canvas.uchicago.edu)
 
-### Duckiebox distribution
+### Class Schedule
 
-TODO: to write
+Classes take place on Mondays and Wednesdays from 9am-11am in TTIC Room 530. In practice, each class will be divided into an initial lecture period (approximately one hour), followed by a lab session.
 
-### Lab access
+The class schedule is maintained as part of the [TTIC Class Diary](#schedule_ttic), which includes details on lecture topics, links to slides, etc.
 
-Duckietown labs will take place at TTIC in Conference Room 537 on the 5th floor.
+### Lab Access
 
-**Note**: Prof. Sadaoki, the TTIC President, generously offered to let us use his conference room as our lab space during the quarter. It is essential that we take care of the room and leave it in the same condition that we found it in. Please be aware that Prof. Sadaoki may ask us to not use the space for a few hours at a time during meetings.
+Duckietown labs will take place at TTIC in the robotics lab on the 4th floor.
 
-### The local TAs
+**Note**: TTIC and UChicago students in Matthew Walter's research group use the lab as their exclusive research and office space. It also houses several robots and hardware to support them. Please respect the space when you use it: try not to distract lab members while they are working and please don't touch the robots, sensors, or tools.
 
-Duckietown is a collaborative effort involving close interaction among students, TAs, mentors, and faculty across several institutions. The local TAs at TTIC are:
+### The Local LAs
+
+Duckietown is a collaborative effort involving close interaction among students, TAs, mentors, and faculty across several institutions. The local learning assistants (LAs) at TTIC are:
 
 * Andrea F. Daniele (afdaniele@ttic.edu)
 * Falcon Dai (dai@ttic.edu)

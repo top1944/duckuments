@@ -4,7 +4,7 @@
 
 Welcome aboard! We are so happy you are joining us at Duckietown!
 
-This is your onboarding procedure.
+This is your onboarding procedure. Please read all the steps and then complete all the steps. Failure to follow these steps in order will cause unneccessary confusion.
 
 ### Github sign up {#onboarding-github-signup}
 
@@ -22,7 +22,7 @@ This allows to claim an educational discount that will be useful later.
 
 Next, fill in this questionnaire:
 
-[Preliminary Student Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSenYnqJzaK9390bXfo0Rh6EnpfNDB1VhVhzbB18i7GS9FF6YA/viewform)
+[Preliminary Student Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSdTo235gCM-GRWKY0EYmfCieC4-FEsO1CqQIqE8EaQz0y8KWA/viewform)
 
 **Zurich: Please fill in questionnaire by Tuesday, 3 pm (extended from original deadline of 12pm).**
 
@@ -164,9 +164,9 @@ to edit the Duckuments successfully.
 
 See: See the instructions [in this section](#1709-duckieboxes).
 
-If you can't come on Wednesday, please contact Shiying.
+If you can't come on Wednesday, please contact one of the TAs.
 
 
 ## Next steps for people in Chicago
 
-TODO:
+TODO: to write

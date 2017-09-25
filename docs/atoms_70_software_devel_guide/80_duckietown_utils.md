@@ -10,7 +10,10 @@ image processing available in the `duckietown_utils` Python package.
 
 ### Function `write_image_as_jpg` {#duckietown_utils-write_image_as_jpg}
 
-**Description**: Takes an RGB image and writes it as a JPEG file.
+**Description**: Takes an BGR image and writes it as a JPEG file.
+
+Comment: Are we sure that the encoding is right? -AC
+
 
 **Prototype:**
 ```python
@@ -28,7 +31,7 @@ write_image_as_jpg( image, filename )
     <span>Description</span>
     <span>image</span>
     <span><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html">numpy.ndarray</a></span>
-    <span>The RGB image to save as JPEG file.</span>
+    <span>The BGR image to save as JPEG file.</span>
     <span>filename</span>
     <span><a href="https://docs.python.org/2/library/functions.html#str">str</a></span>
     <span>The path of the JPEG file.</span>
@@ -77,7 +80,7 @@ rgb_from_ros( msg )
 
 ### Function `d8_compressed_image_from_cv_image` {#duckietown_utils-d8_compressed_image_from_cv_image}
 
-**Description**: Takes a OpenCV image, compresses it and wraps it into a ROS message of type
+**Description**: Takes a OpenCV image (BGR format), compresses it and wraps it into a ROS message of type
 [`sensor_msgs.CompressedImage`](http://docs.ros.org/kinetic/api/sensor_msgs/html/msg/CompressedImage.html).
 
 **Prototype:**
@@ -96,7 +99,7 @@ d8_compressed_image_from_cv_image( image_cv )
     <span>Description</span>
     <span>image_cv</span>
     <span><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html">numpy.ndarray</a></span>
-    <span>RGB representation of the image to compress.</span>
+    <span>BGR representation of the image to compress.</span>
 </col3>
 
 **Returns**:

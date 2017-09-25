@@ -6,7 +6,7 @@ Assigned: Andrea Daniele
 
 * Image pixel representation;
 * Image manipulation;
-* The idea that we can manipulate operations as objects, and refer to them. (higher-order computation);
+* The idea that we can manipulate operations as objects, and refer to them (higher-order computation);
 * The idea that we can compose operations, and sometimes the operations do commute,
   while sometimes they do not.
 
@@ -53,17 +53,6 @@ Here is the list of possible values for the filters, and their effect:
 
 
 ## Useful new APIs
-
-### Color space conversion
-
-In OpenCV, an image can be converted from one color space (e.g., RGB) to another
-supported color space (e.g., GRAY). OpenCV provides a list of supported
-conversions. A `ColorConversionCode` defines a conversion between two different
-color spaces. An exhaustive list of color conversion codes can be found
-[here](http://docs.opencv.org/3.3.0/d7/d1b/group__imgproc__misc.html#ga4e0972be5de079fed4e3a10e24ef5ef0).
-The conversion from a color space to another is done with the function
-[`cv.cvtColor`](http://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html#cv2.cvtColor).
-
 
 ### User defined filters
 
