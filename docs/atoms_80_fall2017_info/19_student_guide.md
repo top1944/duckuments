@@ -153,9 +153,9 @@ to edit the Duckuments successfully.
 
 See: See the instructions [in this section](#1709-duckieboxes).
 
-If you can't come on Wednesday, please contact Shiying.
+If you can't come on Wednesday, please contact one of the TAs.
 
 
 ## Next steps for TTIC students
 
-TODO:
+TODO: to write
