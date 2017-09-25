@@ -83,11 +83,11 @@ See: [](#onboarding-fall2017)
 
 ## Wednesday Sep 27: Duckiebox distribution and group intro
 
-Today we distribute the Duckieboxes and we name the robots.
+Today we distribute the Duckieboxes and we name the robots. In other words, we perform the _Duckiebox ceremony_.
 
 Note: If you cannot make it to this class for the Duckiebox distribution, please inform the TA.
 
-### Preparation: choose a name for your robot {#1709-duckieboxes}
+### Preparation, step 1: choose a name for your robot {#1709-duckieboxes}
 
 Before arriving to class, you must think of a name for your robot.
 
@@ -98,6 +98,20 @@ Here are the constraints:
 - It cannot be your own name.
 - It cannot be a generic name like "robot", "duckiebot", "car". It cannot contain brand names.
 
+
+### Preparation, step 2: prepare a brief elevator pitch {#1710-duckieboxes}
+
+As members of the same community, it is important to get to know a little about each other, so to know who to rely on in times of need.
+
+During the Duckiebox ceremony, you will be asked to walk up to the board, write your name on it, and introduce yourself. Keep it very brief (45-60 seconds), and tell us:
+
+- what is your professional background and expertise / favorite subject;
+- what is the name of your robot;
+- why did you choose to name your robot in that way.
+
+You will then receive a Duckiebox from our senior staff, a simple gesture of sempiternal glory, that will be remembered through a photograph.
+
+Finally, you will bring the Duckiebox to our junior staff, that will apply labels with your name on it and give you labels with your robot name for future application on your Duckiebot.    
 
 ### Material presented in class
 
