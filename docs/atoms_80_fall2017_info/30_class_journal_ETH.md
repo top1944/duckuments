@@ -12,6 +12,11 @@ These are the slides we showed:
 - [PDF](https://github.com/duckietown/lectures/raw/master/2_given/2017-09-20-ETHZ-intro_lecture.pdf)
 - [Keynote (huge)]( https://github.com/duckietown/lectures/raw/master/2_given/2017-09-20-ETHZ-intro_lecture.key)
 
+### Feedback form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://tinyurl.com/y77pbv7n)
+
+
 ### Pointers to reading materials
 
 Read about Duckietown's history and watch the Duckumentary.
@@ -51,6 +56,10 @@ d - Plan for the next months:
 <a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-c-the-plan.pdf">PDF</a>.
 
 
+### Feedback form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://tinyurl.com/y77pbv7n)
+
 ### Questions and answers
 
 Q: What version of Linux do I need to install?
@@ -71,7 +80,7 @@ A: Maybe. We didn't plan for it, but it seems that there is a need.
 Subject to figuring out the logistics, we might organize an extra "lab" session or produce a support video.
 
 
-## Monday Sep 25, late: Onboarding instructions {status=ready}
+## Monday Sep 25, late at night: Onboarding instructions {status=ready}
 
 
 At some late hour of the night, we sent out the onboarding instructions.
@@ -100,7 +109,11 @@ Here are the constraints:
 - It cannot be a generic name like "robot", "duckiebot", "car". It cannot contain brand names.
 
 
-### Material presented in class
+### Feedback form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://tinyurl.com/y77pbv7n)
+
+### Material presented in class {status=draft}
 
 - Duckiebot parts
 
