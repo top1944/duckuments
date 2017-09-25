@@ -1,6 +1,6 @@
-# Zurich diary  {#ETH-journal status=ready}
+# Zurich branch diary  {#ETH-journal status=ready}
 
-## Wed Sep 20: Welcome to Duckietown!
+## Wed Sep 20: Welcome to Duckietown! {#2017-09-20-welcome}
 
 This was an introduction meeting.
 
@@ -11,6 +11,11 @@ These are the slides we showed:
 
 - [PDF](https://github.com/duckietown/lectures/raw/master/2_given/2017-09-20-ETHZ-intro_lecture.pdf)
 - [Keynote (huge)]( https://github.com/duckietown/lectures/raw/master/2_given/2017-09-20-ETHZ-intro_lecture.key)
+
+### Feedback form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://tinyurl.com/y77pbv7n)
+
 
 ### Pointers to reading materials
 
@@ -27,7 +32,7 @@ Montreal, Chicago? What's happening?
 See: [](#fall2017-experience)
 
 
-## Monday Sep 25: Introduction to autonomy
+## Monday Sep 25: Introduction to autonomy {#2017-09-25-intro-autonomy}
 
 
 ### Material presented in class
@@ -51,26 +56,40 @@ d - Plan for the next months:
 <a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-c-the-plan.pdf">PDF</a>.
 
 
+### Feedback form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://tinyurl.com/y77pbv7n)
+
 ### Questions and answers
+
+Q: MyStudies is not updated; I am still on the waiting list. What should I do?
+
+A: Nothing. Don't worry, if you have received the onboarding email, you are in the class, even if you
+still appear in the waiting list. We will figure this out with the department.
 
 Q: What version of Linux do I need to install?
 
 A: 16.04.* (16.04.03 is the latest at time of this writing)
 
+Q: Do I need to install OpenCV, ROS, etc.?
+
+A: Not necessary. We will provide instructions for those steps.
+
 Q: My laptop is not ready. I'm having problems installing Linux on a partition.
 
-A: Don't worry, take a Duckie, and breath. We have time to fix every issue. Start by asking for help in the #help-laptops channel in Slack. We will address the outstanding issues in the next classes.  
+A: Don't worry, take a Duckie, and, take a breath. We have time to fix every issue. Start by asking for help in the #help-laptops channel in Slack. We will address the outstanding issues in the next classes.
 
 Q: How much space do I need on my Linux partition?
 
-A: $\geq$50GB. $\geq$ 200GB are recommended for easy processing of data (logs) later in the course. If you have less space (say ~100GB), it might be wise to put your hands on an external hard drive to use as storage.
+A: At least 50 GB; 200 GB are recommended for easy processing of data (logs) later in the course. If you have less space (say ~100GB), it might be wise to acquire an external hard drive to use as storage.
 
 Q: Are there going to be Linux training sessions?
 
-A: Maybe. Subject to figuring out the logistics, we might organize an extra "lab" session or produce a support video.
+A: Maybe. We didn't plan for it, but it seems that there is a need.
+Subject to figuring out the logistics, we might organize an extra "lab" session or produce a support video.
 
 
-## Monday Sep 25, late: Onboarding instructions {status=ready}
+## Monday Sep 25, late at night: Onboarding instructions {#2017-09-25-onboarding}
 
 
 At some late hour of the night, we sent out the onboarding instructions.
@@ -81,11 +100,16 @@ See: [](#onboarding-fall2017)
 
 
 
-## Wednesday Sep 27: Duckiebox distribution and group intro
+## Wednesday Sep 27: Duckiebox distribution, and getting to know each other {#2017-09-27-duckieboxes}
 
 Today we distribute the Duckieboxes and we name the robots. In other words, we perform the _Duckiebox ceremony_.
 
-Note: If you cannot make it to this class for the Duckiebox distribution, please inform the TA.
+- getting to know each other;
+- naming the robots;
+- distribute the Duckieboxes.
+
+Note: If you cannot make it to this class for the Duckiebox distribution, please inform the TA, to schedule
+a different time.
 
 ### Preparation, step 1: choose a name for your robot {#1709-duckieboxes}
 
@@ -97,7 +121,6 @@ Here are the constraints:
 - It should be short, easy to type. (You'll type it a lot.)
 - It cannot be your own name.
 - It cannot be a generic name like "robot", "duckiebot", "car". It cannot contain brand names.
-
 
 ### Preparation, step 2: prepare a brief elevator pitch {#1710-duckieboxes}
 
@@ -113,7 +136,12 @@ You will then receive a Duckiebox from our senior staff, a simple gesture but of
 
 Finally, you will bring the Duckiebox to our junior staff, that will apply labels with your name on it in addition to giving you labels with your robot name for future application on your Duckiebot.    
 
-### Material presented in class
+### Feedback form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://tinyurl.com/y77pbv7n)
+
+
+### Material presented in class {status=draft}
 
 - Duckiebot parts
 

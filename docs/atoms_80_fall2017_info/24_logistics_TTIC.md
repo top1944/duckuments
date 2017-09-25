@@ -1,4 +1,4 @@
-# Guide for TTIC students {#logistics_TTIC status=ready}
+# Logistics for Chicago branch {#logistics_TTIC status=ready}
 
 Assigned: Matt
 
