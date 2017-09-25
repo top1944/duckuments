@@ -1,6 +1,6 @@
 # Zurich diary  {#ETH-journal status=ready}
 
-## Wed Sep 20: Welcome to Duckietown!
+## Wed Sep 20: Welcome to Duckietown! {#2017-09-20-welcome}
 
 This was an introduction meeting.
 
@@ -32,7 +32,7 @@ Montreal, Chicago? What's happening?
 See: [](#fall2017-experience)
 
 
-## Monday Sep 25: Introduction to autonomy
+## Monday Sep 25: Introduction to autonomy {#2017-09-25-intro-autonomy}
 
 
 ### Material presented in class
@@ -80,7 +80,7 @@ A: Maybe. We didn't plan for it, but it seems that there is a need.
 Subject to figuring out the logistics, we might organize an extra "lab" session or produce a support video.
 
 
-## Monday Sep 25, late at night: Onboarding instructions {status=ready}
+## Monday Sep 25, late at night: Onboarding instructions {#2017-09-25-onboarding}
 
 
 At some late hour of the night, we sent out the onboarding instructions.
@@ -91,11 +91,16 @@ See: [](#onboarding-fall2017)
 
 
 
-## Wednesday Sep 27: Duckiebox distribution and group intro
+## Wednesday Sep 27: Duckiebox distribution, and getting to know each other {#2017-09-27-duckieboxes}
 
-Today we distribute the Duckieboxes and we name the robots.
+Goals for today:
 
-Note: If you cannot make it to this class for the Duckiebox distribution, please inform the TA.
+- getting to know each other;
+- naming the robots;
+- distribute the Duckieboxes.
+
+Note: If you cannot make it to this class for the Duckiebox distribution, please inform the TA, to schedule
+a different time.
 
 ### Preparation: choose a name for your robot {#1709-duckieboxes}
 
@@ -107,7 +112,6 @@ Here are the constraints:
 - It should be short, easy to type. (You'll type it a lot.)
 - It cannot be your own name.
 - It cannot be a generic name like "robot", "duckiebot", "car". It cannot contain brand names.
-
 
 ### Feedback form
 
