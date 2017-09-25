@@ -6,7 +6,7 @@ Classes take place on Mondays and Wednesdays from 9am-11am in TTIC Room 530.
 
 Slides:
 
-* [Duckietown Course Intro](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-25-ttic-intro_lecture.key)
+* Duckietown Course Intro ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-25-ttic-intro_lecture.key))([PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-25-ttic-intro_lecture.pdf))
 
 Book materials:
 
