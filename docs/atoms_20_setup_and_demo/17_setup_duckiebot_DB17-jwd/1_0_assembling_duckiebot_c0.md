@@ -269,7 +269,7 @@ Put the battery between the upper and lower decks of the chassis. It is strongly
 
 ### Joypad
 
-With each joypad ([](fig:joypad)) comes a joypad dongle ([](fig:joypad_dongle)). Don't lose it!
+With each joypad ([](fig:#joypad)) comes a joypad dongle ([](fig:#joypad_dongle)). Don't lose it!
 
 <div figure-id="fig:joypad" figure-caption="All components in the Joypad package">
      <img src="joypad.jpg" style='width: 30em'/>
