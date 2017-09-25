@@ -1,21 +1,13 @@
-# ETH Zurich class journal {#ETH-journal status=ready}
-
-This is the class journal for ETH. We will keep this updated
-with all pointers to what we discussed in class, and what students should do.
-
-Note: Please ignore the entries that are marked as draft.
+# Zurich diary  {#ETH-journal status=ready}
 
 ## Wed Sep 20: Welcome to Duckietown!
 
-This was an introduction lecture.
+This was an introduction meeting.
 
-### Preparation required
-
-None.
 
 ### Material presented in class
 
-The slides we showed:
+These are the slides we showed:
 
 - [PDF](https://github.com/duckietown/lectures/raw/master/2_given/2017-09-20-ETHZ-intro_lecture.pdf)
 - [Keynote (huge)]( https://github.com/duckietown/lectures/raw/master/2_given/2017-09-20-ETHZ-intro_lecture.key)
@@ -39,12 +31,39 @@ See: [](#fall2017-experience)
 Comment: TA: Write here the FAQs that students have.
 
 
+## Mon Sep 25: Introduction to autonomy
 
-## Sep 2?: Onboarding instructions {status=draft}
 
-Note: this is a draft. Don't read it yet!
+### Material presented in class
 
-Assigned: Dzenan Lapandic
+These are the slides we presented:
+
+a - Logistics:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-a-logistics.key">Keynote</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-a-logistics.pdf">PDF</a>.
+
+a - Autonomous Vehicles:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-b-autonomous_vehicles.key">Keynote</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-b-autonomous_vehicles.PDF">PDF</a>.
+
+
+c - Autonomous Mobility on Demand:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-c-AMOD_intro.key">Keynote</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-c-AMOD_intro.pdf">PDF</a>.
+
+d - Plan for the next months:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-c-the-plan.key">Keynote</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-c-the-plan.pdf">PDF</a>.
+
+
+### Questions and answers
+
+Comment: TA: Write here the FAQs that students have.
+
+
+
+## Sep 2?: Onboarding instructions {status=ready}
+
 
 Today we sent out the onboarding instructions.
 
@@ -55,32 +74,8 @@ Here is a copy of the message we sent by email:
 The next step for the students is to do the onboarding
 instructions in [](#first-steps-for-students).
 
-### Pointers to reading materials
-
-TODO:
 
 
-## Mon Sep 2?: Lecture on system architectures {status=draft}
-
-Note: this is a draft. Don't read it yet!
-
-Assigned: Dzenan Lapandic
-
-### Preparation
-
-None.
-
-### Material presented in class
-
-TODO:
-
-### Pointers to reading materials
-
-TODO:
-
-### Questions and answers
-
-Comment: TA: Write here the FAQs that students have.
 
 
 ## Wed Sep ?: Duckiebox distribution and group intro {status=draft}

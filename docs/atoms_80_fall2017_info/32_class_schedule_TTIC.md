@@ -1,4 +1,4 @@
-# TTIC Class Diary {#schedule_TTIC status=ready}
+# Chicago Diary {#schedule_TTIC status=ready}
 
 Classes take place on Mondays and Wednesdays from 9am-11am in TTIC Room 530.
 
