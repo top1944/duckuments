@@ -68,6 +68,12 @@ Slack Channel: help-robot-setup
 
 Now you need to clone the software repo and run things to make your robot move.
 
+First initialize the robot:
+
+See: [](#sec:setup-duckiebot)
+
+Then get it to move!
+
 See: [](#rc-control)
 
 Comment: there is a deadline at this link, but each institution will have different deadlines. Might be a source of entropy -JT

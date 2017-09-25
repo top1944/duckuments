@@ -1,10 +1,10 @@
-# The First Steps for Students {#first-steps-for-students status=ready}
+# First Steps in Duckietown {#first-steps-for-students status=ready}
 
 ## Onboarding Procedure {#onboarding-fall2017}
 
 Welcome aboard! We are so happy you are joining us at Duckietown!
 
-This is your onboarding procedure. Please read all the steps and then complete all the steps. Failure to follow these steps in order will cause unneccessary confusion.
+This is your onboarding procedure. Please read all the steps and then complete all the steps. Failure to follow these steps in order will cause unnecessary confusion.
 
 ### Github sign up {#onboarding-github-signup}
 
@@ -23,6 +23,8 @@ This allows to claim an educational discount that will be useful later.
 Next, fill in this questionnaire:
 
 [Preliminary Student Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSdTo235gCM-GRWKY0EYmfCieC4-FEsO1CqQIqE8EaQz0y8KWA/viewform)
+
+**Zurich: Please fill in questionnaire by Tuesday, 3 pm (extended from original deadline of 12pm).**
 
 Point of contact: if you have problems with this step, please contact
 Jacopo Tani &lt;tanij@eth.ch&gt;.
@@ -63,6 +65,15 @@ Andrea Censi - ETHZ
 **Slack channels**. A brief synopsis of all the help-related Slack channels is here: [](#slack_channels).
 
 Check out all the channels in Slack, and add yourself to those that pertain or interest you. Be sure to introduce yourself in the General channel.
+
+##  (optional) Add Duckietown Engineering Linkedin profile
+
+This is an optional step.
+
+If you wish to connect with the Duckietown alumni network, on LinkedIn
+you can join the company "Duckietown Engineering", with the title
+"Vehicle Autonomy Engineer in training". Please keep updated your
+Linkedin profile with any promotions you might receive in the future.
 
 
 
@@ -131,7 +142,7 @@ If so, then things will probably work ok for you.
 
 Otherwise, we strongly suggest that you use dual booting instead of a virtual machine.
 
-## Next steps for ETH students
+## Next steps for people in Zurich
 
 ### Get acquainted with class journal and class logistics
 
@@ -153,9 +164,9 @@ to edit the Duckuments successfully.
 
 See: See the instructions [in this section](#1709-duckieboxes).
 
-If you can't come on Wednesday, please contact Shiying.
+If you can't come on Wednesday, please contact one of the TAs.
 
 
-## Next steps for TTIC students
+## Next steps for people in Chicago
 
-TODO:
+TODO: to write
