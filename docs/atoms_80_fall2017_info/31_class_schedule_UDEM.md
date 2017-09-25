@@ -131,21 +131,41 @@ Homeworks and Checkoffs:
 *  [](#checkoff_assembly_configuration) deadline extended to  **Monday Sept 25**. Submit by clicking [here](https://www.dropbox.com/request/XmO5tzlJmuaOVb2gGg2A).
 
 
+
 ## Mon Sept 25
 
 Class (10:30-11:30)
 
-* Signal Processing
+* Microelectronics [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-25-udem-what_its_the_box.pptx) [(pdf)]()
 
-* Microelectronics
+* Modern Signal Processing [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-25-udem-modern_signal_processing.key) [(pdf)]()
 
-* Intro to Networking
+* Intro to Networking [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-25-udem-networking.key) [(pdf)]()
+
+Book Materials (still rough drafts, will be completed soon):
+
+* 
+
+*
+
+*
+
+Lab (11:30 - 12:30)
+
+* Liam will be in 2333
+
+* Any final help needed for [](#checkoff_assembly_configuration)
+
+* Finalize Duckietown map setup
+
 
 Homeworks and Checkoffs:
 
-*  [](#checkoff_assembly_configuration) due.
+*  [](#checkoff_assembly_configuration) due by 11pm.
 
-* New Homework and Checkoff will be announced
+* New checkoff: "Taking a log" will be linked later today (due Monday Oct 2)
+
+* New homework: "Data processing" will be linked later today (due Monday Oct 2)
 
 
 ## Wed Sept 27
