@@ -26,7 +26,7 @@ Next, fill in this questionnaire:
 
 [Preliminary Student Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSdTo235gCM-GRWKY0EYmfCieC4-FEsO1CqQIqE8EaQz0y8KWA/viewform)
 
-**Zurich: Please fill in questionnaire by Tuesday, 3 pm (extended from original deadline of 12pm).**
+**Zurich: Please fill in questionnaire by Tuesday, September 26, 15:00 (extended from original deadline of 12:00).**
 
 Point of contact: if you have problems with this step, please contact
 Jacopo Tani &lt;tanij@ethz.ch&gt;.
