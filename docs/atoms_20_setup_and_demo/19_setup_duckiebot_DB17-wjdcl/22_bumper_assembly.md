@@ -158,3 +158,12 @@ If you were given a vehicle detector target, now it is time to use those removab
 <div figure-id="fig:bumper_figure_22">
     <img src="image_22.jpg" style='width:20em; height:auto'/>
 </div>
+
+<!--
+
+- parts and links to the buyer's site in the part_duckiebot_c1 file
+- all labels for chapter references at least two words long. e.g.: {#care} -> {#bumpers-care}
+- make figure names representative of what they are (no image_n.xyz, but fig-whatever.xyz)
+- fill up all the knowledge graphs above (estimate time)
+
+-->
