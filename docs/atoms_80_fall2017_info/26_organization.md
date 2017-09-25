@@ -30,7 +30,7 @@ The following roster shows the teaching staff.
 </style>
 
 
-To add yourself to the roster, or to change your picture,
+Staff: To add yourself to the roster, or to change your picture,
 add a YAML file and a jpg file to [the `duckiefleet-fall2017` repository](http://github.com/duckietown/duckiefleet-fall2017).
 in the [`people/staff` directory][db-staff].
 
@@ -44,29 +44,14 @@ To regenerate the roster, in DUCKIETOWN_ROOT use the command
 
 To do this, you need to have three repositories: duckuments, duckiefleet, and  -->
 
-## The organization sheet  {#org-sheets}
 
-Please familiarize yourself with [this spreadsheet][sheets] and bookmark it
-in your browser.
+## The Activity Tracker {#activity-tracker}
 
-Yes, it's intimidating! You'll get used to it.
+[Link to Activity Tracker](https://docs.google.com/spreadsheets/d/1xL01XBgSs1o0-Ey9D4WgW1ZqWRbj8QPw6-Jc1QZF8rE/edit?usp=sharing)
 
-### The Areas sheet
 
-The sheet called "Areas" describes the points of contact for
-each part of this experience. These are the people that
-can offer support. In particular, note that we list two points of contact:
-one for America, and one for Europe. Moreover, there is a link
-to a Slack channel, which is the place where to ask for help. (We'll get you
-started on Slack in just a minute.)
 
-(Later in the class, when you are all set up and running, we will
-ask you to use tools like Github Issues to ask for help; in this
-onboarding phase, you only need to care about Slack.)
-
-### The Tasks sheet
-
-The sheet called "Tasks" describes specific tasks that you must do
+The sheet called "Activity Tracker" describes specific tasks that you must do
 in a certain sequence.  Tasks include things like "assemble your robot"
 or "sign up on Github".
 
@@ -78,13 +63,15 @@ In this sheet, each task is a row, and each person is a column. There is one
 column for each person in the class, including instructors, TAs, mentors, and
 students.
 
-In this sheet we keep track of the class status. It is very, very important
-for us to know the progress stage for everybody during the class.
+You have two options:
+
+- Only use the sheet as a reference;
+- Use the sheet actively to track your progress. To do this,
+send a message to Kirsten with your gmail address, and add yourself.
 
 Each task in the first column is linked to the documentation
 that describes how to perform the task.
 
-There are two points of contact listed, one for America and one for Europe.
 
 The colored boxes have the following meaning:
 
@@ -98,10 +85,29 @@ The colored boxes have the following meaning:
 <!-- If there is a problem for a task, please add a comment, and in the comment
 explain the problem. If the problem is solved, remember to remove the comment. -->
 
-Students do not have (at least for now) editing access to the spreadsheet.
+<!-- Students do not have (at least for now) editing access to the spreadsheet.
 Therefore, it's the TAs that periodically update the spreadsheet.
 
 At any time, if a student has a blocking problem with a task, they (or the TA) should add a comment to the corresponding cell. This is our "ticket system" - if students
 put a comment, we'll make sure that their issue is resolved.
+ -->
 
-[sheets]: https://docs.google.com/spreadsheets/d/1uO1aq9zqBpLwo1qOzeBKKbB3CuAQAqM94T8B1AGpCKg/edit?usp=sharing
+
+## The  Areas sheet  {#org-sheets}
+
+
+Please familiarize yourself with [this spreadsheet][areas] and bookmark it
+in your browser.
+
+The sheet called "Areas" describes the points of contact for
+each part of this experience. These are the people that
+can offer support. In particular, note that we list two points of contact:
+one for America, and one for Europe. Moreover, there is a link
+to a Slack channel, which is the place where to ask for help. (We'll get you
+started on Slack in just a minute.)
+
+<!-- (Later in the class, when you are all set up and running, we will
+ask you to use tools like Github Issues to ask for help; in this
+onboarding phase, you only need to care about Slack.) -->
+
+[areas]: https://docs.google.com/spreadsheets/d/1uO1aq9zqBpLwo1qOzeBKKbB3CuAQAqM94T8B1AGpCKg/edit?usp=sharing

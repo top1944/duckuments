@@ -1,5 +1,5 @@
 
-input: out/fall2017/master.html
+input: out/fall2017/data/master.html
 
 
 recipe:
@@ -56,6 +56,6 @@ remove_status: [draft]
 # if show_removed is true, the removed sections names are kept in the output
 # otherwise they disappear completely
 # show_removed: true
-show_removed: false
+show_removed: true
 
-output: duckuments-dist/fall2017/duckiebook.html
+output: out/fall2017/data/duckiebook.html

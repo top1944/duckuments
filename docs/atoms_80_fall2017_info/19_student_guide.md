@@ -1,50 +1,70 @@
-# The First Steps for Students {#first-steps-for-students status=beta}
+# The First Steps for Students {#first-steps-for-students status=ready}
 
 ## Onboarding Procedure {#onboarding-fall2017}
 
 Welcome aboard! We are so happy you are joining us at Duckietown!
 
-### Slack
+This is your onboarding procedure. Please read all the steps and then complete all the steps. Failure to follow these steps in order will cause unneccessary confusion.
+
+### Github sign up {#onboarding-github-signup}
+
+If you don't already have a Github account, sign up now.
+
+See: [Github signup page](https://github.com/join)
+
+Please use your full name when it asks you. Ideally, the username should be
+something like `FirstLast` or something that resembles your name.
+
+When you sign up, use your university email.
+This allows to claim an educational discount that will be useful later.
+
+### Questionnaire
+
+Next, fill in this questionnaire:
+
+[Preliminary Student Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSdTo235gCM-GRWKY0EYmfCieC4-FEsO1CqQIqE8EaQz0y8KWA/viewform)
+
+Point of contact: if you have problems with this step, please contact
+Jacopo Tani &lt;tanij@eth.ch&gt;.
+
+### Accept invite to Github organization Duckietown
+
+After we receive the questionnaire, we will invite you to the Duckietown
+organization. You need to accept the invite; until you do, you are not part of the
+Duckietown organization and can't access our repositories.
+
+The invite should be waiting for you [at this page](https://github.com/duckietown).
+
+### Accept the invite to Slack
+
+After we receive the questionnaire, we will invite you to Slack.
 
 The primary mode of online confabulation between staff and students is Slack, a team communication forum that allows the community to collaborate in making Duckietown awesome.
 
-Note: Emails are otherwise forbidden, unless they relate to a private, university-based admistrative concern.
+(Emails are otherwise forbidden, unless they relate to a private, university-based administrative concern.)
 
-If you are reading this you should have received an invitation to join our Slack - check your inbox. If you have not received an invitation to Slack, you need to send an email to Kirsten Bowser &lt;akbowser@gmail.com&gt;.
+We will send you an invite to Slack. Check your inbox.
 
-When you accept your Slack invite, please identify yourself with first and last names followed by a "-" and your affiliation.
+If after 24 hours from sending the questionnaire you haven't received the invite,
+contact HR representative Kirsten Bowser &lt;akbowser@gmail.com&gt;.
+
+
+**What is Slack?** More details about Slack are available [here](#slack).
+In particular, remember to disable email notifications.
+
+**Slack username**. When you accept your Slack invite, please identify yourself with first and last names followed by a "-" and your affiliation.
 
 <div class='example-usage' markdown="1">
 Andrea Censi - ETHZ
 </div>
 
-Please add a picture (relatively professional, so that we can use it for rosters when the time comes).
+**Slack picture**. Please add a picture (relatively professional, with duckie accessories encouraged).
 
-
-More details about Slack are available [here](#slack)
-
-A brief synopsis of all the help-related Slack channels is here: [](#slack_channels).
+**Slack channels**. A brief synopsis of all the help-related Slack channels is here: [](#slack_channels).
 
 Check out all the channels in Slack, and add yourself to those that pertain or interest you. Be sure to introduce yourself in the General channel.
 
 
-### Github
-
-The next thing you need to do is provide Duckietown HR (Kirsten Bowser) with your Github username via Slack in a private message.
-
-If you don't already have a Github account, follow these steps:
-
-1) Sign up for an account on [GitHub](https://github.com).
-
-2) Use the same email associated with your Slack account. Your Github username should be the same as your Slack username if possible, otherwise something similar.
-
-3) Send your Github username to Duckietown HR via Slack in a private message.
-
-4) You need to accept the invite to the Duckietown organization. The invite should be waiting for you at the page https://github.com/duckietown.
-
-<div class='example-usage' markdown="1">
-Example: `@censi` is the slack handle, the GitHub username is `AndreaCensi`.
-</div>
 
 <!--
 ### Google Documents
@@ -56,7 +76,9 @@ If you experience any difficulties don't hesitate to contact Duckietown HR on th
 TLDR: Follow naming guidelines in Slack, send Github username and gmail address to Duckietown HR via Slack. NO EMAILS. -->
 
 
-## Laptop Requirements
+## Laptops
+
+If you do not have access to a laptop that meets the following requirements, please post a note in the channel `#help-laptops`.
 
 You need a laptop with these specifications:
 
@@ -75,7 +97,6 @@ good CPU.  You will be developing code that runs on a Raspberry PI. Any laptop
 bought in the last 3 years should be powerful enough. However, having a good
 CPU / lots of RAM makes it faster to run regression tests.
 
-If you do not have access to a laptop that meets these requirements, please post a note in the channel `help-laptops`.
 
 ### Can I use a virtual machine instead of dual booting? {#can-we-use-vm}
 
@@ -110,28 +131,31 @@ If so, then things will probably work ok for you.
 
 Otherwise, we strongly suggest that you use dual booting instead of a virtual machine.
 
+## Next steps for ETH students
 
-## Start learning
+### Get acquainted with class journal and class logistics
 
-Here's something you can start learning before the class.
+At this point, you should be all set up, able to access our Github
+repositories, and, most important of all, able to ask for help on Slack.
 
-### Learn about Duckietown
+You can now get acquainted to the class journal, to know the next steps.
 
-Read about Duckietown's history and watch the Duckumentary.
+See: [](#ETH-journal)
 
-See: [](#part:duckietown-project)
+Also, in this page, we will collect the logistics information (lab times, etc.).
 
-### Learn about Git and Github
+See: [](#ETH-logistics)
 
-Start learning about Git and Github.
+### Make sure you can edit the Duckuments
 
-See: [](#git-reference)
+To receive your Duckiebox on Wednesday Sep 27, you need to prove to be able
+to edit the Duckuments successfully.
+
+See: See the instructions [in this section](#1709-duckieboxes).
+
+If you can't come on Wednesday, please contact Shiying.
 
 
-### Math Refresher
+## Next steps for TTIC students
 
-Do a bit of a refresher on some math basics.
-
-Linear Algegra: [](#linear_algebra)
-
-Probability Basics: [](#probability_basics)
+TODO:

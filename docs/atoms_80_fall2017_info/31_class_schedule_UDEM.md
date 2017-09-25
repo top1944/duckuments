@@ -6,11 +6,13 @@ Class (11:30)
 
 Slides:
 
-* [Duckietown History Future](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-06-udem-duckietown_history_future.key)
+* Duckietown History Future [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-06-udem-duckietown_history_future.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-06-udem-duckietown_history_future.pdf)
 
-* [Duckietown Intro](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-06-udem-duckietown_intro.key)
+* Duckietown Intro [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-06-udem-duckietown_intro.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-06-udem-duckietown_intro.pdf)
 
-* [Autonomy Overview](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-06-udem-autonomy_overview.key)
+* Autonomy Overview [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-06-udem-autonomy_overview.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-06-udem-autonomy_overview.pdf)
+
+* Autonomous Vehicles [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-06-udem-autonomy_vehicles.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-06-udem-autonomy_vehicles.pdf)
 
 Book materials:
 
@@ -56,7 +58,7 @@ Deadline: **Mon Sept. 25**
 Class canceled.
 Continue working on [](#checkoff_assembly_configuration).
 
-## Mon Setp 18
+## Mon Sept 18
 
 Class (10:30 - 11:30) 
 
@@ -74,13 +76,14 @@ Class (10:30 - 11:30)
 
 Slides:
 
-* [Modern Robotic Systems](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-modern_robotic_systems.key)
+* Modern Robotic Systems [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-modern_robotic_systems.key)
+[(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-modern_robotic_systems.pdf)
 
-* [System Architecture](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-systems_architecture_basics.key)
+* System Architecture [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-systems_architecture_basics.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-systems_architecture_basics.pdf)
 
-* [Autonomy Architectures](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-autonomy_architectures.key)
+* Autonomy Architectures [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-autonomy_architectures.key) [(pdf)]((https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-autonomy_architectures.pdf)
 
-* [Representations for Robotics](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-representations.key)
+* Representations for Robotics [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-representations.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-autonomy_architectures.pdf)
 
 Book Materials:
 
@@ -110,9 +113,9 @@ Class (11:30 - 12:30)
 
 Slides:
 
-* [Software Architectures](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-20-udem-software_architectures.key)
+* Software Architectures [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-20-udem-software_architectures.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-20-udem-software_architectures.pdf)
 
-* [Introduction to ROS](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-20-udem-introduction_to_ros.key)
+* Introduction to ROS [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-20-udem-introduction_to_ros.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-20-udem-introduction_to_ros.pdf)
 
 Book Materials:
 
@@ -128,18 +131,45 @@ Homeworks and Checkoffs:
 *  [](#checkoff_assembly_configuration) deadline extended to  **Monday Sept 25**. Submit by clicking [here](https://www.dropbox.com/request/XmO5tzlJmuaOVb2gGg2A).
 
 
+
 ## Mon Sept 25
 
 Class (10:30-11:30)
 
-* Signal Processing
+* Microelectronics [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-25-udem-what_its_the_box.pptx) [(pdf)]()
 
-* Microelectronics
+* Modern Signal Processing [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-25-udem-modern_signal_processing.key) [(pdf)]()
 
-* Intro to Networking
+* Intro to Networking [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-25-udem-networking.key) [(pdf)]()
+
+Book Materials (still rough drafts, will be completed soon):
+
+* 
+
+*
+
+*
+
+Lab (11:30 - 12:30)
+
+* Liam will be in 2333
+
+* Any final help needed for [](#checkoff_assembly_configuration)
+
+* Finalize Duckietown map setup
+
 
 Homeworks and Checkoffs:
 
-*  [](#checkoff_assembly_configuration) due.
+*  [](#checkoff_assembly_configuration) due by 11pm.
 
-* New Homework and Checkoff will be announced
+* New checkoff: "Taking a log" will be linked later today (due Monday Oct 2)
+
+* New homework: "Data processing" will be linked later today (due Monday Oct 2)
+
+
+## Wed Sept 27
+
+* Kinematics
+
+* Dynamics
