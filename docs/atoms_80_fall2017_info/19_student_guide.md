@@ -4,7 +4,7 @@
 
 Welcome aboard! We are so happy you are joining us at Duckietown!
 
-This is your onboarding procedure. Please read all the steps and then complete all the steps. Failure to follow these steps in order will cause unneccessary confusion.
+This is your onboarding procedure. Please read all the steps and then complete all the steps. Failure to follow these steps in order will cause unnecessary confusion.
 
 ### Github sign up {#onboarding-github-signup}
 
