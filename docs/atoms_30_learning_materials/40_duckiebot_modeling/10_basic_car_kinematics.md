@@ -50,7 +50,7 @@ Note: Quantities described with respect to the inertial or robot frames are deno
 The position of the robot with respect to the inertial frame is completely characterized by:
 
 \begin{align}
-\avec{q^I} = \left(  \begin{array}{c} x_a  \\ y_a \\ \theta \end{array} \right),
+\avec{q^I} = \left(  \begin{array}{c} x_A  \\ y_A \\ \theta \end{array} \right),
 \end{align}
 
 and it is always possible to switch representation of a vector $X$ from the robot to inertial frames through:
@@ -65,7 +65,7 @@ $\amat{R}(\theta)$ is an orthogonal rotation matrix defined by:
 \amat{R}(\theta) = \left[  \begin{array}{ccc} \cos\theta & -\sin \theta  & 0 \\ \sin\theta & cos\theta & 0 \\ 0 & 0 & 1 \end{array} \right].
 \end{align}
 
-Note: Remember that the orthogonality condition implies that $\amat{R}^T(\theta)\amat{R}(\theta) = \amat{R}(\theta)R^T(\theta) = \amat{I}$, hence:
+Note: Remember that the orthogonality condition implies that $\amat{R}^T(\theta)\amat{R}(\theta) = \amat{R}(\theta)\amat{R}^T(\theta) = \amat{I}$, hence:
 \[ \label{eq:mod-orthogonality-cond}
 \amat{R}(\theta) = \amat{R}^{-1}(\theta)
 \]
@@ -81,35 +81,9 @@ Note: $\amat{R}(\theta)$ is not a function of time, but only of the orientation.
   <img src="mod-ref-frames.png" style='width: 30em; height:auto'/>
 </div>
 
-## Differential drive robot kinematic model {#mod-kin}
+## Kinematics
 
-In a differential drive robot, controlling the wheels to different speeds generate a rolling motion of rate $\omega = \dot \theta$.  In a rotating field there always is a fixed point, the _center of instantaneous curvature_ (ICC), and all points at distance $d$ from it will have a velocity given by $\omega d$ and direction orthogonal to the direction of the ICC. Therefore, by looking at [](#fig:mod-kin-icc), we can write:
-
-<div figure-id="fig:mod-kin-icc" figure-caption="By controlling the rotation rates of the wheel independently, a differential drive robot can make turns. Figure adapted from [](#bib:Dudek10).">
-  <img src="mod-kin-icc.png" style='width: 30em; height:auto'/>
-</div>
-
-TODO: change labels in pic to match previously used conventions.
-
-\begin{align} \label{eq:mod-kin-1}
-\left\{  \begin{array}{l} \dot \theta (d-L) &= v_l  \\
-                          \dot \theta (d+L)  &= v_r \right.,
-\end{align}
-
-from which:
-
-\begin{align} \label{eq:mod-kin-2}
-\left\{  \begin{array}{l} d &= L \frac{v_r + v_l}{v_r - v_l}  \\
-                          \dot \theta &= \frac{v_r - v_l}{2L} \right..
-\end{align}
-
-A few observations stem immediately from \eqref{eq:mod-kin-2}:
-
-- If $v_r = v_l$ the bot does not turn (\dot \theta = 0), hence the ICC is not defined;
-- If $v_r = - v_l$, then the robot "turns on itself", i.e., $d=0$ and $ICC \equiv A$;
-- If $v_r = 0$ (or $v_l = 0$), the rotation happens around the right (left) wheel and $d = L$.
-
-Note: Moreover, a differential drive robot cannot move in the direction ...
+In this section we derive the kinematic model of a differential drive mobile platiform.
 
 ### Differential drive robot kinematic constraints {#mod-kin-constraint status=beta}
 The kinematic constraints are derived from two assumptions:
@@ -140,14 +114,14 @@ Recalling that the robot is assumed to be a rigid body, the velocity of point $P
 
 \begin{align} \label{eq:mod-pure-rolling-inertial-left}
 \left\{  \begin{array}{ll} \dot x_{P,r} &= \dot x_A + L\dot \varphi_{r} \cos \theta \\
-                      \dot y_{P,r} &= \dot y_A + L \dot \varphi_{r} \sin \theta  \end{array} \right.,
+                      \dot y_{P,r} &= \dot y_A + L \dot \varphi_{r} \sin \theta  \end{array} \right. ,
 \end{align}
 
 and
 
 \begin{align} \label{eq:mod-pure-rolling-inertial-right}
 \left\{  \begin{array}{ll} \dot x_{P,l} &= \dot x_A + L\dot \varphi_{r} \cos \theta \\
-                      \dot y_{P,l} &= \dot y_A + L \dot \varphi_{r} \sin \theta  \end{array} \right..
+                      \dot y_{P,l} &= \dot y_A + L \dot \varphi_{r} \sin \theta  \end{array} \right. .
 \end{align}
 
 By recalling \eqref{eq:mod-orthogonality-cond} and \eqref{eq:mod-no-lat-slip-constraint-r}, the expression of left and right wheel velocities in the robot frame can be summarized in the _pure rolling constraint_ equation:
@@ -157,11 +131,9 @@ By recalling \eqref{eq:mod-orthogonality-cond} and \eqref{eq:mod-no-lat-slip-con
                            \dot x_{P,l} \cos \theta +  \dot y_{P,l} \sin \theta &= R \dot \varphi_l                 \end{array} \right..
 \end{align}
 
-#### Kinematic constraints summary
+### Kinematic constraints summary
 
-The kinematic constraints (\eqref{eq:mod-no-lat-slip-constraint-i}, \eqref{eq:mod-pure-rolling-constraint}) of a differential drive robot can be succinctly expressed as:
-
-Note: \[ \label{eq:mod-constraints-succint} \amat{\Lambda}(\avec{q})\avec{\dot q} = 0,\]
+Note: The kinematic constraints (\eqref{eq:mod-no-lat-slip-constraint-i}, \eqref{eq:mod-pure-rolling-constraint}) of a differential drive robot can be succinctly expressed as: \[ \label{eq:mod-constraints-succint} \amat{\Lambda}(\avec{q})\avec{\dot q} = 0,\]
 
 where:
 
@@ -181,9 +153,67 @@ and:
                       v_{l} &= R \dot \varphi_{l}  \end{array} \right..
 \end{align}
 
+## Differential drive robot kinematic model {#mod-kin}
+
+In a differential drive robot, controlling the wheels at different speeds generates a rolling motion of rate $\omega = \dot \theta$.  In a rotating field there always is a fixed point, the _center of instantaneous curvature_ (ICC), and all points at distance $d$ from it will have a velocity given by $\omega d$, and direction orthogonal to that of the line connecting the ICC and the wheels (i.e., the _axle_). Therefore, by looking at [](#fig:mod-kin-icc), we can write:
+
+<div figure-id="fig:mod-kin-icc" figure-caption="By controlling the rotation rates of the wheel independently, a differential drive robot can make turns. Figure adapted from [](#bib:Dudek10).">
+  <img src="mod-kin-icc.png" style='width: 30em; height:auto'/>
+</div>
+
+TODO: change labels in pic to match previously used conventions.
+
+\begin{align} \label{eq:mod-kin-1}
+\left\{  \begin{array}{l} \dot \theta (d-L) &= v_l  \\
+                          \dot \theta (d+L)  &= v_r \end{array} \right.,
+\end{align}
+
+from which:
+
+\begin{align} \label{eq:mod-kin-2}
+\left\{  \begin{array}{l} d &= L \frac{v_r + v_l}{v_r - v_l}  \\
+                          \dot \theta &= \frac{v_r - v_l}{2L} \end{array} \right..
+\end{align}
+
+A few observations stem from \eqref{eq:mod-kin-2}:
+
+- If $v_r = v_l$ the bot does not turn ($\dot \theta = 0$), hence the ICC is not defined;
+- If $v_r = - v_l$, then the robot "turns on itself", i.e., $d=0$ and $ICC \equiv A$;
+- If $v_r = 0$ (or $v_l = 0$), the rotation happens around the right (left) wheel and $d = L$.
+
+Note: Moreover, a differential drive robot cannot move in the direction of the ICC, it is a singularity.
+
+By recalling the _no lateral slipping motion_ \eqref{eq:mod-no-lat-slip-constraint-r} hypothesis and the _pure rolling_ constraint \eqref{eq:mod-pure-rolling}, and noticing that the translational velocity of $A$ in the robot frame is $\dot x_A^r = \dot \theta d$ we can write:
+
+\begin{align} \label{eq:mod-kin-3}
+\left\{  \begin{array}{l} \dot x_A^r &= R (\dot \varphi_R +\dot \varphi_L)/2  \\
+                          \dot y_A^r &= 0 \\
+                          \dot \theta &= \omega = R(\dot \varphi_R - \dot \varphi_L)/(2L) \end{array} \right.,
+\end{align}  
+
+Comment: using \frac{}{} in the above yield ugly visual results (the dots on the phi's are too close and barely noticeable)
+
+which in more compact yields the _forward kinematics_ in the robot frame:
+
+\begin{align} \label{eq:mod-forward-kinematics-robot-frame}
+  \left[ \begin{array}{c} x_A^r \\ y_A^r \\ \dot \theta \end{array} \right] = \left[ \begin{array}{cc} \frac{R}{2}  & \frac{R}{2}  \\
+                            0 & 0   \\
+                            \frac{R}{2L} & -\frac{R}{2L}   \\  \end{array}  \right]  
+                             \left[ \begin{array}{c} \dot \varphi_R \\ \dot \varphi_L \end{array} \right].
+\end{align}
+
+Finally, by using \eqref{eq:mod-rot-mat}, we can recast \eqref{eq:mod-forward-kinematics-robot-frame} in the inertial frame:
+
+\begin{align} \label{eq:mod-forward-kinematics-inertial-frame}
+ \avec{\dot q}^I = \amat{R}(\theta)  \left[ \begin{array}{c} x_A^r \\ y_A^r \\ \dot \theta \end{array} \right] = \left[ \begin{array}{cc} \frac{R}{2} \cos \theta & \frac{R}{2} \cos \theta \\
+                            \frac{R}{2} \sin \theta & \frac{R}{2} \sin \theta   \\
+                            \frac{R}{2L} & -\frac{R}{2L}   \\  \end{array}  \right]  
+                             \left[ \begin{array}{c} \dot \varphi_R \\ \dot \varphi_L \end{array} \right].
+\end{align}
+
 ## Differential drive robot dynamic model {#mod-dyn}
 
-- Newton-Euler derivation
+The dynamical equations of a differential drive robot are obtained
 
 [](#fig:mod-fbd)
 
