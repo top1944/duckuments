@@ -62,6 +62,11 @@ Please help us making the experience better by [providing feedback (can be anony
 
 ### Questions and answers
 
+Q: MyStudies is not updated; I am still on the waiting list. What should I do?
+
+A: Nothing. Don't worry, if you have received the onboarding email, you are in the class, even if you
+still appear in the waiting list. We will figure this out with the department. 
+
 Q: What version of Linux do I need to install?
 
 A: 16.04.* (16.04.03 is the latest at time of this writing)
