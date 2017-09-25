@@ -109,9 +109,9 @@ During the Duckiebox ceremony, you will be asked to walk up to the board, write 
 - what is the name of your robot;
 - why did you choose to name your robot in that way.
 
-You will then receive a Duckiebox from our senior staff, a simple gesture of sempiternal glory, that will be remembered through a photograph.
+You will then receive a Duckiebox from our senior staff, a simple gesture but of sempiternal glory, for which you have now become a member of the Duckietown community. This important moment will be remembered through a photograph.
 
-Finally, you will bring the Duckiebox to our junior staff, that will apply labels with your name on it and give you labels with your robot name for future application on your Duckiebot.    
+Finally, you will bring the Duckiebox to our junior staff, that will apply labels with your name on it in addition to giving you labels with your robot name for future application on your Duckiebot.    
 
 ### Material presented in class
 
