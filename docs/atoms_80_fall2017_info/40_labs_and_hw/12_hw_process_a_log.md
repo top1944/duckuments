@@ -1,6 +1,6 @@
 # Homework: Data Processing {#homework-data-processing status=draft}
 
-<div class='requirements' markdown'1'>
+<div class='requirements' markdown='1'>
 
 Requires: [](#checkoff_take_a_log)
 
@@ -12,3 +12,5 @@ Result: Build your first ROS package and node
 
 Result: Ability to process imagery live
 
+
+</div>
