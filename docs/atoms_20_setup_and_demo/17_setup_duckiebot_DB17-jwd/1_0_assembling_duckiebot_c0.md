@@ -1,17 +1,17 @@
-# Assembling the Duckiebot `C0` {#assembling-duckiebot-c0 status=beta}
+# Assembling the Duckiebot `DB17` {#assembling-duckiebot-c0 status=beta}
 
 Assigned: Shiying
 
 Point of contact: Shiying Li
 
-Once you have received the parts and soldered the necessary components, it is time to assemble them in a Duckiebot. Here, we provide the assembly instructions for configurations `C0+wjd`.
+Once you have received the parts and soldered the necessary components, it is time to assemble them in a Duckiebot. Here, we provide the assembly instructions for configurations `DB17-wjd`.
 
 
 <div class='requirements' markdown="1">
 
-Requires: Duckiebot `C0+wjd` parts. The acquisition process is explained in [](#acquiring-parts-c0).
+Requires: Duckiebot `DB17-wjd` parts. The acquisition process is explained in [](#acquiring-parts-c0).
 
-Requires: Having soldered the `C0+wjd` parts. The soldering process is explained in [](#soldering-boards-c0).
+Requires: Having soldered the `DB17-wjd` parts. The soldering process is explained in [](#soldering-boards-c0).
 
 Requires: Having prepared the power cable. The power cable preparation is explained in [](#power-cable-prep-c0). Note: Not necessary if you are proceeding directly to configuration C1.
 
@@ -19,7 +19,7 @@ Requires: Having installed the image on the MicroSD card. The instructions on ho
 
 Requires: Time: about 40 minutes.
 
-Results: An assembled Duckiebot in configuration `C0+wjd`.
+Results: An assembled Duckiebot in configuration `DB17-wjd`.
 
 </div>
 
@@ -97,7 +97,7 @@ The Magician chassis package contains a steel omnidirectional wheel, and the rel
 
 #### Caster wheel
 
-As alternative to omnidirection wheel, caster wheel has less friction. 
+As alternative to omnidirection wheel, caster wheel has less friction.
 
 If you have purchased caster wheel, read this section.
 
@@ -284,7 +284,7 @@ For each joypad there is a corresponding joypad dongle. Don't lose the dongle!
      <img src="joypad.jpg" style='width: 30em'/>
 </div>
 
-Insert the joypad dongle into one of the USB port. 
+Insert the joypad dongle into one of the USB port.
 <div figure-id="fig:joypad_dongle" figure-caption="">
      <img src="joypad_dongle.jpg" style='width: 30em'/>
 </div>
@@ -307,6 +307,3 @@ Fix all the cables on the Duckiebot so that it can run on the way without barrie
 <div figure-id="fig:Stepper_cable" figure-caption="Insert the prepared power wire to DC motor HAT power pins.">
      <img src="Stepper_cable.jpg" style='width: 30em'/>
 </div>
-
-
-

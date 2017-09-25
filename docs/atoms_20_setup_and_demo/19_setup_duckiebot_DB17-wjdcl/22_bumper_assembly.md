@@ -3,7 +3,7 @@
 
 <div class='requirements' markdown="1">
 
-Requires: A Duckiebot in `C0` assembly
+Requires: A Duckiebot in `DB17` configuration
 
 Requires: Time: about ??? minutes.
 
@@ -12,8 +12,6 @@ TODO: estimate time.
 Results: A Duckiebot with bumpers attached
 
 </div>
-
-
 
 ### Locate all required parts
 
@@ -28,7 +26,7 @@ The following should be included in your parts envelope (See image below for the
 
 The following is not included in your parts envelope but will be needed for assembly:
 
-* Small phillips screwdriver
+* Small Phillips screwdriver
 * Small pliers (needle-nose is nice)
 * Transparent tape
 
@@ -152,7 +150,6 @@ Remember those short M3 screws that we said to keep track of? Now it’s time to
 </div>
 
 Slide the 2 remaining removable cotter pins into the holes at the top and congrats! You are finished assembling your front bumper!
-
 
 ### Mount Vehicle Detector Target (optional)
 

@@ -1,25 +1,25 @@
-# Soldering boards for `C0` {#soldering-boards-c0 status=beta}
-
+# Soldering boards for `DB17` {#soldering-boards-c0 status=beta}
 
 Assigned: Shiying
 
+<!--
+Shiying: how long does it take to solder the stuff described in this chapter? (I guessed 30 mins, change it with the real number)
+
+-->
+
 <div class='requirements' markdown="1">
 
+Requires:  Duckiebot `DB17-wjd` parts. The acquisition process is explained in [](#acquiring-parts-c0). The configurations are described in [](#duckiebot-configurations).
 
-Requires:  Duckiebot `C0+wjd` parts. The acquisition process is explained in [](#acquiring-parts-c0). The configurations are described in [](#duckiebot-configurations).
+Requires: Time: 30 minutes
 
-Requires: Time: ??? minutes
-
-Results: XXX
-
-TODO: finish above
+Results: Soldered HATs
 
 </div>
 
-## General  tips
+## General tips
 
-
-General rule in soldering: soldering the components according to the height of components - from lowest to highest.
+Note: There is a general rule in soldering: solder the components according to their height, from lowest to highest.
 
 ##  Soldering on DC/Stepper Motor HAT
 

@@ -1,5 +1,5 @@
 
-# Soldering boards for `C1` {#soldering-boards-c1 status=draft}
+# Soldering boards for `DB17-l` {#soldering-boards-c1 status=draft}
 
 Note: General rule in soldering
 
@@ -9,16 +9,14 @@ Assigned: Shiying
 
 <div class='requirements' markdown="1">
 
-Requires: Duckiebot `C1` parts. The acquisition process is explained in [](#acquiring-parts-c1).
+Requires: Duckiebot `DB17-l` parts. The acquisition process is explained in [](#acquiring-parts-c1).
 The configurations are described in [](#duckiebot-configurations).
 
-Requires: Time: ??? minutes
+Requires: Time: 30 minutes
 
-Results: ...
+Results: A `DB17-l` Duckiebot
 
 </div>
-
-TODO: finish above
 
 ## General rules
 
@@ -126,9 +124,9 @@ Instructions:
 
 2. Slide the battery between the two chassis plates
 
-3. Power the PWM/Servo HAT and Pi connecting them to the battery with the cables included in the duckie box
+3. Power the PWM/Servo HAT and Pi connecting them to the battery with the cables included in the duckiebox
 
-4. Power the DC/Stepper motor from the PWM/Servo HAT using the male-to-male cable in the duckie box, connect the positive
+4. Power the DC/Stepper motor from the PWM/Servo HAT using the male-to-male cable in the duckiebox, connect the positive
 
 5. connect the Pi to the board
 

@@ -9,7 +9,7 @@ Requires: An SD card of dimensions at least 16 GB.
 
 Requires: A computer with an internet connection, an SD card reader, and 16 GB of free space.
 
-Requires: An assembled Duckiebot in configuration `D17-C0`. This is the result of [](#assembling-duckiebot-c0).
+Requires: An assembled Duckiebot in configuration `DB17`. This is the result of [](#assembling-duckiebot-c0).
 
 Results: A Duckiebot that is ready to use.
 
@@ -45,7 +45,7 @@ using the program `sha256sum`:
 
     $ sha256sum duckiebot-RPI3-AD-2017-09-12.img.xz
     7136f9049b230de68e8b2d6df29ece844a3f830cc96014aaa92c6d3f247b6130  duckiebot-RPI3-AD-2017-09-12.img.xz
-    
+
 Compare the hash that you obtain with the hash above. If they are different,
 there was some problem in downloading the image.
 
@@ -233,7 +233,7 @@ Set the permissions on the new file to 0600.
 ### Option 2.b): `eduroam` WiFi (UdeM/McGill instructions) {status=draft}
 
 Save the following block as new file in `/etc/NetworkManager/system-connections/eduroam-![USERNAME]`:
-where USERNAME is the your logged-in username in the duckiebot. 
+where USERNAME is the your logged-in username in the duckiebot.
 
     [connection]
     id=eduroam
@@ -286,11 +286,11 @@ If neither `duckietown` nor `eduroam` are available, you can add your own config
 
 Note: Whichever option you pick, we don't recommend to create or modify the `/etc/wpa_supplicant.conf` file, because this verion of Ubuntu uses the `NetworkManager` service to deal with WiFi connections (and no longer the `wpasupplicant` daemon).
 
-Find the SSID of your Wi-Fi network. It is usually the name of the wifi network. Example: BELL343. Let's call it `![WIFINAME]` 
-To find the seen-bssed, run 
+Find the SSID of your Wi-Fi network. It is usually the name of the wifi network. Example: BELL343. Let's call it `![WIFINAME]`
+To find the seen-bssed, run
 
     $ sudo iw wlan0 scan | egrep "^BSS|SSID:"
-    
+
 The AA:BB:CC:DD:EE:FF address above `SSID: BELL343` is your seen-bssed. Let's call it `![WIFIBSS]`
 
 Save the following block as new file in `/etc/NetworkManager/system-connections/BELL343`:
@@ -486,10 +486,10 @@ Once you have your SSH key pair on both your laptop and your Duckiebot, as well 
 
     laptop $ ssh ![abc]
 
-instead of 
+instead of
 
     laptop $ ssh ![username]@![robot name]
-    
+
 where you can chose `![abc]` to be any alias / shortcut.
 
 ### Add `![username]`'s public key to Github
@@ -575,11 +575,11 @@ In order to show that your Duckiebot is ready for the task of driving around hap
 Download the ANSI art file from Github:
 
     duckiebot $ wget --no-check-certificate -O duckie.art "https://raw.githubusercontent.com/duckietown/Software/master/misc/duckie.art"
-    
+
 (optional) If you want, you can preview the logo by just outputting it onto the command line:
 
     duckiebot $ cat duckie.art
-    
+
 Next up create a new empty text file in your favorite editor and add the code for showing your duckie pride:
 
 Let's say I use `nano`, I open a new file:
@@ -590,7 +590,7 @@ And in there I add the following code (which by itself just prints the duckie lo
 
     #!/bin/sh
     printf "\n$(cat /etc/update-motd.d/duckie.art)\n"
-    
+
 Then save and close the file. Finally you have to make this file executable...
 
     duckiebot $ chmod +x 20-duckie
@@ -599,7 +599,7 @@ Then save and close the file. Finally you have to make this file executable...
 
     sudo cp duckie.art /etc/update-motd.d
     sudo cp 20-duckie /etc/update-motd.d
-    
+
 Finally log out of SSH via `exit` and log back in to see duckie goodness.
 
 ### Troubleshooting
@@ -624,6 +624,6 @@ or entirely [uninstall your NTP service and manually grab the time on reboot][ar
 [art1]: https://raspberrypi.stackexchange.com/questions/59860/time-and-timezone-issues-on-pi
 [art2]: https://unix.stackexchange.com/questions/251519/setting-time-and-date-without-using-ntp
 
-Symptom: Cannot find `/etc` folder for configuring the Wi-Fi. I only see `Desktop`, `Downloads` when starting up the Duckiebot. 
+Symptom: Cannot find `/etc` folder for configuring the Wi-Fi. I only see `Desktop`, `Downloads` when starting up the Duckiebot.
 
 Resolution: If a directory name starts with `/`, it's not supposed to be in the home directory, but rather at the root of the filesystem. You are currently in `/home/ubuntu`. Type `ls /` to see the folders at the root, including `/etc.  

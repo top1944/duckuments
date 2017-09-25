@@ -1,8 +1,8 @@
-# Preparing the power cable for `C0` {#power-cable-prep-c0 status=ready}
+# Preparing the power cable for `DB17` {#power-cable-prep-c0 status=ready}
 
-In configuration `C0` we will need a cable to power the DC motor HAT from the battery. The keen observer might have noticed that such a cable was not included in the [`C0` Duckiebot parts](#acquiring-parts-c0) chapter. Here, we create this cable by splitting open any USB-A cable, identifying and stripping the power wires, and using them to power the DC motor HAT. If you are unsure about the definitions of the different Duckiebot configurations, read [](#duckiebot-configurations).
+In configuration `DB17` we will need a cable to power the DC motor HAT from the battery. The keen observer might have noticed that such a cable was not included in the [`DB17` Duckiebot parts](#acquiring-parts-c0) chapter. Here, we create this cable by splitting open any USB-A cable, identifying and stripping the power wires, and using them to power the DC motor HAT. If you are unsure about the definitions of the different Duckiebot configurations, read [](#duckiebot-configurations).
 
-It is important to note that these instructions are relevant only for assembling a `C0+wjd` configuration Duckiebot. If you intend to build a `C1` configuration Duckiebot, you can skip these instructions.
+It is important to note that these instructions are relevant only for assembling a `DB17-wjdc` configuration Duckiebot (or any subset of it). If you intend to build a `DB17-l` configuration Duckiebot, you can skip these instructions.
 
 <div class='requirements' markdown="1">
 
@@ -17,9 +17,6 @@ Requires: Time: 5 minutes
 Results: One male USB-A to wires power cable
 
 </div>
-
-## Do it yourself: male USB-A cable to wires
-
 
 ## Step 1: Find a cable
 
