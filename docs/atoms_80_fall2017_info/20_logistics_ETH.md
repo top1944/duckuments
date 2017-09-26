@@ -1,6 +1,6 @@
-# Logistics for ETH Zürich students {#ETH-logistics status=ready}
+# Logistics for Zürich branch {#ETH-logistics status=ready}
 
-This section describes information specific for ETH Zürich students.
+This section describes information specific to Zürich.
 
 ### The local staff
 

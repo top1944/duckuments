@@ -1,4 +1,4 @@
-# UdeM Class Diary {#schedule_UDEM status=ready}
+# Montréal branch diary {#schedule_UDEM status=ready}
 
 ## Wed Sept 6
 
@@ -60,7 +60,7 @@ Continue working on [](#checkoff_assembly_configuration).
 
 ## Mon Sept 18
 
-Class (10:30 - 11:30) 
+Class (10:30 - 11:30)
 
 * General discussion (how are things going? Sorry I was away last week.. anyone need anything?)
 
@@ -70,7 +70,7 @@ Class (10:30 - 11:30)
 
 * Decomposing the robotics sytems into smaller pieces - autonomy architectures
 
-* Agreeing on the language that the different pieces "talk" - representations 
+* Agreeing on the language that the different pieces "talk" - representations
 
 * Background on basic probability theory?
 
@@ -143,6 +143,7 @@ Class (10:30-11:30)
 * Intro to Networking [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-25-udem-networking.key) [(pdf)]()
 
 Book Materials (still rough drafts, will be completed soon):
+
 
 
 Lab (11:30 - 12:30)
