@@ -67,7 +67,7 @@ $\amat{R}(\theta)$ is an orthogonal rotation matrix defined by:
 
 Note: Remember that the orthogonality condition implies that $\amat{R}^T(\theta)\amat{R}(\theta) = \amat{R}(\theta)\amat{R}^T(\theta) = \amat{I}$, hence:
 \[ \label{eq:mod-orthogonality-cond}
-\amat{R}(\theta) = \amat{R}^{-1}(\theta)
+\amat{R}^T(\theta) = \amat{R}^{-1}(\theta)
 \]
 
 Note: $\amat{R}(\theta)$ is not a function of time, but only of the orientation. Hence, by denoting time derivatives as $\dot{(\cdot)}$ we can obtain the relation between velocities in the two reference systems:
@@ -83,7 +83,7 @@ Note: $\amat{R}(\theta)$ is not a function of time, but only of the orientation.
 
 ## Kinematics
 
-In this section we derive the kinematic model of a differential drive mobile platiform.
+In this section we derive the kinematic model of a differential drive mobile platform.
 
 ### Differential drive robot kinematic constraints {#mod-kin-constraint status=beta}
 The kinematic constraints are derived from two assumptions:
@@ -130,7 +130,7 @@ By recalling \eqref{eq:mod-orthogonality-cond} and \eqref{eq:mod-no-lat-slip-con
 \left\{  \begin{array}{ll} \dot x_{P,r} \cos \theta +  \dot y_{P,r} \sin \theta &= R \dot \varphi_r \\
                            \dot x_{P,l} \cos \theta +  \dot y_{P,l} \sin \theta &= R \dot \varphi_l                 \end{array} \right..
 \end{align}
-
+<!-- The following is useful in the Laplacian approach
 ### Kinematic constraints summary
 
 Note: The kinematic constraints (\eqref{eq:mod-no-lat-slip-constraint-i}, \eqref{eq:mod-pure-rolling-constraint}) of a differential drive robot can be succinctly expressed as: \[ \label{eq:mod-constraints-succint} \amat{\Lambda}(\avec{q})\avec{\dot q} = 0,\]
@@ -152,7 +152,7 @@ and:
 \left\{  \begin{array}{ll} v_{r} &= R \dot \varphi_{r}\\
                       v_{l} &= R \dot \varphi_{l}  \end{array} \right..
 \end{align}
-
+-->
 ## Differential drive robot kinematic model {#mod-kin}
 
 In a differential drive robot, controlling the wheels at different speeds generates a rolling motion of rate $\omega = \dot \theta$.  In a rotating field there always is a fixed point, the _center of instantaneous curvature_ (ICC), and all points at distance $d$ from it will have a velocity given by $\omega d$, and direction orthogonal to that of the line connecting the ICC and the wheels (i.e., the _axle_). Therefore, by looking at [](#fig:mod-kin-icc), we can write:
