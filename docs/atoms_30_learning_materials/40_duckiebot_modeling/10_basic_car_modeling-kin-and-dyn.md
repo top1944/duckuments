@@ -278,7 +278,7 @@ a_w(t) &= 2 \dot{r}(t) \dot \theta(t) + r(t) \ddot \theta.
 
 Exercise: prove that $je^{j\theta}=e^{j(\theta+\pi/2)}$.
 
-### Equilibrium of forces and moments {#mod-dyn-eq}
+### Equilibrium of forces and moments {#mod-dyn-eq status=draft}
 
 We derive the dynamic model by imposing the simultaneous equilibrium of forces along the longitudinal and lateral directions in the robot frame with the respective inertial forces, and of the moments around the vertical axis (coming out of the.. screen) passing through the center of mass of the robotic vehicle.
 
@@ -299,13 +299,18 @@ By substituting the \eqref{eq:mod-dyn-polar-v-dv} in \eqref{eq:mod-dyn-equilibri
 This general equation does not yet account for the the kinematic constraints discuss earlier.
 
 ### Imposing the kinematic constraints {#mod-dyn-eq-constrained}
-
+<!--
 Equations \eqref{eq:mod-dyn-equilibria} of motion can be decoupled by imposing the kinematic constraints \eqref{eq:mod-no-lat-slip-constraint-r} and \eqref{eq:mod-pure-rolling}. In particular, to impose the no lateral slipping hypothesis \eqref{eq:mod-no-lat-slip-constraint-r}, we first need to express the velocity of the center of mass of the robot in the inertial frame, then derive the velocity of point $A$ as a function of that in $C$, and finally impose the lateral velocity to be zero. To do so, we first need to notice that, in the inertial frame:
+-->
+
+Equations \eqref{eq:mod-dyn-equilibria} of motion can be decoupled by imposing the kinematic constraints \eqref{eq:mod-no-lat-slip-constraint-r} and \eqref{eq:mod-pure-rolling}. In particular, to impose the no lateral slipping hypothesis \eqref{eq:mod-no-lat-slip-constraint-r}, we need to express the velocity of $A$ in the local frame and set it to zero. 
 
 \begin{align} \label{eq:mod-dyn-vC-to-vA}
 x_C &= x_A + c \cos\theta \\
 y_C &= y_A + c \sin\theta
 \end{align}
+
+TODO: clarify this passage, see slides 
 
 <!-- \label{eq:mod-dyn-vC-to-vA}-->
 
