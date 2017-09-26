@@ -36,6 +36,8 @@ Create the directory with the right permissions:
     $ chmod 0700 ~/.ssh
     $ vim ~/.ssh/config
 
+Comment: laptop or duckiebot? - LP
+
 Then add the following lines:
 
     HostKeyAlgorithms ssh-rsa
