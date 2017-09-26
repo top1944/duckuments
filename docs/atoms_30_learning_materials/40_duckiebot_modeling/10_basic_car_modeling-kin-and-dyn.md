@@ -99,7 +99,7 @@ The kinematic constraints are derived from two assumptions:
 \dot y_A \cos \theta -\dot x_A \sin \theta = 0.
 \]
 
-- _Pure rolling_: the wheels never slips or skids ([](#fig:mod-kin-constraint)). Hence, letting $\dot \phi_{l}, \dot \phi_{r}$ be the angular velocities of the left and right wheels respectively, the velocity of the ground contact point P is given by:
+- _Pure rolling_: the wheels never slips or skids ([](#fig:mod-kin-constraint)). Hence, letting $\dot \varphi_{l}, \dot \varphi_{r}$ be the angular velocities of the left and right wheels respectively, the velocity of the ground contact point P is given by:
 
 <div figure-id="fig:mod-kin-constraint" figure-caption="Pure rolling (no slipping) kinematic constraint">
   <img src="mod-kin-constraint.png" style='width: 15em; height:auto'/>
