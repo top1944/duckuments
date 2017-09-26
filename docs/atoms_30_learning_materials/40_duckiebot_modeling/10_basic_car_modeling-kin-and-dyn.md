@@ -16,7 +16,7 @@ Different methods can be followed to obtain the Duckiebot model, namely the Lagr
 
 <div class='requirements' markdown="1">
 
-Requires:[k:reference_frames](#reference_frames), [k:intro-transformations](#transformations)
+Requires:[k:reference_frames](#reference_frames) (inertial, body), [k:intro-transformations](#transformations) (Cartesian, polar)
 
 Requires: [k:intro-kinematics](#intro-kinematics)
 
@@ -42,7 +42,7 @@ Note: The robot is assumed to be a rigid body, symmetric, and $x_r$ coincides wi
 
 Note: Quantities described with respect to the inertial or robot frames are denoted as $((\cdot)^I)$ and $((\cdot)^r)$ respectively.
 
-- The center of mass $C^I = (x_c, y_c)$ of the robot is on the $x_r$ axis, at a distance $d$ from $A$, i.e., ($C^r = (d, 0)$);
+- The center of mass $C^I = (x_c, y_c)$ of the robot is on the $x_r$ axis, at a distance $c$ from $A$, i.e., ($C^r = (c, 0)$);
 - $x^r$ forms an _orientation angle_ $\theta$ with the local horizontal;
 - the wheels are assumed to be identical, with diameter equal to $2R$;
 - the distance between the wheels is denoted as $2L$.  
@@ -161,7 +161,7 @@ In a differential drive robot, controlling the wheels at different speeds genera
   <img src="mod-kin-icc.png" style='width: 30em; height:auto'/>
 </div>
 
-TODO: change labels in pic to match previously used conventions.
+TODO: change labels in pic to match previously used conventions. $R$ in figure is $d$ in this text, and L in text is l/2 in pic.
 
 \begin{align} \label{eq:mod-kin-1}
 \left\{  \begin{array}{l} \dot \theta (d-L) &= v_l  \\
@@ -191,7 +191,7 @@ By recalling the _no lateral slipping motion_ \eqref{eq:mod-no-lat-slip-constrai
                           \dot \theta &= \omega = R(\dot \varphi_R - \dot \varphi_L)/(2L) \end{array} \right.,
 \end{align}  
 
-Comment: using \frac{}{} in the above yield ugly visual results (the dots on the phi's are too close and barely noticeable)
+Comment: using \frac{}{} in the above yields ugly visual results (the dots on the phi's are too close and barely noticeable)
 
 which in more compact yields the _forward kinematics_ in the robot frame:
 
@@ -202,8 +202,9 @@ which in more compact yields the _forward kinematics_ in the robot frame:
                              \left[ \begin{array}{c} \dot \varphi_R \\ \dot \varphi_L \end{array} \right].
 \end{align}
 
-Finally, by using \eqref{eq:mod-rot-mat}, we can recast \eqref{eq:mod-forward-kinematics-robot-frame} in the inertial frame:
+Finally, by using \eqref{eq:mod-rot-mat}, we can recast \eqref{eq:mod-forward-kinematics-robot-frame} in the inertial frame.
 
+Note: The _forward kinematics_ model of a differential drive robot is given by:
 \begin{align} \label{eq:mod-forward-kinematics-inertial-frame}
  \avec{\dot q}^I = \amat{R}(\theta)  \left[ \begin{array}{c} x_A^r \\ y_A^r \\ \dot \theta \end{array} \right] = \left[ \begin{array}{cc} \frac{R}{2} \cos \theta & \frac{R}{2} \cos \theta \\
                             \frac{R}{2} \sin \theta & \frac{R}{2} \sin \theta   \\
@@ -213,17 +214,165 @@ Finally, by using \eqref{eq:mod-rot-mat}, we can recast \eqref{eq:mod-forward-ki
 
 ## Differential drive robot dynamic model {#mod-dyn}
 
-The dynamical equations of a differential drive robot are obtained
+While kinematics studies the properties of motions of geometric (i.e., massless) points, dynamical modeling takes into account the actual material distribution of the system. Once mass comes into play, motion is the result of the equilibrium of forces and torques. While different approaches can be used to derive these equations, namely the Lagrangian or Newtonian approaches (former based on energy considerations, latter on equilibrium of generalized forces), we choose to follow the Newtonian one here for it grants, arguably, a more explicit physical intuition of the problem. Obviously both methods lead to the same results when the same hypothesis are made.
 
-[](#fig:mod-fbd)
+### Notations {#mod-dyn-notations}
+
+For starters, recalling that $C^r = (c, 0)$ is the center of mass of the robot, we define the relevant notations:
+
+<div markdown="1">
+
+ <col2 id='mod-dyn-notations' figure-id="tab:mod-dyn-notations" figure-caption="Notations for dynamic modeling of a differential drive robot">
+    <s>$(v_u, v_w)$</s>  <s>Longitudinal and lateral velocities of $C$, robot frame</s>
+    <s>$(a_u, a_w)$</s>  <s>Longitudinal and lateral accelerations of $C$, robot frame</s>
+    <s>$(F_{u_R}, F_{u_L})$</s>  <s>Longitudinal forces exerted on the vehicle by the right and left wheels</s>
+    <s>$(F_{w_R}, F_{w_L})$</s>  <s>Lateral forces exerted on the vehicle by the right and left wheels</s>
+      <s>$(\tau_R, \tau_L)$</s>  <s>Torques acting on right and left wheel</s>
+    <s>$\theta$, $\omega = \dot \theta$</s>  <s>Vehicle orientation and angular velocity</s>
+    <s>$M$</s>  <s>Vehicle mass</s>
+    <s>$J$</s>  <s>Vehicle yaw moment of inertia with respect to the center of mass $C$</s>
+ </col2>
+
+</div>
+
+### Free body diagram {#mod-dyn-fbd}
+
+The next step, and definitely the most critical, is writing the free body diagram of the problem ([](#fig:mod-fbd)). In this analysis the only forces acting on the robot are those applied to the wheels.
+
+Before proceeding with the equilibrium of forces and moments, it is appropriate to recall the expressions of velocities and accelerations of a rigid body in a rotating frame expressed in polar coordinates.
 
 <div figure-id="fig:mod-fbd" figure-caption="Free body diagram of a differential drive robot">
   <img src="mod-fbd.png" style='width: 30em; height:auto'/>
 </div>
 
+### Rotating frames in polar coordinates: a recap {#mod-dyn-rotating-polar}
+
+Let the center of mass of the robot be identified by the vector $\avec{r}(t)$, as shown in [](#fig:mod-fbd)). The polar coordinated allow us to express $\avec{r}(t)$ using the complex notation:
+
+\[ \label{eq:mod-dyn-r}
+\avec{r}(t) = r(t) e^{j\theta(t)}.
+\]
+
+By differentiating in time \eqref{eq:mod-dyn-r}, and recalling the chain rule of derivatives, it is straightforward, although arguably boring to obtain the expression of radial velocity and acceleration, respectively:
+
+\begin{align} \label{eq:mod-dyn-rd-rdd}
+\avec{\dot r}(t) &= \dot{r}(t) e^{j\theta(t)} + j r(t) \dot \theta(t) e^{j\theta(t)} \\
+\avec{\ddot r}(t) &= \ddot{r}(t) e^{j\theta(t)} + 2 j \dot{r}(t) \dot \theta(t) e^{j\theta(t)} + j r(t) \ddot{\theta}(t) e^{j\theta(t)} - r(t) \dot \theta^2 e^{j\theta(t)}.
+\end{align}
+
+By simplifying and writing the lateral components explicitly, \eqref{eq:mod-dyn-rd-rdd} becomes:
+
+\begin{align} \label{eq:mod-dyn-rd-rdd2}
+\avec{\dot r}(t) &= v_u(t) e^{j\theta(t)} +  v_w (t) e^{j\left(\theta (t)+\frac{\pi}{2}\right)} \\
+\avec{\ddot r}(t) &= a_u(t) e^{j\theta(t)} +  a_w (t) e^{j\left(\theta (t)+\frac{\pi}{2}\right)},
+\end{align}
+
+where:
+
+\begin{align} \label{eq:mod-dyn-polar-v-dv}
+v_u(t) &= \dot{r}(t) \\
+v_w(t) &= r(t) \dot \theta(t) \\
+a_u(t) &= \ddot{r}(t) - r(t) \dot \theta^2 \\
+a_w(t) &= 2 \dot{r}(t) \dot \theta(t) + r(t) \ddot \theta.
+\end{align}
+
+Exercise: prove that $je^{j\theta}=e^{j(\theta+\pi/2)}$.
+
+### Equilibrium of forces and moments {#mod-dyn-eq}
+
+We derive the dynamic model by imposing the simultaneous equilibrium of forces along the longitudinal and lateral directions in the robot frame with the respective inertial forces, and of the moments around the vertical axis (coming out of the.. screen) passing through the center of mass of the robotic vehicle.
+
+\begin{align} \label{eq:mod-dyn-equilibria}
+Ma_u(t) &= F_{u_L}+F_{u_R} \\
+Ma_w(t) &= F_{w_L}-F_{w_R} \\
+\ddot{\theta}(t) &= \frac{L}{J}(F_{u_R}-F_{u_L}) + \frac{c}{J}(F_{w_R}-F_{w_L})
+\end{align}
+
+By substituting the \eqref{eq:mod-dyn-polar-v-dv} in \eqref{eq:mod-dyn-equilibria}, the equilibrium of forces equations are expressed in terms of accelerations of the center of mass in the robot frame:
+
+\begin{align}
+\dot{v}_u(t) &= v_w \dot{\theta}(t) + \frac{F_{u_L}+F_{u_R}}{M} \label{eq:mod-dyn-equilibria2a} \\
+\dot{v}_w(t) &= -v_u \dot{\theta}(t)+\frac{F_{w_L}-F_{w_R}}{M} \label{eq:mod-dyn-equilibria2b} \\
+\ddot{\theta}(t) &= \frac{L}{J}(F_{u_R}-F_{u_L}) + \frac{c}{J}(F_{w_R}-F_{w_L}). \label{eq:mod-dyn-equilibria2c}
+\end{align}
+
+This general equation does not yet account for the the kinematic constraints discuss earlier.
+
+### Imposing the kinematic constraints {#mod-dyn-eq-constrained}
+
+Equations \eqref{eq:mod-dyn-equilibria} of motion can be decoupled by imposing the kinematic constraints \eqref{eq:mod-no-lat-slip-constraint-r} and \eqref{eq:mod-pure-rolling}. In particular, to impose the no lateral slipping hypothesis \eqref{eq:mod-no-lat-slip-constraint-r}, we first need to express the velocity of the center of mass of the robot in the inertial frame, then derive the velocity of point $A$ as a function of that in $C$, and finally impose the lateral velocity to be zero. To do so, we first need to notice that, in the inertial frame:
+
+\begin{align} \label{eq:mod-dyn-vC-to-vA}
+x_C &= x_A + c \cos\theta \\
+y_C &= y_A + c \sin\theta
+\end{align}
+
+<!-- \label{eq:mod-dyn-vC-to-vA}-->
+
+then recall that through the rotation matrix $\amat{R}(t)$:
+
+\begin{align} \label{eq:mod-dyn-constraints-rot-refresh}
+  \left[ \begin{array}{c} \dot x_C \\ \dot y_C \end{array} \right] = \left[ \begin{array}{cc} \cos\theta  & -\sin\theta  \\
+  \sin\theta  & \cos\theta     \end{array}  \right]  
+   \left[ \begin{array}{c} v_u \\ v_w \end{array} \right].
+\end{align}
+
+With these two conditions, it can be shown that $\dot y_A^r = v_w - c \dot \theta$. Hence, by imposing $\dot y_A^r = 0 \Rightarrow v_w = c \dot \theta$.
+
+Note: Liam, I have not verified this "it can be shown" too late for it now. Will do tomorrow.
+
+By using this condition in \eqref{eq:mod-dyn-equilibria2a} and \eqref{eq:mod-dyn-equilibria2b}, and combining with \eqref{eq:mod-dyn-equilibria2c}, we obtain the dynamical equations of a differential drive robot under the aforementioned non holonomic constraints:
+
+<!-- -->
+
+\begin{align} \label{eq:mod-dyn-model-a}
+ \dot{v}_u (t) &= c \dot \theta^2 + \frac{1}{M} (F_{u_L}+F_{u_R}) \\
+         \ddot \theta &= \frac{L}{Mc^2+J}(F_{u_R}-F_{u_L}) + \frac{Mcv_u}{Mc^2+J} \dot \theta.
+\end{align}
+
+Although \eqref{eq:mod-dyn-model-a} describes the dynamics of the robot, the input forces are difficult to measure. As it will be clearer from the next section where a model of the DC motor will be provided, it is more practical to consider the torques $(\tau_R, \tau_L) = (RF_{u_R}, RF_{u_L})$ in \eqref{eq:mod-dyn-model-a} as inputs to this system. By implementing this consideration and rearranging in matrix form:
+
+\begin{align} \label{eq:mod-dyn-matrix-form}
+\left[ \begin{array}{cc} M  & 0 \\
+                          0 & Mc^2+J   \end{array}  \right] \left[ \begin{array}{c} \dot v_u \\ \ddot \theta \end{array} \right]+  
+\left[ \begin{array}{cc} 0  & -Mc\dot\theta \\
+                         Mc\dot\theta & 0  \end{array}  \right] \left[ \begin{array}{c}  v_u \\ \dot \theta \end{array} \right] = \frac{1}{R}\left[ \begin{array}{cc} 1  & 1 \\
+                         L  & -L  \end{array}  \right] \left[ \begin{array}{c} \tau_R \\ \tau_L \end{array} \right].
+\end{align}
+<!--
+This model now describes the input output relationship between torques and robot orientation and forward speed. Although t -->
+
+This model now describes the input output relationship between torques and robot orientation and forward velocity in polar coordinates and can be further manipulated to obtain relations between the input torques and relevant variables such as the angular rates of the wheels.
+
+But there is still a missing link, as the actual control input to the robot is not the torque, but the voltage applied to the DC motors. It is hence necessary to model the actuator dynamics.
+<!--
+For example, given in the input torques $(\tau_R, \tau_L)$, this model yields $v_u(t), v_w(t)$ = c \dot \theta$, and $\theta(t)$, which through the inverse relation of \eqref{eq:mod-dyn-vC-to-vA} yields the velocity of $A$ in the inertial frame. In turn,-->
+
 
 ## DC motor dynamic model {#mod-motor status=draft}
 
+The equations governing the behavior of a DC motor are driven by an input _armature voltage_ $V(t)$:
+
+\begin{align}
+V(t) &= Ri(t) + L \frac{di}{dt} + e(t)  \tag{electrical equation} \\
+e(t) &= K_b \dot\varphi(t) \tag{back electromotive force (emf)} \\
+\tau_m(t) &= K_t i(t) \tag{toque equation} \\
+\tau(t) &= N \tau_m(t) \tag{gear reduction equation},
+\end{align}
+
+where $(K_b, K_t)$ are the back emf and torque constants respectively and $N$ is the gear ratio ($N=1$ in the Duckiebot).
+
+[](#fig:mod-dc-motor) shows a diagram of a typical DC motor.
+
+<div figure-id="fig:mod-dc-motor" figure-caption="Diagram of a DC motor">
+  <img src="placeholder.png" style='width: 30em; height:auto'/>
+</div>
+
+Having a relation between the applied voltage and torque, in addition to the dynamic and kinematic models of a differential drive robot, allows us to determine all possible state variables of interest.
+
+Note: torque disturbances acting on the wheels, such as the effects of friction, can be modeled as additive terms (of sign opposite to $\tau$) in the DC motor equations.
+
+<!--
 [](#fig:mod-dynamic)
 
 <div figure-id="fig:mod-dynamic" figure-caption="Free body diagram of a differential drive robot">
@@ -231,26 +380,27 @@ The dynamical equations of a differential drive robot are obtained
 </div>
 
 ## Final result {#mod-result status=draft}
-
+-->
+<!--
 [](#fig:mod-final)
 
 <div figure-id="fig:mod-final" figure-caption="Block diagram representation of the model of a differential drive robot">
   <img src="mod-final.png" style='width: 30em; height:auto'/>
-</div>
+</div>-->
 
 ## Conclusions {#mod-conclusions status=draft}
 
+This chapter showed the methodology for which to achieve a model of a differential drive robot. Although simplifying assumption were made, e.g., rigid body motion, symmetry, pure rolling and no lateral slipping - still the model is nonlinear.
 
-- How to particularize this model to an actual Duckiebot?
+Regardless, we now have a chain of descriptive tools that receive as input the voltage signal sent by the controller, and produce as output any of the state variables, e.g., the position, velocity and orientation of the robot with respect to a fixed inertial frame.
 
-Next Step: Odometry Calibration
+Several outstanding questions remain. For example, we need to determine what is the best representation for our robotic platform - polar coordinates, Cartesian with respect to an arbitrary reference point? Or maybe there is a better choice?.
 
-- Exercise: derive this same model through the lagrangian formulation
+Finally, the above model assumes the knowledge of a number of constants that are characteristic of the robot's geometry, materials, and the DC motors. Without the knowledge of those constant the model could not work well. Determination of these parameters in a measurement driven way, i.e., the "system identification" of the robot's plant, is subject of the _odometry_ class.  
 
-
-
-
-
+<!--
+- assumptions: rigid body, same distance L, c from left/right wheel, friction and weight?, mass an inertias of wheels are not taken in consideration
+-->
 
 
 
