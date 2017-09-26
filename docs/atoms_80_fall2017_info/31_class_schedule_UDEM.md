@@ -144,11 +144,6 @@ Class (10:30-11:30)
 
 Book Materials (still rough drafts, will be completed soon):
 
-* 
-
-*
-
-*
 
 Lab (11:30 - 12:30)
 
