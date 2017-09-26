@@ -180,7 +180,7 @@ Set the permissions on the new file to 0600.
 
 TODO: someone replicate please - LP
 
-TODO: how to set priorities among the configurations? 
+Note: your can use the `autoconnect-priority=XX` inside the `[connection]` block to establish a priority. If you want to connect to one network preferentially if two are available then give it a higher priority.
 
 Save the following block as new file in `/etc/NetworkManager/system-connections/secure`:
 
@@ -191,6 +191,7 @@ Save the following block as new file in `/etc/NetworkManager/system-connections/
     permissions=
     secondaries=
     timestamp=1502254646
+    autoconnect-priority=100
     
     [wifi]
     mac-address-blacklist=
