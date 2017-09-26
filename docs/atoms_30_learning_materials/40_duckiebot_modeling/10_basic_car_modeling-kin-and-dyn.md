@@ -113,15 +113,15 @@ The kinematic constraints are derived from two assumptions:
 Recalling that the robot is assumed to be a rigid body, the velocity of point $P$ in the inertial frame can be expressed as the sum of the translational velocity $\avec{v_A}$ and that of the rotating field $\avec{w_P^I} = L \dot \theta$ due to the robot's rotation. The $X_I,Y_I $ components of $\avec{v_P}$ can therefore be expressed as:
 
 \begin{align} \label{eq:mod-pure-rolling-inertial-left}
-\left\{  \begin{array}{ll} \dot x_{P,r} &= \dot x_A + L\dot \varphi_{r} \cos \theta \\
-                      \dot y_{P,r} &= \dot y_A + L \dot \varphi_{r} \sin \theta  \end{array} \right. ,
+\left\{  \begin{array}{ll} \dot x_{P,r} &= \dot x_A + L\dot \theta \cos \theta \\
+                      \dot y_{P,r} &= \dot y_A + L \dot \theta \sin \theta  \end{array} \right. ,
 \end{align}
 
 and
 
 \begin{align} \label{eq:mod-pure-rolling-inertial-right}
-\left\{  \begin{array}{ll} \dot x_{P,l} &= \dot x_A + L\dot \varphi_{r} \cos \theta \\
-                      \dot y_{P,l} &= \dot y_A + L \dot \varphi_{r} \sin \theta  \end{array} \right. .
+\left\{  \begin{array}{ll} \dot x_{P,l} &= \dot x_A + L\dot \theta \cos \theta \\
+                      \dot y_{P,l} &= \dot y_A + L \dot \theta \sin \theta  \end{array} \right. .
 \end{align}
 
 By recalling \eqref{eq:mod-orthogonality-cond} and \eqref{eq:mod-no-lat-slip-constraint-r}, the expression of left and right wheel velocities in the robot frame can be summarized in the _pure rolling constraint_ equation:
