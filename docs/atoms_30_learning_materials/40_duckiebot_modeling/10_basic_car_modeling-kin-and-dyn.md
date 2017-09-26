@@ -319,8 +319,6 @@ then recall that through the rotation matrix $\amat{R}(t)$:
 
 With these two conditions, it can be shown that $\dot y_A^r = v_w - c \dot \theta$. Hence, by imposing $\dot y_A^r = 0 \Rightarrow v_w = c \dot \theta$.
 
-Note: Liam, I have not verified this "it can be shown" too late for it now. Will do tomorrow.
-
 By using this condition in \eqref{eq:mod-dyn-equilibria2a} and \eqref{eq:mod-dyn-equilibria2b}, and combining with \eqref{eq:mod-dyn-equilibria2c}, we obtain the dynamical equations of a differential drive robot under the aforementioned non holonomic constraints:
 
 <!-- -->
