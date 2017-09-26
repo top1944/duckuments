@@ -77,7 +77,7 @@ Note: there is a known bug, for which it fails the first time on the Raspberry P
 <!-- (you have to be under the `catkin_ws` folder to invoke `catkin_make`) -->
 
 
-## Clone the duckiefleet repository (updated Sep 12) {#clone-duckiefleet status=recently-updated}
+## Clone the duckiefleet repository {#clone-duckiefleet status=recently-updated}
 
 Clone the relevant `duckiefleet` repository into `~/duckiefleet`.
 
@@ -88,7 +88,7 @@ In `~/.bashrc` set `DUCKIEFLEET_ROOT` to point to the directory:
     export DUCKIEFLEET_ROOT=~/duckiefleet
 
 
-## Add your vehicle data to the robot database (updated Sep 12) {#edit-machines-file status=recently-updated}
+## Add your vehicle data to the robot database {#edit-machines-file status=recently-updated}
 
 Next, you need to add your robot to the vehicles database.  This is not optional and required in order to launch any ROS scripts.
 
@@ -99,9 +99,11 @@ is your robot's hostname. Then edit the copied file to represent your Duckiebot.
 
 See: For information about the format, see [](#scuderia).
 
-Finally, generate the machines file.
+Generate the machines file.
 
 See: The procedure is listed here: [](#machines).
+
+Finally, push your robot configuration to the duckiefleet repo.
 
 ## Test that the joystick is detected {#test-joystick}
 
