@@ -1,4 +1,4 @@
-# Duckiebot modeling {#duckiebot-modeling status=draft}
+# Duckiebot modeling {#duckiebot-modeling status=beta}
 
 Assigned: Jacopo
 
