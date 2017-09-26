@@ -171,15 +171,15 @@ TODO: change labels in pic to match previously used conventions. $R$ in figure i
 from which:
 
 \begin{align} \label{eq:mod-kin-2}
-\left\{  \begin{array}{l} d &= L \frac{v_r + v_l}{v_r - v_l}  \\
-                          \dot \theta &= \frac{v_r - v_l}{2L} \end{array} \right..
+\left\{  \begin{array}{l} d &= L \frac{v_r^r + v^r_l}{v_r^r - v_l^r}  \\
+                          \dot \theta &= \frac{v_r^r - v_l^r}{2L} \end{array} \right..
 \end{align}
 
 A few observations stem from \eqref{eq:mod-kin-2}:
 
-- If $v_r = v_l$ the bot does not turn ($\dot \theta = 0$), hence the ICC is not defined;
-- If $v_r = - v_l$, then the robot "turns on itself", i.e., $d=0$ and $ICC \equiv A$;
-- If $v_r = 0$ (or $v_l = 0$), the rotation happens around the right (left) wheel and $d = 2L$ ($d = L$).
+- If $v_r^r = v_l^r$ the bot does not turn ($\dot \theta = 0$), hence the ICC is not defined;
+- If $v_r^r = - v_l^r$, then the robot "turns on itself", i.e., $d=0$ and $ICC \equiv A$;
+- If $v_r^r = 0$ (or $v_l^r = 0$), the rotation happens around the right (left) wheel and $d = 2L$ ($d = L$).
 
 Note: Moreover, a differential drive robot cannot move in the direction of the ICC, it is a singularity.
 
@@ -196,7 +196,7 @@ Comment: using \frac{}{} in the above yields ugly visual results (the dots on th
 which in more compact yields the _forward kinematics_ in the robot frame:
 
 \begin{align} \label{eq:mod-forward-kinematics-robot-frame}
-  \left[ \begin{array}{c} x_A^r \\ y_A^r \\ \dot \theta \end{array} \right] = \left[ \begin{array}{cc} \frac{R}{2}  & \frac{R}{2}  \\
+  \left[ \begin{array}{c} \dot x_A^r \\ \dot y_A^r \\ \dot \theta \end{array} \right] = \left[ \begin{array}{cc} \frac{R}{2}  & \frac{R}{2}  \\
                             0 & 0   \\
                             \frac{R}{2L} & -\frac{R}{2L}   \\  \end{array}  \right]  
                              \left[ \begin{array}{c} \dot \varphi_R \\ \dot \varphi_L \end{array} \right].
@@ -206,7 +206,7 @@ Finally, by using \eqref{eq:mod-rot-mat}, we can recast \eqref{eq:mod-forward-ki
 
 Note: The _forward kinematics_ model of a differential drive robot is given by:
 \begin{align} \label{eq:mod-forward-kinematics-inertial-frame}
- \avec{\dot q}^I = \amat{R}(\theta)  \left[ \begin{array}{c} x_A^r \\ y_A^r \\ \dot \theta \end{array} \right] = \left[ \begin{array}{cc} \frac{R}{2} \cos \theta & \frac{R}{2} \cos \theta \\
+\displaystyle \avec{\dot q}^I = \amat{R}(\theta)  \left[ \begin{array}{c} \dot x_A^r \\ \dot y_A^r \\ \dot \theta \end{array} \right] = \left[ \begin{array}{cc} \frac{R}{2} \cos \theta & \frac{R}{2} \cos \theta \\
                             \frac{R}{2} \sin \theta & \frac{R}{2} \sin \theta   \\
                             \frac{R}{2L} & -\frac{R}{2L}   \\  \end{array}  \right]  
                              \left[ \begin{array}{c} \dot \varphi_R \\ \dot \varphi_L \end{array} \right].
