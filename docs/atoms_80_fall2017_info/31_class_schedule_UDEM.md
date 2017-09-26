@@ -1,4 +1,4 @@
-# Montréal diary {#schedule_UDEM status=ready}
+# Montréal branch diary {#schedule_UDEM status=ready}
 
 ## Wed Sept 6
 
@@ -144,11 +144,7 @@ Class (10:30-11:30)
 
 Book Materials (still rough drafts, will be completed soon):
 
-*
 
-*
-
-*
 
 Lab (11:30 - 12:30)
 

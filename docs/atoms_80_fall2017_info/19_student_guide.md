@@ -4,7 +4,9 @@
 
 Welcome aboard! We are so happy you are joining us at Duckietown!
 
-This is your onboarding procedure. Please read all the steps and then complete all the steps. Failure to follow these steps in order will cause unnecessary confusion.
+This is your onboarding procedure. Please read all the steps and then complete all the steps.
+
+If you do not follow the steps in order, you will suffer from unnecessary confusion.
 
 ### Github sign up {#onboarding-github-signup}
 
@@ -24,10 +26,10 @@ Next, fill in this questionnaire:
 
 [Preliminary Student Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSdTo235gCM-GRWKY0EYmfCieC4-FEsO1CqQIqE8EaQz0y8KWA/viewform)
 
-**Zurich: Please fill in questionnaire by Tuesday, 3 pm (extended from original deadline of 12pm).**
+**Zurich: Please fill in questionnaire by Tuesday, September 26, 15:00 (extended from original deadline of 12:00).**
 
 Point of contact: if you have problems with this step, please contact
-Jacopo Tani &lt;tanij@eth.ch&gt;.
+Jacopo Tani &lt;tanij@ethz.ch&gt;.
 
 ### Accept invite to Github organization Duckietown
 
@@ -54,10 +56,10 @@ contact HR representative Kirsten Bowser &lt;akbowser@gmail.com&gt;.
 **What is Slack?** More details about Slack are available [here](#slack).
 In particular, remember to disable email notifications.
 
-**Slack username**. When you accept your Slack invite, please identify yourself with first and last names followed by a "-" and your affiliation.
+**Slack username**. When you accept your Slack invite, please identify yourself with first and last names followed by a "-" and your institution.
 
 <div class='example-usage' markdown="1">
-Andrea Censi - ETHZ
+Andrea Censi - Zurich
 </div>
 
 **Slack picture**. Please add a picture (relatively professional, with duckie accessories encouraged).
