@@ -179,7 +179,7 @@ A few observations stem from \eqref{eq:mod-kin-2}:
 
 - If $v_r = v_l$ the bot does not turn ($\dot \theta = 0$), hence the ICC is not defined;
 - If $v_r = - v_l$, then the robot "turns on itself", i.e., $d=0$ and $ICC \equiv A$;
-- If $v_r = 0$ (or $v_l = 0$), the rotation happens around the right (left) wheel and $d = L$.
+- If $v_r = 0$ (or $v_l = 0$), the rotation happens around the right (left) wheel and $d = 2L$ ($d = L$).
 
 Note: Moreover, a differential drive robot cannot move in the direction of the ICC, it is a singularity.
 
