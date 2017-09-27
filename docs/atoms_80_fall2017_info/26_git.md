@@ -70,7 +70,7 @@ The URL to clone is:
 Only TAs have write permissions to this repository.
 
 
-## Git policy for  homeworks {#git-policy-homeworks}
+## Git policy for  homeworks {#git-policy-homeworks status=beta}
 
 Homeworks will require you to write and submit coding exercises. They will be submitted using git. Since we have a university plagiarism policy ([UdeM's](http://www.lecre.umontreal.ca/politique-sur-le-plagiatplagiarism-policy/)) we have to protect students work before the deadline of the homeworks. For this reason we will follow these steps for homework submission: 
 
@@ -89,7 +89,7 @@ You should put your homework files in folder at:
 
 Some homeworks might not require ROS, they should go in a subfolder called `scripts`. ROS homeworks should go in packages which are generated using the process described here: [](#sec:ros-python-howto). For an example see `![DUCKIEFLEET_ROOT]/homeworks/01_data_processing/shamrock`.
 
-Note: To make your ROS packages findable by ROS you should add a symlink from your `duckietown/catkin_ws/src` directory to `![$DUCKIEFLEET_ROOT]`
+Note: To make your ROS packages findable by ROS you should add a symlink from your `duckietown/catkin_ws/src` directory to `![$DUCKIEFLEET_ROOT`
 
 ### To submit your homework
 

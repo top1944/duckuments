@@ -1,4 +1,4 @@
-# Homework: Data Processing {#homework-data-processing status=draft}
+# Homework: Data Processing {#homework-data-processing status=ready}
 
 <div class='requirements' markdown='1'>
 
