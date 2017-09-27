@@ -65,6 +65,11 @@ $\amat{R}(\theta)$ is an orthogonal rotation matrix defined by:
 \amat{R}(\theta) = \left[  \begin{array}{ccc} \cos\theta & -\sin \theta  & 0 \\ \sin\theta & cos\theta & 0 \\ 0 & 0 & 1 \end{array} \right].
 \end{align}
 
+Comment: LP. This above is incorrect. Should be 
+\begin{align} \label{eq:mod-rot-mat}
+\amat{R}(\theta) = \left[  \begin{array}{ccc} \cos\theta & -\sin \theta  & 0 \\ \sin\theta & cos\theta & 0 \\ x_A & y_y & 1 \end{array} \right].
+\end{align}
+
 Note: Remember that the orthogonality condition implies that $\amat{R}^T(\theta)\amat{R}(\theta) = \amat{R}(\theta)\amat{R}^T(\theta) = \amat{I}$, hence:
 \[ \label{eq:mod-orthogonality-cond}
 \amat{R}^T(\theta) = \amat{R}^{-1}(\theta)
@@ -109,6 +114,8 @@ The kinematic constraints are derived from two assumptions:
 \left\{  \begin{array}{ll} v^r_{P,r} &= R \dot \varphi_{r}\\
                       v^r_{P,l} &= R \dot \varphi_{l}  \end{array} \right.
 \end{align}
+
+Comment: LP - the overloading of $r$ in these equations is very confusing
 
 Recalling that the robot is assumed to be a rigid body, the velocity of point $P$ in the inertial frame can be expressed as the sum of the translational velocity $\avec{v_A}$ and that of the rotating field $\avec{w_P^I} = L \dot \theta$ due to the robot's rotation. The $X_I,Y_I $ components of $\avec{v_P}$ can therefore be expressed as:
 
