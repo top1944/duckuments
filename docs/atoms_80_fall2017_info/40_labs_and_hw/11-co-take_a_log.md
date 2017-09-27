@@ -8,13 +8,23 @@ Result: A verified log in rosbag format updoaded to Dropbox
 
 </div>
 
+## Mount your USB drive
+
+We will log to the USB drive that you were given.
+
+See: [](#mounting-usb)
+
 ## Take a Log
 
-Take a log following the procedure described here: [](#take-a-log). Make sure to also verify that it's good [](#verify-a-log).
+See: [](#take-a-log).
 
-TODO: naming conventions
+## Verify your log
+
+See: [](#verify-a-log).
+
 
 ## Upload the log
 
-TODO: add link to file request
+Upload the log [here](https://www.dropbox.com/request/0bESmFHuGHGNVBnce3XI)
+
 

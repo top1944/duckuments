@@ -14,3 +14,10 @@ Result: Ability to process imagery live
 
 
 </div>
+
+
+## Follow the git policy for homeworks
+
+See: [](#git-policy-homeworks)
+
+
