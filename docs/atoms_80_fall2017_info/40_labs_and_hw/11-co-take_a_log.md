@@ -8,6 +8,8 @@ Result: A verified log in rosbag format updoaded to Dropbox
 
 </div>
 
+Slack channel: [#help-logging](https://duckietown.slack.com/archives/C78M6FL6L)
+
 Montreal deadline: Oct 4, 11:00pm
 
 ## Mount your USB drive

@@ -81,6 +81,23 @@ Homeworks will require you to write and submit coding exercises. They will be su
   - Click on the Settings tab
   - Under "Teams", click the "X" in the right for the section for "Fall 2017 Students". You will get a popup asking you to confirm. Confirm.
 
+Now you need to point the remote of your `duckiefleet-fall2017` to your new local private repo. To do, from inside your already previously cloned `duckiefleet-fall2017` repo do:
+
+    $git remote set-url origin git@github.com:![GIT_USERNAME]/duckiefleet-fall2017.git
+
+If you type
+
+    $ git remote -v
+
+You should now see:
+
+```
+origin git@github.com:![GIT_USERNAME]/duckiefleet-fall2017.git (fetch)
+origin git@github.com:![GIT_USERNAME]/duckiefleet-fall2017.git (push)
+```
+
+Now the next time you push (without specifying an origin) you will push to your local private repo. 
+
 ### Duckiefleet file structure
 
 You should put your homework files in folder at:
