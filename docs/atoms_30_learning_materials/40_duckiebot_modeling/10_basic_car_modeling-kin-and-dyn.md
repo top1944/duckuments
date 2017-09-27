@@ -65,6 +65,11 @@ $\amat{R}(\theta)$ is an orthogonal rotation matrix defined by:
 \amat{R}(\theta) = \left[  \begin{array}{ccc} \cos\theta & -\sin \theta  & 0 \\ \sin\theta & cos\theta & 0 \\ 0 & 0 & 1 \end{array} \right].
 \end{align}
 
+Comment: LP. This above is incorrect. Should be 
+\begin{align} \label{eq:mod-rot-mat}
+\amat{R}(\theta) = \left[  \begin{array}{ccc} \cos\theta & -\sin \theta  & 0 \\ \sin\theta & cos\theta & 0 \\ x_A & y_y & 1 \end{array} \right].
+\end{align}
+
 Note: Remember that the orthogonality condition implies that $\amat{R}^T(\theta)\amat{R}(\theta) = \amat{R}(\theta)\amat{R}^T(\theta) = \amat{I}$, hence:
 \[ \label{eq:mod-orthogonality-cond}
 \amat{R}^T(\theta) = \amat{R}^{-1}(\theta)
