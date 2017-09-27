@@ -1,4 +1,4 @@
-# Taking a log {#take-a-log status=draft}
+# Taking a log {#take-a-log status=beta}
 
 <div class='requirements' markdown='1'>
 
@@ -31,7 +31,7 @@ on your duckiebot in a new tab (F2 in byobu)
 
 where here we are assuming that you are logging to the USB and have following [](#mounting-usb).
 
-# Verify a log {#verify-a-log status=draft}
+# Verify a log {#verify-a-log status=beta}
 
 
 On your robot run:
