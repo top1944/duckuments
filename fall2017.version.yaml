@@ -6,14 +6,19 @@ recipe:
 - toc # magic word for toc
 
 - add: fall-2017
+  except: checkoff_assembly_configuration
+  except: checkoff_take_a_log
+  except: homework-data-processing
 
 # You cannot include the same unit twice - indexing
 # gets all confused. In this case, checkoff_assembly_configuration is already
 # part of "fall-2017" above.
-# - part: homeworks
-#   title: Fall 2017 Checkoffs and Homeworks
-#   contents:
-#   - add: checkoff_assembly_configuration
+- make-part: homeworks
+  title: Fall 2017 Checkoffs and Homeworks
+  contents:
+  - add: checkoff_assembly_configuration
+  - add: checkoff_take_a_log
+  - add: homework-data-processing
 
 - add: duckietown-project
 - add: contribute
@@ -32,7 +37,13 @@ recipe:
   - add: modern-robotic-systems
   - add: autonomy-architectures
   - add: representations
+  - add: duckiebot-modeling
 
+- make-part: reference
+  title: Reference Material
+  contents:
+  - add: configuration-management
+  
 
 # Add the entire part
 - add: building-duckiebot-c0

@@ -1,4 +1,4 @@
-# Checkoff: Take a Log {#checkoff_take_a_log status=draft}
+# Checkoff: Take a Log {#checkoff_take_a_log status=ready}
 
 <div class='requirements' markdown='1'>
 
