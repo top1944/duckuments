@@ -115,6 +115,8 @@ The kinematic constraints are derived from two assumptions:
                       v^r_{P,l} &= R \dot \varphi_{l}  \end{array} \right.
 \end{align}
 
+Comment: LP - the overloading of $r$ in these equations is very confusing
+
 Recalling that the robot is assumed to be a rigid body, the velocity of point $P$ in the inertial frame can be expressed as the sum of the translational velocity $\avec{v_A}$ and that of the rotating field $\avec{w_P^I} = L \dot \theta$ due to the robot's rotation. The $X_I,Y_I $ components of $\avec{v_P}$ can therefore be expressed as:
 
 \begin{align} \label{eq:mod-pure-rolling-inertial-left}
