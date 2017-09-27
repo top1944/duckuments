@@ -34,7 +34,7 @@ On a side note, this is not to say sets cannot serve as a formal foundation of m
 
 ## Further reading
 
-Type theory is a fascinating subject in itself and recently, Homotopy Type Theory (HoTT) captured a lot of research interest. For more on the subject consult (HoTT website)[https://homotopytypetheory.org/]. The first chapter of the HoTT book also provides a reasonable introduction to type theory. For more practical applications of these abstract ideas, you may be intrigued by the field of [formal verification](https://en.wikipedia.org/wiki/Formal_verification), where software is verified by mathematical proofs against the formal specification, automatically.
+Type theory is a fascinating subject in itself and recently, Homotopy Type Theory (HoTT) captured a lot of research interest. For more on the subject consult [HoTT website](https://homotopytypetheory.org/). The first chapter of the HoTT book also provides a reasonable introduction to type theory. For more practical applications of these abstract ideas, you may be intrigued by the field of [formal verification](https://en.wikipedia.org/wiki/Formal_verification), where software is verified by mathematical proofs against the formal specification, automatically.
 
 Author: Falcon Dai
 
