@@ -45,7 +45,7 @@ To regenerate the roster, in DUCKIETOWN_ROOT use the command
 To do this, you need to have three repositories: duckuments, duckiefleet, and  -->
 
 
-## The Activity Tracker {#activity-tracker}
+## The Activity Tracker {#sec-activity-tracker status=ready}
 
 <div figure-id="tab:activity-tracker" figure-caption="The Student Activity Tracker">
     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTQ9JOsU_DuDs_DyZYwcyTJ_zHwvUB1w4Q4YKucDvhSeQC3aKB570SpTNa9BtEuPqVgxjkNabt2Dgpp/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="550" height="550"></iframe>
