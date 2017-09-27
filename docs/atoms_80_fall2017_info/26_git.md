@@ -77,16 +77,19 @@ Homeworks will require you to write and submit coding exercises. They will be su
 1. Go [here](https://education.github.com/) and file a request at the bottom “Request a Discount” then enter your institution email and other info.
   - Go to [duckiefleet-fall2017](https://github.com/duckietown/duckiefleet-fall2017)
   - Click "Fork" button in the top right
-  - Choose your account if there are multiple options  
-  - Click on the Settings tab  
+  - Choose your account if there are multiple options
+  - Click on the Settings tab
   - Under "Teams", click the "X" in the right for the section for "Fall 2017 Students". You will get a popup asking you to confirm. Confirm.
 
 ### Duckiefleet file structure
 
 You should put your homework files in folder at:
 
-    $DUCKIEFLEET_ROOT/homeworks/![XX_homework_name]/![YOUR_ROBOT_NAME]
+    ![DUCKIEFLEET_ROOT]/homeworks/![XX_homework_name]/![YOUR_ROBOT_NAME]
 
+Some homeworks might not require ROS, they should go in a subfolder called `scripts`. ROS homeworks should go in packages which are generated using the process described here: [](#sec:ros-python-howto). For an example see `![DUCKIEFLEET_ROOT]/homeworks/01_data_processing/shamrock`.
+
+Note: To make your ROS packages findable by ROS you should add a symlink from your `duckietown/catkin_ws/src` directory to `![$DUCKIEFLEET_ROOT]`
 
 ### To submit your homework
 

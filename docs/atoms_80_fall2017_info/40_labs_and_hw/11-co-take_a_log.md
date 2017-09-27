@@ -8,6 +8,8 @@ Result: A verified log in rosbag format updoaded to Dropbox
 
 </div>
 
+Montreal deadline: Oct 4, 11:00pm
+
 ## Mount your USB drive
 
 We will log to the USB drive that you were given.
@@ -16,11 +18,13 @@ See: [](#mounting-usb)
 
 ## Take a Log
 
-See: [](#take-a-log).
+Take a 5m log as you drive in Duckietown (For Montreal this is rm. 2333).
+
+See: [](#take-a-log) for detailed instructions.
 
 ## Verify your log
 
-See: [](#verify-a-log).
+See: [](#verify-a-log) for detailed instructions.
 
 
 ## Upload the log
