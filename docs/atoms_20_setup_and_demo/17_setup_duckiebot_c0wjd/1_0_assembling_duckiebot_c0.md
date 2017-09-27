@@ -163,11 +163,11 @@ Requires: Having the Duckiebot image copied in the micro SD card.
 
 Take the micro SD card from the duckiebox and insert its slot on the Raspberry Pi. The SD card slot is just under the display port, on the short side of the PI, on the flipside of where the header pins are.
 
-<div figure-id="fig:SD_card" figure-caption="The Micro SD card and SD card readers.">
+<div figure-id="fig:SD_card" figure-caption="The Micro SD card and SD card readers">
     <img src="sd_card.jpg" style='width: 30em'/>
 </div>
 
-<div figure-id="fig:RASPI_SD" figure-caption="Display port and inserted SD card">
+<div figure-id="fig:RASPI_SD" figure-caption="Inserted SD card">
     <img src="sd_slot.jpg" style='width: 30em'/>
 </div>
 
@@ -262,10 +262,15 @@ We are using M1 and M2. The left (in robot frame) motor is connected to M1 and t
 - Right Motor:Red
 
 
-<div figure-id="fig:ServoHAT_wiring" figure-caption=" ">
-     <img src="ServoHAT_wiring.jpg" style='width: 30em'/>
-</div>
+#### power supply for DC motor HAT
 
+Attache the prepared power wires in previous section[](#power-cable-prep-c0).to the DC motor HAT power terminal block. Make sure you plug the black wire in the pin labeled with a minus: - and the red wire to the plus: + ([](#figure:final-result-power-c0)).
+
+THe other end of power wires will plug into USB port of Paspberry Pi for power supply.
+
+<div figure-id="fig:Stepper_cable" figure-caption="Insert the prepared power wire to DC motor HAT power pins.">
+     <img src="power_terminal.jpg" style='width: 30em'/>
+</div>
 
 
 ### Battery
@@ -289,24 +294,12 @@ Insert the joypad dongle into one of the USB port.
      <img src="joypad_dongle.jpg" style='width: 30em'/>
 </div>
 
-Insert 2AA batteries on the backside of the joypad
+Insert 2x AA batteries on the backside of the joypad
 <div figure-id="fig:joypack_battery" figure-caption="Joypad and 2x AA batteries">
      <img src="joypack_battery.jpg" style='width: 30em'/>
 </div>
 
 
-
-### Connect the power cables
-You are now ready to secure the prepared power wires in [](#power-cable-prep-c0). to the DC motor HAT power pins.
-
-Connect the battery with the DC motor HAT by making sure you plug the black wire in the pin labeled with a minus: - and the red wire to the plus: + ([](#figure:final-result-power-c0)).
-
-
-Fix all the cables on the Duckiebot so that it can run on the way without barrier.
-
-<div figure-id="fig:Stepper_cable" figure-caption="Insert the prepared power wire to DC motor HAT power pins.">
-     <img src="Stepper_cable.jpg" style='width: 30em'/>
-</div>
 
 
 
