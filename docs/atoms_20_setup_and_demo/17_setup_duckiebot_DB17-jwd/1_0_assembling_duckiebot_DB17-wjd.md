@@ -65,6 +65,9 @@ Note: if your Magician Chassis package has unsoldered motor wires, you will have
 
 Plug in the wheels to the motor as follows (no screws needed):
 
+<div figure-id="fig:horizontal">
+    <figcaption>The instruction of assembling the wheels</figcaption>
+
 <div figure-id="fig:scratch_wheels" figure-caption="The scratch of wheels">
      <img src="scratch_wheels.png" style='width: 30em'/>
 </div>
@@ -73,6 +76,7 @@ Plug in the wheels to the motor as follows (no screws needed):
      <img src="wheels.jpg" style='width: 30em'/>
 </div>
 
+</div>
 ### Omnidirectional wheel
 
 The Duckiebot is driven by controlling the wheels attached to the DC motors. Still, it requires a "passive" omnidirectional wheel on the back.
