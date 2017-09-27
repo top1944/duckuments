@@ -259,6 +259,8 @@ using the password:
 
 Next, you should repeat some steps that we already described.
 
+Comment: What steps?? -LP
+
 ### Basic SSH config
 
 Do the basic SSH config.

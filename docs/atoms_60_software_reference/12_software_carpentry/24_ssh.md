@@ -36,6 +36,8 @@ Create the directory with the right permissions:
     $ chmod 0700 ~/.ssh
     $ vim ~/.ssh/config
 
+Comment: laptop or duckiebot? - LP
+
 Then add the following lines:
 
     HostKeyAlgorithms ssh-rsa
@@ -201,19 +203,11 @@ This file is in the form:
 You will have to copy the contents of this file on the `![remote]` computer,
 to tell it that this key is authorized.
 
-On the `![remote]` computer, edit or create the file:
+On the `![local]` computer, run the command:
 
-    /home/![remote-user]/.ssh/authorized_keys
+    ![local] $ ssh-copy-id ![remote-user]@![remote]
 
-and add the entire line as above containing the public key.
-
-Now, from the `![local]` computer, try to ping the remote one:
-
-    ![local] $ ping `![remote]`
-
-Note that, above, `![remote]` should be a complete hostname, such as `duckiebot.local`.
-
-Now, from the `![local]` computer, try to log in into the `![remote]` one:
+now you should be able to login to the remote without a password:
 
     ![local] $ ssh ![remote-user]@![remote]
 

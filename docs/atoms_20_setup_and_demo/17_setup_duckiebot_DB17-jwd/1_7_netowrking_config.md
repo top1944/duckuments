@@ -180,7 +180,7 @@ Set the permissions on the new file to 0600.
 
 TODO: someone replicate please - LP
 
-TODO: how to set priorities among the configurations? 
+Note: your can use the `autoconnect-priority=XX` inside the `[connection]` block to establish a priority. If you want to connect to one network preferentially if two are available then give it a higher priority.
 
 Save the following block as new file in `/etc/NetworkManager/system-connections/secure`:
 
@@ -191,6 +191,7 @@ Save the following block as new file in `/etc/NetworkManager/system-connections/
     permissions=
     secondaries=
     timestamp=1502254646
+    autoconnect-priority=100
     
     [wifi]
     mac-address-blacklist=
@@ -224,55 +225,10 @@ Set the permissions on the new file to 0600.
 
 ### Option 4: custom WiFi {status=draft}
 
-If neither `duckietown` nor `eduroam` are available, you can add your own configuration file. Here is an example for a standard WPA2-private home network. Save the following block as `TODO: filename custom wifi setting`:
+First run the following to see what networks are available:
 
-    TODO code block for custom connection
+    duckiebot $ nmcli dev wifi list
 
-Note: Whichever option you pick, we don't recommend to create or modify the `/etc/wpa_supplicant.conf` file, because this verion of Ubuntu uses the `NetworkManager` service to deal with WiFi connections (and no longer the `wpasupplicant` daemon).
+You should see the network that you are trying to connect (`![SSID])`) to and you should know the password. To connect to it run:
 
-Find the SSID of your Wi-Fi network. It is usually the name of the wifi network. Example: BELL343. Let's call it `![WIFINAME]`
-To find the seen-bssed, run
-
-    $ sudo iw wlan0 scan | egrep "^BSS|SSID:"
-
-The AA:BB:CC:DD:EE:FF address above `SSID: BELL343` is your seen-bssed. Let's call it `![WIFIBSS]`
-
-Save the following block as new file in `/etc/NetworkManager/system-connections/BELL343`:
-
-    [connection]
-    id=![WIFINAME]
-    uuid=d8aa333b-2db3-4849-a9a4-c2aa3236ae29
-    type=wifi
-    permissions=
-    secondaries=
-    timestamp=1502254646
-
-    [wifi]
-    mac-address=
-    mac-address-blacklist=
-    mac-address-randomization=0
-    mode=infrastructure
-    seen-bssed=![WIFIBSS]
-    ssid=![WIFINAME]
-
-    [wifi-security]
-    group=
-    key-mgmt=wpa-psk
-    pairwise=
-    proto=
-    psk=![WIFIPWD]
-
-    [ipv4]
-    dns-search=
-    method=auto
-
-    [ipv6]
-    addr-gen-mode=stable-privacy
-    dns-search=
-    ip6-privacy=0
-    method=auto
-
-
-Set the permissions on the new file to 0600.
-
-    sudo chmod 0600 /etc/NetworkManager/system-connections/BELL343
+    duckiebot $ sudo nmcli dev wifi con ![SSID] password ![PASSWORD]

@@ -45,7 +45,7 @@ You can set up SSH so that you can use:
 
     $ ssh my-robot
 
-To do this, create a host section in `~/.ssh/config` with the following
+To do this, create a host section in `~/.ssh/config` on your laptop with the following
 contents:
 
     Host my-robot

@@ -1,4 +1,4 @@
-# Duckiebot modeling {#duckiebot-modeling status=draft}
+# Duckiebot modeling {#duckiebot-modeling status=beta}
 
 Assigned: Jacopo
 
@@ -67,7 +67,7 @@ $\amat{R}(\theta)$ is an orthogonal rotation matrix defined by:
 
 Note: Remember that the orthogonality condition implies that $\amat{R}^T(\theta)\amat{R}(\theta) = \amat{R}(\theta)\amat{R}^T(\theta) = \amat{I}$, hence:
 \[ \label{eq:mod-orthogonality-cond}
-\amat{R}(\theta) = \amat{R}^{-1}(\theta)
+\amat{R}^T(\theta) = \amat{R}^{-1}(\theta)
 \]
 
 Note: $\amat{R}(\theta)$ is not a function of time, but only of the orientation. Hence, by denoting time derivatives as $\dot{(\cdot)}$ we can obtain the relation between velocities in the two reference systems:
@@ -83,7 +83,7 @@ Note: $\amat{R}(\theta)$ is not a function of time, but only of the orientation.
 
 ## Kinematics
 
-In this section we derive the kinematic model of a differential drive mobile platiform.
+In this section we derive the kinematic model of a differential drive mobile platform.
 
 ### Differential drive robot kinematic constraints {#mod-kin-constraint status=beta}
 The kinematic constraints are derived from two assumptions:
@@ -99,7 +99,7 @@ The kinematic constraints are derived from two assumptions:
 \dot y_A \cos \theta -\dot x_A \sin \theta = 0.
 \]
 
-- _Pure rolling_: the wheels never slips or skids ([](#fig:mod-kin-constraint)). Hence, letting $\dot \phi_{l}, \dot \phi_{r}$ be the angular velocities of the left and right wheels respectively, the velocity of the ground contact point P is given by:
+- _Pure rolling_: the wheels never slips or skids ([](#fig:mod-kin-constraint)). Hence, letting $\dot \varphi_{l}, \dot \varphi_{r}$ be the angular velocities of the left and right wheels respectively, the velocity of the ground contact point P is given by:
 
 <div figure-id="fig:mod-kin-constraint" figure-caption="Pure rolling (no slipping) kinematic constraint">
   <img src="mod-kin-constraint.png" style='width: 15em; height:auto'/>
@@ -113,15 +113,15 @@ The kinematic constraints are derived from two assumptions:
 Recalling that the robot is assumed to be a rigid body, the velocity of point $P$ in the inertial frame can be expressed as the sum of the translational velocity $\avec{v_A}$ and that of the rotating field $\avec{w_P^I} = L \dot \theta$ due to the robot's rotation. The $X_I,Y_I $ components of $\avec{v_P}$ can therefore be expressed as:
 
 \begin{align} \label{eq:mod-pure-rolling-inertial-left}
-\left\{  \begin{array}{ll} \dot x_{P,r} &= \dot x_A + L\dot \varphi_{r} \cos \theta \\
-                      \dot y_{P,r} &= \dot y_A + L \dot \varphi_{r} \sin \theta  \end{array} \right. ,
+\left\{  \begin{array}{ll} \dot x_{P,r} &= \dot x_A + L\dot \theta \cos \theta \\
+                      \dot y_{P,r} &= \dot y_A + L \dot \theta \sin \theta  \end{array} \right. ,
 \end{align}
 
 and
 
 \begin{align} \label{eq:mod-pure-rolling-inertial-right}
-\left\{  \begin{array}{ll} \dot x_{P,l} &= \dot x_A + L\dot \varphi_{r} \cos \theta \\
-                      \dot y_{P,l} &= \dot y_A + L \dot \varphi_{r} \sin \theta  \end{array} \right. .
+\left\{  \begin{array}{ll} \dot x_{P,l} &= \dot x_A + L\dot \theta \cos \theta \\
+                      \dot y_{P,l} &= \dot y_A + L \dot \theta \sin \theta  \end{array} \right. .
 \end{align}
 
 By recalling \eqref{eq:mod-orthogonality-cond} and \eqref{eq:mod-no-lat-slip-constraint-r}, the expression of left and right wheel velocities in the robot frame can be summarized in the _pure rolling constraint_ equation:
@@ -130,7 +130,7 @@ By recalling \eqref{eq:mod-orthogonality-cond} and \eqref{eq:mod-no-lat-slip-con
 \left\{  \begin{array}{ll} \dot x_{P,r} \cos \theta +  \dot y_{P,r} \sin \theta &= R \dot \varphi_r \\
                            \dot x_{P,l} \cos \theta +  \dot y_{P,l} \sin \theta &= R \dot \varphi_l                 \end{array} \right..
 \end{align}
-
+<!-- The following is useful in the Laplacian approach
 ### Kinematic constraints summary
 
 Note: The kinematic constraints (\eqref{eq:mod-no-lat-slip-constraint-i}, \eqref{eq:mod-pure-rolling-constraint}) of a differential drive robot can be succinctly expressed as: \[ \label{eq:mod-constraints-succint} \amat{\Lambda}(\avec{q})\avec{\dot q} = 0,\]
@@ -152,7 +152,7 @@ and:
 \left\{  \begin{array}{ll} v_{r} &= R \dot \varphi_{r}\\
                       v_{l} &= R \dot \varphi_{l}  \end{array} \right..
 \end{align}
-
+-->
 ## Differential drive robot kinematic model {#mod-kin}
 
 In a differential drive robot, controlling the wheels at different speeds generates a rolling motion of rate $\omega = \dot \theta$.  In a rotating field there always is a fixed point, the _center of instantaneous curvature_ (ICC), and all points at distance $d$ from it will have a velocity given by $\omega d$, and direction orthogonal to that of the line connecting the ICC and the wheels (i.e., the _axle_). Therefore, by looking at [](#fig:mod-kin-icc), we can write:
@@ -318,8 +318,6 @@ then recall that through the rotation matrix $\amat{R}(t)$:
 \end{align}
 
 With these two conditions, it can be shown that $\dot y_A^r = v_w - c \dot \theta$. Hence, by imposing $\dot y_A^r = 0 \Rightarrow v_w = c \dot \theta$.
-
-Note: Liam, I have not verified this "it can be shown" too late for it now. Will do tomorrow.
 
 By using this condition in \eqref{eq:mod-dyn-equilibria2a} and \eqref{eq:mod-dyn-equilibria2b}, and combining with \eqref{eq:mod-dyn-equilibria2c}, we obtain the dynamical equations of a differential drive robot under the aforementioned non holonomic constraints:
 
