@@ -1,4 +1,4 @@
-# Zurich branch diary  {#ETH-journal status=ready}
+# Zürich branch diary  {#ETH-journal status=ready}
 
 ## Wed Sep 20: Welcome to Duckietown! {#2017-09-20-welcome}
 
@@ -45,15 +45,15 @@ a - Logistics:
 
 a - Autonomous Vehicles:
 <a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-b-autonomous_vehicles.key">Keynote</a>,
-<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-b-autonomous_vehicles.PDF">PDF</a>.
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-b-autonomous_vehicles.pdf">PDF</a>.
 
 c - Autonomous Mobility on Demand:
 <a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-c-AMOD_intro.key">Keynote</a>,
 <a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-c-AMOD_intro.pdf">PDF</a>.
 
 d - Plan for the next months:
-<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-c-the-plan.key">Keynote</a>,
-<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-c-the-plan.pdf">PDF</a>.
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-d-the-plan.key">Keynote</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-25-ETHZ-d-the-plan.pdf">PDF</a>.
 
 
 ### Feedback form

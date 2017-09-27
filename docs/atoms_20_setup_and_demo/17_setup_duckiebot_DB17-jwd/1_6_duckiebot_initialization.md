@@ -11,9 +11,7 @@ Requires: A computer with an internet connection, an SD card reader, and 16 GB o
 
 Requires: An assembled Duckiebot in configuration `DB17`. This is the result of [](#assembling-duckiebot-c0).
 
-Results: A Duckiebot that is ready to use.
-
-Comment: What does it mean "ready to use"? -AC
+Results: A Duckiebot that is configured correctly, that you can connect to with your laptop and hopefully also has internet access
 
 </div>
 
@@ -122,216 +120,9 @@ Please see [](#byobu) for an introduction to Byobu.
 
 Doubt: Not sure it's a good idea to boot into Byobu. -??
 
-## (For `C0+w`) Configure the robot-generated network
+## Setup network
 
-The Duckiebot in configuration `C0+w` can create a WiFi network.
-
-It is a 5 GHz network; this means that you need to have a 5 GHz
-WiFi adapter in your laptop.
-
-First, make sure that the Edimax is correctly installed.
-Using `iwconfig`, you should see four interfaces:
-
-    duckiebot $ iwconfig
-    wlx![AABBCCDDEEFFGG]  unassociated  Nickname:"rtl8822bu"
-
-    ![...]
-
-    lo        no wireless extensions.
-
-    enxb827eb1f81a4  no wireless extensions.
-
-    wlan1     IEEE 802.11bgn  ESSID:"duckietown"
-
-    ![...]
-
-
-Make note of the name `wlx![AABBCCDDEEFFGG]`.
-
-Look up the MAC address using the command:
-
-    duckiebot $ ifconfig wlx![AABBCCDDEEFFGG]
-    wlx![AABBCCDDEEFFGG] Link encap:Ethernet  HWaddr ![AA:BB:CC:DD:EE:FF:GG]
-
-Then, edit the connection file
-
-    /etc/NetworkManager/system-connections/create-5ghz-network
-
-Make the following changes:
-
-* Where it says `interface-name=![...]`, put "`wlx![AABBCCDDEEFFGG]`".
-* Where it says `mac-address=![...]`, put "`![AA:BB:CC:DD:EE:FF:GG]`".
-* Where it says `ssid=duckiebot-not-configured`, put "`ssid=![robot name]`".
-
-Reboot.
-
-At this point you should see a new network being created named "`![robot name]`".
-
-You can connect with the laptop to that network.
-
-If the Raspberry Pi's network interface is connected to the `duckietown` network
-and to the internet, the Raspberry Pi will act as a bridge to the internet.
-
-
-## Setting up wireless network configuration
-
-You are connected to the Duckiebot via WiFi, but the Duckiebot also needs to connect to the internet in order to get updates and install some software. There are three options for achieving this:
-
-### Option 1: `duckietown` WiFi
-
-Check with your phone or laptop if there is a WiFi in reach with the name of `duckietown`. If there is, you are all set. The defaut configuration for the Duckiebot is to have one WiFi adapter connect to this network and the other broadcast the access point which you are currently connected to.
-
-### Option 2.a): `eduroam` WiFi (Non-UdeM/McGill instructions) {status=draft}
-
-If there should be no `duckietown` network in reach then you have to manually add a network configuration file for the network that you'd like to connect to. Most universities around the world should have to `eduroam` network available. You can use it for connecting your Duckiebot.
-
-Save the following block as new file in `/etc/NetworkManager/system-connections/eduroam`:
-
-    [connection]
-    id=eduroam
-    uuid=38ea363b-2db3-4849-a9a4-c2aa3236ae29
-    type=wifi
-    permissions=user:oem:;
-    secondaries=
-
-    [wifi]
-    mac-address=![the MAC address of your internal wifi adapter, wlan0]
-    mac-address-blacklist=
-    mac-address-randomization=0
-    mode=infrastructure
-    seen-bssids=
-    ssid=eduroam
-
-    [wifi-security]
-    auth-alg=open
-    group=
-    key-mgmt=wpa-eap
-    pairwise=
-    proto=
-
-    [802-1x]
-    altsubject-matches=
-    eap=ttls;
-    identity=![your eduroam username]@![your eduroam domain]
-    password=![your eduroam password]
-    phase2-altsubject-matches=
-    phase2-auth=pap
-
-    [ipv4]
-    dns-search=
-    method=auto
-
-    [ipv6]
-    addr-gen-mode=stable-privacy
-    dns-search=
-    method=auto
-
-Set the permissions on the new file to 0600.
-
-    sudo chmod 0600 /etc/NetworkManager/system-connections/eduroam
-
-### Option 2.b): `eduroam` WiFi (UdeM/McGill instructions) {status=draft}
-
-Save the following block as new file in `/etc/NetworkManager/system-connections/eduroam-![USERNAME]`:
-where USERNAME is the your logged-in username in the duckiebot.
-
-    [connection]
-    id=eduroam
-    uuid=38ea363b-2db3-4849-a9a4-c2aa3236ae29
-    type=wifi
-    permissions=user:![USERNAME]:;
-    secondaries=
-
-    [wifi]
-    mac-address=![the MAC address of your internal wifi adapter, wlan0]
-    mac-address-blacklist=
-    mac-address-randomization=0
-    mode=infrastructure
-    seen-bssids=
-    ssid=eduroam
-
-    [wifi-security]
-    auth-alg=open
-    group=
-    key-mgmt=wpa-eap
-    pairwise=
-    proto=
-
-    [802-1x]
-    altsubject-matches=
-    eap=peap;
-    identity=![DGTIC UNIP]
-    password=![DGTIC PWD]
-    phase2-altsubject-matches=
-    phase2-auth=mschapv2
-
-    [ipv4]
-    dns-search=
-    method=auto
-
-    [ipv6]
-    addr-gen-mode=stable-privacy
-    dns-search=
-    method=auto
-
-Set the permissions on the new file to 0600.
-
-    sudo chmod 0600 /etc/NetworkManager/system-connections/eduroam-![USERNAME]
-
-### Option 3: custom WiFi {status=draft}
-
-If neither `duckietown` nor `eduroam` are available, you can add your own configuration file. Here is an example for a standard WPA2-private home network. Save the following block as `TODO: filename custom wifi setting`:
-
-    TODO code block for custom connection
-
-Note: Whichever option you pick, we don't recommend to create or modify the `/etc/wpa_supplicant.conf` file, because this verion of Ubuntu uses the `NetworkManager` service to deal with WiFi connections (and no longer the `wpasupplicant` daemon).
-
-Find the SSID of your Wi-Fi network. It is usually the name of the wifi network. Example: BELL343. Let's call it `![WIFINAME]`
-To find the seen-bssed, run
-
-    $ sudo iw wlan0 scan | egrep "^BSS|SSID:"
-
-The AA:BB:CC:DD:EE:FF address above `SSID: BELL343` is your seen-bssed. Let's call it `![WIFIBSS]`
-
-Save the following block as new file in `/etc/NetworkManager/system-connections/BELL343`:
-
-    [connection]
-    id=![WIFINAME]
-    uuid=d8aa333b-2db3-4849-a9a4-c2aa3236ae29
-    type=wifi
-    permissions=
-    secondaries=
-    timestamp=1502254646
-
-    [wifi]
-    mac-address=
-    mac-address-blacklist=
-    mac-address-randomization=0
-    mode=infrastructure
-    seen-bssed=![WIFIBSS]
-    ssid=![WIFINAME]
-
-    [wifi-security]
-    group=
-    key-mgmt=wpa-psk
-    pairwise=
-    proto=
-    psk=![WIFIPWD]
-
-    [ipv4]
-    dns-search=
-    method=auto
-
-    [ipv6]
-    addr-gen-mode=stable-privacy
-    dns-search=
-    ip6-privacy=0
-    method=auto
-
-
-Set the permissions on the new file to 0600.
-
-    sudo chmod 0600 /etc/NetworkManager/system-connections/BELL343
+See: [](#sec:duckiebot_network)
 
 ## Update the system
 
@@ -467,6 +258,8 @@ using the password:
     laptop $ ssh ![username]@![robot name]
 
 Next, you should repeat some steps that we already described.
+
+Comment: What steps?? -LP
 
 ### Basic SSH config
 
