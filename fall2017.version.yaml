@@ -6,7 +6,7 @@ recipe:
 - toc # magic word for toc
 
 - add: fall-2017
-  except: checkoff_assembly_configuration
+  # except: checkoff_assembly_configuration
   except: checkoff_take_a_log
   except: homework-data-processing
 
@@ -16,7 +16,7 @@ recipe:
 - make-part: homeworks
   title: Fall 2017 Checkoffs and Homeworks
   contents:
-  - add: checkoff_assembly_configuration
+  # - add: checkoff_assembly_configuration
   - add: checkoff_take_a_log
   - add: homework-data-processing
 
@@ -43,7 +43,7 @@ recipe:
   title: Reference Material
   contents:
   - add: configuration-management
-  
+
 
 # Add the entire part
 - add: building-duckiebot-c0
