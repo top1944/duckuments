@@ -1,5 +1,6 @@
 # Exercise: Live Instagram {#exercise-instagram-live status=beta}
 
+Assigned: Andrea Daniele
 
 ## Skills learned
 
@@ -7,37 +8,38 @@
 
 ## Instructions
 
-Do the first ROS tutorial at [](#ros-python-howto).
+You may find useful: [](#ros-python-howto).
 That tutorial is about listening to text messages and writing back
 text messages. Here, we apply the same principle, but to images.
 
 Create a ROS node that takes camera images and applies a given operation,
-as specified in the next section.
+as specified in the next section, and then publishes it.
 
 
-## Specification for the program `dt-instagram-live`
+## Specification for the node `dt-live-instagram-![ROBOT_NAME]_node`
 
-Create a program `dt-live-instagram` that takes a string argument:
+Create a ROS node `dt-live-instagram-![ROBOT_NAME]_node` that takes reads a parameter called `filter`, where the filter is something from the list [](##instagram-filters). 
 
-    $ dt-instagram-live ![filters]
+You should launch your camera and joystick with
+
+    duckiebot $ make demo-joystick-camera
+    
+Then launch your node with 
+
+    duckiebot $ roslaunch dt-live-instagram_![ROBOT_NAME] dt_live-instagram_![ROBOT_NAME]_node filter:=![filter]
 
 This program should do the following:
 
 - Subscribe to the camera images, by finding
 a topic that is called `![...]/compressed`. Call the name of the
-topic `![topic]`
+topic `![topic]`.
 
-- Publish to the topic `![topic]/![filters]` a stream of images
-where the filters are applied to the image.
-
-
-## Useful new APIs
-
-TODO: to write
+- Publish to the topic `![topic]/![filters]/compressed` a stream of images
+where the filter are applied to the image.
 
 
 ## Check that it works
 
-TODO: to write
-
-<!--  -->
+    $ rqt_image_view
+    
+and look at `![topic]/![filters]/compressed`
