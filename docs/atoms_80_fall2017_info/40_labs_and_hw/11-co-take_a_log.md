@@ -18,7 +18,7 @@ See: [](#mounting-usb)
 
 ## Take a Log
 
-Take a 5m log as you drive in Duckietown (For Montreal this is rm. 2333).
+Take a 5min log as you drive in Duckietown (For Montreal this is rm. 2333).
 
 See: [](#take-a-log) for detailed instructions.
 
