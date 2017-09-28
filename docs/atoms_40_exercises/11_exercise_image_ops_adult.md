@@ -95,6 +95,11 @@ that joins a sequence of arrays along a given axis.
 
 We provide a script called `image-ops-tester` that can be used
 to make sure that you wrote a conforming `dt-image-flip`.
+The script `image-ops-tester` is in the directory
+[`/exercises/dt-image-flip/image-ops-tester`](https://github.com/duckietown/duckuments/tree/master/exercises/dt-image-flip/image-ops-tester)
+in the [`duckietown/duckuments`](https://github.com/duckietown/duckuments)
+repository.
+
 
 Use it as follows:
 
