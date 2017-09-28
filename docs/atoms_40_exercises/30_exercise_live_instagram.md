@@ -18,7 +18,7 @@ as specified in the next section, and then publishes it.
 
 ## Specification for the node `dt-live-instagram-![ROBOT_NAME]_node`
 
-Create a ROS node `dt-live-instagram-![ROBOT_NAME]_node` that takes reads a parameter called `filter`, where the filter is something from the list [](##instagram-filters). 
+Create a ROS node `dt-live-instagram-![ROBOT_NAME]_node` that takes reads a parameter called `filter`, where the filter is something from the list [](#instagram-filters). 
 
 You should launch your camera and joystick with
 
