@@ -182,7 +182,7 @@ Assigned: XXX
 
 ## Oct 04 (Wed) {#Zurich-2017-10-04 status=draft}
 
-- Software architecture and middlewares.
+- Software architecture and middleware.
 - Intro to ROS
 - Networking
 - Modern signal distribution and processing: periodic vs event-based processing; latency/frequency etc.
