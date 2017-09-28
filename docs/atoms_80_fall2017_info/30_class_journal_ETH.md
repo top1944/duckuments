@@ -154,6 +154,143 @@ Please help us making the experience better by [providing feedback (can be anony
 - Duckiebot parts
 
 
+## Thursday Sep 26: Misc announcements {#2017-09-26-misc}
+
+We created the channel `#ethz-chitchat` for questions and other random things, so that we can leave this channel `#ethz-announcements` only for announcements.
+
+We sent the final list to the Department; so hopefully in a couple of days the situation on MyStudies is regularized.
+
+The "lab" time on Friday consists in an empty room for you to use as you wish, for example to assembe the robots together. In particular, it's on the same floor of the Duckietown room and the IDSC lab.
+
+The instructions for assembling the Duckiebots are [here](#building-duckiebot-c0). Note that you
+don't have to do the parts that we did for you: buying the parts, soldering the boards, and reproducing the image.
+
+Expected progress: We are happy if we see everybody reaching up to
+[](#rc-cam-launched-remotely) by Monday October 9. You are encouraged to start very early;
+it's likely that you will not receive much help on Sunday October 8...
+
+
+## Oct 02 (Mon) {#Zurich-2017-10-02 status=draft}
+
+Assigned: XXX
+
+
+- Autonomy Architectures
+- System Architecture Basics
+- representations - knowledge representation: tasks, goal
+
+
+## Oct 04 (Wed) {#Zurich-2017-10-04 status=draft}
+
+- Software architecture and middlewares.
+- Intro to ROS
+- Networking
+- Modern signal distribution and processing: periodic vs event-based processing; latency/frequency etc.
+
+
+
+Assigned: XXX
+
+## Oct 09 (Mon) {#Zurich-2017-10-09 status=draft}
+
+Assigned: XXX
+
+## Oct 11 (Wed) {#Zurich-2017-10-11 status=draft}
+
+Assigned: XXX
+
+## Oct 16 (Mon) {#Zurich-2017-10-16 status=draft}
+
+Assigned: XXX
+
+## Oct 18 (Wed) {#Zurich-2017-10-18 status=draft}
+
+Assigned: XXX
+
+## Oct 23 (Mon) {#Zurich-2017-10-23 status=draft}
+
+Assigned: XXX
+
+## Oct 25 (Wed) {#Zurich-2017-10-25 status=draft}
+
+Assigned: XXX
+
+(Andrea traveling)
+
+## Oct 30 (Mon) {#Zurich-2017-10-30 status=draft}
+
+Assigned: XXX
+
+## Nov 01 (Wed) {#Zurich-2017-11-01 status=draft}
+
+Assigned: XXX
+
+## Nov 06 (Mon) {#Zurich-2017-11-06 status=draft}
+
+Assigned: XXX
+
+## Nov 08 (Wed) {#Zurich-2017-11-08 status=draft}
+
+Assigned: XXX
+
+## Nov 13 (Mon) {#Zurich-2017-11-13 status=draft}
+
+Assigned: XXX
+
+## Nov 15 (Wed) {#Zurich-2017-11-15 status=draft}
+
+Assigned: XXX
+
+## Nov 20 (Mon) {#Zurich-2017-11-20 status=draft}
+
+Assigned: XXX
+
+## Nov 22 (Wed) {#Zurich-2017-11-22 status=draft}
+
+Assigned: XXX
+
+## Nov 27 (Mon) {#Zurich-2017-11-27 status=draft}
+
+Assigned: XXX
+
+## Nov 29 (Wed) {#Zurich-2017-11-29 status=draft}
+
+Assigned: XXX
+
+## Dec 04 (Mon) {#Zurich-2017-12-04 status=draft}
+
+Assigned: XXX
+
+## Dec 06 (Wed) {#Zurich-2017-12-06 status=draft}
+
+Assigned: XXX
+
+## Dec 11 (Mon) {#Zurich-2017-12-11 status=draft}
+
+Assigned: XXX
+
+
+##  (Template for every lecture) Date: Topic {status=draft}
+
+Assigned: Name of TA
+
+### Preparation
+
+Things that the students should do before class.
+
+### Material presented in class
+
+Link to PDF and Keynote/Powerpoint materials.
+
+### Pointers to reading materials
+
+Links to the units mentioned in the slides,
+and additional materials.
+
+### Questions and answers
+
+Write here the FAQs that students have following the lecture or instructions.
+
 
 
 <!-- ### Math Refresher
