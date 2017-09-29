@@ -65,7 +65,7 @@ $\amat{R}(\theta)$ is an orthogonal rotation matrix defined by:
 \amat{R}(\theta) = \left[  \begin{array}{ccc} \cos\theta & -\sin \theta  & 0 \\ \sin\theta & cos\theta & 0 \\ 0 & 0 & 1 \end{array} \right].
 \end{align}
 
-Comment: LP. This above is incorrect. Should be 
+Comment: LP. This above is incorrect. Should be
 \begin{align} \label{eq:mod-rot-mat}
 \amat{R}(\theta) = \left[  \begin{array}{ccc} \cos\theta & -\sin \theta  & 0 \\ \sin\theta & cos\theta & 0 \\ x_A & y_y & 1 \end{array} \right].
 \end{align}
@@ -310,14 +310,14 @@ This general equation does not yet account for the the kinematic constraints dis
 Equations \eqref{eq:mod-dyn-equilibria} of motion can be decoupled by imposing the kinematic constraints \eqref{eq:mod-no-lat-slip-constraint-r} and \eqref{eq:mod-pure-rolling}. In particular, to impose the no lateral slipping hypothesis \eqref{eq:mod-no-lat-slip-constraint-r}, we first need to express the velocity of the center of mass of the robot in the inertial frame, then derive the velocity of point $A$ as a function of that in $C$, and finally impose the lateral velocity to be zero. To do so, we first need to notice that, in the inertial frame:
 -->
 
-Equations \eqref{eq:mod-dyn-equilibria} of motion can be decoupled by imposing the kinematic constraints \eqref{eq:mod-no-lat-slip-constraint-r} and \eqref{eq:mod-pure-rolling}. In particular, to impose the no lateral slipping hypothesis \eqref{eq:mod-no-lat-slip-constraint-r}, we need to express the velocity of $A$ in the local frame and set it to zero. 
+Equations \eqref{eq:mod-dyn-equilibria} of motion can be decoupled by imposing the kinematic constraints \eqref{eq:mod-no-lat-slip-constraint-r} and \eqref{eq:mod-pure-rolling}. In particular, to impose the no lateral slipping hypothesis \eqref{eq:mod-no-lat-slip-constraint-r}, we need to express the velocity of $A$ in the local frame and set it to zero.
 
 \begin{align} \label{eq:mod-dyn-vC-to-vA}
 x_C &= x_A + c \cos\theta \\
 y_C &= y_A + c \sin\theta
 \end{align}
 
-TODO: clarify this passage, see slides 
+TODO: clarify this passage, see slides
 
 <!-- \label{eq:mod-dyn-vC-to-vA}-->
 
@@ -375,7 +375,7 @@ where $(K_b, K_t)$ are the back emf and torque constants respectively and $N$ is
 [](#fig:mod-dc-motor) shows a diagram of a typical DC motor.
 
 <div figure-id="fig:mod-dc-motor" figure-caption="Diagram of a DC motor">
-  <img src="placeholder.png" style='width: 30em; height:auto'/>
+  <img src="mod-dyn-dc-motor-electrical.png" style='width: 30em; height:auto'/>
 </div>
 
 Having a relation between the applied voltage and torque, in addition to the dynamic and kinematic models of a differential drive robot, allows us to determine all possible state variables of interest.
