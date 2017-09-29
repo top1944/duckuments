@@ -20,9 +20,9 @@ Results: An assembled Duckiebot in configuration `DB17-wjd`.
 
 </div>
 
-Comment: Notes - if we have the bumpers, at what point should we add them? I think that the battery could actually be attached before the levels of the chassis are joined. I found it hard to mount the camera (the holes weren't lining up). the long camera cable is a bit annoying - I folded it and shoved it in between two hats. We should decide if PWM hat is part of this configuration, why not leave it for now and forget about the spliced cable for the class. I found that the screwdriver that comes with the chassis kit is too fat to screw in the wires on the hat. The picture of where to put the zip tie for the battery is not very clear. need something to cut the end of the zip tie with.
+Note: The [FAQ](#op-assembly-db17jwd-faq) section at the bottom of this page may already answer some of you comments, questions or doubts.
 
-Comment: In general I would recommend having diagonal pliers as well as a few mini screwdrivers at hand. Both can be obtained from a local dollar store for about 6$ total. The pliers / cutters are required either for making your own power cord or for cutting the zip ties after they've been attached to the chassis (because they are too long). The screwdrivers are required for tightening the screws on the hats after the cables have been plugged in because the chassis screwdriver is too wide for that.
+Note: While assembling the Duckiebot, try to make as symmetric (along the longitudinal axis) as you can. It will help going forward.
 
 ## Chassis
 
@@ -59,7 +59,9 @@ Insert the motor holders on the chassis-bottom and put the motors as shown in th
 
 Note: Orient the motors so that their wires are inwards, i.e., towards the center of the chassis-bottom. The black wires should be closer to the chassis-bottom to make wiring easier down the line.
 
-Note: if your Magician Chassis package has unsoldered motor wires, you will have to solder them first. Check these instructions [make instructions for soldering motor wires]. In this case, your wires will not have the male pin headers on one end. Do not worry, you can still plug them in the stepper motor hat power terminals.
+Note: if your Magician Chassis package has unsoldered motor wires, you will have to solder them first. Check these instructions. In this case, your wires will not have the male pin headers on one end. Do not worry, you can still plug them in the stepper motor hat power terminals.
+
+TODO: make instructions for soldering motor wires
 
 ### Wheels
 
@@ -79,9 +81,7 @@ Plug in the wheels to the motor as follows (no screws needed):
 
 ### Omnidirectional wheel
 
-The Duckiebot is driven by controlling the wheels attached to the DC motors. Still, it requires a "passive" omnidirectional wheel on the back.
-
-If you have purchased the optional caster wheel, read on to the next section.
+The Duckiebot is driven by controlling the wheels attached to the DC motors. Still, it requires a "passive" omnidirectional wheel (the _castor_ wheel) on the back.
 
 The Magician chassis package contains a steel omnidirectional wheel, and the related standoffs and screws to secure it to the chassis-bottom part.
 
@@ -93,21 +93,23 @@ The Magician chassis package contains a steel omnidirectional wheel, and the rel
      <img src="omni.jpg" style='width: 30em'/>
 </div>
 
+<!--
 #### Caster wheel
-
+-->
+<!--
 As alternative to omnidirection wheel, caster wheel has less friction.
-
 If you have purchased caster wheel, read this section.
-
 To assemble the caster wheel, the following materials is needed:
-
 * caster wheel
 * 4 standoffs (M3x12mm F-F, 6mm diameter)
 * 8 metal screws (M3x8mm)
 * 8 split lock washers
+-->
+<!--
 
-TODO: add instructions for Caster wheel assembly.
+TODO: add instructions for Caster wheel assembly and move them to DB17-cl assembly instructions.
 
+-->
 
 ### Mounting the spacers
 
@@ -171,6 +173,7 @@ Take the micro SD card from the duckiebox and insert its slot on the Raspberry P
 
 ### Camera
 
+Note: If you have camera cables of different lengths available, keep in mind that both are going to work. We suggest to use the longer one, and wrap the extra length under the Raspberry Pi stack.
 
 #### The Raspberry Pi end
 
@@ -188,8 +191,6 @@ Note: Insert the cable in the right direction to connect the camera to the Raspb
      <img src="ziptied_top_camera.jpg" style='width: 30em'/>
 </div>
 
-
-
 #### The camera end
 
 If you have purchased the long camera cable, the first thing to do is removing the shorter cable that comes with the camera package. Make sure to slide up the black connectors of the camera-camera cable port in order to unblock the cable.
@@ -206,7 +207,6 @@ Protip: make sure that the camera mount is: (a) geometrically centered on the ch
      <img src="camera_raspi_enssemble.jpg" style='width: 30em'/>
 </div>
 
-
 Note: make sure that the cable is oriented in this direction (writing towards the CPU). Otherwise you will have to disassemble the whole thing later.
 
 
@@ -215,7 +215,6 @@ Note: make sure that the cable is oriented in this direction (writing towards th
 In order to fit the battery, we will need to extend the Magician Chassis standoffs with the provided nylon standoff spacers. Grab 4 of them, and secure them to one end of the long metal standoffs provided in the Magician Chassis package.
 
 Secure the extended standoff to the 4 corners of the chassis-bottom.  The nylon standoffs should smoothly screw in the metal ones. If you feel resistance, don’t force it or the nylon screw might break in the metal standoff. In that case, unscrew the nylon spacer and try again.
-
 
 <div figure-id="fig:standoff_extender" figure-caption="4 nylon M3x5 Standoff Spacer and 4 M3x10 screws">
      <img src="extender_screws.jpg" style='width: 30em'/>
@@ -313,3 +312,43 @@ Fix all the cables on the Duckiebot so that it can run on the way without barrie
 <div figure-id="fig:Stepper_cable" figure-caption="Insert the prepared power wire to DC motor HAT power pins.">
      <img src="Stepper_cable.jpg" style='width: 30em'/>
 </div>
+
+## FAQ {#op-assembly-db17jwd-faq}
+
+Q: If we have the bumpers, at what point should we add them?
+
+A: You shouldn't have the bumpers at this point. The function of bumpers is to keep the LEDs in place, i.e., they belong to `DB17-l` configuration. These instructions cover the `DB17-jwd` configurations. You will find the bumper assembly instructions in [](#assembling-duckiebot-c1).
+
+Q: Yeah but I still have the bumpers and am reading this page. So?
+
+A: The bumpers can be added after the Duckiebot assembly is complete.
+
+Q: I found it hard to mount the camera (the holes weren't lining up).
+
+A: Sometimes in life you have to push a little to make things happen. (But don't push too much or things will break!)
+
+Q: The long camera cable is a bit annoying - I folded it and shoved it in between two hats.
+
+A: The shorter cable is even more annoying. We suggest wrapping the long camera cable between the chassis and the Raspberry Pi. With some strategic planning, you can use the zipties that keep the battery in place to hold the camera cable in place as well ([see figure below-to add]())
+
+TODO: add pretty cable handling pic
+
+Q: I found that the screwdriver that comes with the chassis kit is too fat to screw in the wires on the hat.
+
+A: It is possible you got one of the fatter screwdrivers. You will need to figure it out yourself (or ask a TA for help).
+
+Q: I need something to cut the end of the zip tie with.
+
+A: Scissors typically work out for these kind of jobs (and no, they're not provided in a Fall 2017 Duckiebox).
+
+<!--
+
+Comment: Notes - if we have the bumpers, at what point should we add them? I think that the battery could actually be attached before the levels of the chassis are joined. I found it hard to mount the camera (the holes weren't lining up). the long camera cable is a bit annoying - I folded it and shoved it in between two hats. We should decide if PWM hat is part of this configuration, why not leave it for now and forget about the spliced cable for the class. I found that the screwdriver that comes with the chassis kit is too fat to screw in the wires on the hat. The picture of where to put the zip tie for the battery is not very clear. need something to cut the end of the zip tie with.
+
+-->
+
+<!--
+
+Comment: In general I would recommend having diagonal pliers as well as a few mini screwdrivers at hand. Both can be obtained from a local dollar store for about 6$ total. The pliers / cutters are required either for making your own power cord or for cutting the zip ties after they've been attached to the chassis (because they are too long). The screwdrivers are required for tightening the screws on the hats after the cables have been plugged in because the chassis screwdriver is too wide for that.
+
+-->
