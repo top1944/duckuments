@@ -64,6 +64,7 @@ recipe:
 # Add the entire part
 - add: building-duckiebot-c0
   except: # except wheel-calibration
+  - duckiebot-ubuntu-image
   - wheel-calibration
 
 - add: building-duckiebot-c1
