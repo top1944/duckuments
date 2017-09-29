@@ -22,7 +22,7 @@ Results: An assembled Duckiebot in configuration `DB17-wjd`.
 
 Note: The [FAQ](#op-assembly-db17jwd-faq) section at the bottom of this page may already answer some of you comments, questions or doubts.
 
-Note: While assembling the Duckiebot, try to make as symmetric (along the longitudinal axis) as you can. It will help going forward. 
+Note: While assembling the Duckiebot, try to make as symmetric (along the longitudinal axis) as you can. It will help going forward.
 
 ## Chassis
 
@@ -100,7 +100,11 @@ To assemble the caster wheel, the following materials is needed:
 * 4 standoffs (M3x12mm F-F, 6mm diameter)
 * 8 metal screws (M3x8mm)
 * 8 split lock washers
+-->
+<!--
+
 TODO: add instructions for Caster wheel assembly and move them to DB17-cl assembly instructions.
+
 -->
 
 ### Mounting the spacers
@@ -165,7 +169,7 @@ Take the micro SD card from the duckiebox and insert its slot on the Raspberry P
 
 ### Camera
 
-Note: If you have camera cables of different lengths available, keep in mind that both are going to work. We suggest to use the longer one, and wrap the extra length under the Raspberry Pi stack. 
+Note: If you have camera cables of different lengths available, keep in mind that both are going to work. We suggest to use the longer one, and wrap the extra length under the Raspberry Pi stack.
 
 #### The Raspberry Pi end
 
@@ -298,9 +302,9 @@ Fix all the cables on the Duckiebot so that it can run on the way without barrie
 
 Q: If we have the bumpers, at what point should we add them?
 
-A: You shouldn't have the bumpers at this point. The function of bumpers is to keep the LEDs in place, i.e., they belong to `DB17-l` configuration. These instructions cover the `DB17-jwd` configurations. You will find the bumper assembly instructions in [](#assembly-c1).
+A: You shouldn't have the bumpers at this point. The function of bumpers is to keep the LEDs in place, i.e., they belong to `DB17-l` configuration. These instructions cover the `DB17-jwd` configurations. You will find the bumper assembly instructions in [](#assembling-duckiebot-c1).
 
-Q: Yeah but I still have the bumpers and am reading this page. So? 
+Q: Yeah but I still have the bumpers and am reading this page. So?
 
 A: The bumpers can be added after the Duckiebot assembly is complete.
 
@@ -310,7 +314,7 @@ A: Sometimes in life you have to push a little to make things happen. (But don't
 
 Q: The long camera cable is a bit annoying - I folded it and shoved it in between two hats.
 
-A: The shorter cable is even more annoying. We suggest wrapping the long camera cable between the chassis and the Raspberry Pi. With some strategic planning, you can use the zipties that keep the battery in place to hold the camera cable in place as well ([see figure below-to add]()) 
+A: The shorter cable is even more annoying. We suggest wrapping the long camera cable between the chassis and the Raspberry Pi. With some strategic planning, you can use the zipties that keep the battery in place to hold the camera cable in place as well ([see figure below-to add]())
 
 TODO: add pretty cable handling pic
 
@@ -323,8 +327,13 @@ Q: I need something to cut the end of the zip tie with.
 A: Scissors typically work out for these kind of jobs (and no, they're not provided in a Fall 2017 Duckiebox).
 
 <!--
+
 Comment: Notes - if we have the bumpers, at what point should we add them? I think that the battery could actually be attached before the levels of the chassis are joined. I found it hard to mount the camera (the holes weren't lining up). the long camera cable is a bit annoying - I folded it and shoved it in between two hats. We should decide if PWM hat is part of this configuration, why not leave it for now and forget about the spliced cable for the class. I found that the screwdriver that comes with the chassis kit is too fat to screw in the wires on the hat. The picture of where to put the zip tie for the battery is not very clear. need something to cut the end of the zip tie with.
+
 -->
+
 <!--
+
 Comment: In general I would recommend having diagonal pliers as well as a few mini screwdrivers at hand. Both can be obtained from a local dollar store for about 6$ total. The pliers / cutters are required either for making your own power cord or for cutting the zip ties after they've been attached to the chassis (because they are too long). The screwdrivers are required for tightening the screws on the hats after the cables have been plugged in because the chassis screwdriver is too wide for that.
+
 -->

@@ -12,7 +12,7 @@ In this section we will first derive the kinematic and dynamic models of a Ducki
 
 <!--, and finally describe procedures for odometry calibration, i.e., the determination of those of parameters necessary to particularize the general model to each specific Duckiebot.-->
 
-Different methods can be followed to obtain the Duckiebot model, namely the Lagrangian or Newton-Euler, we choose to describe the latter as it arguably provides a clearer physical insight. Showing the equivalence of these formulations is an interesting exercise, and the reader may refer to [](#bib:dhaouadi2013dynamic), from which this chapter is mostly taken, for detailed insight.
+Different methods can be followed to obtain the Duckiebot model, namely the Lagrangian or Newton-Euler, we choose to describe the latter as it arguably provides a clearer physical insight. Showing the equivalence of these formulations is an interesting exercise, and the reader may refer to [](#bib:dhaouadi2013dynamic) for more insight. Another useful resource for modeling of a Duckiebot may be found here [](#bib:desantis1995modeling).
 
 <div class='requirements' markdown="1">
 
@@ -80,10 +80,10 @@ Note: $\amat{R}(\theta)$ is not a function of time, but only of the orientation.
 \avec{\dot X^I} = \amat{R}(\theta)\avec{\dot X^r}.
 \end{align}
 
-[](#fig:mod-ref-frames) summarizes the notations introduced.
+[](#fig:mod-fig1-fixed) summarizes the notations introduced.
 
-<div figure-id="fig:mod-ref-frames" figure-caption="Relevant notations for modeling a differential drive robot">
-  <img src="mod-ref-frames.png" style='width: 30em; height:auto'/>
+<div figure-id="fig:mod-fig1-fixed" figure-caption="Relevant notations for modeling a differential drive robot">
+  <img src="mod-fig1-fixed.png" style='width: 30em; height:auto'/>
 </div>
 
 ## Kinematics
@@ -104,10 +104,10 @@ The kinematic constraints are derived from two assumptions:
 \dot y_A \cos \theta -\dot x_A \sin \theta = 0.
 \]
 
-- _Pure rolling_: the wheels never slips or skids ([](#fig:mod-kin-constraint)). Hence, letting $\dot \varphi_{l}, \dot \varphi_{r}$ be the angular velocities of the left and right wheels respectively, the velocity of the ground contact point P is given by:
+- _Pure rolling_: the wheels never slips or skids ([](#fig:mod-pure-rolling)). Hence, letting $\dot \varphi_{l}, \dot \varphi_{r}$ be the angular velocities of the left and right wheels respectively, the velocity of the ground contact point P is given by:
 
-<div figure-id="fig:mod-kin-constraint" figure-caption="Pure rolling (no slipping) kinematic constraint">
-  <img src="mod-kin-constraint.png" style='width: 15em; height:auto'/>
+<div figure-id="fig:mod-pure-rolling" figure-caption="Pure rolling (no slipping) kinematic constraint">
+  <img src="mod-pure-rolling.png" style='width: 15em; height:auto'/>
 </div>
 
 \begin{align} \label{eq:mod-pure-rolling}
@@ -162,13 +162,17 @@ and:
 -->
 ## Differential drive robot kinematic model {#mod-kin}
 
-In a differential drive robot, controlling the wheels at different speeds generates a rolling motion of rate $\omega = \dot \theta$.  In a rotating field there always is a fixed point, the _center of instantaneous curvature_ (ICC), and all points at distance $d$ from it will have a velocity given by $\omega d$, and direction orthogonal to that of the line connecting the ICC and the wheels (i.e., the _axle_). Therefore, by looking at [](#fig:mod-kin-icc), we can write:
+In a differential drive robot, controlling the wheels at different speeds generates a rolling motion of rate $\omega = \dot \theta$.  In a rotating field there always is a fixed point, the _center of instantaneous curvature_ (ICC), and all points at distance $d$ from it will have a velocity given by $\omega d$, and direction orthogonal to that of the line connecting the ICC and the wheels (i.e., the _axle_). Therefore, by looking at [](#fig:mod-fig1-fixed), we can write:
+
+<!--
 
 <div figure-id="fig:mod-kin-icc" figure-caption="By controlling the rotation rates of the wheel independently, a differential drive robot can make turns. Figure adapted from [](#bib:Dudek10).">
   <img src="mod-kin-icc.png" style='width: 30em; height:auto'/>
 </div>
 
 TODO: change labels in pic to match previously used conventions. $R$ in figure is $d$ in this text, and L in text is l/2 in pic.
+
+-->
 
 \begin{align} \label{eq:mod-kin-1}
 \left\{  \begin{array}{l} \dot \theta (d-L) &= v_l  \\

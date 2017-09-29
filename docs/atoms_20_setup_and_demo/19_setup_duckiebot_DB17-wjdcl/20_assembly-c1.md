@@ -37,4 +37,4 @@ To power the PWM/Servo HAT from the battery, plugin a short (30cm) angled male U
      <img src="DC_power.jpg" style='width: 30em'/>
 </div>
 
-TODO: finish above, estimate assembly time
+TODO: finish above, estimate assembly time, add bumper assembly instructions, add LED positioning and wiring instructions, add castor wheel assembly instructions
