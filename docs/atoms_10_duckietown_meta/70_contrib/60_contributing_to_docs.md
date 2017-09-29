@@ -23,11 +23,6 @@ The simplest way to contribute to the documentation is to click any of the "✎"
 
 They link to the "edit" page in Github. There, one can make and commit the edits in only a few seconds.
 
-<!--
-## Comments
-
-In the multiple-page version, each page also includes a comment box powered by a service called Disqus. This provides a way for people to write comments with a very low barrier. (We would periodically remove the comments.)
--->
 
 ## Installing the documentation system {#installing-docs-system}
 
@@ -36,8 +31,6 @@ installed in `~/duckuments`. However, it can be installed anywhere.
 
 We are also going to assume that you have setup
 a Github account with working public keys.
-
-Comment: Can you link to a chapter with a tutorial to install the public keys or something like https://www.youtube.com/watch?v=H5qNpRGB7Qw? - SN
 
 See: [Basic SSH config](#ssh-local-configuration).
 
