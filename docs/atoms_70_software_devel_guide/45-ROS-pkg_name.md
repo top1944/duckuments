@@ -4,7 +4,6 @@ Assigned: Andrea
 
 This document outline the process of writing a ROS package and nodes in Python.
 
-
 [talker-py]: https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/talker.py
 [CMakeLists-txt]: https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/CMakeLists.txt
 [setup-py]: https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/setup.py
@@ -17,7 +16,7 @@ To follow along, it is recommend that you duplicate the `pkg_name` folder and ed
 
 ### `CMakeLists.txt`
 
-We start with [`CMakeLists.txt`][CMakeLists-txt].
+We start with the file [`CMakeLists.txt`][CMakeLists-txt].
 
 Every ROS package needs a file `CMakeLists.txt`, even if you are just using Python code in your package.
 
