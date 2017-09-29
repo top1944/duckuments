@@ -263,7 +263,7 @@ Contents:
         rospy.loginfo("[%s] %s" %(self.node_name,msg.data))
 
 
-Every time a message is published to `~topic_b`, the `cbTopic` function is called. It simply prints the messae using `rospy.loginfo`.
+Every time a message is published to `~topic_b`, the `cbTopic` function is called. It simply prints the message using `rospy.loginfo`.
 
 ## Launch File {#howto-launch-file}
 
