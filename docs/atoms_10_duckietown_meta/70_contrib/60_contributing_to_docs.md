@@ -37,7 +37,14 @@ installed in `~/duckuments`. However, it can be installed anywhere.
 We are also going to assume that you have setup
 a Github account with working public keys.
 
-<!-- See: The documentation for that is in XXX. -->
+Comment: Can you link to a chapter with a tutorial to install the public keys or something like https://www.youtube.com/watch?v=H5qNpRGB7Qw? - SN
+
+See: [Basic SSH config](#ssh-local-configuration).
+
+See: [Key pair creation](#howto-create-key-pair).
+ 
+See: [Adding public key on Github](#howto-add-pubkey-to-github).
+
 
 We are also going to assume that you have installed the `duckietown/software` in `~/duckietown`.
 

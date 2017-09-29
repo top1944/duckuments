@@ -284,7 +284,7 @@ Let's take a look at `launch/test.launch`.
 For the <code>&lt;node&gt;</code>, the `name` specify the name of the node,
 which overwrites `rospy.init_node()` in the `__main__` of `talker.py`. The
 `pkg` and `type` specify the package and the script of the node, in this case
-it's `talke.py`.
+it's `talker.py`.
 
 Don't forget the `.py` in the end (and remember to make the file executable through `chmod`).
 

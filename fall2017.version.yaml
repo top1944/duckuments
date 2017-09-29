@@ -30,6 +30,15 @@ recipe:
 - add: duckietown-project
 - add: contribute
 
+- make-part: exercises
+  title: Exercises
+  contents:
+  - add: exercise-specifications
+  - add: exercise-bag-in-out
+  - add: exercise-instagram
+  - add: exercise-instagram-live
+
+
 - make-part: theory-background
   title: Theory Background
   contents:
@@ -63,6 +72,7 @@ recipe:
   title: Appendix
   contents:
   - add: bibliography
+  - add: last-modified
 
 purl_prefix: http://purl.org/dt/fall2017/
 

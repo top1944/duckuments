@@ -83,7 +83,11 @@ Homeworks will require you to write and submit coding exercises. They will be su
 
 Now you need to point the remote of your `duckiefleet-fall2017` to your new local private repo. To do, from inside your already previously cloned `duckiefleet-fall2017` repo do:
 
-    $git remote set-url origin git@github.com:![GIT_USERNAME]/duckiefleet-fall2017.git
+    $ git remote set-url origin git@github.com:![GIT_USERNAME]/duckiefleet-fall2017.git
+
+Let's also add an `upstream` remote that points back to the original duckietown repo:
+
+    $ git remote add upstream git@github.com:duckietown/duckiefleet-fall2017.git
 
 If you type
 
@@ -92,11 +96,13 @@ If you type
 You should now see:
 
 ```
-origin git@github.com:![GIT_USERNAME]/duckiefleet-fall2017.git (fetch)
-origin git@github.com:![GIT_USERNAME]/duckiefleet-fall2017.git (push)
+origin  git@github.com:![GIT_USERNAME]/duckiefleet-fall2017.git (fetch)
+origin  git@github.com:![GIT_USERNAME]/duckiefleet-fall2017.git (push)
+upstream  git@github.com:duckietown/duckiefleet-fall2017.git (fetch)
+upstream  git@github.com:duckietown/duckiefleet-fall2017.git (push)
 ```
 
-Now the next time you push (without specifying an origin) you will push to your local private repo. 
+Now the next time you push (without specifying a remote) you will push to your local private repo. 
 
 ### Duckiefleet file structure
 

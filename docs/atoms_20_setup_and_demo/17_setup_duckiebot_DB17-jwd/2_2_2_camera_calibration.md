@@ -1,4 +1,4 @@
-# Camera calibration {#camera-calib status=draft}
+# Camera calibration {#camera-calib status=ready}
 
 Assigned: Dzenan Lapandic
 

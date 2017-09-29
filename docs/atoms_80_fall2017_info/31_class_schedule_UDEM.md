@@ -166,6 +166,36 @@ Homeworks and Checkoffs:
 
 ## Wed Sept 27
 
-* Kinematics
+Class (11:30 - 12:30) in Z-305
 
-* Dynamics
+* USB drive distribution
+
+* New checkoff announced: [](#checkoff_take_a_log)
+
+* New homework announced: [](#homework-data-processing)
+
+* Let's review the git policy for homeworks: [](#git-policy-homeworks)
+
+* Announcement regarding activity spreadsheet which is now embedded here: [](#sec-activity-tracker). Feel free to just look or send Kirsten your gmail on Slack and she will give you access to it.
+
+
+
+Slides:
+
+* Duckiebot Modeling [(pptx)]() [(pdf)]()
+
+Book Material:
+
+* [](#coordinate_systems)
+
+* [](#reference_frames)
+
+* [](#duckiebot-modeling)
+
+
+
+## Mon Oct 2
+
+Class (10:30 - 11:30) in Z-210
+
+* Computer vision basics

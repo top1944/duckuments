@@ -52,23 +52,20 @@ Take the GPIO stacking header [](#fig:GPIO_Stacking_Header) out of Duckiebox and
 
 ### Soldering instructions
 
-\begin{enumerate}
-\item[1.] Make a 5 pin terminal block by sliding the included 2 pin and 3 pin terminal blocks into each other [](#fig:terminal_block).
-\end{enumerate}
+1) Make a 5 pin terminal block by sliding the included 2 pin and 3 pin terminal blocks into each other [](#fig:terminal_block).
 
 <div figure-id="fig:terminal_block" figure-caption="5 pin terminal_block">
    <img src="terminal_block.jpg" style='width: 30ex; height: auto'/>
 </div>
 
-\begin{enumerate}
-\item[2.]  Slide this 5 pin block through the holes just under "M1 GND M2" on the board. Solder it on (we only use two motors and do not need connect anything at the "M3 GND M4" location) ([](#figure:upview_Stepper_Motor));
+2) Slide this 5 pin block through the holes just under "M1 GND M2" on the board. Solder it on (we only use two motors and do not need connect anything at the "M3 GND M4" location) ([](#figure:upview_Stepper_Motor));
 
-\item[3.]  Slide a 2 pin terminal block into the corner for power. Solder it on. ([](#figure:sideview_terminal));
+3) Slide a 2 pin terminal block into the corner for power. Solder it on. ([](#figure:sideview_terminal));
 
-\item[4.]  Slide in the GPIO Stacking Header onto the 2x20 grid of holes on the edge opposite the terminal blocks and with vice versa direction ([](#figure:GPIO_HAT_orientation)). Solder it on.
+4) Slide in the GPIO Stacking Header onto the 2x20 grid of holes on the edge opposite the terminal blocks and with vice versa direction ([](#figure:GPIO_HAT_orientation)). Solder it on.
 
 Note: stick the GPIO Stacking Header from bottom to top, different orientation than terminal blocks (from top to bottom).
-\end{enumerate}
+
 
 <div figure-id="fig:GPIO_HAT_orientation" figure-caption=" ">
    <img src="GPIO_HAT_orientation.jpg" style='width: 30ex; height: auto'/>
