@@ -132,7 +132,7 @@ automatic-compile-fall2017:
 
 
 automatic-compile-master-html:
-	git pull
+	#git pull
 	touch $(log-master-html)
 	echo "\n\nStarting" >> $(log-master-html)
 	date >> $(log-master-html)
@@ -210,8 +210,11 @@ master-pdf: checks check-programs-pdf
 	prince --javascript -o out/master/pdf/duckiebook1.pdf out/master/pdf/b.html
 
 	pdftk A=out/master/pdf/duckiebook1.pdf B=misc/blank.pdf cat A1-end B output out/master/pdf/duckiebook2.pdf keep_final_id
-	pdftk out/master/pdf/duckiebook2.pdf update_info misc/blank-metadata output duckuments-dist/master/duckiebook.pdf
-	# open $(out_pdf)
+	pdftk out/master/pdf/duckiebook2.pdf update_info misc/blank-metadata output out/master/pdf/duckiebook3.pdf
+
+	./reduce-pdf-size.sh out/master/pdf/duckiebook3.pdf out/master/pdf/duckiebook4.pdf
+
+	cp out/master/pdf/duckiebook4.pdf duckuments-dist/master/duckiebook.pdf
 
 fall2017-pdf: checks check-programs-pdf
 	# mathjax is 1 in this case
@@ -228,8 +231,9 @@ fall2017-pdf: checks check-programs-pdf
 	prince --javascript -o out/fall2017/pdf/duckiebook1.pdf out/fall2017/pdf/b.html
 
 	pdftk A=out/fall2017/pdf/duckiebook1.pdf B=misc/blank.pdf cat A1-end B output out/fall2017/pdf/duckiebook2.pdf keep_final_id
-	pdftk out/fall2017/pdf/duckiebook2.pdf update_info misc/blank-metadata output duckuments-dist/fall2017/duckiebook.pdf
-
+	pdftk out/fall2017/pdf/duckiebook2.pdf update_info misc/blank-metadata output out/fall2017/pdf/duckiebook3.pdf
+	./reduce-pdf-size.sh out/fall2017/pdf/duckiebook3.pdf out/fall2017/pdf/duckiebook4.pdf
+	cp out/fall2017/pdf/duckiebook4.pdf duckuments-dist/fall2017/duckiebook.pdf
 
 update-mcdp:
 	-git -C mcdp/ pull
@@ -317,8 +321,9 @@ master-html:
 		--output_file out/master/data/1.html \
 		-c "config echo 1; config colorize 1; rparmake n=8"
 
+	mkdir -p duckuments-dist/master
 	python add_stylesheet.py out/master/data/1.html style/duckietown.css
-	python -m mcdp_utils_xml.note_errors_inline out/master/data/1.html | tee duckuments-dist/master/errors.txt
+	python -m mcdp_utils_xml.note_errors_inline out/master/data/1.html 2>&1 | tee duckuments-dist/master/errors.txt
 	python -m mcdp_docs.add_edit_links out/master/data/localcss.html < out/master/data/1.html
 	python -m mcdp_docs.embed_css out/master/data/duckiebook.html < out/master/data/localcss.html
 	python -m mcdp_docs.extract_assets  \
@@ -363,28 +368,29 @@ fall2017-prepare:
 		--no_resolve_references \
 		--symbols $(tex-symbols) \
 		-o out/fall2017/prepare \
-		--output_file out/fall2017/one.html -c "config echo 1; config colorize 1; rparmake"
-
-	python -m mcdp_utils_xml.note_errors_inline out/fall2017/one.html  | tee duckuments-dist/fall2017/errors.txt
+		--output_file out/fall2017/data/one.html -c "config echo 1; config colorize 1; rparmake"
+	mkdir -p duckuments-dist/fall2017
+	python -m mcdp_utils_xml.note_errors_inline out/fall2017/data/one.html 2>&1 | tee duckuments-dist/fall2017/errors.txt
 	# python -m mcdp_docs.add_edit_links duckuments-dist/fall2017/two.html < duckuments-dist/fall2017/one.html
-	python -m mcdp_docs.embed_css out/fall2017/master.html < out/fall2017/one.html
+	python -m mcdp_docs.embed_css out/fall2017/data/master.html < out/fall2017/data/one.html
 
 fall2017-compose:
 	mcdp-docs-compose --config fall2017.version.yaml
 
+
+	python -m mcdp_docs.extract_assets  \
+		--input out/fall2017/data/duckiebook.html  \
+		--output duckuments-dist/fall2017/duckiebook.html \
+		--assets duckuments-dist/fall2017/duckiebook/assets
+
 fall2017-split:
 	mcdp-split \
-	   --filename duckuments-dist/fall2017/duckiebook.html \
+	   --filename out/fall2017/data/duckiebook.html \
 	   --output_dir duckuments-dist/fall2017/duckiebook \
 	   -o out/fall2017/split \
 	   -c " config echo 1; config colorize 1; rparmake" \
 	   --mathjax \
 	   --preamble $(tex-symbols)
-
-	python -m mcdp_docs.extract_assets  \
-		--input duckuments-dist/fall2017/duckiebook.html \
-		--output duckuments-dist/fall2017/duckiebook.html \
-		--assets duckuments-dist/fall2017/duckiebook/assets
 
 fall2017: checks update-mcdp update-software
 	$(MAKE) fall2017-prepare

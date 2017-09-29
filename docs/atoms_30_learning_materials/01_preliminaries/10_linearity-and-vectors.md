@@ -18,12 +18,7 @@ See also: this other reference
 
 TODO: add references throughout all chapter
 
-<!--(Dear Santa, I would like class='required-preliminaries' here) -->
 <div class='requirements' markdown="1">
-
-Knowledge necessary:
-
-<!--Required Reading: Insert here a list of topics and suggested resources related to _necessary_ knowledge in order to understand the content presented. Example: -->
 
 Requires: Real numbers are complex for you?: Number theory [addref]()
 
@@ -167,7 +162,7 @@ We define the length, or _modulus_, of a vector $\avec{v} \in \reals^n$ as:
 Generally speaking, it is not always possible to define the length of a vector ([addref]()). But when it is possible (e.g., in [Hilbert spaces]()), and in Duckietown it always is, there are many ways to define it. The most common and intuitive definition is the _Euclidian-_ or _2-norm_, which is defined above in \eqref{eq:vec-2-norm}.
 \end{remark}
 
-We will discuss norms more in detail in [](#norms).
+We will discuss norms more in detail in [](#intro-norms).
 
 \begin{definition}[Unit vector]\label{def:unit-vector}
 A unit vector, or _versor_, is a vector $\avec{e}$ of of unit length:

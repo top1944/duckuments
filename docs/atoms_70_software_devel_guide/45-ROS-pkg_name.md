@@ -4,7 +4,6 @@ Assigned: Andrea
 
 This document outline the process of writing a ROS package and nodes in Python.
 
-
 [talker-py]: https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/talker.py
 [CMakeLists-txt]: https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/CMakeLists.txt
 [setup-py]: https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/setup.py
@@ -17,7 +16,7 @@ To follow along, it is recommend that you duplicate the `pkg_name` folder and ed
 
 ### `CMakeLists.txt`
 
-We start with [`CMakeLists.txt`][CMakeLists-txt].
+We start with the file [`CMakeLists.txt`][CMakeLists-txt].
 
 Every ROS package needs a file `CMakeLists.txt`, even if you are just using Python code in your package.
 
@@ -264,7 +263,7 @@ Contents:
         rospy.loginfo("[%s] %s" %(self.node_name,msg.data))
 
 
-Every time a message is published to `~topic_b`, the `cbTopic` function is called. It simply prints the messae using `rospy.loginfo`.
+Every time a message is published to `~topic_b`, the `cbTopic` function is called. It simply prints the message using `rospy.loginfo`.
 
 ## Launch File {#howto-launch-file}
 
@@ -284,7 +283,7 @@ Let's take a look at `launch/test.launch`.
 For the <code>&lt;node&gt;</code>, the `name` specify the name of the node,
 which overwrites `rospy.init_node()` in the `__main__` of `talker.py`. The
 `pkg` and `type` specify the package and the script of the node, in this case
-it's `talke.py`.
+it's `talker.py`.
 
 Don't forget the `.py` in the end (and remember to make the file executable through `chmod`).
 

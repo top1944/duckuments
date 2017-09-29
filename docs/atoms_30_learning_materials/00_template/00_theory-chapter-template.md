@@ -2,24 +2,14 @@
 
 Theory chapters benefit from a standardized exposition. Here, we define the template for these chapters. Rememeber to check [](#sec:documentation-manual) for a comprehensive and up-to-date list of Duckiebook supported features.
 
-<!--
-
- TODO: Define new classes for:
-
-- 'required-preliminaries' (must read, hard contraint, do not proceed if violated),
-- 'recommended-preliminaries' (best if read, weak constraint, provides extra Duckiepoints)
-- 'additional-reading' (for curious users, no contraint, just a pointer)
-- 'lets-think' (stop and think, visual interrupt, attention regainer/grabber). -->
-
 ## Example Title: PID control {#pid-example-theory-label}
 
 [//]: # (Start copying and pasting template from here)
 
 Start with a brief introduction of the discussed topic, describing its place in the bigger picture, justifying the reading constraints/guidelines below. Write it as if the reader knew the relevant terminology. For example:
 
-PID control is the simplest approach to making a system behave in a desired way rather than how it would naturally behave. It is simple because the measured output is directly feedbacked, as opposed to, e.g., the system's states. The control signal is obtained as a weighted sum of the tracking error (*P*roportional term), its integral over time (*I*ntegrative term) and its instantaneous derivative (*D*erivative term), from which the appellative of PID control. The tracking error is defined as the instantaneous difference between a reference and a measured system output.
+PID control is the simplest approach to making a system behave in a desired way rather than how it would naturally behave. It is simple because the measured output is directly feedbacked, as opposed to, e.g., the system's states. The control signal is obtained as a weighted sum of the tracking error (_P_roportional term), its integral over time (_I_ntegrative term) and its instantaneous derivative (_D_erivative term), from which the appellative of PID control. The tracking error is defined as the instantaneous difference between a reference and a measured system output.
 
-<!--(Dear Santa, I would like class='required-preliminaries' here) -->
 <div class='requirements' markdown="1">
 
 Knowledge necessary:
@@ -28,11 +18,10 @@ Required Reading: Insert here a list of topics and suggested resources related t
 
 Requires: Terminology: [autonomy overview](#autonomy-overview)
 
-Requires: System Modeling: [basic kinematics](#basic_kinematics), [basic dynamics](#basic_dynamics), [linear algebra](#linear_algebra), [State space representations](), [Linear Time Invariant Systems]()
+Requires: System Modeling: [basic kinematics](#intro-kinematics), [basic dynamics](#intro-dynamics), [linear algebra](#linear_algebra), [State space representations](), [Linear Time Invariant Systems]()
 
 </div>
 
-<!--(Dear Santa, I would like class='recommended-preliminaries' here) -->
 <div class="requirements" markdown="1">
 
 Suggested Reading: Insert here a list of topics and suggested resources related to _recommended_ knowledge in order to better understand the content presented. Example:
@@ -103,7 +92,7 @@ A reference signal $\tilde{y}_t \in \mathcal{L}_2(\mathcal{T})$ is ...
 
 Insert 'random' checks to keep the reader's attention up:
 
-if you can't be woken up in the middle of the night and rememeber the definition of $\mathcal{L}_2(\cdot)$, read: [](#bib:placeholder)
+if you can't be woken up in the middle of the night and remember the definition of $\mathcal{L}_2(\cdot)$, read: [](#bib:placeholder)
 
 </div>
 

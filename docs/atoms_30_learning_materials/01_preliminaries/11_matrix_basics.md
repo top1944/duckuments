@@ -83,8 +83,6 @@ An identity matrix is a diagonal square matrix with all elements equal to one.
 \end{align}
 \end{definition}
 
-
-
 ## Null matrix {#mat-null}
 
 \begin{definition}[Null matrix] \label{def:mat-null}
@@ -94,12 +92,13 @@ The null, or Zero, matrix is a matrix whos elements are all zeros.
 \end{align}
 \end{definition}
 
-## Trace of a matrix {#mat-trace}
-
 ## Determinant {#matrix-determinant}
 
 - 2x2
 - 3x3
 - nxn
 
-## Rank of a matrix {#matrix-rank}
+## Rank of a matrix {#intro-matrix-rank}
+
+## Trace of a matrix {#intro-matrix-trace}
+
