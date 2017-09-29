@@ -1,10 +1,10 @@
-# Types {#types status=draft}
+# Types {#types status=beta}
 
 <div class='requirements' markdown='1'>
 
-Results: k:types
+Results: Introduction to type theory.
 
-Requires: k:sets
+Requires: Knowledge of [set theory](#sets).
 
 </div>
 

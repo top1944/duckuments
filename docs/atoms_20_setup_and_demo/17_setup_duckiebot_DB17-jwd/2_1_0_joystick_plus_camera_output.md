@@ -1,4 +1,4 @@
-# RC+camera remotely {#rc-cam-launched-remotely status=beta}
+# RC+camera remotely {#rc-cam-launched-remotely status=ready}
 
 Assigned: Andrea
 

@@ -37,7 +37,7 @@ recipe:
   - add: exercise-bag-in-out
   - add: exercise-instagram
   - add: exercise-instagram-live
-  
+
 
 - make-part: theory-background
   title: Theory Background
@@ -72,6 +72,7 @@ recipe:
   title: Appendix
   contents:
   - add: bibliography
+  - add: last-modified
 
 purl_prefix: http://purl.org/dt/fall2017/
 
