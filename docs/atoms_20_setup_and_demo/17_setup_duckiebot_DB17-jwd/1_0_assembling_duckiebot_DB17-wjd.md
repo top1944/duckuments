@@ -68,15 +68,15 @@ Plug in the wheels to the motor as follows (no screws needed):
 <div figure-id="fig:horizontal">
     <figcaption>The instruction of assembling the wheels</figcaption>
 
-<div figure-id="fig:scratch_wheels" figure-caption="The scratch of wheels">
-     <img src="scratch_wheels.png" style='width: 30em'/>
+    <div figure-id="fig:scratch_wheels" figure-caption="The scratch of wheels">
+        <img src="scratch_wheels.png" style='width: 30em'/>
+    </div>
+
+    <div figure-id="fig:wheels" figure-caption="Assembled wheels">
+        <img src="wheels.jpg" style='width: 30em'/>
+    </div>
 </div>
 
-<div figure-id="fig:wheels" figure-caption="Assembled wheels">
-     <img src="wheels.jpg" style='width: 30em'/>
-</div>
-
-</div>
 ### Omnidirectional wheel
 
 The Duckiebot is driven by controlling the wheels attached to the DC motors. Still, it requires a "passive" omnidirectional wheel on the back.
@@ -209,14 +209,6 @@ Protip: make sure that the camera mount is: (a) geometrically centered on the ch
 
 Note: make sure that the cable is oriented in this direction (writing towards the CPU). Otherwise you will have to disassemble the whole thing later.
 
-### Assemble chassis-bottom and chassis-up
-
-Arrange the motor wires through the chassis-up, which will be connected to Stepper Motor HAT later.
-
-<div figure-id="fig:bottom_up_enssemble" figure-caption=" ">
-     <img src="bottom_up_enssemble.jpg" style='width: 30em'/>
-</div>
-
 
 ### Extending the intra-decks standoffs
 
@@ -226,12 +218,38 @@ Secure the extended standoff to the 4 corners of the chassis-bottom.  The nylon 
 
 
 <div figure-id="fig:standoff_extender" figure-caption="4 nylon M3x5 Standoff Spacer and 4 M3x10 screws">
-     <img src="extended_standoff.jpg" style='width: 30em'/>
+     <img src="extender_screws.jpg" style='width: 30em'/>
 </div>
 
-<div figure-id="fig:extender_chassis" figure-caption=" ">
-     <img src="extender_chassis.jpg" style='width: 30em'/>
+
+
+
+### fasten the Battery with zip ties
+
+Put the battery between the upper and lower decks of the chassis. It is strongly recommended to secure the battery from moving using zip ties.
+
+<div figure-id="fig:HAT_ensemble_sideview" figure-caption=" ">
+     <img src="HAT_ensemble_sideview.jpg" style='width: 30em'/>
 </div>
+
+
+### Assemble chassis-bottom and chassis-up
+
+Arrange the motor wires through the chassis-up, which will be connected to Stepper Motor HAT later.
+
+
+
+<div figure-id="fig:bottom_up_enssemble" figure-caption=" ">
+     <img src="bottom_up_enssemble.jpg" style='width: 30em'/>
+</div>
+<div figure-id="fig:screws_standoff" figure-caption=" ">
+     <img src="screw_standoffs.jpg" style='width: 30em'/>
+</div>
+
+Note: Use the provided metal screws from chassis package for fastening the chassis-up above the nylon standoffs instead of the provided M3 nylon screws.
+
+
+
 
 
 ### Put a Stepper Motor HAT with 4 standoffs on the top of Raspberry Pi
@@ -263,13 +281,6 @@ We are using M1 and M2. The left (in robot frame) motor is connected to M1 and t
      <img src="ServoHAT_wiring.jpg" style='width: 30em'/>
 </div>
 
-### Battery
-
-Put the battery between the upper and lower decks of the chassis. It is strongly recommended to secure the battery from moving using zip ties.
-
-<div figure-id="fig:HAT_ensemble_sideview" figure-caption=" ">
-     <img src="HAT_ensemble_sideview.jpg" style='width: 30em'/>
-</div>
 
 ### Joypad
 
