@@ -300,15 +300,6 @@ Insert the joypad dongle into one of the USB port of the Raspberry Pi.
      <img src="joypad_dongle.jpg" style='width: 30em'/>
 </div>
 
-<<<<<<< HEAD:docs/atoms_20_setup_and_demo/17_setup_duckiebot_c0wjd/1_0_assembling_duckiebot_c0.md
-Insert 2x AA batteries on the backside of the joypad
-<div figure-id="fig:joypack_battery" figure-caption="Joypad and 2x AA batteries">
-     <img src="joypack_battery.jpg" style='width: 30em'/>
-</div>
-
-
-
-=======
 Insert 2 AA batteries on the back side of the joypad [](#fig:joypack_battery).
 
 <div figure-id="fig:joypack_battery" figure-caption="Joypad and 2 AA batteries">
@@ -346,7 +337,6 @@ Q: The long camera cable is a bit annoying - I folded it and shoved it in betwee
 A: The shorter cable is even more annoying. We suggest wrapping the long camera cable between the chassis and the Raspberry Pi. With some strategic planning, you can use the zipties that keep the battery in place to hold the camera cable in place as well ([see figure below-to add]())
 
 TODO: add pretty cable handling pic
->>>>>>> master:docs/atoms_20_setup_and_demo/17_setup_duckiebot_DB17-jwd/1_0_assembling_duckiebot_DB17-wjd.md
 
 Q: I found that the screwdriver that comes with the chassis kit is too fat to screw in the wires on the hat.
 
