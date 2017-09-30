@@ -1,6 +1,6 @@
 # Norms {#intro-norms status=draft}
 
-Assigned: Jacopo
+Assigned: Dzenan
 
 TODO: finish writing
 
