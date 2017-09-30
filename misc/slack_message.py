@@ -14,6 +14,7 @@ with open(where) as f:
     token = f.read().strip()
 
 
+channel = '#duckuments-bot'
 slack = Slacker(token)
 
 
@@ -54,11 +55,11 @@ def go(path):
                     logger.warning('no cache for %s' % job_id)
 
             print(s)
-            channel = '#duckuments-bot'
-
             slack.chat.post_message(channel, s)
 
         else:
+            s = 'Everything is fine'
+            slack.chat.post_message(channel, s)
             logger.info('No jobs found')
 
 if __name__ == '__main__':
