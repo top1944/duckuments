@@ -10,7 +10,7 @@ Requires: Duckiebot `DB17-wjd` parts. The acquisition process is explained in []
 
 Requires: Having soldered the `DB17-wjd` parts. The soldering process is explained in [](#soldering-boards-c0).
 
-Requires: Having prepared the power cable. The power cable preparation is explained in [](#power-cable-prep-c0). Note: Not necessary if you are proceeding directly to configuration `DB17-l`.
+Requires: Having prepared the power cable. The power cable preparation is explained in [](#power-cable-prep-c0). Note: Not necessary if you intend to build a `DB17-l` configuration.
 
 Requires: Having installed the image on the MicroSD card. The instructions on how to reproduce the Duckiebot system image are in [](#duckiebot-ubuntu-image).
 
@@ -67,12 +67,16 @@ TODO: make instructions for soldering motor wires
 
 Plug in the wheels to the motor as follows (no screws needed):
 
-<div figure-id="fig:scratch_wheels" figure-caption="The scratch of wheels">
-     <img src="scratch_wheels.png" style='width: 30em'/>
-</div>
+<div figure-id="fig:horizontal">
+    <figcaption>The instruction of assembling the wheels</figcaption>
 
-<div figure-id="fig:wheels" figure-caption="Assembled wheels">
-     <img src="wheels.jpg" style='width: 30em'/>
+    <div figure-id="fig:scratch_wheels" figure-caption="The scratch of wheels">
+        <img src="scratch_wheels.png" style='width: 30em'/>
+    </div>
+
+    <div figure-id="fig:wheels" figure-caption="Assembled wheels">
+        <img src="wheels.jpg" style='width: 30em'/>
+    </div>
 </div>
 
 ### Omnidirectional wheel
@@ -101,6 +105,7 @@ To assemble the caster wheel, the following materials is needed:
 * 8 metal screws (M3x8mm)
 * 8 split lock washers
 -->
+
 <!--
 
 TODO: add instructions for Caster wheel assembly and move them to DB17-cl assembly instructions.
@@ -123,7 +128,6 @@ The bottom part of the Duckiebot's chassis is now ready. The next step is to ass
 
 
 ## Assembling the Raspberry Pi, camera, and HATs
-
 
 ### Raspberry Pi
 
@@ -152,18 +156,17 @@ When this is done fasten the nylon standoffs on the Raspberry Pi, and secure the
      <img src="raspi_chassis_up.jpg" style='width: 30em'/>
 </div>
 
-
 #### Micro SD card
 
 Requires: Having the Duckiebot image copied in the micro SD card.
 
 Take the micro SD card from the duckiebox and insert its slot on the Raspberry Pi. The SD card slot is just under the display port, on the short side of the PI, on the flipside of where the header pins are.
 
-<div figure-id="fig:SD_card" figure-caption="The Micro SD card and SD card readers.">
+<div figure-id="fig:SD_card" figure-caption="The Micro SD card and SD card readers">
     <img src="sd_card.jpg" style='width: 30em'/>
 </div>
 
-<div figure-id="fig:RASPI_SD" figure-caption="Display port and inserted SD card">
+<div figure-id="fig:RASPI_SD" figure-caption="Inserted SD card">
     <img src="sd_slot.jpg" style='width: 30em'/>
 </div>
 
@@ -205,15 +208,6 @@ Protip: make sure that the camera mount is: (a) geometrically centered on the ch
 
 Note: make sure that the cable is oriented in this direction (writing towards the CPU). Otherwise you will have to disassemble the whole thing later. This is only the case for the short cable! On the long cable the writing is on the other side.
 
-### Assemble chassis-bottom and chassis-up
-
-Arrange the motor wires through the chassis-up, which will be connected to Stepper Motor HAT later.
-
-<div figure-id="fig:bottom_up_enssemble" figure-caption=" ">
-     <img src="bottom_up_enssemble.jpg" style='width: 30em'/>
-</div>
-
-
 ### Extending the intra-decks standoffs
 
 In order to fit the battery, we will need to extend the Magician Chassis standoffs with the provided nylon standoff spacers. Grab 4 of them, and secure them to one end of the long metal standoffs provided in the Magician Chassis package.
@@ -221,13 +215,30 @@ In order to fit the battery, we will need to extend the Magician Chassis standof
 Secure the extended standoff to the 4 corners of the chassis-bottom.  The nylon standoffs should smoothly screw in the metal ones. If you feel resistance, don’t force it or the nylon screw might break in the metal standoff. In that case, unscrew the nylon spacer and try again.
 
 <div figure-id="fig:standoff_extender" figure-caption="4 nylon M3x5 Standoff Spacer and 4 M3x10 screws">
-     <img src="extended_standoff.jpg" style='width: 30em'/>
+     <img src="extender_screws.jpg" style='width: 30em'/>
 </div>
 
-<div figure-id="fig:extender_chassis" figure-caption=" ">
-     <img src="extender_chassis.jpg" style='width: 30em'/>
+### fasten the Battery with zip ties
+
+Put the battery between the upper and lower decks of the chassis. It is strongly recommended to secure the battery from moving using zip ties.
+
+<div figure-id="fig:HAT_ensemble_sideview" figure-caption=" ">
+     <img src="HAT_ensemble_sideview.jpg" style='width: 30em'/>
 </div>
 
+
+### Assemble chassis-bottom and chassis-up
+
+Arrange the motor wires through the chassis-up, which will be connected to Stepper Motor HAT later.
+
+<div figure-id="fig:bottom_up_enssemble" figure-caption=" ">
+     <img src="bottom_up_enssemble.jpg" style='width: 30em'/>
+</div>
+<div figure-id="fig:screws_standoff" figure-caption=" ">
+     <img src="screw_standoffs.jpg" style='width: 30em'/>
+</div>
+
+Note: Use the provided metal screws from chassis package for fastening the chassis-up above the nylon standoffs instead of the provided M3 nylon screws.
 
 ### Put a Stepper Motor HAT with 4 standoffs on the top of Raspberry Pi
 
@@ -254,16 +265,14 @@ We are using M1 and M2. The left (in robot frame) motor is connected to M1 and t
 - Right Motor:Red
 
 
-<div figure-id="fig:ServoHAT_wiring" figure-caption=" ">
-     <img src="ServoHAT_wiring.jpg" style='width: 30em'/>
-</div>
+#### power supply for DC motor HAT
 
-### Battery
+Attache the prepared power wires in previous section[](#power-cable-prep-c0).to the DC motor HAT power terminal block. Make sure you plug the black wire in the pin labeled with a minus: - and the red wire to the plus: + ([](#figure:final-result-power-c0)).
 
-Put the battery between the upper and lower decks of the chassis. It is strongly recommended to secure the battery from moving using zip ties.
+THe other end of power wires will plug into USB port of Paspberry Pi for power supply.
 
-<div figure-id="fig:HAT_ensemble_sideview" figure-caption=" ">
-     <img src="HAT_ensemble_sideview.jpg" style='width: 30em'/>
+<div figure-id="fig:Stepper_cable" figure-caption="Insert the prepared power wire to DC motor HAT power pins.">
+     <img src="power_terminal.jpg" style='width: 30em'/>
 </div>
 
 ### Joypad
@@ -288,9 +297,9 @@ Insert 2 AA batteries on the back side of the joypad [](#fig:joypack_battery).
 
 ### Connect the power cables
 
-You are now ready to secure the prepared power wires in [](#power-cable-prep-c0). to the DC motor HAT power pins.
+You are now ready to secure the prepared power wires in [](#power-cable-prep-c0) to the DC motor HAT power pins.
 
-Connect the battery with the DC motor HAT by making sure you plug the black wire in the pin labeled with a minus: `-` and the red wire to the plus: `+` ([](#figure:final-result-power-c0)).
+Connect the **battery** (not the Raspberry Pi) with the DC motor HAT by making sure you plug the black wire in the pin labeled with a minus: `-` and the red wire to the plus: `+` ([](#figure:final-result-power-c0)).
 
 Fix all the cables on the Duckiebot so that it can run on the way without barrier.
 
