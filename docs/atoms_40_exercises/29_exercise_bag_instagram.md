@@ -27,7 +27,7 @@ where:
 ## Test data
 
 If you don't have a ROS bag to work on, you can download the test bag
-[`example_rosbag_H5.bag`](https://www.dropbox.com/s/4259oqxnyb9c3ws/example_rosbag_H5.bag?dl=1).
+[`example_rosbag_H5.bag`](https://www.dropbox.com/s/h04435fz8wv4314/example_rosbag_H5.bag?dl=1).
 
 
 ## Useful new APIs
