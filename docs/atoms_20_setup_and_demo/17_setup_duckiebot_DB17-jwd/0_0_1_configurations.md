@@ -57,4 +57,4 @@ In this configuration the Duckiebot in equipped with the necessary hardware for 
 
 ### `DB17-c`
 
-In this configuration, the standard dotation castor wheel (the omnidirectional wheel on the back of the Duckiebot) is replace with a different omnidirectional wheel. The castor wheel upgrade provides a smoother ride. This configuration includes the mechanical bits necessary to mount the new castor wheel at the right height.
+In this configuration, the standard dotation castor wheel (the omnidirectional wheel on the back of the Duckiebot) is replaced with a different omnidirectional wheel. The castor wheel upgrade provides a smoother ride. This configuration includes the mechanical bits necessary to mount the new castor wheel at the right height.

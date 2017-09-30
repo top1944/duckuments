@@ -10,7 +10,7 @@ Requires: Duckiebot `DB17-wjd` parts. The acquisition process is explained in []
 
 Requires: Having soldered the `DB17-wjd` parts. The soldering process is explained in [](#soldering-boards-c0).
 
-Requires: Having prepared the power cable. The power cable preparation is explained in [](#power-cable-prep-c0). Note: Not necessary if you are proceeding directly to configuration C1.
+Requires: Having prepared the power cable. The power cable preparation is explained in [](#power-cable-prep-c0). Note: Not necessary if you are proceeding directly to configuration `DB17-l`.
 
 Requires: Having installed the image on the MicroSD card. The instructions on how to reproduce the Duckiebot system image are in [](#duckiebot-ubuntu-image).
 
@@ -207,7 +207,7 @@ Protip: make sure that the camera mount is: (a) geometrically centered on the ch
      <img src="camera_raspi_enssemble.jpg" style='width: 30em'/>
 </div>
 
-Note: make sure that the cable is oriented in this direction (writing towards the CPU). Otherwise you will have to disassemble the whole thing later.
+Note: make sure that the cable is oriented in this direction (writing towards the CPU). Otherwise you will have to disassemble the whole thing later. This is only the case for the short cable! On the long cable the writing is on the other side.
 
 
 ### Extending the intra-decks standoffs
