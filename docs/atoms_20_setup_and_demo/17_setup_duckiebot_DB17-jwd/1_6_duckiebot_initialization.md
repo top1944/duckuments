@@ -90,6 +90,7 @@ called "`duckietown`" and password "`quackquack`".
 
 Connect your laptop to the same wireless network.
 
+You can use the hotspot function of your smartphone to creat the duckietown wireless network.
 
 ## Ping the Duckiebot
 
