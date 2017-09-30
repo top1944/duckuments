@@ -59,7 +59,7 @@ def go(path):
 
         else:
             s = 'Everything is fine'
-            slack.chat.post_message(channel, s)
+            # slack.chat.post_message(channel, s)
             logger.info('No jobs found')
 
 if __name__ == '__main__':
