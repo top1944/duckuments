@@ -26,19 +26,19 @@ Note: While assembling the Duckiebot, try to make as symmetric (along the longit
 
 ## Chassis
 
-Open the Magician chassis package [](#fig:duckiebot_components) and take out the following components:
+Open the Magician chassis package ([](#fig:duckiebot_components)) and take out the following components:
 
-* Chassis-bottom (1x), Chassis-up (1x)
-* DC Motors (2x), motor holders (4x)
-* Wheels (2x), steel omni-directional wheel (1x)
-* All spacers and screws
-* Screwdriver
+* Chassis-bottom (1x), Chassis-up (1x);
+* DC Motors (2x), motor holders (4x);
+* Wheels (2x), steel omni-directional wheel (1x);
+* All spacers and screws;
+* Screwdriver.
 
 <div figure-id="fig:duckiebot_components" figure-caption="Components in Duckiebot package.">
      <img src="duckiebot_components.png" style='width: 30em'/>
 </div>
 
-Note: You won’t need the battery holder and speed board holder (on the right side in [](#fig:duckiebot_components)).
+Note: You won't need the battery holder and speed board holder (on the right side in [](#fig:duckiebot_components)).
 
 ### Bottom
 
@@ -54,7 +54,6 @@ Insert the motor holders on the chassis-bottom and put the motors as shown in th
 
 <div figure-id="fig:motors1" figure-caption="Assembled motor">
      <img src="motors1.jpg" style='width: 25em'/>
-
 </div>
 
 Note: Orient the motors so that their wires are inwards, i.e., towards the center of the chassis-bottom. The black wires should be closer to the chassis-bottom to make wiring easier down the line.
@@ -74,8 +73,9 @@ Plug in the wheels to the motor as follows (no screws needed):
         <img src="scratch_wheels.png" style='width: 30em'/>
     </div>
 
-<div figure-id="fig:wheels" figure-caption="Assembled wheels">
-    <img src="wheels.jpg" style='width: 25em'/>
+    <div figure-id="fig:wheels" figure-caption="Assembled wheels">
+        <img src="wheels.jpg" style='width: 25em'/>
+    </div>
 </div>
 
 ### Omni-directional wheel
@@ -128,12 +128,12 @@ Put the car upright (omni wheel pointing towards the table) and arrange wires so
 <div figure-id="fig:screws" figure-caption="Magician chassis package standoffs and screws">
      <img src="chassi_screws.jpg" style='width: 30em'/>
 </div>
- -->  
+ -->
  <!--
 <div figure-id="fig:part_A_finished" figure-caption="Assembled standoffs">
      <img src="part_A.jpg" style='width: 30em'/>
      </div>
- -->  
+ -->
 
 The bottom part of the Duckiebot's chassis is now ready. The next step is to assemble the Raspberry Pi on chassis-top part.
 
@@ -204,7 +204,9 @@ Note: Make sure the camera cable is inserted in the right direction! The metal p
 -->
 
 <!--
+
 Note: Insert the cable in the right direction to connect the camera to the Raspberry Pi.
+
 -->
 
 <div figure-id="fig:camera_with_long_cable" figure-caption="Camera with long cable">
@@ -269,7 +271,7 @@ Note: Use the provided metal screws from chassis package for fastening the chass
 
 Make sure the GPIO stacking header is carefully aligned with the underlying GPIO pins before applying pressure.
 
-Note: In case with short camera cable, ensure that you doesnt break the cable while mounting the HAT on the Raspberry Pi. In case with long camera cable, 
+Note: In case with short camera cable, ensure that you doesn't break the cable while mounting the HAT on the Raspberry Pi. In case with long camera cable,
 
 
 <div figure-id="fig:GPIO_header" figure-caption="Assembled DC motor hat with short camera cable">
