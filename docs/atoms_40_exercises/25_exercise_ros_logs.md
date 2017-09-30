@@ -64,7 +64,7 @@ returns the time (in seconds) as a floating number.
 ## Test that it works
 
 Download the ROS bag
-[`example_rosbag_H3.bag`](https://www.dropbox.com/s/r5so1tvzk4ep6f0/example_rosbag_H3.bag?dl=1).
+[`example_rosbag_H3.bag`](https://www.dropbox.com/s/11t9p8efzjy1az9/example_rosbag_H3.bag?dl=1).
 Run your program on it and compare the results:
 
     $ dt-bag-analyze example_rosbag.bag
