@@ -398,6 +398,9 @@ fall2017-split:
 	   --mathjax \
 	   --preamble $(tex-symbols)
 
+duckuments-bot:
+	python misc/slack_message.py
+
 fall2017: checks update-mcdp update-software
 	$(MAKE) fall2017-prepare
 	$(MAKE) fall2017-compose
