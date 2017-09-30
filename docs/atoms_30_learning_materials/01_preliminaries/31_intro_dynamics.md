@@ -1,3 +1,3 @@
 # Dynamics {#intro-dynamics status=draft}
 
-Assigned: Jacopo
+Assigned: Harshit

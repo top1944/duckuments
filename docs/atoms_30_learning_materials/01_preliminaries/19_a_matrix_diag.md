@@ -1,5 +1,7 @@
 # Matrix diagonalization {#matrix-diagonalization status=draft}
 
+Assigned: Dzenan
+
 - singular value decomposition SVD (topic for advanced-linear-algebra?)
 
 ### Preferred spaces (matrix diagonalization)

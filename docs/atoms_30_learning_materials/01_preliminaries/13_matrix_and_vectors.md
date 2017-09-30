@@ -1,6 +1,6 @@
 # Matrices and vectors {#mats-and-vecs status=draft}
 
-Assigned: Jacopo
+Assigned: Dzenan
 
 - matrix-vector product
 
