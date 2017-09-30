@@ -33,11 +33,11 @@ def go(path):
         logger.error(msg)
     else:
         job_list = parse_job_list(args, context=context, cq=cq)
-
+        s = ""
         if job_list:
             job_list = job_list[:2]
-            s += 'Hostname: %s' % hostname
-            s += "Job failed in path %s" % path
+            s += 'Running on host: %s' % hostname
+            s += "\nJob failed in path %s" % path
             for job_id in job_list:
                 if job_cache_exists(job_id, db):
                     cache = get_job_cache(job_id, db)
