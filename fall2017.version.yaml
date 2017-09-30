@@ -66,8 +66,8 @@ recipe:
   except: # except wheel-calibration
   - duckiebot-ubuntu-image
   - wheel-calibration
-  - acquiring-parts-c0
   - soldering-boards-c0
+  # - acquiring-parts-c0
 
 - add: building-duckiebot-c1
 
