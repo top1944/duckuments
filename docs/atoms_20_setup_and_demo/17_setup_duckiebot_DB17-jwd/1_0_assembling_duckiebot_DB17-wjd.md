@@ -48,12 +48,12 @@ Insert the motor holders on the chassis-bottom and put the motors as shown in th
      <img src="motors.jpg" style='width: 30em'/>
 </div>
 
-<div figure-id="fig:scratch_motors" figure-caption=" ">
-     <img src="scratch_motors.png" style='width: 30em'/>
+<div figure-id="fig:scratch_motors" figure-caption="The scratch of assembling the motor">
+     <img src="scratch_motors.png" style='width: 25em'/>
 </div>
 
-<div figure-id="fig:motors1" figure-caption=" ">
-     <img src="motors1.jpg" style='width: 30em'/>
+<div figure-id="fig:motors1" figure-caption="Assembled motor">
+     <img src="motors1.jpg" style='width: 25em'/>
 
 </div>
 
@@ -74,9 +74,8 @@ Plug in the wheels to the motor as follows (no screws needed):
         <img src="scratch_wheels.png" style='width: 30em'/>
     </div>
 
-    <div figure-id="fig:wheels" figure-caption="Assembled wheels">
-        <img src="wheels.jpg" style='width: 30em'/>
-    </div>
+<div figure-id="fig:wheels" figure-caption="Assembled wheels">
+    <img src="wheels.jpg" style='width: 25em'/>
 </div>
 
 ### Omni-directional wheel
@@ -92,6 +91,7 @@ The Magician chassis package contains a steel omni-directional wheel, and the re
 <div figure-id="fig:omni" figure-caption="Assembled omni-directional wheel">
      <img src="omni.jpg" style='width: 30em'/>
 </div>
+
 
 <!--
 #### Caster wheel
@@ -114,15 +114,26 @@ TODO: add instructions for Caster wheel assembly and move them to DB17-cl assemb
 
 ### Mounting the standoffs
 
-Put the car upright (omni wheel pointing towards the table) and arrange wires so that they go through the center rectangle. Put 4 spacers with 4 of M3x6 screws on each corner as below.
+Put the car upright (omni wheel pointing towards the table) and arrange wires so that they go through the center rectangle. Put 4 spacers with 4 of M3x6 screws on exact position of each corner as below [](#fig:assembled_spacers).
 
+
+<div figure-id="fig:screws" figure-caption="Metal spacers and M3x6mm screws">
+     <img src="chassi_screws.jpg" style='width: 25em'/>
+</div>
+
+<div figure-id="fig:assembled_spacers" figure-caption="The spacers on each corner of the chassis-bottom">
+     <img src="assembled_spacers.jpg" style='width: 25em'/>
+</div>
+<!--
 <div figure-id="fig:screws" figure-caption="Magician chassis package standoffs and screws">
      <img src="chassi_screws.jpg" style='width: 30em'/>
 </div>
-
-<div figure-id="fig:part_A_finished" figure-caption="Assembled standoffs ">
+ -->  
+ <!--
+<div figure-id="fig:part_A_finished" figure-caption="Assembled standoffs">
      <img src="part_A.jpg" style='width: 30em'/>
-</div>
+     </div>
+ -->  
 
 The bottom part of the Duckiebot's chassis is now ready. The next step is to assemble the Raspberry Pi on chassis-top part.
 
@@ -141,29 +152,29 @@ When this is done fasten the nylon standoffs on the Raspberry Pi, and secure the
 </div>
 
 <div figure-id="fig:Raspberry_pi3_heatsinks" figure-caption="Heat sink on Raspberry Pi3 ">
-     <img src="RPi_3_heatsinks.jpg" style='width: 30em'/>
+     <img src="RPi_3_heatsinks.jpg" style='width: 25em'/>
 </div>
 
-<div figure-id="fig:SideView_Raspberry_pi3" figure-caption="Standoffs for Raspberry Pi3">
-     <img src="side_RPi_3.jpg" style='width: 30em'/>
+<div figure-id="fig:SideView_Raspberry_pi3" figure-caption="Nylon standoffs for Raspberry Pi3">
+     <img src="side_RPi_3.jpg" style='width: 25em'/>
 </div>
 
-<div figure-id="fig:raspi_chassis_bottom" figure-caption="Attach the nylon huts for the standoffs (Bottom view)">
-     <img src="raspi_chassis_bottom.jpg" style='width: 30em'/>
+<div figure-id="fig:raspi_chassis_bottom" figure-caption="Attach the nylon huts for the standoffs (bottom view)">
+     <img src="raspi_chassis_bottom.jpg" style='width: 25em'/>
 </div>
 
-<div figure-id="fig:raspi_chassis_up" figure-caption="Top view of assembled Raspberry Pi3 ">
-     <img src="raspi_chassis_up.jpg" style='width: 30em'/>
+<div figure-id="fig:raspi_chassis_up" figure-caption="Assembled Raspberry Pi3 (top view) ">
+     <img src="raspi_chassis_up.jpg" style='width: 25em'/>
 </div>
 
-#### Micro SD card
+### Micro SD card
 
 Requires: Having the Duckiebot image copied in the micro SD card.
 
 Take the micro SD card from the Duckiebox and insert its slot on the Raspberry Pi. The SD card slot is just under the display port, on the short side of the PI, on the flip side of where the header pins are.
 
-<div figure-id="fig:SD_card" figure-caption="The Micro SD card and SD card readers">
-    <img src="sd_card.jpg" style='width: 30em'/>
+<div figure-id="fig:SD_card" figure-caption="The micro SD card and mirco SD card readers">
+    <img src="sd_card.jpg" style='width: 25em'/>
 </div>
 
 <div figure-id="fig:RASPI_SD" figure-caption="Inserted SD card">
@@ -178,17 +189,26 @@ Note: If you have camera cables of different lengths available, keep in mind tha
 
 First, identify the camera cable port on the Pi (between HDMI and power ports) and remove the orange plastic protection (it will be there if the Pi is new) from it. Then, grab the long camera cable (300 mm) and insert in the camera port. To do so, you will need to gently pull up on the black connector (it will slide up) to allow the cable to insert the port. Slide the connector back down to lock the cable in place, making sure it “clicks”.
 
-Protip: Make sure the camera cable is inserted in the right direction! The metal pins of the cable should be in contact with the metal terminals in the camera port of the PI.
+TODO: insert image with long cable
+
+<div figure-id="fig:raspi_camera_apart" figure-caption="Camera port on the Raspberry Pi and camera cable ">
+     <img src="raspi_camera_apart.jpg" style='width: 25em'/>
+</div>
+
+Note: Make sure the camera cable is inserted in the right direction! The metal pins of the cable should be in contact with the metal terminals in the camera port of the PI.
 
 <!--
 <div figure-id="fig:raspi_camera_apart" figure-caption=" ">
      <img src="raspi_camera_apart.jpg" style='width: 30em'/>
 </div>
+-->
 
+<!--
 Note: Insert the cable in the right direction to connect the camera to the Raspberry Pi.
 -->
+
 <div figure-id="fig:camera_with_long_cable" figure-caption="Camera with long cable">
-     <img src="ziptied_top_camera.jpg" style='width: 30em'/>
+     <img src="ziptied_top_camera.jpg" style='width: 25em'/>
 </div>
 
 #### The camera end
@@ -215,8 +235,8 @@ In order to fit the battery, we will need to extend the Magician chassis standof
 
 Secure the extended standoff to the 4 corners of the chassis-bottom.  The nylon standoffs should smoothly screw in the metal ones. If you feel resistance, don’t force it or the nylon screw might break in the metal standoff. In that case, unscrew the nylon spacer and try again.
 
-<div figure-id="fig:standoff_extender" figure-caption="4 nylon M3x5 Standoff Spacer and 4 M3x10 screws">
-     <img src="extender_screws.jpg" style='width: 30em'/>
+<div figure-id="fig:standoff_extender" figure-caption="4 nylon M3x5 extended standoffs and 4 M3x6 metal screws from Magician chassis package">
+     <img src="extender_screws.jpg" style='width: 25em'/>
 </div>
 
 ### Fasten the Battery with zip ties
@@ -228,22 +248,28 @@ Put the battery between the upper and lower decks of the chassis. It is strongly
 </div>
 
 
+TODO: new image without M-M cable
+
+
 ### Assemble chassis-bottom and chassis-up
 
 Arrange the motor wires through the chassis-up, which will be connected to Stepper Motor HAT later.
 
-<div figure-id="fig:bottom_up_enssemble" figure-caption=" ">
-     <img src="bottom_up_enssemble.jpg" style='width: 30em'/>
+<div figure-id="fig:bottom_up_enssemble" figure-caption="The motor wires go through the center of chassis-up">
+     <img src="bottom_up_enssemble.jpg" style='width: 25em'/>
 </div>
-<div figure-id="fig:screws_standoff" figure-caption=" ">
-     <img src="screw_standoffs.jpg" style='width: 30em'/>
+<div figure-id="fig:screws_standoff" figure-caption="Side view of metal screws and the extended standoffs">
+     <img src="screw_standoffs.jpg" style='width: 25em'/>
 </div>
 
 Note: Use the provided metal screws from chassis package for fastening the chassis-up above the nylon standoffs instead of the provided M3 nylon screws.
 
+
 ### Place the DC Motor hat on top of the Raspberry Pi
 
 Make sure the GPIO stacking header is carefully aligned with the underlying GPIO pins before applying pressure.
+
+Note: In case with short camera cable, ensure that you doesnt break the cable while mounting the HAT on the Raspberry Pi. In case with long camera cable, 
 
 
 <div figure-id="fig:GPIO_header" figure-caption="Assembled DC motor hat with short camera cable">
@@ -295,19 +321,19 @@ Note: If you have a `DB17-Montreal-a` or `DB17-Chicago-a` release, neglect this 
 With each joypad ([](#fig:joypad)) comes a joypad dongle ([](#fig:joypad_dongle)). Don't lose it!
 
 <div figure-id="fig:joypad" figure-caption="All components in the Joypad package">
-     <img src="joypad.jpg" style='width: 30em'/>
+     <img src="joypad.jpg" style='width: 25em'/>
 </div>
 
 Insert the joypad dongle into one of the USB port of the Raspberry Pi.
 
-<div figure-id="fig:joypad_dongle" figure-caption="">
-     <img src="joypad_dongle.jpg" style='width: 30em'/>
+<div figure-id="fig:joypad_dongle" figure-caption="The dongle on the Raspberry Pi">
+     <img src="joypad_dongle.jpg" style='width: 25em'/>
 </div>
 
 Insert 2 AA batteries on the back side of the joypad [](#fig:joypack_battery).
 
 <div figure-id="fig:joypack_battery" figure-caption="Joypad and 2 AA batteries">
-     <img src="joypack_battery.jpg" style='width: 30em'/>
+     <img src="joypack_battery.jpg" style='width: 25em'/>
 </div>
 
 ## FAQ {#op-assembly-db17jwd-faq}
