@@ -49,13 +49,14 @@ def go(path):
                         why = str(cache.exception).strip()
                     else:
                         why = 'No why for job done.'
-                    s += '\n' + indent(why, '| ')
+                    s += '\n' + "```\n"+why+"\n```"
                     s += '\n\n'
                 else:
                     logger.warning('no cache for %s' % job_id)
 
+            s += '\n@censi'
             print(s)
-            slack.chat.post_message(channel, s)
+            slack.chat.post_message(channel, s, link_names=1)
 
         else:
             s = 'Everything is fine'
