@@ -185,11 +185,7 @@ Then reboot the Raspberry Pi using the command
 
     $ sudo reboot
 
-After reboot, log in again, and run the command `hostname` to check that the
-change has persisted:
-
-    $ hostname
-    ![robot name]
+After reboot, you should now be able to connect to the robot with the new hostname if your changes were successful!
 
 ## Expand your filesystem {#expand-filesystem}
 
