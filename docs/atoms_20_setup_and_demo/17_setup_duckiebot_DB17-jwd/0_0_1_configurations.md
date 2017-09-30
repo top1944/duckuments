@@ -49,7 +49,9 @@ Note: During the Fall 2017 course, three Duckietown Engineering Co. branches (Zu
 
 This is the minimal configuration for a Duckiebot. It is the configuration of choice for tight budgets or when operation of a single Duckiebot is more of interest than fleet behaviors.
 
+
 - **Functions**: A `DB17` Duckiebot can navigate autonomously in a Duckietown, but cannot communicate with other Duckiebots.
+
 
 - **Components**: A "bare-bones" `DB17` configuration includes:
 
@@ -81,13 +83,16 @@ This is the minimal configuration for a Duckiebot. It is the configuration of ch
 
 - **Description of components**: [](#acquiring-parts-c0)
 
+
 - **Assembly instructions**: [](#assembling-duckiebot-c0)
 
 ### `DB17-w`
 
 This configuration is the same as `DB17` with the _addition_ of a 5 Ghz wireless adapter.
 
+
 - **Functions**: This configuration has the same functionality of `DB17`. In addition, it equips the Duckiebot with a secondary, faster, Wi-Fi connection, ideal for image streaming.
+
 
 - **Components**:
 
@@ -104,15 +109,19 @@ This configuration is the same as `DB17` with the _addition_ of a 5 Ghz wireless
 
 - **Description of components**: [](#acquiring-parts-c0)
 
+
 - **Assembly instructions**: [](#assembling-duckiebot-c0)
 
 ### `DB17-j`
 
 This configuration is the same as `DB17` with the _addition_ of a 2.4 GHz wireless joypad.
 
+
 - **Functions**: This configuration has the same functionality of `DB17`. In addition, it equips the Duckiebot with manual remote control capabilities. It is particularly useful for getting the Duckiebot our of tight spots or letting younger ones have a drive, in addition to providing handy shortcuts to different functions in development phase.
 
+
 - **Components**:
+
 
 <div markdown="1">
 
@@ -127,15 +136,19 @@ This configuration is the same as `DB17` with the _addition_ of a 2.4 GHz wirele
 
 - **Description of components**: [](#acquiring-parts-c0)
 
+
 - **Assembly instructions**: [](#assembling-duckiebot-c0)
 
 ### `DB17-d`
 
 This configuration is the same as `DB17` with the _addition_ of a USB flash hard drive.
 
+
 - **Functions**: This configuration has the same functionality of `DB17`. In addition, it equips the Duckiebot with an external hard drive that is convenient for storing videos (logs) as it provides both extra capacity and faster data transfer rates than the microSD card in the Raspberry Pi. Moreover, it is easy to unplug it from the Duckiebot at the end of the day and bring it over to a computer for downloading and analyzing stored data.
 
+
 - **Components**:
+
 
 <div markdown="1">
 
@@ -150,13 +163,16 @@ This configuration is the same as `DB17` with the _addition_ of a USB flash hard
 
 - **Description of components**: [](#acquiring-parts-c0)
 
+
 - **Assembly instructions**: [](#assembling-duckiebot-c0)
 
 ### `DB17-c`
 
 In this configuration, the `DB17` omni-directional wheel is _replaced_ with a caster wheel.
 
+
 - **Functions**: The caster wheel upgrade provides a smoother ride.
+
 
 - **Components**:
 
@@ -176,11 +192,11 @@ In this configuration, the `DB17` omni-directional wheel is _replaced_ with a ca
 
 TODO: update links of mechanical bits from M3.5 to M3.
 
-
 Note: The omni-directional caster wheel is included in the chassis package, so replacing it does not reduce the `DB17` cost.
 
 
 - **Description of components**: [](#acquiring-parts-c1)
+
 
 - **Assembly instructions**: [](#assembling-duckiebot-c1)
 
@@ -196,7 +212,9 @@ It may be convenient at times to refer to hybrid configurations including any of
 
 Note: introducing the PWM hat in `DB17-l1` induces a _replacement_ of the [spliced cable](#power-cable-prep-c0) powering solution for the DC motor hat. Details can be found in [](#assembling-duckiebot-c1).
 
+
 - **Functions**: `DB17-l` is the necessary configuration to enable communication between Duckiebots, hence fleet behaviors (e.g., negotiating the crossing of an intersection). Subset configurations are sometimes used in a standalone way for: (`DB17-l1`) avoid using a sliced power cable to power the DC motor hat in `DB17`, and (`DB17-l2`) for purely aesthetic reasons.
+
 
 - **Components**:
 
@@ -230,6 +248,7 @@ Note: introducing the PWM hat in `DB17-l1` induces a _replacement_ of the [splic
 
 
 - **Description of components**: [](#acquiring-parts-c1)
+
 
 - **Assembly instructions**: [](#assembling-duckiebot-c1)
 
