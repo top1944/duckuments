@@ -5,6 +5,8 @@ from mcdp import logger
 from compmake.jobs.storage import job_cache_exists, get_job_cache
 from compmake.structures import Cache
 from contracts.utils import indent
+import socket
+hostname = socket.gethostname()
 # read token
 where = '~/slack-token.txt'
 where = os.path.expanduser(where)
@@ -21,7 +23,6 @@ from compmake.jobs.uptodate import CacheQueryDB
 from compmake.context import Context
 
 def go(path):
-
     db = StorageFilesystem(path, compress=True)
     args = ['failed']
     cq= CacheQueryDB(db)
@@ -34,7 +35,8 @@ def go(path):
 
         if job_list:
             job_list = job_list[:2]
-            s = "Job failed in path %s" % path
+            s += 'Hostname: %s' % hostname
+            s += "Job failed in path %s" % path
             for job_id in job_list:
                 if job_cache_exists(job_id, db):
                     cache = get_job_cache(job_id, db)
@@ -43,7 +45,6 @@ def go(path):
                     s += "\nFailure of job %s" % job_id
 
                     if cache.state in [Cache.FAILED, Cache.BLOCKED]:
-
                         why = str(cache.exception).strip()
                     else:
                         why = 'No why for job done.'
