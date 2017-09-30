@@ -31,7 +31,7 @@ Assigned: Andrea
 
 Go to the directory you want. If you just use:
 
-	laptop $ cd
+    laptop $ cd
 
 then you will go to your home directory, i.e., ~
 
