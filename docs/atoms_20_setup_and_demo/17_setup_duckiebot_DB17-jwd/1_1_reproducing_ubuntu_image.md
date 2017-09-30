@@ -2,9 +2,12 @@
 
 These are the instructions to reproduce the Ubuntu image that we use.
 
-Please note that the image is already available, so you don't need to do this manually.
+Note: Please note that the image is already available, so you don't need to do this.
 
-However, this documentation might be useful if you would like to port the software to a different distribution.
+However, this documentation is useful if you would like to port the software to a different distribution.
+Also, we periodically run through these instructions to make sure that they work.
+
+Note: Just in case, let's re-state this: in Fall 2017, you don't necessarily need to do the following.
 
 <div class='requirements' markdown="1">
 

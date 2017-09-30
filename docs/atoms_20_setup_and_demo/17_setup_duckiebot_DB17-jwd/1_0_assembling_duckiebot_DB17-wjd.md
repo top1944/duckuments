@@ -207,7 +207,7 @@ Protip: make sure that the camera mount is: (a) geometrically centered on the ch
      <img src="camera_raspi_enssemble.jpg" style='width: 30em'/>
 </div>
 
-Note: make sure that the cable is oriented in this direction (writing towards the CPU). Otherwise you will have to disassemble the whole thing later.
+Note: make sure that the cable is oriented in this direction (writing towards the CPU). Otherwise you will have to disassemble the whole thing later. This is only the case for the short cable! On the long cable the writing is on the other side.
 
 
 ### Extending the intra-decks standoffs
