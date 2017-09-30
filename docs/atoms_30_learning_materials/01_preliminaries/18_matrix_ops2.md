@@ -1,6 +1,6 @@
 # Matrix operations (complex) {#matrix-ops-complex status=draft}
 
-Assigned: Jacopo
+Assigned: Dzenan
 
 - matrix scalar product
 - matrix Hadamart product

@@ -1,6 +1,6 @@
 # Matrices basics {#matrix-definitions status=draft}
 
-Assigned: Jacopo
+Assigned: Dzenan
 
 <div class='requirements' markdown='1'>
 
@@ -101,4 +101,3 @@ The null, or Zero, matrix is a matrix whos elements are all zeros.
 ## Rank of a matrix {#intro-matrix-rank}
 
 ## Trace of a matrix {#intro-matrix-trace}
-

@@ -55,8 +55,6 @@ Next Steps: After receiving these components, you are ready to do some [solderin
 
 </div>
 
-TODO: add links to Bumpers: (a) bumper design files; (b) one-click purchasing option (?)
-
 <style>
 #materials {
     font-size: 80%;

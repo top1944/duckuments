@@ -1,1 +1,1 @@
-# Operation manual - Duckiebot with LEDs  {#part:building-duckiebot-c1}
+# Operation manual - `DB17-lc` Duckiebot configurations {#part:building-duckiebot-c1}
