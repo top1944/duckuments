@@ -23,7 +23,7 @@ from compmake.context import Context
 def go(path):
 
     db = StorageFilesystem(path, compress=True)
-    args = ['done']
+    args = ['failed']
     cq= CacheQueryDB(db)
     context = Context(db)
     if not list(db.keys()):
