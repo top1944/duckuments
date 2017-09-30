@@ -29,7 +29,11 @@ Assigned: Andrea
 
 ## `cd` {#cd}
 
-TODO: to write
+Go to the directory you want. If you just use:
+
+    laptop $ cd
+
+then you will go to your home directory, i.e., ~
 
 ## `sudo` {#sudo}
 
@@ -44,6 +48,7 @@ TODO: to write
 TODO: to write
 
 ## `mkdir` {#mkdir}
+
 
 TODO: to write
 
