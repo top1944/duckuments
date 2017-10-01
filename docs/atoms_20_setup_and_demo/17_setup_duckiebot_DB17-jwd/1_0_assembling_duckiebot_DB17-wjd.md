@@ -52,7 +52,7 @@ Insert the motor holders on the chassis-bottom and put the motors as shown in th
      <img src="scratch_motors.png" style='width: 25em'/>
 </div>
 
-<div figure-id="fig:motors1" figure-caption="Assembled motor">
+<div figure-id="fig:motors1" figure-caption="Assembled motors">
      <img src="motors1.jpg" style='width: 25em'/>
 </div>
 
@@ -70,11 +70,11 @@ Plug in the wheels to the motor shafts as follows (no screws needed):
     <figcaption>Wheel assembly instructions</figcaption>
 
     <div figure-id="fig:scratch_wheels" figure-caption="Wheel assembly schematics">
-        <img src="scratch_wheels.png" style='width: 15em'/>
+        <img src="scratch_wheels.png" style='width: 20em'/>
     </div>
 
     <div figure-id="fig:wheels" figure-caption="Assembled wheels">
-        <img src="wheels.jpg" style='width: 15em'/>
+        <img src="wheels.jpg" style='width: 20em'/>
     </div>
 </div>
 
@@ -114,7 +114,7 @@ TODO: add instructions for Caster wheel assembly and move them to DB17-cl assemb
 
 -->
 
-### Mounting the standoffs
+### Mounting the spacers
 
 Put the car upright (omni wheel pointing towards the table) and arrange wires so that they go through the center rectangle. Put 4 spacers with 4 of M3x6 screws on exact position of each corner as below [](#fig:assembled_spacers).
 
@@ -171,9 +171,9 @@ When this is done fasten the nylon standoffs on the Raspberry Pi, and secure the
 
 ### Micro SD card
 
-Requires: Having the Duckiebot image copied in the micro SD card.
+Take the micro SD ([](#fig:SD_card)) card from the Duckiebox and insert it in the dedicated slot on the back of the Raspberry Pi. The SD card slot is just under the "display" port (which looks similar to the "camera" port), on the short side of the Raspberry Pi.
 
-Take the micro SD card from the Duckiebox and insert its slot on the Raspberry Pi. The SD card slot is just under the display port, on the short side of the PI, on the flip side of where the header pins are.
+Note: It is important at this stage to have the system image already installed on the micro SD card: [](#duckiebot-ubuntu-image).
 
 <div figure-id="fig:SD_card" figure-caption="The micro SD card and mirco SD card readers">
     <img src="sd_card.jpg" style='width: 25em'/>
@@ -191,13 +191,11 @@ Note: If you have camera cables of different lengths available, keep in mind tha
 
 First, identify the camera cable port on the Pi (between HDMI and power ports) and remove the orange plastic protection (it will be there if the Pi is new) from it. Then, grab the long camera cable (300 mm) and insert in the camera port. To do so, you will need to gently pull up on the black connector (it will slide up) to allow the cable to insert the port. Slide the connector back down to lock the cable in place, making sure it “clicks”.
 
-TODO: insert image with long cable
-
-<div figure-id="fig:raspi_camera_apart" figure-caption="Camera port on the Raspberry Pi and camera cable ">
+<div figure-id="fig:raspi_camera_apart" figure-caption="Camera port on the Raspberry Pi and short camera cable">
      <img src="raspi_camera_apart.jpg" style='width: 25em'/>
 </div>
 
-Note: Make sure the camera cable is inserted in the right direction! The metal pins of the cable should be in contact with the metal terminals in the camera port of the PI.
+Note: Make sure the camera cable is inserted in the right direction! The metal pins of the cable should be in contact with the metal terminals in the camera port of the Raspberry Pi.
 
 <!--
 <div figure-id="fig:raspi_camera_apart" figure-caption=" ">
@@ -211,7 +209,7 @@ Note: Insert the cable in the right direction to connect the camera to the Raspb
 
 -->
 
-<div figure-id="fig:camera_with_long_cable" figure-caption="Camera with long cable">
+<div figure-id="fig:camera_with_long_cable" figure-caption="Camera port on the Raspberry Pi and long, ziptied, camera cable">
      <img src="ziptied_top_camera.jpg" style='width: 25em'/>
 </div>
 
@@ -233,14 +231,18 @@ Protip: make sure that the camera mount is: (a) geometrically centered on the ch
 
 Note: If you only have a short camera cable, make sure that the cable is oriented in this direction (text on cable towards the CPU). Otherwise you will have to disassemble the whole thing later. On the long cable the writing is on the other side.
 
-### Extending the intra-decks standoffs
+### Extending the intra-decks spacers
 
 In order to fit the battery, we will need to extend the Magician chassis standoffs with the provided nylon standoff spacers. Grab 4 of them, and secure them to one end of the long metal standoffs provided in the Magician chassis package.
 
 Secure the extended standoff to the 4 corners of the chassis-bottom.  The nylon standoffs should smoothly screw in the metal ones. If you feel resistance, don’t force it or the nylon screw might break in the metal standoff. In that case, unscrew the nylon spacer and try again.
 
-<div figure-id="fig:standoff_extender" figure-caption="4 nylon M3x5 extended standoffs and 4 M3x6 metal screws from Magician chassis package">
+<div figure-id="fig:standoff_extender" figure-caption="4 nylon M3x5 extended standoffs and 4 M3x6 metal screws from the chassis package">
      <img src="extender_screws.jpg" style='width: 25em'/>
+</div>
+
+<div figure-id="fig:extended-spacers-db17" figure-caption="An assembled Duckiebot with extended spacers">
+     <img src="spacers-metal-screws.jpg" style='width: 25em'/>
 </div>
 
 ### Fasten the battery with zip ties
