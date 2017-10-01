@@ -52,7 +52,6 @@ and install all the missing packages (if any), we can run the following script:
 
 This command will install only the packages that are not already installed in your system.
 
-
 ## Set up the ROS environment on the Duckiebot {#build-repo}
 
 All the following commands should be run in the `~/duckietown` directory:
@@ -71,6 +70,7 @@ See also: For more information about `catkin_make`, see [](#catkin_make).
 
 Note: there is a known bug, for which it fails the first time on the Raspberry Pi. Try again; it will work.
 
+Comment: I got no error on first execution on the Raspberry Pi
 
 <!-- (you have to be under the `catkin_ws` folder to invoke `catkin_make`) -->
 
