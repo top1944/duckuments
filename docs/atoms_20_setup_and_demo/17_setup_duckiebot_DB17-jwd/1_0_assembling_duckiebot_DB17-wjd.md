@@ -10,7 +10,7 @@ Requires: Duckiebot `DB17-wjd` parts. The acquisition process is explained in []
 
 Requires: Having soldered the `DB17-wjd` parts. The soldering process is explained in [](#soldering-boards-c0).
 
-Requires: Having prepared the power cable. The power cable preparation is explained in [](#power-cable-prep-c0). Note: Not necessary if you intend to build a `DB17-l` configuration.
+Requires: Having prepared the power cable. The power cable preparation is explained in [](#power-cable-prep-c0). Note: Not necessary if you intend to build a `DB17-l` or `DB17-l1` configurations.
 
 Requires: Having installed the image on the MicroSD card. The instructions on how to reproduce the Duckiebot system image are in [](#duckiebot-ubuntu-image).
 
@@ -62,36 +62,38 @@ Note: if your Magician Chassis package has unsoldered motor wires, you will have
 
 TODO: make instructions for soldering motor wires
 
-### Wheels
+### Duckiebot wheels
 
-Plug in the wheels to the motor as follows (no screws needed):
+Plug in the wheels to the motor shafts as follows (no screws needed):
 
-<div figure-id="fig:horizontal">
+<div figure-id="fig:db17-wheels">
     <figcaption>Wheel assembly instructions</figcaption>
 
     <div figure-id="fig:scratch_wheels" figure-caption="Wheel assembly schematics">
-        <img src="scratch_wheels.png" style='width: 30em'/>
+        <img src="scratch_wheels.png" style='width: 15em'/>
     </div>
 
     <div figure-id="fig:wheels" figure-caption="Assembled wheels">
-        <img src="wheels.jpg" style='width: 25em'/>
+        <img src="wheels.jpg" style='width: 15em'/>
     </div>
 </div>
 
 ### Omni-directional wheel
 
-The Duckiebot is driven by controlling the wheels attached to the DC motors. Still, it requires a "passive" omni-directional wheel (the _caster_ wheel) on the back.
+The Duckiebot is driven by controlling the wheels attached to the DC motors. Still, it requires a "passive" omni-directional wheel on the back.
 
 The Magician chassis package contains a steel omni-directional wheel, and the related standoffs and screws to secure it to the chassis-bottom part.
 
-<div figure-id="fig:scratch_omni" figure-caption="The omni-directional wheel schematics">
-     <img src="scratch_omni.png" style='width: 30em'/>
-</div>
+<div figure-id="fig:db17-omni-wheel">
+    <figcaption>Omni-directional wheel assembly instructions</figcaption>
+  <div figure-id="fig:scratch_omni" figure-caption="The omni-directional wheel schematics">
+       <img src="scratch_omni.png" style='width: 20em'/>
+  </div>
 
-<div figure-id="fig:omni" figure-caption="Assembled omni-directional wheel">
-     <img src="omni.jpg" style='width: 30em'/>
+  <div figure-id="fig:omni" figure-caption="Assembled omni-directional wheel">
+       <img src="omni.jpg" style='width: 20em'/>
+  </div>
 </div>
-
 
 <!--
 #### Caster wheel
@@ -241,17 +243,15 @@ Secure the extended standoff to the 4 corners of the chassis-bottom.  The nylon 
      <img src="extender_screws.jpg" style='width: 25em'/>
 </div>
 
-### Fasten the Battery with zip ties
+### Fasten the battery with zip ties
 
-Put the battery between the upper and lower decks of the chassis. It is strongly recommended to secure the battery from moving using zip ties.
+Put the battery between the upper and lower decks of the chassis. It is strongly recommended to secure the battery from moving using zip ties ([](#battery-zipties)).
 
 <div figure-id="fig:battery-zipties" figure-caption="Secure the battery to the chassis-top through the provided zipties. One can do the trick, two are better.">
-     <img src="placeholder.jpg" style='width: 30em'/>
+     <img src="battery-zip-2.jpg" style='width: 30em'/>
 </div>
 
-
-TODO: new image without M-M cable
-
+Note: [](#battery-zipties) shows an example of how to arrange the long camera cable as well.
 
 ### Assemble chassis-bottom and chassis-up
 
@@ -271,14 +271,16 @@ Note: Use the provided metal screws from chassis package for fastening the chass
 
 Make sure the GPIO stacking header is carefully aligned with the underlying GPIO pins before applying pressure.
 
-Note: In case with short camera cable, ensure that you doesn't break the cable while mounting the HAT on the Raspberry Pi. In case with long camera cable,
-
+Note: In case you are using the short camera cable, ensure that you don't break the cable while mounting the HAT on the Raspberry Pi ([](#fig:GPIO_header)). In case with long camera cable, you should have plenty of maneuvering space ([](#fig:GPIO_header_long)).
 
 <div figure-id="fig:GPIO_header" figure-caption="Assembled DC motor hat with short camera cable">
      <img src="GPIO_header.jpg" style='width: 30em'/>
 </div>
 
-TODO: insert pic with long camera cable
+<div figure-id="fig:GPIO_header_long" figure-caption="Assembled DC motor hat with long camera cable">
+     <img src="GPIO_header_long.jpg" style='width: 30em'/>
+</div>
+
 <!--
 <div figure-id="fig:GPIO_upview" figure-caption=" ">
      <img src="GPIO_upview.jpg" style='width: 30em'/>
@@ -287,12 +289,18 @@ TODO: insert pic with long camera cable
 
 ### Connect the motor's wires to the terminal
 
-We are using M1 and M2 terminals on the DC motor hat. The left (in robot frame) motor is connected to M1 and the right motor is connected to M2. If you have followed Part A correctly, the wiring order will look like as following pictures:
+We are using M1 and M2 terminals on the DC motor hat. The left (in robot frame) motor is connected to M1 and the right motor is connected to M2. If you have followed the instructions carefully, the wiring order will look like as in [](#fig:motor-wiring-2-dc-hat):
+
+<div figure-id="fig:motor-wiring-2-dc-hat" figure-caption="Insert the prepared power wire to DC motor HAT power pins">
+     <img src="motors-wiring-motor-hat.jpg" style='width: 30em'/>
+</div>
+
+with the motor cables ordered in the following way:
 
 - Left Motor: Red
 - Left Motor: Black
 - Right Motor: Black
-- Right Motor:Red
+- Right Motor: Red.
 
 <!--
 ### Power supply for DC motor HAT
@@ -313,7 +321,11 @@ Connect the **battery** (not the Raspberry Pi) with the DC motor HAT by making s
 Fix all the cables on the Duckiebot so that it can run on the way without barrier.
 
 <div figure-id="fig:Stepper_cable" figure-caption="Insert the prepared power wire to DC motor HAT power pins.">
-     <img src="Stepper_cable.jpg" style='width: 30em'/>
+     <img src="Stepper_cable.jpg" style='width: 20em'/>
+</div>
+
+<div figure-id="fig:final-result-power-c0" figure-caption="Connect the power wires to the DC motor HAT">
+     <img src="final-result-power-c0.jpg" style='width: 20em'/>
 </div>
 
 Note: If you have a `DB17-Montreal-a` or `DB17-Chicago-a` release, neglect this step and follow the pertinent instructions in [](#assembling-duckiebot-c1) regarding the assembly of the PWM hat, its powering through the short angled USB cable, and the power transfer step using a M-M wire.
