@@ -1,5 +1,7 @@
 # Sets {#sets status=draft}
 
+Assigned: Dzenan
+
 <div class='requirements' markdown='1'>
 
 Result: k:sets

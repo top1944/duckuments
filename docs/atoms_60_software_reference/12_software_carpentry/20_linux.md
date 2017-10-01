@@ -29,7 +29,11 @@ Assigned: Andrea
 
 ## `cd` {#cd}
 
-TODO: to write
+Go to the directory you want. If you just use:
+
+    laptop $ cd
+
+then you will go to your home directory, i.e., ~
 
 ## `sudo` {#sudo}
 
@@ -44,6 +48,7 @@ TODO: to write
 TODO: to write
 
 ## `mkdir` {#mkdir}
+
 
 TODO: to write
 
@@ -295,3 +300,30 @@ TODO: to write
 ## `fc-cache` {#fc-cache}
 
 TODO: to write
+
+
+# Mounting USB drives {#mounting-usb status=ready}
+
+First **plub in the USB drive** nothing will work if you don't do that first. Now ssh into your robot. On the command line type:
+
+    duckiebot $ lsusb
+    
+you should see your Sandisk USB drive as an entry. Congrats, you correctly plugged it in
+
+    duckiebot $ lsblk
+    
+Under name you should see `sda1`, with size about 28.7GB and nothing under the `MOUNTPOINT` column (if you see something under `MOUNTPOINT` congrats you are done.
+
+Next make a directory to mount to:
+
+    duckiebot $ sudo mkdir /media/logs
+    
+Next mount the drive
+
+    duckiebot $ sudo mount -t vfat /dev/sda1 /media/logs -o umask=000
+    
+Test by running `lsblk` again and you should now see `/media/logs` under `MOUNTPOINT`
+
+## Unmounting a USB drive {#unmount-usb}
+
+    duckiebot $ sudo umount /media/logs

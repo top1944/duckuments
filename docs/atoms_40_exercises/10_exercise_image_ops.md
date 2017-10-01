@@ -7,7 +7,7 @@ Assigned: Andrea Daniele
 - Accessing command line arguments.
 - Reading and writing files.
 - Working with pixel-based image representations.
-- OpenCV and `duckietown_utils` API for reading/writing images.
+- OpenCV and `duckietown_utils` APIs for reading/writing images.
 
 
 ## Instructions

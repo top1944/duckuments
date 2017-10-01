@@ -12,21 +12,19 @@ In general, keep in mind that:
 
 <div class='requirements' markdown="1">
 
-Requires: Cost: USD ?? + Shipping Fees
+Requires: Cost: USD ??? + Shipping Fees
 
-Requires: Time: ?? days (average shipping time)
+Requires: Time: ??? days (average shipping time)
 
 Results:  A kit of parts ready to be assembled in a traffic light.
 
-Next Steps: [Assemblying](#traffic-light-assembly) a traffic light.
+Next Steps: [Assembling](#traffic-light-assembly) a traffic light.
 </div>
 
 TODO: Estimate time and costs
 
 ## Bill of materials
-
-[//]: #   (test comment)
-
+ 
 <div markdown="1">
  <col2 id='materials-traffic-light' figure-id="tab:materials-traffic-light" figure-caption="Bill of materials for traffic light">
     <s>Raspberry Pi</s>                         <s>USD ??</s>
@@ -40,10 +38,10 @@ TODO: Complete table
 </div>
 
 <style>
-#materials {
+#materials-traffic-light {
     font-size: 80%;
 }
-#materials TD {
+#materials-traffic-light td {
     text-align: left;
 }
 </style>
