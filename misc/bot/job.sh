@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ux
+set -ue
 
 jobname=$1
 target=$2
