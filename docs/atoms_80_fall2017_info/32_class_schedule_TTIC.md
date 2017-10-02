@@ -19,8 +19,6 @@ Please help us making the experience better by [providing feedback (can be anony
 
 * [](#part:duckietown-project)
 
-* [](#autonomous-vehicles)
-
 * [](#autonomy-overview)
 
 
@@ -62,6 +60,31 @@ As you name your Duckiebots, please consider the following constraints:
 ### Feedback Form
 
 Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+## Monday, October 2: Modern Robotic Systems
+
+### Lecture Content
+
+* Logistics ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-02-ttic-a-logistics.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-02-ttic-a-logistics.pdf))
+* Autonomous Vehicles ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-02-ttic-b-autonomous_vehicles.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-02-ttic-b-autonomous_vehicles.pdf))
+* Modern Robotic Systems ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-02-ttic-c-modern_robotic_systems.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-02-ttic-c-modern_robotic_systems.pdf))
+* System Architecture Basics ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-02-ttic-d-system_architecture_basics.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-02-ttic-d-system_architecture_basics.pdf))
+
+
+### Reading Material
+
+* [](#part:autonomous-vehicles)
+
+* [](#part:modern-robotic-systems)
+
+* [](#part:system-architecture-basics)
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
 
 
 ##  (Template for every lecture) Date: Topic {status=draft}
