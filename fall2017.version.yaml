@@ -44,6 +44,7 @@ recipe:
   contents:
   - add: probability_basics
   - add: linear_algebra
+  
 
 - make-part: intro-to-autonomy
   title: Introduction to autonomy
@@ -54,6 +55,10 @@ recipe:
   - add: autonomy-architectures
   - add: representations
   - add: duckiebot-modeling
+  - add: CV_basics
+  - add: camera-geometry
+  - add: camera-calibration
+  - add: image-filtering
 
 - make-part: reference
   title: Reference Material
