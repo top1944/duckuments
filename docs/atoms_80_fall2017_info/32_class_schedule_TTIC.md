@@ -35,7 +35,7 @@ See: [](#onboarding-fall2017)
 
 ## Wednesday, September 27: Duckiebox Ceremony
 
-Welcome to Duckietown! This lecture constitutes the _Duckiebox ceremony_ during which we will distribute your Duckieboxes and ask you to name your yet-to-be built Duckiebots!!! We will also discuss logistics related to the course, but we admit that that isn't as exciting.
+Welcome to Duckietown! This lecture constitutes the _Duckiebox ceremony_ during which we will distribute your Duckieboxes and ask you to name your yet-to-be built Duckiebots! We will also discuss logistics related to the course, but we admit that that isn't as exciting.
 
 
 ### Lecture Content
