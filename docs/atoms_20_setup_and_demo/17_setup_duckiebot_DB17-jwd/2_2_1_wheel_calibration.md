@@ -43,8 +43,8 @@ The relationship between the velocities and the voltages of left and right motor
 are:
 
 \begin{align*}
-    V_{\text{right}} &= (g + r) * (v + \dfrac{1}{2} \omega l ) \\
-    V_{\text{left}} &= (g - r) * (v - \dfrac{1}{2} \omega l )
+    V_{\text{right}} &= (g + r) \cdot (v + \dfrac{1}{2} \omega l ) \\
+    V_{\text{left}} &= (g - r) \cdot (v - \dfrac{1}{2} \omega l )
 \end{align*}
 
 where $V_{\text{right}}$ and $V_{\text{left}}$ are the voltages for the two motors, $g$ is
