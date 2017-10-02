@@ -51,7 +51,7 @@ There are five primary types of tiles, as shown in [](#fig:tiles)
 
 There are 3 colors of tapes: white, yellow, and red.
 
-#### White tape
+#### White tape {status=recently-updated}
 
 \begin{proposition}\label{prop:white_tape}
 A Duckiebot never collides with Duckietown if it never crosses or touches a white tape strip.
