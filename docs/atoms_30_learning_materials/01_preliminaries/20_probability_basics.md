@@ -123,7 +123,7 @@ This can be thought of as projecting a higher dimensional distribution onto a lo
   <img src="marginals.svg" style='width: 30em'/>
 </div>
 
-Marginalization is an important operation since it allows us to reduce the size of our state space in a princpled way.
+Marginalization is an important operation since it allows us to reduce the size of our state space in a principled way.
 
 ### Conditional Independence {#cond-independence}
 
