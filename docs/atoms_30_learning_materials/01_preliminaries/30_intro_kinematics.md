@@ -1,6 +1,6 @@
 # Kinematics {#intro-kinematics status=draft}
 
-Assigned: Jacopo
+Assigned: Harshit
 
 
 Kinematics is the study of _position_, _velocity_ and _acceleration_ of geometric points.

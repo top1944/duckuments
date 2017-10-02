@@ -62,8 +62,6 @@ Next steps: After receiving these components, you are ready to do some [solderin
     <s>Total for `DB17-wjd` configuration</s>                         <s>USD 216.6</s>
  </col2>
 
-Comment: this is a test comment -JT
-
 </div>
 
 <!--

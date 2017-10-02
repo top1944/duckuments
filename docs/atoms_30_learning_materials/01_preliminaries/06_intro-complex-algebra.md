@@ -1,5 +1,7 @@
 # Complex numbers {#intro-algebra-complex status=draft}
 
+Assigned: Dzenan
+
 ## Powers of $i$
 
 The powers of $i$

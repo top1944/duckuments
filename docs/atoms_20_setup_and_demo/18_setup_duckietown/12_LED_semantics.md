@@ -1,6 +1,5 @@
 # Semantics of LEDS {#LED-semantics status=draft}
 
-
 Assigned: ???
 
 headlights: white, constant

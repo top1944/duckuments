@@ -7,7 +7,9 @@ TODO: to write
 
 ### Download a file with SCP {#howto-download-file-with-scp}
 
-TODO: to write
+    laptop $ scp [hostname]:./out.jpg ./
+
+to download out.jpg to your home directory
 
 
 ## RSync

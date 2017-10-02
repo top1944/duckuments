@@ -104,9 +104,6 @@ You are now ready to secure the power wires to the DC motor HAT power pins. To d
 
 If you have soldered the boards already, you may test correct functionality of the newly crafted cable. Connect the battery with the DC motor HAT by making sure you plug the black wire in the pin labeled with a minus: `-` and the red wire to the plus: `+` ([](#figure:final-result-power-c0)).
 
-<div figure-id="fig:final-result-power-c0" figure-caption="Connnect the power wires to the DC motor HAT">
+<div figure-id="fig:final-result-power-c0" figure-caption="Connect the power wires to the DC motor HAT">
      <img src="final-result-power-c0.jpg" style='width: 15em'/>
 </div>
-
-Comment: We need to test this on a working Duckiebot. -JT
-If the green LED turns on, the DC motor HAT is receving power.

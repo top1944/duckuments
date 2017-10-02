@@ -1,6 +1,6 @@
 # Matrix inversions {#matrix-inversion status=draft}
 
-Assigned: Jacopo
+Assigned: Dzenan
 
 ## Adjugate matrix
 
