@@ -165,6 +165,10 @@ Check that the config file is correct:
     IdentityFile ![PRIVATE_KEY_FILE]
     ![...]
 
+To copy the generated SSH key to the clipboard xclip can be used (Installation of xclip if necessary).
+
+    $ sudo apt-get install xclip
+    $ xclip -sel clip < ~/.ssh/![username]@![host name].pub
 
 ## How to login without a password {#howto-login-without-password}
 
