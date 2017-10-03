@@ -376,8 +376,7 @@ From the Duckiebot kit take the following components:
 [](#fig:howto-mount-rpi3-parts) shows the components needed to complete this part of the tutorial.
 
 <div figure-id="fig:howto-mount-rpi3-parts" figure-caption="The parts needed to mount the Raspberry Pi 3 on the top plate.">
-     <!-- <img src="howto_mount_rpi3_parts.jpg" style='width: 30em'/> -->
-     <img src="placeholder.jpg" style='width: 20em'/>
+     <img src="howto_mount_rpi3_parts.jpg" style='width: 30em'/>
 </div>
 
 ### Video tutorial
@@ -403,8 +402,7 @@ Mount *8* M2.5x12 nylon standoffs on the Raspberry Pi 3 as shown in [](#fig:howt
 Use the M2.5 nylon hex nuts to secure the Raspberry Pi 3 to the top plate as shown in [](#fig:howto-mount-rpi3-plate).
 
 <div figure-id="fig:howto-mount-rpi3-plate" figure-caption="How to mount the Raspberry Pi 3 on the top plate.">
-     <!-- <img src="howto_mount_rpi3_plate.jpg" style='width: 30em'/> -->
-     <img src="placeholder.jpg" style='width: 20em'/>
+     <img src="howto_mount_rpi3_plate.jpg" style='width: 30em'/>
 </div>
 
 
@@ -422,14 +420,14 @@ Use the M2.5 nylon hex nuts to secure the Raspberry Pi 3 to the top plate as sho
 
 From the Magician Chassis package take the following components:
 
+- Bottom plate (with motors, wheels and standoffs attached) (1x)
 - Top plate (with camera and Raspberry Pi 3 attached) (1x)
 - M3x6 screws (4x)
 
 [](#fig:howto-mount-plate-parts) shows the components needed to complete this part of the tutorial.
 
 <div figure-id="fig:howto-mount-plate-parts" figure-caption="The parts needed to secure the top plate to the bottom plate.">
-     <!-- <img src="howto_mount_rpi3_parts.jpg" style='width: 30em'/> -->
-     <img src="placeholder.jpg" style='width: 20em'/>
+     <img src="howto_mount_plate_parts.jpg" style='width: 30em'/>
 </div>
 
 ### Video tutorial
@@ -515,8 +513,7 @@ Pass the free end of the camera cable through the opening in the DC Stepper Moto
 
 <div figure-id="fig:howto-mount-motorhat-camera" figure-caption="How to pass the camera cable through
 the opening in the DC Stepper Motor HAT.">
-     <!-- <img src="howto_mount_motorhat_camera.jpg" style='width: 30em'/> -->
-     <img src="placeholder.jpg" style='width: 20em'/>
+     <img src="howto_mount_motorhat_camera.jpg" style='width: 30em'/>
 </div>
 
 #### Step 3
@@ -533,7 +530,8 @@ To do so, you will need to gently pull up on the black connector (it will slide 
 insert the port. Slide the connector back down to lock the cable in place, making sure it “clicks”.
 
 Note: Make sure the camera cable is inserted in the right direction! The metal pins of the cable must
-be in contact with the metal terminals in the camera port of the PI.
+be in contact with the metal terminals in the camera port of the PI. Please be aware that different camera
+cables have the text on different sides and with different orientation, **do not** use it as landmark.
 
 #### Step 4
 
@@ -553,7 +551,8 @@ nylon standoffs instead.
 
 #### Step 6
 
-Connect the motor wires to the terminal block on the DC Stepper Motor HAT as shown in [](#fig:howto-mount-motorhat-motors).
+Connect the motor wires to the terminal block on the DC Stepper Motor HAT as shown
+in [](#fig:howto-mount-motorhat-motors).
 
 <div figure-id="fig:howto-mount-motorhat-motors" figure-caption="How to connect the motor wires to the
 terminal block on the DC Stepper Motor HAT.">
@@ -587,8 +586,7 @@ From the Duckiebot kit take the following components:
 [](#fig:howto-mount-battery-parts) shows the components needed to complete this part of the tutorial.
 
 <div figure-id="fig:howto-mount-battery-parts" figure-caption="The parts needed to add the battery to the Duckiebot.">
-     <!-- <img src="howto_mount_battery_parts.jpg" style='width: 30em'/> -->
-     <img src="placeholder.jpg" style='width: 20em'/>
+     <img src="howto_mount_battery_parts.jpg" style='width: 30em'/>
 </div>
 
 ### Video tutorial
@@ -653,15 +651,15 @@ The new configuration is called `DB17-w`.
 [](#fig:howto-mount-db17w-parts) shows the components needed to complete this upgrade.
 
 <div figure-id="fig:howto-mount-db17w-parts" figure-caption="The parts needed to upgrade the
-Duckiebot to the configuration `DB17-w`.">
+Duckiebot to the configuration DB17-w.">
      <img src="howto_upgrade_db17w_parts.jpg" style='width: 30em'/>
 </div>
 
 ### Instructions
 
-- Insert the USB WiFi dongle into one of the USB port of the Raspberry Pi.
+- Insert the USB WiFi dongle into one of the USB ports of the Raspberry Pi.
 
-<div figure-id="fig:howto-mount-db17w-milestone" figure-caption="Upgrade to `DB17-w` completed.">
+<div figure-id="fig:howto-mount-db17w-milestone" figure-caption="Upgrade to DB17-w completed.">
      <img src="howto_upgrade_db17w_milestone.jpg" style='width: 30em'/>
 </div>
 
@@ -677,20 +675,23 @@ The new configuration is called `DB17-j`.
 [](#fig:howto-mount-db17j-parts) shows the components needed to complete this upgrade.
 
 <div figure-id="fig:howto-mount-db17j-parts" figure-caption="The parts needed to upgrade the
-Duckiebot to the configuration `DB17-j`.">
+Duckiebot to the configuration DB17-j.">
      <img src="howto_upgrade_db17j_parts.jpg" style='width: 30em'/>
 </div>
 
-Note: The joypad comes with a USB receiver (as shown in [](#fig:howto-mount-db17j-parts)).
+Note: The joystick comes with a USB receiver (as shown in [](#fig:howto-mount-db17j-parts)).
 
 ### Instructions
 
-- Insert the USB receiver into one of the USB port of the Raspberry Pi.
-- Insert 2 AA batteries on the back side of the joypad.
+- Insert the USB receiver into one of the USB ports of the Raspberry Pi.
+- Insert 2 AA batteries on the back side of the joystick.
+- Turn on the joystick by pressing the `HOME` button. Make sure that the LED above the `SELECT` button is steady.
 
-<div figure-id="fig:howto-mount-db17j-milestone" figure-caption="Upgrade to `DB17-j` completed.">
+<div figure-id="fig:howto-mount-db17j-milestone" figure-caption="Upgrade to DB17-j completed.">
      <img src="howto_upgrade_db17j_milestone.jpg" style='width: 30em'/>
 </div>
+
+TODO: explain how to test the joystick with `jstest`
 
 
 
@@ -705,17 +706,19 @@ The new configuration is called `DB17-d`.
 [](#fig:howto-mount-db17d-parts) shows the components needed to complete this upgrade.
 
 <div figure-id="fig:howto-mount-db17d-parts" figure-caption="The parts needed to upgrade the
-Duckiebot to the configuration `DB17-d`.">
+Duckiebot to the configuration DB17-d.">
      <img src="howto_upgrade_db17d_parts.jpg" style='width: 30em'/>
 </div>
 
 ### Instructions
 
-- Insert the USB drive into one of the USB port of the Raspberry Pi.
+- Insert the USB drive into one of the USB ports of the Raspberry Pi.
 
-<div figure-id="fig:howto-mount-db17d-milestone" figure-caption="Upgrade to `DB17-d` completed.">
+<div figure-id="fig:howto-mount-db17d-milestone" figure-caption="Upgrade to DB17-d completed.">
      <img src="howto_upgrade_db17d_milestone.jpg" style='width: 30em'/>
 </div>
+
+- Mount your USB drive as explained in [](#mounting-usb).
 
 ----
 
