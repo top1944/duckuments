@@ -149,7 +149,7 @@ labels with your robot name for future application on your Duckiebot.
 Please help us making the experience better by [providing feedback (can be anonymous)](https://tinyurl.com/y77pbv7n)
 
 
-### Material presented in class {status=draft}
+### Material presented in class
 
 - Duckiebot parts:
 <a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-27-ETHZ-WhatsInTheBox.pptx">PowerPoint presentation</a>,
