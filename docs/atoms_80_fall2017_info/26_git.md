@@ -78,8 +78,8 @@ Homeworks will require you to write and submit coding exercises. They will be su
   - Go to [duckiefleet-fall2017](https://github.com/duckietown/duckiefleet-fall2017)
   - Click "Fork" button in the top right
   - Choose your account if there are multiple options
-  - Click on the Settings tab
-  - Under "Teams", click the "X" in the right for the section for "Fall 2017 Students". You will get a popup asking you to confirm. Confirm.
+  - Click on the Settings tab of your repostory, not your account
+  - Under "Collaborators and Teams" in the left, click the "X" in the right for the section for "Fall 2017 Students". You will get a popup asking you to confirm. Confirm.
 
 Now you need to point the remote of your `duckiefleet-fall2017` to your new local private repo. To do, from inside your already previously cloned `duckiefleet-fall2017` repo do:
 
