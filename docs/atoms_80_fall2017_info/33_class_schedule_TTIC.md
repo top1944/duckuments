@@ -78,7 +78,7 @@ Please help us making the experience better by [providing feedback (can be anony
 
 * [](#part:modern-robotic-systems)
 
-* [](#part:system-architecture-basics)
+* [](#part:system-architectures-basics)
 
 ### Feedback Form
 
