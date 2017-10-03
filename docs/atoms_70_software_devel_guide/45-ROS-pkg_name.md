@@ -52,7 +52,7 @@ tells `catkin` to setup Python-related stuff for this package.
 
 See also: [ROS documentation about `setup.py`][setuppy]
 
-[setuppy]: http://docs.ros.org/api/catkin/html/user_guide/setup_dot_py.html)
+[setuppy]: http://docs.ros.org/api/catkin/html/user_guide/setup_dot_py.html
 
 ### `package.xml`
 

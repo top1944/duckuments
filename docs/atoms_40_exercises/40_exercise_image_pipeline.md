@@ -152,7 +152,7 @@ This pattern serves as a simple test that we can draw lines in image coordinates
       color: green
     - points: [BR, BL]
       color: blue
-    - points: [BL, BR]
+    - points: [BL, TL]
       color: yellow
 
 The expected result is to put a border around the image:
@@ -164,7 +164,46 @@ TODO: to write
 
 ### `lane.yaml`
 
-TODO: to write
+We want something like this:
+
+                      0
+     |   |          | . |             |   |
+     |   |          | . |             |   |
+     |   |          | . |             |   |
+     |   |          | . |             |   |
+     |   |          | . |             |   |
+     |   |          | . |             |   |
+      WW      L       WY      L         WW
+     1   2          3   4             5   6
+
+Then we have:
+
+    points:
+         p1: [axle, [0, 0.254, 0]]
+         q1: [axle, [D, 0.254, 0]]
+         p2: [axle, [0, 0.2286, 0]]
+         q2: [axle, [D, 0.2286, 0]]
+         p3: [axle, [0, 0.0127, 0]]
+         q3: [axle, [D, 0.0127, 0]]
+         p4: [axle, [0, -0.0127, 0]]
+         q4: [axle, [D, -0.0127, 0]]
+         p5: [axle, [0, -0.2286, 0]]
+         q5: [axle, [D, -0.2286, 0]]
+         p6: [axle, [0, -0.254, 0]]
+         q6: [axle, [D, -0.254, 0]]
+    segments:
+     - points: [p1, q1]
+       color: white
+     - points: [p2, q2]
+       color: white
+     - points: [p3, q3]
+       color: yellow
+     - points: [p4, q4]
+       color: yellow
+     - points: [p5, q5]
+       color: white
+     - points: [p6, q6]
+       color: white
 
 ### `intersection_4way.yaml`
 

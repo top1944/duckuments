@@ -43,7 +43,7 @@ Or see the hints in the troubleshooting section on the previous page.
 
 ## Update the system
 
-The software used for the Duckiebots changes every day, this means that also the dependencies 
+The software used for the Duckiebots changes every day, this means that also the dependencies
 change. In order to check whether your system meets all the requirements for running the software
 and install all the missing packages (if any), we can run the following script:
 
@@ -84,6 +84,10 @@ See see [](#duckiefleet-directory) to find the right `duckiefleet` repository.
 In `~/.bashrc` set `DUCKIEFLEET_ROOT` to point to the directory:
 
     export DUCKIEFLEET_ROOT=~/duckiefleet
+
+Also, make sure that you execute `~/.bashrc` in the current shell by running the command:
+
+    source ~/.bashrc
 
 
 ## Add your vehicle data to the robot database {#edit-machines-file status=recently-updated}
