@@ -531,7 +531,7 @@ insert the port. Slide the connector back down to lock the cable in place, makin
 
 Note: Make sure the camera cable is inserted in the right direction! The metal pins of the cable must
 be in contact with the metal terminals in the camera port of the PI. Please be aware that different camera
-cables have the text on different sides and with different orientation, **do not** use it as landmark.
+cables have the text on different sides and with different orientation, **do not** use it as a landmark.
 
 #### Step 4
 
