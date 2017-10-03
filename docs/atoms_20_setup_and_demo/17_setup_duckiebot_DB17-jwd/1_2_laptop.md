@@ -90,7 +90,7 @@ Install redshift and run it.
 
     laptop $ sudo apt install redshift-gtk
 
-Set to "autostart" from the icon.
+Set to "autostart" from the icon (on the panel - near wifi/lan).
 
 ## Installation of the duckuments system
 
