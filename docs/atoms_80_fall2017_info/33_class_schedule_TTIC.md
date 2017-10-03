@@ -85,6 +85,25 @@ Please help us making the experience better by [providing feedback (can be anony
 Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
 
 
+## Wednesday, October 4: Modern Robotic Systems (Continued)
+
+**Note**: Today's lecture will take place in Room 501 due to the TTIC Board Meeting
+
+
+### Lecture Content
+
+
+
+
+### Reading Material
+
+
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
 
 
 ##  (Template for every lecture) Date: Topic {status=draft}
