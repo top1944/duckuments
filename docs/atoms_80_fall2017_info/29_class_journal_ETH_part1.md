@@ -151,10 +151,12 @@ Please help us making the experience better by [providing feedback (can be anony
 
 ### Material presented in class {status=draft}
 
-- Duckiebot parts
+- Duckiebot parts:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-27-ETHZ-WhatsInTheBox.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-27-ETHZ-WhatsInTheBox.pdf">PDF</a>.
 
 
-## Thursday Sep 26: Misc announcements {#2017-09-26-misc}
+## Thursday Sep 28: Misc announcements {#2017-09-28-misc}
 
 We created the channel `#ethz-chitchat` for questions and other random things, so that we can leave this channel `#ethz-announcements` only for announcements.
 
