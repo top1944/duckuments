@@ -2,17 +2,24 @@
 
 Classes take place on Mondays and Wednesdays from 9am-11am in TTIC Room 530.
 
+## Checkoffs:
+
+The following is a list of the current checkoffs, along with the date and time when they are due. Most submissions involve uploading videos to via Dropbox File Request using the link provided in the individual checkoff.
+
+* **Friday 5pm CT**: [](#part:checkoff_assembly_configuration)
+
+
+## Problem Sets:
+
+
+
+
 ## Monday September 25: Introduction to Duckietown
 
 
 ### Lecture Content
 
 * Duckietown Course Intro ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-25-ttic-intro_lecture.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-25-ttic-intro_lecture.pdf))
-
-
-### Feedback Form
-
-Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
 
 
 ### Reading Material
@@ -22,6 +29,9 @@ Please help us making the experience better by [providing feedback (can be anony
 * [](#autonomy-overview)
 
 
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
 
 
 ## Tuesday September 26: Onboarding
@@ -76,6 +86,8 @@ Please help us making the experience better by [providing feedback (can be anony
 
 * [](#part:autonomous-vehicles)
 
+* [](#autonomy-overview)
+
 * [](#part:modern-robotic-systems)
 
 * [](#part:system-architectures-basics)
@@ -97,11 +109,20 @@ Please help us making the experience better by [providing feedback (can be anony
 
 ### Lecture Content
 
+* Logistics ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-a-logistics.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-a-logistics.pdf))
+* Representations ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-b-representations.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-b-representations.pdf))
+* Software Architectures ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-c-software-architectures.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-c-software-architectures.pdf))
+* Networking ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-d-networking.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-d-networking.pdf))
 
 
 
 ### Reading Material
 
+* [](#part:representations)
+
+* [](#part:networking)
+
+* [](#part:system-architectures-basics)
 
 
 ### Feedback Form
