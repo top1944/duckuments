@@ -72,7 +72,8 @@ Only TAs have write permissions to this repository.
 
 ## Git policy for  homeworks {#git-policy-homeworks status=beta}
 
-Homeworks will require you to write and submit coding exercises. They will be submitted using git. Since we have a university plagiarism policy ([UdeM's](http://www.lecre.umontreal.ca/politique-sur-le-plagiatplagiarism-policy/)) we have to protect students work before the deadline of the homeworks. For this reason we will follow these steps for homework submission: 
+Homeworks will require you to write and submit coding exercises. They will be submitted using git. Since we have a university plagiarism policy ([UdeM's](http://www.lecre.umontreal.ca/politique-sur-le-plagiatplagiarism-policy/),
+[TTIC/uChicago](https://studentmanual.uchicago.edu/Policies#Honesty)) we have to protect students work before the deadline of the homeworks. For this reason we will follow these steps for homework submission: 
 
 1. Go [here](https://education.github.com/) and file a request at the bottom “Request a Discount” then enter your institution email and other info.
   - Go to [duckiefleet-fall2017](https://github.com/duckietown/duckiefleet-fall2017)
@@ -102,7 +103,7 @@ upstream  git@github.com:duckietown/duckiefleet-fall2017.git (fetch)
 upstream  git@github.com:duckietown/duckiefleet-fall2017.git (push)
 ```
 
-Now the next time you push (without specifying a remote) you will push to your local private repo. 
+Now the next time you push (without specifying a remote) you will push to your local private repo.
 
 ### Duckiefleet file structure
 
@@ -122,13 +123,13 @@ Command line:
 
     git tag ![XX_homework_name] -m"@duckietown/fall-2017-instructors-and-tas homework complete"
     git push origin --tags
-    
+
 Through github:
 
 1. Click on the "Releases" tab
 2. Click "Create a new Release"
 3. Add a version (e.g. 1.0)
-4. Release title put `![XX_homework_name]` 
+4. Release title put `![XX_homework_name]`
 5. In the text box put "@duckietown/fall-2017-instructors-and-tas homework complete"
 6. Click "Publish release"
 
@@ -138,7 +139,7 @@ You may make as many releases as you like before the deadline.
 ### Merging things back {status=draft}
 
 Once all deadlines have passed for all institutions, we can merge all the homeworks.
-We will ask to create a "Pull Request" from your private repo. 
+We will ask to create a "Pull Request" from your private repo.
 
 1. In your private duckiefleet-fall2017 repo, click the "New pull request button".
 2. Click "Create pull request" green button
@@ -158,5 +159,4 @@ Different than the homeworks, development for the projects will take place in th
 
 2. Develop code in that branch (note you may want to branch your branches. A good idea would be to have your own "master", e.g. "your_project-master" and then do pull requests/merges into that branch as things start to work)
 
-3. At the end of the project submit a pull request to master to merge your code. It may or may not get merged depending on many factors. 
-
+3. At the end of the project submit a pull request to master to merge your code. It may or may not get merged depending on many factors.
