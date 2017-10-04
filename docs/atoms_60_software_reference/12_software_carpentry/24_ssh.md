@@ -34,15 +34,18 @@ Create the directory with the right permissions:
 
     $ mkdir ~/.ssh
     $ chmod 0700 ~/.ssh
-    $ vim ~/.ssh/config
+
+Edit the file:
+
+    ~/.ssh/config
+
+(We suggest you use [VIM](#vim) to edit files; see a tutorial [here](http://http://www.openvim.com/).)
 
 Comment: laptop or duckiebot? - LP
 
 Then add the following lines:
 
     HostKeyAlgorithms ssh-rsa
-
-Comment: how to save and exit vim? Please be specific! -SL
 
 The reason is that Paramiko, used by `roslaunch`,
 [does not support the ECSDA keys][bug].
