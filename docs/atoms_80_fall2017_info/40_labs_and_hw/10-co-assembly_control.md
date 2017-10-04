@@ -81,4 +81,4 @@ Comment: there is a deadline at this link, but each institution will have differ
 
 You should record a video demonstrating that your Duckiebot is up and running. Brownie points for creative videos. Please upload your videos via the following URL:
 
-TTIC: [](https://www.dropbox.com/request/3GxK1kjxUmZKl23x6nEY)
+TTIC: [upload](https://www.dropbox.com/request/3GxK1kjxUmZKl23x6nEY)
