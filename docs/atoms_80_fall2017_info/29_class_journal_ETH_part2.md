@@ -50,8 +50,23 @@ c - System architecture basics
 Please help us making the experience better by [providing feedback (can be anonymous)](https://tinyurl.com/y77pbv7n)
 
 
-## Oct 04 (Wed) {#Zurich-2017-10-04 status=draft}
+## Oct 04 (Wed): Modeling {#Zurich-2017-10-04 status=ready}
 
+### Materials presented in class
+
+- Modeling of a differential drive vehicle:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-04-ETHZ-modeling.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-04-ETHZ-modeling.pdf">PDF</a>.
+
+
+### Feedback form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://tinyurl.com/y77pbv7n)
+
+
+## Oct 09 (Mon) {#Zurich-2017-10-09 status=draft}
+
+Assigned: XXX
 
 Other units to do:
 
@@ -62,11 +77,6 @@ Other units to do:
 - Networking
 - Modern signal distribution and processing: periodic vs event-based processing; latency/frequency etc.
 
-
-
-## Oct 09 (Mon) {#Zurich-2017-10-09 status=draft}
-
-Assigned: XXX
 
 ## Oct 11 (Wed) {#Zurich-2017-10-11 status=draft}
 
