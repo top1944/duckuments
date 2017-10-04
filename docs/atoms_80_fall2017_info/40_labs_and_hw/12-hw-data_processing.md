@@ -1,4 +1,4 @@
-# Homework: Data Processing {#homework-data-processing status=ready}
+# Homework: Data Processing (UdeM) {#homework-data-processing status=ready}
 
 <div class='requirements' markdown='1'>
 
@@ -23,7 +23,7 @@ Montreal deadline: Oct 4, 11:00pm
 
 See: [](#git-policy-homeworks)
 
-for instructions on how the homework should be submitted. 
+for instructions on how the homework should be submitted.
 
 
 ## Exercise: Basic image operations
@@ -45,5 +45,3 @@ Complete [](#exercise-instagram-live)
 Call your package `dt-instagram-live_![ROBOT_NAME]` and call your node `dt-instagram-live_![ROBOT_NAME]`
 
 When you are done, take a 5min log (See [](#take-a-log))in Duckietown (2333 in Montreal) and upload [here](https://www.dropbox.com/request/0bESmFHuGHGNVBnce3XI)
-
-
