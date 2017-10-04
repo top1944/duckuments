@@ -42,6 +42,8 @@ Then add the following lines:
 
     HostKeyAlgorithms ssh-rsa
 
+Comment: how to save and exit vim? Please be specific! -SL
+
 The reason is that Paramiko, used by `roslaunch`,
 [does not support the ECSDA keys][bug].
 
