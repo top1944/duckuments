@@ -75,3 +75,10 @@ Then get it to move!
 See: [](#rc-control)
 
 Comment: there is a deadline at this link, but each institution will have different deadlines. Might be a source of entropy -JT
+
+
+## Upload your video
+
+You should record a video demonstrating that your Duckiebot is up and running. Brownie points for creative videos. Please upload your videos via the following URL:
+
+TTIC: [](https://www.dropbox.com/request/3GxK1kjxUmZKl23x6nEY)

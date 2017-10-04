@@ -80,6 +80,11 @@ Please help us making the experience better by [providing feedback (can be anony
 
 * [](#part:system-architectures-basics)
 
+
+### Assignments
+
+* [](#part:checkoff_assembly_configuration) is due by Friday 5pm CT. Note: The page provides the URL where you should upload your video(s).
+
 ### Feedback Form
 
 Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
