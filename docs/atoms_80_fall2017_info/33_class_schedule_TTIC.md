@@ -135,11 +135,12 @@ Please help us making the experience better by [providing feedback (can be anony
 
 ### Preparation
 
-Before coming to class, please read through the following tutorials.
-
 **Important**: Before starting these tutorials, make sure that you completed the following:
 
 See: [](#setup-laptop)
+
+Before coming to class, please read through the following tutorials:
+
 * [https://tinyurl.com/ROS101-Intro](https://tinyurl.com/ROS101-Intro)
 * [http://wiki.ros.org/ROS/Tutorials#Beginner_Level](http://wiki.ros.org/ROS/Tutorials#Beginner_Level)
 Complete all the tutorials in Section 1.1 Beginner Level.
