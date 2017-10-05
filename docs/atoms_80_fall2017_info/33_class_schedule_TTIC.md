@@ -131,6 +131,45 @@ Please help us making the experience better by [providing feedback (can be anony
 
 
 
+## Monday, October 9: Introduction to the Robot Operating System (ROS)
+
+### Preparation
+
+Before coming to class, please read through the following tutorials.
+
+**Important**: Before starting these tutorials, make sure that you completed the following:
+
+See: [](#setup-laptop)
+* [https://tinyurl.com/ROS101-Intro](https://tinyurl.com/ROS101-Intro)
+* [http://wiki.ros.org/ROS/Tutorials#Beginner_Level](http://wiki.ros.org/ROS/Tutorials#Beginner_Level)
+Complete all the tutorials in Section 1.1 Beginner Level.
+There is no need to install ROS as the tutorial instructs, because you already installed as part of the [setup process](#setup-laptop).
+Sections 11 and 14 of this tutorial will ask you to implement simple ROS nodes using C++. You can skip them since Sections 12 and 15 are basically the same but using Python.
+
+### Lecture Content
+
+* Logistics ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-a-logistics.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-a-logistics.pdf))
+* Representations ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-b-representations.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-b-representations.pdf))
+* Software Architectures ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-c-software-architectures.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-c-software-architectures.pdf))
+* Networking ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-d-networking.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-d-networking.pdf))
+
+
+
+### Reading Material
+
+* [](#part:representations)
+
+* [](#part:networking)
+
+* [](#part:system-architectures-basics)
+
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+
 
 ##  (Template for every lecture) Date: Topic {status=draft}
 
