@@ -50,6 +50,8 @@ there was some problem in downloading the image.
 Uncompress the file:
 
     $ xz -d -k duckiebot-RPI3-AD-2017-09-12.img.xz
+    
+Comment: use $ xz -d -k duckiebot-RPI3-AD-2017-09-12.img.xz --verbose to show the progress of the decompression.
 
 This will create a file of 11 GB in size.
 
