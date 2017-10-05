@@ -49,9 +49,8 @@ there was some problem in downloading the image.
 
 Uncompress the file:
 
-    $ xz -d -k duckiebot-RPI3-AD-2017-09-12.img.xz
+    $ xz -d -k --verbose duckiebot-RPI3-AD-2017-09-12.img.xz
     
-Comment: use $ xz -d -k duckiebot-RPI3-AD-2017-09-12.img.xz --verbose to show the progress of the decompression.
 
 This will create a file of 11 GB in size.
 
@@ -421,4 +420,4 @@ or entirely [uninstall your NTP service and manually grab the time on reboot][ar
 
 Symptom: Cannot find `/etc` folder for configuring the Wi-Fi. I only see `Desktop`, `Downloads` when starting up the Duckiebot.
 
-Resolution: If a directory name starts with `/`, it's not supposed to be in the home directory, but rather at the root of the filesystem. You are currently in `/home/ubuntu`. Type `ls /` to see the folders at the root, including `/etc.  
+Resolution: If a directory name starts with `/`, it's not supposed to be in the home directory, but rather at the root of the filesystem. You are currently in `/home/ubuntu`. Type `ls /` to see the folders at the root, including `/etc.
