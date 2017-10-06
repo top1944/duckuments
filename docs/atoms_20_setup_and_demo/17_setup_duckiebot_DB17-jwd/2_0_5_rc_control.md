@@ -47,6 +47,8 @@ The software used for the Duckiebots changes every day, this means that also the
 change. In order to check whether your system meets all the requirements for running the software
 and install all the missing packages (if any), we can run the following script:
 
+Comment: You need to install pip before doing this: (pip install -U pip setuptools)
+
     duckiebot $ cd ~/duckietown
     duckiebot $ /bin/bash ./dependencies_since_image.sh
 
