@@ -34,7 +34,12 @@ Create the directory with the right permissions:
 
     $ mkdir ~/.ssh
     $ chmod 0700 ~/.ssh
-    $ vim ~/.ssh/config
+
+Edit the file:
+
+    ~/.ssh/config
+
+(We suggest you use [VIM](#vim) to edit files; see a tutorial [here](http://http://www.openvim.com/).)
 
 Comment: laptop or duckiebot? - LP
 
@@ -157,6 +162,8 @@ Add a line containing
     IdentityFile ![PRIVATE_KEY_FILE]
 
 (using the filename for the private key).
+
+Comment: make sure to include the full path to the file, not just the filename.
 
 Check that the config file is correct:
 
