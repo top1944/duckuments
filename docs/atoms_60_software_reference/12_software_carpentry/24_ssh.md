@@ -163,6 +163,8 @@ Add a line containing
 
 (using the filename for the private key).
 
+Comment: make sure to include the full path to the file, not just the filename.
+
 Check that the config file is correct:
 
     $ cat ~/.ssh/config
