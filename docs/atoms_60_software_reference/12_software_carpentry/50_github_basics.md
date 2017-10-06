@@ -42,6 +42,10 @@ Results: You can access Github using the key provided.
 
 </div>
 
+Comment: Since I am not as familiar with Linux an VIM it would have been great to say how we can get access to the public key:
+sudo vim /home/username/.ssh/username@host name.pub and than copy it and add it on github
+SL
+
 Go to settings ([](#fig:github1)).
 
 <img figure-id='fig:github1'  style='width: 10em'  class='github-screenshot'  src='github1.png'/>
