@@ -159,6 +159,10 @@ Make sure that the file `~/.ssh/config` exists:
 
 Add a line containing
 
+Comment:
+For me it was not quite clear that we have to add this into the .ssh/config file
+SL
+
     IdentityFile ![PRIVATE_KEY_FILE]
 
 (using the filename for the private key).
