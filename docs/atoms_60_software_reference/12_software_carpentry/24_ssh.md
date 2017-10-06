@@ -162,6 +162,7 @@ Add a line containing
     IdentityFile ![PRIVATE_KEY_FILE]
 
 (using the filename for the private key).
+Comment: make sure to include the full path to the file, not just the filename.
 
 Check that the config file is correct:
 
