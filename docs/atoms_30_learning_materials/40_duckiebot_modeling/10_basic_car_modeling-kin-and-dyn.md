@@ -26,6 +26,8 @@ Result: k:diff-drive-robot-model
 
 ## Preliminaries {#mod-prelim}
 
+TODO: relabel inertial frame -> local frame; $(\cdot)^I \rightarrow (\cdot)^L$
+
 We first briefly recapitulate on the (reference frames)[#reference-frames] that we will use to model the Duckiebot, with the intent of introducing the notation used throughout this chapter. It is important to note that we restrict the current analysis to the plane, so all of the following in defined in $\reals^2$.
 
 To describe the behavior of a Duckiebot three reference frames will be used:
