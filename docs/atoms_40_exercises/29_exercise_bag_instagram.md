@@ -37,7 +37,7 @@ If you don't have a ROS bag to work on, you can download the test bag
 The [`duckietown_utils`](#duckietown-utils-library)
 package provides the utility function
 [`d8_compressed_image_from_cv_image()`](#duckietown_utils-d8_compressed_image_from_cv_image)
-that takes an BGR image, compresses it and wraps it into a `sensor_msgs/CompressedImage`
+that takes a BGR image, compresses it and wraps it into a `sensor_msgs/CompressedImage`
 ROS message.
 
 
