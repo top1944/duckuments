@@ -214,7 +214,7 @@ This is a general dynamic model (in the sense of no kinematic constraints) of a 
 
 \begin{align} \label{eq:mod-gen-kin-mod}
 \dot{x}_A(t) &= v_u(t) \cos\theta(t) - (v_w(t)-c \dot \theta)\sin\theta(t) \\
-\dot{x}_A(t) &= v_u(t) \sin\theta(t) + (v_w(t)-c \dot \theta)\sin\theta(t).
+\dot{y}_A(t) &= v_u(t) \sin\theta(t) + (v_w(t)-c \dot \theta)\sin\theta(t).
 \end{align}
 
 the above \eqref{eq:mod-gen-kin-mod} can be obtained by recalling on one side that translations are isometric transformations, and on the other side that:
@@ -228,6 +228,8 @@ the above \eqref{eq:mod-gen-kin-mod} can be obtained by recalling on one side th
 \left\{  \begin{array}{ll} x_C^I(t) &=  v_u(t) \cos\theta(t) - v_w(t) \sin\theta(t) \\
                            y_C^I(t) &= v_u(t) \sin\theta(t) + v_w(t) \cos\theta(t) \end{array} \right.
 \end{align}
+
+Note: Equation \eqref{eq:mod-gen-kin-mod} can be rewritten as: \[ \label{eq:mod-gen-kin-mod-better} \avec{v_A^I} = \amat{R}(\theta) \avec{v_A^R} \], where: \[ \label{eq:mod-v_A^R} \avec{v_A^R} = [v_u(t), v_w(t) - c\dot\theta(t)]^T. \]
 
 In order to simplify the model, we proceed to impose some kinematic constraints.
 
@@ -272,6 +274,8 @@ and therefore:
 \[ \label{eq:mod-no-lat-slip-final-dot}
 \dot v_w(t) = c\ddot\theta(t).
 \]
+
+Note: a simpler way of deriving \eqref{eq:mod-no-lat-slip-final-dot} is noticing, from \eqref{eq:mod-v_A^R}, that $\dot y_A^R = v_w(t) - c\dot\theta(t)$. 
 
 - _Pure rolling_: the wheels never slips or skids ([](#fig:mod-pure-rolling)). Recalling that $R$ is the radius of the wheels (identical) and letting $\dot \varphi_{l}, \dot \varphi_{r}$ be the angular velocities of the left and right wheels respectively, the velocity of the ground contact point P in the robot frame is given by:
 
@@ -421,9 +425,6 @@ Although \eqref{eq:mod-dyn-model-a} describes the dynamics of the robot, the inp
                          Mc\dot\theta & 0  \end{array}  \right] \left[ \begin{array}{c}  v_u \\ \dot \theta \end{array} \right] = \frac{1}{R}\left[ \begin{array}{cc} 1  & 1 \\
                          L  & -L  \end{array}  \right] \left[ \begin{array}{c} \tau_R \\ \tau_L \end{array} \right].
 \end{align}
--->
-<!--
-This model now describes the input output relationship between torques and robot orientation and forward speed. Although t -->
 
 This model now describes the input output relationship between torques and robot angular rate and velocities in the vehicle frame.
 
