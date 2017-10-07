@@ -129,8 +129,10 @@ Moreover, we support the following strings:
 - `green` is equivalent to `[rgb, [0,1,0]]`
 - `blue` is equivalent to `[rgb, [0,0,1]]`
 - `yellow` is equivalent to `[rgb, [1,1,0]]`
-
-TODO: add another few colors
+- `magenta` is equivalent to `[rgb, [1,0,1]]`
+- `cyan` is equivalent to `[rgb, [0,1,1]]`
+- `white` is equivalent to `[rgb, [1,1,1]`
+- `black` is equivalent to `[rgb, [0,0,0]]`
 
 
 ## "Map" files
