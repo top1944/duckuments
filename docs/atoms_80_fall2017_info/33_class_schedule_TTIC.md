@@ -149,20 +149,10 @@ Sections 11 and 14 of this tutorial will ask you to implement simple ROS nodes u
 
 ### Lecture Content
 
-* Logistics ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-a-logistics.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-a-logistics.pdf))
-* Representations ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-b-representations.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-b-representations.pdf))
-* Software Architectures ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-c-software-architectures.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-c-software-architectures.pdf))
-* Networking ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-d-networking.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-ttic-d-networking.pdf))
 
 
 
 ### Reading Material
-
-* [](#part:representations)
-
-* [](#part:networking)
-
-* [](#part:system-architectures-basics)
 
 
 ### Feedback Form
