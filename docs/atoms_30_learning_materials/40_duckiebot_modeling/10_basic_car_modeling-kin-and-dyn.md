@@ -108,7 +108,7 @@ Note: The orthogonality condition implies that $\amat{R}^T(\theta)\amat{R}(\thet
 A corollary of \eqref{eq:mod-translation-i2w} and \eqref{eq:mod-rotation-r2i} is that the translations and rotations can be combined in a single transformation, because $\avec{X^W} = \amat{T}\avec{X^I} = \amat{T} \amat{R}(\theta)\avec{X^R}$. The combined transformation matrix is given by:
 
 \begin{align} \label{eq:mod-rototranslation-mat}
-\amat{T} \amat{R}(\theta) = \left[  \begin{array}{ccc} \cos\theta & -\sin \theta  & x_A \\ \\sin\theta & \cos\theta & y_A \\ 0 & 0 & 1 \end{array} \right].
+\amat{T} \amat{R}(\theta) = \left[  \begin{array}{ccc} \cos\theta & -\sin \theta  & x_A \\sin\theta & \cos\theta & y_A \\ 0 & 0 & 1 \end{array} \right].
 \end{align}
 
 <!--
