@@ -65,6 +65,11 @@ the SD card and run the command again and see what disappeared.
 
 Before proceeding, unmount all partitions.
 
+Warning: Before unmounting partitions, make sure you found the correct device in the previous
+step. In particular, `/dev/sda/` is the hard drive of your computer, and if you unmount its partitions,
+you can erase important data, including important files and the operating system you are not currently
+using.
+
 Run `df -h`. If there are partitions like `/dev/mmcblk0p![n]`, then unmount
 each of them. For example:
 
@@ -106,7 +111,7 @@ We are going to use the tool `gparted` so make sure it's installed
 
     laptop $ sudo apt install gparted
 
-Let the image file be `![image file]`.
+Let the image file be `![image file]` and its name be `[!imagename]`.
 Run the command:
 
     laptop $ sudo fdisk -l ![image file]
@@ -120,7 +125,7 @@ duckiebot-RPI3-LP-aug15.img2      131072 21219327 21088256 10.1G 83 Linux
 Take note of the start of the Linux partition (in our case 131072), let's call it `![start]`.
 Now we are going to mount the Linux partition from the image:
 
-    laptop $ sudo losetup /dev/loop0 imagename.img -o $((![start]*512))
+    laptop $ sudo losetup /dev/loop0 [!imagename].img -o $((![start]*512))
 
 and then run `gparted`:
 
