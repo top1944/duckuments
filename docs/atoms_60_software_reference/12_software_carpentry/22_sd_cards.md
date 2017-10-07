@@ -65,6 +65,11 @@ the SD card and run the command again and see what disappeared.
 
 Before proceeding, unmount all partitions.
 
+Warning: Before unmounting partitions, make sure you found the correct device in the previous
+step. In particular, `/dev/sda/` is the hard drive of your computer, and if you unmount its partitions,
+you can erase important data, including important files and the operating system you are not currently
+using.
+
 Run `df -h`. If there are partitions like `/dev/mmcblk0p![n]`, then unmount
 each of them. For example:
 
