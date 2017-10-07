@@ -111,7 +111,7 @@ We are going to use the tool `gparted` so make sure it's installed
 
     laptop $ sudo apt install gparted
 
-Let the image file be `![image file]` and its name be `[!imagename]`.
+Let the image file be `![image file]` and its name be `![imagename]`.
 Run the command:
 
     laptop $ sudo fdisk -l ![image file]
@@ -125,7 +125,7 @@ duckiebot-RPI3-LP-aug15.img2      131072 21219327 21088256 10.1G 83 Linux
 Take note of the start of the Linux partition (in our case 131072), let's call it `![start]`.
 Now we are going to mount the Linux partition from the image:
 
-    laptop $ sudo losetup /dev/loop0 [!imagename].img -o $((![start]*512))
+    laptop $ sudo losetup /dev/loop0 ![imagename].img -o $((![start]*512))
 
 and then run `gparted`:
 
