@@ -26,7 +26,7 @@ You should launch your camera and joystick with
 
 Then launch your node with
 
-    duckiebot $ roslaunch dt-live-instagram_![ROBOT_NAME] dt_live-instagram_![ROBOT_NAME]_node filter:=![filter]
+    duckiebot $ roslaunch dt-live-instagram_![ROBOT_NAME] dt_live-instagram_![ROBOT_NAME]_node.launch filter:=![filter]
 
 This program should do the following:
 
