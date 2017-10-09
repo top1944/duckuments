@@ -1,4 +1,4 @@
-# Chicago branch Diary {#schedule_TTIC status=ready}
+# Chicago branch diary {#schedule_TTIC status=ready}
 
 Classes take place on Mondays and Wednesdays from 9am-11am in TTIC Room 530.
 
@@ -149,10 +149,13 @@ Sections 11 and 14 of this tutorial will ask you to implement simple ROS nodes u
 
 ### Lecture Content
 
+* Modeling ([Powerpoint](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-09-ttic-a-modeling.pptx), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-09-ttic-a-modeling.pdf))
 
 
 
 ### Reading Material
+
+* [](#duckiebot-modeling)
 
 
 ### Feedback Form
