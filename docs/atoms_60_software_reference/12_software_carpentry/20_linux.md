@@ -27,6 +27,10 @@ Assigned: Andrea
 # Every day Linux {#every-day-linux status=draft}
 
 
+## `man` {#man}
+
+This is an interface to the on-line reference manuals. Whenever you meet some unfamiliar commands, try use `man certain_command` before Googling. You will find it extremely clear, useful and self-contained. 
+
 ## `cd` {#cd}
 
 Go to the directory you want. If you just use:
@@ -37,37 +41,40 @@ then you will go to your home directory, i.e., ~
 
 ## `sudo` {#sudo}
 
-TODO: to write
+Whenever you want to modify system files, you will need `sudo`. Commonly touched system files including `/etc`, `/opt` and so on. Since most of you have followed the guideline to use passwordless sudo, I would recommend that make sure what you are doing with sudo before you execute the command, otherwise you may need to reinstall the system. 
 
 ## `ls` {#ls}
 
-TODO: to write
+List all the files and documents in the current directory. From `~/.bashrc`, we know some commonly used alias. See more by `man ls`. 
+
+-- `la` for `ls -a` which will list out all files and documents including the hidden ones(whose name starts with a dot).
+
+-- `ll` for `ls -l` which will display Unix file types, permissions, number of hard links, owner, group, size, last-modified date and filename.
 
 ## `cp` {#cp}
 
-TODO: to write
+`cp fileA directoryB` will copy the file A to directory B. See more by executing `man cp`.
 
 ## `mkdir` {#mkdir}
 
-
-TODO: to write
+Make new directory. See more by `man mkdir`.
 
 ## `touch` {#touch}
 
-TODO: to write
+Update the access and modification times of the input file to current time. See more by `man touch`.
 
 ## `reboot` {#reboot}
 
-TODO: to write
+This command must be executed as root. `sudo` required. This will reboot your laptop or Raspberry Pi. See more by `man reboot`.
 
 ## `shutdown` {#shutdown}
 
-TODO: to write
+This command requires `sudo`. You can set a countdown to shutdown you machine. More by `man shutdown`.
 
 
 ## `rm` {#rm}
 
-TODO: to write
+Remove certain file. `rm -r` will remove files. More in `man rm`.
 
 # Users {#users-management status=draft}
 
@@ -75,19 +82,19 @@ TODO: to write
 
 ## `passwd` {#passwd}
 
-TODO: to write
+Update password of the current user. Old password needed. 
 
 # UNIX tools {#unix-tools status=draft}
 
 
 ## `cat` {#cat}
 
-TODO: to write
+Cat some file will return you the content. More in `man cat`. 
 
 
 ## `tee` {#tee}
 
-TODO: to write
+Read from standard input and write to standard output and files. More on `man tee`. 
 
 ## `truncate` {#truncate}
 
@@ -250,11 +257,11 @@ TODO: to write
 
 ## `source` {#source}
 
-TODO: to write
+You can only do `source file_name` if the file can be executed by bash. 
 
 ## `which` {#which}
 
-TODO: to write
+Tell you the /bin/ directory of your command. This is useful to distinguish which python you are using if you have virtualenv. 
 
 ## `export` {#export}
 
