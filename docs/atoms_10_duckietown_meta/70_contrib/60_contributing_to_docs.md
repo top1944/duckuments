@@ -50,6 +50,7 @@ On Ubuntu 16.04, these are the dependencies to install:
     $ sudo apt install python-dev python-numpy python-matplotlib
     $ sudo apt install virtualenv
     $ sudo apt install bibtex2html pdftk
+    $ sudo apt install imagemagick
 
 
 
