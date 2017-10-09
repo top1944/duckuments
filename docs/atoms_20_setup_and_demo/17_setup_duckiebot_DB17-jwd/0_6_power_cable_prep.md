@@ -18,7 +18,18 @@ Results: One male USB-A to wires power cable
 
 </div>
 
-## Step 1: Find a cable
+## Video tutorial
+
+The following video shows how to prepare the USB power cable for the configuration `DB17`.
+
+<div figure-id="fig:howto-mount-motors-video">
+    <dtvideo src="vimeo:236334476"/>
+</div>
+
+
+## Step-by-step guide
+
+### Step 1: Find a cable
 
 To begin with, find a male USB-A to anything cable.
 
@@ -34,7 +45,7 @@ Put the shorter cable back in the box, and open the longer cable ([](#figure:lon
      <img src="long-usb-cable.jpg" style='width: 15em'/>
 </div>
 
-## Step 2: Cut the cable
+### Step 2: Cut the cable
 
 <div class="check" markdown="1">
 Make sure the USB cable is _unplugged_ from any power source before proceeding.
@@ -52,7 +63,7 @@ The cut will look like in [](#figure:the-cable-cut).
      <img src="the-cable-cut.jpg" style='width: 15em'/>
 </div>
 
-## Step 3: Strip the cable
+### Step 3: Strip the cable
 
 Paying attention not to get hurt, strip the external white plastic. A way to do so without damaging the wires is shown in [](#figure:stripping-the-outside).
 
@@ -72,7 +83,7 @@ Once the bottom part of the external cable is removed, you will have isolated th
      <img src="stripped-the-outside.jpg" style='width: 15em'/>
 </div>
 
-## Step 3: Strip the wires {#strip-the-power-wires}
+### Step 4: Strip the wires {#strip-the-power-wires}
 
 <div class="check" markdown="1">
 Make sure the USB cable is _unplugged_ from any power source before proceeding.
@@ -86,7 +97,7 @@ Once you have isolated the wires, strip them, and use the scissors to cut off th
 
 If you are not using the suggested cable, or want to verify which are the data and power wires, continue reading.
 
-## Step 4: Find the power wires
+### Step 5: Find the power wires
 
 If you are using the USB-A cable from the suggested battery pack, black and red are the power wires and green and white are instead for data.
 
@@ -98,7 +109,7 @@ Plug the USB port inside a power source, e.g., the Duckiebot's battery. You can 
      <img src="testing-voltage-usb-cable-power-wires.jpg" style='width: 15em'/>
 </div>
 
-## Step 5: Test correct operation
+### Step 6: Test correct operation
 
 You are now ready to secure the power wires to the DC motor HAT power pins. To do so though, you need to have soldered the boards first. If you have not done so yet, read [](#soldering-boards-c0).
 
