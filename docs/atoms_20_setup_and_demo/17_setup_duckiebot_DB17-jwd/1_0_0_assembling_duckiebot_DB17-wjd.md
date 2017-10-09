@@ -249,9 +249,7 @@ Put the battery between the upper and lower decks of the chassis. It is strongly
      <img src="placeholder.jpg" style='width: 30em'/>
 </div>
 
-
-TODO: new image without M-M cable
-
+Note: [](#fig:battery-zipties) can be taken as an example of how to arrange the long camera cable as well.
 
 ### Assemble chassis-bottom and chassis-up
 

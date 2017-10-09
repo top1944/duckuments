@@ -19,15 +19,15 @@ topic in a bag file.
 
 The syntax is:
 
-    $ dt-bag-thumbnails ![bag] ![topic] ![output dir]
+    $ dt-bag-thumbnails ![bag] ![topic] ![output_dir]
 
 This should create the files:
 
-    ![output dir]/00000.jpg
-    ![output dir]/00001.jpg
-    ![output dir]/00002.jpg
-    ![output dir]/00003.jpg
-    ![output dir]/00004.jpg
+    ![output_dir]/00000.jpg
+    ![output_dir]/00001.jpg
+    ![output_dir]/00002.jpg
+    ![output_dir]/00003.jpg
+    ![output_dir]/00004.jpg
     ...
 
 where the progressive number is an incremental counter for the frames.

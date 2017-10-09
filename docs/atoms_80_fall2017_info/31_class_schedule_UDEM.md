@@ -182,7 +182,7 @@ Class (11:30 - 12:30) in Z-305
 
 Slides:
 
-* Duckiebot Modeling [(pptx)]() [(pdf)]()
+* Duckiebot Modeling [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-27-udem-modeling.pptx) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-27-udem-modeling.pdf)
 
 Book Material:
 
@@ -198,4 +198,70 @@ Book Material:
 
 Class (10:30 - 11:30) in Z-210
 
-* Computer vision basics
+Slides:
+
+* Computer vision basics: [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-02-udem-cv_basics.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-02-udem-cv_basics.pdf)
+
+Book Material:
+
+* [](#CV_basics)
+
+* [](#camera-geometry)
+
+* [](#camera-calibration)
+
+* [](#image-filtering)
+
+
+Lab (11:30 - 12:30) in AA 2333
+
+## Wed Oct 4
+
+Class (11:30 - 12:30) in Z-305
+
+Slides:
+
+* Computer Vision - Lane and Line Detection [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-udem-line_detection.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-udem-line_detection.pdf)
+
+Book Material:
+
+* [](#image-filtering)
+
+* [](#line_detection)
+
+
+Lab (12:30 - 1:30) in AA 2333
+
+Note: Checkoff and Homework due at 11pm
+
+
+
+## Friday Oct 6
+
+
+Next checkoff and homework released
+
+## Mon Oct 9
+
+Holiday no class!
+
+## Wed Oct 11
+
+Computer Vision: Illumination Invariance
+
+
+## Monday Oct 16
+
+Introduction to State Estimation: the Bayes' Filter
+
+Checkoff and Homework due
+
+
+## Wednesday Oct. 18
+
+Guest Lecture from Prof. James Forbes from McGill on Extended Kalman filter
+
+
+## Monday Oct. 27
+
+Advanced nonlinear state estimation and graphical models
