@@ -1,3 +1,5 @@
+(A change from Simon)
+
 This repository contains all the documentation of the Duckietown project.
 
 Note that you need Git LFS installed.
