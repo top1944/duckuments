@@ -311,7 +311,7 @@ TODO: to write
 
 # Mounting USB drives {#mounting-usb status=ready}
 
-First **plub in the USB drive** nothing will work if you don't do that first. Now ssh into your robot. On the command line type:
+First **plug in the USB drive** nothing will work if you don't do that first. Now ssh into your robot. On the command line type:
 
     duckiebot $ lsusb
     
