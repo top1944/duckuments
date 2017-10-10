@@ -54,7 +54,7 @@ Commands to use windows:
     <s><kbd>Ctrl</kbd>-<kbd>A</kbd> then a number</s>
 
     <s>Close window</s>
-    <s><kbd>F6</kbd></s>
+    <s><kbd>Ctrl</kbd>-<kbd>F6</kbd></s>
     <s></s>
 
     <s>Rename window </s>
