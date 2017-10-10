@@ -31,6 +31,14 @@ In the documentation, this is referred to as `DUCKIEFLEET_ROOT`.
 You will be asked to write to this repository, to update the robot DB
 and the people DB, and for doing exercises.
 
+### Duckiefleet-homework {status=recently-updated}
+
+For homework submissions, we will use the following URL:
+
+    git@github.com:duckietown/duckiefleet-fall2017-homework.git
+
+As explained below, it is important that this repo is kept separate so that students can privately work on their exercises at schools where the homeworks are counted for grades.
+
 ### Duckuments
 
 The [Duckuments](http://github.com/duckietown/duckuments) repository
@@ -70,24 +78,28 @@ The URL to clone is:
 Only TAs have write permissions to this repository.
 
 
-## Git policy for  homeworks {#git-policy-homeworks status=beta}
+## Git policy for  homeworks {#git-policy-homeworks status=recently-updated}
 
 Homeworks will require you to write and submit coding exercises. They will be submitted using git. Since we have a university plagiarism policy ([UdeM's](http://www.lecre.umontreal.ca/politique-sur-le-plagiatplagiarism-policy/)) we have to protect students work before the deadline of the homeworks. For this reason we will follow these steps for homework submission: 
 
 1. Go [here](https://education.github.com/) and file a request at the bottom “Request a Discount” then enter your institution email and other info.
-  - Go to [duckiefleet-fall2017](https://github.com/duckietown/duckiefleet-fall2017)
+  - Go to [duckiefleet-fall2017-homework](https://github.com/duckietown/duckiefleet-fall2017-homework)
   - Click "Fork" button in the top right
   - Choose your account if there are multiple options
   - Click on the Settings tab
-  - Under "Teams", click the "X" in the right for the section for "Fall 2017 Students". You will get a popup asking you to confirm. Confirm.
+  - Under "Teams", click the "X" in the right for the section for "Fall 2017 Vehicle Autonomy Engineers in training". You will get a popup asking you to confirm. Confirm.
 
-Now you need to point the remote of your `duckiefleet-fall2017` to your new local private repo. To do, from inside your already previously cloned `duckiefleet-fall2017` repo do:
+If you have not yet cloned the duckietown repo do it now:
 
-    $ git remote set-url origin git@github.com:![GIT_USERNAME]/duckiefleet-fall2017.git
+    $ git clone git@github.com:duckietown/duckiefleet-fall2017-homework.git
+
+Now you need to point the remote of your `duckiefleet-fall2017-homework` to your new local private repo. To do, from inside your already previously cloned `duckiefleet-fall2017` repo do:
+
+    $ git remote set-url origin git@github.com:![GIT_USERNAME]/duckiefleet-fall2017-homework.git
 
 Let's also add an `upstream` remote that points back to the original duckietown repo:
 
-    $ git remote add upstream git@github.com:duckietown/duckiefleet-fall2017.git
+    $ git remote add upstream git@github.com:duckietown/duckiefleet-fall2017-homework.git
 
 If you type
 
@@ -96,10 +108,10 @@ If you type
 You should now see:
 
 ```
-origin  git@github.com:![GIT_USERNAME]/duckiefleet-fall2017.git (fetch)
-origin  git@github.com:![GIT_USERNAME]/duckiefleet-fall2017.git (push)
-upstream  git@github.com:duckietown/duckiefleet-fall2017.git (fetch)
-upstream  git@github.com:duckietown/duckiefleet-fall2017.git (push)
+origin  git@github.com:![GIT_USERNAME]/duckiefleet-fall2017-homework.git (fetch)
+origin  git@github.com:![GIT_USERNAME]/duckiefleet-fall2017-homework.git (push)
+upstream  git@github.com:duckietown/duckiefleet-fall2017-homework.git (fetch)
+upstream  git@github.com:duckietown/duckiefleet-fall2017-homework.git (push)
 ```
 
 Now the next time you push (without specifying a remote) you will push to your local private repo. 
@@ -108,15 +120,15 @@ Now the next time you push (without specifying a remote) you will push to your l
 
 You should put your homework files in folder at:
 
-    ![DUCKIEFLEET_ROOT]/homeworks/![XX_homework_name]/![YOUR_ROBOT_NAME]
+    ![DUCKIEFLEET_HOMEWORK_ROOT]/homeworks/![XX_homework_name]/![YOUR_ROBOT_NAME]
 
-Some homeworks might not require ROS, they should go in a subfolder called `scripts`. ROS homeworks should go in packages which are generated using the process described here: [](#sec:ros-python-howto). For an example see `![DUCKIEFLEET_ROOT]/homeworks/01_data_processing/shamrock`.
+Some homeworks might not require ROS, they should go in a subfolder called `scripts`. ROS homeworks should go in packages which are generated using the process described here: [](#sec:ros-python-howto). For an example see `![DUCKIEFLEET_HOMEWORK_ROOT]/homeworks/01_data_processing/shamrock`.
 
-Note: To make your ROS packages findable by ROS you should add a symlink from your `duckietown/catkin_ws/src` directory to `![$DUCKIEFLEET_ROOT`
+Note: To make your ROS packages findable by ROS you should add a symlink from your `duckietown/catkin_ws/src` directory to `![$DUCKIEFLEET_HOMEWORK_ROOT]`
 
 ### To submit your homework
 
-When you are ready to submit your homework, you should do **create a tag** and **tag the Fall 2017 instructors/TAs group** to let us know that your work is complete. This can be done through the command line or through the github web interface:
+When you are ready to submit your homework, you should do **create a release** and **tag the Fall 2017 instructors/TAs group** to let us know that your work is complete. This can be done through the command line or through the github web interface:
 
 Command line:
 
@@ -140,13 +152,27 @@ You may make as many releases as you like before the deadline.
 Once all deadlines have passed for all institutions, we can merge all the homeworks.
 We will ask to create a "Pull Request" from your private repo. 
 
-1. In your private duckiefleet-fall2017 repo, click the "New pull request button".
+1. In your private duckiefleet-fall2017-homework repo, click the "New pull request button".
 2. Click "Create pull request" green button
-3. The 4 drop down menus at the top should be left to right: (`base fork: duckietown/duckiefleet-fall2017`, `base: master`, `head fork: ![YOUR_GIT_NAME]/duckiefleet-fall2017`, `compare: ![YOUR_BRANCH]`)
+3. The 4 drop down menus at the top should be left to right: (`base fork: duckietown/duckiefleet-fall2017-homework`, `base: master`, `head fork: ![YOUR_GIT_NAME]/duckiefleet-fall2017-homework`, `compare: ![YOUR_BRANCH]`)
 4. Leave a comment if you like and click "Create pull request" green button below.
 5. At some point a TA or instructor will either merge or leave you a comment.
 
 
+
+### For U de M students who have already submitted homework to the previus duckiefleet-2017 repo
+
+These instructions assume that you are ok with losing the commit history from the first homework. If not, things get a little more complicated
+
+Fork and clone the new "homework" repository using the process above. Followed by:
+
+    $ git clone git@github.com:![GIT_USERNAME]/duckiefleet-fall2017-homework.git
+    
+Copy over your homework files from the duckiefleet-fall2017 repo into the duckiefleet-fall2017-homework repo
+
+git rm your folder from duckiefleet-fall2017 and commit and push
+
+git add your folder to duckiefleet-fall2017-homework and commit and push
 
 
 ## Git policy for project development {#git-policy-projects status=draft}
