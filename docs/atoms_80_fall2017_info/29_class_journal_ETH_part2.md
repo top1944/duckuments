@@ -64,7 +64,7 @@ Please help us making the experience better by [providing feedback (can be anony
 Please help us making the experience better by [providing feedback (can be anonymous)](https://tinyurl.com/y77pbv7n)
 
 
-## Oct 09 (Mon):  {#Zurich-2017-10-09}
+## Oct 09 (Mon): Autonomy architectures and version control {#Zurich-2017-10-09}
 
 ### Materials presented in class
 
