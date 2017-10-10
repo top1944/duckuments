@@ -151,7 +151,9 @@ running the command:
 
 Test the Duckiebot for different values of the gain parameter.
 
-Doubt: @liampaull What is the correct value to use for the gain? -AC
+Doubt: @liampaull What is the correct value to use for the gain? -AC; The kinematic model used above is based on the no slipping hypothesis, so the correct value of g is the highest that does not make the wheels slip. (I guess somewhere between [0.85-1], rigorous testing needed) -JT
+
+
 
 ### Store the calibration
 
