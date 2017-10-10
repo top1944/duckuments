@@ -232,3 +232,64 @@ First run the following to see what networks are available:
 You should see the network that you are trying to connect (`![SSID])`) to and you should know the password. To connect to it run:
 
     duckiebot $ sudo nmcli dev wifi con ![SSID] password ![PASSWORD]
+    
+### Option 5: ETH Wifi {status=draft}
+
+The following instructions will lead you to connect your PI to the "eth" wifi network. 
+
+First, run the following on duckiebot
+
+    duckiebot $ iwconfig
+    ![...]
+
+    lo        no wireless extensions.
+
+    enxb![xxxxxxxxxxx]  no wireless extensions.
+
+    ![...]
+    
+Make note of the name `enxb![xxxxxxxxxxx]`. ![xxxxxxxxxxx] should be a string that has 11 characters that is formed by numbers and lower case letters.
+
+Second, edit the file `/etc/network/interfaces` which requires `sudo` so that it looks like the following, and make sure the `enxb![xxxxxxxxxxx]` matches:
+
+    # interfaces(5) file used by ifup(8) and ifdown(8) Include files from /etc/network/     interfaces.d:
+    source-directory /etc/network/interfaces.d
+    
+    # The loopback network interface
+    auto lo
+    auto enxb![xxxxxxxxxxx]
+    
+    # the wired network setting 
+    iface enxb![xxxxxxxxxxx] inet dhcp
+    
+    # the wireless network setting
+    auto wlan0
+    allow-hotplug wlan0
+    iface wlan0 inet dhcp
+        pre-up wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
+        post-down killall -q wpa_supplicant
+
+Third, edit the file `/etc/wpa_supplicant/wpa_supplicant.conf` which requires `sudo` so that it looks like the following, and make sure you substitute [identity] and [password] content with your eth account information: 
+
+    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+    update_config=1
+
+    network={
+        ssid="eth"
+        key_mgmt=WPA-EAP
+        group=CCMP TKIP
+        pairwise=CCMP TKIP
+        eap=PEAP
+        proto=RSN
+        identity="your user name goes here"
+        password="your password goes here"
+        phase1="peaplabel=0"
+        phase2="auth=MSCHAPV2"
+        priority=1
+    }
+
+Fourth, reboot your PI. 
+
+    duckiebot $ sudo reboot
+
+Then everything shall be fine. The PI will connect to "eth" automatically everytime it starts. 

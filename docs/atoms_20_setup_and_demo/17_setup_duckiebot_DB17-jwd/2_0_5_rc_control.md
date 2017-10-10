@@ -43,7 +43,7 @@ Or see the hints in the troubleshooting section on the previous page.
 
 ## Update the system
 
-The software used for the Duckiebots changes every day, this means that also the dependencies 
+The software used for the Duckiebots changes every day, this means that also the dependencies
 change. In order to check whether your system meets all the requirements for running the software
 and install all the missing packages (if any), we can run the following script:
 
@@ -51,7 +51,6 @@ and install all the missing packages (if any), we can run the following script:
     duckiebot $ /bin/bash ./dependencies_since_image.sh
 
 This command will install only the packages that are not already installed in your system.
-
 
 ## Set up the ROS environment on the Duckiebot {#build-repo}
 
@@ -71,6 +70,7 @@ See also: For more information about `catkin_make`, see [](#catkin_make).
 
 Note: there is a known bug, for which it fails the first time on the Raspberry Pi. Try again; it will work.
 
+Comment: I got no error on first execution on the Raspberry Pi
 
 <!-- (you have to be under the `catkin_ws` folder to invoke `catkin_make`) -->
 
@@ -84,6 +84,10 @@ See see [](#duckiefleet-directory) to find the right `duckiefleet` repository.
 In `~/.bashrc` set `DUCKIEFLEET_ROOT` to point to the directory:
 
     export DUCKIEFLEET_ROOT=~/duckiefleet
+
+Also, make sure that you execute `~/.bashrc` in the current shell by running the command:
+
+    source ~/.bashrc
 
 
 ## Add your vehicle data to the robot database {#edit-machines-file status=recently-updated}

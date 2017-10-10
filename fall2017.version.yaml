@@ -37,7 +37,7 @@ recipe:
   - add: exercise-bag-in-out
   - add: exercise-instagram
   - add: exercise-instagram-live
-  
+
 
 - make-part: theory-background
   title: Theory Background
@@ -69,7 +69,10 @@ recipe:
 # Add the entire part
 - add: building-duckiebot-c0
   except: # except wheel-calibration
+  - duckiebot-ubuntu-image
   - wheel-calibration
+  - soldering-boards-c0
+  # - acquiring-parts-c0
 
 - add: building-duckiebot-c1
 
@@ -77,6 +80,7 @@ recipe:
   title: Appendix
   contents:
   - add: bibliography
+  - add: last-modified
 
 purl_prefix: http://purl.org/dt/fall2017/
 

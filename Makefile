@@ -209,31 +209,15 @@ master-pdf: checks check-programs-pdf
 
 	prince --javascript -o out/master/pdf/duckiebook1.pdf out/master/pdf/b.html
 
-	pdftk A=out/master/pdf/duckiebook1.pdf B=misc/blank.pdf cat A1-end B output out/master/pdf/duckiebook2.pdf keep_final_id
+	./reduce-pdf-size.sh out/master/pdf/duckiebook1.pdf out/master/pdf/duckiebook2.pdf
+
 	pdftk out/master/pdf/duckiebook2.pdf update_info misc/blank-metadata output out/master/pdf/duckiebook3.pdf
 
-	./reduce-pdf-size.sh out/master/pdf/duckiebook3.pdf out/master/pdf/duckiebook4.pdf
+	pdftk A=out/master/pdf/duckiebook3.pdf B=misc/blank.pdf cat A1-end B output out/master/pdf/duckiebook4.pdf keep_final_id
+
 
 	cp out/master/pdf/duckiebook4.pdf duckuments-dist/master/duckiebook.pdf
 
-fall2017-pdf: checks check-programs-pdf
-	# mathjax is 1 in this case
-	DISABLE_CONTRACTS=1 mcdp-render-manual \
-		--src $(src) \
-		--stylesheet v_manual_blurb \
-		--mathjax 1 \
-		--symbols $(tex-symbols) \
-		-o out/fall2017/pdf \
-		--output_file out/fall2017/pdf/duckiebook.html -c "config echo 1; rparmake n=8"
-
-	python -m mcdp_docs.add_edit_links <  out/fall2017/pdf/duckiebook.html > out/fall2017/pdf/b.html
-
-	prince --javascript -o out/fall2017/pdf/duckiebook1.pdf out/fall2017/pdf/b.html
-
-	pdftk A=out/fall2017/pdf/duckiebook1.pdf B=misc/blank.pdf cat A1-end B output out/fall2017/pdf/duckiebook2.pdf keep_final_id
-	pdftk out/fall2017/pdf/duckiebook2.pdf update_info misc/blank-metadata output out/fall2017/pdf/duckiebook3.pdf
-	./reduce-pdf-size.sh out/fall2017/pdf/duckiebook3.pdf out/fall2017/pdf/duckiebook4.pdf
-	cp out/fall2017/pdf/duckiebook4.pdf duckuments-dist/fall2017/duckiebook.pdf
 
 update-mcdp:
 	-git -C mcdp/ pull
@@ -374,6 +358,7 @@ fall2017-prepare:
 	# python -m mcdp_docs.add_edit_links duckuments-dist/fall2017/two.html < duckuments-dist/fall2017/one.html
 	python -m mcdp_docs.embed_css out/fall2017/data/master.html < out/fall2017/data/one.html
 
+
 fall2017-compose:
 	mcdp-docs-compose --config fall2017.version.yaml
 
@@ -383,6 +368,28 @@ fall2017-compose:
 		--output duckuments-dist/fall2017/duckiebook.html \
 		--assets duckuments-dist/fall2017/duckiebook/assets
 
+fall2017-pdf: checks check-programs-pdf
+	# mathjax is 1 in this case
+# DISABLE_CONTRACTS=1 mcdp-render-manual \
+	--src $(src) \
+	--stylesheet v_manual_blurb \
+	--mathjax 1 \
+	--symbols $(tex-symbols) \
+	-o out/fall2017/pdf \
+	--output_file out/fall2017/pdf/duckiebook.html -c "config echo 1; rparmake n=8"
+
+# python -m mcdp_docs.add_edit_links <  out/fall2017/pdf/duckiebook.html > out/fall2017/pdf/b.html
+
+	prince --javascript -o out/fall2017/pdf/duckiebook1.pdf out/fall2017/data/duckiebook.html
+
+	./reduce-pdf-size.sh out/fall2017/pdf/duckiebook1.pdf out/fall2017/pdf/duckiebook2.pdf
+
+	pdftk out/fall2017/pdf/duckiebook2.pdf update_info misc/blank-metadata output out/fall2017/pdf/duckiebook3.pdf
+
+	pdftk A=out/fall2017/pdf/duckiebook3.pdf B=misc/blank.pdf cat A1-end B output out/fall2017/pdf/duckiebook4.pdf keep_final_id
+
+	cp out/fall2017/pdf/duckiebook4.pdf duckuments-dist/fall2017/duckiebook.pdf
+
 fall2017-split:
 	mcdp-split \
 	   --filename out/fall2017/data/duckiebook.html \
@@ -391,6 +398,9 @@ fall2017-split:
 	   -c " config echo 1; config colorize 1; rparmake" \
 	   --mathjax \
 	   --preamble $(tex-symbols)
+
+duckuments-bot:
+	python misc/slack_message.py
 
 fall2017: checks update-mcdp update-software
 	$(MAKE) fall2017-prepare

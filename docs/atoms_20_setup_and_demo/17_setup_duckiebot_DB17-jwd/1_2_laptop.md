@@ -90,16 +90,7 @@ Install redshift and run it.
 
     laptop $ sudo apt install redshift-gtk
 
-Set to "autostart" from the icon.
-
-## Installation of the duckuments system
-
-Optional but very encouraged: install the duckuments system.
-This will allow you to have a local copy of the documentation
-and easily submit questions and changes.
-
-See: The procedure is documented in [](#sub:installing-docs-system).
-
+Set to "autostart" from the icon (on the panel - near wifi/lan).
 
 ## Passwordless `sudo`
 
@@ -141,3 +132,13 @@ If the step is done correctly, this command should succeed:
 Set up Git locally.
 
 See: The procedure is described in [](#howto-git-local-config).
+
+## Installation of the duckuments system
+
+Optional but very encouraged: install the duckuments system.
+This will allow you to have a local copy of the documentation
+and easily submit questions and changes.
+
+See: The procedure is documented in [](#sub:installing-docs-system).
+
+

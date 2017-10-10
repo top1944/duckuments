@@ -1,14 +1,12 @@
-# Norms {#norms status=draft}
+# Norms {#intro-norms status=draft}
 
-Assigned: Jacopo
+Assigned: Dzenan
 
 TODO: finish writing
 
-Other metrics can be defined to measure the "length" of a vector. Here, we report some commonly used norms. For a more in depth discussion of what consitutes a norm, and their properties:
+Other metrics can be defined to measure the "length" of a vector. Here, we report some commonly used norms. For a more in depth discussion of what constitutes a norm, and their properties, see:
 
-see: [](#norms),
-
-see also: [](#bib:norms)
+see: [](#bib:LaxFunctionalAnalysis2002).
 
 ### $p$-norm {#vec-p-norm}
 

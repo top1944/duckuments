@@ -1,8 +1,6 @@
-# `C1` (LEDs) setup {#leds status=draft}
+# `DB17-l` setup {#leds-setup status=draft}
 
-Assigned: Shiying?
-
-
+Assigned: Shiying
 
 ## Connecting Wires to LEDs
 

@@ -23,11 +23,6 @@ The simplest way to contribute to the documentation is to click any of the "✎"
 
 They link to the "edit" page in Github. There, one can make and commit the edits in only a few seconds.
 
-<!--
-## Comments
-
-In the multiple-page version, each page also includes a comment box powered by a service called Disqus. This provides a way for people to write comments with a very low barrier. (We would periodically remove the comments.)
--->
 
 ## Installing the documentation system {#installing-docs-system}
 
@@ -37,7 +32,12 @@ installed in `~/duckuments`. However, it can be installed anywhere.
 We are also going to assume that you have setup
 a Github account with working public keys.
 
-<!-- See: The documentation for that is in XXX. -->
+See: [Basic SSH config](#ssh-local-configuration).
+
+See: [Key pair creation](#howto-create-key-pair).
+ 
+See: [Adding public key on Github](#howto-add-pubkey-to-github).
+
 
 We are also going to assume that you have installed the `duckietown/software` in `~/duckietown`.
 
@@ -50,6 +50,7 @@ On Ubuntu 16.04, these are the dependencies to install:
     $ sudo apt install python-dev python-numpy python-matplotlib
     $ sudo apt install virtualenv
     $ sudo apt install bibtex2html pdftk
+    $ sudo apt install imagemagick
 
 
 

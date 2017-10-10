@@ -149,51 +149,24 @@ labels with your robot name for future application on your Duckiebot.
 Please help us making the experience better by [providing feedback (can be anonymous)](https://tinyurl.com/y77pbv7n)
 
 
-### Material presented in class {status=draft}
-
-- Duckiebot parts
-
-
-
-
-<!-- ### Math Refresher
-
-Do a bit of a refresher on some math basics.
-
-Linear Algebra: [](#linear_algebra)
-
-Probability Basics: [](#probability_basics) -->
-
-
-<!--
-## List of TAs to update this
-
-
-    Dzenan Lapandic 2-3 25/9-8/10
-    Ercan Selçuk 4-5 9/10-22/10
-    Khurana Harshit 6-7 23/10-5/11
-    Marco Erni 8-9 6/11-19/11
-    Miguel de la Iglesia 10-11 20/11-3/12
-    Shiying Li/Yang Shaohui 12-13 4/12-end of course -->
-
-
-##  (Template for every lecture) Date: Topic {status=draft}
-
-Assigned: Name of TA
-
-### Preparation
-
-Things that the students should do before class.
-
 ### Material presented in class
 
-Link to PDF and Keynote/Powerpoint materials.
+- Duckiebot parts:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-27-ETHZ-WhatsInTheBox.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-09-27-ETHZ-WhatsInTheBox.pdf">PDF</a>.
 
-### Pointers to reading materials
 
-Links to the units mentioned in the slides,
-and additional materials.
+## Thursday Sep 28: Misc announcements {#2017-09-28-misc}
 
-### Questions and answers
+We created the channel `#ethz-chitchat` for questions and other random things, so that we can leave this channel `#ethz-announcements` only for announcements.
 
-Write here the FAQs that students have following the lecture or instructions.
+We sent the final list to the Department; so hopefully in a couple of days the situation on MyStudies is regularized.
+
+The "lab" time on Friday consists in an empty room for you to use as you wish, for example to assembe the robots together. In particular, it's on the same floor of the Duckietown room and the IDSC lab.
+
+The instructions for assembling the Duckiebots are [here](#building-duckiebot-c0). Note that you
+don't have to do the parts that we did for you: buying the parts, soldering the boards, and reproducing the image.
+
+Expected progress: We are happy if we see everybody reaching up to
+[](#rc-cam-launched-remotely) by Monday October 9. You are encouraged to start very early;
+it's likely that you will not receive much help on Sunday October 8...

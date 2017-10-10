@@ -1,6 +1,6 @@
 # Matrix operations (basic) {#matrix-ops-basic status=draft}
 
-Assigned: Jacopo
+Assigned: Dzenan
 
 
 - sum of matrices

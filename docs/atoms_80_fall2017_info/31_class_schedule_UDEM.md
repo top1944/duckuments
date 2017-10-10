@@ -81,7 +81,7 @@ Slides:
 
 * System Architecture [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-systems_architecture_basics.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-systems_architecture_basics.pdf)
 
-* Autonomy Architectures [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-autonomy_architectures.key) [(pdf)]((https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-autonomy_architectures.pdf)
+* Autonomy Architectures [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-autonomy_architectures.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-autonomy_architectures.pdf)
 
 * Representations for Robotics [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-representations.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-18-udem-autonomy_architectures.pdf)
 

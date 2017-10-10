@@ -1,15 +1,19 @@
 # Moving files between computers  {#moving-files status=draft}
 
-## SCP
+## `scp` {#scp}
 
 TODO: to write
 
 
 ### Download a file with SCP {#howto-download-file-with-scp}
 
-TODO: to write
+Use this command:
+
+    laptop $ scp ![hostname]:/path/to/out.jpg .
+
+to download `out.jpg` to your current directory.
 
 
-## RSync
+## `rsync` {#rsync}
 
 TODO: to write
