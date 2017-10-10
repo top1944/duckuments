@@ -6,11 +6,24 @@ Classes take place on Mondays and Wednesdays from 9am-11am in TTIC Room 530.
 
 The following is a list of the current checkoffs, along with the date and time when they are due. Most submissions involve uploading videos to via Dropbox File Request using the link provided in the individual checkoff.
 
-* **Friday 5pm CT**: [](#part:checkoff_assembly_configuration)
+&nbsp; 
+
+* **Friday October 6, 5pm CT**: [](#part:checkoff_assembly_configuration)
 
 
 ## Problem Sets:
 
+The following is a list of the current problem sets, along with the date and time when they are due.
+
+See: [](#git-policy-homeworks)
+
+for instructions on how the homework should be submitted.
+
+Note: Please keep track of how much time you spend on each problem set. We will ask you for this estimate along with other feedback at the end of each problem set.
+
+&nbsp;
+
+* **Friday October 13, 11:59pm CT**: [](#part:homework-data-processing-ttic)
 
 
 

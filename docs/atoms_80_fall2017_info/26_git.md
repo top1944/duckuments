@@ -81,7 +81,7 @@ Only TAs have write permissions to this repository.
 ## Git policy for  homeworks {#git-policy-homeworks status=recently-updated}
 
 Homeworks will require you to write and submit coding exercises. They will be submitted using git. Since we have a university plagiarism policy ([UdeM's](http://www.lecre.umontreal.ca/politique-sur-le-plagiatplagiarism-policy/),
-[TTIC/uChicago](https://studentmanual.uchicago.edu/Policies#Honesty)) we have to protect students work before the deadline of the homeworks. For this reason we will follow these steps for homework submission: 
+[TTIC/UChicago](https://studentmanual.uchicago.edu/Policies#Honesty)) we have to protect students work before the deadline of the homeworks. For this reason we will follow these steps for homework submission: 
 
 1. Go [here](https://education.github.com/) and file a request at the bottom “Request a Discount” then enter your institution email and other info.
   - Go to [duckiefleet-fall2017-homework](https://github.com/duckietown/duckiefleet-fall2017-homework)
@@ -171,7 +171,7 @@ These instructions assume that you are ok with losing the commit history from th
 Fork and clone the new "homework" repository using the process above. Followed by:
 
     $ git clone git@github.com:![GIT_USERNAME]/duckiefleet-fall2017-homework.git
-    
+
 Copy over your homework files from the duckiefleet-fall2017 repo into the duckiefleet-fall2017-homework repo
 
 git rm your folder from duckiefleet-fall2017 and commit and push
