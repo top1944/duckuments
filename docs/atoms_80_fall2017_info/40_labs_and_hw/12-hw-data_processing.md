@@ -15,7 +15,7 @@ Result: Ability to process imagery live
 
 </div>
 
-Slack channel: [#help-data-processing](https://duckietown.slack.com/archives/C7ADTM7GF)
+Slack channel: [#ex-data_processing](https://duckietown.slack.com/archives/C7ADTM7GF)
 
 Montreal deadline: Oct 4, 11:00pm
 
