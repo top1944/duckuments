@@ -8,6 +8,8 @@ Assigned: Dzenan Lapandic
 Requires: You can see the camera image on the laptop. The procedure is documented in
 [](#rc-cam-launched-remotely).
 
+Requires: You have all the repositories described in  
+
 Results: Calibrated camera of the robot
 
 </div>
