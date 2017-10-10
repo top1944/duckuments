@@ -8,7 +8,7 @@ Assigned: Dzenan Lapandic
 Requires: You can see the camera image on the laptop. The procedure is documented in
 [](#rc-cam-launched-remotely).
 
-Requires: You have all the repositories described in  
+Requires: You have all the repositories (described in [](#fall2017-git)) cloned properly and you have your environment variables (described in [](#env-variables)) set properly
 
 Results: Calibrated camera of the robot
 
