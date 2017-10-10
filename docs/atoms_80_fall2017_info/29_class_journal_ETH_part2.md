@@ -64,7 +64,21 @@ Please help us making the experience better by [providing feedback (can be anony
 Please help us making the experience better by [providing feedback (can be anonymous)](https://tinyurl.com/y77pbv7n)
 
 
-## Oct 09 (Mon) {#Zurich-2017-10-09 status=draft}
+## Oct 09 (Mon):  {#Zurich-2017-10-09}
+
+### Materials presented in class
+
+a - Autonomy Architectures Basics:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-09-ETHZ-a-system_architectures.key">Keynote</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-09-ETHZ-a-system_architectures.pdf">PDF</a>.
+
+
+b - Version control with Git:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-09-ETHZ-b-version_control.key">Keynote</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-09-ETHZ-b-version_control.pdf">PDF</a>.
+
+
+## Oct 11 (Wed) {#Zurich-2017-10-11 status=draft}
 
 Assigned: XXX
 
@@ -77,10 +91,6 @@ Other units to do:
 - Networking
 - Modern signal distribution and processing: periodic vs event-based processing; latency/frequency etc.
 
-
-## Oct 11 (Wed) {#Zurich-2017-10-11 status=draft}
-
-Assigned: XXX
 
 ## Oct 16 (Mon) {#Zurich-2017-10-16 status=draft}
 
