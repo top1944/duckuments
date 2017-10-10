@@ -17,25 +17,25 @@ In the documentation, this is referred to as `DUCKIETOWN_ROOT`.
 
 During the first part of the class, you will only read from this repository.
 
-### Duckiefleet
+### Duckiefleet {status=recently-updated}
 
-The [duckiefleet-fall2017](http://github.com/duckietown/duckiefleet-fall2017)
+The [duckiefleet](http://github.com/duckietown/duckiefleet)
 repository contains the data specific to this instance of the class.
 
 The URL to clone is:
 
-    git@github.com:duckietown/duckiefleet-fall2017.git
+    git@github.com:duckietown/duckiefleet.git
 
-In the documentation, this is referred to as `DUCKIEFLEET_ROOT`.
+In the documentation, the location of this repo is referred to as `DUCKIEFLEET_ROOT`.
 
 You will be asked to write to this repository, to update the robot DB
 and the people DB, and for doing exercises.
 
-### Duckiefleet-homework {status=recently-updated}
+### exercises-fall2017 {status=recently-updated}
 
 For homework submissions, we will use the following URL:
 
-    git@github.com:duckietown/duckiefleet-fall2017-homework.git
+    git@github.com:duckietown/exercised-fall2017.git
 
 As explained below, it is important that this repo is kept separate so that students can privately work on their exercises at schools where the homeworks are counted for grades.
 
@@ -75,7 +75,7 @@ The URL to clone is:
 
     git@github.com:duckietown/XX-exercises.git
 
-Only TAs have write permissions to this repository.
+Only TAs have read and write permissions to this repository.
 
 
 ## Git policy for  homeworks {#git-policy-homeworks status=recently-updated}
@@ -84,7 +84,7 @@ Homeworks will require you to write and submit coding exercises. They will be su
 [TTIC/uChicago](https://studentmanual.uchicago.edu/Policies#Honesty)) we have to protect students work before the deadline of the homeworks. For this reason we will follow these steps for homework submission: 
 
 1. Go [here](https://education.github.com/) and file a request at the bottom “Request a Discount” then enter your institution email and other info.
-  - Go to [duckiefleet-fall2017-homework](https://github.com/duckietown/duckiefleet-fall2017-homework)
+  - Go to [exercises-fall2017](https://github.com/duckietown/exercises-fall2017)
   - Click "Fork" button in the top right
   - Choose your account if there are multiple options
   - Click on the Settings tab of your repostory, not your account
@@ -93,15 +93,15 @@ Homeworks will require you to write and submit coding exercises. They will be su
 
 If you have not yet cloned the duckietown repo do it now:
 
-    $ git clone git@github.com:duckietown/duckiefleet-fall2017-homework.git
+    $ git clone git@github.com:duckietown/exercises-fall2017.git
 
-Now you need to point the remote of your `duckiefleet-fall2017-homework` to your new local private repo. To do, from inside your already previously cloned `duckiefleet-fall2017` repo do:
+Now you need to point the remote of your `exercises-fall2017` to your new local private repo. To do, from inside your already previously cloned `duckiefleet-fall2017` repo do:
 
-    $ git remote set-url origin git@github.com:![GIT_USERNAME]/duckiefleet-fall2017-homework.git
+    $ git remote set-url origin git@github.com:![GIT_USERNAME]/exercises-fall2017.git
 
 Let's also add an `upstream` remote that points back to the original duckietown repo:
 
-    $ git remote add upstream git@github.com:duckietown/duckiefleet-fall2017-homework.git
+    $ git remote add upstream git@github.com:duckietown/exercises-fall2017.git
 
 If you type
 
@@ -110,10 +110,10 @@ If you type
 You should now see:
 
 ```
-origin  git@github.com:![GIT_USERNAME]/duckiefleet-fall2017-homework.git (fetch)
-origin  git@github.com:![GIT_USERNAME]/duckiefleet-fall2017-homework.git (push)
-upstream  git@github.com:duckietown/duckiefleet-fall2017-homework.git (fetch)
-upstream  git@github.com:duckietown/duckiefleet-fall2017-homework.git (push)
+origin  git@github.com:![GIT_USERNAME]/exercises-fall2017.git (fetch)
+origin  git@github.com:![GIT_USERNAME]/exercises-fall2017.git (push)
+upstream  git@github.com:duckietown/exercises-fall2017.git (fetch)
+upstream  git@github.com:duckietown/exercises-fall2017.git (push)
 ```
 
 Now the next time you push (without specifying a remote) you will push to your local private repo.
@@ -156,9 +156,9 @@ You may make as many releases as you like before the deadline.
 Once all deadlines have passed for all institutions, we can merge all the homeworks.
 We will ask to create a "Pull Request" from your private repo.
 
-1. In your private duckiefleet-fall2017-homework repo, click the "New pull request button".
+1. In your private exercises-fall2017 repo, click the "New pull request button".
 2. Click "Create pull request" green button
-3. The 4 drop down menus at the top should be left to right: (`base fork: duckietown/duckiefleet-fall2017-homework`, `base: master`, `head fork: ![YOUR_GIT_NAME]/duckiefleet-fall2017-homework`, `compare: ![YOUR_BRANCH]`)
+3. The 4 drop down menus at the top should be left to right: (`base fork: duckietown/exercises-fall2017`, `base: master`, `head fork: ![YOUR_GIT_NAME]/exercises-fall2017`, `compare: ![YOUR_BRANCH]`)
 4. Leave a comment if you like and click "Create pull request" green button below.
 5. At some point a TA or instructor will either merge or leave you a comment.
 
@@ -170,13 +170,13 @@ These instructions assume that you are ok with losing the commit history from th
 
 Fork and clone the new "homework" repository using the process above. Followed by:
 
-    $ git clone git@github.com:![GIT_USERNAME]/duckiefleet-fall2017-homework.git
+    $ git clone git@github.com:![GIT_USERNAME]/exercises-fall2017.git
     
-Copy over your homework files from the duckiefleet-fall2017 repo into the duckiefleet-fall2017-homework repo
+Copy over your homework files from the duckiefleet-fall2017 repo into the exercises-fall2017 repo
 
 git rm your folder from duckiefleet-fall2017 and commit and push
 
-git add your folder to duckiefleet-fall2017-homework and commit and push
+git add your folder to exercises-fall2017 and commit and push
 
 
 ## Git policy for project development {#git-policy-projects status=draft}
