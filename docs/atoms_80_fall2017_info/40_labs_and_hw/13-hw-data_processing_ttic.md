@@ -15,7 +15,7 @@ Result: Ability to process imagery live
 
 Slack channel: [#help-data-processing](https://duckietown.slack.com/archives/C7ADTM7GF)
 
-TTIC deadline: TBD
+TTIC deadline: Friday, October 13 11:59pm CT
 
 ## Follow the git policy for homeworks
 
@@ -53,3 +53,7 @@ Complete [](#exercise-bag-mirror)
 Complete [](#exercise-instagram-live)
 
 Call your package `dt-instagram-live_![ROBOT_NAME]` and call your node `dt-instagram-live_![ROBOT_NAME]`.
+
+## Exercise: Feedback
+
+Complete the [exercise feedback form](https://docs.google.com/forms/d/e/1FAIpQLSd3Vwd0Bp1euuMXSogZVCmvE5BzWREXge9Mokhjw6FXpPbJgA/viewform?usp=sf_link). You will receive points towards this exercise if you complete the form.
