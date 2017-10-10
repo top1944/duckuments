@@ -172,7 +172,7 @@ Class (11:30 - 12:30) in Z-305
 
 * New checkoff announced: [](#checkoff_take_a_log)
 
-* New homework announced: [](#homework-data-processing)
+* New homework announced: [](#homework-data-processing-udem)
 
 * Let's review the git policy for homeworks: [](#git-policy-homeworks)
 
