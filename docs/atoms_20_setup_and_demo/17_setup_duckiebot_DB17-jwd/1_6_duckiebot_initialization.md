@@ -27,7 +27,7 @@ The size is 1.7 GB.
 
 You can use:
 
-    $ wget -O duckiebot-RPI3-AD-2017-09-12.img.xz ![URL above]
+    $ sudo wget -O duckiebot-RPI3-AD-2017-09-12.img.xz ![URL above]
 
 <div class="comment" markdown="1">
 
