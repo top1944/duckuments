@@ -236,10 +236,6 @@ Note: Checkoff and Homework due at 11pm
 
 
 
-## Friday Oct 6
-
-
-Next checkoff and homework released
 
 ## Mon Oct 9
 
@@ -247,14 +243,24 @@ Holiday no class!
 
 ## Wed Oct 11
 
-Computer Vision: Illumination Invariance
+Class 11:30 in Z-305
+
+* Computer Vision - Feature descriptors [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-11-udem-feature_extraction.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-11-udem-feature_extraction.pdf)
+
+Book Material:
+
+
+Lab 12:30 - 1:30 in AA2333
+
+
+New Checkoff and Homework released by end of day (hopefully)
+
 
 
 ## Monday Oct 16
 
 Introduction to State Estimation: the Bayes' Filter
 
-Checkoff and Homework due
 
 
 ## Wednesday Oct. 18
