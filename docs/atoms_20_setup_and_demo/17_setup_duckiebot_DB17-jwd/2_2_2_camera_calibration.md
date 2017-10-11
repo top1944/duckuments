@@ -14,7 +14,7 @@ Results: Calibrated camera of the robot
 
 </div>
 
-## Intrinsic calibration
+## Intrinsic calibration {status=recently-updated}
 
 ### Setup
 
@@ -113,7 +113,7 @@ You should see that your new calibration file is uncommitted. You need to commit
 
 Before moving on to the extrinsic calibration, make sure to kill all running processes by pressing <kbd>Ctrl</kbd>-<kbd>C</kbd> in each of the terminal windows.
 
-## Extrinsic calibration
+## Extrinsic calibration {status=recently-updated}
 
 ### Setup
 
@@ -131,43 +131,29 @@ Arrange the Duckiebot and checkerboard according to [](#fig:extrinsic_setup). No
 
 ### Calibration
 
+
 #### Step 1
 
-Open four terminals terminals on the laptop.
+ssh into your robot and launch the camera
+
+    laptop $ ssh ![robot_name]
+    duckiebot $ cd ![DUCKIETOWN_ROOT]
+    duckiebot $ source environment.sh
+    laptop $ roslaunch duckietown camera.launch veh:=![robot name] raw:=true
 
 #### Step 2
 
-In the first terminal, remotely launch the joystick process:
+Run the `ground_projection_node.py` node on your robot 
 
-    laptop $ cd ~/duckietown
+    laptop $ cd ![DUCKIETOWN_ROOT]
     laptop $ source environment.sh
-    laptop $ roslaunch duckietown joystick.launch veh:=![robot name]
+    laptop $ source set_ros_master.sh ![robot name]
+    laptop $ roslaunch ground_projection ground_projection.launch  veh:=![robot name]
 
 #### Step 3
 
-In the second terminal launch the camera:
+Check that everything is working properly. In a new terminal (with environment sourced and ros_master set to point to your robot as above)
 
-    laptop $ cd ~/duckietown
-    laptop $ source environment.sh
-    laptop $ source set_ros_master.sh ![robot name]
-    laptop $ roslaunch duckietown camera.launch raw:=1 veh:=![robot name]
-
-#### Step 4
-
-In the third terminal run the ground projection node:
-
-    laptop $ cd ~/duckietown
-    laptop $ source environment.sh
-    laptop $ source set_ros_master.sh ![robot name]
-    laptop $ roslaunch ground_projection ground_projection.launch veh:=![robot name] local:=1
-
-#### Step 5
-
-In the fourth terminal, check that everything is working properly.
-
-    laptop $ cd ~/duckietown
-    laptop $ source environment.sh
-    laptop $ source set_ros_master.sh ![robot name]
     laptop $ rostopic list
 
 You should see new ros topics:
@@ -196,16 +182,17 @@ In the `rqt_image_view` interface, click on the drop-down list and choose the im
 
     /![robot name]/camera_node/image/compressed
 
-Now you can estimate the homography by executing the following command:
+#### Step 4
+
+Now you can estimate the homography by executing the following command (in a new terminal):
 
     laptop $ rosservice call /![robot name]/ground_projection/estimate_homography
 
 This will do the extrinsic calibration and automatically save the file to your laptop:
 
-    ~/duckietown/catkin_ws/src/00-infrastructure/duckietown/config/baseline/calibration/camera_extrinsic/![robot name].yaml
+    ![DUCKIEFLEET_ROOT]/calibrations/camera_extrinsic/![robot name].yaml
 
-As before, add this file to your local Git repository on your laptop, push the changes, and update your the local git repository on your Duckiebot.
+As before, add this file to your local Git repository on your laptop, push the changes to your branch and do a pull request to master.
+Finally, you will want to update the local repository on your Duckiebot.
 
-Note: we are in the process of rewriting the configuration system, so in a
-while "commit to the repository" is not going to be the right thing to do.
-We will communicate when the transition will happen
+
