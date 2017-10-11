@@ -17,6 +17,9 @@ This is only for Montreal.
 This is only for Chicago.
 </div>
 
+<div class='only-taiwan' markdown="1">
+This is only for Taiwan.
+</div>
 
 ## Repositories {#fall2017-git-repository}
 
@@ -146,7 +149,7 @@ You should put your homework files in folder at:
 Some homeworks might not require ROS, they should go in a subfolder called `scripts`. ROS homeworks should go in packages which are generated using the process described here: [](#sec:ros-python-howto). For an example see `![DUCKIEFLEET_HOMEWORK_ROOT]/homeworks/01_data_processing/shamrock`.
 
 
-Note: To make your ROS packages findable by ROS you should add a symlink from your `duckietown/catkin_ws/src` directory to `![DUCKIEFLEET_HOMEWORK_ROOT]`
+Note: To make your ROS packages findable by ROS you should add a symlink from your `duckietown/catkin_ws/src` directory to `![DUCKIEFLEET_HOMEWORK_ROOT]`.
 
 
 ### To submit your homework
@@ -155,17 +158,17 @@ When you are ready to submit your homework, you should do **create a release** a
 
 Command line:
 
-    git tag ![XX_homework_name] -m"@duckietown/fall-2017-instructors-and-tas homework complete"
-    git push origin --tags
+    $ git tag ![XX_homework_name] -m"@duckietown/fall-2017-instructors-and-tas homework complete"
+    $ git push origin --tags
 
-Through github:
+Through Github:
 
-1. Click on the "Releases" tab
-2. Click "Create a new Release"
-3. Add a version (e.g. 1.0)
-4. Release title put `![XX_homework_name]`
-5. In the text box put "@duckietown/fall-2017-instructors-and-tas homework complete"
-6. Click "Publish release"
+1. Click on the "Releases" tab.
+2. Click "Create a new Release".
+3. Add a version (e.g. 1.0).
+4. Release title put `![XX_homework_name]`.
+5. In the text box put "@duckietown/fall-2017-instructors-and-tas homework complete".
+6. Click "Publish release".
 
 You may make as many releases as you like before the deadline.
 
@@ -183,21 +186,20 @@ We will ask to create a "Pull Request" from your private repo.
 
 
 
-### For U de M students who have already submitted homework to the previus duckiefleet-2017 repo
+### For U de M students who have already submitted homework to the previous `duckiefleet-2017` repo
 
 These instructions assume that you are ok with losing the commit history from the first homework. If not, things get a little more complicated
 
 Fork and clone the new "homework" repository using the process above. Followed by:
 
-
     $ git clone git@github.com:![GIT_USERNAME]/exercises-fall2017.git
 
-Copy over your homework files from the duckiefleet-fall2017 repo into the exercises-fall2017 repo
+Copy over your homework files from the `duckiefleet-fall2017` repo into the `exercises-fall2017` repo.
 
 
-git rm your folder from duckiefleet-fall2017 and commit and push
+`git rm` your folder from `duckiefleet-fall2017` and commit and push.
 
-git add your folder to exercises-fall2017 and commit and push
+`git add` your folder to `exercises-fall2017` and commit and push.
 
 
 ## Git policy for project development {#git-policy-projects status=draft}
@@ -207,6 +209,6 @@ Different than the homeworks, development for the projects will take place in th
 
 1. Create a branch from master
 
-2. Develop code in that branch (note you may want to branch your branches. A good idea would be to have your own "master", e.g. "your_project-master" and then do pull requests/merges into that branch as things start to work)
+2. Develop code in that branch (note you may want to branch your branches. A good idea would be to have your own "`master`", e.g. "`your_project-master`" and then do pull requests/merges into that branch as things start to work)
 
 3. At the end of the project submit a pull request to master to merge your code. It may or may not get merged depending on many factors.
