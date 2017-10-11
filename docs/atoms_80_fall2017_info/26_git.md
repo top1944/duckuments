@@ -1,6 +1,6 @@
 # Git usage guide for Fall 2017 {#fall2017-git status=ready}
 
-## Repositories
+## Repositories {#fall2017-git-repository}
 
 These are the repositories we use.
 
@@ -70,10 +70,25 @@ The URL to clone is:
 Only TAs have write permissions to this repository.
 
 
-## Git policy for  homeworks {#git-policy-homeworks status=beta}
+## Git policy for  homeworks {#git-policy-homeworks status=to-update}
+
+
+
+<div class='only-zurich' markdown="1">
+This is only for Zurich.
+</div>
+
+<div class='only-montreal' markdown="1">
+This is only for Montreal.
+</div>
+
+<div class='only-chicago' markdown="1">
+This is only for Chicago.
+</div>
+
 
 Homeworks will require you to write and submit coding exercises. They will be submitted using git. Since we have a university plagiarism policy ([UdeM's](http://www.lecre.umontreal.ca/politique-sur-le-plagiatplagiarism-policy/),
-[TTIC/uChicago](https://studentmanual.uchicago.edu/Policies#Honesty)) we have to protect students work before the deadline of the homeworks. For this reason we will follow these steps for homework submission: 
+[TTIC/uChicago](https://studentmanual.uchicago.edu/Policies#Honesty)) we have to protect students work before the deadline of the homeworks. For this reason we will follow these steps for homework submission:
 
 1. Go [here](https://education.github.com/) and file a request at the bottom “Request a Discount” then enter your institution email and other info.
   - Go to [duckiefleet-fall2017](https://github.com/duckietown/duckiefleet-fall2017)
@@ -105,7 +120,8 @@ upstream  git@github.com:duckietown/duckiefleet-fall2017.git (push)
 
 Now the next time you push (without specifying a remote) you will push to your local private repo.
 
-### Duckiefleet file structure
+### Duckiefleet file structure {status=to-update}
+
 
 You should put your homework files in folder at:
 
@@ -138,10 +154,10 @@ You may make as many releases as you like before the deadline.
 
 ### Merging things back {status=draft}
 
-Once all deadlines have passed for all institutions, we can merge all the homeworks.
+Once all deadlines have passed for all institutions, we can merge all the homework.
 We will ask to create a "Pull Request" from your private repo.
 
-1. In your private duckiefleet-fall2017 repo, click the "New pull request button".
+1. In your private `duckiefleet-fall2017` repo, click the "New pull request button".
 2. Click "Create pull request" green button
 3. The 4 drop down menus at the top should be left to right: (`base fork: duckietown/duckiefleet-fall2017`, `base: master`, `head fork: ![YOUR_GIT_NAME]/duckiefleet-fall2017`, `compare: ![YOUR_BRANCH]`)
 4. Leave a comment if you like and click "Create pull request" green button below.
