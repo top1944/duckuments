@@ -85,6 +85,8 @@ The launch file is called `camera.launch`:
 
 You should see the red led on the camera light up.
 
+Comment: It is recommended to launch the joystick and the camera from onboard the robot after sshing in - LP
+
 ## Third window: view data flow
 
 Open a third terminal on the laptop.
