@@ -56,7 +56,7 @@ and the people DB, and for doing exercises.
 
 For homework submissions, we will use the following URL:
 
-    git@github.com:duckietown/exercised-fall2017.git
+    git@github.com:duckietown/exercises-fall2017.git
 
 As explained below, it is important that this repo is kept separate so that students can privately work on their exercises at schools where the homeworks are counted for grades.
 
