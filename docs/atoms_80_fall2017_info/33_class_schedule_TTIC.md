@@ -191,8 +191,8 @@ Please help us making the experience better by [providing feedback (can be anony
 
 * [](#CV_basics)
 * [](#camera-geometry)
-* Richard Szeliski, Computer Vision: Algorithms and Applications, Chapters 1 and 2 (available [online](http://szeliski.org/Book/))
-* David A. Forsyth and Jean Ponce, Computer Vision: A Modern Approach, Chapters 1 and 2
+* Richard Szeliski, *Computer Vision: Algorithms and Applications*, Chapters 1 and 2 (available [online](http://szeliski.org/Book/))
+* David A. Forsyth and Jean Ponce, *Computer Vision: A Modern Approach*, Chapters 1 and 2
 
 
 ### Feedback Form
