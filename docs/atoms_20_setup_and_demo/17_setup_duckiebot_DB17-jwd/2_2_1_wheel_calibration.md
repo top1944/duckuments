@@ -149,9 +149,39 @@ running the command:
 
     duckiebot $ rosservice call /![robot name]/inverse_kinematics_node/set_gain -- ![gain value]
 
-Test the Duckiebot for different values of the gain parameter.
+You won't really know if it's right until you verify it though! onto the next section
 
-Doubt: @liampaull What is the correct value to use for the gain? -AC
+### Verify your calibration {#verify-kinematic-calibration status=recently-updated}
+
+Construct a calibration station similar [](#fig:kinematic_calibration):
+
+<div figure-id="fig:kinematic_calibration" figure-caption="Kinematic calibration verification setup">
+     <img src="kinematic_calibration1.png" style='width: 30em'/>
+     <img src="kinematic_calibration2.png" style='width: 30em'/>
+</div>
+
+The following are the specs for this 3x1 mat "runway":
+
+ - Red line as close to the edge without crossing the interlocking bits 
+ 
+ - Blue/Black line 8 cm from red line and parallel to it.
+  
+ - White lines on the edge without intersecting the interlocking bits
+
+ - Yellow line in the middle of the white lines
+
+ - Blue/black start position is ~3-4 cm from the edge (not including the interlocking bits)
+ 
+
+Place your robot as shown in [](#fig:kinematic_calibration).
+
+On your robot execute:
+
+    duckiebot $ cd ![DUCKIETOWN_ROOT]
+    duckiebot $ make-hw-test-kinematics
+
+You should see your robot drive down the lane. If it is calibrated properly, you will see a message saying that it has `PASSED`, otherwise it is `FAILED` and you should adjust your gains based on what you observe and try again.
+
 
 ### Store the calibration
 
@@ -161,9 +191,6 @@ When you are all done, save the parameters by running:
 
 The first time you save the parameters, this command will create the file
 
-    src/00-infrastructure/duckietown/config/baseline/calibration/kinematics/![robot name].yaml
+    ![DUCKIEFLEET_ROOT]/calibrations/kinematics/![robot name].yaml
 
-You can add and commit it to the repository.
-
-Note: we are in the process of rewriting the configuration system, so in a while "commit to the repository"
-is not going to be the right thing to do.
+You can add and commit it to the repository. Then you should create a pull request in the [duckiefleet repo](https://github.com/duckietown/duckiefleet)
