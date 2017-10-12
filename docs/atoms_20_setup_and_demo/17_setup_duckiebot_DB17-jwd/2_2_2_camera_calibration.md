@@ -137,18 +137,19 @@ Arrange the Duckiebot and checkerboard according to [](#fig:extrinsic_setup). No
 ssh into your robot and launch the camera
 
     laptop $ ssh ![robot_name]
+    
     duckiebot $ cd ![DUCKIETOWN_ROOT]
     duckiebot $ source environment.sh
-    laptop $ roslaunch duckietown camera.launch veh:=![robot name] raw:=true
+    duckiebot $ roslaunch duckietown camera.launch veh:=![robot name] raw:=true
 
 #### Step 2
 
-Run the `ground_projection_node.py` node on your robot 
+Run the `ground_projection_node.py` node on your laptop 
 
     laptop $ cd ![DUCKIETOWN_ROOT]
     laptop $ source environment.sh
     laptop $ source set_ros_master.sh ![robot name]
-    laptop $ roslaunch ground_projection ground_projection.launch  veh:=![robot name]
+    laptop $ roslaunch ground_projection ground_projection.launch  veh:=![robot name] local:=true
 
 #### Step 3
 
