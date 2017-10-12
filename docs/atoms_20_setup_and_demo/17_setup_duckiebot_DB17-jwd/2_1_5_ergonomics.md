@@ -1,4 +1,4 @@
-# Interlude: Ergonomics {#ergonomics status=draft}
+# Interlude: Ergonomics {#ergonomics status=beta}
 
 Assigned: Andrea
 
@@ -20,19 +20,6 @@ Results: You will know about some useful shortcuts.
 
 </div>
 
-## `set_ros_master.sh`
-
-
-Instead of using:
-
-    $ export ROS_MASTER_URI=http://![robot name].local:11311/
-
-You can use the "`set_ros_master.sh`" script in the repo:
-
-    $ source set_ros_master.sh ![robot name]
-
-
-Note that you need to use `source`; without that, it will not work.
 
 
 ## SSH aliases {#ssh-aliases}
@@ -63,3 +50,18 @@ You haven't created another hostname, just an alias for SSH.
 
 However, you can use the alias with all the tools that rely
 on SSH, including `rsync` and `scp`.
+
+
+## `set_ros_master.sh`
+
+
+Instead of using:
+
+    $ export ROS_MASTER_URI=http://![robot name].local:11311/
+
+You can use the "`set_ros_master.sh`" script in the repo:
+
+    $ source set_ros_master.sh ![robot name]
+
+
+Note that you need to use `source`; without that, it will not work.
