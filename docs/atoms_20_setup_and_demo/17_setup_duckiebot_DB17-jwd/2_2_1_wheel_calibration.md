@@ -39,15 +39,15 @@ We can counter this behavior by *calibrating* the wheels. A calibrated Duckiebot
 sends two different signals to left and right motor such that the robot moves in
 a straight line when you command it to.
 
-The relationship between the velocities and the voltages of left and right motors
-are:
+The relationship between linear and angular velocity of the robot and the velocities
+of left and right motors are:
 
 \begin{align*}
-    V_{\text{right}} &= (g + r) \cdot (v + \dfrac{1}{2} \omega l ) \\
-    V_{\text{left}} &= (g - r) \cdot (v - \dfrac{1}{2} \omega l )
+    v_{\text{right}} &= (g + r) \cdot (v + \dfrac{1}{2} \omega l ) \\
+    v_{\text{left}} &= (g - r) \cdot (v - \dfrac{1}{2} \omega l )
 \end{align*}
 
-where $V_{\text{right}}$ and $V_{\text{left}}$ are the voltages for the two motors, $g$ is
+where $v_{\text{right}}$ and $V_{\text{left}}$ are the velocities of the two motors, $g$ is
 called *gain*, $r$ is called *trim*, $v$ and $\omega$ are the desired linear
 and the angular velocity of the robot, and $l$ is the distance between the two
 wheels. The gain parameter $g$ controls the maximum speed of the robot.
@@ -56,6 +56,9 @@ and for $g < 1.0$ it goes slower. The trim parameter $r$ controls the balance
 between the two motors. With $r > 0$, the right wheel will turn slightly more
 than the left wheel given the same velocity command; with $r < 0$, the left
 wheel will turn slightly more the right wheel.
+
+Comment: It might be helpful to add the differential equations that relate velocities and
+voltages of the motors. -AD
 
 
 ## Perform the Calibration
@@ -107,7 +110,7 @@ the Duckiebot drifted ([](#fig:wheel_calibration_lr_drift)).
 
 #### Step 6
 
-Measure the distance between the center of the tape and the center of the axle of 
+Measure the distance between the center of the tape and the center of the axle of
 the Duckiebot after it traveled for about 2 meters ([](#fig:wheel_calibration_measuring_drift)).
 
 Make sure that the ruler is orthogonal to the tape.
