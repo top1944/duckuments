@@ -9,7 +9,8 @@ recipe:
   except:
   - checkoff_assembly_configuration
   - checkoff_take_a_log
-  - homework-data-processing
+  - homework-data-processing-udem
+  - homework-data-processing-ttic
 
 # This syntax is invalid YAML
 # - add: fall-2017
@@ -25,7 +26,8 @@ recipe:
   contents:
   - add: checkoff_assembly_configuration
   - add: checkoff_take_a_log
-  - add: homework-data-processing
+  - add: homework-data-processing-udem
+  - add: homework-data-processing-ttic
 
 - add: duckietown-project
 - add: contribute
@@ -44,7 +46,7 @@ recipe:
   contents:
   - add: probability_basics
   - add: linear_algebra
-  
+
 
 - make-part: intro-to-autonomy
   title: Introduction to autonomy

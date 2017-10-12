@@ -6,11 +6,24 @@ Classes take place on Mondays and Wednesdays from 9am-11am in TTIC Room 530.
 
 The following is a list of the current checkoffs, along with the date and time when they are due. Most submissions involve uploading videos to via Dropbox File Request using the link provided in the individual checkoff.
 
-* **Friday 5pm CT**: [](#part:checkoff_assembly_configuration)
+&nbsp;
+
+* **Friday October 6, 5pm CT**: [](#part:checkoff_assembly_configuration)
 
 
 ## Problem Sets:
 
+The following is a list of the current problem sets, along with the date and time when they are due.
+
+See: [](#git-policy-homeworks)
+
+for instructions on how the homework should be submitted.
+
+Note: Please keep track of how much time you spend on each problem set. We will ask you for this estimate along with other feedback at the end of each problem set.
+
+&nbsp;
+
+* **Friday October 13, 11:59pm CT**: [](#part:homework-data-processing-ttic)
 
 
 
@@ -131,7 +144,7 @@ Please help us making the experience better by [providing feedback (can be anony
 
 
 
-## Monday, October 9: Introduction to the Robot Operating System (ROS)
+## Monday, October 9: Modeling
 
 ### Preparation
 
@@ -156,6 +169,30 @@ Sections 11 and 14 of this tutorial will ask you to implement simple ROS nodes u
 ### Reading Material
 
 * [](#duckiebot-modeling)
+
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+
+## Wednesday, October 11: Introduction to Computer Vision
+
+
+### Lecture Content
+
+* Introduction to Computer Vision ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-11-ttic-a-cv_intro.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-11-ttic-a-cv_intro.pdf))
+* Camera Models ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-11-ttic-b-cv_camera_models.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-11-ttic-b-cv_camera_models.pdf))
+
+
+
+### Reading Material
+
+* [](#CV_basics)
+* [](#camera-geometry)
+* Richard Szeliski, *Computer Vision: Algorithms and Applications*, Chapters 1 and 2 (available [online](http://szeliski.org/Book/))
+* David A. Forsyth and Jean Ponce, *Computer Vision: A Modern Approach*, Chapters 1 and 2
 
 
 ### Feedback Form
