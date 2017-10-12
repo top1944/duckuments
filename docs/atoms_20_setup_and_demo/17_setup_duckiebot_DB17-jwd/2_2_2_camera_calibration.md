@@ -129,6 +129,8 @@ Arrange the Duckiebot and checkerboard according to [](#fig:extrinsic_setup). No
   <img src="extrinsic_setup.jpg" style='width: 30em'/>
 </div>
 
+Note: Please re-do the picture above with a conforming Duckiebot. A conforming Duckiebot has a picture on top. -AC
+
 [](#fig:extrinsic_view) shows a view of the calibration checkerboard from the Duckiebot. To ensure proper calibration there should be no clutter in the background.
 
 <div figure-id="fig:extrinsic_view" figure-caption="">
