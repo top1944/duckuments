@@ -116,7 +116,7 @@ If you have not yet cloned the duckietown repo do it now:
 
     $ git clone git@github.com:duckietown/exercises-fall2017.git
 
-Now you need to point the remote of your `exercises-fall2017` to your new local private repo. To do, from inside your already previously cloned `duckiefleet-fall2017` repo do:
+Now you need to point the remote of your `exercises-fall2017` to your new local private repo. To do, from inside your already previously cloned `exercises-fall2017` repo do:
 
     $ git remote set-url origin git@github.com:![GIT_USERNAME]/exercises-fall2017.git
 
