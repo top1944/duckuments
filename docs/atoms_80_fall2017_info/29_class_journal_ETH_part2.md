@@ -110,6 +110,7 @@ Follow [the instructions here](#checkoff_take_a_log) to learn how to take a log.
 
 ### Data processing exercises  {#Zurich-data-processing}
 
+See [the list of exercises here](#zurich-data-processing-exercises).
 
 Get help in `#ex-data-processing`.
 
