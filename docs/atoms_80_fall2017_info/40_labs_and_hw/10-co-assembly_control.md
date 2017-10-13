@@ -1,6 +1,7 @@
 # Checkoff: Duckiebot Assembly and Configuration {#checkoff_assembly_configuration status=ready}
 
-The first job  is to get your Duckiebot put together and up and running.
+
+The first job is to get your Duckiebot put together and up and running.
 
 <!-- Comment: @liam: We should make sure that these tasks are 1-to-1 with the task list in the checkoff spreadsheet, and remind them what to do.
 -->
@@ -19,6 +20,11 @@ See: [](#acquiring-parts-c0)
 
 See: [](#acquiring-parts-c1)
 
+
+<div class="zurich-only" markdown="1">
+You don't need to buy anything - you have all the parts that you need.
+</div>
+
 ## Soldering your boards
 
 Depending on how kind your instructors/TAs are, you may have to solder your boards.
@@ -26,6 +32,10 @@ Depending on how kind your instructors/TAs are, you may have to solder your boar
 See: [](#soldering-boards-c0)
 
 See: [](#soldering-boards-c1)
+
+<div class="zurich-only" markdown="1">
+You don't need to solder anything.
+</div>
 
 ## Assemble your Robot
 
@@ -45,6 +55,10 @@ See: [](#assembling-duckiebot-c1)
 If you are very inexperienced with Linux/Unix/networking etc, then you may find it a valuable experience to reproduce the SD card image to "see how the sausage is made".
 
 See: [](#duckiebot-ubuntu-image)
+
+<div class="zurich-only" markdown="1">
+You probably don't want to see how the sausage is made.
+</div>
 
 
 ## Setup your laptop
@@ -68,17 +82,28 @@ Now you need to clone the software repo and run things to make your robot move.
 
 First initialize the robot:
 
-See: [](#sec:setup-duckiebot)
+See: [](#setup-duckiebot)
 
 Then get it to move!
 
 See: [](#rc-control)
 
-Comment: there is a deadline at this link, but each institution will have different deadlines. Might be a source of entropy -JT
 
 
-## Upload your video
+## Upload your video {#upload-your-video}
 
 You should record a video demonstrating that your Duckiebot is up and running. Brownie points for creative videos. Please upload your videos via the following URL:
 
-TTIC: [upload your video](https://www.dropbox.com/request/3GxK1kjxUmZKl23x6nEY)
+
+<div class='chicago-only' markdown='1'>
+
+Chicago: [upload your video](https://www.dropbox.com/request/3GxK1kjxUmZKl23x6nEY)
+
+</div>
+
+
+<div class='chicago-only' markdown='1'>
+
+Zurich: [upload your video](https://www.dropbox.com/request/6St0yCcVJoNPLUHR4fbS)
+
+</div>

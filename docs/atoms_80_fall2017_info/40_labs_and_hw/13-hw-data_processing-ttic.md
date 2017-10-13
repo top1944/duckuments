@@ -52,7 +52,7 @@ Complete [](#exercise-bag-mirror)
 
 Complete [](#exercise-instagram-live)
 
-Call your package `dt-instagram-live_![ROBOT_NAME]` and call your node `dt-instagram-live_![ROBOT_NAME]`.
+Call your package `dt-instagram-live_![robot name]` and call your node `dt-instagram-live_![robot name]`.
 
 ## Exercise: Feedback
 
