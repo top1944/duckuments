@@ -51,7 +51,7 @@ Look up the MAC address using the command:
 
 Then, edit the connection file
 
-    /etc/NetworkManager/system-connections/create-5ghz-network
+    ~/../../etc/NetworkManager/system-connections/create-5ghz-network
 
 Make the following changes:
 
