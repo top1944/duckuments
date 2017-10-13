@@ -11,6 +11,7 @@ recipe:
   - checkoff_take_a_log
   - homework-data-processing-udem
   - homework-data-processing-ttic
+  - checkoff_calibration
 
 # This syntax is invalid YAML
 # - add: fall-2017
@@ -28,6 +29,7 @@ recipe:
   - add: checkoff_take_a_log
   - add: homework-data-processing-udem
   - add: homework-data-processing-ttic
+  - add: checkoff_calibration
 
 - add: duckietown-project
 - add: contribute

@@ -43,7 +43,7 @@ Follow the procedure in [](#wheel-calibration). Once you have successfully passe
 
 ## Camera calibration
 
-Follow the procedure in [](#camera-calib) to do you intrinsic **and** extrinsic calibrations
+Follow the procedure in [](#camera-calib) to do you intrinsic **and** extrinsic calibrations. 
 
 
 ## Visually verify the calibration is good in Duckietown
