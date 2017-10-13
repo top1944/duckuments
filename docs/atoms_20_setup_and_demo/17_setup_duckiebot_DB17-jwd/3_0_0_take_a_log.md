@@ -19,15 +19,15 @@ run on duckiebot:
 
 run on laptop:
 
-    laptop $ cd ![DUCKIETOWN_ROOT]
-    laptop $ source set_ros_master.sh ![ROBOT_NAME]
+    laptop $ cd ![Duckietown root]
+    laptop $ source set_ros_master.sh ![robot name]
     laptop $ rqt_image_view
     
 and verify that indeed your camera is streaming imagery.
 
 on your duckiebot in a new tab (F2 in byobu)
 
-    duckiebot $ rosbag record -a -o /media/logs/![ROBOT_NAME]
+    duckiebot $ rosbag record -a -o /media/logs/![robot name]
 
 where here we are assuming that you are logging to the USB and have following [](#mounting-usb).
 
