@@ -83,7 +83,7 @@ b - Version control with Git:
 Assigned: XXX
 
 
-## Fri 12 (Thu): new series of tasks out {#Zurich-2017-10-12 status=ready}
+## Oct 13 (Fri): new series of tasks out {#Zurich-2017-10-13 status=ready}
 
 ### Taking a video of the joystick control {#Zurich-take-video}
 
@@ -99,7 +99,7 @@ Please take a video of the robot as it drives with joystick control, as describe
 [Go forth and calibrate the camera!](#camera-calib). And get help in `#help-camera-calib`.
 
 
-### Wheel calibration {#Zurich-wheel-calibration}
+### Wheel calibration {#Zurich-wheel-calibration status=draft}
 
 This is not ready yet! will be ready in a day or so.
 
