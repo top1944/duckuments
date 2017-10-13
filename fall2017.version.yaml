@@ -28,6 +28,7 @@ recipe:
   - add: checkoff_take_a_log
   - add: homework-data-processing-udem
   - add: homework-data-processing-ttic
+  - add: zurich-data-processing-exercises
 
 - add: duckietown-project
 - add: contribute

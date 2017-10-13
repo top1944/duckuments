@@ -1,4 +1,4 @@
-# Homework: Data Processing (Zurich) {#zurich-homework-data-processing status=ready}
+# Homework: Data Processing (Zurich) {#zurich-data-processing-exercises status=ready}
 
 <div class='requirements' markdown='1'>
 
