@@ -1,4 +1,4 @@
-# Exercise: Bag thumbnails  {#exercise-bag-images status=draft}
+# Exercise: Bag thumbnails  {#exercise-bag-images status=ready}
 
 Assigned: Andrea Daniele
 

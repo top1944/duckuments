@@ -16,9 +16,9 @@ Create a ROS node that takes camera images and applies a given operation,
 as specified in the next section, and then publishes it.
 
 
-## Specification for the node `dt-live-instagram-![ROBOT_NAME]_node`
+## Specification for the node `dt-live-instagram-![robot name]_node`
 
-Create a ROS node `dt-live-instagram-![ROBOT_NAME]_node` that takes a parameter called `filter`, where the filter is something from the list [](#instagram-filters).
+Create a ROS node `dt-live-instagram-![robot name]_node` that takes a parameter called `filter`, where the filter is something from the list [](#instagram-filters).
 
 You should launch your camera and joystick with
 
@@ -26,7 +26,7 @@ You should launch your camera and joystick with
 
 Then launch your node with
 
-    duckiebot $ roslaunch dt-live-instagram_![ROBOT_NAME] dt_live-instagram_![ROBOT_NAME]_node.launch filter:=![filter]
+    duckiebot $ roslaunch dt-live-instagram_![robot name] dt_live-instagram_![robot name]_node.launch filter:=![filter]
 
 This program should do the following:
 

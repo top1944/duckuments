@@ -64,27 +64,71 @@ Please help us making the experience better by [providing feedback (can be anony
 Please help us making the experience better by [providing feedback (can be anonymous)](https://tinyurl.com/y77pbv7n)
 
 
-## Oct 09 (Mon) {#Zurich-2017-10-09 status=draft}
+## Oct 09 (Mon): Autonomy architectures and version control {#Zurich-2017-10-09}
 
-Assigned: XXX
+### Materials presented in class
 
-Other units to do:
+a - Autonomy Architectures Basics:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-09-ETHZ-a-system_architectures.key">Keynote</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-09-ETHZ-a-system_architectures.pdf">PDF</a>.
 
-- Autonomy Architectures
-- representations - knowledge representation: tasks, goal
-- Software architecture and middleware.
-- Intro to ROS
-- Networking
-- Modern signal distribution and processing: periodic vs event-based processing; latency/frequency etc.
+
+b - Version control with Git:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-09-ETHZ-b-version_control.key">Keynote</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-09-ETHZ-b-version_control.pdf">PDF</a>.
 
 
 ## Oct 11 (Wed) {#Zurich-2017-10-11 status=draft}
 
 Assigned: XXX
 
+
+## Oct 13 (Fri): new series of tasks out {#Zurich-2017-10-13 status=ready}
+
+### Taking a video of the joystick control {#Zurich-take-video}
+
+Please take a video of the robot as it drives with joystick control, as described in
+[](#upload-your-video) and upload it according to the instructions.
+
+[Example of a great video, but with a nonconforming Duckiebot](https://www.dropbox.com/s/l7anrdkp7cgmqjb/Marcel%20Kaufmann%20-%20DuckietownEpisode0.mp4?dl=0).
+
+
+### Camera calibration {#Zurich-camera-calibration}
+
+[Go forth and calibrate the camera!](#camera-calib) And get help in `#help-camera-calib`.
+
+
+### Wheel calibration {#Zurich-wheel-calibration status=draft}
+
+This is not ready yet! will be ready in a day or so.
+
+### Taking a log check off {#Zurich-take-a-log}
+
+Follow [the instructions here](#checkoff_take_a_log) to learn how to take a log.
+
+
+### Data processing exercises  {#Zurich-data-processing}
+
+See [the list of exercises here](#zurich-data-processing-exercises).
+
+Get help in `#ex-data-processing`.
+
+
+<col2 figure-id="tab:deadlines" figure-caption="Current deadlines for Zurich">
+    <s>Robot assembly</s>  <s><b>overdue</b></s>
+    <s>Robot/laptop configuration</s> <s><b>overdue</b></s>
+    <s><a href="#Zurich-take-video"></a></s> <s>Monday Oct 16</s>
+    <s><a href="#Zurich-camera-calibration"></a></s> <s>Friday Oct 20</s>
+    <s><a href="#Zurich-wheel-calibration"></a></s> <s>not ready yet</s>
+    <s><a href="#Zurich-take-a-log"></a></s> <s>Wed Oct 18</s>
+    <s><a href="#Zurich-data-processing"></a></s> <s>Monday Oct 23</s>
+</col2>
+
+
+
 ## Oct 16 (Mon) {#Zurich-2017-10-16 status=draft}
 
-Assigned: XXX
+Andrea: computer vision. ROS?
 
 ## Oct 18 (Wed) {#Zurich-2017-10-18 status=draft}
 

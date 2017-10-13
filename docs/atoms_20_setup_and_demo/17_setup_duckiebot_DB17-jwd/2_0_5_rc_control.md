@@ -1,7 +1,5 @@
 # Software setup and RC remote control {#rc-control status=beta}
 
-Assigned: Andrea
-
 <div class='requirements' markdown='1'>
 
 Requires: Laptop configured, according to [](#setup-laptop).

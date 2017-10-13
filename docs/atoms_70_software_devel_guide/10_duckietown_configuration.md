@@ -64,11 +64,11 @@ TODO: to write
 
 ### Duckiefleet directory `DUCKIEFLEET_ROOT` {#duckiefleet-directory}
 
-For Fall 2017, this is the the repository [`duckiefleet-fall2017`][duckiefleet-repo].
+For Fall 2017, this is the the repository [`duckiefleet`][duckiefleet-repo].
 
 For self-guided learners, this is an arbitrary repository to create.
 
-[duckiefleet-repo]: https://github.com/duckietown/duckiefleet-fall2017
+[duckiefleet-repo]: https://github.com/duckietown/duckiefleet
 
 
 ## The "scuderia" (vehicle database) {#scuderia}
@@ -77,7 +77,7 @@ For self-guided learners, this is an arbitrary repository to create.
 The system needs to know certain details about the robots, such as their host names,
 the name of the users, etc.
 
-This data is contained in the <code>&#36;{DUCKIEFLEET_ROOT}</code> directory,
+This data is contained in the <code>&#36;{DUCKIEFLEET_ROOT}/robots/{your_branch}</code> directory,
 in files with the pattern `![robot name].robot.yaml`.
 
 The file must contain YAML entries of the type:

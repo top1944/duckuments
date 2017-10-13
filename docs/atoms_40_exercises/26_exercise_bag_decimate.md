@@ -19,7 +19,7 @@ value greater than zero, and an output bag file:
     $ dt-bag-decimate "![input bag]" ![n] "![output bag]"
 
 The output bag contains the same topics as the input bag, however, only 1 in
-`n` messages are written.  (If `n` is 1, the output is the same as the input.)
+`n` messages from each topic are written.  (If `n` is 1, the output is the same as the input.)
 
 
 ## Useful new APIs

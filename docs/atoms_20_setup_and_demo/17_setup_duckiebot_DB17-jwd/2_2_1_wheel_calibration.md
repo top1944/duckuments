@@ -39,15 +39,15 @@ We can counter this behavior by *calibrating* the wheels. A calibrated Duckiebot
 sends two different signals to left and right motor such that the robot moves in
 a straight line when you command it to.
 
-The relationship between the velocities and the voltages of left and right motors
-are:
+The relationship between linear and angular velocity of the robot and the velocities
+of left and right motors are:
 
 \begin{align*}
-    V_{\text{right}} &= (g + r) \cdot (v + \dfrac{1}{2} \omega l ) \\
-    V_{\text{left}} &= (g - r) \cdot (v - \dfrac{1}{2} \omega l )
+    v_{\text{right}} &= (g + r) \cdot (v + \dfrac{1}{2} \omega l ) \\
+    v_{\text{left}} &= (g - r) \cdot (v - \dfrac{1}{2} \omega l )
 \end{align*}
 
-where $V_{\text{right}}$ and $V_{\text{left}}$ are the voltages for the two motors, $g$ is
+where $v_{\text{right}}$ and $V_{\text{left}}$ are the velocities of the two motors, $g$ is
 called *gain*, $r$ is called *trim*, $v$ and $\omega$ are the desired linear
 and the angular velocity of the robot, and $l$ is the distance between the two
 wheels. The gain parameter $g$ controls the maximum speed of the robot.
@@ -56,6 +56,9 @@ and for $g < 1.0$ it goes slower. The trim parameter $r$ controls the balance
 between the two motors. With $r > 0$, the right wheel will turn slightly more
 than the left wheel given the same velocity command; with $r < 0$, the left
 wheel will turn slightly more the right wheel.
+
+Comment: It might be helpful to add the differential equations that relate velocities and
+voltages of the motors. -AD
 
 
 ## Perform the Calibration
@@ -107,7 +110,7 @@ the Duckiebot drifted ([](#fig:wheel_calibration_lr_drift)).
 
 #### Step 6
 
-Measure the distance between the center of the tape and the center of the axle of 
+Measure the distance between the center of the tape and the center of the axle of
 the Duckiebot after it traveled for about 2 meters ([](#fig:wheel_calibration_measuring_drift)).
 
 Make sure that the ruler is orthogonal to the tape.
@@ -149,10 +152,38 @@ running the command:
 
     duckiebot $ rosservice call /![robot name]/inverse_kinematics_node/set_gain -- ![gain value]
 
-Test the Duckiebot for different values of the gain parameter.
+You won't really know if it's right until you verify it though! onto the next section
 
-Doubt: @liampaull What is the correct value to use for the gain? -AC; The kinematic model used above is based on the no slipping hypothesis, so the correct value of g is the highest that does not make the wheels slip. (I guess somewhere between [0.85-1], rigorous testing needed) -JT
+### Verify your calibration {#verify-kinematic-calibration status=recently-updated}
 
+Construct a calibration station similar [](#fig:kinematic_calibration):
+
+<div figure-id="fig:kinematic_calibration" figure-caption="Kinematic calibration verification setup">
+     <img src="kinematic_calibration1.png" style='width: 30em'/>
+     <img src="kinematic_calibration2.png" style='width: 30em'/>
+</div>
+
+The following are the specs for this 3x1 mat "runway":
+
+ - Red line as close to the edge without crossing the interlocking bits
+ 
+ - Blue/Black line 8 cm from red line and parallel to it.
+
+ - White lines on the edge without intersecting the interlocking bits
+
+ - Yellow line in the middle of the white lines
+
+ - Blue/black start position is ~3-4 cm from the edge (not including the interlocking bits)
+
+
+Place your robot as shown in [](#fig:kinematic_calibration).
+
+On your robot execute:
+
+    duckiebot $ cd ![Duckietown root]
+    duckiebot $ make-hw-test-kinematics
+
+You should see your robot drive down the lane. If it is calibrated properly, you will see a message saying that it has `PASSED`, otherwise it is `FAILED` and you should adjust your gains based on what you observe and try again.
 
 
 ### Store the calibration
@@ -163,9 +194,6 @@ When you are all done, save the parameters by running:
 
 The first time you save the parameters, this command will create the file
 
-    src/00-infrastructure/duckietown/config/baseline/calibration/kinematics/![robot name].yaml
+    ![DUCKIEFLEET_ROOT]/calibrations/kinematics/![robot name].yaml
 
-You can add and commit it to the repository.
-
-Note: we are in the process of rewriting the configuration system, so in a while "commit to the repository"
-is not going to be the right thing to do.
+You can add and commit it to the repository. Then you should create a pull request in the [duckiefleet repo](https://github.com/duckietown/duckiefleet)

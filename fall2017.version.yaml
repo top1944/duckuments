@@ -9,7 +9,9 @@ recipe:
   except:
   - checkoff_assembly_configuration
   - checkoff_take_a_log
-  - homework-data-processing
+  - homework-data-processing-udem
+  - homework-data-processing-ttic
+  - zurich-data-processing-exercises
 
 # This syntax is invalid YAML
 # - add: fall-2017
@@ -25,7 +27,9 @@ recipe:
   contents:
   - add: checkoff_assembly_configuration
   - add: checkoff_take_a_log
-  - add: homework-data-processing
+  - add: homework-data-processing-udem
+  - add: homework-data-processing-ttic
+  - add: zurich-data-processing-exercises
 
 - add: duckietown-project
 - add: contribute
@@ -34,8 +38,11 @@ recipe:
   title: Exercises
   contents:
   - add: exercise-specifications
+  - add: exercise-bag-analysis
   - add: exercise-bag-in-out
+  - add: exercise-bag-images
   - add: exercise-instagram
+  - add: exercise-bag-mirror
   - add: exercise-instagram-live
 
 
@@ -44,7 +51,7 @@ recipe:
   contents:
   - add: probability_basics
   - add: linear_algebra
-  
+
 
 - make-part: intro-to-autonomy
   title: Introduction to autonomy
@@ -64,7 +71,7 @@ recipe:
   title: Reference Material
   contents:
   - add: configuration-management
-
+  - add: introduction_to_ros
 
 # Add the entire part
 - add: building-duckiebot-c0
