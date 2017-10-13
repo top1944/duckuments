@@ -88,15 +88,14 @@ Assigned: XXX
 ### Taking a video of the joystick control {#Zurich-take-video}
 
 Please take a video of the robot as it drives with joystick control, as described in
-[](#upload-your-video) and upload it according to the instructions..
+[](#upload-your-video) and upload it according to the instructions.
 
-
-[Example of an invalid video (with nonconforming Duckiebot)](https://www.dropbox.com/s/l7anrdkp7cgmqjb/Marcel%20Kaufmann%20-%20DuckietownEpisode0.mp4?dl=0)
+[Example of a great video, but with a nonconforming Duckiebot](https://www.dropbox.com/s/l7anrdkp7cgmqjb/Marcel%20Kaufmann%20-%20DuckietownEpisode0.mp4?dl=0).
 
 
 ### Camera calibration {#Zurich-camera-calibration}
 
-[Go forth and calibrate the camera!](#camera-calib). And get help in `#help-camera-calib`.
+[Go forth and calibrate the camera!](#camera-calib) And get help in `#help-camera-calib`.
 
 
 ### Wheel calibration {#Zurich-wheel-calibration status=draft}
