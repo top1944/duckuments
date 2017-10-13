@@ -253,8 +253,14 @@ Book Material:
 Lab 12:30 - 1:30 in AA2333
 
 
-New Checkoff and Homework released by end of day (hopefully)
 
+## Friday Oct 13 
+
+New Checkoff Initiated: [](#checkoff_calibration) Deadline is **Friday Oct. 20**. Deliverables are:
+ - Screenshot of your robot passing the kinematic odometry test
+ - PR to duckiefleet repo with your 3 robot calibrations (kinematics, camera intrinsics, camera extrinsics)
+ 
+ 
 
 
 ## Monday Oct 16
