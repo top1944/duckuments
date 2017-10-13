@@ -12,6 +12,7 @@ recipe:
   - homework-data-processing-udem
   - homework-data-processing-ttic
   - checkoff_calibration
+  - zurich-data-processing-exercises
 
 # This syntax is invalid YAML
 # - add: fall-2017
@@ -30,6 +31,7 @@ recipe:
   - add: homework-data-processing-udem
   - add: homework-data-processing-ttic
   - add: checkoff_calibration
+  - add: zurich-data-processing-exercises
 
 - add: duckietown-project
 - add: contribute
@@ -38,8 +40,11 @@ recipe:
   title: Exercises
   contents:
   - add: exercise-specifications
+  - add: exercise-bag-analysis
   - add: exercise-bag-in-out
+  - add: exercise-bag-images
   - add: exercise-instagram
+  - add: exercise-bag-mirror
   - add: exercise-instagram-live
 
 
@@ -68,7 +73,7 @@ recipe:
   title: Reference Material
   contents:
   - add: configuration-management
-
+  - add: introduction_to_ros
 
 # Add the entire part
 - add: building-duckiebot-c0

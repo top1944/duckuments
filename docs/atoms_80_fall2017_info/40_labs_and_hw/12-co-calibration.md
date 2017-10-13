@@ -22,7 +22,7 @@ Some of the services have changed and this requires a rebuild.
 
 On both laptop and robot do:
 
-    $ cd ![DUCKIETOWN_ROOT]
+    $ cd ![Duckietown root]
     $ make build-catkin-clean
     $ make build-catkin-parallel
     
@@ -61,7 +61,7 @@ On your laptop do (after setting ros master to your robot):
 on your joystick you need to hit the top-right button (TODO: add picture).
 On the command line you should see the output `state_verbose = True`
 
-in the drop down menu select `![ROBOT_NAME]/line_detector_node/image_with_lines`
+in the drop down menu select `![robot name]/line_detector_node/image_with_lines`
 
 on the display you should see all the color-coded line detections
 

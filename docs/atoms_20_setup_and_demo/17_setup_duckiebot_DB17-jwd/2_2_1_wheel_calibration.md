@@ -165,22 +165,22 @@ Construct a calibration station similar [](#fig:kinematic_calibration):
 
 The following are the specs for this 3x1 mat "runway":
 
- - Red line as close to the edge without crossing the interlocking bits 
+ - Red line as close to the edge without crossing the interlocking bits
  
  - Blue/Black line 8 cm from red line and parallel to it.
-  
+
  - White lines on the edge without intersecting the interlocking bits
 
  - Yellow line in the middle of the white lines
 
  - Blue/black start position is ~3-4 cm from the edge (not including the interlocking bits)
- 
+
 
 Place your robot as shown in [](#fig:kinematic_calibration).
 
 On your robot execute:
 
-    duckiebot $ cd ![DUCKIETOWN_ROOT]
+    duckiebot $ cd ![Duckietown root]
     duckiebot $ make-hw-test-kinematics
 
 You should see your robot drive down the lane. If it is calibrated properly, you will see a message saying that it has `PASSED`, otherwise it is `FAILED` and you should adjust your gains based on what you observe and try again.

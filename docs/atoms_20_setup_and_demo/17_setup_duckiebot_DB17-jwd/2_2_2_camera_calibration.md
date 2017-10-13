@@ -40,12 +40,11 @@ Open two terminals on the laptop.
 
 #### Step 2
 
-In the first terminal, ssh into your robot and launch the joystick process:
+In the first terminal, log in into your robot using SSH and launch the joystick process:
 
-    laptop $ ssh ![robot name]
-    laptop $ cd ![duckietown root]
-    laptop $ source environment.sh
-    laptop $ roslaunch duckietown camera.launch veh:=![robot name] raw:=true
+    duckiebot $ cd ![duckietown root]
+    duckiebot $ source environment.sh
+    duckiebot $ roslaunch duckietown camera.launch veh:=![robot name] raw:=true
 
 #### Step 3
 
@@ -64,7 +63,9 @@ You should see a display screen open on the laptop ([](#fig:intrinsic_callibrati
 
 Position the checkerboard in front of the camera until you see colored lines
 overlaying the checkerboard. You will only see the colored lines if the entire
-checkerboard is within the field of view of the camera. You should also see
+checkerboard is within the field of view of the camera. 
+
+You should also see
 colored bars in the sidebar of the display window. These bars indicate the
 current range of the checkerboard in the camera's field of view:
 
@@ -79,8 +80,9 @@ Now move the checkerboard right/left, up/down, and tilt the checkerboard
 through various angles of relative to the image plane. After each movement,
 make sure to pause long enough for the checkerboard to become highlighted. Once
 you have collected enough data, all four indicator bars will turn green. Press
-the "CALIBRATE" button in the sidebar. Calibration may take a few moments. Note
-that the screen may dim. Don't worry, the calibration is working.
+the "CALIBRATE" button in the sidebar. 
+
+Calibration may take a few moments. Note that the screen may dim. Don't worry, the calibration is working.
 
 <div figure-id="fig:intrinsic_calibration_calibratestep" figure-caption="">
  <img src="intrinsic_calibration_calibratestep.png" style='width: 30em'/>
@@ -88,7 +90,7 @@ that the screen may dim. Don't worry, the calibration is working.
 
 ### Save the calibration results
 
-If you are satisfied with the calibration, you can save the results by pressing the "COMMIT" button in the side bar (You never need to click the "SAVE" button).
+If you are satisfied with the calibration, you can save the results by pressing the "COMMIT" button in the side bar. (You never need to click the "SAVE" button.)
 
 <div figure-id="fig:intrinsic_calibration_commit" figure-caption="">
      <img src="intrinsic_calibration_commit.png" style='width: 30em'/>
@@ -100,7 +102,7 @@ This will automatically save the calibration results on your Duckiebot:
 
 #### Step 7
 
-Now let's push the `![robot name].yaml` file to the git repository. You can stop the `camera.launch` termincal with <kbd>Ctrl</kbd>-<kbd>C</kbd> or open a new terminal in Byobu with <kbd>F2</kbd>.
+Now let's push the `![robot name].yaml` file to the git repository. You can stop the `camera.launch` terminal with <kbd>Ctrl</kbd>-<kbd>C</kbd> or open a new terminal in Byobu with <kbd>F2</kbd>.
 
 Update your local git repository:
 
@@ -115,18 +117,19 @@ You should see that your new calibration file is uncommitted. You need to commit
     duckiebot $ git commit -m "add ![robot name] intrinsic calibration file"
     duckiebot $ git push origin ![Github username]-devel
 
-
 Before moving on to the extrinsic calibration, make sure to kill all running processes by pressing <kbd>Ctrl</kbd>-<kbd>C</kbd> in each of the terminal windows.
 
 ## Extrinsic calibration {status=recently-updated}
 
 ### Setup
 
-Arrange the Duckiebot and checkerboard according to [](#fig:extrinsic_setup). Note that the axis of the wheels should be aligned with the y-axis.
+Arrange the Duckiebot and checkerboard according to [](#fig:extrinsic_setup). Note that the axis of the wheels should be aligned with the y-axis ([](#fig:extrinsic_setup)).
 
 <div figure-id="fig:extrinsic_setup" figure-caption="">
   <img src="extrinsic_setup.jpg" style='width: 30em'/>
 </div>
+
+Note: Please re-do the picture above with a conforming Duckiebot. A conforming Duckiebot has a duckie on top. -AC
 
 [](#fig:extrinsic_view) shows a view of the calibration checkerboard from the Duckiebot. To ensure proper calibration there should be no clutter in the background.
 
@@ -134,22 +137,20 @@ Arrange the Duckiebot and checkerboard according to [](#fig:extrinsic_setup). No
   <img src="extrinsic_view.jpg" style='width: 30em'/>
 </div>
 
-### Calibration
+### Calibration procedure
 
 
 #### Step 1
 
 Log in into your robot using SSH and launch the camera:
 
-    laptop $ ssh ![robot name]
-    
     duckiebot $ cd ![duckietown root]
     duckiebot $ source environment.sh
     duckiebot $ roslaunch duckietown camera.launch veh:=![robot name] raw:=true
 
 #### Step 2
 
-Run the `ground_projection_node.py` node on your laptop 
+Run the `ground_projection_node.py` node on your laptop: 
 
     laptop $ cd ![duckietown root]
     laptop $ source environment.sh

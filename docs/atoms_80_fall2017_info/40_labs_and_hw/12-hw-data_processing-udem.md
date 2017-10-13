@@ -42,6 +42,6 @@ Complete [](#exercise-instagram)
 
 Complete [](#exercise-instagram-live)
 
-Call your package `dt-instagram-live_![ROBOT_NAME]` and call your node `dt-instagram-live_![ROBOT_NAME]`
+Call your package `dt-instagram-live_![robot name]` and call your node `dt-instagram-live_![robot name]`
 
 When you are done, take a 5min log (See [](#take-a-log))in Duckietown (2333 in Montreal) and upload [here](https://www.dropbox.com/request/0bESmFHuGHGNVBnce3XI)
