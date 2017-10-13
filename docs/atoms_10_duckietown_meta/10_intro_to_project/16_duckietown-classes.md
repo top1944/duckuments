@@ -95,7 +95,21 @@ Highlights:
 
 ### ETH Zürich {#2017-ETHZ}
 
-Assigned: Censi/Tani
+Location: Zürich
+
+Course title:  Autonomous Mobility on Demand (AMOD): from car to fleet (151-0323-00L)
+
+Instructors: E. Frazzoli, A. Censi
+
+Educational Level: Graduate
+
+Time period: Sept. - Dec. 2017
+
+Link: [Official Course Website](http://duckietown.org/classes/2017/17-ETHZ/)
+
+Summary: 46 students 
+
+Highlights:
 
 ### Université de Montréal {#2017-UdM}
 
