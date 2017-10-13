@@ -7,6 +7,8 @@ Assigned: Andrea Daniele
 Requires: You can run the joystick demo remotely. The procedure is documented
 in [](#rc-launched-remotely).
 
+Suggested: Duckiebot modeling [](#duckiebot-modeling).
+
 Results:  Calibrate the wheels of the Duckiebot such that it goes in a straight line
 when you command it to. Set the maximum speed of the Duckiebot.
 
@@ -40,16 +42,16 @@ sends two different signals to left and right motor such that the robot moves in
 a straight line when you command it to.
 
 The relationship between linear and angular velocity of the robot and the velocities
-of left and right motors are:
+of left and right motors can be modeled as:
 
-\begin{align*}
-    v_{\text{right}} &= (g + r) \cdot (v + \dfrac{1}{2} \omega l ) \\
-    v_{\text{left}} &= (g - r) \cdot (v - \dfrac{1}{2} \omega l )
-\end{align*}
+\begin{align} \label{eq:kin-calib-gain-trim-model}
+    V_{\text{right}} &= (g + r) \cdot (v + \omega L ) \\
+    V_{\text{left}} &= (g - r) \cdot (v - \omega L )
+\end{align}
 
-where $v_{\text{right}}$ and $V_{\text{left}}$ are the velocities of the two motors, $g$ is
-called *gain*, $r$ is called *trim*, $v$ and $\omega$ are the desired linear
-and the angular velocity of the robot, and $l$ is the distance between the two
+where $V_{\text{right}}$ and $V_{\text{left}}$ are the voltages applied to the two motors, $g$ is
+called *gain*, $r$ is called *trim*, $v$ and $\omega$ are the linear
+and the angular velocity of the robot, and $2L$ is the distance between the two
 wheels. The gain parameter $g$ controls the maximum speed of the robot.
 With $g > 1.0$, the vehicle goes faster given the same velocity command,
 and for $g < 1.0$ it goes slower. The trim parameter $r$ controls the balance
@@ -57,11 +59,49 @@ between the two motors. With $r > 0$, the right wheel will turn slightly more
 than the left wheel given the same velocity command; with $r < 0$, the left
 wheel will turn slightly more the right wheel.
 
-Comment: It might be helpful to add the differential equations that relate velocities and
-voltages of the motors. -AD
+### The gain-trim model {#calib-gain-trim status=draft}
 
+Odometry calibration aims at determining the parameters of a model used to describe the motion of a robot, typically through a set of measurements through which the model output can be estimated. Depending on the model used (e.g., dynamic, constrained dynamic, kinematic), different calibration parameters are determined. A typical solution to the odometry calibration problem relies on wheel encoders to determined the wheel radii and axle length using the kinematic model \eqref{eq:mod-kin-3}. We cannot use this solution in the context of Duckietown because Duckiebots are not equipped with wheel encoders.
 
-## Perform the Calibration
+The gain-trim model \eqref{eq:kin-calib-gain-trim-model} is obtained by considering the kinematic model of a differential drive robot along with the steady state solution of the DC motor equations, under the following assumptions:
+
+- the wheels are equally spaced with respect to the guide point $A$, so that the axle length is $2L$,
+- the wheels have different diameters: $2R_{l/r}$,
+- no lateral slipping: the robot does not slip laterally,
+- pure rolling: the wheels do not slip:
+
+\[ \label{eq:calib-pure-rolling}
+v_{l/r} = \dot \varphi_{l/r} R_{l/r},
+\]
+
+- the robot starts at rest ($v_l(t_0)=v_r(t_0)=0$),
+- the motor's dynamics is considered at steady state, with zero initial current ($i(t_0)=0$).
+
+Note: in the models introduced in [](#duckiebot-modeling), we instead assumed the wheels were identical.
+
+Recalling the DC motor equations \eqref{eq:mod-dc-motor-equations}:
+
+\begin{align} \label{eq:calib-dc-motor-equations}
+V(t) &= Ri(t) + L \frac{di}{dt} + e(t) \\
+e(t) &= K_b \dot \varphi(t)  \\
+\tau(t) &= K_t i(t),
+\end{align}
+
+and the pure rolling constraint \eqref{eq:calib-pure-rolling}, \eqref{#calib-dc-motor-equations} can be written, in the Laplace domain, as:
+
+TODO: finish writing
+
+<!--
+\begin{align} \label{eq:calib-dc-motor-equations}
+V(t) &= Ri(t) + L \frac{di}{dt} + e(t) \\
+e(t) &= K_b \dot \varphi(t)  \\
+\tau(t) &= K_t i(t),
+\end{align}
+-->
+
+Note: Disturbances such as the friction between wheels and ground are ignored in this simple model. For this reason, we call the robot "calibrated" as long as it falls within a neighbor of the intended final position ([](#calib-perform-the-calibration-gain-trim-model)).
+
+## Perform the Calibration {#calib-perform-the-calibration-gain-trim-model}
 
 ### Calibrating the `trim` parameter
 
@@ -166,7 +206,7 @@ Construct a calibration station similar [](#fig:kinematic_calibration):
 The following are the specs for this 3x1 mat "runway":
 
  - Red line as close to the edge without crossing the interlocking bits
- 
+
  - Blue/Black line 8 cm from red line and parallel to it.
 
  - White lines on the edge without intersecting the interlocking bits

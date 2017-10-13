@@ -123,7 +123,6 @@ and it is always possible to switch representation of a vector $X$ from the robo
 
 ## Dynamics
 
-
 While kinematics studies the properties of motions of geometric (i.e., massless) points, dynamical modeling takes into account the actual material distribution of the system. Once mass comes into play, motion is the result of the equilibrium of external forces and torques with inertial reactions. While different approaches can be used to derive these equations, namely the Lagrangian or Newtonian approaches (former based on energy considerations, latter on equilibrium of generalized forces), we choose to follow the Newtonian one here for it grants, arguably, a more explicit physical intuition of the problem. Obviously both methods lead to the same results when the same hypothesis are made.
 
 ### Notations {#mod-dyn-notations}
@@ -275,7 +274,7 @@ and therefore:
 \dot v_w(t) = c\ddot\theta(t).
 \]
 
-Note: a simpler way of deriving \eqref{eq:mod-no-lat-slip-final-dot} is noticing, from \eqref{eq:mod-v_A^R}, that $\dot y_A^R = v_w(t) - c\dot\theta(t)$. 
+Note: a simpler way of deriving \eqref{eq:mod-no-lat-slip-final-dot} is noticing, from \eqref{eq:mod-v_A^R}, that $\dot y_A^R = v_w(t) - c\dot\theta(t)$.
 
 - _Pure rolling_: the wheels never slips or skids ([](#fig:mod-pure-rolling)). Recalling that $R$ is the radius of the wheels (identical) and letting $\dot \varphi_{l}, \dot \varphi_{r}$ be the angular velocities of the left and right wheels respectively, the velocity of the ground contact point P in the robot frame is given by:
 
@@ -619,7 +618,7 @@ For example, given in the input torques $(\tau_R, \tau_L)$, this model yields $v
 
 The equations governing the behavior of a DC motor are driven by an input _armature voltage_ $V(t)$:
 
-\begin{align}
+\begin{align} \label{eq:mod-dc-motor-equations}
 V(t) &= Ri(t) + L \frac{di}{dt} + e(t) \\
 e(t) &= K_b \dot\varphi(t)  \\
 \tau_m(t) &= K_t i(t)  \\
