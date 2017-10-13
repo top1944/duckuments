@@ -99,7 +99,12 @@ The URL to clone is:
 Only TAs have read and write permissions to this repository.
 
 
-## Git policy for  homeworks {#git-policy-homeworks status=recently-updated}
+## Git policy for homeworks (TTIC/UDEM) {#git-policy-homeworks status=recently-updated}
+
+
+<div class='only-zurich' markdown="1">
+This does not apply to Zurich.
+</div>
 
 Homeworks will require you to write and submit coding exercises. They will be submitted using git. Since we have a university plagiarism policy ([UdeM's](http://www.lecre.umontreal.ca/politique-sur-le-plagiatplagiarism-policy/),
 [TTIC/UChicago](https://studentmanual.uchicago.edu/Policies#Honesty)) we have to protect students work before the deadline of the homeworks. For this reason we will follow these steps for homework submission:
@@ -186,7 +191,9 @@ We will ask to create a "Pull Request" from your private repo.
 
 
 
-### For U de M students who have already submitted homework to the previous `duckiefleet-2017` repo
+### For U de M students who have already submitted homework to the previus duckiefleet-2017 repo 
+
+<div class='only-montreal' markdown="1">
 
 These instructions assume that you are ok with losing the commit history from the first homework. If not, things get a little more complicated
 
@@ -201,6 +208,7 @@ Copy over your homework files from the `duckiefleet-fall2017` repo into the `exe
 
 `git add` your folder to `exercises-fall2017` and commit and push.
 
+</div>
 
 ## Git policy for project development {#git-policy-projects status=draft}
 
