@@ -55,7 +55,11 @@ We suggest the following:
 3. Otherwise, you have a lot to catch up. No problem. Take your time. Start with the basic
    exercise. TAs are here to help.
 
-## Exercise: Basic image operations
+### Exercise: Basic image operations
+
+See: [](#exercise-basic-image)
+
+### Exercise: Basic image operations: adult version
 
 See: [](#exercise-specifications)
 
