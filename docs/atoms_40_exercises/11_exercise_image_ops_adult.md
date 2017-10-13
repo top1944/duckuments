@@ -104,6 +104,11 @@ repository.
 Use it as follows:
 
     $ image-ops-tester ![candidate-program]
+    
+    
+Note: The tester script must be called from its own location. Make sure to change your working directory to
+`/exercises/dt-image-flip/image-ops-tester` before launching the tester script.
+
 
 If the script cannot be found, `image-ops-tester` will return 1.
 
