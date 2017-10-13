@@ -21,7 +21,7 @@ See: [](#acquiring-parts-c0)
 See: [](#acquiring-parts-c1)
 
 
-<div class="zurich-only" markdown="1">
+<div class="only-zurich" markdown="1">
 You don't need to buy anything - you have all the parts that you need.
 </div>
 
@@ -33,7 +33,7 @@ See: [](#soldering-boards-c0)
 
 See: [](#soldering-boards-c1)
 
-<div class="zurich-only" markdown="1">
+<div class="only-zurich" markdown="1">
 You don't need to solder anything.
 </div>
 
@@ -56,7 +56,7 @@ If you are very inexperienced with Linux/Unix/networking etc, then you may find 
 
 See: [](#duckiebot-ubuntu-image)
 
-<div class="zurich-only" markdown="1">
+<div class="only-zurich" markdown="1">
 You probably don't want to see how the sausage is made.
 </div>
 
@@ -95,14 +95,14 @@ See: [](#rc-control)
 You should record a video demonstrating that your Duckiebot is up and running. Brownie points for creative videos. Please upload your videos via the following URL:
 
 
-<div class='chicago-only' markdown='1'>
+<div class='only-chicago' markdown='1'>
 
 Chicago: [upload your video](https://www.dropbox.com/request/3GxK1kjxUmZKl23x6nEY)
 
 </div>
 
 
-<div class='chicago-only' markdown='1'>
+<div class='only-chicago' markdown='1'>
 
 Zurich: [upload your video](https://www.dropbox.com/request/6St0yCcVJoNPLUHR4fbS)
 

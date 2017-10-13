@@ -11,11 +11,11 @@ Result: A verified log in rosbag format uploaded to Dropbox.
 Slack channel: [#help-logging](https://duckietown.slack.com/archives/C78M6FL6L)
 
 
-<div class="montreal-only" markdown="1">
+<div class="only-montreal" markdown="1">
 Montreal deadline: Oct 4, 11pm  
 </div>
 
-<div class='zurich-only' markdown='1'>
+<div class='only-zurich' markdown='1'>
 Zurich deadline: Oct 20, 17:00
 </div>
 
@@ -32,11 +32,11 @@ See: [](#mounting-usb)
 Take a 5 min log as you drive in Duckietown.
 
 
-<div class="montreal-only" markdown="1">
+<div class="only-montreal" markdown="1">
 For Montreal this is rm. 2333.
 </div>
 
-<div class="zurich-only" markdown="1">
+<div class="only-zurich" markdown="1">
 For Zurich this is ML J44. Ask the TA when it is available.
 </div>
 
@@ -50,10 +50,10 @@ See: [](#verify-a-log) for detailed instructions.
 
 ## Upload the log
 
-<div class='montreal-only' markdown='1'>
+<div class='only-montreal' markdown='1'>
 Upload the log [here](https://www.dropbox.com/request/0bESmFHuGHGNVBnce3XI)
 </div>
 
-<div class='zurich-only' markdown='1'>
+<div class='only-zurich' markdown='1'>
 Upload the log [here](https://www.dropbox.com/request/6St0yCcVJoNPLUHR4fbS)
 </div>
