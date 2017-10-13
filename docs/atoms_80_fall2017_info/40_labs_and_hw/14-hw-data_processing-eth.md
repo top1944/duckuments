@@ -1,4 +1,4 @@
-# Homework: Data Processing (Zurich) {#zurich-data-processing-exercises status=ready}
+# Exercises: Data Processing (Zurich) {#zurich-data-processing-exercises status=ready}
 
 <div class='requirements' markdown='1'>
 
@@ -43,7 +43,7 @@ that are useful for everybody.)
 ## The exercises
 
 We have created a series of exercises that are supposed to help somebody who
-doesn't know how to program in Python/Linux to a decent level.
+doesn't know how to program in Python/Linux to get to a decent level.
 
 We suggest the following:
 

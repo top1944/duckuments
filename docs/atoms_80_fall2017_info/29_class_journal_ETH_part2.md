@@ -117,11 +117,11 @@ Get help in `#ex-data-processing`.
 <col2 figure-id="tab:deadlines" figure-caption="Current deadlines for Zurich">
     <s>Robot assembly</s>  <s><b>overdue</b></s>
     <s>Robot/laptop configuration</s> <s><b>overdue</b></s>
-    <s><a href="#Zurich-take-video"/></s> <s>Monday Oct 16</s>
-    <s><a href="#Zurich-camera-calibration"/></s> <s>Friday Oct 20</s>
-    <s><a href="#Zurich-wheel-calibration"/></s> <s>not ready yet</s>
-    <s><a href="#Zurich-take-a-log"/></s> <s>Wed Oct 18</s>
-    <s><a href="#Zurich-data-processing"/></s> <s>Monday Oct 23</s>
+    <s><a href="#Zurich-take-video"></a></s> <s>Monday Oct 16</s>
+    <s><a href="#Zurich-camera-calibration"></a></s> <s>Friday Oct 20</s>
+    <s><a href="#Zurich-wheel-calibration"></a></s> <s>not ready yet</s>
+    <s><a href="#Zurich-take-a-log"></a></s> <s>Wed Oct 18</s>
+    <s><a href="#Zurich-data-processing"></a></s> <s>Monday Oct 23</s>
 </col2>
 
 
