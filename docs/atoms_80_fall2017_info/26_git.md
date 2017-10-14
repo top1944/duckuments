@@ -154,7 +154,7 @@ You should put your homework files in folder at:
 Some homeworks might not require ROS, they should go in a subfolder called `scripts`. ROS homeworks should go in packages which are generated using the process described here: [](#sec:ros-python-howto). For an example see `![DUCKIEFLEET_HOMEWORK_ROOT]/homeworks/01_data_processing/shamrock`.
 
 
-Note: To make your ROS packages findable by ROS you should add a symlink from your `duckietown/catkin_ws/src` directory to `![DUCKIEFLEET_HOMEWORK_ROOT]`.
+Note: To make your ROS packages findable by ROS you should add a symlink from your `![DUCKIEFLEET_HOMEWORK_ROOT]` to `duckietown/catkin_ws/src`.
 
 
 ### To submit your homework
