@@ -20,7 +20,7 @@ as specified in the next section, and then publishes it.
 
 Create a ROS node `dt_live_instagram_![robot name]_node` that takes a parameter called `filter`, where the filter is something from the list [](#instagram-filters).
 
-You should launch your camera and joystick with
+You should launch your camera and joystick from '~/duckietown' with
 
     duckiebot $ make demo-joystick-camera
 
