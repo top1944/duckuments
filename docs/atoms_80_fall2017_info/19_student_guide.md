@@ -22,7 +22,13 @@ This allows to claim an educational discount that will be useful later.
 
 ### Questionnaire
 
-Next, fill in this questionnaire:
+For NCTU Students, complete this form:
+
+[NCTU Student Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLScl5rsZhKFpHaciKMTjOP-9qkQcD1lyt-4NOjDfzwcJ4ZqVzw/viewform?usp=sf_link)
+
+**NCTU: Please complete by 10/30**
+
+For ETHZ, UdeM and TTIC fill in this questionnaire:
 
 [Preliminary Student Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSdTo235gCM-GRWKY0EYmfCieC4-FEsO1CqQIqE8EaQz0y8KWA/viewform)
 
