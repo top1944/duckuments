@@ -2,7 +2,7 @@
 
 <div class='requirements' markdown="1">
 
-Requires: A Duckiebot in configuration `DB17-CO+w`
+Requires: A Duckiebot in configuration `DB17-w`
 
 Requires: Either a router that you have control over that has internet access, or your credentials for connecting to an existing wireless network
 
