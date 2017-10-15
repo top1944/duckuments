@@ -11,6 +11,7 @@ First, count your blessings. You are lucky to live in the present. Once, there w
 <div figure-id="fig:actual-bug">
     <img src='actual_bug.jpg' style='width: 80%'/>
     <figcaption>
+        "First actual case of bug being found."
         Read the story <a href="http://americanhistory.si.edu/collections/search/object/nmah_334663">here</a>.
     </figcaption>
 </div>
