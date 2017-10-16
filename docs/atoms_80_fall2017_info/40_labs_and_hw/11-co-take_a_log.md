@@ -40,6 +40,10 @@ For Montreal this is rm. 2333.
 For Zurich this is ML J44. Ask the TA when it is available.
 </div>
 
+<div class="only-chicago" markdown="1">
+For Chicago, we are still building the town, so feel free to do this at home or in the lab.
+</div>
+
 
 See: [](#take-a-log) for detailed instructions.
 
@@ -56,4 +60,8 @@ Upload the log [here](https://www.dropbox.com/request/0bESmFHuGHGNVBnce3XI)
 
 <div class='only-zurich' markdown='1'>
 Upload the log [here](https://www.dropbox.com/request/6St0yCcVJoNPLUHR4fbS)
+</div>
+
+<div class='only-chicago' markdown='1'>
+Upload the log [here](https://www.dropbox.com/request/QAy3Gjf5jx1lxU81NIo7)
 </div>
