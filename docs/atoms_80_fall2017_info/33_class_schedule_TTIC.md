@@ -9,7 +9,7 @@ The following is a list of the current checkoffs, along with the date and time w
 &nbsp;
 
 * **Friday October 6, 5pm CT**: [](#part:checkoff_assembly_configuration)
-
+* **Wednesday October 18, 11:59pm CT**: [](#part:checkoff_take_a_log)
 
 ## Problem Sets:
 
@@ -193,6 +193,34 @@ Please help us making the experience better by [providing feedback (can be anony
 * [](#camera-geometry)
 * Richard Szeliski, *Computer Vision: Algorithms and Applications*, Chapters 1 and 2 (available [online](http://szeliski.org/Book/))
 * David A. Forsyth and Jean Ponce, *Computer Vision: A Modern Approach*, Chapters 1 and 2
+
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+
+
+## Monday, October 16: Camera Calibration and Image Filtering
+
+Note: [The second checkoff](#part:checkoff_take_a_log) is due by 11:59pm CT Wednesday.
+
+### Lecture Content
+
+* Logistics ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-ttic-a-logistics.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-ttic-a-logistics.pdf))
+* Calibration ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-ttic-b-calibration.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-ttic-b-calibration.pdf))
+* Image Filtering ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-ttic-c-image_filtering.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-ttic-c-image_filtering.pdf))
+
+
+
+### Reading Material
+
+* [](#CV_basics)
+* [](#camera-calibration)
+* [](#image-filtering)
+* Richard Szeliski, *Computer Vision: Algorithms and Applications*, Chapters 3 and 6 (available [online](http://szeliski.org/Book/))
+* David A. Forsyth and Jean Ponce, *Computer Vision: A Modern Approach*, Chapters 5.3 and 7
 
 
 ### Feedback Form
