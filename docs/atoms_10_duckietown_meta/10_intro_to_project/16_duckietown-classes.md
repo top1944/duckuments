@@ -36,13 +36,13 @@ Summary:
 
 ### National Chiao Tung University {#2016-NCTU}
 
-Location:
+Location: Hsinchu, Taiwan
 
-Course title:
+Course title: Robotic Vision
 
 Instructors: Prof. Nick Wang
 
-Educational Level:
+Educational Level: Graduate
 
 Time period:
 
@@ -95,7 +95,21 @@ Highlights:
 
 ### ETH Zürich {#2017-ETHZ}
 
-Assigned: Censi/Tani
+Location: Zürich
+
+Course title:  Autonomous Mobility on Demand (AMOD): from car to fleet (151-0323-00L)
+
+Instructors: E. Frazzoli, A. Censi
+
+Educational Level: Graduate
+
+Time period: Sept. - Dec. 2017
+
+Link: [Official Course Website](http://duckietown.org/classes/2017/17-ETHZ/)
+
+Summary: 46 students 
+
+Highlights:
 
 ### Université de Montréal {#2017-UdM}
 
@@ -133,3 +147,22 @@ Link: [Official Course Website](http://duckietown.org/classes/2017/17-TTIC/)
 Summary: 12 students admitted from TTI-Chicago and the University of Chicago
 
 Highlights:
+
+### National Chiao Tung University {#2017-NCTU}
+
+Location: Hsinchu, Taiwan
+
+Course title: Creative Software Project - Autonomous Vehicle
+
+Instructors: [Hsueh-Cheng 'Nick' Wang](http://web.it.nctu.edu.tw/~hchengwang/)
+
+Educational Level: Undergraduate
+
+Time period: Sept. 2017 - Jan. 2018
+
+Link: [Official Course Website](http://duckietown.nctu.edu.tw/)
+
+Summary: 57 students (and 10 teaching assistants) admitted from National Chiao Tung University
+
+Highlights:
+

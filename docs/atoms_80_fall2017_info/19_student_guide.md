@@ -22,9 +22,18 @@ This allows to claim an educational discount that will be useful later.
 
 ### Questionnaire
 
-Next, fill in this questionnaire:
+<div class="only-taiwan" markdown="1">
+For NCTU Students, complete this form:
 
-[Preliminary Student Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSdTo235gCM-GRWKY0EYmfCieC4-FEsO1CqQIqE8EaQz0y8KWA/viewform)
+[NCTU Student Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLScl5rsZhKFpHaciKMTjOP-9qkQcD1lyt-4NOjDfzwcJ4ZqVzw/viewform?usp=sf_link)
+
+**NCTU: Please complete by 10/30**
+
+</div>
+
+For ETHZ, UdeM and TTIC fill in this [Preliminary Student Questionnaire][q0].
+
+[q0]: https://docs.google.com/forms/d/e/1FAIpQLSdTo235gCM-GRWKY0EYmfCieC4-FEsO1CqQIqE8EaQz0y8KWA/viewform
 
 **Zurich: Please fill in questionnaire by Tuesday, September 26, 15:00 (extended from original deadline of 12:00).**
 

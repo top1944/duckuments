@@ -78,9 +78,18 @@ b - Version control with Git:
 <a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-09-ETHZ-b-version_control.pdf">PDF</a>.
 
 
-## Oct 11 (Wed) {#Zurich-2017-10-11 status=draft}
+## Oct 11 (Wed): Computer vision and odometry calibration {#Zurich-2017-10-11}
 
-Assigned: XXX
+### Materials presented in class
+
+a - Computer Vision basics:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-cv-basics.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-cv-basics.pdf">PDF</a>.
+
+
+b - Odometry calibration:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-odometry-calibration.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-odometry-calibration.pdf">PDF</a>.
 
 
 ## Oct 13 (Fri): new series of tasks out {#Zurich-2017-10-13 status=ready}
