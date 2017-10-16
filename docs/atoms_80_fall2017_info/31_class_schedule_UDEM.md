@@ -265,11 +265,19 @@ New Checkoff Initiated: [](#checkoff_calibration) Deadline is **Friday Oct. 20**
 
 ## Monday Oct 16
 
-Introduction to State Estimation: the Bayes' Filter
+Class 10:30-11:30 
+Z-205
+
+* Reminder about checkoff.
+
+* Intro to filtering [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-udem-filtering.pptx) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-udem-filtering.pdf)
 
 
 
 ## Wednesday Oct. 18
+
+Class **12:30-1:30**
+Z-310
 
 Guest Lecture from Prof. James Forbes from McGill on Extended Kalman filter
 
