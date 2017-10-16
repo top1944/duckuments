@@ -391,7 +391,7 @@ Edit your launch file to look like this:
         </node>
     </launch>
 
-Previously, you should have had the line `<param name="~pub_timestep" value="0.5" />` inside of the node tags. This sets a parameter of value `0.5` to be called `/talker/pub_timestep`. (Remeber that the tilde prefixes the variable with the current namespace). By adding the line `<arg name="pub_timestep" default="1" />`, we are telling the program to look for a parameter on the command line called `pub_timestep`, and that if it doesn't find one, to use the value one. Then, `value=<code>&#36;</code>(arg pub_timestep)` retreives the value set in the previous line.
+Previously, you should have had the line `<param name="~pub_timestep" value="0.5" />` inside of the node tags. This sets a parameter of value `0.5` to be called `/talker/pub_timestep`. (Remeber that the tilde prefixes the variable with the current namespace). By adding the line `<arg name="pub_timestep" default="1" />`, we are telling the program to look for a parameter on the command line called `pub_timestep`, and that if it doesn't find one, to use the value one. Then, `value=&#36;(arg pub_timestep)` retreives the value set in the previous line.
 
 Within `talker.py`, we can get the value of the inputted parameter. You should already have the line:
 
