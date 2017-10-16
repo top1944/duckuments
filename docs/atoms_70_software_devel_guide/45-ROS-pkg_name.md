@@ -385,7 +385,7 @@ Edit your launch file to look like this:
         <arg name="pub_timestep" default="0.5" />
         <node name="talker" pkg="pkg_name" type="talker.py" output="screen">
             <!-- Setup parameters -->
-            <param name="~pub_timestep" value=$(arg pub_timestep)/>
+            <param name="~pub_timestep" value="$(arg pub_timestep)"/>
             <!-- Remapping topics -->
             <remap from="~topic_b" to="~topic_a"/>
         </node>
