@@ -374,7 +374,7 @@ You should see the list of parameters, including `/talker/pub_timestep`.
 You can see the parameters and the values of the `talker` node with
 
     $ rosparam get /talker
-    
+
 ## Adding a command line parameter
 
 You can register a parameter in the launch file such that it is added to the ROS parameter dictionary. This allows you to call `rospy.get_param()` on you parameter from `talker.py`.
@@ -385,18 +385,18 @@ Edit your launch file to look like this:
         <arg name="pub_timestep" default="0.5" />
         <node name="talker" pkg="pkg_name" type="talker.py" output="screen">
             <!-- Setup parameters -->
-            <param name="~pub_timestep" value=$(arg pub_timestep)/>
+            <param name="~pub_timestep" value=<code>&#36;</code>(arg pub_timestep)/>
             <!-- Remapping topics -->
             <remap from="~topic_b" to="~topic_a"/>
         </node>
     </launch>
 
-Previously, you should have had the line `<param name="~pub_timestep" value="0.5" />` inside of the node tags. This sets a parameter of value `0.5` to be called `/talker/pub_timestep`. (Remeber that the tilde prefixes the variable with the current namespace). By adding the line `<arg name="pub_timestep" default="1" />`, we are telling the program to look for a parameter on the command line called `pub_timestep`, and that if it doesn't find one, to use the value one. Then, `value=$(arg pub_timestep)` retreives the value set in the previous line.
+Previously, you should have had the line `<param name="~pub_timestep" value="0.5" />` inside of the node tags. This sets a parameter of value `0.5` to be called `/talker/pub_timestep`. (Remeber that the tilde prefixes the variable with the current namespace). By adding the line `<arg name="pub_timestep" default="1" />`, we are telling the program to look for a parameter on the command line called `pub_timestep`, and that if it doesn't find one, to use the value one. Then, `value=<code>&#36;</code>(arg pub_timestep)` retreives the value set in the previous line.
 
 Within `talker.py`, we can get the value of the inputted parameter. You should already have the line:
 
     self.pub_timestep = self.setupParameter("~pub_timestep", 1.0)
-    
+
 This calles the talker's `setupParameter` method, which contains the line:
 
     value = rospy.get_param(param_name,default_value)
@@ -409,7 +409,7 @@ You can test that this works by calling `roslaunch` with the added parameter:
 
 This should cause the time between messages to become three seconds.
 
-The functions `rosparam list` and `rosparam info [param]` are useful in debugging issues with registering a parameter. 
+The functions `rosparam list` and `rosparam info [param]` are useful in debugging issues with registering a parameter.
 
 ## Documentation
 
