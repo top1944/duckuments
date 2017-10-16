@@ -53,6 +53,6 @@ Then:
 
 - verify that the "size" of the log seems "reasonable" - the log size should grow at about 220MB/min
 
-- verify in the output that your camera was publishing very close to **30.0Hz** and verify that you joysick was publishing at close to **20Hz**.
+- verify in the output that your camera was publishing very close to **30.0Hz** and verify that you joysick was publishing at a rate between **3Hz** and **6Hz**.
 
 TODO: More complex log verification methods.
