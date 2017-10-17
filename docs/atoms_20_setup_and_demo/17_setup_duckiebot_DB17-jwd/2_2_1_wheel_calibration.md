@@ -181,7 +181,7 @@ Place your robot as shown in [](#fig:kinematic_calibration).
 On your robot execute:
 
     duckiebot $ cd ![Duckietown root]
-    duckiebot $ make-hw-test-kinematics
+    duckiebot $ make hw-test-kinematics
 
 You should see your robot drive down the lane. If it is calibrated properly, you will see a message saying that it has `PASSED`, otherwise it is `FAILED` and you should adjust your gains based on what you observe and try again.
 
