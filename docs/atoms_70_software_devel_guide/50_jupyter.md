@@ -29,6 +29,6 @@ Set a password:
 
     $ jupyter notebook password
 
-## Running it
+## Running it as follows
 
     $ ipython notebook --notebook-dir=$DUCKIETOWN_ROOT/catkin_ws/src/75-notebooks
