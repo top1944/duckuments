@@ -1,4 +1,4 @@
-# Jupyter  {#jupyter status=draft}
+# Jupyter  {#jupyter status=ready}
 
 ## Installation {#jupyter-install}
 
@@ -29,6 +29,6 @@ Set a password:
 
     $ jupyter notebook password
 
-## Running it as follows
+## Run the notebook
 
     $ ipython notebook --notebook-dir=$DUCKIETOWN_ROOT/catkin_ws/src/75-notebooks
