@@ -311,6 +311,8 @@ TODO: to write
 
 # Mounting USB drives {#mounting-usb status=ready}
 
+Comment: It would be great to add pointers to pages explaining the commands, or provide a brief explanation of what we're doing. -JT
+
 First **plug in the USB drive** nothing will work if you don't do that first. Now ssh into your robot. On the command line type:
 
     duckiebot $ lsusb
@@ -319,7 +321,7 @@ you should see your Sandisk USB drive as an entry. Congrats, you correctly plugg
 
     duckiebot $ lsblk
     
-Under name you should see `sda1`, with size about 28.7GB and nothing under the `MOUNTPOINT` column (if you see something under `MOUNTPOINT` congrats you are done.
+Under name you should see `sda1`, with size about 28.7GB and nothing under the `MOUNTPOINT` column (if you see something under `MOUNTPOINT` congrats you are done).
 
 Next make a directory to mount to:
 
@@ -334,3 +336,5 @@ Test by running `lsblk` again and you should now see `/media/logs` under `MOUNTP
 ## Unmounting a USB drive {#unmount-usb}
 
     duckiebot $ sudo umount /media/logs
+
+Comment: When and why to unmount the USB drive? -JT
