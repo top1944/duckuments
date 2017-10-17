@@ -24,6 +24,8 @@ For the above to succeed you should have a Github account already set up.
 
 It should not ask for a password.
 
+Note: you must not clone the repository using the URL starting with `https`. Later steps will fail.
+
 ### Troubleshooting
 
 Symptom: It asks for a password.
