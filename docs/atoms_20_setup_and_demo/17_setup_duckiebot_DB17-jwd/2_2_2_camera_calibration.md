@@ -40,7 +40,7 @@ Open two terminals on the laptop.
 
 #### Step 2
 
-In the first terminal, log in into your robot using SSH and launch the joystick process:
+In the first terminal, log in into your robot using SSH and launch the camera process:
 
     duckiebot $ cd ![duckietown root]
     duckiebot $ source environment.sh
