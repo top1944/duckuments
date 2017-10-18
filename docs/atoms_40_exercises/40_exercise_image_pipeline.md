@@ -164,22 +164,23 @@ red on the top, green on the right, blue on the bottom, yellow on the left.
 
 ### `calibration_pattern.yaml`
 
-This pattern is based off the checkerboard calibration target used in estimating the intrinsics and extrinsic camera parameters:
+This pattern is based off the checkerboard calibration target used in estimating the intrinsic and extrinsic camera parameters:
 
-	points:
-    	TL: [image01, [0.315,  0.093]]
-    	TR: [image01, [0.315, -0.093]]
-    	BR: [image01, [0.191, -0.093]]
-    	BL: [image01, [0.191,  0.093]]
-	segments:
-	- points: [TL, TR]
-  	  color: red
-	- points: [TR, BR]
-	  color: green
-	- points: [BR, BL]
-	  color: blue
-	- points: [BL, TL]
-	  color: yellow
+
+    points:
+        TL: [axle, [0.315, 0.093, 0]]
+        TR: [axle, [0.315, -0.093, 0]]
+        BR: [axle, [0.191, -0.093, 0]]
+        BL: [axle, [0.191, 0.093, 0]]
+    segments:
+    - points: [TL, TR]
+      color: red
+    - points: [TR, BR]
+      color: green
+    - points: [BR, BL]
+      color: blue
+    - points: [BL, TL]
+      color: yellow
 
 The expected result is to put a border around the inside corners of the checkerboard: red on the top, green on the right, blue on the bottom, yellow on the left. 
 
@@ -243,29 +244,29 @@ parts of the exercise: loading the map, and drawing the lines.
 
 To load a map file, use the function `load_map` provided in the `duckietown_utils`:
 
-	from duckietown_utils import load_map
+    from duckietown_utils import load_map
 
-	map = load_map(map_filename)
+    map = load_map(map_filename)
 
 ### Reading the calibration data for a robot
 
 To load the _intrinsic_ calibration parameters, use the function `load_camera_intrinsics` provided in `duckietown_utils`: 
 
-	from duckietown_utils import load_camera_intrinsics
+    from duckietown_utils import load_camera_intrinsics
 
-	intrinsics = load_camera_intrinsics(robot_name)
+    intrinsics = load_camera_intrinsics(robot_name)
 
 To load the _extrinsic_ calibration parameters (i.e. ground projection), use the function `load_homography` provided in `duckietown_utils`:
 
-	from duckietown_utils import load_homography
+    from duckietown_utils import load_homography
 
-	H = load_homography(robot_name)
+    H = load_homography(robot_name)
 
 ### Path name manipulation
 
 From a file name like `"/path/to/map1.yaml"`, you can obtain the basename without extension `yaml` by using the function `get_base_name` provided in `duckietown_utils`:
 
-	from duckietown_utils import get_base_name
+    from duckietown_utils import get_base_name
 
     filename = "/path/to/map1.yaml"
     map_name = get_base_name(map_name)
@@ -274,29 +275,29 @@ From a file name like `"/path/to/map1.yaml"`, you can obtain the basename withou
 
 To remove the distortion from an image, use the function `rectify` provided in the `duckietown_utils`:
 
-	from duckietown_utils import rectify
+    from duckietown_utils import rectify
 
-	image = rectify(image)
+    image = rectify(image)
 
 ### Drawing primitives
 
 To draw the line segments specified in a map file, use the `render_segments` method from the `BaseAugmenter` class:
 
-	from duckietown_utils import BaseAugmenter
+    from duckietown_utils import BaseAugmenter
 
-	class MyAugmenter(BaseAugmenter):
-				.
-				.
-				.
-		def ground2pixel(self):
-			'''Method that transforms ground points
+    class MyAugmenter(BaseAugmenter):
+                .
+                .
+                .
+        def ground2pixel(self):
+            '''Method that transforms ground points
             to pixel coordinates'''
-			# YOUR CODE GOES HERE
-			return
-				.
-				.	
-				.
-		image = self.render_segments(image)
+            # YOUR CODE GOES HERE
+            return
+                .
+                .
+                .
+            image = self.render_segments(image)
 
 In order for `render_segments` to draw segments on an image, you must first implement the method `ground2pixel`.
 
