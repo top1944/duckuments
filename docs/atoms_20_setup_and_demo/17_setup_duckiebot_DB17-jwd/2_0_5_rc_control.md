@@ -214,4 +214,8 @@ the system might get corrupted.
 
 Then, disconnect the power cable, at the **battery end**.
 
+As an alternative you can use the `poweroff` command:
+
+    duckiebot $ sudo poweroff
+
 Warning: If you disconnect frequently the cable at the Raspberry Pi's end, you might damage the port.
