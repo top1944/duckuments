@@ -29,6 +29,27 @@ Set a password:
 
     $ jupyter notebook password
 
+
+
 ## Running it
 
-    $ ipython notebook --notebook-dir=$DUCKIETOWN_ROOT/catkin_ws/src/75-notebooks
+    $ jupyter notebook --notebook-dir=$DUCKIETOWN_ROOT/catkin_ws/src/75-notebooks
+
+
+
+## Extra configuration for virtual machines
+
+
+Create a configuration file:
+
+    $ jupyter notebook --generate-config
+
+Edit the file `~/.jupyter/jupyter_notebook_config.py`.
+
+Uncomment and change the line:
+
+    #c.NotebookApp.ip = 'localhost'
+
+Into:
+
+    c.NotebookApp.ip = '*'
