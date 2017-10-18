@@ -236,10 +236,6 @@ Note: Checkoff and Homework due at 11pm
 
 
 
-## Friday Oct 6
-
-
-Next checkoff and homework released
 
 ## Mon Oct 9
 
@@ -247,17 +243,41 @@ Holiday no class!
 
 ## Wed Oct 11
 
-Computer Vision: Illumination Invariance
+Class 11:30 in Z-305
+
+* Computer Vision - Feature descriptors [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-11-udem-feature_extraction.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-11-udem-feature_extraction.pdf)
+
+Book Material:
+
+
+Lab 12:30 - 1:30 in AA2333
+
+
+
+## Friday Oct 13 
+
+New Checkoff Initiated: [](#checkoff_calibration) Deadline is **Friday Oct. 20**. Deliverables are:
+ - Screenshot of your robot passing the kinematic odometry test
+ - PR to duckiefleet repo with your 3 robot calibrations (kinematics, camera intrinsics, camera extrinsics)
+ 
+ 
 
 
 ## Monday Oct 16
 
-Introduction to State Estimation: the Bayes' Filter
+Class 10:30-11:30 
+Z-205
 
-Checkoff and Homework due
+* Reminder about checkoff.
+
+* Intro to filtering [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-udem-filtering.pptx) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-udem-filtering.pdf)
+
 
 
 ## Wednesday Oct. 18
+
+Class **12:30-1:30**
+Z-310
 
 Guest Lecture from Prof. James Forbes from McGill on Extended Kalman filter
 
