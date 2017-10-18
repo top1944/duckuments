@@ -11,6 +11,7 @@ recipe:
   - checkoff_take_a_log
   - homework-data-processing-udem
   - homework-data-processing-ttic
+  - checkoff_calibration
   - zurich-data-processing-exercises
 
 # This syntax is invalid YAML
@@ -29,6 +30,7 @@ recipe:
   - add: checkoff_take_a_log
   - add: homework-data-processing-udem
   - add: homework-data-processing-ttic
+  - add: checkoff_calibration
   - add: zurich-data-processing-exercises
 
 - add: duckietown-project
