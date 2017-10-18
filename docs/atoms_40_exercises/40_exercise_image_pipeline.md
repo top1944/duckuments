@@ -297,7 +297,7 @@ To draw the line segments specified in a map file, use the `render_segments` met
                 .
                 .
                 .
-            image = self.render_segments(image)
+        image = self.render_segments(image)
 
 In order for `render_segments` to draw segments on an image, you must first implement the method `ground2pixel`.
 
