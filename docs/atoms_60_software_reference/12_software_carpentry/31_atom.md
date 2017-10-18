@@ -21,7 +21,7 @@ Install remote-atom
 
     laptop $ sudo apm install remote-atom
     
-Now, we need to edit our ssh config so that any data send to the port 52698, which is the port remote-atom is using, is forwarded via SSH to our local machine. Edit the file "~/.ssh/config". There, you add "RemoteForward 52698 127.0.0.1:52698" to your host. The resulting host will look similar to
+Now, we need to edit our SSH config so that any data send to the port 52698, which is the port remote-atom is using, is forwarded via SSH to our local machine. Edit the file "~/.ssh/config". There, you add "RemoteForward 52698 127.0.0.1:52698" to your host. The resulting host will look similar to
 
     Host lex
         User julien
