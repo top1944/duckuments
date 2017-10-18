@@ -27,8 +27,8 @@ The inverse pipeline looks like this:
 ## Instructions
 
 
-* Do intrinsics/extrinsics camera calibration of your robot as per the instructions.
-* Write the program `dt-augmented-reality` as specified below in [](#exercise-augmented-reality-spec).
+* Do intrinsics/extrinsics camera calibration of your robot as per [the instructions](#camera-calib).
+* Write the ROS node `dt-augmented-reality.py` as specified below in [](#exercise-augmented-reality-spec).
 
 Then verify the results in the following 3 situations.
 
@@ -63,7 +63,9 @@ Submit the images according to location-specific instructions.
 
 The program is invoked with this syntax:
 
-    $ dt-augmented-reality ![map file]  [![robot name]]
+    $ python dt-augmented-reality.py ![map file]  [![robot name]]
+
+Comment: if `dt-augmented-reality` is a ROS node should we launch with `rosrun`? -LP
 
 where `![map file]` is a YAML file containing the map (specified in [](#exercise-augmented-reality-map)).
 
@@ -78,7 +80,7 @@ The program does the following:
 
     /![robot name]/AR/![map file basename]
 
-where `![map file basename]` is the basename of the file without the extension. In order to do this exercise, you will have to implement a Python class that inherits from `BaseAugmenter`, implement a method called `ground2pixel` that transformats points in the world to points in the image, and implement a method called `callback` that writes the augmented image to the appropriate topic. 
+where `![map file basename]` is the basename of the file without the extension. In order to do this exercise, you will have to implement a Python class that inherits from `BaseAugmenter`, implement a method called `ground2pixel` that transforms points in the world to points in the image, and implement a method called `callback` that writes the augmented image to the appropriate topic. 
 
 ## Specification of the map {#exercise-augmented-reality-map}
 
