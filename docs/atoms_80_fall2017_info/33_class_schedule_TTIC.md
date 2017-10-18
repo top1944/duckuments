@@ -10,6 +10,7 @@ The following is a list of the current checkoffs, along with the date and time w
 
 * **Friday October 6, 5pm CT**: [](#part:checkoff_assembly_configuration)
 * **Wednesday October 18, 11:59pm CT**: [](#part:checkoff_take_a_log)
+* **Sunday October 22, 11:59pm CT**: [](#part:checkoff_calibration)
 
 ## Problem Sets:
 
@@ -24,6 +25,7 @@ Note: Please keep track of how much time you spend on each problem set. We will 
 &nbsp;
 
 * **Friday October 13, 11:59pm CT**: [](#part:homework-data-processing-ttic)
+* **Friday October 27, 11:59pm CT**: Augmented Reality (will be posted soon)
 
 
 
@@ -221,6 +223,34 @@ Note: [The second checkoff](#part:checkoff_take_a_log) is due by 11:59pm CT Wedn
 * [](#image-filtering)
 * Richard Szeliski, *Computer Vision: Algorithms and Applications*, Chapters 3 and 6 (available [online](http://szeliski.org/Book/))
 * David A. Forsyth and Jean Ponce, *Computer Vision: A Modern Approach*, Chapters 5.3 and 7
+
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+
+## Wednesday, October 18: Edge Detection and Lane Detection
+
+Note: [The third checkoff](#part:checkoff_calibration) is due by 11:59pm CT Sunday. Note that camera calibration is necessary for the next problem set, which will be posted soon.
+
+### Lecture Content
+
+* Logistics ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-a-logistics.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-a-logistics.pdf))
+* Image Filtering (Review) ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-b-image-filtering-revisited.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-b-image-filtering-revisited.pdf))
+* Image Gradients ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-c-image-gradients.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-c-image-gradients.pdf))
+*  Edge Detection ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-d-edge-detection.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-d-edge-detection.pdf))
+*  Line Detection ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-e-line-detection.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-e-line-detection.pdf))
+*  Lane Detection ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-f-lane-detection.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-f-lane-detection.pdf))
+
+
+
+### Reading Material
+
+* [](#line_detection)
+* Richard Szeliski, *Computer Vision: Algorithms and Applications*, Chapters 3 and 3 (available [online](http://szeliski.org/Book/))
+* David A. Forsyth and Jean Ponce, *Computer Vision: A Modern Approach*, Chapters 7 and 8
 
 
 ### Feedback Form
