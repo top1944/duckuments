@@ -269,7 +269,7 @@ From a file name like `"/path/to/map1.yaml"`, you can obtain the basename withou
     from duckietown_utils import get_base_name
 
     filename = "/path/to/map1.yaml"
-    map_name = get_base_name(map_name)
+    map_name = get_base_name(filename)
 
 ### Undistorting an image
 
