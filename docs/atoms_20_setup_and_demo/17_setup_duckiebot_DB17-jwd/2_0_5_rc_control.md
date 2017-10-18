@@ -81,9 +81,11 @@ Clone the relevant `duckiefleet` repository into `~/duckiefleet`.
 
 See see [](#duckiefleet-directory) to find the right `duckiefleet` repository.
 
-In `~/.bashrc` set `DUCKIEFLEET_ROOT` to point to the directory:
+In `~/.bashrc` set `DUCKIEFLEET_ROOT` and `DUCKIETOWN_ROOT`  to point to their corresponding directory:
 
     export DUCKIEFLEET_ROOT=~/duckiefleet
+    export DUCKIETOWN_ROOT=~/duckietown
+    
 
 Also, make sure that you execute `~/.bashrc` in the current shell by running the command:
 
