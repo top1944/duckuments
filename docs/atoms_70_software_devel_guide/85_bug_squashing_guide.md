@@ -99,9 +99,13 @@ This is the proper way to run `what-the-duck`:
 
     $ cd ~/duckietown
     $ source environment.sh
-    $ ./dependencies_since_image.sh # on a Duckiebot
-    $ ./dependencies_for_laptop.sh  # on a laptop
+    $ git checkout master
+    $ git pull
+    $ ./dependencies_since_image.sh # if you are on a Duckiebot
+    $ ./dependencies_for_laptop.sh  # if you are on a laptop
     $ ./what-the-duck
+
+Note: you don't want to miss any step.
 
 The tool also produces an HTML report about your system which you should attach to any request for help.
 
