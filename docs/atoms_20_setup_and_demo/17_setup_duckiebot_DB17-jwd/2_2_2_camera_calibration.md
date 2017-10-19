@@ -76,6 +76,8 @@ current range of the checkerboard in the camera's field of view:
 
 Also, make sure to focus the image by rotating the mechanical focus ring on the lens of the camera.
 
+Comment: Do not change the focus during or after the calibration, otherwise your calibration is no longer valid. I'd also suggest to not to use the lens cover anymore; removing the lens cover changes the focus. -MK
+
 Now move the checkerboard right/left, up/down, and tilt the checkerboard
 through various angles of relative to the image plane. After each movement,
 make sure to pause long enough for the checkerboard to become highlighted. Once
