@@ -32,7 +32,7 @@ Note that you should do a pull in `Software` to get all the goodies and utils de
 
 if you have followed the instructions properly.
 
-In the `exercises-fall2017` repository, you will find a template that you can use to make your own packae. Basically everywhere you see `littleredcorvette` you would need to replace it with your ![robot_name].
+In the `exercises-fall2017` repository, you will find a template that you can use to make your own package. Basically everywhere you see `littleredcorvette` you would need to replace it with your ![robot_name].
 
 
 ## Bonus: Defining the intersection_4way.yaml
