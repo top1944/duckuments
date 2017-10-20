@@ -1,4 +1,4 @@
-# Exercise: Augmented Reality {#exercise-augmented-reality status=draft}
+# Exercise: Augmented Reality {#exercise-augmented-reality status=ready}
 
 Assigned: Jonathan Michaux and Dzenan Lapandic
 
