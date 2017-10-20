@@ -14,6 +14,7 @@ Result: Ability to project fake things from an image back into the world
 Slack channel: [#ex-augmented_reality](https://duckietown.slack.com/messages/C7MGCRSMS)
 
 Montreal deadline: Oct 27, 11:00pm
+Chicago deadline: Oct 27, 11:59pm
 
 ## Follow the git policy for homeworks
 
@@ -37,4 +38,4 @@ In the `exercises-fall2017` repository, you will find a template that you can us
 
 ## Bonus: Defining the intersection_4way.yaml
 
-The first student to do it (from any institution) gets notoriety and a bonus. 
+The first student to do it (from any institution) gets notoriety and a bonus.
