@@ -28,7 +28,7 @@ The inverse pipeline looks like this:
 
 
 * Do intrinsics/extrinsics camera calibration of your robot as per the instructions.
-* Write the ROS node `dt-augmented-reality.py` as specified below in [](#exercise-augmented-reality-spec).
+* Write the ROS node `dt_augmented-reality_node.py` as specified below in [](#exercise-augmented-reality-spec).
 
 
 Then verify the results in the following 3 situations.
@@ -37,21 +37,21 @@ Then verify the results in the following 3 situations.
 ### Calibration pattern
 
 * Put the robot in the middle of the calibration pattern.
-* Run the program `dt-augmented-reality` with map file `calibration_pattern.yaml`.
+* Run the program `dt_augmented_reality` with map file `calibration_pattern.yaml`.
 
 (Adjust the position until you get perfect match of reality and augmented reality.)
 
 ### Lane
 
 * Put the robot in the middle of a lane.
-* Run the program `dt-augmented-reality` with map file `lane.yaml`.
+* Run the program `dt_augmented_reality` with map file `lane.yaml`.
 
 (Adjust the position until you get a perfect match of reality and augmented reality.)
 
 ### Intersection
 
 * Put the robot at a stop line at a 4-way intersection in Duckietown.
-* Run the program `dt-augmented-reality` with map file `intersection_4way.yaml`.
+* Run the program `dt_augmented_reality` with map file `intersection_4way.yaml`.
 
 (Adjust the position until you get a perfect match of reality and augmented reality.)
 
@@ -60,11 +60,11 @@ Then verify the results in the following 3 situations.
 Submit the images according to location-specific instructions.
 
 
-## Specification of `dt-augmented-reality` {#exercise-augmented-reality-spec}
+## Specification of `dt_augmented_reality` {#exercise-augmented-reality-spec}
 
 In this assignment you will be writing a ROS package to perform the augmented reality exercise. The program will be invoked with the following syntax:
 
-    $ roslaunch dt-augmented-reality augmenter.launch map_file:=![map file]  robot_name:=[![robot name]] local:=1
+    $ roslaunch dt_augmented_reality augmenter.launch map_file:=![map file] robot_name:=[![robot name]] local:=1
 
 where `![map file]` is a YAML file containing the map (specified in [](#exercise-augmented-reality-map)).
 
