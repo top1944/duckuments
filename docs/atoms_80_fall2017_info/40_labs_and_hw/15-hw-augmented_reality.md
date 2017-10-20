@@ -1,4 +1,4 @@
-# Homework: Augmented Reality (UdeM) {#homework-augmented-reality-udem status=ready}
+# Homework: Augmented Reality {#homework-augmented-reality status=ready}
 
 <div class='requirements' markdown='1'>
 
