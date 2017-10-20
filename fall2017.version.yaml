@@ -30,6 +30,7 @@ recipe:
   - add: checkoff_take_a_log
   - add: homework-data-processing-udem
   - add: homework-data-processing-ttic
+  - add: homework-augmented-reality-udem
   - add: checkoff_calibration
   - add: zurich-data-processing-exercises
 
@@ -46,6 +47,7 @@ recipe:
   - add: exercise-instagram
   - add: exercise-bag-mirror
   - add: exercise-instagram-live
+  - add: exercise-augmented-reality
 
 
 - make-part: theory-background
