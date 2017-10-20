@@ -25,7 +25,7 @@ Note: Please keep track of how much time you spend on each problem set. We will 
 &nbsp;
 
 * **Friday October 13, 11:59pm CT**: [](#part:homework-data-processing-ttic)
-* **Friday October 27, 11:59pm CT**: Augmented Reality (will be posted soon)
+* **Friday October 27, 11:59pm CT**: [](#part:homework-augmented-reality)
 
 
 
