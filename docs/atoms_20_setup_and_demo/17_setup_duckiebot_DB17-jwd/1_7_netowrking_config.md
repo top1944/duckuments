@@ -233,7 +233,7 @@ You should see the network that you are trying to connect (`![SSID])`) to and yo
 
     duckiebot $ sudo nmcli dev wifi con ![SSID] password ![PASSWORD]
     
-### Option 5: ETH Wifi {status=draft}
+### Option 5: ETH Wifi {#wifi-ETH status=beta}
 
 The following instructions will lead you to connect your PI to the "eth" wifi network. 
 
@@ -248,7 +248,7 @@ First, run the following on duckiebot
 
     ![...]
     
-Make note of the name `enxb![xxxxxxxxxxx]`. ![xxxxxxxxxxx] should be a string that has 11 characters that is formed by numbers and lower case letters.
+Make note of the name `enxb![xxxxxxxxxxx]`. `![xxxxxxxxxxx]` should be a string that has 11 characters that is formed by numbers and lower case letters.
 
 Second, edit the file `/etc/network/interfaces` which requires `sudo` so that it looks like the following, and make sure the `enxb![xxxxxxxxxxx]` matches:
 
