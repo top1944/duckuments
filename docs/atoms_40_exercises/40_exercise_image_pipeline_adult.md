@@ -1,7 +1,5 @@
 # Exercise: Augmented Reality {#exercise-augmented-reality status=draft}
 
-Assigned: Jonathan Michaux and Dzenan Lapandic
-
 ## Skills learned
 
 * Understanding of all the steps in the image pipeline.
@@ -28,8 +26,7 @@ The inverse pipeline looks like this:
 
 
 * Do intrinsics/extrinsics camera calibration of your robot as per the instructions.
-* Write the ROS node `dt-augmented-reality.py` as specified below in [](#exercise-augmented-reality-spec).
-
+* Write the program `dt-augmented-reality` as specified below in [](#exercise-augmented-reality-spec).
 
 Then verify the results in the following 3 situations.
 
@@ -46,14 +43,14 @@ Then verify the results in the following 3 situations.
 * Put the robot in the middle of a lane.
 * Run the program `dt-augmented-reality` with map file `lane.yaml`.
 
-(Adjust the position until you get a perfect match of reality and augmented reality.)
+(Adjust the position until you get perfect match of reality and augmented reality.)
 
 ### Intersection
 
 * Put the robot at a stop line at a 4-way intersection in Duckietown.
 * Run the program `dt-augmented-reality` with map file `intersection_4way.yaml`.
 
-(Adjust the position until you get a perfect match of reality and augmented reality.)
+(Adjust the position until you get perfect match of reality and augmented reality.)
 
 ### Submission
 
@@ -62,9 +59,9 @@ Submit the images according to location-specific instructions.
 
 ## Specification of `dt-augmented-reality` {#exercise-augmented-reality-spec}
 
-In this assignment you will be writing a ROS package to perform the augmented reality exercise. The program will be invoked with the following syntax:
+The program is invoked with this syntax:
 
-    $ roslaunch dt-augmented-reality dt-augmented-reality.launch map_file:=![map file]  robot_name:=[![robot name]] local:=1
+    $ dt-augmented-reality ![map file]  [![robot name]]
 
 where `![map file]` is a YAML file containing the map (specified in [](#exercise-augmented-reality-map)).
 
@@ -77,13 +74,9 @@ The program does the following:
 3. It listens to the image topic `/![robot name]/camera_node/image/compressed`.
 4. It reads each image, projects the map features onto the image, and then writes the resulting image to the topic
 
-    /![robot name]/AR/![map file basename]/image/compressed
+    /![robot name]/AR/![map file basename]
 
-where `![map file basename]` is the basename of the file without the extension. We provide you with ROS package template that contains the `AugmentedRealityNode`. By default, launching the `AugmentedRealityNode` should publish raw images from the camera on the new `/![robot name]/AR/![map file basename]/image/compressed` topic. In order to complete this exercise, you will have to fill in the missing details of the `Augmenter` class by doing the following:
-
-1. Implement a method called `process_image` that undistorts raw images.
-2. Implement a method called `ground2pixel` that transforms points in ground coordinates (i.e. the robot reference frame) to pixels in the image.
-3. Implement a method called `callback` that writes the augmented image to the appropriate topic.
+where `![map file basename]` is the basename of the file without the extension.
 
 ## Specification of the map {#exercise-augmented-reality-map}
 
@@ -169,25 +162,7 @@ red on the top, green on the right, blue on the bottom, yellow on the left.
 
 ### `calibration_pattern.yaml`
 
-This pattern is based off the checkerboard calibration target used in estimating the intrinsic and extrinsic camera parameters:
-
-
-    points:
-        TL: [axle, [0.315, 0.093, 0]]
-        TR: [axle, [0.315, -0.093, 0]]
-        BR: [axle, [0.191, -0.093, 0]]
-        BL: [axle, [0.191, 0.093, 0]]
-    segments:
-    - points: [TL, TR]
-      color: red
-    - points: [TR, BR]
-      color: green
-    - points: [BR, BL]
-      color: blue
-    - points: [BL, TL]
-      color: yellow
-
-The expected result is to put a border around the inside corners of the checkerboard: red on the top, green on the right, blue on the bottom, yellow on the left.
+TODO: to write
 
 ### `lane.yaml`
 
@@ -245,61 +220,31 @@ parts of the exercise: loading the map, and drawing the lines.
 
 ## Useful APIs
 
-### Loading a map file:
+### Loading a YAML file
 
-To load a map file, use the function `load_map` provided in `duckietown_utils`:
+To load a YAML file, use the function `yaml_load` from `duckietown_utils`:
 
-    from duckietown_utils import load_map
+    from duckietown_utils import yaml_load
 
-    map = load_map(map_filename)
+    with open(filename) as f:
+        contents = f.read()
+        data = yaml_load(contents)
+
 
 ### Reading the calibration data for a robot
 
-To load the _intrinsic_ calibration parameters, use the function `load_camera_intrinsics` provided in `duckietown_utils`:
-
-    from duckietown_utils import load_camera_intrinsics
-
-    intrinsics = load_camera_intrinsics(robot_name)
-
-To load the _extrinsic_ calibration parameters (i.e. ground projection), use the function `load_homography` provided in `duckietown_utils`:
-
-    from duckietown_utils import load_homography
-
-    H = load_homography(robot_name)
+TODO: Ask Liam / Andrea for this part
 
 ### Path name manipulation
 
-From a file name like `"/path/to/map1.yaml"`, you can obtain the basename without extension `yaml` by using the function `get_base_name` provided in `duckietown_utils`:
-
-    from duckietown_utils import get_base_name
+From a file name like `"/path/to/map1.yaml"`, you can obtain the basename without extension `map1` using the following code:
 
     filename = "/path/to/map1.yaml"
-    map_name = get_base_name(filename)
-
-### Undistorting an image
-
-To remove the distortion from an image, use the function `rectify` provided in the `duckietown_utils`:
-
-    from duckietown_utils import rectify
-
-    image = rectify(image)
+    basename = os.path.basename(filename) # => map1.yaml
+    root, ext = os.path.splitext(basename)
+    # root = 'map1'
+    # ext = '.yaml'
 
 ### Drawing primitives
 
-To draw the line segments specified in a map file, use the `render_segments` method defined in the `Augmenter` class:
-
-    class Augmenter():
-                .
-                .
-                .
-        def ground2pixel(self):
-            '''Method that transforms ground points
-            to pixel coordinates'''
-            # YOUR CODE GOES HERE
-            return
-                .
-                .
-                .
-        image = self.render_segments(image)
-
-In order for `render_segments` to draw segments on an image, you must first implement the method `ground2pixel`.
+TODO: add here the OpenCV primitives
