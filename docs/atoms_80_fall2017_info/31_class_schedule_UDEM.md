@@ -254,18 +254,18 @@ Lab 12:30 - 1:30 in AA2333
 
 
 
-## Friday Oct 13 
+## Friday Oct 13
 
 New Checkoff Initiated: [](#checkoff_calibration) Deadline is **Monday Oct. 23**. Deliverables are:
  - Screenshot of your robot passing the kinematic odometry test
  - PR to duckiefleet repo with your 3 robot calibrations (kinematics, camera intrinsics, camera extrinsics)
- 
- 
+
+
 
 
 ## Monday Oct 16
 
-Class 10:30-11:30 
+Class 10:30-11:30
 Z-205
 
 * Reminder about checkoff.
@@ -284,7 +284,7 @@ Guest Lecture from Prof. James Forbes from McGill on Extended Kalman filter
 
 ## Friday Oct. 20
 
-Homework [](#homework-augmented-reality-udem) announced.
+Homework [](#homework-augmented-reality) announced.
 Deadline is **Friday Oct. 27** at 11pm
 
 
