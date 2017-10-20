@@ -13,7 +13,7 @@ recipe:
   - homework-data-processing-ttic
   - checkoff_calibration
   - zurich-data-processing-exercises
-  - homework-augmented-reality-udem
+  - homework-augmented-reality
 
 # This syntax is invalid YAML
 # - add: fall-2017
@@ -31,7 +31,7 @@ recipe:
   - add: checkoff_take_a_log
   - add: homework-data-processing-udem
   - add: homework-data-processing-ttic
-  - add: homework-augmented-reality-udem
+  - add: homework-augmented-reality
   - add: checkoff_calibration
   - add: zurich-data-processing-exercises
 
