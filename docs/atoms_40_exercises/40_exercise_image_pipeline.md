@@ -27,8 +27,9 @@ The inverse pipeline looks like this:
 ## Instructions
 
 
-* Do intrinsics/extrinsics camera calibration of your robot as per [the instructions](#camera-calib).
+* Do intrinsics/extrinsics camera calibration of your robot as per the instructions.
 * Write the ROS node `dt-augmented-reality.py` as specified below in [](#exercise-augmented-reality-spec).
+
 
 Then verify the results in the following 3 situations.
 
@@ -61,11 +62,9 @@ Submit the images according to location-specific instructions.
 
 ## Specification of `dt-augmented-reality` {#exercise-augmented-reality-spec}
 
-The program is invoked with this syntax:
+In this assignment you will be writing a ROS package to perform the augmented reality exercise. The program will be invoked with the following syntax:
 
-    $ python dt-augmented-reality.py ![map file]  [![robot name]]
-
-Comment: if `dt-augmented-reality` is a ROS node should we launch with `rosrun`? -LP
+    $ roslaunch dt-augmented-reality dt-augmented-reality.launch ![map file]  [![robot name]] local:=1
 
 where `![map file]` is a YAML file containing the map (specified in [](#exercise-augmented-reality-map)).
 
@@ -78,9 +77,13 @@ The program does the following:
 3. It listens to the image topic `/![robot name]/camera_node/image/compressed`.
 4. It reads each image, projects the map features onto the image, and then writes the resulting image to the topic
 
-    /![robot name]/AR/![map file basename]
+    /![robot name]/AR/![map file basename]/image/compressed
 
-where `![map file basename]` is the basename of the file without the extension. In order to do this exercise, you will have to implement a Python class that inherits from `BaseAugmenter`, implement a method called `ground2pixel` that transforms points in the world to points in the image, and implement a method called `callback` that writes the augmented image to the appropriate topic. 
+where `![map file basename]` is the basename of the file without the extension. We provide you with ROS package template that contains the `AugmentedRealityNode`. By default, launching the `AugmentedRealityNode` should publish raw images from the camera on the new `/![robot name]/AR/![map file basename]/image/compressed` topic. In order to complete this exercise, you will have to fill in the missing details of the `Augmenter` class by doing the following:
+
+1. Implement a method called `process_image` that undistorts raw images.
+2. Implement a method called `ground2pixel` that transforms points in ground coordinates (i.e. the robot reference frame) to pixels in the image.
+3. Implement a method called `callback` that writes the augmented image to the appropriate topic.
 
 ## Specification of the map {#exercise-augmented-reality-map}
 
@@ -184,7 +187,7 @@ This pattern is based off the checkerboard calibration target used in estimating
     - points: [BL, TL]
       color: yellow
 
-The expected result is to put a border around the inside corners of the checkerboard: red on the top, green on the right, blue on the bottom, yellow on the left. 
+The expected result is to put a border around the inside corners of the checkerboard: red on the top, green on the right, blue on the bottom, yellow on the left.
 
 ### `lane.yaml`
 
@@ -244,7 +247,7 @@ parts of the exercise: loading the map, and drawing the lines.
 
 ### Loading a map file:
 
-To load a map file, use the function `load_map` provided in the `duckietown_utils`:
+To load a map file, use the function `load_map` provided in `duckietown_utils`:
 
     from duckietown_utils import load_map
 
@@ -252,7 +255,7 @@ To load a map file, use the function `load_map` provided in the `duckietown_util
 
 ### Reading the calibration data for a robot
 
-To load the _intrinsic_ calibration parameters, use the function `load_camera_intrinsics` provided in `duckietown_utils`: 
+To load the _intrinsic_ calibration parameters, use the function `load_camera_intrinsics` provided in `duckietown_utils`:
 
     from duckietown_utils import load_camera_intrinsics
 
@@ -283,11 +286,9 @@ To remove the distortion from an image, use the function `rectify` provided in t
 
 ### Drawing primitives
 
-To draw the line segments specified in a map file, use the `render_segments` method from the `BaseAugmenter` class:
+To draw the line segments specified in a map file, use the `render_segments` method defined in the `Augmenter` class:
 
-    from duckietown_utils import BaseAugmenter
-
-    class MyAugmenter(BaseAugmenter):
+    class Augmenter():
                 .
                 .
                 .
@@ -302,4 +303,3 @@ To draw the line segments specified in a map file, use the `render_segments` met
         image = self.render_segments(image)
 
 In order for `render_segments` to draw segments on an image, you must first implement the method `ground2pixel`.
-
