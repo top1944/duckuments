@@ -28,7 +28,7 @@ The inverse pipeline looks like this:
 
 
 * Do intrinsics/extrinsics camera calibration of your robot as per the instructions.
-* Write the ROS node `dt_augmented-reality_node.py` as specified below in [](#exercise-augmented-reality-spec).
+* Write the ROS node `dt_augmented_reality_node.py` as specified below in [](#exercise-augmented-reality-spec).
 
 
 Then verify the results in the following 3 situations.
