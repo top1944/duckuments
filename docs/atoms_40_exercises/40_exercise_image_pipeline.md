@@ -64,7 +64,7 @@ Submit the images according to location-specific instructions.
 
 In this assignment you will be writing a ROS package to perform the augmented reality exercise. The program will be invoked with the following syntax:
 
-    $ roslaunch dt_augmented_reality augmenter.launch map_file:=![map file] robot_name:=[![robot name]] local:=1
+    $ roslaunch dt_augmented_reality-![robot name] augmenter.launch map_file:=![map file] robot_name:=![robot name] local:=1
 
 where `![map file]` is a YAML file containing the map (specified in [](#exercise-augmented-reality-map)).
 
