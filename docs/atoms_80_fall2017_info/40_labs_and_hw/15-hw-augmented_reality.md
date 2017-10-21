@@ -14,6 +14,7 @@ Result: Ability to project fake things from an image back into the world
 Slack channel: [#ex-augmented_reality](https://duckietown.slack.com/messages/C7MGCRSMS)
 
 Montreal deadline: Oct 27, 11:00pm
+
 Chicago deadline: Oct 27, 11:59pm
 
 ## Follow the git policy for homeworks
@@ -34,6 +35,11 @@ Note that you should do a pull in `Software` to get all the goodies and utils de
 if you have followed the instructions properly.
 
 In the `exercises-fall2017` repository, you will find a template that you can use to make your own package. Basically everywhere you see `littleredcorvette` you would need to replace it with your ![robot_name].
+
+## Submission
+
+Please upload the images requested in the homework to your git repo. When complete, please tag a release from your repo.
+
 
 
 ## Bonus: Defining the intersection_4way.yaml
