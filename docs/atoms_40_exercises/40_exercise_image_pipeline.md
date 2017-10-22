@@ -282,7 +282,7 @@ To remove the distortion from an image, use the function `rectify` provided in t
 
     from duckietown_utils import rectify
 
-    image = rectify(image)
+    image = rectify(image, intrinsics)
 
 ### Drawing primitives
 
