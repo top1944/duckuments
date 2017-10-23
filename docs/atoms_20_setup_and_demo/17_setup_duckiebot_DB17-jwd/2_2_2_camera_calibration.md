@@ -18,7 +18,7 @@ Results: Calibration for the robot camera.
 
 
 Download and print a PDF of the
-[calibration checkerboard](github:org=duckietown,repo=Software,path=duckietown/config/baseline/calibration/camera_intrinsic/calibration_pattern_A4.pdf).
+[calibration checkerboard](github:org=duckietown,repo=duckiefleet,path=calibrations/calibration_pattern_A4.pdf).
 Fix the checkerboard to a planar surface.
 
 <div figure-id="fig:calibration_checkerboard" figure-caption="">
