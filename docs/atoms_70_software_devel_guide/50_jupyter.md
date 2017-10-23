@@ -2,6 +2,15 @@
 
 ## Installation {#jupyter-install}
 
+Pull master
+
+    $ cd duckietown
+    $ git pull
+
+Source environment:
+
+    $ source environment.sh
+
 Remove previous installations:
 
     $ sudo apt remove ipython ipython-notebook
@@ -9,7 +18,6 @@ Remove previous installations:
 Then run:
 
     $ pip install --user jupyter IPython==5.0
-
 
 Check the versions are correct:
 
@@ -28,7 +36,6 @@ Check the version is correct:
 Set a password:
 
     $ jupyter notebook password
-
 
 
 ## Running it
