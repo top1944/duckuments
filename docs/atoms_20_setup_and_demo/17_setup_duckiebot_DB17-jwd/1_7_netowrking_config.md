@@ -59,9 +59,17 @@ Make the following changes:
 * Where it says `mac-address=![...]`, put "`![AA:BB:CC:DD:EE:FF:GG]`".
 * Where it says `ssid=duckiebot-not-configured`, put "`ssid=![robot name]`".
 
+![Newly upgraded]
+We need to set several wifi security options so that no one else can use your own wifi, otherwise everyone will be able to access to your wifi, log in with the default "ubuntu" username and password and change your system files. Still in the file `/etc/NetworkManager/system-connections/create-5ghz-network`, add something like this:
+    
+    [wifi-security]
+    key-mgmt=wpa-psk
+    psk=YOUR_OWN_WIFI_PASSWORD_NO_QUOTATION_MAKRS_NEEDED
+    auth-alg=open
+
 Reboot.
 
-At this point you should see a new network being created named "`![robot name]`".
+At this point you should see a new network being created named "`![robot name]`", whose password is the one you just set.
 
 You can connect with the laptop to that network.
 
@@ -250,7 +258,11 @@ First, run the following on duckiebot
     
 Make note of the name `enxb![xxxxxxxxxxx]`. ![xxxxxxxxxxx] should be a string that has 11 characters that is formed by numbers and lower case letters.
 
-Second, edit the file `/etc/network/interfaces` which requires `sudo` so that it looks like the following, and make sure the `enxb![xxxxxxxxxxx]` matches:
+Second, edit the file `/etc/network/interfaces` which requires `sudo` so that it looks like the following, and make sure the `enxb![xxxxxxxxxxx]` matches. 
+
+Pay special attention on the line "pre-up wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf".This is expected to be exactly one line instead of two but due to formatting issue it is shown as two lines.
+
+Also, make sure every characters match exactly with the provided ones. TAs will not help you to do spelling error check. 
 
     # interfaces(5) file used by ifup(8) and ifdown(8) Include files from /etc/network/     interfaces.d:
     source-directory /etc/network/interfaces.d
