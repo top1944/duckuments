@@ -159,7 +159,7 @@ Make sure that the file `~/.ssh/config` exists:
 
 Add a line containing
 
-    IdentityFile ~/.ssh/![PRIVATE_KEY_FILE]
+    IdentityFile ~/.ssh/![PRIVATE_KEY_FILE]
 
 (using the filename for the private key).
 
@@ -169,7 +169,7 @@ Check that the config file is correct:
 
     $ cat ~/.ssh/config
     ![...]
-    IdentityFile ~/.ssh/![PRIVATE_KEY_FILE]
+    IdentityFile ~/.ssh/![PRIVATE_KEY_FILE]
     ![...]
 
 To copy the generated SSH key to the clipboard xclip can be used (Installation of xclip if necessary).

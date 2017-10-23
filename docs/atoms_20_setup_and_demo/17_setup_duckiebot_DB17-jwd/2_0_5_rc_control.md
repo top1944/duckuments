@@ -24,6 +24,8 @@ For the above to succeed you should have a Github account already set up.
 
 It should not ask for a password.
 
+Note: you must not clone the repository using the URL starting with `https`. Later steps will fail.
+
 ### Troubleshooting
 
 Symptom: It asks for a password.
@@ -211,5 +213,9 @@ Warning: If you disconnect the power before shutting down properly using `shutdo
 the system might get corrupted.
 
 Then, disconnect the power cable, at the **battery end**.
+
+As an alternative you can use the `poweroff` command:
+
+    duckiebot $ sudo poweroff
 
 Warning: If you disconnect frequently the cable at the Raspberry Pi's end, you might damage the port.

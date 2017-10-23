@@ -40,7 +40,7 @@ Open two terminals on the laptop.
 
 #### Step 2
 
-In the first terminal, log in into your robot using SSH and launch the joystick process:
+In the first terminal, log in into your robot using SSH and launch the camera process:
 
     duckiebot $ cd ![duckietown root]
     duckiebot $ source environment.sh
@@ -75,6 +75,8 @@ current range of the checkerboard in the camera's field of view:
 - Skew bar: the relative tilt between the checkerboard and the camera direction
 
 Also, make sure to focus the image by rotating the mechanical focus ring on the lens of the camera.
+
+Comment: Do not change the focus during or after the calibration, otherwise your calibration is no longer valid. I'd also suggest to not to use the lens cover anymore; removing the lens cover changes the focus. -MK
 
 Now move the checkerboard right/left, up/down, and tilt the checkerboard
 through various angles of relative to the image plane. After each movement,
