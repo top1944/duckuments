@@ -82,14 +82,14 @@ b - Version control with Git:
 
 ### Materials presented in class
 
-a - Computer Vision basics:
-<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-cv-basics.pptx">PowerPoint presentation</a>,
-<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-cv-basics.pdf">PDF</a>.
+a - Computer Vision Basics:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-cv-basics.pdf">PDF</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-cv-basics.pptx">PowerPoint presentation</a>.
 
 
-b - Odometry calibration:
-<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-odometry-calibration.pptx">PowerPoint presentation</a>,
-<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-odometry-calibration.pdf">PDF</a>.
+b - Odometry Calibration:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-odometry-calibration.pdf">PDF</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-cv-basics.pptx">PowerPoint presentation</a>.
 
 
 ## Oct 13 (Fri): new series of tasks out {#Zurich-2017-10-13 status=ready}
@@ -137,11 +137,20 @@ Get help in `#ex-data-processing`.
 
 ## Oct 16 (Mon) {#Zurich-2017-10-16 status=draft}
 
-Andrea: computer vision. ROS?
+### Materials presented in class
+
+Line Detection:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-16-ETHZ-a-line_detection.pdf">PDF</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-16-ETHZ-a-line_detection.key">Keynote</a>.
+
 
 ## Oct 18 (Wed) {#Zurich-2017-10-18 status=draft}
 
-Assigned: XXX
+### Materials presented in class
+
+Feature Extraction:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-18-ETHZ-a-feature-extraction.pdf">PDF</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-18-ETHZ-a-feature-extraction.key">Keynote</a>.
 
 ## Oct 23 (Mon) {#Zurich-2017-10-23 status=draft}
 
