@@ -135,7 +135,7 @@ Get help in `#ex-data-processing`.
 
 
 
-## Oct 16 (Mon) {#Zurich-2017-10-16 status=draft}
+## Oct 16 (Mon) {#Zurich-2017-10-16}
 
 ### Materials presented in class
 
@@ -144,7 +144,7 @@ Line Detection:
 <a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-16-ETHZ-a-line_detection.key">Keynote</a>.
 
 
-## Oct 18 (Wed) {#Zurich-2017-10-18 status=draft}
+## Oct 18 (Wed) {#Zurich-2017-10-18}
 
 ### Materials presented in class
 
