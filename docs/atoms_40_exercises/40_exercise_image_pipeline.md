@@ -77,7 +77,7 @@ The program does the following:
 3. It listens to the image topic `/![robot name]/camera_node/image/compressed`.
 4. It reads each image, projects the map features onto the image, and then writes the resulting image to the topic
 
-    /![robot name]/AR/![map file basename]/image/compressed
+       /![robot name]/AR/![map file basename]/image/compressed
 
 where `![map file basename]` is the basename of the file without the extension. We provide you with ROS package template that contains the `AugmentedRealityNode`. By default, launching the `AugmentedRealityNode` should publish raw images from the camera on the new `/![robot name]/AR/![map file basename]/image/compressed` topic. In order to complete this exercise, you will have to fill in the missing details of the `Augmenter` class by doing the following:
 
