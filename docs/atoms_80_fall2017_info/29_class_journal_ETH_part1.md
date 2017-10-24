@@ -1,5 +1,16 @@
 # Zürich branch diary  {#ETH-journal status=ready}
 
+
+## Lectures and lab sessions
+
+Lectures:
+Mon	13-15	HG F 26.5
+Wed	10-12	HG E 22
+Lab session:
+Fri	15-19	ML J 37.1
+Duckietown room:
+ML J 44.2
+
 ## Wed Sep 20: Welcome to Duckietown! {#2017-09-20-welcome}
 
 This was an introduction meeting.
