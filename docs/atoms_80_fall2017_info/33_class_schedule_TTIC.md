@@ -249,13 +249,39 @@ Note: [The third checkoff](#part:checkoff_calibration) is due by 11:59pm CT Sund
 ### Reading Material
 
 * [](#line_detection)
-* Richard Szeliski, *Computer Vision: Algorithms and Applications*, Chapters 3 and 3 (available [online](http://szeliski.org/Book/))
+* Richard Szeliski, *Computer Vision: Algorithms and Applications*, Chapters 3 and 4 (available [online](http://szeliski.org/Book/))
 * David A. Forsyth and Jean Ponce, *Computer Vision: A Modern Approach*, Chapters 7 and 8
 
 
 ### Feedback Form
 
 Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+
+
+## Monday, October 23: Feature Detection and Place Recognition
+
+### Lecture Content
+
+* Logistics ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-a-logistics.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-a-logistics.pdf))
+* Robust Fitting ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-b-robust-fitting.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-b-robust-fitting.pdf))
+* Feature Detection ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-c-feature-detection.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-c-feature-detection.pdf))
+*  Place Recognition ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-d-place-recognition.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-d-place-recognition.pdf))
+
+
+
+### Reading Material
+
+* Richard Szeliski, *Computer Vision: Algorithms and Applications*, Chapters 4 and 6.1.3 (available [online](http://szeliski.org/Book/))
+
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+
 
 
 
