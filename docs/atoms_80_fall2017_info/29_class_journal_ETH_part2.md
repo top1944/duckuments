@@ -164,7 +164,7 @@ b - Logistics:
 <a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-20-ETHZ-ROS-main-concepts.pptx">PowerPoint presentation</a>,
 <a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-20-ETHZ-ROS-main-concepts.pdf">PDF</a>.
 
-## Oct 23 (Mon) {#Zurich-2017-10-23 status=draft}
+## Oct 23 (Mon) Filtering I {#Zurich-2017-10-23 status=ready}
 
 ### Materials presented in class
 
