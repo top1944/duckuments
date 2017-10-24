@@ -79,7 +79,7 @@ Resolution: Check that the red indicator on the joystick stopped blinking.
 <div figure-id="fig:joystick_connection_status" figure-class="flow-subfigures">
     <div figure-id="subfig:joystick_no_connection" figure-caption="Bad joystick status">
         <p style='width:14em'>
-            <img src="troubleshooting-images/joystick_no_connection.jpg" style='width:14em'/>
+            <img src="joystick_no_connection.jpg" style='width:14em'/>
         </p>
     </div>
 
@@ -90,6 +90,9 @@ Resolution: Check that the red indicator on the joystick stopped blinking.
     </div>
 </div>
 
+<!--
+<img src="troubleshooting-images/joystick_no_connection.jpg" style='width:14em'/>
+-->
 
 Symptom: The joystick is connected (as shown in [](#subfig:joystick_good_connection)) but
 the Duckiebot still does not move.

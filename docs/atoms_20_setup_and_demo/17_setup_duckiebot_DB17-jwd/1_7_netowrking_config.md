@@ -16,7 +16,7 @@ Note: this page is primarily for folks operating with the "two-network" configur
 
 The basic idea is that we are going to use the "Edimax" thumbdrive adapter to create a dedicated wireless network that you can always connect to with your laptop. Then we are going to use the built-in Broadcom chip on the Pi to connect to the internet, and then the network will be bridged. 
 
-## (For `C0+w`) Configure the robot-generated network
+## (For `DB17-w`) Configure the robot-generated network
 
 This part should work every time with very low uncertainty. 
 
@@ -59,15 +59,27 @@ Make the following changes:
 * Where it says `mac-address=![...]`, put "`![AA:BB:CC:DD:EE:FF:GG]`".
 * Where it says `ssid=duckiebot-not-configured`, put "`ssid=![robot name]`".
 
-Reboot.
+![Newly upgraded]
 
-At this point you should see a new network being created named "`![robot name]`".
+To ensure nobody piggybacks on our connection, which poses a security risk especially in a public environment, we will protect access to the 5 GHz WiFi through a password. To set a password you will need to log in the Duckiebot with the default "ubuntu" username and password and change your system files. In the `/etc/NetworkManager/system-connections/create-5ghz-network`, add:
+    
+    [wifi-security]
+    key-mgmt=wpa-psk
+    psk=YOUR_OWN_WIFI_PASSWORD_NO_QUOTATION_MAKRS_NEEDED
+    auth-alg=open
 
-You can connect with the laptop to that network.
+and then reboot.
 
+At this point you should see a new network being created named "`![robot name]`", protected by the password you just set. 
+
+<!--
 If the Raspberry Pi's network interface is connected to the `duckietown` network
 and to the internet, the Raspberry Pi will act as a bridge to the internet.
+-->
 
+<div class='only-zurich' markdown="1">
+Adding a password to your 5GHz connection is a mandatory policy in the Zurich branch. 
+</div>
 
 ## Setting up wireless network configuration {#duckiebot-internet-access}
 
@@ -250,7 +262,11 @@ First, run the following on duckiebot
     
 Make note of the name `enxb![xxxxxxxxxxx]`. `![xxxxxxxxxxx]` should be a string that has 11 characters that is formed by numbers and lower case letters.
 
-Second, edit the file `/etc/network/interfaces` which requires `sudo` so that it looks like the following, and make sure the `enxb![xxxxxxxxxxx]` matches:
+Second, edit the file `/etc/network/interfaces` which requires `sudo` so that it looks like the following, and make sure the `enxb![xxxxxxxxxxx]` matches. 
+
+Pay special attention on the line "pre-up wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf".This is expected to be exactly one line instead of two but due to formatting issue it is shown as two lines.
+
+Also, make sure every characters match exactly with the provided ones. TAs will not help you to do spelling error check. 
 
     # interfaces(5) file used by ifup(8) and ifdown(8) Include files from /etc/network/     interfaces.d:
     source-directory /etc/network/interfaces.d
