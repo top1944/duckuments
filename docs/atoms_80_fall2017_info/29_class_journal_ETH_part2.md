@@ -154,7 +154,11 @@ Feature Extraction:
 
 ## Oct 23 (Mon) {#Zurich-2017-10-23 status=draft}
 
-Assigned: XXX
+### Materials presented in class
+
+- Lectures on filtering (Filtering I):
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ETHZ-Filtering_I.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ETHZ-Filtering_I.pdf">PDF</a>.
 
 ## Oct 25 (Wed) {#Zurich-2017-10-25 status=draft}
 
