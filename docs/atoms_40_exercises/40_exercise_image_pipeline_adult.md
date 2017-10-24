@@ -181,8 +181,8 @@ We want something like this:
 Then we have:
 
     points:
-         p1: [axle, [0, 0.254, 0]]
-         q1: [axle, [D, 0.254, 0]]
+         p1: [axle, [0, 0.2794, 0]]
+         q1: [axle, [D, 0.2794, 0]]
          p2: [axle, [0, 0.2286, 0]]
          q2: [axle, [D, 0.2286, 0]]
          p3: [axle, [0, 0.0127, 0]]
@@ -191,8 +191,8 @@ Then we have:
          q4: [axle, [D, -0.0127, 0]]
          p5: [axle, [0, -0.2286, 0]]
          q5: [axle, [D, -0.2286, 0]]
-         p6: [axle, [0, -0.254, 0]]
-         q6: [axle, [D, -0.254, 0]]
+         p6: [axle, [0, -0.2794, 0]]
+         q6: [axle, [D, -0.2794, 0]]
     segments:
      - points: [p1, q1]
        color: white
