@@ -156,7 +156,7 @@ b - Logistics:
 <a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-18-ETHZ-a-feature-extraction.key">Keynote</a>,
 <a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-18-ETHZ-a-feature-extraction.pdf">PDF</a>.
 
-## Oct 20 (Fri): Lab session {#Zurich-2017-10-18 status=draft}
+## Oct 20 (Fri): Lab session {#Zurich-2017-10-20 status=draft}
 
 ### Materials presented in class
 
