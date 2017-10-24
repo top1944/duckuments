@@ -28,27 +28,27 @@ The inverse pipeline looks like this:
 
 
 * Do intrinsics/extrinsics camera calibration of your robot as per the instructions.
-* Write the ROS node `dt_augmented_reality_node.py` as specified below in [](#exercise-augmented-reality-spec).
+* Write the ROS node specified below in [](#exercise-augmented-reality-spec).
 
 
 Then verify the results in the following 3 situations.
 
 
-### Calibration pattern
+### Situation 1: Calibration pattern
 
 * Put the robot in the middle of the calibration pattern.
 * Run the program `dt_augmented_reality` with map file `calibration_pattern.yaml`.
 
 (Adjust the position until you get perfect match of reality and augmented reality.)
 
-### Lane
+### Situation 2: Lane
 
 * Put the robot in the middle of a lane.
 * Run the program `dt_augmented_reality` with map file `lane.yaml`.
 
 (Adjust the position until you get a perfect match of reality and augmented reality.)
 
-### Intersection
+### Situation 3: Intersection
 
 * Put the robot at a stop line at a 4-way intersection in Duckietown.
 * Run the program `dt_augmented_reality` with map file `intersection_4way.yaml`.
@@ -68,7 +68,7 @@ In this assignment you will be writing a ROS package to perform the augmented re
 
 where `![map file]` is a YAML file containing the map (specified in [](#exercise-augmented-reality-map)).
 
-If [![robot name]] is not given, it defaults to the hostname.
+If `![robot name]` is not given, it defaults to the hostname.
 
 The program does the following:
 
@@ -79,7 +79,11 @@ The program does the following:
 
     /![robot name]/AR/![map file basename]/image/compressed
 
-where `![map file basename]` is the basename of the file without the extension. We provide you with ROS package template that contains the `AugmentedRealityNode`. By default, launching the `AugmentedRealityNode` should publish raw images from the camera on the new `/![robot name]/AR/![map file basename]/image/compressed` topic. In order to complete this exercise, you will have to fill in the missing details of the `Augmenter` class by doing the following:
+where `![map file basename]` is the basename of the file without the extension.
+
+We provide you with ROS package template that contains the `AugmentedRealityNode`. By default, launching the `AugmentedRealityNode` should publish raw images from the camera on the new `/![robot name]/AR/![map file basename]/image/compressed` topic.
+
+In order to complete this exercise, you will have to fill in the missing details of the `Augmenter` class by doing the following:
 
 1. Implement a method called `process_image` that undistorts raw images.
 2. Implement a method called `ground2pixel` that transforms points in ground coordinates (i.e. the robot reference frame) to pixels in the image.
@@ -90,14 +94,15 @@ where `![map file basename]` is the basename of the file without the extension. 
 The map file contains a 3D polygon, defined as a list of points and a list of segments
 that join those points.
 
-The format is similar to any data structure, with a few changes:
+The format is similar to any data structure for 3D computer graphics, with a few changes:
 
 1. Points are referred to by name.
-2. It is possible to specify which reference frame each point is. (This will help make this into
+2. It is possible to specify a reference frame for each point. (This will help make this into
 a general tool for debugging various types of problems).
 
-Here is an example of the file contents (hopefully self-explanatory).
-This describes 3 points, and two lines.
+Here is an example of the file contents, hopefully self-explanatory.
+
+The following map file describes 3 points, and two lines.
 
     points:
         # define three named points: center, left, right
@@ -251,7 +256,9 @@ To load a map file, use the function `load_map` provided in `duckietown_utils`:
 
     from duckietown_utils import load_map
 
-    map = load_map(map_filename)
+    map_data = load_map(map_filename)
+
+(Note that `map` is a reserved symbol name in Python.)
 
 ### Reading the calibration data for a robot
 
@@ -274,32 +281,33 @@ From a file name like `"/path/to/map1.yaml"`, you can obtain the basename withou
     from duckietown_utils import get_base_name
 
     filename = "/path/to/map1.yaml"
-    map_name = get_base_name(filename)
+    map_name = get_base_name(filename) # = "map1"
 
 ### Undistorting an image
 
-To remove the distortion from an image, use the function `rectify` provided in the `duckietown_utils`:
+To remove the distortion from an image, use the function `rectify` provided in `duckietown_utils`:
 
     from duckietown_utils import rectify
 
-    image = rectify(image, intrinsics)
+    rectified_image = rectify(image, intrinsics)
 
 ### Drawing primitives
 
 To draw the line segments specified in a map file, use the `render_segments` method defined in the `Augmenter` class:
 
     class Augmenter():
-                .
-                .
-                .
+
+        # ...
+
         def ground2pixel(self):
             '''Method that transforms ground points
             to pixel coordinates'''
-            # YOUR CODE GOES HERE
-            return
-                .
-                .
-                .
-        image = self.render_segments(image)
+            # Your code goes here.
+            return "???"
+
+
+
+    image_with_drawn_segments = augmenter.render_segments(image)
+
 
 In order for `render_segments` to draw segments on an image, you must first implement the method `ground2pixel`.
