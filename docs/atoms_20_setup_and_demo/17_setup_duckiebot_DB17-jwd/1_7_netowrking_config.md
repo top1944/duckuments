@@ -60,6 +60,7 @@ Make the following changes:
 * Where it says `ssid=duckiebot-not-configured`, put "`ssid=![robot name]`".
 
 ![Newly upgraded]
+
 To ensure nobody piggybacks on our connection, which poses a security risk especially in a public environment, we will protect access to the 5 GHz WiFi through a password. To set a password you will need to log in the Duckiebot with the default "ubuntu" username and password and change your system files. In the `/etc/NetworkManager/system-connections/create-5ghz-network`, add:
     
     [wifi-security]
