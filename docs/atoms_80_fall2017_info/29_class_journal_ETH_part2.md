@@ -143,7 +143,7 @@ Andrea: computer vision. ROS?
 
 Assigned: XXX
 
-## Oct 23 (Mon) {#Zurich-2017-10-23 status=draft}
+## Oct 23 (Mon) Filtering I {#Zurich-2017-10-23 status=ready}
 
 ### Materials presented in class
 
