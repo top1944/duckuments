@@ -101,11 +101,11 @@ This is the proper way to run `what-the-duck`:
     $ source environment.sh
     $ git checkout master
     $ git pull
-    $ ./dependencies_since_image.sh # if you are on a Duckiebot
+    $ ./dependencies_for_duckiebot.sh # if you are on a Duckiebot
     $ ./dependencies_for_laptop.sh  # if you are on a laptop
     $ ./what-the-duck
 
-Note: you don't want to miss any step.
+Note: you have to do all the steps in the precise order.
 
 The tool also produces an HTML report about your system which you should attach to any request for help.
 
