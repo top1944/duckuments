@@ -67,7 +67,7 @@ Restart Avahi by running the command
     duckiebot $ sudo service avahi-daemon restart
 
 
-## The Duckiebot does not move.
+## The Duckiebot does not move {#troubleshooting-controller status=beta}
 
 Symptom: I can SSH into my Duckiebot and run the joystick demo but the joystick does not move the wheels.
 
