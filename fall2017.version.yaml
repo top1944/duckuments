@@ -77,6 +77,7 @@ recipe:
   contents:
   - add: configuration-management
   - add: introduction_to_ros
+  - add: pytorch-install
 
 # Add the entire part
 - add: building-duckiebot-c0
