@@ -283,6 +283,27 @@ Please help us making the experience better by [providing feedback (can be anony
 
 
 
+## Wednesday, October 25: Filtering I
+
+### Lecture Content
+
+*  Place Recognition (continued) ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-d-place-recognition.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-d-place-recognition.pdf))
+* Introduction to Filtering ([Powerpoint](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ttic-filtering-intro.pptx), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ttic-filtering-intro.pdf))
+
+
+
+### Reading Material
+
+* * [](#line_detection)
+
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+
+
 
 
 
