@@ -1,64 +1,125 @@
 # Homogeneous Coordinates {#homogeneous_coordinates}
 
 <div class="check" markdown="1">
-Required Reading: The following assumes a working familiarity with 2D and 3D Cartesian reference frames, basic properties of vectors, matrices, and linear transformations. If you are not familiar with Cartesian reference frames, please read the [chapter on reference frames](#reference_frames).
+Required Reading: The following assumes a working familiarity with 2D and 3D Cartesian [reference frames](#reference_frames) and [transformations](#transformations).
 </div>
 
 
 ## Introduction
 
-_Homogeneous coordinates_ are a mathematical trick that we will use to make computations in projective space easier. First let's review basic transformations in 2D and 3D cartesian coordinate systems. Recall that a _translation_
+_Homogeneous coordinates_
 
-
-For example in 2D, we can represent
-P^2
-- homogeneous property
-
-
-## Why use homogeneous coordinates
+### Why use homogeneous coordinates
 
 -Can represent rigid body transformations as linear maps
 -Makes the mathematics of perspective and projective geometry easier. In other words makes camera stuff easier
 -Can represent points at infinity
+-What is preserved
+
+### Applications
+Computer vision
+Computer graphics
+
+Linear transformations are fundamental
+-Transforming between coordinate systems.  For example,
+-Image formation is a transformation from a 3D point in a scene to the image sensor.  These transformations are linear in homogeneous coordiantes ***Make this a link***
+
+## Projective geometry
+
+### Representation of a point in homogeneous coordinates
+
+For example in 2D, we can represent a vector (or point) $\avec{p} = (x,y)$ as a vector:
+
+\begin{align} \label{eq:vector}
+\avec{p} = \left[ \begin{array}{c} x \\ y \\ 1 \end{array} \right]\end{align}
+
+- The representation of x is not unique
+- The space is called P^2
+
+#### Homogeneity property
+\begin{align} \label{eq:vector}
+\avec{p} = \left[ \begin{array}{c} x' \\ y' \\ z' \end{array} \right]
+
+= \frac{1}{z'} \left[ \begin{array}{c} \frac{x'}{z'} \\ y \\ 1 \end{array} \right]
+\end{align}
+
+### Representation of a line in homogeneous coordinates
 
 
-### Features of homogeneous coordinates
+### Vanishing points
+
+_Vanishing points_, or _points at infinity_, have a finite representation in homogeneous coordinates. This property is useful for proving that parallel lines in projective space intersect at a point.
+
+
+## Examples of computations in homogeneous coordinates
+
+#### A point on a line
+
+Dot produce
+
+#### Intersection of two lines
+
 Taking the cross product between
 _rotation_ in 2D is when *FINISH THIS SENTENCE*. Or, in matrix-vector notation:
+
+#### A line between two points
+
+Exercise
+
+#### Parallel lines intersect at infinity
 
 Exercise
 
 
-
 ## Transformations in homogeneous coordinates
 
+As already mentioned, one of the benefits of using homogeneous coordinates is that transformations that are non-linear in Euclidean space become linear in projective space.
 
 ### Translation
 
-T =
-\begin{align} \label{eq:3DrotationZ}
-T = \left[  \begin{array}{ccc}
-cos\theta  & -sin\theta  & 0  \\
-sin\theta  & cos\theta  & 0    \\
-0          & 0          & 1    \\
-\end{array} \right]
-\end{align}
+Recall that a _translation_ in 3D Euclidean coordinates is a transformation where . As mentioned  
 
-- Degrees of freedom
+We can represent a translation $\avec{t} the translation in homogeneous coordinates using the following $4x4$ matrix:
+
+
+\begin{align} \label{eq:Translation}
+\amat{H} = \lambda \left[  \begin{array}{ccc}
+\amat{I}       & \avec{t}  \\
+\avec{0}^{T}   &  1        \\
+\end{array} \right]
+\end{align}.
+
+It is easily verified that $\amat{H}$ is linear in projective space.
 
 ### Rotation
 
-R =
 
-### Rigid body
-
-- A rigid body transformation
-- Not linear in Euclidean coordinates, but is linear in homoogeneous coordinates
-- Degrees of freedom
-
-H =
+\begin{align} \label{eq:Rotation}
+\amat{H} = \lambda \left[  \begin{array}{ccc}
+\amat{R}       & \avec{0}  \\
+\avec{0}^{T}   &  1        \\
+\end{array} \right]
+\end{align}.
 
 
-## Heirarchy of Transformations
+### Rigid-body transformation
 
-In addition to rotations, translations, and rigid-body transformations, there are many other transformations.  We will not discuss this in detail, but instead provide a table showing the heiarchy of transformations in homogeneous coordinates.  SAY SOMETHING ABOUT ADDING PROPERTIES TO BUILD UP THIS HEIRARCHY.
+A _rigid-body transformation_ transformation is the combination of a rotation and translation. Similar to translations, _rigid-body_ transformations are non-linear in Euclidean space. However, we can represent rigid-body transformations in homogeneous coordinates:
+
+
+\begin{align} \label{eq:Rigid-body}
+\amat{H}  = \lambda \left[  \begin{array}{ccc}
+\amat{R}       & \avec{t}  \\
+\avec{0}^{T}   &  1        \\
+\end{array} \right]
+\end{align}
+
+where $\amat{R}$ and $\avec{t} represent a rotation and translation, respectively.
+
+### Heierarchy of Transformations
+
+In addition to rotations, translations, and rigid-body transformations, there are many other transformations that can be represented in homogeneous coordinates. We will not discuss this in detail, but instead provide a table showing the heiarchy of transformations in homogeneous coordinates.  SAY SOMETHING ABOUT ADDING PROPERTIES TO BUILD UP THIS HEIRARCHY.
+
+Author: Jon Michaux
+
+Maintainer: Jon Michaux
