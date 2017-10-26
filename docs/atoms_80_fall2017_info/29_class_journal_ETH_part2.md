@@ -153,8 +153,13 @@ Assigned: XXX
 
 ## Oct 25 (Wed) Filtering II {#Zurich-2017-10-25 status=ready}
 
-- Lectures (Particle Filtering)
+a - Lectures (Particle Filter)
 <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ETHZ-filtering-IIa-ParticleFilter.pptx">PowerPoint presentation</a>,
 <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ETHZ-filtering-IIa-ParticleFilter.pdf">PDF</a>.
+
+
+b - Lectures (Lane Filter)
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ETHZ-filtering-IIb-LaneFilter.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ETHZ-filtering-IIb-LaneFilter.pdf">PDF</a>.
 
 
