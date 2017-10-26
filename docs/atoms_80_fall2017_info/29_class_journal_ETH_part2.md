@@ -151,8 +151,10 @@ Assigned: XXX
 <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ETHZ-Filtering_I.pptx">PowerPoint presentation</a>,
 <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ETHZ-Filtering_I.pdf">PDF</a>.
 
-## Oct 25 (Wed) {#Zurich-2017-10-25 status=draft}
+## Oct 25 (Wed) Filtering II {#Zurich-2017-10-25 status=ready}
 
-Assigned: XXX
+- Lectures (Particle Filtering)
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ETHZ-filtering-IIa-ParticleFilter.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ETHZ-filtering-IIa-ParticleFilter.pdf">PDF</a>.
 
-(Andrea traveling)
+
