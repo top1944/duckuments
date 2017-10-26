@@ -6,20 +6,14 @@ Required Reading: The following assumes a working familiarity with 2D and 3D Car
 
 ## Introduction
 
-_Transformations_ are functions that map points to other points in space, i.e. $f: X \rightarrow X$. These maps are useful for describing motions over time. A particularly important class of transformations are _linear transformations_. These transformations can be represented by square matrices as they are _linear_ and has the same domain and image.
-
-Talk about stretching, shearing, reflection
+_Transformations_ are functions that map points to other points in space, i.e. $f: X \rightarrow X$. These maps are useful for describing motions over time. A particularly important class of transformations are _linear transformations_. These transformations can be represented by square matrices as they are _linear_ and has the same domain and image. Although there are many classes of transformations
 
 ## Applications
 
-Applications of transformations in the context of Duckietown are discussed in the following section on [homogeneous coordinates](#homogeneous coordinates).
+For examples of how transformations are used in robotics, please refer to the _Robotics Handbook_ section 1.2.
 
-
-## Definitions and important examples
-
-Please refer to the _Robotics Handbook_ section 1.2, and in the context of this course, reader's goal is to attain a conceptual understanding, not necessarily knowing the exact formulae.
-
-TODO: we need to provide links to the handbook. -AC
+TODO: add a few examples relevant to Duckietown
+TODO: we need to provide links to the handbook. -A
 
 
 ## 2D Transformations
@@ -33,6 +27,10 @@ Let $\avec{v}$ be a vector in the 2D plane.  We say that the vector $\avec{v}$ u
 \begin{align} \label{eq:vector}
 \avec{v'} = \left[ \begin{array}{c} x_1' \\ y_1' \end{array} \right]
 = \left[ \begin{array}{c} x_1 + t_x \\ y_1 + t_y \end{array} \right]\end{align}
+
+<div class='check' markdown="1">
+Exercise to readers: Prove that a translation is _not_ a linear transformation?
+</div>
 
 ### Rotation
 A _rotation_ is a transformation of an object around a fixed point. In 2D Cartesian coordinates, the fixed point is usually the origin $(0,0)$.  To derive the equations for a rotation in the plane, let us consider rotating a vector $\avec{v}$ by some angle $\theta$.  Assume that $\avec{v}$ has coordinates $(x,y)$ and has an angle of $\phi$ relative to the _x-axis_. By rotating $\avec{v}$ by $\theta$, we obtain a new vector $\avec{v'}$ whose coordinates are $(x',y')$.  First, let's rewrite $(x,y)$ in _polar coordinates_:
@@ -84,11 +82,11 @@ sin\theta   & cos\theta    \\
 
 ## 3D Transformations
 
-3D transformations are transformations of objects
+3D transformations are transformations of points, vectors, planes, or objects in 3D space.
 
 ### Translation
 
-Similarly, we can define translation in 3D coordinate systems:
+Similarl to the 2D case, we can define a translation in 3D coordinate systems:
 
 \begin{align} \label{eq:vector3}
 \avec{v'} = \left[ \begin{array}{c} x_1' \\ y_1' \\ z_1' \end{array} \right]
@@ -96,7 +94,7 @@ Similarly, we can define translation in 3D coordinate systems:
 
 ### Rotation
 
-A _basic rotation_ in 3D is defined as rotation about one of the cardinal axes $x$, $y$, or $z$. The basic rotation matrices are
+A _basic rotation_ in 3D is defined as rotation about one of the cardinal axes $x$, $y$, or $z$. The basic rotation matrices are:
 
 \begin{align} \label{eq:3DrotationX}
 R_x(\theta) = \left[  \begin{array}{ccc}
@@ -145,13 +143,9 @@ cos\gamma   & 0    & sin\gamma \\
 \end{align}
 
 
-### Other transformations
+### Other classes transformations
 
-- A rigid body transformation
-- Not linear. But is linear in [homogeneous coordinates](#homogeneous coordinates)
-- Degrees of freedom. To use these other transformations, we have to be in
-
-
+As mentioned earlier there are other types of transformations that can be represented by linear maps.  These include stretching, scaling, and shearing, all of which vary in their number of free parameters. We will show in the next section that we can represent non-linear transformations as linear transformations using [homogeneous coordinates](#homogeneous coordinates).
 
 
 Author: Falcon Dai

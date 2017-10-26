@@ -7,22 +7,21 @@ Required Reading: The following assumes a working familiarity with 2D and 3D Car
 
 ## Introduction
 
-_Homogeneous coordinates_
+In the previous section we studied some basic transformations and their applications in Euclidean space. In the context of robotics, we are often concerned about what properties of our system are changed or preserved following a certain set transformations. For example,
 
+-Image formation is a transformation from a 3D point in a scene to the image sensor.  These transformations are linear in homogeneous
 
+. Some analogies can be drawn between. For example, Cartesian coordinates are used in Euclidean geometry, whereas homogeneous coordinates are used in projective geometry. The use of homogeneous coordinates has a number of advantages over Cartesian coordinates.
+
+_Homogeneous coordinates_ are a system of coordinates used in _projective geometry_
 
 -Can represent rigid body transformations as linear maps
 -Makes the mathematics of perspective and projective geometry easier. In other words makes camera stuff easier
--Can represent points at infinity
--What is preserved
+-Can represent points at infinity (see below)
 
+Homogeneous coordinates gives us the tools to perspective and image formation ()
 
-Computer vision
-Computer graphics
-
-Linear transformations are fundamental
--Transforming between coordinate systems.  For example,
--Image formation is a transformation from a 3D point in a scene to the image sensor.  These transformations are linear in homogeneous coordiantes ***Make this a link***
+As you will see later in the book, homogeneous coordinates are also used in computer vision and computer graphics.
 
 ## Basic geometry in homogeneous coordinates
 
