@@ -143,7 +143,7 @@ Andrea: computer vision. ROS?
 
 Assigned: XXX
 
-## Oct 23 (Mon) Filtering I {#Zurich-2017-10-23 status=ready}
+## Oct 23 (Mon) Filtering I {#Zurich-2017-10-23}
 
 ### Materials presented in class
 
@@ -151,7 +151,7 @@ Assigned: XXX
 <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ETHZ-Filtering_I.pptx">PowerPoint presentation</a>,
 <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ETHZ-Filtering_I.pdf">PDF</a>.
 
-## Oct 25 (Wed) Filtering II {#Zurich-2017-10-25 status=ready}
+## Oct 25 (Wed) Filtering II {#Zurich-2017-10-25}
 
 a - Lectures (Particle Filter)
 <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ETHZ-filtering-IIa-ParticleFilter.pptx">PowerPoint presentation</a>,
