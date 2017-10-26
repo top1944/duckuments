@@ -1,10 +1,10 @@
-## How to install PyTorch on the Duckiebot {#pytorch-install status=beta}
+# How to install PyTorch on the Duckiebot {#pytorch-install status=beta}
 
 PyTorch is a Python deep learning library that's currently gaining a lot of traction, because it's a lot easier to debug and prototype (compared to TensorFlow / Theano).
 
 To install PyTorch on the Duckietbot you have to compile it from source, because there is no pro-compiled binary for ARMv7 / ARMhf available. This guid will walk you through the required steps.
 
-### Step 1: install dependencies and clone repository
+## Step 1: install dependencies and clone repository
 
 First you need to install some additional packages. You might already have installed. If you do, that's not a problem.
 
@@ -34,7 +34,7 @@ If the line instead reads the following, please manually change the code to the 
 
       Scalar() : Scalar(0L) {}
 
-### Step 2: Change swap size
+## Step 2: Change swap size
 
 When I was compiling the library I ran out of SWAP space (which is 500MB by default). I was successful in compiling it with 2GB of SWAP space. Here is how you can increase the SWAP (only for compilation - later we will switch back to 500MB).
 
@@ -57,7 +57,7 @@ Now your system knows about the new swap space, and it will change it upon reboo
     sudo swapoff /swap0
     sudo swapon /swap1
 
-### Step 3: compile PyTorch
+## Step 3: compile PyTorch
 
 `cd` into the main directory, that you clones PyTorch into, in my case `cd ~/Downloads/pytorch` and start the compilation process:
 
@@ -71,7 +71,7 @@ When it's done, you can install the pytorch package system-wide with
 
 For some reason on my machine this caused recompilation of a few packages. So this might again take some time (but should be significantly less).
 
-### Step 4: try it out
+## Step 4: try it out
 
 If all of the above went through without any issues, congratulations. :) You should now have a working PyTorch installation. You can try it out like this.
 
@@ -96,7 +96,7 @@ And on the Python interpreter try this:
     3  3
     [torch.FloatTensor of size 2x2]
 
-### (Step 5, optional: unswap the swap)
+## (Step 5, optional: unswap the swap)
 
 Now if you like having 2GB of SWAP space (additional RAM basically, but a lot slower than your built-in RAM), then you are done. The downside is that you might run out of space later on. If you want to revert back to your old 500MB swap file then do the following:
 
