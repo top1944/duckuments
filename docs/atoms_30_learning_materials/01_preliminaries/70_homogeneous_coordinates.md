@@ -9,14 +9,14 @@ Required Reading: The following assumes a working familiarity with 2D and 3D Car
 
 _Homogeneous coordinates_
 
-### Why use homogeneous coordinates
+
 
 -Can represent rigid body transformations as linear maps
 -Makes the mathematics of perspective and projective geometry easier. In other words makes camera stuff easier
 -Can represent points at infinity
 -What is preserved
 
-### Applications
+
 Computer vision
 Computer graphics
 
@@ -24,9 +24,9 @@ Linear transformations are fundamental
 -Transforming between coordinate systems.  For example,
 -Image formation is a transformation from a 3D point in a scene to the image sensor.  These transformations are linear in homogeneous coordiantes ***Make this a link***
 
-## Projective geometry
+## Basic geometry in homogeneous coordinates
 
-### Representation of a point in homogeneous coordinates
+### Representation of a point
 
 For example in 2D, we can represent a vector (or point) $\avec{p} = (x,y)$ as a vector:
 
@@ -43,7 +43,7 @@ For example in 2D, we can represent a vector (or point) $\avec{p} = (x,y)$ as a 
 = \frac{1}{z'} \left[ \begin{array}{c} \frac{x'}{z'} \\ y \\ 1 \end{array} \right]
 \end{align}
 
-### Representation of a line in homogeneous coordinates
+### Representation of a line
 
 
 ### Vanishing points
