@@ -21,7 +21,7 @@ The full set of currently existing signs is available here: [pdf](https://github
 The set of tags used for the 2017 map are available here: [pdf](https://github.com/duckietown/Software/blob/master/catkin_ws/src/20-indefinite-navigation/apriltags_ros/signs_and_tags/Signs_and_tags_2017.pdf) [docx](https://github.com/duckietown/Software/blob/master/catkin_ws/src/20-indefinite-navigation/apriltags_ros/signs_and_tags/Signs_and_tags_2017.docx)
 
 
-### Making New Signage {#making-new-signage}
+## Making New Signage {#making-new-signage}
 
 If you find that what is available in the database in insufficient for your needs, then you will need to add to the existing database.
 
@@ -63,11 +63,11 @@ Note: It is also possible of course to start you own completely different signs 
 
 TODO: Update the way that the april tags code loads the database
 
-### Assembly
+## Assembly
 
 To assemble the signs, you should print out the pdf version of the signs and tags file on the thickest card stock available. Cut the signs out with a straight edge and a very sharp knife, leaving a small border of white around the sign. Then use double-sided tape or some other adhesive to affix the the paper sign to the wooden base.
 
 
-### Placement
+## Placement
 
 For placement of signs see [](#traffic-signs-placement).
