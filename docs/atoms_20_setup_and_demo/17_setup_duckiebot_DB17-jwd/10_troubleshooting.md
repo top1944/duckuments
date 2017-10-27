@@ -62,6 +62,12 @@ and change it to
 
     publish-aaaa-on-ipv4=no
 
+also uncomment the line
+
+     #domain-name=.local
+to
+     domain-name=.local
+
 Restart Avahi by running the command
 
     duckiebot $ sudo service avahi-daemon restart
