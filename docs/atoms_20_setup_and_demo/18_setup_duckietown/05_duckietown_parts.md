@@ -17,7 +17,7 @@ Requires: Time: ??? days (average shipping time)
 
 Results: A kit of parts ready to be assembled in a Duckietown.
 
-Next Steps: [Assemblying](#duckietown-assembly) a Duckietown.
+Next Steps: [Assembling](#duckietown-assembly) a Duckietown.
 
 </div>
 
@@ -93,7 +93,7 @@ Traffic signs ([](#fig:signs)) inform Duckiebots on the map of Duckietown, allow
      <img src="signs.png" style='width: 15em'/>
 </div>
 
-Depending on the chose road topograhy, the number of necessary road signal will vary. To design your Duckietown, see [](#duckietown-specs).
+Depending on the chosen road topograhy, the number of necessary road signal will vary. To design your Duckietown, see [](#duckietown-specs). You will also need to print out and the signs that you will need as described in [](#signage).
 
 ## Traffic lights Parts {#traffic-lights-parts status=draft}
 

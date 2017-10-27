@@ -4,7 +4,7 @@
 The map to be used in the Fall 2017 class is shown in [](#fig:2017-map).
 
 <div figure-id="fig:2017-map" figure-caption="The map to be used in the Fall 2017 class ">
-  <img src="duckietown5x6.jpg." style='width: 30em; height:auto'/>
+  <img src="duckietown5x6.jpg" style='width: 30em; height:auto'/>
 </div>
 
 
