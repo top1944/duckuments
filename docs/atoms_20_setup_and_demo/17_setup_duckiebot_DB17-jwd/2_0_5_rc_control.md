@@ -52,6 +52,8 @@ and install all the missing packages (if any), we can run the following script:
 
 This command will install only the packages that are not already installed in your system.
 
+Comment: dependencies_since_image.sh doesn't exist anymore.
+
 ## Set up the ROS environment on the Duckiebot {#build-repo}
 
 All the following commands should be run in the `~/duckietown` directory:
