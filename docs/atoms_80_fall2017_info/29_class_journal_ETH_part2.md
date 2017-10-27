@@ -164,7 +164,7 @@ b - Logistics:
 <a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-20-ETHZ-ROS-main-concepts.pptx">PowerPoint presentation</a>,
 <a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-20-ETHZ-ROS-main-concepts.pdf">PDF</a>.
 
-## Oct 23 (Mon) Filtering I {#Zurich-2017-10-23 status=ready}
+## Oct 23 (Mon) Filtering I {#Zurich-2017-10-23}
 
 ### Materials presented in class
 
@@ -172,8 +172,15 @@ b - Logistics:
 <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ETHZ-Filtering_I.pptx">PowerPoint presentation</a>,
 <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ETHZ-Filtering_I.pdf">PDF</a>.
 
-## Oct 25 (Wed) {#Zurich-2017-10-25 status=draft}
+## Oct 25 (Wed) Filtering II {#Zurich-2017-10-25}
 
-Assigned: XXX
+a - Lectures (Particle Filter)
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ETHZ-filtering-IIa-ParticleFilter.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ETHZ-filtering-IIa-ParticleFilter.pdf">PDF</a>.
 
-(Andrea traveling)
+
+b - Lectures (Lane Filter)
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ETHZ-filtering-IIb-LaneFilter.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ETHZ-filtering-IIb-LaneFilter.pdf">PDF</a>.
+
+
