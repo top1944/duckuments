@@ -294,7 +294,26 @@ Please help us making the experience better by [providing feedback (can be anony
 
 ### Reading Material
 
-* * [](#line_detection)
+* Sebastian Thrun, Wolfram Burgard, and Dieter Fox, *Probabilistic Robotics*, Chapters 1 and 2
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+
+
+## Monday, October 30: Filtering II
+
+### Lecture Content
+
+* Nonparametric Filtering ([Powerpoint](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ttic-filtering-II.pptx), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ttic-filtering-II.pdf))
+
+
+
+### Reading Material
+
+* Sebastian Thrun, Wolfram Burgard, and Dieter Fox, *Probabilistic Robotics*, Chapter 4
 
 
 ### Feedback Form
