@@ -307,7 +307,7 @@ Please help us making the experience better by [providing feedback (can be anony
 
 ### Lecture Content
 
-* Nonparametric Filtering ([Powerpoint](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ttic-filtering-II.pptx), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ttic-filtering-II.pdf))
+* Nonparametric Filtering ([Powerpoint](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-30-ttic-filtering-II.pptx), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-30-ttic-filtering-II.pdf))
 
 
 
