@@ -156,7 +156,7 @@ TODO: this point needs further specification
 
 Note: Experimental
 
-A "launch tile" is used to introduce a new Duckiebot into Duckietown in a controllable way. The launch file should be placed adjacent to a turn tile so that a Duckiebot may "merge" into Duckietow,n once the initialization procedure is complete.
+A "launch tile" is used to introduce a new Duckiebot into Duckietown in a controllable way. The launch file should be placed adjacent to a turn tile so that a Duckiebot may "merge" into Duckietown once the initialization procedure is complete.
 
 TODO: Specification for tape on the launch tile
 
