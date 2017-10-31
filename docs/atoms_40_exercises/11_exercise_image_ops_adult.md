@@ -80,10 +80,8 @@ is stored in memory as a
 For example, the image shown above ([](#subfig:original)) will be represented in
 memory as a NumPy array with shape `(96, 96, 3)`. The first dimension indicates
 the number of pixels along the `Y-axis`, the second indicates the number of pixels
-along the `X-axis` and the third is known as *number of channels* (e.g., **R**ed,
-**G**reen, and **B**lue).
-
-Comment: Are we sure it is RGB and not BGR? -AC
+along the `X-axis` and the third is known as *number of channels* (e.g., **B**lue,
+**G**reen, and **R**ed).
 
 NumPy provides a utility function called
 [`concatenate`][concatenate]
