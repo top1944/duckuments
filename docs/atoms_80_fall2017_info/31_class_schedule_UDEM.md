@@ -299,4 +299,23 @@ No class (Reading Week)
 
 ## Monday Oct. 30
 
-Advanced nonlinear state estimation and graphical models
+Class 10:30-11:30
+Z-2015
+
+Start of Introduction to SLAM
+
+## Wednesday Nov. 1
+
+Class 11:30-12:30
+
+End of Introduction to SLAM
+
+
+## Monday Nov. 6
+
+Class 10:30-12:30
+
+Project Pitches
+
+
+
