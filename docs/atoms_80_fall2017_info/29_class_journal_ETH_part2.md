@@ -184,3 +184,15 @@ b - Lectures (Lane Filter)
 <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ETHZ-filtering-IIb-LaneFilter.pdf">PDF</a>.
 
 
+## Nov 1 (Wed) Control Systems {#Zurich-2017-11-01}
+
+a - Lectures (Control Systems Module I)
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-01%20-%20ETHZ%20-%20Control%20Module%20I%20-%20Overview.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-01%20-%20ETHZ%20-%20Control%20Module%20I%20-%20Overview.pdf">PDF</a>.
+
+
+b - Lectures (Control Systems Module II)
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-01%20-%20ETHZ%20-%20Control%20Module%20II%20-%20Self-driving%20cars%20control%20overview.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-01%20-%20ETHZ%20-%20Control%20Module%20II%20-%20Self-driving%20cars%20control%20overview.pdf">PDF</a>.
+
+
