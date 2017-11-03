@@ -304,11 +304,15 @@ Z-2015
 
 Start of Introduction to SLAM
 
+Slides: [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-30-udem-slam_intro.pdf) [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-30-udem-slam_intro.key)
+
 ## Wednesday Nov. 1
 
 Class 11:30-12:30
 
 End of Introduction to SLAM
+
+Slides: [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-30-udem-slam_intro.pdf) [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-30-udem-slam_intro.key)
 
 
 ## Monday Nov. 6
