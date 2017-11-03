@@ -31,6 +31,7 @@ Now, we need to edit our SSH config so that any data send to the port 52698, whi
 Now, we need to connect to our duckiebot via SSH and install rmate (and simultaniously rename it to ratom)
 
     duckiebot $ sudo wget -O /usr/local/bin/ratom https://raw.github.com/aurora/rmate/master/rmate
+    duckiebot $ sudo chmod +x /usr/local/bin/ratom
     
 Now, you just need to launch Atom on your local machine, go to Packages->Remote Atom->Start Server.
 
