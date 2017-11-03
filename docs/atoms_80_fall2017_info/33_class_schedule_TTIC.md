@@ -323,6 +323,26 @@ Please help us making the experience better by [providing feedback (can be anony
 
 
 
+## Wednesday, November 1: Introduction to SLAM
+
+### Lecture Content
+
+* SLAM Intro ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-01-ttic-slam-intro.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-01-ttic-slam-intro.pdf))
+
+
+
+### Reading Material
+
+* Sebastian Thrun, Wolfram Burgard, and Dieter Fox, *Probabilistic Robotics*, Chapters 9, 10, and 13
+
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+
+
 
 
 
