@@ -175,3 +175,9 @@ b - Lectures (Control Systems Module II)
 <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-01%20-%20ETHZ%20-%20Control%20Module%20II%20-%20Self-driving%20cars%20control%20overview.pdf">PDF</a>.
 
 
+Points to be noted
+- running what-the-duck on laptop and Duckiebot is mandatory. It helps save time in debugging errors and also is standard way to ask for help from the staff. Keep repeating it periodically so as to keep the data up-to date
+- For the people lacking calibrated wheels, this serves as a reminder calibrate the wheels and keep the duckiebot up-to date
+- It is advised to fill the lecture feedback form (https://docs.google.com/forms/d/1znGcLxlsWHD-Ba2c57U2ZDcfWFQXe27yHYjbSWZML38/viewform?edit_requested=true), so as to increase the effectiveness of the lectures
+- Always check the consistency of the camera calibration checkerboard before camera calibration (one has to check for the correct square size and correct distance between world and checkerboard reference)
+
