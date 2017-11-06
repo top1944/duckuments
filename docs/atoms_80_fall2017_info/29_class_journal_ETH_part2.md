@@ -178,6 +178,6 @@ b - Lectures (Control Systems Module II)
 Points to be noted
 - Running what-the-duck on laptop and Duckiebot is mandatory. It helps save time in debugging errors and also is a standard way to ask for help from the staff. Keep repeating it periodically so as to keep the data up-to date
 - For the people lacking calibrated wheels, this serves as a reminder to calibrate the wheels and keep their duckiebot up-to date
-- It is advised to fill the lecture feedback form (https://docs.google.com/forms/d/1znGcLxlsWHD-Ba2c57U2ZDcfWFQXe27yHYjbSWZML38/viewform?edit_requested=true), so as to increase the effectiveness of the lectures
+- It is advised to fill the lecture feedback form (<a href="https://docs.google.com/forms/d/1znGcLxlsWHD-Ba2c57U2ZDcfWFQXe27yHYjbSWZML38/viewform?edit_requested=true">Feedback form</a>), so as to increase the effectiveness of the lectures
 - Always check the consistency of the camera calibration checkerboard before camera calibration (one has to check for the correct square size and correct distance between world and checkerboard reference)
 
