@@ -197,16 +197,6 @@ TODO: insert image with long cable
 
 Note: Make sure the camera cable is inserted in the right direction! The metal pins of the cable should be in contact with the metal terminals in the camera port of the PI.
 
-<!--
-<div figure-id="fig:raspi_camera_apart" figure-caption=" ">
-     <img src="raspi_camera_apart.jpg" style='width: 30em'/>
-</div>
--->
-
-<!--
-Note: Insert the cable in the right direction to connect the camera to the Raspberry Pi.
--->
-
 <div figure-id="fig:camera_with_long_cable" figure-caption="Camera with long cable">
      <img src="ziptied_top_camera.jpg" style='width: 25em'/>
 </div>
