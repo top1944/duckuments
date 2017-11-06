@@ -1,4 +1,4 @@
-# Duckietown Appearance Specification {#duckietown-specs status=draft}
+# Duckietown Appearance Specification {#duckietown-specs status=beta}
 
 Assigned: Liam
 
@@ -9,6 +9,8 @@ This document describes the Duckietown specification. Any Duckietown not adherin
 Note here the changes to the specification, so that we are able to keep in sync
 the different Duckietowns.
 
+* Version 1.0 - used for MIT 2.166
+
 * Version 2.0 - current version
 
 ## Overview
@@ -16,7 +18,6 @@ the different Duckietowns.
 Duckietown is built with two layers:
 
 1. The first is the *floor layer*. The floor is built of interconnected exercise mats with tape on them.
-
 2. The second layer is the *signals layer* and contains all the signs and other objects that sit on top of the mats.
 
 Note: the visual appearance of the area where the Duckietown is created is variable. If you discover that this appearance is causing negative performance, a "wall" of blank tiles constructed vertically can be used to reduce visual clutter.
@@ -51,7 +52,7 @@ There are five primary types of tiles, as shown in [](#fig:tiles)
 
 There are 3 colors of tapes: white, yellow, and red.
 
-#### White tape
+#### White tape {status=recently-updated}
 
 \begin{proposition}\label{prop:white_tape}
 A Duckiebot never collides with Duckietown if it never crosses or touches a white tape strip.
@@ -155,7 +156,7 @@ TODO: this point needs further specification
 
 Note: Experimental
 
-A "launch tile" is used to introduce a new Duckiebot into Duckietown in a controllable way. The launch file should be placed adjacent to a turn tile so that a Duckiebot may "merge" into Duckietow,n once the initialization procedure is complete.
+A "launch tile" is used to introduce a new Duckiebot into Duckietown in a controllable way. The launch file should be placed adjacent to a turn tile so that a Duckiebot may "merge" into Duckietown once the initialization procedure is complete.
 
 TODO: Specification for tape on the launch tile
 
@@ -165,7 +166,7 @@ A "yield" sign should be visible from the launch tile.
 
 **IMPORTANT:** All signage should sit with base on the floor and stem coming through the connection between the tiles. Generally, it is advisable to adhere the sign to the floor with double-sided tape. **Under no circumstances should the white (any other tape) be obscured.**
 
-## Traffic Signs
+## Traffic Signs {#traffic-signs status=beta}
 
 Requires: To print and assemble the signs refer to [](#signage).
 
@@ -175,10 +176,10 @@ Center of signs are 13 cm height with apriltags of 6.5 cm sq. and a white border
 
 ### Type
 
-The allowable signs are as in [](#fig:signs).
+The allowable traffic signs are as in [](#fig:traffic-signs).
 
 
-<div figure-id="fig:signs" figure-class="flow-subfigures" figure-caption="Duckietown Traffic Signs">
+<div figure-id="fig:traffic-signs" figure-class="flow-subfigures" figure-caption="Duckietown Traffic Signs">
   <div figure-id="subfig:stop" figure-caption="stop">
     <img src="stop.png" style='width:8em;height:auto'/>
   </div>
@@ -227,10 +228,8 @@ The allowable signs are as in [](#fig:signs).
 </div>
 
 
-Each sign is printed from the [signs and tags doc](https://www.dropbox.com/s/np72vupxodpd6gv/Signs_and_tags_V3.docx?dl=0)
 
-
-### Placement
+### Placement {#traffic-signs-placement status=beta}
 
 Signs may appear on the opposite side and at the corner of the adjacent tile from which they are viewed. In the absence of any signs, it is assumed that all network flows are allowed so a sign MUST be placed and visible whenever this is not the case.
 
@@ -258,7 +257,7 @@ On straight and curved roads, additional signs can be added as desired. Their pl
 In these figures the arrow is the direction of the sign.
 
 
-## Street Name Signs
+## Street Name Signs {#street-name-signs status=beta}
 
 ### Specs
 

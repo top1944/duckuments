@@ -84,7 +84,7 @@ This is the minimal configuration for a Duckiebot. It is the configuration of ch
 - **Description of components**: [](#acquiring-parts-c0)
 
 
-- **Assembly instructions**: [](#assembling-duckiebot-c0)
+- **Assembly instructions**: [Without videos](#assembling-duckiebot-c0), [with videos](#assembling-duckiebot-db17-ttic)
 
 ### `DB17-w`
 
@@ -110,7 +110,7 @@ This configuration is the same as `DB17` with the _addition_ of a 5 Ghz wireless
 - **Description of components**: [](#acquiring-parts-c0)
 
 
-- **Assembly instructions**: [](#assembling-duckiebot-c0)
+- **Assembly instructions**: [Without videos](#assembling-duckiebot-c0), [with videos](#assembling-duckiebot-db17-ttic)
 
 ### `DB17-j`
 
@@ -137,7 +137,7 @@ This configuration is the same as `DB17` with the _addition_ of a 2.4 GHz wirele
 - **Description of components**: [](#acquiring-parts-c0)
 
 
-- **Assembly instructions**: [](#assembling-duckiebot-c0)
+- **Assembly instructions**: [Without videos](#assembling-duckiebot-c0), [with videos](#assembling-duckiebot-db17-ttic)
 
 ### `DB17-d`
 
@@ -164,7 +164,7 @@ This configuration is the same as `DB17` with the _addition_ of a USB flash hard
 - **Description of components**: [](#acquiring-parts-c0)
 
 
-- **Assembly instructions**: [](#assembling-duckiebot-c0)
+- **Assembly instructions**: [Without videos](#assembling-duckiebot-c0), [with videos](#assembling-duckiebot-db17-ttic)
 
 ### `DB17-c`
 
@@ -273,9 +273,9 @@ Note: The Montreal branch is not implementing the `DB17-c` configuration.
 
 ### TTIC
 
-- First release (`DB17-Chicago-a`): same as `DB17-Montreal-a`.
+- First release (`DB17-Chicago-a`): is a `DB17-wjd`.
 
-- Second release (`DB17-Chicago-b`): same as `DB17-Montreal-b`.
+- Second release (`DB17-Chicago-b`): is a `DB17-wjdl`.
 
 Note: The Chicago branch is not implementing the `DB17-c` configuration.
 

@@ -172,7 +172,7 @@ Class (11:30 - 12:30) in Z-305
 
 * New checkoff announced: [](#checkoff_take_a_log)
 
-* New homework announced: [](#homework-data-processing)
+* New homework announced: [](#homework-data-processing-udem)
 
 * Let's review the git policy for homeworks: [](#git-policy-homeworks)
 
@@ -182,7 +182,7 @@ Class (11:30 - 12:30) in Z-305
 
 Slides:
 
-* Duckiebot Modeling [(pptx)]() [(pdf)]()
+* Duckiebot Modeling [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-27-udem-modeling.pptx) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-09-27-udem-modeling.pdf)
 
 Book Material:
 
@@ -198,4 +198,128 @@ Book Material:
 
 Class (10:30 - 11:30) in Z-210
 
-* Computer vision basics
+Slides:
+
+* Computer vision basics: [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-02-udem-cv_basics.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-02-udem-cv_basics.pdf)
+
+Book Material:
+
+* [](#CV_basics)
+
+* [](#camera-geometry)
+
+* [](#camera-calibration)
+
+* [](#image-filtering)
+
+
+Lab (11:30 - 12:30) in AA 2333
+
+## Wed Oct 4
+
+Class (11:30 - 12:30) in Z-305
+
+Slides:
+
+* Computer Vision - Lane and Line Detection [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-udem-line_detection.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-04-udem-line_detection.pdf)
+
+Book Material:
+
+* [](#image-filtering)
+
+* [](#line_detection)
+
+
+Lab (12:30 - 1:30) in AA 2333
+
+Note: Checkoff and Homework due at 11pm
+
+
+
+
+## Mon Oct 9
+
+Holiday no class!
+
+## Wed Oct 11
+
+Class 11:30 in Z-305
+
+* Computer Vision - Feature descriptors [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-11-udem-feature_extraction.key) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-11-udem-feature_extraction.pdf)
+
+Book Material:
+
+
+Lab 12:30 - 1:30 in AA2333
+
+
+
+## Friday Oct 13
+
+New Checkoff Initiated: [](#checkoff_calibration) Deadline is **Monday Oct. 23**. Deliverables are:
+ - Screenshot of your robot passing the kinematic odometry test
+ - PR to duckiefleet repo with your 3 robot calibrations (kinematics, camera intrinsics, camera extrinsics)
+
+
+
+
+## Monday Oct 16
+
+Class 10:30-11:30
+Z-205
+
+* Reminder about checkoff.
+
+* Intro to filtering [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-udem-filtering.pptx) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-udem-filtering.pdf)
+
+
+
+## Wednesday Oct. 18
+
+Class **12:30-1:30**
+Z-310
+
+Guest Lecture from Prof. James Forbes from McGill on Extended Kalman filter
+
+
+## Friday Oct. 20
+
+Homework [](#homework-augmented-reality) announced.
+Deadline is **Friday Oct. 27** at 11pm
+
+
+## Monday Oct. 23
+
+No class (Reading Week)
+
+
+## Wednesday Oct. 25
+
+No class (Reading Week)
+
+## Monday Oct. 30
+
+Class 10:30-11:30
+Z-2015
+
+Start of Introduction to SLAM
+
+Slides: [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-30-udem-slam_intro.pdf) [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-30-udem-slam_intro.key)
+
+## Wednesday Nov. 1
+
+Class 11:30-12:30
+
+End of Introduction to SLAM
+
+Slides: [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-30-udem-slam_intro.pdf) [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-30-udem-slam_intro.key)
+
+
+## Monday Nov. 6
+
+Class 10:30-12:30
+
+Project Pitches
+
+
+

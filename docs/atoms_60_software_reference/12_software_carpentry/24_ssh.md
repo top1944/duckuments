@@ -34,7 +34,12 @@ Create the directory with the right permissions:
 
     $ mkdir ~/.ssh
     $ chmod 0700 ~/.ssh
-    $ vim ~/.ssh/config
+
+Edit the file:
+
+    ~/.ssh/config
+
+(We suggest you use [VIM](#vim) to edit files; see a tutorial [here](http://http://www.openvim.com/).)
 
 Comment: laptop or duckiebot? - LP
 
@@ -154,17 +159,23 @@ Make sure that the file `~/.ssh/config` exists:
 
 Add a line containing
 
-    IdentityFile ![PRIVATE_KEY_FILE]
+    IdentityFile ~/.ssh/![PRIVATE_KEY_FILE]
 
 (using the filename for the private key).
+
+Comment: make sure to include the full path to the file, not just the filename.
 
 Check that the config file is correct:
 
     $ cat ~/.ssh/config
     ![...]
-    IdentityFile ![PRIVATE_KEY_FILE]
+    IdentityFile ~/.ssh/![PRIVATE_KEY_FILE]
     ![...]
 
+To copy the generated SSH key to the clipboard xclip can be used (Installation of xclip if necessary).
+
+    $ sudo apt-get install xclip
+    $ xclip -sel clip < ~/.ssh/![username]@![host name].pub
 
 ## How to login without a password {#howto-login-without-password}
 

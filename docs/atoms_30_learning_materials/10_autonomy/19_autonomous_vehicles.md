@@ -20,6 +20,7 @@ Here's a non-exhaustive list of some of companies that are actively developing a
 * [Nissan's autonomous car](https://www.nissanusa.com/blog/autonomous-drive-car)
 * [Baidu](http://usa.baidu.com/adu/)
 * Apple "Project Titan" (no official details released)
+* [Drive.ai](https://www.drive.ai/)
 
 ## Levels of Autonomy {#autonomy-levels}
 

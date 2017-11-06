@@ -52,7 +52,7 @@ tells `catkin` to setup Python-related stuff for this package.
 
 See also: [ROS documentation about `setup.py`][setuppy]
 
-[setuppy]: http://docs.ros.org/api/catkin/html/user_guide/setup_dot_py.html)
+[setuppy]: http://docs.ros.org/api/catkin/html/user_guide/setup_dot_py.html
 
 ### `package.xml`
 
@@ -375,6 +375,41 @@ You can see the parameters and the values of the `talker` node with
 
     $ rosparam get /talker
 
+## Adding a command line parameter
+
+You can register a parameter in the launch file such that it is added to the ROS parameter dictionary. This allows you to call `rospy.get_param()` on you parameter from `talker.py`.
+
+Edit your launch file to look like this:
+
+    <launch>
+        <arg name="pub_timestep" default="0.5" />
+        <node name="talker" pkg="pkg_name" type="talker.py" output="screen">
+            <!-- Setup parameters -->
+            <param name="~pub_timestep" value="$(arg pub_timestep)"/>
+            <!-- Remapping topics -->
+            <remap from="~topic_b" to="~topic_a"/>
+        </node>
+    </launch>
+
+Previously, you should have had the line `<param name="~pub_timestep" value="0.5" />` inside of the node tags. This sets a parameter of value `0.5` to be called `/talker/pub_timestep`. (Remeber that the tilde prefixes the variable with the current namespace). By adding the line `<arg name="pub_timestep" default="1" />`, we are telling the program to look for a parameter on the command line called `pub_timestep`, and that if it doesn't find one, to use the value one. Then, <code>value=&#36;(arg pub_timestep)</code> retrieves the value set in the previous line.
+
+Within `talker.py`, we can get the value of the inputted parameter. You should already have the line:
+
+    self.pub_timestep = self.setupParameter("~pub_timestep", 1.0)
+
+This calles the talker's `setupParameter` method, which contains the line:
+
+    value = rospy.get_param(param_name,default_value)
+
+Where `~pub_timestep` is passed in as `parapm_name` and `1.0` is passed in as the default value. Now that we have edited the launch file to accept a command line argument, `value` should be the value which is given on the command line, rather than `0.5`.
+
+You can test that this works by calling `roslaunch` with the added parameter:
+
+    $ roslaunch pkg_name test.launch pub_timestep:=3
+
+This should cause the time between messages to become three seconds.
+
+The functions `rosparam list` and `rosparam info [param]` are useful in debugging issues with registering a parameter.
 
 ## Documentation
 

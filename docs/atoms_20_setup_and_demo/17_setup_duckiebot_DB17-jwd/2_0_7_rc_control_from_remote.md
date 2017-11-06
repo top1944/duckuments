@@ -35,10 +35,9 @@ Then, you should build the repository.
 
 See: This procedure is documented in [](#build-repo).
 
-## Edit the `machines` files on your laptop
+## Rebuild the machines files {#create-robot-config status=recently-updated }
 
-You have to edit the `machines` files on your laptop, as you did on the
-Duckiebot.
+In a previous step you have created a robot configuration file and pushed it to the duckiefleet repo. Now you have to pull duckiefleet on the laptop and rebuild the machines configuration file there.
 
 See: The procedure is documented in [](#edit-machines-file).
 
