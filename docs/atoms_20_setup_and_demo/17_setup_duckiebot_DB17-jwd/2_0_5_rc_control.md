@@ -48,7 +48,7 @@ change. In order to check whether your system meets all the requirements for run
 and install all the missing packages (if any), we can run the following script:
 
     duckiebot $ cd ~/duckietown
-    duckiebot $ /bin/bash ./dependencies_since_image.sh
+    duckiebot $ /bin/bash ./dependencies_for_duckiebot.sh
 
 This command will install only the packages that are not already installed in your system.
 
