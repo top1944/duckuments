@@ -14,6 +14,7 @@ recipe:
   - checkoff_calibration
   - zurich-data-processing-exercises
   - homework-augmented-reality
+  - checkoff_navigation
 
 # This syntax is invalid YAML
 # - add: fall-2017
@@ -34,6 +35,7 @@ recipe:
   - add: homework-augmented-reality
   - add: checkoff_calibration
   - add: zurich-data-processing-exercises
+  - add: checkoff_navigation
 
 - add: duckietown-project
 - add: contribute
