@@ -156,7 +156,7 @@ You won't really know if it's right until you verify it though! onto the next se
 
 ### Verify your calibration {#verify-kinematic-calibration status=recently-updated}
 
-Construct a calibration station similar [](#fig:kinematic_calibration):
+Construct a calibration station similar to the one in [](#fig:kinematic_calibration):
 
 <div figure-id="fig:kinematic_calibration" figure-caption="Kinematic calibration verification setup">
      <img src="kinematic_calibration1.png" style='width: 30em'/>
