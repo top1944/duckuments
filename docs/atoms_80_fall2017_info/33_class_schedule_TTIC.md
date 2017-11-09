@@ -11,6 +11,8 @@ The following is a list of the current checkoffs, along with the date and time w
 * **Friday October 6, 5pm CT**: [](#part:checkoff_assembly_configuration)
 * **Wednesday October 18, 11:59pm CT**: [](#part:checkoff_take_a_log)
 * **Sunday October 22, 11:59pm CT**: [](#part:checkoff_calibration)
+* **Wednesday November 15, 11:59pm CT**: [](#part:checkoff_navigation)
+
 
 ## Problem Sets:
 
