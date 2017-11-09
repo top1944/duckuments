@@ -41,7 +41,7 @@ If everything is looking good then push the `START` button on the joystick and y
 
 The robot operation should like like [this](#https://photos.app.goo.gl/AirDLHRXUiImuX7x1)
 
-Follow the instructions [here](#record-log) to take a **minimal** log of at least 5 mins of uninterrupted robot autonomous function. Upload [here](https://www.dropbox.com/request/eMEScDXEhB7KI1TqOGjg)
+Follow the instructions [here](#record-log) to take a **minimal** log of at least 5 mins of uninterrupted robot autonomous function. Upload [here](https://www.dropbox.com/request/eMEScDXEhB7KI1TqOGjg).
 
 ### Bonus
 
@@ -73,7 +73,7 @@ turn_forward:
 to make it more reliably traverse the intersections.
 
 Follow the instructions [here](#record-log) to take a **minimal**. You may use the `BACK` button to stop it from crashing and then return it to autonomous mode with the `START` button. 
-Upload [here](https://www.dropbox.com/request/eMEScDXEhB7KI1TqOGjg)
+Upload [here](https://www.dropbox.com/request/eMEScDXEhB7KI1TqOGjg).
 
 ### Bonus
 
