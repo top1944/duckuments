@@ -15,6 +15,7 @@ recipe:
   - zurich-data-processing-exercises
   - homework-augmented-reality
   - checkoff_navigation
+  - homework-lane-filtering
 
 # This syntax is invalid YAML
 # - add: fall-2017
@@ -36,6 +37,8 @@ recipe:
   - add: checkoff_calibration
   - add: zurich-data-processing-exercises
   - add: checkoff_navigation
+  - add: homework-lane-filtering
+
 
 - add: duckietown-project
 - add: contribute
@@ -51,7 +54,8 @@ recipe:
   - add: exercise-bag-mirror
   - add: exercise-instagram-live
   - add: exercise-augmented-reality
-
+  - add: exercise-filtering-ekf
+  - add: exercise-filtering-pf
 
 - make-part: theory-background
   title: Theory Background
