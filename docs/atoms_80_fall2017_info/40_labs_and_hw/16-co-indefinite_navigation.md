@@ -23,7 +23,7 @@ As always - it's a good idea to pull from `master` often.
 
 Place your robot on the Duckietown map somewhere on the "outer loop" (right hand lane so that it will follow the exterior of the map).
 
-Launch the robot with the command from `![DUCKIETOWN_ROOT]:
+Launch the robot with the command from `![DUCKIETOWN_ROOT]`:
 
     duckiebot $ make demo-lane-following
     
