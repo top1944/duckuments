@@ -1,4 +1,4 @@
-# Exercise: Lane Filtering - Particle Filter {#exercise-filtering-ekf status=ready}
+# Exercise: Lane Filtering - Extended Kalman Filter {#exercise-filtering-ekf status=ready}
 
 Assigned: Liam Paull
 
