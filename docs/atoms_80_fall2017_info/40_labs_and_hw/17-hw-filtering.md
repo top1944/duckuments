@@ -2,7 +2,7 @@
 
 
 <div class='only-montreal'>
-Montreal deadline: Nov 16, 11:00pm
+Montreal deadline: Nov 17, 11:00pm
 </div>
 
 Slack channel: [#ex-filtering](https://duckietown.slack.com/messages/C7W6VV7BJ)
