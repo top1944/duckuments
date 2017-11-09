@@ -58,4 +58,4 @@ This parameter file tells your node to automatically load the right filter. If y
 
 ## Submission
 
-As normal, tag us in a release from your repo when you are ready for your work to be evaluated.
+As normal, tag the TAs and instructors in a release from your repo when you are ready for your work to be evaluated.
