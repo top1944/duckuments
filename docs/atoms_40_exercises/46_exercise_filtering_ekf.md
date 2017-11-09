@@ -27,7 +27,7 @@ and then follow the instructions in [](#checkoff_navigation) for trying the lane
 
 You should definitely look at the existing histogram filter for inspiration.
 
-You may find [this]((https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/blob/master/11-Extended-Kalman-Filters.ipynb)) a useful resource to get started.
+You may find [this](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/blob/master/11-Extended-Kalman-Filters.ipynb) a useful resource to get started.
 
 ### Workflow Tip
 
