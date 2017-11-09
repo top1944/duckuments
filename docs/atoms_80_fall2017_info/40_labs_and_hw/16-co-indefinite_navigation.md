@@ -11,7 +11,7 @@ Result: 2 logs of your robot autonomously navigating Duckietown
 </div>
 
 <div class="only-montreal" markdown="1">
-Montreal Deadline: Nov 14, 11pm
+Montreal Deadline: Nov 15, 11pm
 </div>
 
 
