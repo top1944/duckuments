@@ -14,6 +14,8 @@ Result: 2 logs of your robot autonomously navigating Duckietown
 Montreal Deadline: Nov 14, 11pm
 </div>
 
+Slack channel: [#help-navigation](https://duckietown.slack.com/messages/C7YMAHB55/)
+
 
 ## Pull from master
 
@@ -39,7 +41,7 @@ You may also be interested to look at the `../belief_img` to see the output of t
 
 If everything is looking good then push the `START` button on the joystick and your robot should start to drive. 
 
-The robot operation should like like [this](#https://photos.app.goo.gl/AirDLHRXUiImuX7x1)
+The robot operation should like like [this](https://photos.app.goo.gl/AirDLHRXUiImuX7x1)
 
 Follow the instructions [here](#record-log) to take a **minimal** log of at least 5 mins of uninterrupted robot autonomous function. Upload [here](https://www.dropbox.com/request/eMEScDXEhB7KI1TqOGjg)
 
