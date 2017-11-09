@@ -35,7 +35,7 @@ In the
      
  folder, the files you need to worry about are the following:
 
-1. `default.yaml`: this contains the parameters that will be loaded. Here's what it currently looks like:
+1) `default.yaml`: this contains the parameters that will be loaded. Here's what it currently looks like:
 ```
  # default parameters for lane_filter/lane_filter_node
  # change to your robot name below
@@ -54,7 +54,11 @@ In the
 
 This parameter file tells your node to automatically load the right filter. If you are working on particle filter you can leave it the way it is and just add your parameters that you need under `configuration`. If you are working on EKF, comment or delete the lines for the PF and uncomment the lines for the EKF and then add your params as needed. 
 
-2. The other file you need to concern yourself with is in `include/dt_filtering_![YOUR_ROBOT_NAME]`, you will need to fill in the functions that are setup for you. 
+The other file you need to concern yourself with is in 
+   
+    include/dt_filtering_![YOUR_ROBOT_NAME]
+   
+You will need to fill in the functions that are setup for you. 
 
 ## Submission
 
