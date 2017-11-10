@@ -1,0 +1,174 @@
+digraph {
+
+    fleet_planning [label="fleet planning"];
+    lane_controller [label="lane controller"];
+
+    fleet_comms [label="fleet communication"];
+    odometry_calibration [label="odometry calibration"];
+
+    lane_localization [label="LL lane localization"];
+
+    intersection_localization [label="LL intersection localization"];
+    intersection_controller [label="intersection controller"];
+
+    stop_line_detection [label="Stop line detection"];
+
+    april_tags_detection [label="April tags detection"];
+    global_localization [label="Global localization"];
+
+    global_localization_with_tags [label="Global localization with tags"];
+
+    global_localization_with_place_recognition [label="Global localization with place recognition"];
+
+    place_recognition [label="Place recognition"];
+
+
+
+    extrinsic_calibration [label="extrinsic calibration"];
+    intrinsic_calibration [label="intrinsic calibration"];
+
+    intersection_coordination [label="intersection coordination"];
+
+    intersection_coordination -> coordination_with_traffic_lights [style="dashed"];
+    intersection_coordination -> coordination_with_communication [style="dashed"];
+
+    coordination_with_traffic_lights [label="coordination with traffic lights"];
+
+    traffic_lights [label="Existence of traffic lights"];
+    coordination_with_traffic_lights -> traffic_lights;
+
+    coordination_with_communication [label="coordination with communication"];
+
+    coordination_with_communication -> led_detection;
+
+    coordination_with_communication -> blinking_leds;
+
+
+    line_detection [label="Line detection"];
+
+    line_detection -> anti_instagram;
+
+    anti_instagram [label="Anti-instagram"];
+
+    led_detection [label="LED detection"];
+
+    traffic_lights [label="traffic_lights"];
+
+    traffic_lights -> blinking_leds;
+
+    pwm_hat [label="PWM hat"] ;
+    blinking_leds -> pwm_hat;
+
+    blinking_leds [label="blinking LEDs"];
+
+    driving_in_traffic [label="driving in traffic"];
+
+    driving_in_traffic -> vehicle_detection;
+
+
+    multi_slam [label="multi slam"];
+
+    single_slam [label="single slam"];
+    single_slam_lines [label="single slam w/lines"];
+
+    single_slam_lines -> line_detection;
+    single_slam_lines -> ground_projection;
+
+    ground_projection [label="ground projection"];
+
+    single_slam_tags [label="single slam w/tags"];
+
+    single_slam_tags -> april_tags_detection;
+
+    single_slam -> single_slam_lines [style=dashed];
+    single_slam -> single_slam_tags [style=dashed];
+    visual_odometry [label="visual odometry"];
+
+    lane_following [label="lane following"];
+
+    lane_following -> lane_localization;
+    lane_following -> lane_controller;
+    lane_controller -> odometry_calibration;
+
+    lane_localization -> line_detection;
+
+    lane_localization -> ground_projection;
+
+    ground_projection -> extrinsic_calibration;
+    ground_projection -> intrinsic_calibration;
+
+    stop_line_detection -> line_detection;
+
+    intersection_traversal [label="intersection traversal"];
+
+    intersection_traversal_with_vo [label="intersection traversal with visual odometry"];
+    intersection_traversal_open_loop [label="intersection traversal open loop"];
+    intersection_traversal_with_localization [label="intersection traversal with localization"];
+
+
+    intersection_traversal -> intersection_traversal_with_vo [style="dashed"];
+    intersection_traversal -> intersection_traversal_open_loop [style="dashed"];
+    intersection_traversal -> intersection_traversal_with_localization [style="dashed"];
+
+
+
+    intersection_traversal_with_localization -> intersection_localization;
+    intersection_traversal_with_localization -> intersection_controller;
+
+    intersection_controller -> odometry_calibration;
+
+    intersection_traversal_with_vo -> visual_odometry;
+
+    intersection_traversal_with_vo -> intersection_controller;
+
+
+
+    multi_car_taxi[label="a fleet of taxis"];
+
+    multi_car_taxi -> single_car_taxi;
+    multi_car_taxi -> fleet_planning;
+
+    multi_car_taxi -> intersection_coordination;
+
+    multi_car_taxi -> driving_in_traffic;
+    fleet_planning -> fleet_comms;
+
+    multi_slam -> fleet_comms;
+
+
+    indefinite_navigation -> april_tags_detection;
+    indefinite_navigation -> intersection_traversal;
+    indefinite_navigation -> stop_line_detection;
+    indefinite_navigation -> lane_following;
+
+    single_car_taxi[label="a single taxi"];
+    single_car_taxi -> indefinite_navigation ;
+    single_car_taxi -> mission_planning;
+    single_car_taxi -> global_localization;
+
+    global_localization -> global_localization_with_tags;
+
+    global_localization_with_tags -> april_tags_detection;
+
+    global_localization -> global_localization_with_place_recognition;
+
+    global_localization_with_place_recognition -> place_recognition;
+
+    mission_planning -> knowledge_of_map;
+
+    knowledge_of_map -> single_slam [style=dashed];
+
+    knowledge_of_map -> prior_map [style=dashed];
+
+    prior_map [label="prior map"];
+    knowledge_of_map [label="knowledge of map"];
+
+    mission_planning [label="mission planning"];
+    vehicle_detection  [label="vehicle detection"];
+    vehicle_detection_with_tags [label="vehicle detection with tags"];
+
+    vehicle_detection -> vehicle_detection_with_tags [style=dashed];
+
+    vehicle_detection_with_tags -> april_tags_detection;
+    intent_prediction [label="intent prediction"];
+}
