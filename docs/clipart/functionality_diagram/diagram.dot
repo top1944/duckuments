@@ -1,109 +1,313 @@
 digraph {
+    //node [width=2, fixedsize=true];
+    // Behaviors
 
-    fleet_planning [label="fleet planning"];
-    lane_controller [label="lane controller"];
+    subgraph acluster_behaviors {
+        node [style=filled,color=grey, shape=box];
 
-    fleet_comms [label="fleet communication"];
-    odometry_calibration [label="odometry calibration"];
+        multi_car_taxi[label="a fleet \n of taxis"];
 
-    lane_localization [label="LL lane localization"];
+        follow_the_leader [label="Follow \n the leader"];
 
-    intersection_localization [label="LL intersection localization"];
-    intersection_controller [label="intersection controller"];
+        joystick_control [label="Remote \n control"];
 
-    stop_line_detection [label="Stop line detection"];
+        straight_lane_following [label="straight \n lane following"];
+        curved_lane_following [label="curved\n lane following",  fontcolor=red];
 
-    april_tags_detection [label="April tags detection"];
-    global_localization [label="Global localization"];
+        intersection_traversal [label="intersection \n traversal"];
 
-    global_localization_with_tags [label="Global localization with tags"];
+        single_car_taxi[label="a single taxi"];
 
-    global_localization_with_place_recognition [label="Global localization with place recognition"];
+        indefinite_navigation [label="indefinite \n navigation"];
 
-    place_recognition [label="Place recognition"];
+        driving_in_traffic [label="driving \n in traffic"];
 
 
 
-    extrinsic_calibration [label="extrinsic calibration"];
-    intrinsic_calibration [label="intrinsic calibration"];
+        parking [label="Parking", fontcolor=red];
 
-    intersection_coordination [label="intersection coordination"];
+        overtaking [label="Overtaking", fontcolor=red];
+
+        obstacle_avoidance [label="Do not hit\n duckies"];
+
+    }
+    // Abstract functionality
+
+    subgraph functionality {
+        node [style=filled,color=yellow,shape=box];
+
+
+        kinodynamic_motion_planning [label="kinodynamic \n motion planning"];
+
+        localization_in_parking_space [label="Localization \n in parking space", fontcolor=red];
+
+        fleet_planning [label="fleet-level \nplanning"];
+        straight_lane_controller [label="straight lane \n controller"];
+        curved_lane_controller [label="curved lane\n controller", fontcolor=red];
+
+
+        straight_lane_localization [label="LL straight \n lane localization"];
+        curved_lane_localization [label="LL curved \n lane localization", fontcolor=red];
+
+
+        intersection_localization [label="LL intersection \n localization"];
+        intersection_controller [label="intersection \n controller"];
+
+        fleet_comms [label="fleet\ncommunication"];
+        odometry_calibration [label="odometry \n calibration"];
+
+        stop_line_detection [label="Stop line \n detection"];
+
+        global_localization [label="Global \n localization"];
+        place_recognition [label="Place \n recognition", fontcolor=red];
+
+        extrinsic_calibration [label="extrinsic \n calibration"];
+        intrinsic_calibration [label="intrinsic \n calibration"];
+
+        intersection_coordination [label="intersection \n coordination"];
+
+        anti_instagram [label="Anti-instagram"];
+
+        motor_control [label="Motor \n control"];
+
+        led_detection [label="LED \n detection"];
+        vehicle_detection  [label="vehicle \n detection"];
+
+        route_planning [label="Route \n planning"];
+
+        multi_slam [label="multi-robot \n SLAM"];
+        single_slam [label="single-robot \n SLAM", fontcolor=red];
+
+        line_detection [label="Line \n detection"];
+
+        ground_projection [label="ground \n projection"];
+
+
+        visual_odometry [label="visual \n odometry"];
+
+        open_loop_motion_primitives [label="open loop \n motion \n primitives"];
+
+        mission_planning [label="mission \n planning"];
+
+        ad_hoc_network [label="Creation \n of ad-hoc \n network"];
+
+
+        camera_data [label="Image acquisition"];
+
+        intent_prediction [label="intent \n prediction"];
+
+
+        duckie_detection [label="Duckie \n detection"];
+
+
+                simulator [label="Simulator"];
+
+        };
+    // concrete algorithms
+        subgraph algorithms {
+
+        node [style=filled,color="#AAAAFF",shape=box];
+
+        april_tags_detection [label="April  tags \n detection"];
+
+        global_localization_with_tags [label="Global \n localization \n with tags"];
+
+        global_localization_with_place_recognition [label="Global \n localization \n with place \n recognition", fontcolor=red];
+
+        vehicle_detection_with_tags [label="vehicle \n detection \n  with tags"];
+
+
+        intersection_traversal_with_vo [label="intersection \n traversal \n using \n visual odometry", fontcolor=red];
+        intersection_traversal_open_loop [label="intersection \n traversal \n open loop"];
+        intersection_traversal_with_localization [label="intersection \n traversal \n using \n localization", fontcolor=red];
+
+
+        follow_the_leader_controller [label="Follow the leader \n controller"];
+
+        dijkstra [label="Dijkstra", fontcolor=red];
+
+        a_star [label="A*"];
+        RRTstar [label="RRT*", fontcolor=red];
+
+        coordination_with_traffic_lights [label="coordination \n using \n traffic lights"];
+        coordination_with_communication [label="coordination \n using \n communication"];
+
+
+        anti_instagram_with_linear_models [label="Anti-instagram \n with linear models"];
+        anti_instagram_with_DL [label="Anti-instagram \n with deep learning", fontcolor=red];
+
+
+        led_detection_current_algo [label="LED detection \n current algorithm"];
+
+        single_slam_lines [label="single SLAM \n with lines"];
+        single_slam_tags [label="single SLAM \n with tags"];
+
+        single_slam_tags -> signs_with_tags;
+
+        straight_lane_localization_using_markov [label="straight lane \n localization \n using \n Markov Loc."];
+        straight_lane_localization_using_PF [label="straight lane \n localization \n using \n particle filters", fontcolor=red];
+
+
+        duckie_detection_using_DL [label="Duckie \n detection \n using \n deep \n learning", fontcolor=red];
+
+        markov_localization [label="Markov \n localization"];
+        particle_filter [label="Particle\n filter", fontcolor=red];
+
+        };
+
+    // implementations / libraries
+        subgraph implementation {
+
+        node [style=filled,color="#0808EE",shape=record,fontcolor=white];
+
+        april_tags_library1 [label="April tags \n implementation 1"];
+        //april_tags_library2 [label="April tags \n implementation 2"];
+
+        april_tags_detection -> april_tags_library1 [style="dashed"];
+        //april_tags_detection -> april_tags_library2 [style="dashed"];
+        }
+
+
+    // Data
+
+    subgraph data {
+
+        node [style=filled, color=brown, shape=box, fontcolor=white];
+
+
+        appearance_prior [label="Appearance \n prior"];
+
+        prior_map [label="prior map"];
+        knowledge_of_map [label="knowledge \n of map"];
+
+        }
+
+    // hardware on robot
+
+        subgraph acluster_hardware {
+
+        node [style=filled, color=orange, shape=box];
+
+        pwm_hat [label="PWM hat"] ;
+        blinking_leds [label="blinking \n LEDs"];
+        motor_hat [label="motor \n hat"];
+        motors [label="motors"];
+        battery [label="battery"];
+        edimax [label="Edimax \n wifi"];
+        joystick [label="joystick"];
+
+        RPI3 [label="Raspberry\n PI 3"];
+
+        camera [label="Camera"];
+
+        tags_on_vehicles [label="Tags on \n vehicles", fontcolor=red];
+        };
+
+    // infrastructure
+
+    subgraph infrastructure {
+        node [style=filled, color="#BFFAAA", shape=box];
+
+        traffic_lights [label="Traffic \n lights"];
+        duckietown_network [label="Duckietown \n network"];
+        signs_with_tags [label="Signs \n with tags"];
+
+        calibration_lane [label="Calibration \n lane"];
+        calibration_pattern [label="Calibration \n pattern"];
+        parking_tiles [label="Parking \n tiles", fontcolor=red];
+
+
+
+        };
+
+
+
+    node [style=filled, color=red];
+
+    pwm_hat -> RPI3;
+    edimax -> RPI3;
+    motors -> motor_hat -> battery;
+    RPI3 -> battery;
+
+
+    odometry_calibration -> calibration_lane;
+
+    intrinsic_calibration -> calibration_pattern;
+    extrinsic_calibration -> calibration_pattern;
+    single_car_taxi -> obstacle_avoidance;
+
+
+    traffic_lights -> blinking_leds;
+    blinking_leds -> pwm_hat;
+
+
+    coordination_with_traffic_lights -> traffic_lights;
+
+
+    route_planning -> a_star [style=dashed];
+    route_planning -> dijkstra [style=dashed];
 
     intersection_coordination -> coordination_with_traffic_lights [style="dashed"];
     intersection_coordination -> coordination_with_communication [style="dashed"];
 
-    coordination_with_traffic_lights [label="coordination with traffic lights"];
+    anti_instagram -> anti_instagram_with_DL  [style=dashed];
+    anti_instagram -> anti_instagram_with_linear_models  [style=dashed];
+    led_detection -> led_detection_current_algo [style=dashed];
 
-    traffic_lights [label="Existence of traffic lights"];
-    coordination_with_traffic_lights -> traffic_lights;
+    led_detection -> camera_data ;
+    line_detection -> camera_data ;
+    vehicle_detection -> camera_data;
 
-    coordination_with_communication [label="coordination with communication"];
+    single_slam_lines -> line_detection;
+    single_slam_lines -> ground_projection;
 
     coordination_with_communication -> led_detection;
 
     coordination_with_communication -> blinking_leds;
 
 
-    line_detection [label="Line detection"];
 
     line_detection -> anti_instagram;
 
-    anti_instagram [label="Anti-instagram"];
 
-    led_detection [label="LED detection"];
-
-    traffic_lights [label="traffic_lights"];
-
-    traffic_lights -> blinking_leds;
-
-    pwm_hat [label="PWM hat"] ;
-    blinking_leds -> pwm_hat;
-
-    blinking_leds [label="blinking LEDs"];
-
-    driving_in_traffic [label="driving in traffic"];
 
     driving_in_traffic -> vehicle_detection;
 
-
-    multi_slam [label="multi slam"];
-
-    single_slam [label="single slam"];
-    single_slam_lines [label="single slam w/lines"];
-
-    single_slam_lines -> line_detection;
-    single_slam_lines -> ground_projection;
-
-    ground_projection [label="ground projection"];
-
-    single_slam_tags [label="single slam w/tags"];
 
     single_slam_tags -> april_tags_detection;
 
     single_slam -> single_slam_lines [style=dashed];
     single_slam -> single_slam_tags [style=dashed];
-    visual_odometry [label="visual odometry"];
 
-    lane_following [label="lane following"];
 
-    lane_following -> lane_localization;
-    lane_following -> lane_controller;
-    lane_controller -> odometry_calibration;
+    curved_lane_following->curved_lane_localization;
+    curved_lane_following->curved_lane_controller;
+    straight_lane_following -> straight_lane_localization;
+    straight_lane_following -> straight_lane_controller;
+    straight_lane_controller -> odometry_calibration;
 
-    lane_localization -> line_detection;
+    straight_lane_controller -> motor_control;
 
-    lane_localization -> ground_projection;
+    mission_planning -> route_planning;
+
+    straight_lane_localization -> straight_lane_localization_using_markov [style="dashed"];
+    straight_lane_localization -> straight_lane_localization_using_PF [style="dashed"];
+
+
+    straight_lane_localization_using_markov -> line_detection;
+    straight_lane_localization_using_markov -> ground_projection;
+    straight_lane_localization_using_markov -> markov_localization;
+    straight_lane_localization_using_markov -> appearance_prior;
+
+    straight_lane_localization_using_PF -> line_detection;
+    straight_lane_localization_using_PF -> ground_projection;
+    straight_lane_localization_using_PF -> markov_localization;
+    straight_lane_localization_using_PF -> appearance_prior;
 
     ground_projection -> extrinsic_calibration;
     ground_projection -> intrinsic_calibration;
 
     stop_line_detection -> line_detection;
-
-    intersection_traversal [label="intersection traversal"];
-
-    intersection_traversal_with_vo [label="intersection traversal with visual odometry"];
-    intersection_traversal_open_loop [label="intersection traversal open loop"];
-    intersection_traversal_with_localization [label="intersection traversal with localization"];
 
 
     intersection_traversal -> intersection_traversal_with_vo [style="dashed"];
@@ -111,9 +315,12 @@ digraph {
     intersection_traversal -> intersection_traversal_with_localization [style="dashed"];
 
 
+    intersection_traversal_open_loop -> open_loop_motion_primitives;
 
     intersection_traversal_with_localization -> intersection_localization;
     intersection_traversal_with_localization -> intersection_controller;
+
+    intersection_controller->motor_control;
 
     intersection_controller -> odometry_calibration;
 
@@ -123,7 +330,7 @@ digraph {
 
 
 
-    multi_car_taxi[label="a fleet of taxis"];
+
 
     multi_car_taxi -> single_car_taxi;
     multi_car_taxi -> fleet_planning;
@@ -139,9 +346,10 @@ digraph {
     indefinite_navigation -> april_tags_detection;
     indefinite_navigation -> intersection_traversal;
     indefinite_navigation -> stop_line_detection;
-    indefinite_navigation -> lane_following;
+    indefinite_navigation -> straight_lane_following;
+    indefinite_navigation -> curved_lane_following;
 
-    single_car_taxi[label="a single taxi"];
+
     single_car_taxi -> indefinite_navigation ;
     single_car_taxi -> mission_planning;
     single_car_taxi -> global_localization;
@@ -160,15 +368,68 @@ digraph {
 
     knowledge_of_map -> prior_map [style=dashed];
 
-    prior_map [label="prior map"];
-    knowledge_of_map [label="knowledge of map"];
-
-    mission_planning [label="mission planning"];
-    vehicle_detection  [label="vehicle detection"];
-    vehicle_detection_with_tags [label="vehicle detection with tags"];
 
     vehicle_detection -> vehicle_detection_with_tags [style=dashed];
 
     vehicle_detection_with_tags -> april_tags_detection;
-    intent_prediction [label="intent prediction"];
+    vehicle_detection_with_tags -> intrinsic_calibration;
+    vehicle_detection_with_tags -> tags_on_vehicles;
+
+    vehicle_detection_with_tags -> extrinsic_calibration;
+
+
+
+    obstacle_avoidance -> duckie_detection;
+
+
+
+
+    duckie_detection -> duckie_detection_using_DL [style=dashed];
+
+
+
+
+    follow_the_leader -> vehicle_detection;
+    follow_the_leader -> follow_the_leader_controller;
+
+    follow_the_leader_controller -> odometry_calibration;
+
+
+
+    overtaking -> vehicle_detection;
+    overtaking -> intent_prediction;
+    overtaking -> kinodynamic_motion_planning;
+
+
+    kinodynamic_motion_planning -> RRTstar [style=dashed];
+
+
+
+    joystick_control -> joystick;
+    joystick_control -> motor_control;
+
+    motor_control -> motor_hat;
+
+    parking -> parking_tiles;
+
+
+    single_car_taxi -> parking;
+
+
+    fleet_comms -> duckietown_network [style=dashed];
+
+    fleet_comms -> ad_hoc_network [style=dashed];
+    parking -> kinodynamic_motion_planning;
+    parking -> localization_in_parking_space;
+
+    curved_lane_controller -> straight_lane_controller [color=red];
+    curved_lane_localization -> straight_lane_localization [color=red];
+
+    camera_data -> camera;
+
+
+    intersection_localization -> camera_data;
+    visual_odometry ->  camera_data;
+
+    straight_lane_localization_using_PF -> particle_filter;
 }
