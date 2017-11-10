@@ -2,7 +2,7 @@
 
 ## Installation {#jupyter-install}
 
-Pull master
+Pull the branch 1710-place-recognition
 
     $ cd duckietown
     $ git pull

@@ -11,6 +11,8 @@ The following is a list of the current checkoffs, along with the date and time w
 * **Friday October 6, 5pm CT**: [](#part:checkoff_assembly_configuration)
 * **Wednesday October 18, 11:59pm CT**: [](#part:checkoff_take_a_log)
 * **Sunday October 22, 11:59pm CT**: [](#part:checkoff_calibration)
+* **Wednesday November 15, 11:59pm CT**: [](#part:checkoff_navigation)
+
 
 ## Problem Sets:
 
@@ -342,31 +344,37 @@ Please help us making the experience better by [providing feedback (can be anony
 
 
 
-
-
-
-
-##  (Template for every lecture) Date: Topic {status=draft}
-
-What is this lecture all about?
-
-### Preparation
-
-Things that the students should do before class.
+## Monday, November 6: Introduction to Planning
 
 ### Lecture Content
 
-Link to PDF and Keynote/Powerpoint materials.
+* Planning Intro ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-06-planning.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-06-planning.pdf))
+* Project Pitches ([Google Slides](https://docs.google.com/presentation/d/1AAtXIOBTlAJajn7d2Zrbv9CEAnz8YidB-FHQ3SO3Sec/edit?usp=sharing))
+
+
+
+### Reading Material
+
+* Steven M. LaValle, *Planning Algorithms*, Chapters 3, 4, and 6. Available [online](http://planning.cs.uiuc.edu)
 
 ### Feedback Form
 
 Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
 
+
+
+## Monday, November 6: Introduction to Planning (Continued)
+
+### Lecture Content
+
+* Planning Intro ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-06-planning.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-06-planning.pdf))
+
+
+
 ### Reading Material
 
-Links to the units mentioned in the slides,
-and additional materials.
+* Steven M. LaValle, *Planning Algorithms*, Chapter 5. Available [online](http://planning.cs.uiuc.edu)
 
-### Questions and Answers
+### Feedback Form
 
-FAQs that students have following the lecture or instructions.
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)

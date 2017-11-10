@@ -1,4 +1,4 @@
-# Taking and verifying a log {#take-a-log status=beta}
+# Taking and verifying a log {#take-a-log status=recently-updated}
 
 <div class='requirements' markdown='1'>
 
@@ -16,11 +16,13 @@ Note: it is recommended that you log to your USB and not to your SD card.
 
 See: To mount your USB see [](#mounting-usb).
 
-## Run the joystick-camera
+## Run something on the Duckiebot
 
-Run on the Duckiebot:
+For example, if you want to drive the robot around and collect image data you could run:
 
     duckiebot $ make demo-joystick-camera
+
+But anything could do.
 
 ## View images on the laptop
 
@@ -33,13 +35,24 @@ Run on the laptop:
 
 and verify that indeed your camera is streaming imagery.
 
-## Record the log
+## Record the log {#record-log status=recently-updated}
 
-Run on the Duckiebot in a new terminal (See [](#byobu)):
+### Option: Full Logging
 
-    duckiebot $ rosbag record -a -o /media/logs/![robot name]
+To log everything that is being published, on the Duckiebot in a new terminal (See [](#byobu)):
+
+    duckiebot $ make log-full
 
 where here we are assuming that you are logging to the USB and have followed [](#mounting-usb).
+
+### Option: Log Minimal 
+
+To log only the imagery, camera_info, the control commands and a few other essential things, on the Duckiebot in a new terminal (See [](#byobu)):
+
+    duckiebot $ make log-minimal
+
+where here we are assuming that you are logging to the USB and have followed [](#mounting-usb).
+
 
 ## Verify a log {#verify-a-log status=beta}
 

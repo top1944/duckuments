@@ -281,6 +281,7 @@ Z-310
 
 Guest Lecture from Prof. James Forbes from McGill on Extended Kalman filter
 
+slides: [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-udem-extended_kalman_filter.pdf)
 
 ## Friday Oct. 20
 
@@ -319,7 +320,30 @@ Slides: [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-
 
 Class 10:30-12:30
 
-Project Pitches
+Project Pitches. [Link to slides](https://docs.google.com/presentation/d/1AAtXIOBTlAJajn7d2Zrbv9CEAnz8YidB-FHQ3SO3Sec/edit?usp=sharing)
 
+## Wednesday Nov. 8
 
+Class 11:30-12:30
 
+ - Motion Planning. [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-08-udem-motion_planning.pdf), [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-08-udem-motion_planning.pptx)
+
+[Checkoff Navigation](#checkoff_navigation) initiated. Deadline Nov 15 @ 11pm. 
+
+## Thursday Nov. 9
+
+ - [Filtering Homework](#homework-lane-filtering) initiated. Deadline Nov 17 @ 11pm.
+
+ - Project groups announced
+
+## Monday Nov. 13
+
+Class 10:30-11:30
+
+Control.
+
+## Wednesday Nov. 15
+
+Class 11:30-11:30
+
+David Vazquez guest lecture 

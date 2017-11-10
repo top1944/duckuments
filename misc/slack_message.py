@@ -55,6 +55,10 @@ def go(path):
                     logger.warning('no cache for %s' % job_id)
 
             s += '\n@censi'
+            s += '\n@jacopo'
+            s += '\n@paull'
+            s += '\n@walter'
+            s += '\n@daniele'
             print(s)
             slack.chat.post_message(channel, s, link_names=1)
 
