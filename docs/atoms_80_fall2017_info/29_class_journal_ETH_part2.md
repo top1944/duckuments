@@ -202,3 +202,22 @@ Points to be noted
 - It is advised to fill the lecture feedback form (<a href="https://docs.google.com/forms/d/1znGcLxlsWHD-Ba2c57U2ZDcfWFQXe27yHYjbSWZML38/viewform?edit_requested=true">Feedback form</a>), so as to increase the effectiveness of the lectures
 - Always check the consistency of the camera calibration checkerboard before camera calibration (one has to check for the correct square size and correct distance between world and checkerboard reference)
 
+## Nov 6 (Mon) Project Pitches {#Zurich-2017-11-06}
+
+Lecture Project Pitches
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-06 - ETHZ - Project Pitches.pdf">PDF</a>.
+
+
+## Nov 8 (Wed) Motion Planing {#Zurich-2017-11-08}
+
+Lecture Motion Planing
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-08 - ETHZ - Motion Planning Introduction.pdf">PDF</a>.
+
+A few references for planning of Andrea Censi:
+
+- The Book on planning is the one by Lavalle, available for free here: <a href="http://planning.cs.uiuc.edu/">http://planning.cs.uiuc.edu/</a>.
+- The mentioned robot BB-8: <a href="http://starwars.wikia.com/wiki/BB-8">http://starwars.wikia.com/wiki/BB-8</a>.
+- The mendioned movie scene Donnie Darko: <a href="https://www.youtube.com/watch?v=rPeGaos7DB4">https://www.youtube.com/watch?v=rPeGaos7DB4</a>.
+
+
+
