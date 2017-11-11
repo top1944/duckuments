@@ -1,4 +1,4 @@
-all: diagram.pdf
+all: diagram.pdf legend.pdf
 
 
 %.pdf: %.dot
