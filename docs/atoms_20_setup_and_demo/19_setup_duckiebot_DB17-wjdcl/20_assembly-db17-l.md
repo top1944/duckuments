@@ -24,6 +24,7 @@ Recommend: If you have Bumpers or caster to assembly, it is recommend to have Bu
 ### Locate the components for Servo/PWM hat
 * Soldered PWM hat (1x)
 * Nylon Standoffs (M3.5 12mm F-F) (4x)
+
 * Power cable: short angled male USB-A to 5.5/2.1mm DC power jack cable
 * Male-Male Jumper Wires (1x)
 * Screwdriver

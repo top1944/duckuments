@@ -102,7 +102,7 @@ To assemble the caster wheel, the following materials are needed:
 
 * caster wheel (1x)
 * Metal standoffs (M3x12mm F-F, 6mm diameter) (4x)
-* Metal screws (M3x8mm) (4x)
+* Metal screws (M3x8mm) (8x)
 * Split/Spring lock washers (M3) (8x)
 * Flat lock washers (M3) (8x)
 
