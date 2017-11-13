@@ -342,6 +342,12 @@ Class 10:30-11:30
 
 Control.
 
+Module 1: [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-06-udem-CS_Overview.pptx) 
+
+Module 2: [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-13-udem-CS_self_driving.pptx)
+
+Module 3: [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-16-udem-CS_duckietown.pptx)
+
 ## Wednesday Nov. 15
 
 Class 11:30-11:30
