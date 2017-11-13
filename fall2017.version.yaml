@@ -1,0 +1,116 @@
+
+input: out/fall2017/data/master.html
+
+
+recipe:
+- toc # magic word for toc
+
+- add: fall-2017
+  except:
+  - checkoff_assembly_configuration
+  - checkoff_take_a_log
+  - homework-data-processing-udem
+  - homework-data-processing-ttic
+  - checkoff_calibration
+  - zurich-data-processing-exercises
+  - homework-augmented-reality
+  - checkoff_navigation
+  - homework-lane-filtering
+
+# This syntax is invalid YAML
+# - add: fall-2017
+#   except: checkoff_assembly_configuration
+#   except: checkoff_take_a_log
+#   except: homework-data-processing
+
+# You cannot include the same unit twice - indexing
+# gets all confused. In this case, checkoff_assembly_configuration is already
+# part of "fall-2017" above.
+- make-part: homeworks
+  title: Fall 2017 Checkoffs and Homeworks
+  contents:
+  - add: checkoff_assembly_configuration
+  - add: checkoff_take_a_log
+  - add: homework-data-processing-udem
+  - add: homework-data-processing-ttic
+  - add: homework-augmented-reality
+  - add: checkoff_calibration
+  - add: zurich-data-processing-exercises
+  - add: checkoff_navigation
+  - add: homework-lane-filtering
+
+
+- add: duckietown-project
+- add: contribute
+
+- make-part: exercises
+  title: Exercises
+  contents:
+  - add: exercise-specifications
+  - add: exercise-bag-analysis
+  - add: exercise-bag-in-out
+  - add: exercise-bag-images
+  - add: exercise-instagram
+  - add: exercise-bag-mirror
+  - add: exercise-instagram-live
+  - add: exercise-augmented-reality
+  - add: exercise-filtering-ekf
+  - add: exercise-filtering-pf
+
+- make-part: theory-background
+  title: Theory Background
+  contents:
+  - add: probability_basics
+  - add: linear_algebra
+
+
+- make-part: intro-to-autonomy
+  title: Introduction to autonomy
+  contents:
+  - add: autonomous-vehicles
+  - add: autonomy-overview
+  - add: modern-robotic-systems
+  - add: autonomy-architectures
+  - add: representations
+  - add: duckiebot-modeling
+  - add: CV_basics
+  - add: camera-geometry
+  - add: camera-calibration
+  - add: image-filtering
+
+- make-part: reference
+  title: Reference Material
+  contents:
+  - add: configuration-management
+  - add: introduction_to_ros
+  - add: pytorch-install
+
+# Add the entire part
+- add: building-duckiebot-c0
+  except: # except wheel-calibration
+  - duckiebot-ubuntu-image
+  - wheel-calibration
+  - soldering-boards-c0
+  # - acquiring-parts-c0
+
+- add: building-duckiebot-c1
+
+- make-part: appendix
+  title: Appendix
+  contents:
+  - add: bibliography
+  - add: last-modified
+
+purl_prefix: http://purl.org/dt/fall2017/
+
+# Removes the sections that have status equal to draft
+remove_status: [draft]
+# remove_status: [] # don't remove anything
+# remove_status: [draft, beta] # remove draft and beta
+
+# if show_removed is true, the removed sections names are kept in the output
+# otherwise they disappear completely
+# show_removed: true
+show_removed: true
+
+output: out/fall2017/data/duckiebook.html
