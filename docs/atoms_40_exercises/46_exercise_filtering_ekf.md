@@ -13,7 +13,7 @@ During the lectures, we have discussed general filtering techniques, and specifi
 
 This is a 2-dimensional filter over $d$ and $\theta$, the lateral displacement in the lane and the robot heading relative to the direction of the lane. 
 
-In this exercise, we will replace the histrogram filter with a particle filter. 
+In this exercise, we will replace the histrogram filter with an Extended Kalman Filter. 
 
 ## Instructions
 
