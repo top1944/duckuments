@@ -80,40 +80,33 @@ Back View, fully assembled:
     <img src="back_view_fully_assembled.jpg" style='width:30em; height:auto'/>
 </div>
 
-M3x10 screws attaching top rear brace:
-
-<div figure-id="fig:bumper_figure_7" figure-caption="The M3*10 nylon screws for rear spacers">
-    <img src="image_7.jpg" style='width:30em; height:auto'/>
-</div>
-
-Note: For the ETH students, the M3*10 nylon screws were already distributed during the duckiebot ceremony and not included in second distribution. Please reuse them!
+Note: For the ETH students, the M3*10 nylon screws for attaching the rear spacers with chassis were already distributed during the duckiebot ceremony and not included in second distribution. Please reuse them!
 
 ### Mount Rear Bumper
 
 Carefully guide rear bumper on to rear bumper brace tabs. Ensure that the hole for charging aligns with the charging port on your battery.
 
-<div figure-id="fig:rear_bumpers">
+<div figure-id="fig:rear_bumpers" figure-caption="Front view of rear bumper">
     <img src="rear_bumpers.jpg" style='width:30em; height:auto'/>
 </div>
 
-Locate 4 M2.5 nylon/metall nuts and 4 M2.5x10 nylon screws. Place a nut in the wide part of the t-slot and thread a screw into the nut as shown in the following pictures. Note [Use care when assembling!](#care) If you are having trouble with the nuts falling out, take a small piece of transparent tape and place it over both sides of the t-slot with the nut inside. It won’t look as nice but it will be much easier to assemble.
+Locate 4 M2.5 nylon/metall nuts and 4 M2.5*10 nylon screws. Place a nut in the wide part of the t-slot and thread a screw into the nut as shown in the following pictures. Note [Use care when assembling!](#care) If you are having trouble with the nuts falling out, take a small piece of transparent tape and place it over both sides of the t-slot with the nut inside. It won’t look as nice but it will be much easier to assemble.
 
 Better: Test the screws and the nuts once by screwing them together before you use it for the bumpers. It make the fllowing assembly process much easier. 
 
-<div figure-id="fig:hold_screw">
+Note: For ETH 2017, the screws and nuts using for this step are M2.5*10 nylon screws (white) and M2.5 nylon or metall nuts from the envelope. 
+
+<div figure-id="fig:bumper_screw1" figure-caption = "Hold the nuts with the fingers">
     <img src="bumper_screw1.jpg" style='width:30em; height:auto'/>
 </div>
-<div figure-id="fig:bumper_figure_10">
+<div figure-id="fig:bumper_screw2" figure-caption = "Screw the screws into nuts while holding the nuts with the fingers">
     <img src="bumper_screw2.jpg" style='width:30em; height:auto'/>
 </div>
 
-<div figure-id="fig:bumper_figure_11">
-    <img src="bumper_screw3.jpg" style='width:30em; height:auto'/>
-</div>
 
 The completed rear bumper should look like this:
 
-<div figure-id="fig:bumper_figure_12">
+<div figure-id="fig:bumper_figure_12" figure-caption = "Completed rear bumpers">
     <img src="image_12-1.jpg" style='width:30em; height:auto'/>
 </div>
 
@@ -125,7 +118,7 @@ The front side of duckiebot in 'DB17-wjd' should look like in [](#fig:frontside_
 
 Take 2x M2.5*10 nylon screws and 2x M2.5 nylon nuts and install them as shown in the following pictures. The first picture shows the correct holes to mount these screws (The correct position is the widest pair of 3mm holes beside the camera). The nuts should tightened on by a few threads (these are the two nuts that are not yet tightened at the top of the second picture):
 
-<div figure-id="fig:frontside_before_bumper" figure-caption="Front side without bumpers">
+<div figure-id="fig:frontside_before_bumper" figure-caption="Front side of configuration DB17-wjd, without bumpers">
     <img src="frontside_before_bumper.jpg" style='width:30em; height:auto'/>
 </div>
 
@@ -140,7 +133,7 @@ Take the front bumper and carefully press the LEDs into the flexure holders. Tak
 Position the bumper so that the nuts align with the t-slots. You may need to loosen or tigthen the screws to align the nuts. You may also need to angle the front bumper when inserting to get it
 past the camera screws.
 
-<div figure-id="fig:bumper_figure_17">
+<div figure-id="fig:bumper_figure_17" figure-caption = "Completed front bumpers">
     <img src="front_bumper_LED2.jpg" style='width:30em; height:auto'/>
 </div>
 
