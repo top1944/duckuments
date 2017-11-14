@@ -23,6 +23,7 @@ Results: A Duckiebot with LEDs attached (configuration DB17-l3)
 ## Locate all required parts
 
 To attach the LEDs on the duckiebots, the following components are needed:
+
 * Soldered LSD board with Jumper
 * LED lampes (5x)
 * Female-female wires (20x)
@@ -38,19 +39,20 @@ To attach the LEDs on the duckiebots, the following components are needed:
 
 ### LEDs 
 
-<div figure-id="fig:LED_pins" figure-caption="LED pins with its functions">
-    <img src="LED_Pins.png" style='width:30em; height:auto'/>
-</div>
-
 The LEDs are common anode type. The longest pin is called the common.
 The single pin on the side of common is red channel.
 The two other pins are Green and Blue channels, with the blue furthest from the common pin.
+
+
+<div figure-id="fig:LED_pins" figure-caption="LED pins with its functions">
+    <img src="LED_Pins.png" style='width:20em; height:auto'/>
+</div>
 
 Use the long wires with two female ends. Attach one to each of the pins on the LED.
 
 To figure out the order to connect them to the LSD hat, use the legend on the silkscreen and the information above. i.e. RX - means the red pin, CX - means the common, GX means the green, and BX means the blue. The "X" varies in number from 1-5 depending on which LED is being connected as discussed in the next section.
 
-<div figure-id="fig:LSD_board" figure-caption="LSD_board with 5*4 pins (RX, C, GX, BX) for connecting the LEDs">
+<div figure-id="fig:LSD_board" figure-caption="Locate 5 groups of 4 pins with label RX, C, GX, BX) on the LSD board">
     <img src="LSD_board.jpg" style='width:30em; height:auto'/>
 </div>
 
@@ -92,12 +94,6 @@ Front Left, Front Middle, and Front Right LED Wiring suggestion:
 
 <div figure-id="fig:bumper_figure_0">
     <img src="image_0-1.jpg" style='width:20em; height:auto'/>
-</div>
-
-Rear Right LED Wiring Suggestion:
-
-<div figure-id="fig:bumper_figure_2">
-    <img src="image_2.jpg" style='width:20em; height:auto'/>
 </div>
 
 
