@@ -62,3 +62,5 @@ Duckietown is a collaborative effort involving close interaction among students,
 * Yu-Chieh 'Tony' Hsiao (tonycar12002@gmail.com)
 * Pin-Wei 'David' Chen  (ccpwearth@gmail.com)
 * Chen-Lung 'Eric' Lu   (eric565648@gmail.com)
+* Yung-Shan 'Michael' Su (michael1994822@gmail.com)
+
