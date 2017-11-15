@@ -253,21 +253,103 @@ Book Material:
 Lab 12:30 - 1:30 in AA2333
 
 
-New Checkoff and Homework released by end of day (hopefully)
+
+## Friday Oct 13
+
+New Checkoff Initiated: [](#checkoff_calibration) Deadline is **Monday Oct. 23**. Deliverables are:
+ - Screenshot of your robot passing the kinematic odometry test
+ - PR to duckiefleet repo with your 3 robot calibrations (kinematics, camera intrinsics, camera extrinsics)
+
 
 
 
 ## Monday Oct 16
 
-Introduction to State Estimation: the Bayes' Filter
+Class 10:30-11:30
+Z-205
+
+* Reminder about checkoff.
+
+* Intro to filtering [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-udem-filtering.pptx) [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-udem-filtering.pdf)
 
 
 
 ## Wednesday Oct. 18
 
+Class **12:30-1:30**
+Z-310
+
 Guest Lecture from Prof. James Forbes from McGill on Extended Kalman filter
 
+slides: [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-udem-extended_kalman_filter.pdf)
 
-## Monday Oct. 27
+## Friday Oct. 20
 
-Advanced nonlinear state estimation and graphical models
+Homework [](#homework-augmented-reality) announced.
+Deadline is **Friday Oct. 27** at 11pm
+
+
+## Monday Oct. 23
+
+No class (Reading Week)
+
+
+## Wednesday Oct. 25
+
+No class (Reading Week)
+
+## Monday Oct. 30
+
+Class 10:30-11:30
+Z-2015
+
+Start of Introduction to SLAM
+
+Slides: [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-30-udem-slam_intro.pdf) [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-30-udem-slam_intro.key)
+
+## Wednesday Nov. 1
+
+Class 11:30-12:30
+
+End of Introduction to SLAM
+
+Slides: [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-30-udem-slam_intro.pdf) [(keynote)](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-30-udem-slam_intro.key)
+
+
+## Monday Nov. 6
+
+Class 10:30-12:30
+
+Project Pitches. [Link to slides](https://docs.google.com/presentation/d/1AAtXIOBTlAJajn7d2Zrbv9CEAnz8YidB-FHQ3SO3Sec/edit?usp=sharing)
+
+## Wednesday Nov. 8
+
+Class 11:30-12:30
+
+ - Motion Planning. [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-08-udem-motion_planning.pdf), [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-08-udem-motion_planning.pptx)
+
+[Checkoff Navigation](#checkoff_navigation) initiated. Deadline Nov 15 @ 11pm. 
+
+## Thursday Nov. 9
+
+ - [Filtering Homework](#homework-lane-filtering) initiated. Deadline Nov 17 @ 11pm.
+
+ - Project groups announced
+
+## Monday Nov. 13
+
+Class 10:30-11:30
+
+Control.
+
+Module 1: [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-06-udem-CS_Overview.pptx) 
+
+Module 2: [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-13-udem-CS_self_driving.pptx)
+
+Module 3: [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-16-udem-CS_duckietown.pptx)
+
+## Wednesday Nov. 15
+
+Class 11:30-11:30
+
+David Vazquez guest lecture 

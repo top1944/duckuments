@@ -102,7 +102,7 @@ Chicago: [upload your video](https://www.dropbox.com/request/3GxK1kjxUmZKl23x6nE
 </div>
 
 
-<div class='only-chicago' markdown='1'>
+<div class='only-zurich' markdown='1'>
 
 Zurich: [upload your video](https://www.dropbox.com/request/6St0yCcVJoNPLUHR4fbS)
 

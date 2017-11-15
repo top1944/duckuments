@@ -23,6 +23,7 @@ Some of the services have changed and this requires a rebuild.
 On both laptop and robot do:
 
     $ cd ![Duckietown root]
+    $ source environment.sh
     $ make build-catkin-clean
     $ make build-catkin-parallel
     
@@ -43,7 +44,7 @@ Follow the procedure in [](#wheel-calibration). Once you have successfully passe
 
 ## Camera calibration
 
-Follow the procedure in [](#camera-calib) to do you intrinsic **and** extrinsic calibrations
+Follow the procedure in [](#camera-calib) to do you intrinsic **and** extrinsic calibrations. 
 
 
 ## Visually verify the calibration is good in Duckietown

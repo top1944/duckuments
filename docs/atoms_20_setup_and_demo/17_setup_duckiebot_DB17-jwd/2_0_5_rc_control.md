@@ -24,6 +24,8 @@ For the above to succeed you should have a Github account already set up.
 
 It should not ask for a password.
 
+Note: you must not clone the repository using the URL starting with `https`. Later steps will fail.
+
 ### Troubleshooting
 
 Symptom: It asks for a password.
@@ -46,7 +48,7 @@ change. In order to check whether your system meets all the requirements for run
 and install all the missing packages (if any), we can run the following script:
 
     duckiebot $ cd ~/duckietown
-    duckiebot $ /bin/bash ./dependencies_since_image.sh
+    duckiebot $ /bin/bash ./dependencies_for_duckiebot.sh
 
 This command will install only the packages that are not already installed in your system.
 
@@ -211,5 +213,9 @@ Warning: If you disconnect the power before shutting down properly using `shutdo
 the system might get corrupted.
 
 Then, disconnect the power cable, at the **battery end**.
+
+As an alternative you can use the `poweroff` command:
+
+    duckiebot $ sudo poweroff
 
 Warning: If you disconnect frequently the cable at the Raspberry Pi's end, you might damage the port.

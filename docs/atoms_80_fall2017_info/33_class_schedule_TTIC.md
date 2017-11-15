@@ -9,6 +9,9 @@ The following is a list of the current checkoffs, along with the date and time w
 &nbsp;
 
 * **Friday October 6, 5pm CT**: [](#part:checkoff_assembly_configuration)
+* **Wednesday October 18, 11:59pm CT**: [](#part:checkoff_take_a_log)
+* **Sunday October 22, 11:59pm CT**: [](#part:checkoff_calibration)
+* **Wednesday November 15, 11:59pm CT**: [](#part:checkoff_navigation)
 
 
 ## Problem Sets:
@@ -24,6 +27,8 @@ Note: Please keep track of how much time you spend on each problem set. We will 
 &nbsp;
 
 * **Friday October 13, 11:59pm CT**: [](#part:homework-data-processing-ttic)
+* **Friday October 27, 11:59pm CT**: [](#part:homework-augmented-reality)
+* **Friday November 17, 11:59pm CT**: [](#part:homework-lane-filtering)
 
 
 
@@ -202,27 +207,175 @@ Please help us making the experience better by [providing feedback (can be anony
 
 
 
-##  (Template for every lecture) Date: Topic {status=draft}
+## Monday, October 16: Camera Calibration and Image Filtering
 
-What is this lecture all about?
-
-### Preparation
-
-Things that the students should do before class.
+Note: [The second checkoff](#part:checkoff_take_a_log) is due by 11:59pm CT Wednesday.
 
 ### Lecture Content
 
-Link to PDF and Keynote/Powerpoint materials.
+* Logistics ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-ttic-a-logistics.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-ttic-a-logistics.pdf))
+* Calibration ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-ttic-b-calibration.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-ttic-b-calibration.pdf))
+* Image Filtering ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-ttic-c-image_filtering.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-16-ttic-c-image_filtering.pdf))
+
+
+
+### Reading Material
+
+* [](#CV_basics)
+* [](#camera-calibration)
+* [](#image-filtering)
+* Richard Szeliski, *Computer Vision: Algorithms and Applications*, Chapters 3 and 6 (available [online](http://szeliski.org/Book/))
+* David A. Forsyth and Jean Ponce, *Computer Vision: A Modern Approach*, Chapters 5.3 and 7
+
 
 ### Feedback Form
 
 Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
 
+
+
+## Wednesday, October 18: Edge Detection and Lane Detection
+
+Note: [The third checkoff](#part:checkoff_calibration) is due by 11:59pm CT Sunday. Note that camera calibration is necessary for the next problem set, which will be posted soon.
+
+### Lecture Content
+
+* Logistics ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-a-logistics.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-a-logistics.pdf))
+* Image Filtering (Review) ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-b-image-filtering-revisited.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-b-image-filtering-revisited.pdf))
+* Image Gradients ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-c-image-gradients.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-c-image-gradients.pdf))
+*  Edge Detection ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-d-edge-detection.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-d-edge-detection.pdf))
+*  Line Detection ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-e-line-detection.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-e-line-detection.pdf))
+*  Lane Detection ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-f-lane-detection.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-18-ttic-f-lane-detection.pdf))
+
+
+
 ### Reading Material
 
-Links to the units mentioned in the slides,
-and additional materials.
+* [](#line_detection)
+* Richard Szeliski, *Computer Vision: Algorithms and Applications*, Chapters 3 and 4 (available [online](http://szeliski.org/Book/))
+* David A. Forsyth and Jean Ponce, *Computer Vision: A Modern Approach*, Chapters 7 and 8
 
-### Questions and Answers
 
-FAQs that students have following the lecture or instructions.
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+
+
+## Monday, October 23: Feature Detection and Place Recognition
+
+### Lecture Content
+
+* Logistics ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-a-logistics.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-a-logistics.pdf))
+* Robust Fitting ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-b-robust-fitting.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-b-robust-fitting.pdf))
+* Feature Detection ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-c-feature-detection.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-c-feature-detection.pdf))
+*  Place Recognition ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-d-place-recognition.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-d-place-recognition.pdf))
+
+
+
+### Reading Material
+
+* Richard Szeliski, *Computer Vision: Algorithms and Applications*, Chapters 4 and 6.1.3 (available [online](http://szeliski.org/Book/))
+
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+
+
+## Wednesday, October 25: Filtering I
+
+### Lecture Content
+
+*  Place Recognition (continued) ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-d-place-recognition.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ttic-d-place-recognition.pdf))
+* Introduction to Filtering ([Powerpoint](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ttic-filtering-intro.pptx), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ttic-filtering-intro.pdf))
+
+
+
+### Reading Material
+
+* Sebastian Thrun, Wolfram Burgard, and Dieter Fox, *Probabilistic Robotics*, Chapters 1 and 2
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+
+
+## Monday, October 30: Filtering II
+
+### Lecture Content
+
+* Nonparametric Filtering ([Powerpoint](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-30-ttic-filtering-II.pptx), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-10-30-ttic-filtering-II.pdf))
+
+
+
+### Reading Material
+
+* Sebastian Thrun, Wolfram Burgard, and Dieter Fox, *Probabilistic Robotics*, Chapter 4
+
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+
+
+## Wednesday, November 1: Introduction to SLAM
+
+### Lecture Content
+
+* SLAM Intro ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-01-ttic-slam-intro.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-01-ttic-slam-intro.pdf))
+
+
+
+### Reading Material
+
+* Sebastian Thrun, Wolfram Burgard, and Dieter Fox, *Probabilistic Robotics*, Chapters 9, 10, and 13
+
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+
+## Monday, November 6: Introduction to Planning
+
+### Lecture Content
+
+* Planning Intro ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-06-planning.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-06-planning.pdf))
+* Project Pitches ([Google Slides](https://docs.google.com/presentation/d/1AAtXIOBTlAJajn7d2Zrbv9CEAnz8YidB-FHQ3SO3Sec/edit?usp=sharing))
+
+
+
+### Reading Material
+
+* Steven M. LaValle, *Planning Algorithms*, Chapters 3, 4, and 6. Available [online](http://planning.cs.uiuc.edu)
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+
+## Monday, November 6: Introduction to Planning (Continued)
+
+### Lecture Content
+
+* Planning Intro ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-06-planning.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-06-planning.pdf))
+
+
+
+### Reading Material
+
+* Steven M. LaValle, *Planning Algorithms*, Chapter 5. Available [online](http://planning.cs.uiuc.edu)
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
