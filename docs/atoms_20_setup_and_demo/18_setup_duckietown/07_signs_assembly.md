@@ -25,7 +25,7 @@ The set of tags used for the 2017 map are available here: [pdf](https://github.c
 
 If you find that what is available in the database in insufficient for your needs, then you will need to add to the existing database.
 
-To do so you will have to load the original AprilTags file available here: [pdf](https://github.com/duckietown/Software/blob/master/catkin_ws/src/20-indefinite-navigation/apriltags_ros/signs_and_tags/tag36h11.pdf) [ps](https://github.com/duckietown/Software/blob/master/catkin_ws/src/20-indefinite-navigation/apriltags_ros/signs_and_tags/tag36h11.ps)
+To do so you will have to load the original AprilTags file available here: [pdf](https://github.com/duckietown/Software/blob/liam-tags/catkin_ws/src/20-indefinite-navigation/apriltags_ros/signs_and_tags/tag36h11.pdf) [ps](https://github.com/duckietown/Software/blob/liam-tags/catkin_ws/src/20-indefinite-navigation/apriltags_ros/signs_and_tags/tag36h11.ps)
 
 Which tag you should use depends on what type of sign you are trying add. The ranges of tags are specified in [](#tab:tag-ranges).
 
@@ -44,7 +44,7 @@ Construct the new sign by first copying and pasting an existing sign of similar 
 
 If you make a new road name sign, you may need to change the font size of the name so that it appears on one line (this is why we like people with names like "ROY" and "RUS").
 
-Important: You must also add your new sign to the [April Tags DB](https://github.com/duckietown/Software/blob/master/catkin_ws/src/20-indefinite-navigation/apriltags_ros/signs_and_tags/apriltagsDB.yaml) in the software repo. 
+Important: You must also add your new sign to the [April Tags DB](https://github.com/duckietown/Software/blob/liam-tags/catkin_ws/src/20-indefinite-navigation/apriltags_ros/signs_and_tags/apriltagsDB.yaml) in the software repo. 
 
 Add a new block like the ones that already exists or modify the one with the appropriate tag id:
 ```
