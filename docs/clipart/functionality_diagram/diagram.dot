@@ -1,11 +1,11 @@
 digraph G {
     edge [comment="Wildcard node added automatic in EG."];
-    node [color=red, 
+    node [color=red,
           style=filled];
     subgraph acluster_behaviors {
         edge [comment="Wildcard node added automatic in EG."];
-        node [color=grey, 
-              style=filled, 
+        node [color=grey,
+              style=filled,
               shape=box];
         multi_car_taxi [label="a fleet \n of taxis"];
         follow_the_leader [label="Follow \n the leader"];
@@ -18,14 +18,17 @@ digraph G {
         driving_in_traffic [label="driving \n in traffic"];
         parking [label="Parking"];
         overtaking [label="Overtaking"];
-        save_the_duckies [label="Save the \n duckies"];
+        save_the_duckies [label="Duckies safety"];
+        remote_control [label="Remote control with GUI"];
+        cuteness [label="Cuteness"];
     }
 
     subgraph functionality {
         edge [comment="Wildcard node added automatic in EG."];
-        node [color=yellow, 
-              style=filled, 
+        node [color=yellow,
+              style=filled,
               shape=box];
+
         lane_marking_detection [label="Lane marking detections"];
         stop_and_go [label="Stop and go\ncontroller"];
         kinodynamic_motion_planning [label="kinodynamic \n motion planning"];
@@ -68,7 +71,7 @@ digraph G {
         finite_state_machine [label="Finite State Machine"];
         postprocess_slam_map [label="Post-process \n SLAM\nmap"];
         knowledge_of_map_with_slam [label="Create map\n with SLAM"];
-        duckie_aware_controller [label="Duckie aware \n controller"];
+        duckie_aware_controller [label="Duckie-aware \n controller"];
         coordination_with_traffic_lights [label="coordination \n using \n traffic lights"];
         coordination_with_communication [label="coordination \n using \n communication"];
         straight_lane_localization_using_markov [label="straight lane \n localization \n using \n Markov Loc."];
@@ -84,8 +87,8 @@ digraph G {
 
     subgraph algorithms {
         edge [comment="Wildcard node added automatic in EG."];
-        node [color="#AAAAFF", 
-              style=filled, 
+        node [color="#AAAAFF",
+              style=filled,
               shape=box];
         april_tags_detection [label="April  tags \n detector"];
         dijkstra [label="Dijkstra"];
@@ -103,18 +106,18 @@ digraph G {
 
     subgraph implementation {
         edge [comment="Wildcard node added automatic in EG."];
-        node [color="#0808EE", 
-              fontcolor=white, 
-              style=filled, 
+        node [color="#0808EE",
+              fontcolor=white,
+              style=filled,
               shape=record];
         april_tags_library1 [label="April tags \n implementation 1"];
     }
 
     subgraph data {
         edge [comment="Wildcard node added automatic in EG."];
-        node [color=brown, 
-              fontcolor=white, 
-              style=filled, 
+        node [color=brown,
+              fontcolor=white,
+              style=filled,
               shape=box];
         appearance_prior [label="Appearance \n prior"];
         prior_map [label="prior map"];
@@ -125,8 +128,8 @@ digraph G {
 
     subgraph acluster_hardware {
         edge [comment="Wildcard node added automatic in EG."];
-        node [color=orange, 
-              style=filled, 
+        node [color=orange,
+              style=filled,
               shape=box];
         pwm_hat [label="PWM hat"];
         blinking_leds [label="blinking \n LEDs"];
@@ -138,12 +141,14 @@ digraph G {
         RPI3 [label="Raspberry\n PI 3"];
         camera [label="Camera"];
         tags_on_vehicles [label="Tags on \n vehicles"];
+        duckie_on_top [label="Duckie on top"];
+
     }
 
     subgraph infrastructure {
         edge [comment="Wildcard node added automatic in EG."];
-        node [color="#BFFAAA", 
-              style=filled, 
+        node [color="#BFFAAA",
+              style=filled,
               shape=box];
         traffic_lights [label="Traffic \n lights"];
         duckietown_network [label="Duckietown \n network"];
@@ -220,6 +225,7 @@ digraph G {
     multi_car_taxi -> single_car_taxi;
     multi_car_taxi -> fleet_planning;
     fleet_planning -> topological_map;
+    fleet_planning -> simulator;
     multi_car_taxi -> intersection_coordination;
     multi_car_taxi -> driving_in_traffic;
     fleet_planning -> fleet_comms;
@@ -283,4 +289,6 @@ digraph G {
     intersection_localization -> markov_localization;
     single_slam_tags -> signs_with_tags;
     driving_in_traffic -> stop_and_go;
+    remote_control -> edimax;
+    cuteness -> duckie_on_top;
 }
