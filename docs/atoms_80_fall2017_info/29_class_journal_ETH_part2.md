@@ -82,14 +82,14 @@ b - Version control with Git:
 
 ### Materials presented in class
 
-a - Computer Vision basics:
-<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-cv-basics.pptx">PowerPoint presentation</a>,
-<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-cv-basics.pdf">PDF</a>.
+a - Computer Vision Basics:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-cv-basics.pdf">PDF</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-cv-basics.pptx">PowerPoint presentation</a>.
 
 
-b - Odometry calibration:
-<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-odometry-calibration.pptx">PowerPoint presentation</a>,
-<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-odometry-calibration.pdf">PDF</a>.
+b - Odometry Calibration:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-odometry-calibration.pdf">PDF</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-11-ETHZ-cv-basics.pptx">PowerPoint presentation</a>.
 
 
 ## Oct 13 (Fri): new series of tasks out {#Zurich-2017-10-13 status=ready}
@@ -135,20 +135,89 @@ Get help in `#ex-data-processing`.
 
 
 
-## Oct 16 (Mon) {#Zurich-2017-10-16 status=draft}
+## Oct 16 (Mon): Line detection {#Zurich-2017-10-16}
 
-Andrea: computer vision. ROS?
+### Materials presented in class
 
-## Oct 18 (Wed) {#Zurich-2017-10-18 status=draft}
+a - Line detection:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-16-ETHZ-a-line_detection.key">Keynote</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-16-ETHZ-a-line_detection.pdf">PDF</a>.
 
-Assigned: XXX
 
-## Oct 23 (Mon) {#Zurich-2017-10-23 status=draft}
+b - Logistics:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-16-ETHZ-a-logistics.key">Keynote</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-16-ETHZ-a-logistics.pdf">PDF</a>.
 
-Assigned: XXX
+## Oct 18 (Wed): Feature extraction {#Zurich-2017-10-18}
 
-## Oct 25 (Wed) {#Zurich-2017-10-25 status=draft}
+### Materials presented in class
 
-Assigned: XXX
+- Feature extraction:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-18-ETHZ-a-feature-extraction.key">Keynote</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-18-ETHZ-a-feature-extraction.pdf">PDF</a>.
 
-(Andrea traveling)
+## Oct 20 (Fri): Lab session {#Zurich-2017-10-20 status=draft}
+
+### Materials presented in class
+
+- ROS Main concepts:
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-20-ETHZ-ROS-main-concepts.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/raw/master/2_given/2017-10-20-ETHZ-ROS-main-concepts.pdf">PDF</a>.
+
+## Oct 23 (Mon) Filtering I {#Zurich-2017-10-23}
+
+### Materials presented in class
+
+- Lectures on filtering (Filtering I):
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ETHZ-Filtering_I.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-23-ETHZ-Filtering_I.pdf">PDF</a>.
+
+## Oct 25 (Wed) Filtering II {#Zurich-2017-10-25}
+
+a - Lectures (Particle Filter)
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ETHZ-filtering-IIa-ParticleFilter.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ETHZ-filtering-IIa-ParticleFilter.pdf">PDF</a>.
+
+
+b - Lectures (Lane Filter)
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ETHZ-filtering-IIb-LaneFilter.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-10-25-ETHZ-filtering-IIb-LaneFilter.pdf">PDF</a>.
+
+
+## Nov 1 (Wed) Control Systems {#Zurich-2017-11-01}
+
+a - Lectures (Control Systems Module I)
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-01%20-%20ETHZ%20-%20Control%20Module%20I%20-%20Overview.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-01%20-%20ETHZ%20-%20Control%20Module%20I%20-%20Overview.pdf">PDF</a>.
+
+
+b - Lectures (Control Systems Module II)
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-01%20-%20ETHZ%20-%20Control%20Module%20II%20-%20Self-driving%20cars%20control%20overview.pptx">PowerPoint presentation</a>,
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-01%20-%20ETHZ%20-%20Control%20Module%20II%20-%20Self-driving%20cars%20control%20overview.pdf">PDF</a>.
+
+
+Points to be noted
+- Running what-the-duck on laptop and Duckiebot is mandatory. It helps save time in debugging errors and also is a standard way to ask for help from the staff. Keep repeating it periodically so as to keep the data up-to date
+- For the people lacking calibrated wheels, this serves as a reminder to calibrate the wheels and keep their duckiebot up-to date
+- It is advised to fill the lecture feedback form (<a href="https://docs.google.com/forms/d/1znGcLxlsWHD-Ba2c57U2ZDcfWFQXe27yHYjbSWZML38/viewform?edit_requested=true">Feedback form</a>), so as to increase the effectiveness of the lectures
+- Always check the consistency of the camera calibration checkerboard before camera calibration (one has to check for the correct square size and correct distance between world and checkerboard reference)
+
+## Nov 6 (Mon) Project Pitches {#Zurich-2017-11-06}
+
+Lecture Project Pitches
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-06 - ETHZ - Project Pitches.pdf">PDF</a>.
+
+
+## Nov 8 (Wed) Motion Planing {#Zurich-2017-11-08}
+
+Lecture Motion Planing
+<a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-08 - ETHZ - Motion Planning Introduction.pdf">PDF</a>.
+
+A few references for planning of Andrea Censi:
+
+- The Book on planning is the one by Lavalle, available for free here: <a href="http://planning.cs.uiuc.edu/">http://planning.cs.uiuc.edu/</a>.
+- The mentioned robot BB-8: <a href="http://starwars.wikia.com/wiki/BB-8">http://starwars.wikia.com/wiki/BB-8</a>.
+- The mendioned movie scene Donnie Darko: <a href="https://www.youtube.com/watch?v=rPeGaos7DB4">https://www.youtube.com/watch?v=rPeGaos7DB4</a>.
+
+
+

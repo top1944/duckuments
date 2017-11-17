@@ -5,12 +5,12 @@ tile = m_from_in(12*2)
 WW = m_from_in(2)
 WY = m_from_in(1)
 L = (tile - 2*WW - 2*WY) / 2
-y1 = + L + WW /2
+y1 = + L + WW
 y2 = + L
 y3 = + WY/2
 y4 = - WY/2
 y5 = - L
-y6 = - L - WW/2
+y6 = - L - WW
 D = 2 * tile
 
 yaml = """

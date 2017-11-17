@@ -191,7 +191,7 @@ We will ask to create a "Pull Request" from your private repo.
 
 
 
-### For U de M students who have already submitted homework to the previus duckiefleet-2017 repo 
+### For U de M students who have already submitted homework to the previous duckiefleet-2017 repo 
 
 <div class='only-montreal' markdown="1">
 

@@ -90,6 +90,24 @@ Jupyter notebook is a very useful and conveniet tool while dealing with python l
 See: [Week4 Lab](https://drive.google.com/drive/folders/0Byy2Ai4ydUvGTEVzaHYxT0tqNGc?usp=sharing)
 
 
+## Thursday October 19: Camera and Wheel Calibration
+
+This week we are going to do the camera and wheel calibration. We will teach the student the theory of camera calibration, including extrinsic and intrinsic.
+
+See: [Week6 Material](https://drive.google.com/drive/folders/0BwVN0d88p9cIZUlRY1VuaVlROW8)
+
+
+###Lecture Content
+
+See: [Week6 Lecture](https://drive.google.com/drive/folders/0BwVN0d88p9cIZUlRY1VuaVlROW8)
+
+
+###Weekly Lab
+
+We will let them control the duckiebots by joystick to finish the wheel calibration. Also, we will give them chessboard for camera calibration.
+
+See: [Week6 Lab](https://drive.google.com/drive/folders/0BwVN0d88p9cIZUlRY1VuaVlROW8)
+
 
 
 
