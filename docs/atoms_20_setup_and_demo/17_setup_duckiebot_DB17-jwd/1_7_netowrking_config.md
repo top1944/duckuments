@@ -70,9 +70,9 @@ To ensure nobody piggybacks on our connection, which poses a security risk espec
 
 and then reboot.
 
-Doubt: I think it supposes to be "auth_alg=open" with "_".
-
 At this point you should see a new network being created named "`![robot name]`", protected by the password you just set. 
+
+Comment: Make sure the password contains min. 8 character or combined with numbers. If no networks shows up after the configuration and no feedback from system, please check the content of the file again. The program, which activates the Edimax wifi adapter is very sensitive to its content.   
 
 <!--
 If the Raspberry Pi's network interface is connected to the `duckietown` network

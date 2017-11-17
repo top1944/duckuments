@@ -63,3 +63,5 @@ Duckietown is a collaborative effort involving close interaction among students,
 * Pin-Wei 'David' Chen  (ccpwearth@gmail.com)
 * Chen-Lung 'Eric' Lu   (eric565648@gmail.com)
 * Hong-Ming 'Peter' Huang (peterx7803@gmail.com)
+* Tzu-Kuan 'Brian' Chuang   (fire594594594@gmail.com)
+
