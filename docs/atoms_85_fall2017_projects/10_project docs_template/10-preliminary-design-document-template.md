@@ -1,4 +1,4 @@
-#  Group name: preliminary design document {#project-name-preliminary-design-doc status=draft}
+#  Group name: preliminary design document {#project-name-preliminary-design-doc status=ready}
 
 <!-- EXAMPLE COMMENT
 -->
@@ -22,8 +22,6 @@ Quidquid latine dictum sit, altum videtur
 </div>
 
 ### Project scope
-
-
 
 Are you going to rewrite Duckietown from scratch? Probably not. You need to decide what are the boundaries in which you want to move.
 
