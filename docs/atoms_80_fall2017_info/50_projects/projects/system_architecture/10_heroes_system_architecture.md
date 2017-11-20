@@ -2,19 +2,18 @@
 
 ## Preliminaries
 
-Name of Project: System Architecture
+**Name of Project:** System Architecture
 
-Team:
+**Team:**
 
-  - Sonja Brits (Zurich) (System architect)
+* Sonja Brits (Zurich) (System architect)
+* Andrea Censi (Zurich) (Mentor/Supervisor)
 
-  - Andrea Censi (Zurich) (Mentor/Supervisor)
-
-Slack channel: `#devel-heroes`
+**Slack channel:** `#devel-heroes`
 
 **Software development branch:** `devel-sonja` (Software repo) or `sonja-branch` (Duckuments repo)
 
----
+### Missions
 
 The system architect project can be split into two missions:
 
