@@ -20,18 +20,18 @@ The system architect project can be split into two missions:
 1. Ensure that the development of the system goes smoothly (wooden spoon)
 2. Develop a framework/tool to formally describe (and later optimize) the system (bronze, silver and gold)
 
-# Mission 1 {#heroes-system-architecture-mission1 status=beta}
+## Mission 1 {#heroes-system-architecture-mission1 status=beta}
 Ensure that the development and integration of the projects into the system goes smoothly and that the resulting system makes sense, and is useful for future duckierations (duckie + generations).
 
-## Problem Statement
+### Problem Statement
 Ensure that all teams know what their goal is and how it fits into the bigger picture
 
-## Relevant Resources
+### Relevant Resources
 * The functional diagram of the system
 * Duckuments
 * Other teams’ preliminary project reports
 
-## Deliverables (Goals)
+### Deliverables (Goals)
 The deliverables for Mission 1 will include the following:
 
 * Functional diagram of the system
@@ -39,7 +39,7 @@ The deliverables for Mission 1 will include the following:
 
 Mission 1 is the "wooden spoon" level of the project.
 
-## Proposed Approach
+### Proposed Approach
 
 * Become one with the goals of Duckietown
     In order to make Duckietown a better place, one has to keep in mind what “better” means in Duckie terms. 
@@ -56,45 +56,45 @@ Mission 1 is the "wooden spoon" level of the project.
 * Acting as middleman/helper to facilitate negotiation of contracts between groups
 * Monitor status of projects to find possible problems
 
-## Logging and Testing Procedure
+### Logging and Testing Procedure
 ...
 
-## Current status
+### Current status
 
 Familiarisation with the current system status is under way.
 
 Functional diagram has been updated to include multi-robot SLAM as alternative to single-robot SLAM to creating map.
 
-## Tasks
+### Tasks
 * Familiarisation with existing system architecture
 * Going to group meetings
 * Identifying potential problems
 
-## Timeline
+### Timeline
 ...
 
-## Meetings notes
+### Meetings notes
 ...
 
-# Mission 2 {#heroes-system-architecture-mission2 status=beta}
+## Mission 2 {#heroes-system-architecture-mission2 status=beta}
 Where there is a system, there is a want (nay, need) for optimisation. Describing a system’s performance and resource requirements in a quantifiable way is a critical part of being able to benchmark modules and optimise the system. 
 
 Mission 2 is to formalise the description of the system characteristics, so that eventually the system performance can be optimised for some given resources.
 
-## Problem Statement
+### Problem Statement
 Find a way to describe all the module requirements, specifications, etc in a formal, quantifiable language.
 
 Find a way to calculate the requirements and specifications of a whole system or subsystem, based on the requirements and specifications of the individual modules of the system.
 
 Find a way to calculate the optimal system configuration, based on the desired requirements and specifications of the system.
 
-## Relevant Resources
+### Relevant Resources
 * How the current system’s characteristics are defined
 * Which values/parameters are needed
 * Possibly research on system description?
 * Possibly graph theory?
 
-## Deliverables (Goals)
+### Deliverables (Goals)
 The different levels of Mission 2 are defined as follows: 
 
 * Bronze standard:
@@ -113,28 +113,28 @@ The deliverables will then include:
 * A program/tool that can give a qualitative answer (yes/no) to the question: Are these resources sufficient for this system configuration? (silver)
 * A program/tool that will give an optimised system configuration, based on the given available resources (gold)
 
-## Proposed Approach
+### Proposed Approach
 * Research on the topic of formal description of a system
 * Find/develop a suitable language to describe module characteristics
 * Require groups to compile a description of their respective modules’ characteristics
 * Find/develop functions to do mathematics on the language description of modules
 
-## Logging and Testing Procedure
+### Logging and Testing Procedure
 ...
 
-## Current status
+### Current status
 
 Research is being done to identify some research areas that may be relevant and tools that may be helpful, in order to decide on an approach.
 
-## Tasks
+### Tasks
 * Research into existing methods of system description
 * Graph based databases?
 * Perhaps graph theory can be useful later if the (suspiciously graph-looking) system can be described suitably.
 
-## Timeline
+### Timeline
 ...
 
-## Meetings notes
+### Meetings notes
 ...
 
 
