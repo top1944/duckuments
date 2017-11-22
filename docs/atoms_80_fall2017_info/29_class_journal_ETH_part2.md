@@ -219,5 +219,13 @@ A few references for planning of Andrea Censi:
 - The mentioned robot BB-8: <a href="http://starwars.wikia.com/wiki/BB-8">http://starwars.wikia.com/wiki/BB-8</a>.
 - The mendioned movie scene Donnie Darko: <a href="https://www.youtube.com/watch?v=rPeGaos7DB4">https://www.youtube.com/watch?v=rPeGaos7DB4</a>.
 
+## Nov 13 (Mon) Project Team Assignments {#Zurich-2017-11-13}
 
+- First Lecture: Project Team Assignments <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-13 - ETHZ - Team Allocations.pdf">PDF</a>.
+- Second Lecture: First meeting of the Controllers group --> Filling out the Preliminary Design Document
+
+## Nov 15 (Wed) Putting things together {#Zurich-2017-11-15}
+
+- First Lecture: Putting things together <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-15 - ETHZ - Putting things together.pdf">PDF</a>.
+- Second Lecture: Second meeting of the Controllers group --> Filling out the Preliminary Design Document
 
