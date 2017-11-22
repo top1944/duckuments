@@ -38,8 +38,7 @@ VICTORIA CONCORDIA CRESCIT (Victory through harmony)
 
 #### Stakeholders
 
-* Fleet-comms: for querying their API (contact: )
-* Devel-coordination and multi-slam: 
+* Fleet-comms: for querying their API
 * The Architects (smart city): accurate map of city, sufficiently big map to accommodate ~25 duckiebots at once
 
 
