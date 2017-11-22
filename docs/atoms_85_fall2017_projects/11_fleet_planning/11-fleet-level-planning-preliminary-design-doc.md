@@ -18,8 +18,6 @@ VICTORIA CONCORDIA CRESCIT (Victory through harmony)
 
 ### Project scope
 
-Are you going to rewrite Duckietown from scratch? Probably not. You need to decide what are the boundaries in which you want to move.
-
 #### What is in scope
 
 * Send mobility commands to each duckiebot
@@ -127,12 +125,6 @@ Request handling server - Duckiefleet:
 
 ### Preliminary plan of deliverables
 
-What needs to be designed?
-
-What needs to be implemented?
-
-What already exists and needs to be revised?
-
 ### Specifications
 
 No revision of existing duckietown specification necessary.
@@ -157,35 +149,16 @@ None
 ## Part 4: Project planning
 
 
-<col3 figure-id="tab:project-plan" figure-caption="Fleet-level Planning Project Plan" class="Labels-Row1">
-    <span>Week of</span>
-    <span>Task</span>
-    <span>Deliverable</span>
-    <span>13.11.2017</span>
-    <span>Project kick-off and planning</span>
-    <span>Preliminary Design Document</span>
-    <span>20.11.2017</span>
-    <span>Look at state of current infrastructure</span>
-    <span>Running visualization of 1 duckiebot on map as currently implemented</span>
-    <span>27.11.2017</span>
-    <span>Visualization of n duckiebots</span>
-    <span> </span>
-    <span>04.12.2017</span>
-    <span>Mission planner, implement m-stochastic queue median policy (or similar, tbd with Claudio) </span>
-    <span> </span>
-    <span>11.12.2017</span>
-    <span>...continued</span>
-    <span>Run test cases (e.g. send n reference locations to n duckiebots)</span>
-    <span>18.12.2017</span>
-    <span>...continued</span>
-    <span>Run test cases (e.g. send n reference locations to n duckiebots)</span>
-    <span>25.12.2017</span>
-    <span> Implement customer request handling </span>
-    <span>Run test cases to establish reliable customer request handling routine</span>
-    <span>01.01.2018</span>
-    <span>Physical visualization of status, ETH formation</span>
-    <span>Verify that it works</span>
-</col3>
+| Week of    | Task                                                         | Deliverable                                                            |
+|------------|--------------------------------------------------------------|------------------------------------------------------------------------|
+| 13.11.2017 | Project kick-off and planning                                | Preliminary Design Document                                            |
+| 20.11.2017 | Look at state of current infrastructure                      | Running visualization of 1 duckiebot on map as currently implemented   |
+| 27.11.2017 | Visualization of n duckiebots                                |                                                                        |
+| 04.12.2017 | Mission planner, implement m-stochastic queue median policy… |                                                                        |
+| 11.12.2017 | ...(or similar, tbd with Claudio)                            | Run test cases (e.g. send n reference locations to n duckiebots)       |
+| 18.12.2017 | Implement customer request handling                          | Run test cases to establish reliable customer request handling routine |
+| 25.12.2017 | Physical visualization of status, ETH formation              | Verify that it works                                                   |
+| 01.01.2018 | End of project week, buffer, documentation                   | Presentation                                                           |
 
 
 ### Data collection
