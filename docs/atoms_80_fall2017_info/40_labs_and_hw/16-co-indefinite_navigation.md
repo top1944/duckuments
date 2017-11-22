@@ -45,7 +45,7 @@ You may also be interested to look at the `../belief_img` to see the output of t
 
 If everything is looking good then push the `START` button on the joystick and your robot should start to drive.
 
-The robot operation should like like [this](https://photos.app.goo.gl/AirDLHRXUiImuX7x1)
+The robot operation should look like [this](https://photos.app.goo.gl/AirDLHRXUiImuX7x1)
 
 Follow the instructions [here](#record-log) to take a **minimal** log of at least 5 mins of uninterrupted robot autonomous function.
 
