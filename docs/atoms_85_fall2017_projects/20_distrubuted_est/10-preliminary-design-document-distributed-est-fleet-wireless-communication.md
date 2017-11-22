@@ -334,3 +334,166 @@ WiFi specs (duckumentation)
 **How to mitigate the risks?**
 * Synchronization not part of networking → contract
 * Contracts to prevent redundancy
+
+
+
+
+
+#  PDD - Multi-Robot SLAM
+
+## Part 1: Mission and scope
+
+### Mission statement
+
+Enable multi-vehicle SLAM pose graph estimation
+
+### Motto
+
+BI UNUM IBI OMNES (Where there is one, there is everybody)
+
+### Project scope
+
+#### What is in scope
+
+**Multi-Robot SLAM**
+* Feature based representation of the Duckietown map based on April tags
+* Local map creation of single robot map.
+* Share map respresentation with other robots using the proposed communication methods
+* Centralized node for map merging of Duckietown map
+* Integrating libraries such as GtSAM, AprilTags 2.0, Aprilslam, etc.
+
+
+#### What is out of scope
+
+* Dense mapping of the environment
+* Implement SLAM ourselves
+* IMU integration
+* Update raspberry PI to advanced computer
+
+
+
+## Part 2: Definition of the problem
+
+### Problem statement
+
+**Mission = Enable multi-vehicle SLAM pose graph estimation**
+
+**Problem Statement = Create multi-robot SLAM capabilities**
+
+### Assumptions
+
+* Multi-robot communication is robust, and bug free
+* Suggested libraries can be integrated on raspberry Pi hardware
+* Robots have overlapping trajectories
+* All robots are well calibrated
+
+### Approach
+
+**Step 0:** Implement single-robot SLAM
+
+* Investigate which library does it the best
+
+**Step 1:** Establish an interface with the fleet communication team
+
+**Step 2:** Identify technologies for map merging
+
+* Either find a library or figure out how to implement it
+
+**Step 3:** Implement multi-robot SLAM
+
+* Integrate single slam approach and map merging on duckiebots using the communication infrastructure
+
+**Step 4:** Test implementation in Duckietown
+
+* Run codebase and test it's capabilities
+* Prepare demonstration material
+
+
+## Part 3: Preliminary design
+
+### Modules
+
+* Local map representation
+* Odometry method for Duckiebot
+* Single robot SLAM
+* Centralized map merging
+* Decentralized map merging
+
+
+### Interfaces
+
+**Fleet communication**
+* Send/receive Python functionality
+
+
+
+## Part 4: Project planning
+
+### Project plan
+
+#### Week 9: 13/11/2017
+* **Tasks:**
+    * Project kick-off and planning
+
+* **Deliverables:**
+    * Preliminary Design Document
+
+#### Week 10: 20/11/2017
+* **Tasks:**
+    * Contract negotiation with the relevant groups
+    * Investigate April Tags 2.0 & ROS integration
+    * Investigate Visual odometry capabilities on Raspberry Pi
+    * Investigate SLAM libraries (GtSAM, iSAM, mrpt SLAM), as well as ROS integration
+    * Check mrpt library for camera sensor.
+
+
+* **Deliverables:**
+    * April Tags is integrated and ready to go
+    * Go/Nogo decision for using visiual odometry to obtain velocity
+
+
+#### Week 11: 27/11/2017
+* **Tasks:**
+    * Implement single-robot SLAM
+    * Investigate approaches for multi-robot SLAM
+
+* **Deliverables:**
+    * Single-robot SLAM works
+
+#### Week 12: 04/12/2017
+* **Tasks:**
+    * Start integrating the centralized network
+
+#### Week 13: 11/12/2017
+* **Tasks:**
+    * Duckumentation
+    * Final integration
+    * Testing
+
+* **Deliverables:**
+    * Something
+
+#### Week 14: 18/12/2017
+* **Tasks:**
+    * More testing
+    * No sleep
+    * Presentation
+
+* **Deliverables:**
+    * FINAL DELIVERY Dec 22nd
+
+
+
+### Risk analysis
+
+**Possible Risks?**
+* The underlying fleet communication network is not ready in time for us to properly develop and test our multi-robot slam.
+* There’s a bug in one of the libraries we use that keeps us from progressing until the bug is fixed.
+* One of the components we depend on for proper localization and mapping is not robust/precise enough for us to get acceptable results in SLAM (e.g. camera calibration, motion model, etc.)
+
+
+**How to mitigate the risks?**
+* Develop most of the project early to have the risks manifest early on (e.g. we find a bug in a library, we discover that our motion model is bad, etc.)
+* Design interfaces in such a way that the underlying fleet communication network can be swapped out for existing software (e.g. ROS)
+
+
