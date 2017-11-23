@@ -1,20 +1,22 @@
-#  PDD - Fleet-level Planning {#fleet-level-planning-pdd status=beta}
+#  Fleet-level Planning: preliminary design document {#fleet-level-planning-preliminary-design-doc status=ready}
 
 
 ## Part 1: Mission and scope
 
 ### Mission statement
 
-> "Create the mobility-on-demand service for Duckietown."
+“Create the mobility-on-demand service for Duckietown.”
 
 ### Motto
 
 
-> VICTORIA CONCORDIA CRESCIT (Victory through harmony)
+
+
+VICTORIA CONCORDIA CRESCIT (Victory through harmony)
+
 
 
 ### Project scope
-
 
 #### What is in scope
 
@@ -36,8 +38,7 @@
 
 #### Stakeholders
 
-* Fleet-comms: for querying their API (contact: )
-* Devel-coordination and multi-slam:
+* Fleet-comms: for querying their API
 * The Architects (smart city): accurate map of city, sufficiently big map to accommodate ~25 duckiebots at once
 
 
@@ -46,20 +47,18 @@
 
 ### Problem statement
 
-We need to combine parts of many different stakeholders to achieve planning for a fleet of duckiebots.
+We need to combine parts of many different stakeholders to achieve planning for a fleet of duckiebots. 
 
 ### Assumptions
 
 * Sufficiently large duckietown to accommodate all duckiebots
 * Collision avoidance and navigation works well to allow duckiebots to reach target destination
-* Duckiebots can never park (i.e. stop still anywhere, unless waiting for other duckiebot at intersections etc.).
+* Duckiebots can never park (i.e. stop still anywhere, unless waiting for other duckiebot at intersections etc.). 
 
 
 ### Approach
 
-<div figure-id="fig:approach-diagram" figure-caption="Fleet-level planning diagram">
-    <img style="width: 80%" src="approach-diagram.png" alt="Fleet-level Planning Diagram"/>
-</div>
+![alt text](approach-diagram.png "Fleet-level Planning Diagram")
 
 Necessary steps:
 
@@ -74,7 +73,7 @@ Functionality includes:
 * Visualization of N duckiebots
 * Pick up and drop-off on request
 * Functional standby distribution of duckiebots waiting for a pickup/ drop-off request
-* Ability to arrange duckiebots in formations related to christmas videos
+* Ability to arrange duckiebots in formations related to christmas videos 
 * Taxi status lamps
 
 Metrics:
@@ -98,35 +97,32 @@ Metrics:
 ### Performance measurement
 
 * Calculate time taken to complete request
-* Number of requests served per unit of time
+* Number of requests served per unit of time 
 
 
 ## Part 3: Preliminary design
 
 ### Modules
 
-<div figure-id="fig:approach-diagram" figure-caption="Fleet-level planning diagram">
-    <img style="width: 80%" src="approach-diagram.png" alt="Fleet-level Planning Diagram"/>
-</div>
+![alt text](approach-diagram.png "Fleet-level Planning Diagram")
 
 ### Interfaces
 
-Duckiefleet -  request handling server:
+Duckiefleet -  request handling server: 
 
 * List of duckiebots and corresponding locations and statuses - will be sorted with the fleet-wireless-communications team, see Resources required / dependencies / costs
 
-Customer - request handling server:
+Customer - request handling server: 
 
 * Pickup location and desired target location via clicking on map
 
 Request handling server - Duckiefleet:
 
-* List of target locations for each duckiebot such that request is completed
+* List of target locations for each duckiebot such that request is completed 
 * Each duckiebot displays its status via its LEDs
 
 
 ### Preliminary plan of deliverables
-
 
 ### Specifications
 
@@ -148,38 +144,20 @@ Revisit visualization of Duckiebots on map and adapt it for visualization of N D
 None
 
 
+
 ## Part 4: Project planning
 
 
-<col3 figure-id="tab:project-plan" figure-caption="Fleet-level Planning Project Plan" class="Labels-Row1">
-    <span>Week of</span>
-    <span>Task</span>
-    <span>Deliverable</span>
-    <span>13.11.2017</span>
-    <span>Project kick-off and planning</span>
-    <span>Preliminary Design Document</span>
-    <span>20.11.2017</span>
-    <span>Look at state of current infrastructure</span>
-    <span>Running visualization of 1 duckiebot on map as currently implemented</span>
-    <span>27.11.2017</span>
-    <span>Visualization of n duckiebots</span>
-    <span> </span>
-    <span>04.12.2017</span>
-    <span>Mission planner, implement m-stochastic queue median policy (or similar, tbd with Claudio) </span>
-    <span> </span>
-    <span>11.12.2017</span>
-    <span>...continued</span>
-    <span>Run test cases (e.g. send n reference locations to n duckiebots)</span>
-    <span>18.12.2017</span>
-    <span>...continued</span>
-    <span>Run test cases (e.g. send n reference locations to n duckiebots)</span>
-    <span>25.12.2017</span>
-    <span> Implement customer request handling </span>
-    <span>Run test cases to establish reliable customer request handling routine</span>
-    <span>01.01.2018</span>
-    <span>Physical visualization of status, ETH formation</span>
-    <span>Verify that it works</span>
-</col3>
+| Week of    | Task                                                         | Deliverable                                                            |
+|------------|--------------------------------------------------------------|------------------------------------------------------------------------|
+| 13.11.2017 | Project kick-off and planning                                | Preliminary Design Document                                            |
+| 20.11.2017 | Look at state of current infrastructure                      | Running visualization of 1 duckiebot on map as currently implemented   |
+| 27.11.2017 | Visualization of n duckiebots                                |                                                                        |
+| 04.12.2017 | Mission planner, implement m-stochastic queue median policy… |                                                                        |
+| 11.12.2017 | ...(or similar, tbd with Claudio)                            | Run test cases (e.g. send n reference locations to n duckiebots)       |
+| 18.12.2017 | Implement customer request handling                          | Run test cases to establish reliable customer request handling routine |
+| 25.12.2017 | Physical visualization of status, ETH formation              | Verify that it works                                                   |
+| 01.01.2018 | End of project week, buffer, documentation                   | Presentation                                                           |
 
 
 ### Data collection
@@ -218,5 +196,6 @@ Papers:
 
 ### Risk analysis
 
-* Dependency on the Fleet-communications project. Closely work together with that team to get notified early about any upcoming problems that could delay the delivery of the needed parts for this project.
+* Dependency on the Fleet-communications project. Closely work together with that team to get notified early about any upcoming problems that could delay the delivery of the needed parts for this project. 
 * See Part 4: Project planning
+
