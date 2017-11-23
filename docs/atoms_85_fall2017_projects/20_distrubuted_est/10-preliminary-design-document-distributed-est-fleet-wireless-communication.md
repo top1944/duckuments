@@ -22,7 +22,7 @@ BI UNUM IBI OMNES (Where there is one, there is everybody)
 * TBD: does anything need to be synchronized?
 
 <div figure-id="fig:fleetcomm-figure1">
-    ![System Layout](https://github.com/duckietown/duckuments/blob/devel-distribution-est-fleet-wireless-communication/docs/atoms_85_fall2017_projects/16_distrubuted_est/Duckietown_Project_Image.png)
+    ![System Layout](https://github.com/duckietown/duckuments/blob/master/docs/atoms_85_fall2017_projects/20_distrubuted_est/Duckietown_Project_Image.png)
     <figcaption id='fig:fleetcomm-figure1:caption'>
         This the caption figure.
     </figcaption>
@@ -422,7 +422,7 @@ BI UNUM IBI OMNES (Where there is one, there is everybody)
 
 ### Interfaces
 
-**Fleet communication**
+* Fleet communication
 * Send/receive Python functionality
 
 
