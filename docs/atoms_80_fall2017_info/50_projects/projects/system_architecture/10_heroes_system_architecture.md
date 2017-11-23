@@ -4,10 +4,10 @@
 
 **Name of Project:** System Architecture
 
-**Team:**
+<!-- **Team:**
 
 * Sonja Brits (Zurich) (System architect)
-* Andrea Censi (Zurich) (Mentor/Supervisor)
+* Andrea Censi (Zurich) (Mentor/Supervisor) -->
 
 **Slack channel:** `#devel-heroes`
 
