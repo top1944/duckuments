@@ -339,7 +339,7 @@ WiFi specs (duckumentation)
 
 
 
-#  PDD - Multi-Robot SLAM
+#  PDD - Multi-Robot SLAM {#mrSLAM-PDD status=beta}
 
 ## Part 1: Mission and scope
 
