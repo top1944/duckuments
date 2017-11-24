@@ -62,8 +62,7 @@ We need to combine parts of many different stakeholders to achieve planning for 
 
 Necessary steps:
 
-* [See Part 4: Project planning](Part 4)
-
+* See [](#project-planning)
 
 
 ### Functionality-resources trade-offs
@@ -145,7 +144,7 @@ None
 
 
 
-## Part 4: Project planning
+## Part 4: Project planning {#project-planning}
 
 
 | Week of    | Task                                                         | Deliverable                                                            |
