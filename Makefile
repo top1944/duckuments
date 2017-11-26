@@ -341,11 +341,9 @@ master-split:
 # 		--mathjax \
 # 		--preamble $(tex-symbols)
 
-#--disqus
 
 fall2017-clean:
 	rm -rf out/fall2017
-	#rm -rf duckuments-dist/fall2017
 
 fall2017-prepare:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
