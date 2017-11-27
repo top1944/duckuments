@@ -1,4 +1,4 @@
-# Acquiring the parts for the Duckiebot `DB17-wjd` {#acquiring-parts-c0 status=beta}
+# Acquiring the parts (`DB17-wjd`) {#acquiring-parts-c0 status=beta}
 
 The trip begins with acquiring the parts. Here, we provide a link to all bits and pieces that are needed to build a Duckiebot, along with their price tag. If you are wondering what is the difference between different Duckiebot configurations, read [this](#duckiebot-configurations).
 

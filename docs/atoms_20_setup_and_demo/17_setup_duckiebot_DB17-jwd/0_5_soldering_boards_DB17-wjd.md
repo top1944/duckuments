@@ -1,4 +1,4 @@
-# Soldering boards for `DB17` {#soldering-boards-c0 status=beta}
+# Soldering boards (`DB17`) {#soldering-boards-c0 status=beta}
 
 Assigned: Shiying
 

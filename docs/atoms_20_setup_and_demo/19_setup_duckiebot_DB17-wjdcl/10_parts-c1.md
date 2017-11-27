@@ -1,4 +1,4 @@
-# Acquiring the parts for the Duckiebot `DB17-lc` {#acquiring-parts-c1 status=ready}
+# Acquiring the parts (`DB17-lc`) {#acquiring-parts-c1 status=ready}
 
 Upgrading your `DB17` (`DB17-wjd`) configuration to `DB17-lc` (`DB17-wjdlc`) starts here, with purchasing the necessary components. We provide a link to all bits and pieces that are needed to build a `DB17-lc` Duckiebot, along with their price tag. If you are wondering what is the difference between different Duckiebot configurations, read [](#duckiebot-configurations).
 
