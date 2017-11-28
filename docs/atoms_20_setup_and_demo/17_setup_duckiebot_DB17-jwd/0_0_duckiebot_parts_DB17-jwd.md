@@ -252,7 +252,7 @@ Requires: 2 AA 1.5V batteries ([](#fig:batteries)).
 
 ## Configuration `DB17-d`
 
-###  Tiny 32GB USB Flash Drive
+###  32GB USB Flash Drive
 
 In configuration `DB17-d`, the Duckiebot is equipped with an "external" hard drive ([](#fig:USBdrive)). This add-on is very convenient to store logs during experiments and later port them to a workstation for analysis. It provides storage capacity and faster data transfer than the MicroSD card.
 
