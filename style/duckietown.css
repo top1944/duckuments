@@ -24,7 +24,7 @@ section[status=to-update], section[status=recently-updated], section[status=depr
 }
 
 #tocdiv{
-    width: 31em;
+    width: 30em;
 }
 
 #tocdiv ul:first-child{
@@ -98,6 +98,10 @@ section[status=to-update], section[status=recently-updated], section[status=depr
     margin-top: 1.2em;
 }
 
-#not-toc section > div:last-child{
+#not-toc section > .navigation:first-child{
+    margin-bottom: 2em;
+}
+
+#not-toc section > .navigation:last-child{
     margin-top: 4em;
 }
