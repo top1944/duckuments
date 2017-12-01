@@ -29,7 +29,7 @@ Highlights: Role-playing experience (Duckietown Engineering Co.), public demo
 Summary:
 
 <div figure-id="fig:2016_MIT">
-   <img src="placeholder.png" class='group-photo'/>
+   <img src="placeholder.png" class='group-photo' width="15em"/>
    <figcaption>Duckietown at MIT in 2016</figcaption>
 </div>
 

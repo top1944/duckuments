@@ -37,7 +37,7 @@ To attach the LEDs on the duckiebots, the following components are needed:
 
 ## Connecting Wires to LEDs
 
-### LEDs 
+### LEDs
 
 The LEDs are common anode type. The longest pin is called the common.
 The single pin on the side of common is red channel.
@@ -56,11 +56,11 @@ To figure out the order to connect them to the LSD hat, use the legend on the si
     <img src="LSD_board.jpg" style='width:30em; height:auto'/>
 </div>
 
-Better: Use Tape to keep the LEDs stick with the wires. 
+Better: Use Tape to keep the LEDs stick with the wires.
 
 ## Connecting LEDs to LSD Hat
 
-Silkscreen legend: Rx, Gx, Bx are red, green, and blue channels, accordingly, where x is the LED number; C is a common line (either common anode or common cathode). 
+Silkscreen legend: Rx, Gx, Bx are red, green, and blue channels, accordingly, where x is the LED number; C is a common line (either common anode or common cathode).
 
 
 Define the following names for the lights:
@@ -97,6 +97,6 @@ Front Left, Front Middle, and Front Right LED Wiring suggestion:
 </div>
 
 
-##   Final LED tweaks, Confirm LED Function and Placement
+## Final tweaks
 
 Adjust the LED terminals (particularly in the front) so that they do not interfere with the wheels. This can be accomplished by bending them up, away from the treads.

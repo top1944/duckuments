@@ -233,8 +233,8 @@ Note: introducing the PWM hat in `DB17-l1` induces a _replacement_ of the [splic
     <s>[LED HAT](https://tinyurl.com/ydh9wqp5) (`DB17-l3`)</s><s>USD 28.20 for 3 pieces</s>
     <s>[20 Female-Female Jumper Wires (300mm)](https://www.adafruit.com/products/793) (`DB17-l3`)</s>         <s>USD 8</s>
     <s>[4 4 pin female header](http://www.digikey.com/product-detail/en/PPTC041LFBN-RC/S7002-ND/810144) (`DB17-l3`)</s><s>USD 0.60/piece</s>
-    <s>[2 16 pin male
     <s>[12 pin male header](http://www.digikey.com/product-detail/en/amphenol-fci/68000-412HLF/609-3266-ND/1878525) (`DB17-l3`)</s><s>USD 0.48/piece</s>
+    <s>[2 16 pin male
     header](http://www.digikey.com/product-detail/en/0022284160/WM50014-16-ND/313801) (`DB17-l3`)</s><s>USD 0.61/piece</s>
     <s>[3 pin male header](http://www.digikey.com/product-detail/en/M20-9990345/952-2263-ND/3728227) (`DB17-l3`)</s><s>USD 0.10/piece</s>
     <s>[2 pin female shunt jumper](http://www.digikey.com/product-detail/en/382811-8/A26228-ND/293121) (`DB17-l3`)</s><s>USD 2/piece</s>
