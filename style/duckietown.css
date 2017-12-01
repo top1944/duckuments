@@ -1,9 +1,8 @@
 /* Duckuments-specific CSS file */
 
+/*
 body{
-    /* ==> Revert changes from auto-generated CSS code */
     padding-left: 0;
-    /* <== Revert changes from auto-generated CSS code */
 }
 
 p{
@@ -102,3 +101,4 @@ section[status=to-update], section[status=recently-updated], section[status=depr
 #not-toc section > .navigation:last-child{
     margin-top: 4em;
 }
+*/
