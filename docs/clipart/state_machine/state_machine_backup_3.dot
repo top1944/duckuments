@@ -1,0 +1,108 @@
+digraph G {
+    ordering="out";
+    ranksep="0.8";
+    fontname="sans-serif";
+    rank="same";
+    penwidth="0.1";
+    edge [comment="Wildcard edge", 
+          fontname="sans-serif", 
+          fontsize=10, 
+          colorscheme="blues3", 
+          color=2, 
+          fontcolor=3];
+    node [style="filled", 
+          colorscheme="blues4", 
+          color="2", 
+          fontname="serif", 
+          distortion="0.5", 
+          width="3.0", 
+          fontsize=13, 
+          fillcolor="1", 
+          fontcolor="4", 
+          height="1.0"];
+    "straight_lane" [label="Drive on straight
+or curved lane
+(Controllers)"];
+    "emergency_stop" [label="Emergency stop
+(Controllers stop
+Duckiebot)"];
+    "emergency_stop" -> "straight_lane"  [label="Emergency_stop
+flag reset"];
+    "avoid_obstacle" [label="Avoid obstacle
+(Saviors supply reference d
+and curvature
+to Controllers)"];
+    "avoid_obstacle" -> "straight_lane"  [label="obstacle_flag 
+flag reset"];
+    "red_line" [label="Stop at red line
+(Controllers)"];
+    "straight_lane" -> "red_line"  [label="Red line
+detected"];
+    "intersection_arrive" [label="Arrive at
+intersection"];
+    "parking_arrive" [label="?"];
+    "intersection_random" [label="Random decision
+(Navigators)"];
+    "intersection_fleet_plan" [label="Planned decision
+(Fleet planning)"];
+    "intersection_navigate" [label="Navigate intersection
+(Navigators execute
+given decision, 
+supply Controllers with
+reference d and 
+curvature)"];
+    "intersection_end" [label="Return to lane following
+(some flag?)"];
+    "intersection_navigate" -> "intersection_end"  [label="End of
+intersection"];
+    "intersection_end" -> "straight_lane";
+    "intersection_coord_explicit" [label="Coordinate which
+Duckiebot gets to go
+(Explicit-coord)"];
+    "intersection_coord_explicit" -> "intersection_coord_explicit"  [label="Other Duckiebot's
+turn"];
+    "intersection_decision" [label="Await direction decision
+(Navigators)"];
+    "intersection_coord_explicit" -> "intersection_decision"  [label="My turn, 
+\"go\" flag set"];
+    "intersection_decision" -> "intersection_fleet_plan"  [label="\"fleet_planning_active\"
+flag set"];
+    "intersection_decision" -> "intersection_random"  [label="both 
+\"fleet_planning_active\"
+and
+\"neural_slam_active\"
+flags unset"];
+    "intersection_fleet_plan" -> "intersection_navigate";
+    "intersection_random" -> "intersection_navigate";
+    "intersection_arrive" -> "intersection_coord_explicit"  [label="if explicit-coord"];
+    "intersection_implicit_coord" [label="?"];
+    "intersection_arrive" -> "intersection_implicit_coord"  [label="if implicit-coord"];
+    "obstacle_detected" [label="Evaluate detected
+obstacle
+(Saviors)"];
+    "straight_lane" -> "obstacle_detected"  [label="obstacle
+detected"];
+    "obstacle_detected" -> "emergency_stop"  [label="Unavoidable!
+emergency_stop_flag
+flag set"];
+    "obstacle_detected" -> "avoid_obstacle"  [label="Avoidable
+obstacle_flag
+flag set"];
+    "intersection_neural_slam" [label="Planned decision
+(Neural SLAM)"];
+    "intersection_decision" -> "intersection_neural_slam"  [label="\"neural_slam_active\"
+flag set"];
+    "intersection_neural_slam" -> "intersection_navigate";
+    "intersection_decision" -> "?"  [label="Both flags active at same time"];
+    "red_line_decision" [label="Evaluate type
+of red line
+(Who does this?)"];
+    "red_line" -> "red_line_decision";
+    "red_line_decision" -> "intersection_arrive"  [label="Intersection
+line"];
+    "red_line_decision" -> "parking_arrive"  [label="Parking
+line"];
+    "intersection_navigate" -> "intersection_navigate"  [label="during
+intersection
+navigation"];
+}
