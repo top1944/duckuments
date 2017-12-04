@@ -1,5 +1,6 @@
 #Openhouse-dp5 {#Openhouse-dp5 status=draft}  
 
+This demo is from MIT2016.
 
 <div class='requirements' markdown="1">
 
@@ -10,26 +11,30 @@ Requires: Camera calibration and kinematic calibration completed.
 </div>
 
 
-## Duckietown setup notes 
+## Duckietown setup notes
 
-The Duckietown used for this demo needs to have the following characteristics: 
+The Duckietown used for this demo needs to have the following characteristics:
 
 * Three or four way intersection tiles
 * The intersections must be provided with two signs that have to be clearly visible: 1) The intersection type (stop sign or traffic light), 2)intersection topology. Traffic light if needed.
 
 
-## Duckiebot setup notes 
+## Duckiebot setup notes
 
 No special setup is needed for the Duckiebot. If more Duckiebots are available, they should be used too since the demo is about coordination and LED emission and detection.
 
 
 ## Demo instructions {#demo-template-run}
 
-Here, give step by step instructions to reproduce the demo.
 
-Step 1: XXX
+Step 1: Put your Duckiebot somewhere on the lane and turn it on. The LEDs should be all white.
 
-Step 2: XXX
+Step 2: Run the following command:
+
+
+     $ make openhouse-dp5
+
+
 
 
 ## Troubleshooting {#demo-template-troubleshooting}
