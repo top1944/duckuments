@@ -26,16 +26,24 @@ No special setup is needed for the Duckiebot. If more Duckiebots are available, 
 
 ## Demo instructions {#demo-template-run}
 
+Step 1: Run the following commands:
+Make sure you are in the duckietown folder:
 
-Step 1: Put your Duckiebot somewhere on the lane and turn it on. The LEDs should be all white.
+```
 
-Step 2: Run the following command:
+    &#36; cd ~/duckietown
 
+```
 
-     $ make openhouse-dp5
+Activate ROS:
 
+    $ source environment.sh
 
+Run the demo:
 
+    &#36; make openhouse-dp5
+
+Step 2: Wait for build to finish. Press 'X' to run anti-instagram. Place your Duckiebot on the lane and press 'start'
 
 ## Troubleshooting {#demo-template-troubleshooting}
 
