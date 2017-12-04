@@ -229,3 +229,23 @@ A few references for planning of Andrea Censi:
 - First Lecture: Putting things together <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-15 - ETHZ - Putting things together.pdf">PDF</a>.
 - Second Lecture: Second meeting of the Controllers group --> Filling out the Preliminary Design Document
 
+## Nov 20 (Mon) Testing Autonomous Vehicles{#Zurich-2017-11-20}
+
+- First Lecture: Testing Autonomous Vehicles <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-15 - ETHZ - Testing autonomous vehicles.pdf">PDF</a>.
+
+
+## Nov 22 (Wed) Fleet Control {#Zurich-2017-11-22}
+
+- Lecture: Fleet Control in Autonomous Mobility on Demand <a href="https://github.com/duckietown/lectures/blob/master/2017-11-22- ETHZ -Duckietown_FleetControl_(Claudio Ruch).pdf">PDF</a>.
+
+
+## Nov 27 (Mon) Inermediate design Report {#Zurich-2017-11-27}
+
+- First Lecture: The intermediate Design report is introduced <a href="http://book.duckietown.org/master/duckiebook/template_int_report.html#sec:template-int-report"></a>. It is due on Monday 4th of December. 
+- Second Lecture was left for project discussion and interaction.
+
+## Nov 29 (Wed) Fleet Control {#Zurich-2017-11-29}
+
+- First Lecture: Clausdio finished Fleet Control in Autonomous Mobility on Demand <a href="https://github.com/duckietown/lectures/blob/master/2017-11-22- ETHZ -Duckietown_FleetControl_(Claudio Ruch).pdf">PDF</a>.
+
+- Second Lecture Julian Presented the state of the art in data driven vs Model driven robotics. <a href="https://github.com/duckietown/lectures/blob/master/2017-11-29 - ETHZ - Model vs Data (Julian Zilly).pdf">PDF</a>
