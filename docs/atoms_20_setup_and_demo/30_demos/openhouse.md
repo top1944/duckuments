@@ -79,8 +79,8 @@ This demo is for the stop sign coordination. The intersection is without a traff
 Everything should be run from branch: phase-3-integration
 
 * Step 1: Run the following commands:
-Make sure you are in the duckietown folder:
 
+Make sure you are in the duckietown folder:
 
     $ cd ~/duckietown
 
