@@ -241,7 +241,9 @@ A few references for planning of Andrea Censi:
 
 ## Nov 27 (Mon) Inermediate design Report {#Zurich-2017-11-27}
 
+
 - First Lecture: The intermediate Design report is introduced here[template-int-report](#template-int-report). It is due on Monday 4th of December. 
+
 - Second Lecture was left for project discussion and interaction.
 
 ## Nov 29 (Wed) Fleet Control {#Zurich-2017-11-29}
