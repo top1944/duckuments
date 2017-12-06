@@ -1,4 +1,4 @@
-# Intersection  {#demo-navigation status=draft}
+# Intersection Navigation  {#demo-inter-navigation status=draft}
 
 <div class='requirements' markdown="1">
 
