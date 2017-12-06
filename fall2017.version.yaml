@@ -13,6 +13,9 @@ recipe:
   - homework-data-processing-ttic
   - checkoff_calibration
   - zurich-data-processing-exercises
+  - homework-augmented-reality
+  - checkoff_navigation
+  - homework-lane-filtering
 
 # This syntax is invalid YAML
 # - add: fall-2017
@@ -30,8 +33,12 @@ recipe:
   - add: checkoff_take_a_log
   - add: homework-data-processing-udem
   - add: homework-data-processing-ttic
+  - add: homework-augmented-reality
   - add: checkoff_calibration
   - add: zurich-data-processing-exercises
+  - add: checkoff_navigation
+  - add: homework-lane-filtering
+
 
 - add: duckietown-project
 - add: contribute
@@ -46,7 +53,9 @@ recipe:
   - add: exercise-instagram
   - add: exercise-bag-mirror
   - add: exercise-instagram-live
-
+  - add: exercise-augmented-reality
+  - add: exercise-filtering-ekf
+  - add: exercise-filtering-pf
 
 - make-part: theory-background
   title: Theory Background
@@ -74,6 +83,7 @@ recipe:
   contents:
   - add: configuration-management
   - add: introduction_to_ros
+  - add: pytorch-install
 
 # Add the entire part
 - add: building-duckiebot-c0
@@ -90,6 +100,8 @@ recipe:
   contents:
   - add: bibliography
   - add: last-modified
+
+- add: fall-2017-projects
 
 purl_prefix: http://purl.org/dt/fall2017/
 

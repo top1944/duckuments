@@ -1,4 +1,4 @@
-# Bug squashing guide {#bug-squashing status=draft}
+# Bug squashing guide {#bug-squashing status=beta}
 
 This unit describes how to debug your programs.
 
@@ -33,7 +33,7 @@ Especially in an easy environment like Linux/ROS/Python with coarse process-leve
 If you were using parallel C++ code, you would see lots of [heisenbugs][heisenbugs]).
 Here, the reason is always something simple.
 
-[heisenbugs]: XXX
+[heisenbugs]: https://en.wikipedia.org/wiki/Heisenbug
 
 ### Truth: the fault is likely yours
 
@@ -41,8 +41,6 @@ The second truth is the following:
 
 > While there are bugs in the system, it is more likely there is a bug in your code
 > or in your environment.
-
-
 
 ## What could it be? {#bug-squashing-what-could-it-be}
 
@@ -56,15 +54,15 @@ Permission errors are most likely because people randomly used "sudo", thus crea
 
 ### 9%: Bugs with the Duckietown software
 
-...
+Please report these, so that we can fix them.
 
 ### 1%: Bug with ROS or other system library
 
-...
+Please report these, so that we can find workaround.
 
 ### 10%: Problems with configuration files
 
-Make sure that you have pulled duckiefleet, and pushed your changes.
+Make sure that you have pulled `duckiefleet`, and pushed your changes.
 
 Finally, given the questions we had so far, I can give you the prior distribution of mistakes:
 
@@ -97,15 +95,21 @@ See: [](#what-the-duck)
 
 So, first of all, run `what-the-duck`. Then, fix the errors that `what-the-duck` shows you.
 
-The tool also produces a report about your system which you should attach to any request for help.
+This is the proper way to run `what-the-duck`:
 
-### Step 3: ...
+    $ cd ~/duckietown
+    $ source environment.sh
+    $ git checkout master
+    $ git pull
+    $ ./dependencies_for_duckiebot.sh # if you are on a Duckiebot
+    $ ./dependencies_for_laptop.sh  # if you are on a laptop
+    $ ./what-the-duck
 
-TODO: to write
+Note: you have to do all the steps in the precise order.
 
+The tool also produces an HTML report about your system which you should attach to any request for help.
 
 ## How to ask for help?
-
 
 I notice many people just writing: "I get this error: ...  How can I fix it?". This is not the best way to get help. If you don't include the code and stack trace, it's hard to impossible to help you.
 

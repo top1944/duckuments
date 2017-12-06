@@ -1,4 +1,4 @@
-# Assembling the Duckiebot `DB17`, `DB17-jwd`  {#assembling-duckiebot-c0 status=beta}
+# Assembling the Duckiebot (`DB17-jwd`)  {#assembling-duckiebot-c0 status=beta}
 
 Point of contact: Shiying Li
 
@@ -93,24 +93,59 @@ The Magician chassis package contains a steel omni-directional wheel, and the re
 </div>
 
 
-<!--
-#### Caster wheel
--->
-<!--
+### Caster wheel {#Caster_wheel_instruction}
+
 As alternative to omnidirection wheel, caster wheel has less friction.
 If you have purchased caster wheel, read this section.
-To assemble the caster wheel, the following materials is needed:
-* caster wheel
-* 4 standoffs (M3x12mm F-F, 6mm diameter)
-* 8 metal screws (M3x8mm)
-* 8 split lock washers
--->
 
-<!--
+To assemble the caster wheel, the following materials are needed:
 
-TODO: add instructions for Caster wheel assembly and move them to DB17-cl assembly instructions.
+* caster wheel (1x)
+* Metal standoffs (M3x12mm F-F, 6mm diameter) (4x)
+* Metal screws (M3x8mm) (8x)
+* Split/Spring lock washers (M3) (8x)
+* Flat lock washers (M3) (8x)
 
--->
+<div figure-id="fig:components_caster" figure-caption="Component-List for assemblying the caster wheels">
+     <img src="component_list_caster_wheels.jpg" style='width: 30em'/>
+</div>
+
+#### Prepare the Screws with Washers
+
+The lock washers belongs to screw-head side [](#fig:screws_washers_boltz), i.e. the split lock washer and the flat lock washers stays always near the screw head.
+The split lock washer stays near the screw head. First split lock washer, then flat lock washer.
+
+<div figure-id="fig:screws_washers_boltz" figure-caption="Insert the locker washers into metal screws from left to right">
+     <img src="screws_washer_boltz.jpg" style='width: 30em'/>
+</div>
+
+<div figure-id="fig:screw_washer" figure-caption="The metal screws with the lock washers">
+     <img src="screw_washer.jpg" style='width: 30em'/>
+</div>
+
+#### Assembly the metal standoffs on the caster wheels
+
+Fasten the screws with washers on the caster wheels from the bottom up and screw the metal standoffs from top to bottom. The caster before mounting looks like in [](#fig:caster_sideview).
+
+
+<div figure-id="fig:caster_sideview" figure-caption="The assembled caster before mounting it under the chassis-bottom">
+     <img src="caster_sideview.jpg" style='width: 30em'/>
+</div>
+
+#### Assembly the caster wheels under the chassis bottom
+
+Assembly the prepared caster wheels in the front side of duckiebot under the chassis bottom. Fasten the screws with washers from top to bottom.
+
+Better: In order to get all the screws properly into the metal standoffs, let all the screws stay loose within the right positions before all the screws are inserted into the standoffs[](#fig:assembled_caster).
+
+<div figure-id="fig:caster_above" figure-caption="Assembly the caster wheels under chassis-bottom">
+     <img src="caster_above.jpg" style='width: 30em'/>
+</div>
+
+<div figure-id="fig:assembled_caster" figure-caption="Assembled caster wheels (sideview)">
+     <img src="assembled_caster_sideview.jpg" style='width: 30em'/>
+</div>
+
 
 ### Mounting the standoffs
 
@@ -197,17 +232,6 @@ TODO: insert image with long cable
 
 Note: Make sure the camera cable is inserted in the right direction! The metal pins of the cable should be in contact with the metal terminals in the camera port of the PI.
 
-<!--
-<div figure-id="fig:raspi_camera_apart" figure-caption=" ">
-     <img src="raspi_camera_apart.jpg" style='width: 30em'/>
-</div>
--->
-
-<!--
-
-Note: Insert the cable in the right direction to connect the camera to the Raspberry Pi.
-
--->
 
 <div figure-id="fig:camera_with_long_cable" figure-caption="Camera with long cable">
      <img src="ziptied_top_camera.jpg" style='width: 25em'/>

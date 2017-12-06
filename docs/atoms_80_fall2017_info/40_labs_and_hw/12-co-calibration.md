@@ -23,6 +23,7 @@ Some of the services have changed and this requires a rebuild.
 On both laptop and robot do:
 
     $ cd ![Duckietown root]
+    $ source environment.sh
     $ make build-catkin-clean
     $ make build-catkin-parallel
     

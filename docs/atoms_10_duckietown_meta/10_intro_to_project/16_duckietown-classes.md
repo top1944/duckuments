@@ -29,7 +29,7 @@ Highlights: Role-playing experience (Duckietown Engineering Co.), public demo
 Summary:
 
 <div figure-id="fig:2016_MIT">
-   <img src="placeholder.png" class='group-photo'/>
+   <img src="placeholder.png" class='group-photo' width="15em"/>
    <figcaption>Duckietown at MIT in 2016</figcaption>
 </div>
 
@@ -164,5 +164,4 @@ Link: [Official Course Website](http://duckietown.nctu.edu.tw/)
 
 Summary: 57 students (and 10 teaching assistants) admitted from National Chiao Tung University
 
-Highlights:
-
+Highlights: Marine Robot, Multi-Robot Patrolling, Robot Terrian Discrimination in Gazebo, and Depth Lane Following

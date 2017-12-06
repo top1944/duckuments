@@ -1,5 +1,5 @@
 
-# Soldering boards for `DB17-l` {#soldering-boards-c1 status=draft}
+# Soldering boards (`DB17-l`) {#soldering-boards-c1 status=draft}
 
 Note: General rule in soldering
 
@@ -55,9 +55,9 @@ Put the following components on the table according the Figure
 
 TODO: add LSD board image, top and bottom.
 
-<img src="image_5.png" style='width: 20ex; height: auto'/>
+<img src="image_5.png" style='width: 20em; height: auto'/>
 
-<img src="image_6.png" style='width: 20ex; height: auto'/>
+<img src="image_6.png" style='width: 20em; height: auto'/>
 
 ### Prepare the components
 
@@ -74,7 +74,7 @@ Put the following components according the figure on the table:
 * 3 x 4 pin male header for servos
 
 <div figure-id="fig: LSD_HAT_and_all_components" figure-caption="LSD HAT and all of needed components">
-     <img src="LSD_HAT.jpg" style='width: 20ex; height: auto'/>
+     <img src="LSD_HAT.jpg" style='width: 20em; height: auto'/>
 </div>
 
 ### Soldering instructions

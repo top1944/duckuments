@@ -80,10 +80,8 @@ is stored in memory as a
 For example, the image shown above ([](#subfig:original)) will be represented in
 memory as a NumPy array with shape `(96, 96, 3)`. The first dimension indicates
 the number of pixels along the `Y-axis`, the second indicates the number of pixels
-along the `X-axis` and the third is known as *number of channels* (e.g., **R**ed,
-**G**reen, and **B**lue).
-
-Comment: Are we sure it is RGB and not BGR? -AC
+along the `X-axis` and the third is known as *number of channels* (e.g., **B**lue,
+**G**reen, and **R**ed).
 
 NumPy provides a utility function called
 [`concatenate`][concatenate]
@@ -93,26 +91,28 @@ that joins a sequence of arrays along a given axis.
 
 ## Testing it works with `image-ops-tester` {#image-ops-tester-specification}
 
-We provide a script called `image-ops-tester` that can be used
-to make sure that you wrote a conforming `dt-image-flip`.
-The script `image-ops-tester` is in the directory
+We provide 4 scripts that can be used to make sure that you wrote a conforming `dt-image-flip`.
+The scripts are `image-ops-tester-good`, `image-ops-tester-bad1`, `image-ops-tester-bad2`, and `image-ops-tester-bad3`.
+You can find them in the directory
 [`/exercises/dt-image-flip/image-ops-tester`](https://github.com/duckietown/duckuments/tree/master/exercises/dt-image-flip/image-ops-tester)
-in the [`duckietown/duckuments`](https://github.com/duckietown/duckuments)
-repository.
+in the [`duckietown/duckuments`](https://github.com/duckietown/duckuments) repository.
 
+The script called `image-ops-tester-good` tests your program in a situation in which we expect it to work properly. 
+The 3 “bad” test scripts (i.e., `image-ops-tester-bad1` through `image-ops-tester-bad3`) test your code in 
+situations in which we expect your program to complain in the proper way.
 
-Use it as follows:
+Use them as follows:
 
-    $ image-ops-tester ![candidate-program]
+    $ image-ops-tester-![scenario] ![candidate-program]
     
     
-Note: The tester script must be called from its own location. Make sure to change your working directory to
-`/exercises/dt-image-flip/image-ops-tester` before launching the tester script.
+Note: The tester scripts must be called from their own location. Make sure to change your working directory to
+`/exercises/dt-image-flip/image-ops-tester` before launching the tester scripts.
 
 
-If the script cannot be found, `image-ops-tester` will return 1.
+If the script cannot be found, `image-ops-tester-![scenario]` will return 1.
 
-`image-ops-tester` will return 0 if the program exists and conforms
+`image-ops-tester-![scenario]` will return 0 if the program exists and conforms
 to the specification ([](#image-ops-specification)).
 
 If it can establish that the program is not good, it will return 11.

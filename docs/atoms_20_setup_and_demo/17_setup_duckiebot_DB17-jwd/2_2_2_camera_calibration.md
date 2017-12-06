@@ -1,5 +1,5 @@
 # Camera calibration {#camera-calib status=ready}
- 
+
 
 <div class='requirements' markdown='1'>
 
@@ -17,8 +17,8 @@ Results: Calibration for the robot camera.
 ### Setup
 
 
-Download and print a PDF of the
-[calibration checkerboard](github:org=duckietown,repo=Software,path=duckietown/config/baseline/calibration/camera_intrinsic/calibration_pattern.pdf).
+Download and print a PDF of the calibration checkerboard 
+([A4 intrinsic](github:org=duckietown,repo=duckiefleet,path=calibrations/Calibration_pattern_A4_intrinsic.pdf), [A3 extrinsic](github:org=duckietown,repo=duckiefleet,path=calibrations/calibration_pattern_A3.pdf), [US Letter](github:org=duckietown,repo=Software,path=duckietown/config/baseline/calibration/camera_intrinsic/calibration_pattern.pdf)).
 Fix the checkerboard to a planar surface.
 
 <div figure-id="fig:calibration_checkerboard" figure-caption="">
@@ -31,7 +31,7 @@ Note: the squares must have side equal to 0.031 m = 3.1 cm.
 ### Calibration
 
 Make sure your Duckiebot is on, and both your laptop and Duckiebot are
-connected to the duckietown network. 
+connected to the duckietown network.
 
 #### Step 1
 
@@ -63,7 +63,7 @@ You should see a display screen open on the laptop ([](#fig:intrinsic_callibrati
 
 Position the checkerboard in front of the camera until you see colored lines
 overlaying the checkerboard. You will only see the colored lines if the entire
-checkerboard is within the field of view of the camera. 
+checkerboard is within the field of view of the camera.
 
 You should also see
 colored bars in the sidebar of the display window. These bars indicate the
@@ -76,11 +76,13 @@ current range of the checkerboard in the camera's field of view:
 
 Also, make sure to focus the image by rotating the mechanical focus ring on the lens of the camera.
 
+Comment: Do not change the focus during or after the calibration, otherwise your calibration is no longer valid. I'd also suggest to not to use the lens cover anymore; removing the lens cover changes the focus. -MK
+
 Now move the checkerboard right/left, up/down, and tilt the checkerboard
 through various angles of relative to the image plane. After each movement,
 make sure to pause long enough for the checkerboard to become highlighted. Once
 you have collected enough data, all four indicator bars will turn green. Press
-the "CALIBRATE" button in the sidebar. 
+the "CALIBRATE" button in the sidebar.
 
 Calibration may take a few moments. Note that the screen may dim. Don't worry, the calibration is working.
 
@@ -100,7 +102,7 @@ This will automatically save the calibration results on your Duckiebot:
 
     ![duckiefleet root]/calibrations/camera_intrinsic/![robot name].yaml
 
-#### Step 7
+#### Step 4
 
 Now let's push the `![robot name].yaml` file to the git repository. You can stop the `camera.launch` terminal with <kbd>Ctrl</kbd>-<kbd>C</kbd> or open a new terminal in Byobu with <kbd>F2</kbd>.
 
@@ -109,7 +111,7 @@ Update your local git repository:
     duckiebot $ cd ![duckiefleet root]
     duckiebot $ git pull
     duckiebot $ git status
-    
+
 You should see that your new calibration file is uncommitted. You need to commit the file to your branch.
 
     duckiebot $ git checkout -b ![Github username]-devel
@@ -131,7 +133,7 @@ Arrange the Duckiebot and checkerboard according to [](#fig:extrinsic_setup). No
 
 Note: Please re-do the picture above with a conforming Duckiebot. A conforming Duckiebot has a duckie on top. -AC
 
-[](#fig:extrinsic_view) shows a view of the calibration checkerboard from the Duckiebot. To ensure proper calibration there should be no clutter in the background.
+[](#fig:extrinsic_view) shows a view of the calibration checkerboard from the Duckiebot. To ensure proper calibration there should be no clutter in the background and two A4 papers should be aligned next to each other.
 
 <div figure-id="fig:extrinsic_view" figure-caption="">
   <img src="extrinsic_view.jpg" style='width: 30em'/>
@@ -150,7 +152,7 @@ Log in into your robot using SSH and launch the camera:
 
 #### Step 2
 
-Run the `ground_projection_node.py` node on your laptop: 
+Run the `ground_projection_node.py` node on your laptop:
 
     laptop $ cd ![duckietown root]
     laptop $ source environment.sh
@@ -181,7 +183,7 @@ You should see something like this:
     /![robot name]/ground_projection/estimate_homography
     /![robot name]/ground_projection/get_ground_coordinate
     ...
-    
+
 If you want to check whether your camera output is similar to the one at the [](#fig:extrinsic_view) you can start `rqt_image_view`:
 
     laptop $ rosrun rqt_image_view rqt_image_view
@@ -202,5 +204,3 @@ This will do the extrinsic calibration and automatically save the file to your l
 
 As before, add this file to your local Git repository on your laptop, push the changes to your branch and do a pull request to master.
 Finally, you will want to update the local repository on your Duckiebot.
-
-
