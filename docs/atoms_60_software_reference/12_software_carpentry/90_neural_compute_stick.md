@@ -1,11 +1,5 @@
 # Movidius Neural Compute Stick Install {#ncsdk-install status=draft}
 
-## How to
-
-1. create and train model in tensorflow or caffe
-2. compile the model into NC format
-3. move model onto duckiebot and run with NCSDK
-
 ## Laptop Installation
 install based on [ncsdk website](https://movidius.github.io/ncsdk/install.html)
 
@@ -32,12 +26,8 @@ you don't need tensorflow, caffe, or any tools in order to run the compiled netw
 on duckiebot:
 
     git clone http://github.com/Movidius/ncsdk
-    cd ~/ncsdk
-
-edit the conf to not install caffe or tensorflow
-
-    nano ~/ncsdk/ncsdk.conf
-
+    cd ~/ncsdk/api/src
+    make
     sudo make install
 
 
@@ -52,11 +42,50 @@ make sure caffe and tensorflow as installed
     python3 -c 'import tensorflow as tf; import caffe'
 
 
-install ncsdk:
+install sdk:
 
     git clone http://github.com/Movidius/ncsdk
     cd ~/ncsdk
     make install
     make examples
+
+
+# How To Use Neural Compute Stick {#ncsdk-how-to status=draft}
+
+## Workflow
+
+create and train model in tensorflow or caffe (brief note on [configuration](https://movidius.github.io/ncsdk/configure_network.html) )
+
+save tensorflow model as a `.meta`  (or caffe model in `.prototxt`)
+    
+    saver = tf.train.Saver()
+    ...
+    saver.save(sess, '![model]')
+
+compile the model into NC format (documentation [here](https://movidius.github.io/ncsdk/tools/compile.html))
+
+
+    mvNCCompile ![model].meta -o ![model].graph
+    
+
+move model onto duckiebot 
+
+    scp ![model].meta ![user]@![robot name]:~/path_to_networks/
+
+run the compiled model
+
+    with open(path_to_networks + ![model].meta, mode='rb') as f:
+        graphfile = f.read()
+    graph = device.AllocateGraph(graphfile)
+    graph.LoadTensor(input_image.astype(numpy.float16), 'user object')
+    output, userobj = graph.GetResult()
+
+## Benchmarking
+
+get benchmarking (frames per second) from their app zoo
+    
+    git clone https://github.com/movidius/ncappzoo
+    cd ncappzoo/apps/benchmarkncs
+    ./mobilenets_benchmark.sh | grep FPSk
 
 
