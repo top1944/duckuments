@@ -63,8 +63,8 @@
 ### Boundary Region Detection
 
 * Intuitions:
-    * We observed that regions of boundaries between lane lines already contain sufficient color information.
-    * Restricting to boundary areas will further remove irrelevant parts while substantially accelerating k-means computation.
+    * We observed that regions of boundaries between lane lines already contain sufficient color information. This is because the line detector only cares about the edges of lane lines, which is the entire reason we are performing anti-instagram.
+    * In addition, restricting to boundary areas will further remove irrelevant portions of the image while substantially accelerating k-means computation.
 * Detailed steps:
     1. Compute, threshold and dilate gradient
         
@@ -73,7 +73,7 @@
         <img src="27_anti_instagram/grad_cnt.png" style="width: 400px"/>
     2. Find contours as masks
         
-        We want to capture the boundary areas, which can be found as contours in the gradient map above.
+        We want to capture the boundary areas, which can be found as contours in the gradient map above. This is done via the algorithm described in Suzuki, S. and Abe, K., Topological Structural Analysis of Digitized Binary Images by Border Following. CVGIP 30 1, pp 32-46 (1985) (implemented in OpenCV).
         
         <img src="27_anti_instagram/grad_cnt_masked.png" style="width: 400px"/>
     3. Remove small contours and fill in 
@@ -86,8 +86,8 @@
 
 ## K-Means Clustering
     
-TODO: by Christoph
+TODO: by Christoph (ETHZ)
 
 ## Fitting Color Transform with Least Squares
 
-TODO: by Milan
+TODO: by Milan (ETHZ)

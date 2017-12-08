@@ -10,6 +10,10 @@ Requires: Lane-following demo has been successfully launched. [Lane-following de
 
 </div>
 
+## Video of expected results {#demo-template-expected}
+
+First, we show a [video](https://drive.google.com/file/d/1k4mDS7rwOrkkx3WWIDFMei7-0Ipzu2pj/view?ts=5a2b0d6e) of the expected behavior.
+
 ## Duckietown setup notes {#demo-anti-instagram-duckietown-setup}
 
 A duckietown with white and red solid lines, yellow dashed lines and black lane surface. No obstacles on the lane.
@@ -52,4 +56,4 @@ To view the result, select in rqt_image_view the topic /robot name/line_detector
 
 ## Troubleshooting {#demo-anti-instagram-troubleshooting}
 
-Contact David Yunis - TTIC via Slack if any trouble occurs. 
+Contact David Yunis - TTIC, Shengjie Lin - TTIC, Milan Schilling - ETHZ or Christoph Zuidema - ETHZ via Slack if any trouble occurs. 
