@@ -1,3 +1,5 @@
+# Single Slam Project Functionality
+
 For our final project, we are submitting an implementation of the Extended Kalman Filter SLAM algorithm, contained in the file slam.py, and an accompanying series of test cases in test_slam.py. Our github respository can be accessed [here](github.com/CasperN/slam)
 
 We have simulated the change in the agent’s uncertainty overtime using a matplotlib visualization. slam.py includes the following function to visualize the positions and corresponding three sigma matrices of the agent and each of the landmarks as it traverses through space:
