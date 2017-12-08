@@ -309,6 +309,8 @@ master-html:
 
 	mkdir -p duckuments-dist/master
 	python add_stylesheet.py out/master/data/1.html $(duckietown_css)
+	python add_search.py out/master/data/1.html
+	./make-index.sh ./docs
 
 	python -m mcdp_utils_xml.note_errors_inline out/master/data/1.html 2>&1 | tee duckuments-dist/master/errors.txt
 	python -m mcdp_docs.add_edit_links out/master/data/localcss.html < out/master/data/1.html
