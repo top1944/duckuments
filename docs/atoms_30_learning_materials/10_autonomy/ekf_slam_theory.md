@@ -38,7 +38,7 @@ In the predict step, we use the process model to model the change in position of
 
 The update step occurs when the robot encounters a landmark. We first find the difference between the robot x,y and the landmark x,y, and then use those differences to produce the measurement model as discussed above. Once we get the “z” vector, which corresponds to the measurement model, we find the Jacobian of the measurement model so that we can use it to update covariances and for linearization. We then compute the Kalman gain using the Jacobian and its transpose along with the noise Q. The final step is to update the the x, y and 𝛳 values given the Kalman gain, and make sure that the 𝛳 value is within the range 0 to 2𝜋.
 
-###Update Step
+### Update Step
 
     def single_update(self, r, phi, featureID):
         """Updates mean and covariance given this observation."""
