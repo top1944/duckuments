@@ -1,58 +1,78 @@
 #!/usr/bin/env python
-import sys, os
-filename = sys.argv[1]
+import os
+from sys import argv
 
-# python add_stylesheet.py out/master/data/1.html style/duckietown.css
+class AddSearch():
+    def __init__(self):
 
-data = open(filename).read()
+        # jquery
+        jquery = '<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>'
 
-### ADD SCRIPTS TO THE HEADER ###
+        # lunr loads the index
+        lunr = '<script src="https://unpkg.com/lunr/lunr.js"></script>'
 
-# jquery
-jquery = '<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>'
+        # get URL from section ID
+        getURL = '<script src="getURL.js"></script>'
 
-# lunr loads the index
-lunr = '<script src="https://unpkg.com/lunr/lunr.js"></script>'
+        # results page logic
+        results = '<script type="text/javascript" src="results.js"></script>'
 
-# get URL from section ID
-getURL = '<script src="getURL.js"></script>'
+        # results CSS
+        style = '<link rel="stylesheet" href="style/duckietown.css">'
 
-# results page logic
-results = '<script type="text/javascript" src="results.js"></script>'
+        self.include = [jquery, lunr, getURL, results, style]
 
-scripts = [jquery, lunr, getURL, results]
 
-for s in scripts:
-    before = '</head>'
-    if s in data:
-        print('Already present ' + s)
+
+        ### ADD SEARCHBOX TO THE BODY ###
+
+        # div with the searchbox
+        self.d = """
+            <div id="topbar">
+                <div id="searchdiv">
+                    <form action="results.html">
+                       <input type="text" id="searchbox" name="searchbox" placeholder="search">
+                    </form>
+                </div>
+            </div> 
+            """
+
+    def addSearch(self, filename, verbose=False):
+        
+        data = open(filename).read()
+
+        ### ADD SCRIPTS TO THE HEADER ###
+
+        if self.d in data and verbose:
+            print('Already present:\n\t' + self.d)
+        else:
+            after = '<body>'
+            data = data.replace(after, after + self.d)
+            assert self.d in data
+
+        for s in self.include:
+            if s in data and verbose:
+                print('Already present:\n\t' + s)
+            else:
+                before = '</head>'
+                data = data.replace(before, s + before)
+                assert s in data
+
+        with open(filename, 'w') as f:
+            f.write(data)
+
+    def removeSearch(self, filename):
+        data = open(filename).read()
+        data = data.replace(self.d, '')
+        for s in self.include:
+            data = data.replace(s, '')
+        with open(filename, 'w') as f:
+            f.write(data)
+
+
+
+if __name__ == '__main__':
+    if len(argv) == 3 and argv[2] == "--remove":
+        AddSearch().removeSearch(argv[1])
     else:
-        data = data.replace(before, s + before)
-        assert s in data
-
-with open(filename, 'w') as f:
-    f.write(data)
-
-
-
-### ADD SEARCHBOX TO THE BODY ###
-
-# div with the searchbox
-d = """
-    <div id="searchdiv">
-        <form action="results.html">
-           <input type="text" id="searchbox" name="searchbox" placeholder="search">
-        </form>
-    </div> <br> <br>
-    """
-
-after = '<body>'
-if d in data:
-    print('Already present ' + d)
-else:
-
-    data2 = data.replace(after, after + d)
-    assert d in data2
-
-    with open(filename, 'w') as f:
-        f.write(data2)
+        AddSearch().addSearch(argv[1], verbose=True)
