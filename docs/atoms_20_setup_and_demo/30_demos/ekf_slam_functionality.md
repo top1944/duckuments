@@ -1,34 +1,36 @@
-For our final project, we are submitting an implementation of the Extended Kalman Filter SLAM algorithm, contained in the file slam.py, and an accompanying series of test cases in test_slam.py. We have simulated the change in the agent’s uncertainty overtime using a matplotlib visualization. slam.py includes the following function to visualize the positions and corresponding three sigma matrices of the agent and each of the landmarks as it traverses through space:
+For our final project, we are submitting an implementation of the Extended Kalman Filter SLAM algorithm, contained in the file slam.py, and an accompanying series of test cases in test_slam.py. Our github respository can be accessed [here link](github.com/CasperN/slam)
 
-  def show(self, sigma=3):
-    """Returns a 3 sigma visualization about every point."""
+We have simulated the change in the agent’s uncertainty overtime using a matplotlib visualization. slam.py includes the following function to visualize the positions and corresponding three sigma matrices of the agent and each of the landmarks as it traverses through space:
 
-    fig, ax = plt.subplots(figsize=(5, 5))
+    def show(self, sigma=3):
+      """Returns a 3 sigma visualization about every point."""
 
-    # Plot robot position
-    plotCovariance(ax,
-      self.mean[0:2],
-      self.cov[0:2, 0:2],
-      sigma, 'b','bot', self.mean[2])
+      fig, ax = plt.subplots(figsize=(5, 5))
 
-    # Plot map features
-    for tag in self.features:
-      i = self.features[tag]
+      # Plot robot position
       plotCovariance(ax,
-        self.featureMean(i),
-        self.featureCov(i),
-        sigma, 'r', str(tag))
+        self.mean[0:2],
+        self.cov[0:2, 0:2],
+        sigma, 'b','bot', self.mean[2])
 
-    plt.xlim((-5,5))
-    plt.ylim((-5,5))
+      # Plot map features
+      for tag in self.features:
+        i = self.features[tag]
+        plotCovariance(ax,
+          self.featureMean(i),
+          self.featureCov(i),
+          sigma, 'r', str(tag))
 
-    plt.show()
+      plt.xlim((-5,5))
+      plt.ylim((-5,5))
 
-    buf = io.BytesIO()
-    plt.savefig(buf, format='png')
-    buf.seek(0)
-    plt.close()
-    return buf
+      plt.show()
+
+      buf = io.BytesIO()
+      plt.savefig(buf, format='png')
+      buf.seek(0)
+      plt.close()
+      return buf
 
 We have included several tests, representing each of the following trajectories:
 Straight line with landmarks
@@ -41,19 +43,19 @@ Square with 4 landmarks
 
 Each provided test is defined as show below:
 
-def test_path1():
-  """Straight line with landmarks."""
-  path = []
-  path.append((0,0,1))
-  path.append([('A',4,0)])
-  path.append((0,1,1))
-  path.append([('A',3,0)])
-  path.append((0,1,1))
-  path.append([('A',2,0)])
-  path.append((0,1,1))
-  path.append([('A',1,0)])
+    def test_path1():
+      """Straight line with landmarks."""
+      path = []
+      path.append((0,0,1))
+      path.append([('A',4,0)])
+      path.append((0,1,1))
+      path.append([('A',3,0)])
+      path.append((0,1,1))
+      path.append([('A',2,0)])
+      path.append((0,1,1))
+      path.append([('A',1,0)])
 
-  execute_path(path, True)
+      execute_path(path, True)
 
 The angular velocity, velocity, and change in time of each observation is appended to the path in the form of the tuple (w, v, dt). The agent’s landmark detections at any given point in time are appended to the path in the form of a list of tuples, with each feature represented by its identifier, x-coordinate, and y-coordinate. 
  
