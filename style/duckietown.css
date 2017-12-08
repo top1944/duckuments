@@ -5,6 +5,46 @@ p{
     margin-bottom: 0.5em;
 }
 
+#searchdiv {
+  padding: 5px;
+  position: fixed;
+  right: 0;
+}
+
+#topbar {
+  width: 100%;
+  height: 35px;
+  position: fixed;
+  background-color: rgba(255,255,255,0.95);
+}
+
+#searchbox {
+  margin-right: 0px;
+  margin-left: auto;
+  padding: 2px; 
+  position: relative;
+}
+
+#duckieImg {
+  height: auto; 
+  width: 13em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+.thisPageNumLink { 
+  color: #333;
+  background-color: #DDD;
+  padding: 3px;
+}
+
+.pageNumLink {
+  text-decoration: none;
+ }
+
+.dummy {
+  background-color: #F00;
+}
+
 /*
 body{
     padding-left: 0;

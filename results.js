@@ -66,16 +66,39 @@ function getSample(obj, query) {
         }
     }
     sample = sample.substr(0, sample.length-3);
+    if (sample == "") {
+        containingText = $(`:Contains("${query}")`, obj).text();
+        var lowerArr = containingText.toLowerCase().split(' ');
+        var lowerQuery = query.toLowerCase();
+        var index = null;
+        for (var i=0; i<lowerArr.length; i++) {
+            if (lowerArr[i].includes(lowerQuery)) {
+                index = i; 
+                break;
+            }
+        }
+        if (!index) {
+            console.log("query not found");
+            return "..."
+        }
+        var MAX_NUM_WORDS = 60;
+        var first_index = Math.max(index-5, 0);
+        var textArr = containingText.split(" ");
+        var text = textArr
+            .slice(first_index, textArr.length)
+            .join(" ")
+            .replace(/[✎🔗]+/g, '...')
+            .replace(/prevnext|Because of mathjax bug/g," ");
+
+        sample += text + "...";
+
+    }
     if (sample.length > MAX_SAMPLE_LEN) {
         sample = sample.substr(0, MAX_SAMPLE_LEN);
         sample = sample.substr(0, 
             Math.min(sample.length, sample.lastIndexOf(" ")));
     }
-    if (sample == "") {
-        // TODO
-        // Look at entire doc not filtered by 
-        // .without-header-inside
-    }
+    
     if (sample.substr(-1) != '.') {
         sample += "...";
     }
