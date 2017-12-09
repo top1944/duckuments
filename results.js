@@ -29,14 +29,6 @@ function getParameterByName(name, url) {
 
 MAX_SAMPLE_LEN = 360
 
-/*
-function addTOC() {
-    $.get(duckietownRoot + "ssh", function (data) {
-        d = $.parseHTML(data);
-    })
-}
-*/
-
 function getPageInfo(url, query) {
     $.ajax({
         url: url,
@@ -149,7 +141,7 @@ function emphasizeWord(string, query) {
     var queryStemmed = stemmer(query.toLowerCase());
     var stringArrStemmed = string
         .toLowerCase()
-        .split(" ")
+        .split(/ /)
         .map(x => x.replace(/[^\w]/g, ""))
         .map(x => stemmer(x));
     var stringArr = string.split(" ");
