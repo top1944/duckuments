@@ -35,6 +35,7 @@ class AddSearch():
                     </form>
                 </div>
             </div> 
+            <br><br>
             """
 
     def addSearch(self, filename, verbose=False):
