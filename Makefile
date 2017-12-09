@@ -309,9 +309,8 @@ master-html:
 
 	mkdir -p duckuments-dist/master
 	python add_stylesheet.py out/master/data/1.html $(duckietown_css)
-	python add_search.py out/master/data/1.html
 	./make-index.sh ./docs
-
+	python add_search.py out/master/data/1.html
 	python -m mcdp_utils_xml.note_errors_inline out/master/data/1.html 2>&1 | tee duckuments-dist/master/errors.txt
 	python -m mcdp_docs.add_edit_links out/master/data/localcss.html < out/master/data/1.html
 	python -m mcdp_docs.embed_css out/master/data/duckiebook.html < out/master/data/localcss.html
@@ -319,16 +318,19 @@ master-html:
 		--input out/master/data/duckiebook.html  \
 		--output duckuments-dist/master/duckiebook.html \
 		--assets duckuments-dist/master/duckiebook/assets
+	
+
 
 master-split:
 	# rm -f $(dist_dir)/duckiebook/*html
-	 mcdp-split \
+	mcdp-split \
 		--filename out/master/data/duckiebook.html \
 		--output_dir duckuments-dist/master/duckiebook \
 		-o out/master/split \
 		-c " config echo 1; config colorize 1; rparmake" \
 		--mathjax \
 		--preamble $(tex-symbols)
+	python add_search_multiple out/master/data/1.html.parts
 
 
 
