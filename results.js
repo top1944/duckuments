@@ -1,11 +1,14 @@
 webroot = window.location.origin
-//bookRoot = "http://book.duckietown.org/master/duckiebook/"
 
-// For a compiled duckiebook, we will use the following
-// more general path:
-bookRoot = RegExp(/(.+\/).+\.html.+/)
-    .exec(window.location.href)[1];
-
+// If testing from localhost:8000/results.html, we hardcode
+// the path.
+if (window.location.pathname == "/results.html") {
+    bookRoot = "http://book.duckietown.org/master/duckiebook/"
+}
+else {
+    bookRoot = RegExp(/(.+\/)(search)?.+\.html.+/)
+        .exec(window.location.href)[1];
+}
 $.expr[':'].Contains = function(a,i,m){
     c = $(a)
         .text()
@@ -138,51 +141,59 @@ function emphasizeWord(string, query) {
 
 searchval = getParameterByName("searchbox");
 
-$.getJSON(webroot + "/secIDs.json", function(json) {
-    for (var i in json) {
-        var url = getURL(bookRoot, json[i]);
-        if (url.includes("undefined")) {
-            console.log(json[i]);
-        }
-    }
-})
+if (searchval) {
+    findResults();
+}
 
-$.getJSON(webroot + "/index.json", function(json) {
-    idx = lunr.Index.load(json);
-    result = idx.search(searchval);
-    $('#searchbox').val(searchval);
-
-    var resultdiv = $('#searchresults');
-    if (result.length === 0) {
-        // Hide results
-        resultdiv.hide();
-    } else {
-        // Show result
-        resultdiv = $('#searchresults');
-        resultdiv.empty();
-        var numResults = result.length
-        var MAX_RESULTS_LEN = 10;
-        resArray = []
-        for (var i=0; i<numResults; i+=MAX_RESULTS_LEN) {
-            resArray.push(result.slice(i, 
-                Math.min(i+MAX_RESULTS_LEN,numResults)));
+function checkURLs(jsonfile) {
+    $.getJSON(webroot + jsonfile, function(json) {
+        for (var i in json) {
+            var url = getURL(bookRoot, json[i]);
+            if (url.includes("undefined")) {
+                console.log(json[i]);
+            }
         }
-        currentPage = 0;
-        numPages = numResults / MAX_RESULTS_LEN;
-        for (var i=0; i<numPages; i++) {
-            var span = `<span id="result${i}span" 
-                style="display:inline-block; padding:10px;">
-                </span>`
-            var show = `<a class="pageNumLink" id="link${i}"
-                onclick="displayResults(${i},${numResults})" 
-                href="javascript:void(0);">${i+1}</a>`
-            $('#pageLinks').append(span);
-            $(`#result${i}span`).append(show);
+    })
+}
 
+function findResults() {
+    $.getJSON(webroot + "/index.json", function(json) {
+        idx = lunr.Index.load(json);
+        result = idx.search(searchval);
+        $('#searchbox').val(searchval);
+
+        var resultdiv = $('#searchresults');
+        if (result.length === 0) {
+            // Hide results
+            resultdiv.hide();
+        } else {
+            // Show result
+            resultdiv = $('#searchresults');
+            resultdiv.empty();
+            var numResults = result.length
+            var MAX_RESULTS_LEN = 10;
+            resArray = []
+            for (var i=0; i<numResults; i+=MAX_RESULTS_LEN) {
+                resArray.push(result.slice(i, 
+                    Math.min(i+MAX_RESULTS_LEN,numResults)));
+            }
+            currentPage = 0;
+            numPages = numResults / MAX_RESULTS_LEN;
+            for (var i=0; i<numPages; i++) {
+                var span = `<span id="result${i}span" 
+                    style="display:inline-block; padding:10px;">
+                    </span>`
+                var show = `<a class="pageNumLink" id="link${i}"
+                    onclick="displayResults(${i},${numResults})" 
+                    href="javascript:void(0);">${i+1}</a>`
+                $('#pageLinks').append(span);
+                $(`#result${i}span`).append(show);
+
+            }
+            displayResults(currentPage, numResults);
         }
-        displayResults(currentPage, numResults);
-    }
-});
+    });
+}
 
 function displayResults(pageToDisplay, numResults) {
     var resultdiv = $('#searchresults');

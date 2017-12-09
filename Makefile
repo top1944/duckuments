@@ -311,6 +311,7 @@ master-html:
 	python add_stylesheet.py out/master/data/1.html $(duckietown_css)
 	./make-index.sh ./docs
 	python add_search.py out/master/data/1.html
+        cp -r results.html style stemmer.js getURL.js results.js duckie.png duckuments-dist/master/duckiebook
 	python -m mcdp_utils_xml.note_errors_inline out/master/data/1.html 2>&1 | tee duckuments-dist/master/errors.txt
 	python -m mcdp_docs.add_edit_links out/master/data/localcss.html < out/master/data/1.html
 	python -m mcdp_docs.embed_css out/master/data/duckiebook.html < out/master/data/localcss.html
@@ -330,7 +331,7 @@ master-split:
 		-c " config echo 1; config colorize 1; rparmake" \
 		--mathjax \
 		--preamble $(tex-symbols)
-	python add_search_multiple.py out/master/data/1.html.parts
+	python add_search_multiple.py duckuments-dist/master/duckiebook
 
 
 
