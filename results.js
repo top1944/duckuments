@@ -141,7 +141,7 @@ function emphasizeWord(string, query) {
     var queryStemmed = stemmer(query.toLowerCase());
     var stringArrStemmed = string
         .toLowerCase()
-        .split(/ /)
+        .split(/ /) 
         .map(x => x.replace(/[^\w]/g, ""))
         .map(x => stemmer(x));
     var stringArr = string.split(" ");
