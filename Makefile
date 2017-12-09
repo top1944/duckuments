@@ -56,7 +56,7 @@ check-programs:
 check-duckietown-software:
 	@if [ -d $(duckietown-software) ] ; \
 	then \
-	     echo '';\
+		 echo '';\
 	else \
 		echo 'Please create a link "$(duckietown-software)" to the Software repository.'; \
 		echo '(This is used to include the package documentation)'; \
@@ -66,6 +66,23 @@ check-duckietown-software:
 		echo ''; \
 		exit 1; \
 	fi;
+
+add-searchbar:
+	@type node >/dev/null 2>&1 || { echo "Node not install"; \
+	echo 'Please install Node.js'; \
+	echo '(This is used to create a search index)'; \
+	echo '    sudo apt-get install nodejs'; \
+	exit 1; }
+	
+	@[ -e "`npm root -g`/lunr" ] || { echo 'Please install Lunr'; \
+	echo '(This is used to create a search index)'; \
+	echo '    npm install -g lunr'; \
+	exit 1; }
+	
+	echo "All searchbar dependencies were found"
+	@./make-index.sh ./docs
+	@python add_search_multiple.py duckuments-dist/master/duckiebook
+	@cp -r results.html style stemmer.js getURL.js results.js duckie.png duckuments-dist/master/duckiebook
 
 generated_figs=docs/generated_pdf_fig
 
@@ -281,6 +298,7 @@ index:
 master: checks update-mcdp update-software
 	$(MAKE) master-html
 	$(MAKE) master-split
+	$(MAKE) add-searchbar
 
 master-clean:
 	rm -rf out/master
@@ -309,9 +327,6 @@ master-html:
 
 	mkdir -p duckuments-dist/master
 	python add_stylesheet.py out/master/data/1.html $(duckietown_css)
-	./make-index.sh ./docs
-	python add_search.py out/master/data/1.html
-        cp -r results.html style stemmer.js getURL.js results.js duckie.png duckuments-dist/master/duckiebook
 	python -m mcdp_utils_xml.note_errors_inline out/master/data/1.html 2>&1 | tee duckuments-dist/master/errors.txt
 	python -m mcdp_docs.add_edit_links out/master/data/localcss.html < out/master/data/1.html
 	python -m mcdp_docs.embed_css out/master/data/duckiebook.html < out/master/data/localcss.html
@@ -331,8 +346,6 @@ master-split:
 		-c " config echo 1; config colorize 1; rparmake" \
 		--mathjax \
 		--preamble $(tex-symbols)
-	python add_search_multiple.py duckuments-dist/master/duckiebook
-
 
 
 # split-imprecise:
