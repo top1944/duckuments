@@ -1,12 +1,19 @@
-webroot = "http://localhost:8000"
-purlRoot = "http://purl.org/dth/"
-duckietownRoot = "http://book.duckietown.org/master/duckiebook/"
+webroot = window.location.origin
+bookRoot = "http://book.duckietown.org/master/duckiebook/"
 
-jQuery.expr[':'].Contains = function(a,i,m){
-    c = jQuery(a)
+// For a compiled duckiebook, we will use the following
+// more general path:
+// bookRoot = RegExp(/(.+\/).+\.html.+/)
+//     . exec(window.location.href)[1];
+
+$.expr[':'].Contains = function(a,i,m){
+    c = $(a)
         .text()
-        .toUpperCase()
-        .indexOf(m[3].toUpperCase())>=0;
+        .toLowerCase()
+        .split(' ')
+        .map(x => stemmer(x))
+        .join(' ')
+        .indexOf(m[3].toLowerCase())>=0;
     return c;
 };
 
@@ -59,7 +66,7 @@ function getSample(obj, query) {
     var sample = "";
     for (var i=0; i<containsWord.length; i++) {
         var containingText = $(containsWord[i])
-            .text();
+           .text();        
         sample += containingText + "... ";
         if (sample.length >= MAX_SAMPLE_LEN) {
             break;
@@ -67,41 +74,45 @@ function getSample(obj, query) {
     }
     sample = sample.substr(0, sample.length-3);
     if (sample == "") {
-        containingText = $(`:Contains("${query}")`, obj).text();
-        var lowerArr = containingText.toLowerCase().split(' ');
-        var lowerQuery = query.toLowerCase();
-        var index = null;
-        for (var i=0; i<lowerArr.length; i++) {
-            if (lowerArr[i].includes(lowerQuery)) {
-                index = i; 
-                break;
-            }
-        }
-        if (!index) {
-            console.log("query not found");
-            return "..."
-        }
-        var MAX_NUM_WORDS = 60;
-        var first_index = Math.max(index-5, 0);
-        var textArr = containingText.split(" ");
-        var text = textArr
-            .slice(first_index, textArr.length)
-            .join(" ")
-            .replace(/[✎🔗]+/g, '...')
-            .replace(/prevnext|Because of mathjax bug/g," ");
-
-        sample += text + "...";
-
+        sample = getSampleFromObj(obj, query);
     }
     if (sample.length > MAX_SAMPLE_LEN) {
         sample = sample.substr(0, MAX_SAMPLE_LEN);
         sample = sample.substr(0, 
             Math.min(sample.length, sample.lastIndexOf(" ")));
     }
-    
     if (sample.substr(-1) != '.') {
         sample += "...";
     }
+    return sample;
+}
+
+function getSampleFromObj(obj, query) {
+    sample = "";
+    containingText = $(`:Contains("${query}")`, obj).text();
+    var lowerArr = containingText.toLowerCase().split(' ');
+    var lowerQuery = query.toLowerCase();
+    var index = null;
+    for (var i=0; i<lowerArr.length; i++) {
+        if (lowerArr[i].includes(lowerQuery)) {
+            index = i; 
+            break;
+        }
+    }
+    if (!index) {
+        console.log("query not found");
+        return "..."
+    }
+    var MAX_NUM_WORDS = 60;
+    var first_index = Math.max(index-5, 0);
+    var textArr = containingText.split(" ");
+    var text = textArr
+        .slice(first_index, textArr.length)
+        .join(" ")
+        .replace(/[✎🔗]+/g, '...')
+        .replace(/prevnext|Because of mathjax bug/g," ");
+
+    sample += text + "...";
     return sample;
 }
 
@@ -112,6 +123,7 @@ function locations(substring,string) {
     return a;
 }
 
+/*
 function emphasizeWord(string, query) {
     var stringLower = string.toLowerCase();
     var queryLower = query.toLowerCase();
@@ -131,13 +143,41 @@ function emphasizeWord(string, query) {
         //console.log(string.substr(locs[i+1], wlen));
     }
     return emphasized;
+}*/
+
+function emphasizeWord(string, query) {
+    var queryStemmed = stemmer(query.toLowerCase());
+    var stringArrStemmed = string
+        .toLowerCase()
+        .split(" ")
+        .map(x => x.replace(/[^\w]/g, ""))
+        .map(x => stemmer(x));
+    var stringArr = string.split(" ");
+
+    var emphArr = []
+
+    if (stringArr.length != stringArrStemmed.length) {
+        console.log("Arrays have different length. Not emphasizing.");
+        return string;
+    }
+    
+    for (var i=0; i<stringArr.length; i++) {
+        if (stringArrStemmed[i] == queryStemmed) {
+            emphArr.push(`<b>${stringArr[i]}</b>`);
+        }
+        else {
+            emphArr.push(stringArr[i]);
+        }
+    }
+    
+    return emphArr.join(" ");
 }
 
 searchval = getParameterByName("searchbox");
 
 $.getJSON(webroot + "/secIDs.json", function(json) {
     for (var i in json) {
-        var url = getURL(duckietownRoot, json[i]);
+        var url = getURL(bookRoot, json[i]);
         if (url.includes("undefined")) {
             console.log(json[i]);
         }
@@ -195,7 +235,7 @@ function displayResults(pageToDisplay, numResults) {
     resultdiv.empty();
     for (var item in result) {
         var ref = result[item].ref;
-        var link = getURL(duckietownRoot, ref);
+        var link = getURL(bookRoot, ref);
         var info = getPageInfo(link, searchval);
     }
     resultdiv.show();
