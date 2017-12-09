@@ -330,7 +330,7 @@ master-split:
 		-c " config echo 1; config colorize 1; rparmake" \
 		--mathjax \
 		--preamble $(tex-symbols)
-	python add_search_multiple out/master/data/1.html.parts
+	python add_search_multiple.py out/master/data/1.html.parts
 
 
 

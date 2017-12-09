@@ -1,10 +1,10 @@
 webroot = window.location.origin
-bookRoot = "http://book.duckietown.org/master/duckiebook/"
+//bookRoot = "http://book.duckietown.org/master/duckiebook/"
 
 // For a compiled duckiebook, we will use the following
 // more general path:
-// bookRoot = RegExp(/(.+\/).+\.html.+/)
-//     . exec(window.location.href)[1];
+bookRoot = RegExp(/(.+\/).+\.html.+/)
+    .exec(window.location.href)[1];
 
 $.expr[':'].Contains = function(a,i,m){
     c = $(a)
@@ -107,35 +107,6 @@ function getSampleFromObj(obj, query) {
     sample += text + "...";
     return sample;
 }
-
-function locations(substring,string) {
-    var a = [];
-    var i = -1;
-    while((i=string.indexOf(substring,i+1)) >= 0) a.push(i);
-    return a;
-}
-
-/*
-function emphasizeWord(string, query) {
-    var stringLower = string.toLowerCase();
-    var queryLower = query.toLowerCase();
-    var locs = locations(queryLower, stringLower);
-    var emphasized = "";
-    var wlen = query.length;
-    if (locs == []) {
-        return string;
-    }
-    else {
-        emphasized += string.substr(0, locs[0]);
-        locs.push(string.length);
-    }
-    for (var i=0; i<locs.length; i++) {
-        emphasized += `<b>${string.substr(locs[i], wlen)}</b>`;
-        emphasized += string.substring(locs[i] + wlen, locs[i+1]);
-        //console.log(string.substr(locs[i+1], wlen));
-    }
-    return emphasized;
-}*/
 
 function emphasizeWord(string, query) {
     var queryStemmed = stemmer(query.toLowerCase());
