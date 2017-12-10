@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python2
 
 from add_search import AddSearch
 import os
@@ -16,9 +16,9 @@ def addSearchMultiple(rootDir,remove=False):
                 AddSearch().addSearch(file)
             else:
                 AddSearch().removeSearch(file)
-    
+
 if __name__ == '__main__':
-    if len(argv) == 3 and argv[2] == "--remove": 
+    if len(argv) == 3 and argv[2] == "--remove":
         addSearchMultiple(argv[1], remove=True)
     else:
         addSearchMultiple(argv[1])

@@ -5,7 +5,7 @@ from sys import argv
 import json
 import regex as re
 
-def makeJSON(rootDir):
+def makeJSON(rootDir, outd):
     jsonList = []
     secIDs = []
     for dirName, subdirList, fileList in os.walk(rootDir):
@@ -19,7 +19,7 @@ def makeJSON(rootDir):
                 secName = None
                 secID = None
                 # assuming the following syntax for section name and ID:
-                #   # [Title of Page] {#[section-ID] (options)} 
+                #   # [Title of Page] {#[section-ID] (options)}
                 pattern = re.compile("\#\s([^\n]+)[\s]+\{\#([\S]+)[^\n]*\}")
                 for line in f:
                     match = pattern.match(line)
@@ -34,15 +34,18 @@ def makeJSON(rootDir):
                 continue
             with open(file, 'r') as f:
                 text=f.read().replace('\n', ' ')
-                d={"id": secID, "title": secName, "body": text}                
+                d={"id": secID, "title": secName, "body": text}
                 jsonList.append(d)
     ret = json.dumps(jsonList, indent=4, separators=(", ", ": "))
     print(ret)
-    if not os.path.exists("search-bar/out"):
-        os.mkdirs("search-bar/out")
-    with open('search-bar/out/secIDs.json', 'w') as f:
+
+    if not os.path.exists(outd):
+        os.makedirs(outd)
+    fn = os.path.join(outd, "secIDs.json")
+    with open(fn, 'w') as f:
         json.dump(secIDs, f)
     return ret
 
 if __name__ == '__main__':
-    makeJSON(argv[1])
+    outd = "out"
+    makeJSON(argv[1], outd)
