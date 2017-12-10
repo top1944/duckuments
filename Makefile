@@ -86,10 +86,10 @@ add-searchbar:
 	echo '    pip install --user regex'; \
 	exit 1; }
 	
-	echo "All searchbar dependencies were found"
+	@echo "All searchbar dependencies were found"
 	@./make-index.sh ./docs
 	@python add_search_multiple.py duckuments-dist/master/duckiebook
-	@cp -r results.html style stemmer.js getURL.js results.js duckie.png duckuments-dist/master/duckiebook
+	@cp -r search-bar/* duckuments-dist/master/duckiebook
 
 generated_figs=docs/generated_pdf_fig
 

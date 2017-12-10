@@ -1,13 +1,13 @@
-webroot = window.location.origin
+var regex = new RegExp(/(.+\/)(search)?.+\.html.+/)
+webroot = regex.exec(window.location.href)[1];
 
 // If testing from localhost:8000/results.html, we hardcode
 // the path.
-if (window.location.pathname == "/results.html") {
+if (window.location.pathname == "/search-bar/results.html") {
     bookRoot = "http://book.duckietown.org/master/duckiebook/"
 }
 else {
-    var regex = new RegExp(/(.+\/)(search)?.+\.html.+/)
-    bookRoot = regex.exec(window.location.href)[1];
+    bookRoot = webroot;
 }
 
 // filter for containing a word whose stemm is the same as the input's stem
@@ -162,8 +162,8 @@ function emphasizeWord(string, query) {
 }
 
 // Get URL of link from a root URL and a section ID.
-function toURL(path, secID) {
-    return path + secID.replace(/-/g, "_") + ".html";
+function toURL(webroot, secID) {
+    return webroot + secID.replace(/-/g, "_") + ".html";
 }
 
 // Test URLs obtained from toURL on functions in a JSON file.
@@ -177,11 +177,11 @@ function checkURLs(jsonfile) {
     });
 }
 
-checkURLs("/secIDs.json");
+checkURLs("secIDs.json");
 
 // Display results 1-10 and links to show other sets of 10
 function findResults() {
-    $.getJSON(webroot + "/index.json", function(json) {
+    $.getJSON(webroot + "index.json", function(json) {
         idx = lunr.Index.load(json);
         result = idx.search(searchval);
         $('#searchbox').val(searchval);
