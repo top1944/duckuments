@@ -11,16 +11,13 @@ class AddSearch():
         # lunr loads the index
         lunr = '<script src="https://unpkg.com/lunr/lunr.js"></script>'
 
-        # get URL from section ID
-        getURL = '<script src="getURL.js"></script>'
-
         # results page logic
         results = '<script type="text/javascript" src="results.js"></script>'
 
         # results CSS
         style = '<link rel="stylesheet" href="style/duckietown.css">'
 
-        self.include = [jquery, lunr, getURL, results, style]
+        self.include = [jquery, lunr, results, style]
 
 
 

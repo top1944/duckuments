@@ -113,7 +113,7 @@ function getSampleFromObj(obj, query) {
 }
 
 function boldenInsideLetters(string) {
-    var regex = new RegExp(/\*?(\w.+\w)/);
+    var regex = new RegExp(/(\w.+\w)/);
     var match = regex.exec(string)[1];
     var split = string.split(match);
     if (split.length != 2) {
@@ -157,13 +157,16 @@ if (searchval) {
     findResults();
 }
 
+function toURL(webroot, secID) {
+    return webroot + secID.replace(/-/g, "_") + ".html";
+}
+
 function checkURLs(jsonfile) {
     $.getJSON(webroot + jsonfile, function(json) {
+        console.log(json.length.toString() + " section IDs");
         for (var i in json) {
-            var url = getURL(bookRoot, json[i]);
-            if (url.includes("undefined")) {
-                console.log(json[i]);
-            }
+            var url = toURL(bookRoot, json[i]);
+            $.get(url, function(data){});
         }
     });
 }
@@ -202,7 +205,6 @@ function findResults() {
                     href="javascript:void(0);">${i+1}</a>`
                 $('#pageLinks').append(span);
                 $(`#result${i}span`).append(show);
-
             }
             displayResults(currentPage, numResults);
         }
@@ -223,9 +225,10 @@ function displayResults(pageToDisplay, numResults) {
     resultdiv.empty();
     for (var item in result) {
         var ref = result[item].ref;
-        var link = getURL(bookRoot, ref);
+        var link = toURL(bookRoot, ref);
         var info = getPageInfo(link, searchval);
     }
     resultdiv.show();
     currentPage = pageToDisplay;
 }
+
