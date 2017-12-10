@@ -74,9 +74,16 @@ add-searchbar:
 	echo '    sudo apt-get install nodejs'; \
 	exit 1; }
 	
-	@[ -e "`npm root -g`/lunr" ] || { echo 'Please install Lunr'; \
+	@[ -e "`npm root -g`/lunr" ] || { echo 'Lunr not installed'; \
+	echo 'Please install Lunr'; \
 	echo '(This is used to create a search index)'; \
 	echo '    npm install -g lunr'; \
+	exit 1; }
+
+	@pip show regex >/dev/null 2>&1 || { echo "Python RegEx module not install"; \
+	echo 'Please install RegEx'; \
+	echo '(This is used in creating a search index)'; \
+	echo '    pip install --user regex'; \
 	exit 1; }
 	
 	echo "All searchbar dependencies were found"

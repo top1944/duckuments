@@ -2,7 +2,7 @@
 
 echo "indexing files..."
 
-export NODE_PATH=/usr/lib/node_modules
+export NODE_PATH="$(npm root -g)"
 
 printf -v FILES %s "$(./make-json.py $1)"
 
