@@ -1,5 +1,7 @@
 # Reproducing the image {#duckiebot-ubuntu-image status=ready}
 
+<!--comment-->
+
 These are the instructions to reproduce the Ubuntu image that we use.
 
 Note: Please note that the image is already available, so you don't need to do this.

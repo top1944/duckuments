@@ -1,4 +1,4 @@
-# Navigation {#demo-navigation status=draft}
+# Indefinite Navigation {#demo-indefinite-navigation status=draft}
 
 <div class='requirements' markdown="1">
 
