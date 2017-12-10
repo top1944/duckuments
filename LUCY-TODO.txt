@@ -1,0 +1,21 @@
+Please fix the following:
+
+1) Put all the files in a subdirectory "search-bar" of duckuments. Otherwise, it's a mess.
+    Also, put intermediate files in search-bar/out/ and add .gitignore patterns.
+
+2) Where is the documentation about this product?
+
+3) Installation.
+
+I had to do:
+
+```
+pip install --user regex
+```
+
+Also I had to do `npm install lunr` (without the `-g`) but I am not sure if it is my problem.
+
+
+4) Not all required files are copied to the output directory (e.g. json files)
+
+5) It does not work when used locally (it tries to open `/secids.json` rather than `secids.json`)
