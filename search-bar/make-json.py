@@ -38,7 +38,7 @@ def makeJSON(rootDir):
                 jsonList.append(d)
     ret = json.dumps(jsonList, indent=4, separators=(", ", ": "))
     print(ret)
-    with open('search-bar/secIDs.json', 'w') as f:
+    with open('search-bar/content/secIDs.json', 'w') as f:
         json.dump(secIDs, f)
     return ret
 

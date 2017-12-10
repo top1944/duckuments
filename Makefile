@@ -87,9 +87,9 @@ add-searchbar:
 	exit 1; }
 	
 	@echo "All searchbar dependencies were found"
-	@./make-index.sh ./docs
-	@python add_search_multiple.py duckuments-dist/master/duckiebook
-	@cp -r search-bar/* duckuments-dist/master/duckiebook
+	@./search-bar/make-index.sh ./docs
+	@python search-bar/add_search_multiple.py duckuments-dist/master/duckiebook
+	@cp -r search-bar/content/* duckuments-dist/master/duckiebook
 
 generated_figs=docs/generated_pdf_fig
 

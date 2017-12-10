@@ -3,7 +3,7 @@ webroot = regex.exec(window.location.href)[1];
 
 // If testing from localhost:8000/results.html, we hardcode
 // the path.
-if (window.location.pathname == "/search-bar/results.html") {
+if (window.location.pathname == "/search-bar/content/results.html") {
     bookRoot = "http://book.duckietown.org/master/duckiebook/"
 }
 else {
