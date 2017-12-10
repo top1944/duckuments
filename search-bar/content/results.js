@@ -1,12 +1,12 @@
-var regex = new RegExp(/(.+\/)(search)?.+\.html.+/)
-webroot = regex.exec(window.location.href)[1];
-
 // If testing from localhost:8000/results.html, we hardcode
 // the path.
 if (window.location.pathname == "/search-bar/content/results.html") {
     bookRoot = "http://book.duckietown.org/master/duckiebook/"
+    webroot = window.location.origin + "/search-bar/out/"
 }
 else {
+    var regex = new RegExp(/(.+\/)(search)?.+\.html.+/)
+    webroot = regex.exec(window.location.href)[1];
     bookRoot = webroot;
 }
 

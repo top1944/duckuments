@@ -38,7 +38,9 @@ def makeJSON(rootDir):
                 jsonList.append(d)
     ret = json.dumps(jsonList, indent=4, separators=(", ", ": "))
     print(ret)
-    with open('search-bar/content/secIDs.json', 'w') as f:
+    if not os.path.exists("search-bar/out"):
+        os.mkdirs("search-bar/out")
+    with open('search-bar/out/secIDs.json', 'w') as f:
         json.dump(secIDs, f)
     return ret
 
