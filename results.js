@@ -6,9 +6,10 @@ if (window.location.pathname == "/results.html") {
     bookRoot = "http://book.duckietown.org/master/duckiebook/"
 }
 else {
-    bookRoot = RegExp(/(.+\/)(search)?.+\.html.+/)
-        .exec(window.location.href)[1];
+    var regex = new RegExp(/(.+\/)(search)?.+\.html.+/)
+    bookRoot = regex.exec(window.location.href)[1];
 }
+
 $.expr[':'].Contains = function(a,i,m){
     c = $(a)
         .text()
@@ -16,7 +17,7 @@ $.expr[':'].Contains = function(a,i,m){
         .split(' ')
         .map(x => stemmer(x))
         .join(' ')
-        .indexOf(m[3].toLowerCase())>=0;
+        .indexOf(stemmer(m[3].toLowerCase()))>=0;
     return c;
 };
 
@@ -111,14 +112,25 @@ function getSampleFromObj(obj, query) {
     return sample;
 }
 
+function boldenInsideLetters(string) {
+    var regex = new RegExp(/\*?(\w.+\w)/);
+    var match = regex.exec(string)[1];
+    var split = string.split(match);
+    if (split.length != 2) {
+        console.log("Error making string bold.")
+        return string;
+    }
+    return `${split[0]}<b>${match}</b>${split[1]}`;
+}
+
 function emphasizeWord(string, query) {
     var queryStemmed = stemmer(query.toLowerCase());
     var stringArrStemmed = string
         .toLowerCase()
-        .split(/ /) 
-        .map(x => x.replace(/[^\w]/g, ""))
-        .map(x => stemmer(x));
-    var stringArr = string.split(" ");
+        .split(/\s/) 
+        .map(x => x.split(/[^\w]/)
+            .map(y => stemmer(y)));
+    var stringArr = string.split(/\s/);
 
     var emphArr = []
 
@@ -128,8 +140,8 @@ function emphasizeWord(string, query) {
     }
     
     for (var i=0; i<stringArr.length; i++) {
-        if (stringArrStemmed[i] == queryStemmed) {
-            emphArr.push(`<b>${stringArr[i]}</b>`);
+        if (stringArrStemmed[i].includes(queryStemmed)) {
+            emphArr.push(boldenInsideLetters(stringArr[i]));
         }
         else {
             emphArr.push(stringArr[i]);
@@ -153,8 +165,10 @@ function checkURLs(jsonfile) {
                 console.log(json[i]);
             }
         }
-    })
+    });
 }
+
+checkURLs("/secIDs.json");
 
 function findResults() {
     $.getJSON(webroot + "/index.json", function(json) {
