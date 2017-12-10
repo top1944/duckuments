@@ -68,28 +68,8 @@ check-duckietown-software:
 	fi;
 
 add-searchbar:
-	@type node >/dev/null 2>&1 || { echo "Node not install"; \
-	echo 'Please install Node.js'; \
-	echo '(This is used to create a search index)'; \
-	echo '    sudo apt-get install nodejs'; \
-	exit 1; }
+	make -C search-bar
 	
-	@[ -e "`npm root -g`/lunr" ] || { echo 'Lunr not installed'; \
-	echo 'Please install Lunr'; \
-	echo '(This is used to create a search index)'; \
-	echo '    npm install -g lunr'; \
-	exit 1; }
-
-	@pip show regex >/dev/null 2>&1 || { echo "Python RegEx module not install"; \
-	echo 'Please install RegEx'; \
-	echo '(This is used in creating a search index)'; \
-	echo '    pip install --user regex'; \
-	exit 1; }
-	
-	@echo "All searchbar dependencies were found"
-	@./search-bar/make-index.sh ./docs
-	@python search-bar/add_search_multiple.py duckuments-dist/master/duckiebook
-	@cp -r search-bar/content/* search-bar/out/* duckuments-dist/master/duckiebook
 
 generated_figs=docs/generated_pdf_fig
 
@@ -341,7 +321,7 @@ master-html:
 		--input out/master/data/duckiebook.html  \
 		--output duckuments-dist/master/duckiebook.html \
 		--assets duckuments-dist/master/duckiebook/assets
-	
+
 
 
 master-split:
