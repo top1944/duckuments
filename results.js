@@ -162,8 +162,8 @@ function emphasizeWord(string, query) {
 }
 
 // Get URL of link from a root URL and a section ID.
-function toURL(webroot, secID) {
-    return webroot + secID.replace(/-/g, "_") + ".html";
+function toURL(path, secID) {
+    return path + secID.replace(/-/g, "_") + ".html";
 }
 
 // Test URLs obtained from toURL on functions in a JSON file.
