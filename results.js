@@ -10,6 +10,7 @@ else {
     bookRoot = regex.exec(window.location.href)[1];
 }
 
+// filter for containing a word whose stemm is the same as the input's stem
 $.expr[':'].Contains = function(a,i,m){
     c = $(a)
         .text()
@@ -21,6 +22,7 @@ $.expr[':'].Contains = function(a,i,m){
     return c;
 };
 
+// get parameter from query string
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -33,6 +35,7 @@ function getParameterByName(name, url) {
 
 MAX_SAMPLE_LEN = 360
 
+// process page and display result
 function getPageInfo(url, query) {
     $.ajax({
         url: url,
@@ -56,6 +59,9 @@ function getPageInfo(url, query) {
     });
 }
 
+// Obtain text to display for a page. This takes advantage of the
+// fact that most text seems to be in "without-header-inside" divs.
+// If nothing is found in those divs, we look at the entire page.
 function getSample(obj, query) {
     var sections = $('.without-header-inside', obj);
     var containsWord = $(`:Contains("${query}")`, sections);
@@ -83,6 +89,7 @@ function getSample(obj, query) {
     return sample;
 }
 
+// Look for sample text for query in entire page.
 function getSampleFromObj(obj, query) {
     sample = "";
     containingText = $(`:Contains("${query}")`, obj).text();
@@ -112,6 +119,8 @@ function getSampleFromObj(obj, query) {
     return sample;
 }
 
+// Make a string bold from the first alphanumeric character to
+// the last. 
 function boldenInsideLetters(string) {
     var regex = new RegExp(/(\w.+\w)/);
     var match = regex.exec(string)[1];
@@ -123,6 +132,7 @@ function boldenInsideLetters(string) {
     return `${split[0]}<b>${match}</b>${split[1]}`;
 }
 
+// Make occurrences of words related to the query through stemming bold.
 function emphasizeWord(string, query) {
     var queryStemmed = stemmer(query.toLowerCase());
     var stringArrStemmed = string
@@ -151,16 +161,12 @@ function emphasizeWord(string, query) {
     return emphArr.join(" ");
 }
 
-searchval = getParameterByName("searchbox");
-
-if (searchval) {
-    findResults();
-}
-
+// Get URL of link from a root URL and a section ID.
 function toURL(webroot, secID) {
     return webroot + secID.replace(/-/g, "_") + ".html";
 }
 
+// Test URLs obtained from toURL on functions in a JSON file.
 function checkURLs(jsonfile) {
     $.getJSON(webroot + jsonfile, function(json) {
         console.log(json.length.toString() + " section IDs");
@@ -173,6 +179,7 @@ function checkURLs(jsonfile) {
 
 checkURLs("/secIDs.json");
 
+// Display results 1-10 and links to show other sets of 10
 function findResults() {
     $.getJSON(webroot + "/index.json", function(json) {
         idx = lunr.Index.load(json);
@@ -211,6 +218,7 @@ function findResults() {
     });
 }
 
+// Display results for a given block of 10
 function displayResults(pageToDisplay, numResults) {
     var resultdiv = $('#searchresults');
     $(`#link${currentPage}`).removeClass('thisPageNumLink');
@@ -232,3 +240,10 @@ function displayResults(pageToDisplay, numResults) {
     currentPage = pageToDisplay;
 }
 
+// get parameter from searchbox
+searchval = getParameterByName("searchbox");
+
+// perform search and display
+if (searchval) {
+    findResults();
+}
