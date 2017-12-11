@@ -10,6 +10,19 @@ else {
     bookRoot = webroot;
 }
 
+// creating id2fragment from links dictionary in link.js
+id2fragment = {};
+
+for(fragment in links) {
+    // remove ":section"
+    // remove XXX:
+    i = fragment.indexOf(':');
+    if(i>0) {
+        rest = fragment.substring(i+1);
+        id2fragment[rest] = fragment;
+    }
+}
+
 // filter for containing a word whose stemm is the same as the input's stem
 $.expr[':'].Contains = function(a,i,m){
     c = $(a)
@@ -162,9 +175,18 @@ function emphasizeWord(string, query) {
 }
 
 // Get URL of link from a root URL and a section ID.
-function toURL(webroot, secID) {
-    return webroot + secID.replace(/-/g, "_") + ".html";
-    //return webroot + "link.html#" + secID;
+function getURL(webroot, secID) {
+    //return webroot + secID.replace(/-/g, "_") + ".html";
+    if (secID in id2fragment) {
+        fragment = id2fragment[secID];
+        filename = links[fragment];
+        link = filename + '#' + fragment;
+        return webroot + link;
+    }
+    else {
+        console.log(secID);
+        return null;
+    }
 }
 
 // Test URLs obtained from toURL on functions in a JSON file.
@@ -172,8 +194,7 @@ function checkURLs(jsonfile) {
     $.getJSON(webroot + jsonfile, function(json) {
         console.log(json.length.toString() + " section IDs");
         for (var i in json) {
-            var url = toURL(bookRoot, json[i]);
-            $.get(url, function(data){});
+            var url = getURL(bookRoot, json[i]);
         }
     });
 }
@@ -234,8 +255,10 @@ function displayResults(pageToDisplay, numResults) {
     resultdiv.empty();
     for (var item in result) {
         var ref = result[item].ref;
-        var link = toURL(bookRoot, ref);
-        var info = getPageInfo(link, searchval);
+        var link = getURL(bookRoot, ref);
+        if (link) {
+            var info = getPageInfo(link, searchval);
+        }
     }
     resultdiv.show();
     currentPage = pageToDisplay;

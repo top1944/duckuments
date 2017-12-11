@@ -71,3 +71,4 @@ docs/**/*.html
 misc/bot/locks
 misc/bot/logs
 search-bar/out
+search-bar/content/link.js
