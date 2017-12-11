@@ -5,7 +5,7 @@ if (window.location.pathname == "/search-bar/content/results.html") {
     webroot = window.location.origin + "/search-bar/out/"
 }
 else {
-    var regex = new RegExp(/(.+\/)(search)?.+\.html.+/)
+    regex = new RegExp(/(.*\/).+\.html.*/);
     webroot = regex.exec(window.location.href)[1];
     bookRoot = webroot;
 }
@@ -164,6 +164,7 @@ function emphasizeWord(string, query) {
 // Get URL of link from a root URL and a section ID.
 function toURL(webroot, secID) {
     return webroot + secID.replace(/-/g, "_") + ".html";
+    //return webroot + "link.html#" + secID;
 }
 
 // Test URLs obtained from toURL on functions in a JSON file.
