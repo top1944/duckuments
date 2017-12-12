@@ -1,6 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 import os
-from sys import argv
+from optparse import OptionParser
 
 class AddSearch():
     def __init__(self):
@@ -17,7 +17,7 @@ class AddSearch():
         # results CSS
         style = '<link rel="stylesheet" href="style/duckietown.css">'
 
-        self.include = [jquery, lunr, results, style]
+        self.include = [jquery, lunr, style]
 
 
 
@@ -67,10 +67,41 @@ class AddSearch():
         with open(filename, 'w') as f:
             f.write(data)
 
+    def addSearchMultiple(self, rootDir, remove=False):
+        for dirName, subdirList, fileList in os.walk(rootDir):
+            for fname in fileList:
+                name, ext = os.path.splitext(fname)
+                # only indexing markdown files
+                if ext != ".html":
+                    continue
+                file = os.path.join(dirName,fname)
+                if not remove:
+                    AddSearch().addSearch(file)
+                else:
+                    AddSearch().removeSearch(file)
 
 
 if __name__ == '__main__':
-    if len(argv) == 3 and argv[2] == "--remove":
-        AddSearch().removeSearch(argv[1])
+    usage = "usage: %prog [options] FILE"
+    parser = OptionParser(usage)
+    parser.add_option("-d", "--directory", dest="is_directory",
+                      help="interpret input FILE as directory",
+                      action="store_true", default=False)
+    parser.add_option("-r", "--remove", dest="remove",
+                      help="remove search instead of adding",
+                      action="store_true", default=False)
+    (options, args) = parser.parse_args()
+
+    if len(args) == 0:
+        print("Please specify a file.")
+        exit(1)
+    
+    file = args[0]
+    search = AddSearch()
+    if options.is_directory:
+        search.addSearchMultiple(file, remove=options.remove)
     else:
-        AddSearch().addSearch(argv[1], verbose=True)
+        if options.remove:
+            search.removeSearch(file)
+        else:
+            search.addSearch(file)

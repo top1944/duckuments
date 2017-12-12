@@ -10,18 +10,6 @@ else {
     bookRoot = webroot;
 }
 
-// creating id2fragment from links dictionary in link.js
-id2fragment = {};
-
-for(fragment in links) {
-    // remove ":section"
-    // remove XXX:
-    i = fragment.indexOf(':');
-    if(i>0) {
-        rest = fragment.substring(i+1);
-        id2fragment[rest] = fragment;
-    }
-}
 
 // filter for containing a word whose stemm is the same as the input's stem
 $.expr[':'].Contains = function(a,i,m){

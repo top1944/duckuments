@@ -24,9 +24,12 @@ all:
 
 	@echo "All searchbar dependencies were found"
 	@./make-index.sh $(docs)
-	@./add_search_multiple.py  $(duckiebook)
-
+	@./add_search.py -d $(duckiebook)
+	@echo "Search bar added to duckiebook html"
 	@cp -r content/* $(out)/* $(duckiebook)
+	@echo "Search files moved to duckiebook directory"
 
 clean:
+	@./add_search.py -rd $(duckiebook)
+	@echo "Search bar removed from html"
 	rm -rf $(out)
