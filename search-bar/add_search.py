@@ -37,7 +37,8 @@ class AddSearch():
 
     def addSearch(self, filename, verbose=False):
         
-        data = open(filename).read()
+        with open(filename) as f:
+            data = f.read()
 
         ### ADD SCRIPTS TO THE HEADER ###
 
@@ -60,7 +61,9 @@ class AddSearch():
             f.write(data)
 
     def removeSearch(self, filename):
-        data = open(filename).read()
+        with open(filename) as f:
+            data = f.read()
+            
         data = data.replace(self.d, '')
         for s in self.include:
             data = data.replace(s, '')
