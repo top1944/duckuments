@@ -12,7 +12,7 @@ Requires: Joystick demo has been successfully launched.[Joystick demo](#rc-contr
 
 Requires: Fully set up Duckietown (including April tags for intersections)
 
-Requeres: A motor gain of approximately 0.65 (strong influence in open-loop intersections)
+Requires: A motor gain of approximately 0.65 (strong influence in open-loop intersections)
 </div>
 
 ## Video of expected results {#demo-indefinite-navigation-expected}
@@ -21,7 +21,7 @@ Requeres: A motor gain of approximately 0.65 (strong influence in open-loop inte
 
 ## Duckietown setup notes {#demo-indefinite-navigation-duckietown-setup}
 
-A duckietown with white and yellow lanes. No obstacles on the lane.
+A Duckietown with white and yellow lanes. No obstacles on the lane. Red stop lanes at intersections. If several Duckiebots run this demo, LEDs need to be installed for communication of the bots at intersections.
 
 ## Duckiebot setup notes {#demo-indefinite-navigation-duckiebot-setup}
 
