@@ -15,19 +15,19 @@ Requires: Fully set up Duckietown (including April tags for intersections)
 Requeres: A motor gain of approximately 0.65 (strong influence in open-loop intersections)
 </div>
 
-## Video of expected results {#demo-template-expected}
+## Video of expected results {#demo-indefinite-navigation-expected}
 
 [link 1 of lane following](https://photos.google.com/share/AF1QipMEwYvBW5hl3_l4M0f9on3RSKJmYftbWxo0nSyW7EMTBWs7iXRc_fHEc5mouSMSxA/photo/AF1QipPOmXr0yu__d_J0Wefp1Gm6sNTtptUk57FvS6Fo?key=M1ZWc2k0Nnl4ckFjd3dwRmV0WmdMSzFWU0xmOXh3)
 
-## Duckietown setup notes {#demo-template-duckietown-setup}
+## Duckietown setup notes {#demo-indefinite-navigation-duckietown-setup}
 
 A duckietown with white and yellow lanes. No obstacles on the lane.
 
-## Duckiebot setup notes {#demo-template-duckiebot-setup}
+## Duckiebot setup notes {#demo-indefinite-navigation-duckiebot-setup}
 
 Make sure the camera is heading ahead. Tighten the screws if necessary. 
 
-## Pre-flight checklist {#demo-template-pre-flight}
+## Pre-flight checklist {#demo-indefinite-navigation-pre-flight}
 
 Check: turn on joystick. 
 
@@ -35,7 +35,7 @@ Check: Enough battery of the duckiebot.
 
 Check: Gain is approx. 0.65
 
-## Demo instructions {#demo-template-run}
+## Demo instructions {#demo-indefinite-navigation-run}
 
 Follow these steps to run the indefinite navigation demo on your Duckiebot:
 
