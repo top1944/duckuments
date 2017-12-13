@@ -50,6 +50,7 @@ Command to modify your gain (in this example to 0.65)
 
      rosservice call /<robot-name>/inverse_kinematics_node/set_gain -- 0.65
      
+Everything below is optional but helpful for debugging if your robot does not follow the lane at all.
 Step 2: On laptop, make sure ros enviroment has been activated, run command:
 
     laptop $ rviz
