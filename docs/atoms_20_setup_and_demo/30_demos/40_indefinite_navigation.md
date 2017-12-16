@@ -17,55 +17,64 @@ Requires: A motor gain of approximately 0.65 (strong influence in open-loop inte
 
 ## Video of expected results {#demo-indefinite-navigation-expected}
 
+<!--
 [link 1 of lane following](https://photos.google.com/share/AF1QipMEwYvBW5hl3_l4M0f9on3RSKJmYftbWxo0nSyW7EMTBWs7iXRc_fHEc5mouSMSxA/photo/AF1QipPOmXr0yu__d_J0Wefp1Gm6sNTtptUk57FvS6Fo?key=M1ZWc2k0Nnl4ckFjd3dwRmV0WmdMSzFWU0xmOXh3)
+-->
+
+<div figure-id="fig:demo-indefinite-navigation">
+    <figcaption>Demo: indefinite navigation
+    </figcaption>
+    <dtvideo src='vimeo:247596730'/>
+</div>
+
+TODO: add a different video with an up to specification Duckietown.
 
 ## Duckietown setup notes {#demo-indefinite-navigation-duckietown-setup}
 
-A Duckietown with white and yellow lanes. No obstacles on the lane. Red stop lanes at intersections. If several Duckiebots run this demo, LEDs need to be installed for communication of the bots at intersections.
+A Duckietown with white and yellow lanes. No obstacles on the lane. Red stop lines at intersections. If several Duckiebots are present while running this demo, LEDs need to be installed for explicit communication and coordination of Duckiebots at intersections.
 
 ## Duckiebot setup notes {#demo-indefinite-navigation-duckiebot-setup}
 
-Make sure the camera is heading ahead. Tighten the screws if necessary. 
+Make sure the camera is securely tightened and properly calibrated.
 
 ## Pre-flight checklist {#demo-indefinite-navigation-pre-flight}
 
-Check: turn on joystick. 
+Check: turn on joystick.
 
-Check: Enough battery of the duckiebot. 
+Check: Sufficient battery charge of the Duckiebot.
 
-Check: Gain is approx. 0.65
+Check: Gain is approximately $0.65$.
 
 ## Demo instructions {#demo-indefinite-navigation-run}
 
 Follow these steps to run the indefinite navigation demo on your Duckiebot:
 
-Step 1: On duckiebot, in /DUCKIERTOWN_ROOT/ directory, run command:
+- Step 1: On Duckiebot, in /DUCKIERTOWN_ROOT/ directory, run command:
 
     duckiebot $ make indefinite-navigation
-    
-Wait a while so that everything has been launched. Press R1 to start autonomous lane following. Press L1 to switch to joystick control. Press X to start anti-instagram. 
-Empirically speaking, no duckiebot will successfully run the demo for its first time. Parameter tuning is a must. The only two parameters that you can modify is the gain and trim. The parameter pair which makes your bot go straight will unlikely work for the lane following due to the current controller design. Start with your parameter pair obtained from wheel calibration. If your Duckiebot stays too long on a curve during crossing an intersection, decrease your gain in steps of 0.05. If the Duckiebot doesn't make the turn enough long, increase your gain in steps of 0.05. 
+
+Wait a while so that everything has been launched. Press R1 to start autonomous lane following. Press L1 to switch to joystick control. Press X to start anti-instagram.
+Empirically speaking, no Duckiebot will successfully run the demo for its first time. Parameter tuning is a must. The only two parameters that you can modify is the gain and trim. The parameter pair which makes your bot go straight will unlikely work for the lane following due to the current controller design. Start with your parameter pair obtained from wheel calibration. If your Duckiebot stays too long on a curve during crossing an intersection, decrease your gain in steps of 0.05. If the Duckiebot doesn't make the turn enough long, increase your gain in steps of 0.05.
 
 Command to modify your gain (in this example to 0.65)
 
      rosservice call /<robot-name>/inverse_kinematics_node/set_gain -- 0.65
-     
+
 Everything below is optional but helpful for debugging if your robot does not follow the lane at all.
-Step 2: On laptop, make sure ros enviroment has been activated, run command:
+
+- Step 2: On laptop, make sure ros enviroment has been activated, run command:
 
     laptop $ rviz
 
-In rviz, two markerarrays /(vehicle_name)/duckiebot_visualizer/segment_list_markers and /(vehicle_name)/lane_pose_visualizer_node/lane_pose_markers can be visualized. The green arrow shall be in a reasonable direction. 
+In rviz, two markerarrays /(vehicle_name)/duckiebot_visualizer/segment_list_markers and /(vehicle_name)/lane_pose_visualizer_node/lane_pose_markers can be visualized. The green arrow shall be in a reasonable direction.
 
-Step 3: On laptop, make sure ros enviroment has been activated, run command:
+- Step 3: On laptop, make sure ros enviroment has been activated, run command:
 
     laptop $ rqt
-    
+
 In rqt, the images can be visualized are /(vehicle_name)/camera_node/image/compressed, /(vehicle_name)/line_detector_node/image_with_lines, /(vehicle_name)/lane_filter_node/belief_img.
 
 
 ## Troubleshooting {#demo-template-troubleshooting}
 
-Contact Julien Kindle(ETHZ) via Slack if any trouble occurs. 
-
-
+Contact Julien Kindle(ETHZ) via Slack if any trouble occurs.

@@ -1,4 +1,4 @@
-# Wheel calibration {#wheel-calibration status=beta}
+# Wheel calibration {#wheel-calibration status=ready}
 
 Assigned: Andrea Daniele
 
@@ -166,7 +166,7 @@ Construct a calibration station similar to the one in [](#fig:kinematic_calibrat
 The following are the specs for this 3x1 mat "runway":
 
  - Red line as close to the edge without crossing the interlocking bits
- 
+
  - Blue/Black line 8 cm from red line and parallel to it.
 
  - White lines on the edge without intersecting the interlocking bits
