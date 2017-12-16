@@ -43,13 +43,13 @@ Check: Joystick is turned on.
 
 Check: Sufficient battery charge of the Duckiebot.
 
-Check: Gain is set to approximately $0.65$.
+Check: Gain is set to approximately 0.65.
 
 ## Demo instructions {#demo-indefinite-navigation-run}
 
 Follow these steps to run the indefinite navigation demo on your Duckiebot:
 
-- Step 1: On the Duckiebot, navigate to the /DUCKIETOWN_ROOT/ directory, run the command:
+* Step 1: On the Duckiebot, navigate to the `/DUCKIETOWN_ROOT/` directory, run the command:
 
     duckiebot $ make indefinite-navigation
 
@@ -57,22 +57,31 @@ Wait until everything has been launched. Press X to start anti-instagram. Pressi
 
 In the current open-loop intersection navigation, no Duckiebot will successfully run the demo the first time. Parameter tuning is a must. The only two parameters that should be adjusted are the gain and trim, previously defined during the [wheel calibration procedure](#wheel-calibration).
 
-The parameter pair which makes your bot go straight will unlikely work for the lane following due to the current controller design. Start with your parameter pair obtained from wheel calibration. If your Duckiebot stays too long on a curve during crossing an intersection, decrease your gain in steps of 0.05. If the Duckiebot doesn't make the turn enough long, increase your gain in steps of $0.05$.
+The parameter pair which makes your bot go straight will unlikely work for the lane following due to the current controller design. Start with your parameter pair obtained from wheel calibration. If your Duckiebot stays too long on a curve during crossing an intersection, decrease your gain in steps of 0.05. If the Duckiebot doesn't make the turn enough long, increase your gain in steps of 0.05.
 
-Command to modify your gain (in this example to $0.65$)
+Command to modify your gain (in this example to 0.65):
 
-     rosservice call /![robot name]/inverse_kinematics_node/set_gain -- 0.65
+    &#36; rosservice call /![robot name]/inverse_kinematics_node/set_gain -- 0.65
 
 Question: on laptop or bot?
 
 Everything below is helpful for debugging if your robot does not follow the lane at all.
 
-- Step 2: On the laptop: make sure ROS environment has been activated and the ROS master set to your vehicle. To do so, run the commands:
+* Step 2: Navigate to the Duckietown folder:
 
-    laptop $ cd ~/duckietown
-    laptop $ source enviroment.sh
-    laptop $ source set_ros_master.sh ![robot name]
-    laptop $ rviz
+    laptop &#36; cd ~/duckietown
+
+then source the environment:
+
+    laptop &#36; source environment.sh
+
+set the the ROS master to your vehicle:
+
+    laptop &#36; source set_ros_master.sh ![robot name]
+
+and finally launch rviz:
+
+    laptop &#36; rviz
 
 In rviz, two markerarrays:
 
@@ -81,9 +90,9 @@ In rviz, two markerarrays:
 
 can be visualized. The green arrow representing the pose estimate of the robot has to be in a reasonable direction.
 
-- Step 3: Always on the laptop, run:
+* Step 3: Always on the laptop, run:
 
-    laptop $ rqt
+    laptop &#36; rqt
 
 In rqt, the images can be visualized are:
 
