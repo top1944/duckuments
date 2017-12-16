@@ -74,13 +74,22 @@ Everything below is helpful for debugging if your robot does not follow the lane
     laptop $ source set_ros_master.sh ![robot name]
     laptop $ rviz
 
-In rviz, two markerarrays /![robot name]/duckiebot_visualizer/segment_list_markers and /![robot name]/lane_pose_visualizer_node/lane_pose_markers can be visualized. The green arrow representing the pose estimate of teh robot shall be in a reasonable direction.
+In rviz, two markerarrays:
+
+- `/![robot name]/duckiebot_visualizer/segment_list_markers`, and
+-  `/![robot name]/lane_pose_visualizer_node/lane_pose_markers`
+
+can be visualized. The green arrow representing the pose estimate of the robot has to be in a reasonable direction.
 
 - Step 3: Always on the laptop, run:
 
-   laptop $ rqt
+    laptop $ rqt
 
-In rqt, the images can be visualized are /![robot name]/camera_node/image/compressed, /![robot name]/line_detector_node/image_with_lines, /![robot name]/lane_filter_node/belief_img.
+In rqt, the images can be visualized are:
+
+-  `/![robot name]/camera_node/image/compressed`,
+-  `/![robot name]/line_detector_node/image_with_lines`,
+-  `/![robot name]/lane_filter_node/belief_img`.
 
 ## Troubleshooting {#demo-template-troubleshooting}
 
