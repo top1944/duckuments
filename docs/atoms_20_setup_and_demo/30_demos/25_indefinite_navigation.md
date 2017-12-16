@@ -49,7 +49,7 @@ Check: Gain is set to approximately 0.65.
 
 Follow these steps to run the indefinite navigation demo on your Duckiebot:
 
-* Step 1: On the Duckiebot, navigate to the `/DUCKIETOWN_ROOT/` directory, run the command:
+Step 1: On the Duckiebot, navigate to the `/DUCKIETOWN_ROOT/` directory, run the command:
 
     duckiebot $ make indefinite-navigation
 
@@ -67,7 +67,7 @@ Question: on laptop or bot?
 
 Everything below is helpful for debugging if your robot does not follow the lane at all.
 
-* Step 2: Navigate to the Duckietown folder:
+Step 2: Navigate to the Duckietown folder:
 
     laptop &#36; cd ~/duckietown
 
@@ -90,7 +90,7 @@ In rviz, two markerarrays:
 
 can be visualized. The green arrow representing the pose estimate of the robot has to be in a reasonable direction.
 
-* Step 3: Always on the laptop, run:
+Step 3: Always on the laptop, run:
 
     laptop &#36; rqt
 
