@@ -285,7 +285,7 @@ index:
 master: checks update-mcdp update-software
 	$(MAKE) master-html
 	$(MAKE) master-split
-	$(MAKE) add-searchbar
+	$(MAKE) add-searchbar 
 
 master-clean:
 	rm -rf out/master

@@ -4,11 +4,9 @@ echo "indexing files..."
 
 export NODE_PATH="$(npm root -g)"
 
-printf -v FILES %s "$(./make-json.py $1)"
+python make-json.py $1 $2
 
-#echo $FILES
-
-if echo $FILES | node build-index.js \
+if cat out/indexContent.json | node build-index.js \
 	> out/index.json
 then
 	echo "index successfully created"

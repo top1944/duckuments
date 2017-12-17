@@ -10,18 +10,44 @@ else {
     bookRoot = webroot;
 }
 
+var MAX_SAMPLE_LEN = 360;
+var WORDS_AROUND = 7;
+var MAX_NUM_SAMPLES = 4;
+
+function stemWords(string) {
+    return string
+        .toLowerCase()
+        .split(/\s+/)
+        .map(x => stemmer(x));
+}
 
 // filter for containing a word whose stemm is the same as the input's stem
-$.expr[':'].Contains = function(a,i,m){
-    c = $(a)
-        .text()
-        .toLowerCase()
-        .split(' ')
-        .map(x => stemmer(x))
+$.expr[':'].Contains = function(a,i,m) {
+    return stemWords($(a).text())
         .join(' ')
         .indexOf(stemmer(m[3].toLowerCase()))>=0;
-    return c;
 };
+
+$.expr[':'].ContainsAll = function(a,i,m) {
+    query = stemWords(m[3])
+        .join(' ');
+    text = stemWords($(a).text())
+        .join(' ');
+    return text.indexOf(query)>=0;
+}
+
+$.expr[':'].ContainsAny = function(a,i,m) {
+    query = stemWords(m[3]);
+    text = stemWords($(a).text())
+        .join(' ');
+    for (var i=0; i<query.length; i++) {
+        contains = text.indexOf(query[i]) >= 0;
+        if (contains) {
+            return true;
+        }
+    }
+    return false;
+}
 
 // get parameter from query string
 function getParameterByName(name, url) {
@@ -34,8 +60,6 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-MAX_SAMPLE_LEN = 360
-
 // process page and display result
 function getPageInfo(url, query) {
     $.ajax({
@@ -45,12 +69,20 @@ function getPageInfo(url, query) {
             var pageDiv = $.grep($(obj), 
                 function(e) {return e.id=="not-toc";})[0];
             var pageTitle = $('h1', pageDiv).text();
-            var sample = getSample($(pageDiv), query);
-            var emphasized = emphasizeWord(sample, query);
+            // var sample = getSample($(pageDiv), query, "ContainsAll");
+            // if (sample == "...") {
+            //     sample = getSample($(pageDiv), query, "ContainsAny");
+            // }
+            var sample = getFullSample($(pageDiv), query);
+            // queryArr = query.split(/\s/);
+            // var emphasized = sample;
+            // for (var i=0; i < queryArr.length; i++) {
+            //     emphasized = emphasizeWord(emphasized, queryArr[i]);
+            // }
             resultdiv = $('#searchresults');
             var searchitem = 
             `<h3> <a href="${url}"> ${pageTitle} </a></h3>
-            <p class="resultP">${emphasized}</p>`;
+            <p class="resultP">${sample}</p>`;
 
             resultdiv.append(searchitem);
         },
@@ -60,12 +92,141 @@ function getPageInfo(url, query) {
     });
 }
 
-// Obtain text to display for a page. This takes advantage of the
+function findSubarray(arr, subarr) {
+    for (var i = 0; i < 1 + (arr.length - subarr.length); i++) {
+        var j = 0;
+        for (; j < subarr.length; j++)
+            if (arr[i + j] !== subarr[j])
+                break;
+        if (j == subarr.length)
+            return i;
+    }
+    return -1;
+}
+
+function getSampleAllWords(obj, query) {
+    var containingText = $(`:ContainsAny(${query})`, obj).text();
+    console.log(`all: \n${containingText}`);
+    var textArr = containingText.split(/\s+/);
+    var stemmedTextArr = stemWords(containingText);
+    var stemmedQueryArr = stemWords(query);
+    var numQWords = stemmedQueryArr.length;
+
+    sampleSet = new Set()
+    while (textArr.length > 0) {
+        if (sampleSet.size == MAX_NUM_SAMPLES) {
+            break;
+        }
+        var wordIndex = findSubarray(stemmedTextArr, stemmedQueryArr);
+        if (wordIndex < 0) {
+            break;
+        }
+        var beginPrefix = Math.max(0, wordIndex - WORDS_AROUND)
+        var endSuffix = Math.min(wordIndex + numQWords + WORDS_AROUND, textArr.length);
+        var prefix = textArr
+            .slice(beginPrefix, wordIndex)
+        prefix = prefix.join(' ');
+        var words = textArr
+            .slice(wordIndex, wordIndex + numQWords)
+            .join(' ');
+        var suffix = textArr
+            .slice(wordIndex + numQWords, endSuffix)
+            .join(' ');
+        phrase = `${prefix} <b>${words}</b> ${suffix}`;
+        
+        sampleSet.add(phrase);
+    
+        var lenPhrase = wordIndex + numQWords + endSuffix;
+        textArr = textArr.slice(lenPhrase);
+        stemmedTextArr = stemmedTextArr.slice(lenPhrase);
+    }
+    return Array.from(sampleSet);
+}
+
+function matchesAny(word, array) {
+    for (var i=0; i<array.length; i++) {
+        if (word == array[i]) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function getSampleAnyWords(obj, query) {
+    var containingText = $(`:ContainsAny(${query})`, obj).text();
+    console.log(`any: \n${containingText}`);
+    var textArr = containingText.split(/\s+/);
+    var stemmedTextArr = stemWords(containingText);
+    var stemmedQueryArr = stemWords(query);
+
+
+    var sampleArr = []
+    while (textArr.length > 0) {
+        var i = 0;
+        while (!matchesAny(stemmedTextArr[i], stemmedQueryArr)) {
+            i++;
+        }
+        if (i == textArr.length) {
+            break;
+        }
+        var firstIndex = i;
+        var wordGap = 0;
+        while (i < stemmedTextArr.length && wordGap < WORDS_AROUND) {
+            i++;
+            if (!matchesAny(stemmedTextArr[i], stemmedQueryArr)) {
+                wordGap++;
+                continue;
+            }
+            else {
+                wordGap = 0;
+            }
+        }
+        var lastIndex = i;
+        if (sampleArr.length > 0 && firstIndex < WORDS_AROUND) {
+            var phrase = textArr.slice(firstIndex, lastIndex).join(' ');
+            sampleArr[sampleArr.length-1] += " " + phrase;
+        }
+        else {
+            if (sampleArr.length == MAX_NUM_SAMPLES) {
+                break;
+            }
+            firstIndex = Math.max(0, firstIndex - WORDS_AROUND)
+            var phrase = textArr.slice(firstIndex, lastIndex).join(' ');
+            sampleArr.push(emphasizeWords(phrase, query));
+        }
+        textArr = textArr.slice(lastIndex);
+        stemmedTextArr = stemmedTextArr.slice(lastIndex);
+    }
+    return sampleArr;
+}
+
+function getFullSample(obj, query) {
+    var sections = $('.without-header-inside', obj);
+    var sampleArr = [];
+    var i = 0;
+    while (i < sections.length && sampleArr.size <= MAX_NUM_SAMPLES) {
+        i++;
+        samples = getSampleAllWords(sections[i], query);
+        console.log(`samples: ${samples}`);
+    }
+    i = 0;
+    while (i < sections.length && sampleArr.size <= MAX_NUM_SAMPLES) {
+        i++;
+        sampleArr = sampleArr.concat(getSampleAnyWords(sections[i], query));
+    }
+    if (sampleArr.length < MAX_NUM_SAMPLES) {
+        sampleArr = sampleArr.concat(getSampleAllWords(sections[i], query))
+    }
+    sampleArr = sampleArr.slice(0,MAX_NUM_SAMPLES);
+    sample = sampleArr.join("... ");
+    return sample;
+}
+
 // fact that most text seems to be in "without-header-inside" divs.
 // If nothing is found in those divs, we look at the entire page.
-function getSample(obj, query) {
+function getSample(obj, query, selector) {
     var sections = $('.without-header-inside', obj);
-    var containsWord = $(`:Contains("${query}")`, sections);
+    var containsWord = $(`:${selector}("${query}")`, sections);
     var sample = "";
     for (var i=0; i<containsWord.length; i++) {
         var containingText = $(containsWord[i])
@@ -77,7 +238,7 @@ function getSample(obj, query) {
     }
     sample = sample.substr(0, sample.length-3);
     if (sample == "") {
-        sample = getSampleFromObj(obj, query);
+        sample = getSampleFromObj(obj, query, selector);
     }
     if (sample.length > MAX_SAMPLE_LEN) {
         sample = sample.substr(0, MAX_SAMPLE_LEN);
@@ -91,9 +252,9 @@ function getSample(obj, query) {
 }
 
 // Look for sample text for query in entire page.
-function getSampleFromObj(obj, query) {
+function getSampleFromObj(obj, query, selector) {
     sample = "";
-    containingText = $(`:Contains("${query}")`, obj).text();
+    containingText = $(`:${selector}("${query}")`, obj).text();
     var lowerArr = containingText.toLowerCase().split(' ');
     var lowerQuery = query.toLowerCase();
     var index = null;
@@ -161,6 +322,36 @@ function emphasizeWord(string, query) {
     
     return emphArr.join(" ");
 }
+
+// Make occurrences of words related to the query through stemming bold.
+function emphasizeWords(string, query) {
+    var queryStemmed = stemWords(query);
+    var stringArrStemmed = string
+        .toLowerCase()
+        .split(/\s/) 
+        .map(x => x.split(/[^\w]/)
+            .map(y => stemmer(y)));
+    var stringArr = string.split(/\s/);
+
+    var emphArr = []
+
+    if (stringArr.length != stringArrStemmed.length) {
+        console.log("Arrays have different length. Not emphasizing.");
+        return string;
+    }
+    
+    for (var i=0; i<stringArr.length; i++) {
+        if (matchesAny(stringArrStemmed[i], queryStemmed)) {
+            emphArr.push(boldenInsideLetters(stringArr[i]));
+        }
+        else {
+            emphArr.push(stringArr[i]);
+        }
+    }
+    
+    return emphArr.join(" ");
+}
+
 
 // Get URL of link from a root URL and a section ID.
 function getURL(webroot, secID) {

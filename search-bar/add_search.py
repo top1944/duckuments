@@ -11,13 +11,7 @@ class AddSearch():
         # lunr loads the index
         lunr = '<script src="https://unpkg.com/lunr/lunr.js"></script>'
 
-        # results page logic
-        results = '<script type="text/javascript" src="results.js"></script>'
-
-        # results CSS
-        style = '<link rel="stylesheet" href="style/duckietown.css">'
-
-        self.include = [jquery, lunr, style]
+        self.include = [jquery, lunr]
 
 
 
@@ -27,7 +21,7 @@ class AddSearch():
         self.d = """
             <div id="topbar">
                 <div id="searchdiv">
-                    <form action="results.html">
+                    <form action="/duckuments-dist/master/duckiebook/results.html">
                        <input type="text" id="searchbox" name="searchbox" placeholder="search">
                     </form>
                 </div>
@@ -63,7 +57,7 @@ class AddSearch():
     def removeSearch(self, filename):
         with open(filename) as f:
             data = f.read()
-            
+
         data = data.replace(self.d, '')
         for s in self.include:
             data = data.replace(s, '')

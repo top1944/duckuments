@@ -1,7 +1,10 @@
 duckuments-dist=../duckuments-dist
 duckiebook=$(duckuments-dist)/master/duckiebook
+single-page=$(duckiebook).html
 docs=../docs
 out=out
+duckietown-software=../duckietown
+src="$(docs):$(duckietown-software)/catkin_ws/src:$(duckietown-software)/Makefiles"
 
 all:
 	@type node >/dev/null 2>&1 || { echo "Node not install"; \
@@ -23,7 +26,7 @@ all:
 	exit 1; }
 
 	@echo "All searchbar dependencies were found"
-	@./make-index.sh $(docs)
+	@./make-index.sh $(src) $(single-page)
 	@./add_search.py -d $(duckiebook)
 	@echo "Search bar added to duckiebook html"
 	@cp -r content/* $(out)/* $(duckiebook)
