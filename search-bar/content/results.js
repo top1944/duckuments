@@ -21,6 +21,13 @@ function stemWords(string) {
         .map(x => stemmer(x));
 }
 
+function stemWordsOnly(string) {
+    return string
+        .toLowerCase()
+        .split(/[^\w]+/)
+        .map(x => stemmer(x));
+}
+
 // filter for containing a word whose stemm is the same as the input's stem
 $.expr[':'].Contains = function(a,i,m) {
     return stemWords($(a).text())
@@ -37,8 +44,8 @@ $.expr[':'].ContainsAll = function(a,i,m) {
 }
 
 $.expr[':'].ContainsAny = function(a,i,m) {
-    query = stemWords(m[3]);
-    text = stemWords($(a).text())
+    query = stemWordsOnly(m[3]);
+    text = stemWordsOnly($(a).text())
         .join(' ');
     for (var i=0; i<query.length; i++) {
         contains = text.indexOf(query[i]) >= 0;
@@ -109,7 +116,7 @@ function getSampleAllWords(obj, query) {
     console.log(`all: \n${containingText}`);
     var textArr = containingText.split(/\s+/);
     var stemmedTextArr = stemWords(containingText);
-    var stemmedQueryArr = stemWords(query);
+    var stemmedQueryArr = stemWordsOnly(query);
     var numQWords = stemmedQueryArr.length;
 
     sampleSet = new Set()
@@ -143,10 +150,12 @@ function getSampleAllWords(obj, query) {
     return Array.from(sampleSet);
 }
 
-function matchesAny(word, array) {
-    for (var i=0; i<array.length; i++) {
-        if (word == array[i]) {
-            return true;
+function matchesAny(wordArr, array) {
+    for (var j=0; wordArr.length; j++) {
+        for (var i=0; i<array.length; i++) {
+            if (wordArr[j] == array[i]) {
+                return true;
+            }
         }
     }
     return false;
@@ -156,23 +165,21 @@ function getSampleAnyWords(obj, query) {
     var containingText = $(`:ContainsAny(${query})`, obj).text();
     console.log(`any: \n${containingText}`);
     var textArr = containingText.split(/\s+/);
-    var stemmedTextArr = stemWords(containingText);
-    var stemmedQueryArr = stemWords(query);
+    var stemmedTextArr = textArr
+        .map(x => stemWordsOnly(x));
+    var stemmedQueryArr = stemWordsOnly(query);
 
-
-    var sampleArr = []
+    var sampleArr = [];
     while (textArr.length > 0) {
         var i = 0;
-        while (!matchesAny(stemmedTextArr[i], stemmedQueryArr)) {
+        while (i < stemmedTextArr.length && !matchesAny(stemmedTextArr[i], stemmedQueryArr)) {
             i++;
         }
-        if (i == textArr.length) {
-            break;
-        }
+        console.log(`i: ${i} len: ${textArr.length}`);
         var firstIndex = i;
         var wordGap = 0;
+        break;
         while (i < stemmedTextArr.length && wordGap < WORDS_AROUND) {
-            i++;
             if (!matchesAny(stemmedTextArr[i], stemmedQueryArr)) {
                 wordGap++;
                 continue;
@@ -180,6 +187,7 @@ function getSampleAnyWords(obj, query) {
             else {
                 wordGap = 0;
             }
+            i++;
         }
         var lastIndex = i;
         if (sampleArr.length > 0 && firstIndex < WORDS_AROUND) {
@@ -202,23 +210,29 @@ function getSampleAnyWords(obj, query) {
 
 function getFullSample(obj, query) {
     var sections = $('.without-header-inside', obj);
+    console.log(`num sections: ${sections.length}`)
     var sampleArr = [];
     var i = 0;
-    while (i < sections.length && sampleArr.size <= MAX_NUM_SAMPLES) {
-        i++;
+    while (i < sections.length && sampleArr.length < MAX_NUM_SAMPLES) {
         samples = getSampleAllWords(sections[i], query);
-        console.log(`samples: ${samples}`);
+        console.log(`samples: \n${samples}`);
+        i++;
     }
     i = 0;
-    while (i < sections.length && sampleArr.size <= MAX_NUM_SAMPLES) {
-        i++;
+    while (i < sections.length && sampleArr.length < MAX_NUM_SAMPLES) {
         sampleArr = sampleArr.concat(getSampleAnyWords(sections[i], query));
+        i++;
     }
     if (sampleArr.length < MAX_NUM_SAMPLES) {
-        sampleArr = sampleArr.concat(getSampleAllWords(sections[i], query))
+        sampleArr = sampleArr.concat(getSampleAllWords(obj, query));
     }
-    sampleArr = sampleArr.slice(0,MAX_NUM_SAMPLES);
-    sample = sampleArr.join("... ");
+     if (sampleArr.length < MAX_NUM_SAMPLES) {
+        sampleArr = sampleArr.concat(getSampleAnyWords(obj, query));    
+    }
+    if (sampleArr.length > MAX_NUM_SAMPLES) {
+        sampleArr = sampleArr.slice(0,MAX_NUM_SAMPLES);
+    }
+    sample = sampleArr.join("... ") + "...";
     return sample;
 }
 
