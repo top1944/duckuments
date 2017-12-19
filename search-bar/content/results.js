@@ -28,7 +28,7 @@ function stemWordsOnly(string) {
         .map(x => stemmer(x));
 }
 
-$.expr[':'].ContainsAny = function(a,i,m) {
+$.expr[':'].Contains = function(a,i,m) {
     query = stemWordsOnly(m[3]);
     text = stemWordsOnly($(a).text())
         .join(' ');
@@ -90,7 +90,7 @@ function findSubarray(arr, subarr) {
 }
 
 function getSampleAllWords(obj, query) {
-    var containingText = $(`:ContainsAny(${query})`, obj).text();
+    var containingText = $(`:Contains(${query})`, obj).text();
     var textArr = containingText.split(/\s+/);
     var stemmedTextArr = stemWords(containingText);
     var stemmedQueryArr = stemWordsOnly(query);
@@ -139,7 +139,7 @@ function matchesAny(wordArr, array) {
 }
 
 function getSampleAnyWords(obj, query) {
-    var containingText = $(`:ContainsAny(${query})`, obj).text();
+    var containingText = $(`:Contains(${query})`, obj).text();
     var textArr = containingText.split(/\s+/);
     var stemmedTextArr = textArr
         .map(x => stemWordsOnly(x));
@@ -290,14 +290,16 @@ function findResults() {
         $('#searchbox').val(searchval);
 
         var resultdiv = $('#searchresults');
-        if (result.length === 0) {
+        var numResults = result.length;
+        if (numResults === 0) {
             // Hide results
+            $("#showing")
+                .append(`<p>No results found for <b>${searchval}</b>.</p>`);
             resultdiv.hide();
         } else {
             // Show result
             resultdiv = $('#searchresults');
             resultdiv.empty();
-            var numResults = result.length
             var MAX_RESULTS_LEN = 10;
             resArray = []
             for (var i=0; i<numResults; i+=MAX_RESULTS_LEN) {
@@ -347,8 +349,13 @@ function displayResults(pageToDisplay, numResults) {
 
 // get parameter from searchbox
 searchval = getParameterByName("searchbox");
+console.log(searchval)
 
 // perform search and display
-if (searchval) {
+if (searchval && searchval != "") {
     findResults();
+}
+else {
+    console.log("no query; redirecting")
+    window.location.replace("search.html");
 }

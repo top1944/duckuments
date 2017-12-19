@@ -6,27 +6,48 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
     <script type="text/javascript" src="link.js"></script>
-    <link rel="stylesheet" href="style/duckietown.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="style/duckietown.css">
     <script src="https://unpkg.com/lunr/lunr.js"></script>
     <script src="stemmer.js"></script>
     <script type="text/javascript" src="results.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="topbar">
-        <div id="searchdiv">
-            <form>
-               <input type="text" id="searchbox" name="searchbox" placeholder="search">
-            </form>
-        </div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Duckietown</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="navitem"><a href="http://book.duckietown.org">Home</a></li>
+                        <li class="navitem"><a href="../duckiebook.html">Single-page</a></li>
+                    </ul>
+                    <div id="searchdiv">
+                        <form>
+                           <input type="text" id="searchbox" name="searchbox" placeholder="search">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </div>
     <br><br>
     <center>
-    <img src="duckie.png" style="height: auto; width: 13em; margin-top: 2em; margin-bottom: 2em;" />
+    <img src="duckie.png" id="duckieImg" />
     </center>
     <div id="showing"></div>
-    <div id="pageLinks"></div>
     <div id="searchresults"></div>
+    <div id="pageLinks"></div>
     <br>
 </body>
 </html>

@@ -2296,9 +2296,6 @@ pre + p {
   margin-left: 1.7cm;
 }
 @media screen {
-  body {
-    padding-left: 25em;
-  }
   #tocdiv {
     font-size: 8pt;
     display: block;
