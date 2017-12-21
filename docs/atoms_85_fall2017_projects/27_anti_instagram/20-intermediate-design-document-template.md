@@ -28,7 +28,7 @@ An idea to push the accuracy even more is to determine first a color transformat
 
 ##### Comparison Old vs. New
 | Old Anti-Instagram  | New Anti-Instagram  |
-| :------------: | :------------: |
+| :------------ | :------------ |
 | Press a button to start a new color correction  | Do color correction automatically. Around every 10 seconds there should happen a new color correction  |
 | No use of old transformation parameters  |  Use the old parameters as input for the new transformation |
 | No use of geometrical values | Use geometric information, publish this information for other systems to use |
@@ -40,8 +40,9 @@ An idea to push the accuracy even more is to determine first a color transformat
 We are improving the Anti-Instagram algorithm. So the Anti-Instagram node should stay the same as it was.
 
 ##### Topics
+
 | Published topics  | Explanation | Latency |
-| :------------: | :------------: |  :------------: |
+| :------------ | :------------ |  :------------ |
 | ~corrected_image  |  This is the image after the color transformation. It should serve for example as an input for the line detector.  | much less than 1 s  |
 |  ~health | This is a parameter which should indicate how successful the transformation was. Based on that parameter other nodes could decide whether to use the new correction or not. An idea could be to generate a new "decision node"/"decision topic" which decides whether this correction is useful or not.   | much less than 1 s |
 |  ~transform |  This published topic outputs the transformation parameters. For a linear transformation (which is the case up to now) is would be a *shift* and a *scale* parameter.  | 1.5 seconds |
@@ -49,20 +50,22 @@ We are improving the Anti-Instagram algorithm. So the Anti-Instagram node should
 *Regarding the latency from the published topics: Since we are publishing everything at once/the health and the corrected image depend on the transform these times are not considerable. The transforming time is so high that all the topics need "special treatment". This means we have to find a way to run that online. E.g. running the algorithm only all 10 seconds.*
 
 | Subscribed topics  | Explanation  |
-| :------------: | :------------: |
+| :------------ | :------------ |
 |  ~uncorrected_image | The input for the Anti-Instagram node is the uncorrected image directly from the camera in original resolution.  |
 
 
 #### Image Transformer node
 This node transforms the raw image with the parameters from the Anti-Instagram node. This is going to be a newly created node.
-##### Topics
+##### Topics   
+
 | Published topics  | Explanation | Latency |
-| :------------: | :------------: |  :------------: |
+| :------------ | :------------: |  :------------: |
 | ~transformed_image  |  The transformed image with the color correction parameters.  | TBD  |
 
 | Subscribed topics  | Explanation  |
-| :------------: | :------------: |
-|  ~uncorrected_image | The input for the Anti-Instagram node is the uncorrected image directly from the camera in original resolution.  |
+| :------------ | :------------ |
+|  ~uncorrected_image | The input for the Anti-Instagram node is theuncorrected image directly  
+| |from the camera in original resolution.  |
 | ~transform | This published topic outputs the transformation parameters. For a linear transformation (which is the case up to now) is would be a *shift* and a *scale* parameter.  |
 
 #### Considerable area node
@@ -72,12 +75,12 @@ During our research and investigation for the Anti-Instagram algorithm we came u
 ##### Topics
 
 | Published topics  | Explanation  | Latency |
-| :------------: | :------------: | :------------: |
+| :------------ | :------------ | :------------: |
 | ~mask_image  |  A pixel by pixel indication whether the information of the image is relevant or not should be the output. With this binary matrix one could mask the camera picture and do for example line detection only on the relevant area. This would improve the computation speed a lot. The Anti-Instagram algorithm would profit for sure from that as well!  | TBD  |
 
 
 | Subscribed topics  | Explanation  |
-| :------------: | :------------: |
+| :------------ | :------------ |
 |  ~uncorrected_image | The input for the Anti-Instagram node is the uncorrected image directly from the camera in original resolution.   |
 | ~colorSegment | The color segments would be probably useful. |
 | ~segment_list | The list of detected segments could be for use as well. |
@@ -86,7 +89,7 @@ During our research and investigation for the Anti-Instagram algorithm we came u
 The line detector node publishes all the relevant data after detecting the dashed yellow line, the white side line and the potential red stopping line. The latencies are determined as soon as possible. Experiments could not have been done yet since the line detection resposibility has been officially assigned to us a few hours before the deadline.
 ##### Topics
 | Published topics  | Explanation | Latency |
-| :------------: | :------------: |  :------------: |
+| :------------ | :------------ |  :------------ |
 | ~edge  |  Returns Image with edges on it. It's the output of the OpenCV Canny() function converted to a ROS message.  | TBD  |
 |  ~color_segment |  Color segmentation for each channel (B,G,R). Same size as image.  | TBD |
 |  ~segment_list |  List of line segments with lines sorted by color.  | TBD |
@@ -94,7 +97,7 @@ The line detector node publishes all the relevant data after detecting the dashe
 
 
 | Subscribed topics  | Explanation  |
-| :------------: | :------------: |
+| :------------ | :------------ |
 | ~image | This is the compressed image to read.  |
 | ~transform | This published topic outputs the transformation parameters. For a linear transformation (which is the case up to now) is would be a *shift* and a *scale* parameter.  |
 | ~switch | This is a switch that allows to control the activity of this node. If the message is true, the node becomes active. If false, it switches off. The node starts as active.  |
@@ -110,7 +113,7 @@ We plan two different demos, one for the general demo and another for the demo d
 One of the Duckiebots has the improved Anti-Instagram algorithm on it and the other Duckiebot will run on the old version. With different light conditions in different parts of Duckietown we try to show that the improved version performs better than the old version, i.e. we want to show that the Duckiebot with the new Anti-Instagram algorithm will be able to follow the line without being disturbed by the change of the lightning conditions. On a screen near by the demo, we want to show the output of each of the Duckiebots, so that the viewer can see the result of the Anti-Instagram algorithm visually. The output can be live from the Duckiebots or recorded and played back from a bagfile.[Scenario I]
 
 | **+**  | **-**  |
-| :------------: | :------------: |
+| :------------ | :------------ |
 | One can see the improvement of the whole system.  | It is not obvious what the algorithm exactly does.  |
 | It is very easy to understand  | One does not understand why the newer system works better.  |
 
@@ -136,7 +139,7 @@ It should take a few minutes maximum for setup and running the demo.
 The visitors can filter a random static image from the Duckiebot interactively with pre-defined color filters and see an instant output image of the Anti-Instagram algorithm. This demo should show how accurate and powerful the Anti-Instagram algorithm is.
 
 | **+**  | **-**  |
-| :------------: | :------------: |
+| :------------ | :------------ |
 | It is very clear what the Anti-Instagram algorithm does  | It doesn't really attract people since it is very static |
 | It is easy to understand  | It doesn't show whether the system has improved or not.  |
 
@@ -151,7 +154,7 @@ The visitors can filter a random static image from the Duckiebot interactively w
 We want to show on a screen a visualization of the kMeans algorithm.
 
 | **+**  | **-**  |
-| :------------: | :------------: |
+| :------------ | :------------ |
 | It described the algorithm very clear in a short way. For people with interest is should be very understandable. | It is not very attractive. |
 | It shows all the technical details (# of clusters, # of iterations, ...) | It is difficult to know what happens. Only for experts valuable. |
 
