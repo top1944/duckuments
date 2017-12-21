@@ -143,11 +143,14 @@ We also found that adding 50% dropout to the input image considerably improved r
 
 This scatter plot shows our results with the best performing network.  
 
+![Interpolation](scatter_res.png)
+
+
 ### Offline Investigation of Model Errors - why and how can it fail
 
 We briefly investigate doing hard synthetic transformations of the images and studying how the predictions of our network are changed.  
 
-### Future Work 1: Learning a Model
+### Future Work 1: Learning to Predict the effects of actions
 
 
 
