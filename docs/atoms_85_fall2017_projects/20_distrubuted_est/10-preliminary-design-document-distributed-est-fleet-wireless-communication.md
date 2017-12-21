@@ -335,3 +335,86 @@ WiFi specs (duckumentation)
 **How to mitigate the risks?**
 * Synchronization not part of networking → contract
 * Contracts to prevent redundancy
+
+## Part 5: Technical Approach of Multi-SLAM project
+
+
+
+## Part 6: Instructions to reproduce SLAM demo
+
+### On your laptop
+
+**Requirements**
+* A duckiebot that is setup according to the documentation
+* ROS kinetic
+* openCV 3.2
+* boost 1.5.8
+* (Before merge with master make sure to use the remotes/origin/multislam branch on your laptop)
+
+**Install GTSAM**
+
+To install GTSAM download [gtsam-3.2.1.zip](https://research.cc.gatech.edu/borg/sites/edu.borg/files/downloads/gtsam-3.2.1.zip) and extract using e.g. the 'unzip' command. Then open the following file to add this line on top of the includes `#include <boost/serialization/serialization.hpp>` in the extracted folder.
+
+    $ nano [gtsam dir]/gtsam/inference/Ordering.cpp
+    
+ Run the following commands in the extracted gtsam directory:
+ 
+    $ mkdir build
+    $ cd build
+    $ cmake ..
+    $ sudo make install
+    
+**Install viso2_ros and gscam and their dependencies**
+
+Install these dependencies:
+
+    $ sudo apt-get install build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev ros-kinetic-pcl-ros
+
+Install gstreamer:
+
+    $ sudo apt-get install gstreamer1.0 libgstreamer1.0-dev libgstreamer-plugins-ba
+    
+Create a `third-party` directory in your catkin workspace and clone viso2 and gscam:
+
+    $ mkdir catkin_ws/src/third-party
+    $ cd catkin_ws/src/third-party
+    $ git clone https://github.com/srv/viso2
+    $ git clone https://github.com/ros-drivers/gscam
+    
+Go to your catking_ws, catkin_make and source `setup.bash`:
+
+    $ cd catkin_ws
+    $ caktin_make
+    $ source devel/setup.bash
+
+
+###On your Duckiebot
+
+Install gstreamer:
+
+    $ sudo apt-get install gstreamer1.0 libgstreamer1.0-dev libgstreamer-plugins-ba
+
+Create a `third-party` directory in your catkin workspace and clone gscam:
+
+    $ mkdir catkin_ws/src/third-party
+    $ cd catkin_ws/src/third-party
+    $ git clone https://github.com/ros-drivers/gscam
+
+Go to your catking_ws, catkin_make and source `setup.bash`:
+
+    $ cd catkin_ws
+    $ caktin_make
+    $ source devel/setup.bash
+    
+###Run the demo
+
+Identify the `hostname` or `IP-address` of your laptop using e.g. `ifconfig` and substitute `[HOSTNAMEorIP]` in the following command.Then run this line on your **duckiebot** to launch the UDP camera server:
+
+    $ raspivid -n -w 640 -h 480 -b 1000000 -fps 40 -t 0 -o - | gst-launch-1.0 -v fdsrc ! h264parse ! rtph264pay config-interval=10 pt=96 ! udpsink host=[HOSTNAMEorIP] port=9000
+
+That is all you have to do on duckiebot to reproduce the demo. Switch to your **laptop** and launch the slam node:
+
+    $ roslaunch multislam slam.launch veh:=[!ROBOTNAME]
+    
+Now you can use `rviz` to visualize the topics `MarkerArray` and `Marker`. Make sure to set the `fixed frame` in rviz so that it has the same name as your robot.
+
