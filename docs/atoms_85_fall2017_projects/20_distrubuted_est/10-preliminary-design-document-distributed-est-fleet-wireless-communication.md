@@ -336,8 +336,31 @@ WiFi specs (duckumentation)
 * Synchronization not part of networking → contract
 * Contracts to prevent redundancy
 
-## Part 5: Technical Approach of Multi-SLAM project
+## Part 5: Technical Approach of the Multi-SLAM project
 
+Disclaimer: This part should be called "Towards the Collaborative Creation of Duckietown Maps".
+
+Simultaneous Localization and Mapping (SLAM) is an essential problem in robotics: The creation of maps and determination of the own localization within this map is performed simultanously. [Simultaneous Localisation and Mapping (SLAM): Part I The Essential Algorithms, Hugh Durrant-Whyte, Fellow, IEEE, and Tim Bailey] (http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.477.7077&rep=rep1&type=pdf). 
+
+Starting from the existing duckiebot code base, we had the ambitous plan to implement Multi-Robot-SLAM functionality for this project. Quickly, we discovered the reality gap and encountered numerous isses whilst evaluating different libraries. Throughout the project, we dropped our constraints to sololey run our nodes on the duckiebot itself. As a result, we present the foundation for a Multi-SLAM implementation for duckietown.
+
+![alt text](https://github.com/duckietown/duckuments/blob/kaufmann-devel/docs/atoms_85_fall2017_projects/20_distrubuted_est/technical_concept.png "Technical overview of this projects implementation")
+
+Infrastructure of the Project
+
+An out of the box Multi-Slam solution (plug and play) has not been found for Duckietown, thus the above shown infrastructure has been created during this project. To integrate Graph based Single-Robot-SLAM capabilities into Duckietown, we are using the GTSAM library as SLAM-Backend (Optimization). As sensor input for the Front-End (Perception), we are using the duckiebots monocular camera and steering information from the joystick (forward and backward signal only).
+
+GTSAM requires odometry information to estimate the robot transformation between different poses. The viso2_ros library has been chosen to generate visual odometry input. The image transportation based sololey on ROS publishers and subscribers limited the frequency at which visual odometry was available. Due to performance issues, it was necessary to use the joystick input as velocity estimation. In addition, a UDP camera stream is now set up to stream imagery from the duckiebot to a laptop on which all computation takes place.
+
+Below are two pictures showing intermediate results of the SLAM optimization. The first one includes the track suggested by the visual odometry.
+
+![alt text](https://github.com/duckietown/duckuments/blob/kaufmann-devel/docs/atoms_85_fall2017_projects/20_distrubuted_est/small_loop.png "Small loop in duckietown")
+
+Visual odometry (red) and optimized SLAM-Graph (green) "Driving arround a Block"
+
+![alt text](https://github.com/duckietown/duckuments/blob/kaufmann-devel/docs/atoms_85_fall2017_projects/20_distrubuted_est/slam_bigturn_screenshot.png "Big loop in duckietown")
+
+Optimized SLAM-Graph of driving around the big loop in Duckietown
 
 
 ## Part 6: Instructions to reproduce SLAM demo
