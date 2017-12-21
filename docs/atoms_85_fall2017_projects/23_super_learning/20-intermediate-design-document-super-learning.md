@@ -131,13 +131,27 @@ Duckietown Vice-President of Safety: I, (believe / do not believe) that the perf
 
 ### Implementation of the Network and Setup
 
+We split the dataset into training and testing sections where the first 75% is allocated for training and the final 25% is used for validation and testing.  
+
 ### Architecture Details and Analysis
+
+The simplest architecture that we considered involves multiple convolutional layers with a single fully connected layer on top.  We found that fairly few units were required to get good results.  
+
+We also found that adding 50% dropout to the input image considerably improved results and prevented overfitting.  
 
 ### Results
 
+This scatter plot shows our results with the best performing network.  
+
+### Offline Investigation of Model Errors - why and how can it fail
+
+We briefly investigate doing hard synthetic transformations of the images and studying how the predictions of our network are changed.  
+
 ### Future Work 1: Learning a Model
 
-![Plug 1](21hlj6.gif)
+
+
+![Interpolation](21hlj6.gif)
 
 
 <!--
