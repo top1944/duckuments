@@ -193,10 +193,21 @@ We have recorded data of the lane following algorithm running smoothly in the du
 
 * See the following papers.
 
-[title](https://arxiv.org/abs/1608.01230)
-[title](https://selfdrivingcars.mit.edu/deeptesla/)
-[title](https://arxiv.org/pdf/1604.07316v1.pdf)
+[Learning a Driving Simulator](https://arxiv.org/abs/1608.01230)
 
+This paper used GANs with an extra autoencoding objective to learn to predict multiple frames into the future conditioned on the current action.  
+
+[DeepTesla: End-to-End Learning from Human and Autopilot Driving](https://selfdrivingcars.mit.edu/deeptesla/)
+
+Learns a convnet to predict steering angle directly from the image.  Runs in the browser.  
+
+[End to End Learning for Self-Driving Cars](https://arxiv.org/pdf/1604.07316v1.pdf)
+
+The NVIDIA paper on the 3 camera supervised self-driving car setup.  
+
+[A Neural Network Plays Mario Kart 64](https://www.youtube.com/watch?v=Eo07BAsyQ24)
+
+Uses a model-based approach with hard resets in a simulator to refine a supervised learning policy similar to ours.  
 
 ### Risk analysis
 
