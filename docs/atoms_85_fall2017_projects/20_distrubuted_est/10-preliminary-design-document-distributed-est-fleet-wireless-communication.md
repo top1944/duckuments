@@ -372,7 +372,7 @@ Install these dependencies:
 
 Install gstreamer:
 
-    $ sudo apt-get install gstreamer1.0 libgstreamer1.0-dev libgstreamer-plugins-ba
+    $ sudo apt-get install gstreamer1.0 libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
     
 Create a `third-party` directory in your catkin workspace and clone viso2 and gscam:
 
@@ -381,7 +381,7 @@ Create a `third-party` directory in your catkin workspace and clone viso2 and gs
     $ git clone https://github.com/srv/viso2
     $ git clone https://github.com/ros-drivers/gscam
     
-Go to your catking_ws, catkin_make and source `setup.bash`:
+Go to your catkin_ws, catkin_make and source `setup.bash`:
 
     $ cd catkin_ws
     $ caktin_make
