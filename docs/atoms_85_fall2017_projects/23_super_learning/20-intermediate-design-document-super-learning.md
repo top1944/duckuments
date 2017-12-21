@@ -129,6 +129,12 @@ Duckietown Vice-President of Safety: I, (believe / do not believe) that the perf
 
 * None.
 
+### Implementation of the Network and Setup
+
+### Architecture Details and Analysis
+
+### Results
+
 <!--
 Check-off by Data Zars:
 
