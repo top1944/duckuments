@@ -107,8 +107,10 @@ No need to revise duckietown specifications
 
 ### Software modules
 
- * Pytorch / Tensorflow
- * Grid world simulator
+ * pytorch
+ * visdom
+ * gym
+ * custom gym-duckietown environment for grid world
 
 
 ## Part 4: Project planning
