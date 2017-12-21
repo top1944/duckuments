@@ -137,6 +137,7 @@ Duckietown Vice-President of Safety: I, (believe / do not believe) that the perf
 
 ### Future Work 1: Learning a Model
 
+![Plug 1](21hlj6.gif)
 
 
 <!--
