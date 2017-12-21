@@ -352,15 +352,15 @@ An out of the box Multi-Slam solution (plug and play) has not been found for Duc
 
 GTSAM requires odometry information to estimate the robot transformation between different poses. The viso2_ros library has been chosen to generate visual odometry input. The image transportation based sololey on ROS publishers and subscribers limited the frequency at which visual odometry was available. Due to performance issues, it was necessary to use the joystick input as velocity estimation. In addition, a UDP camera stream is now set up to stream imagery from the duckiebot to a laptop on which all computation takes place.
 
-Below are two pictures showing intermediate results of the SLAM optimization. The first one includes the track suggested by the visual odometry.
+Below are two pictures showing intermediate results of the SLAM optimization. The first one includes the track suggested by the visual odometry. 
 
 ![alt text](https://github.com/duckietown/duckuments/blob/kaufmann-devel/docs/atoms_85_fall2017_projects/20_distrubuted_est/small_loop.png "Small loop in duckietown")
 
-Visual odometry (red) and optimized SLAM-Graph (green) "Driving arround a Block"
+Visual odometry (red) and optimized SLAM-Graph (green), Apriltag features displayed as blocks "Driving arround a Block"
 
 ![alt text](https://github.com/duckietown/duckuments/blob/kaufmann-devel/docs/atoms_85_fall2017_projects/20_distrubuted_est/slam_bigturn_screenshot.png "Big loop in duckietown")
 
-Optimized SLAM-Graph of driving around the big loop in Duckietown
+Optimized SLAM-Graph of driving around the big loop in Duckietown, Apriltag features displayed as blocks
 
 
 ## Part 6: Instructions to reproduce SLAM demo
