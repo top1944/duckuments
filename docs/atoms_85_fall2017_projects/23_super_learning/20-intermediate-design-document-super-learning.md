@@ -139,12 +139,17 @@ The simplest architecture that we considered involves multiple convolutional lay
 
 We also found that adding 50% dropout to the input image considerably improved results and prevented overfitting.  
 
+This is a more detailed result table showing the benefits of strong regularization: 
+
+![Reg](chart.png)
+
 ### Results
 
 This scatter plot shows our results with the best performing network.  
 
 ![Interpolation](scatter_res.png)
 
+These results are computed on the validation set.  While the error is non-trivial, very few of the errors predict the wrong direction by a significant margin.  
 
 ### Offline Investigation of Model Errors - why and how can it fail
 
