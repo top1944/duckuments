@@ -362,6 +362,9 @@ Visual odometry (red) and optimized SLAM-Graph (green), Apriltag features displa
 
 Optimized SLAM-Graph of driving around the big loop in Duckietown, Apriltag features displayed as blocks
 
+**A demo video can be found here**
+
+* https://www.youtube.com/watch?v=0S-rE3AHMzY
 
 ## Part 6: Instructions to reproduce SLAM demo
 
@@ -440,4 +443,7 @@ That is all you have to do on duckiebot to reproduce the demo. Switch to your **
     $ roslaunch multislam slam.launch veh:=[!ROBOTNAME]
     
 Now you can use `rviz` to visualize the topics `MarkerArray` and `Marker`. Make sure to set the `fixed frame` in rviz so that it has the same name as your robot.
+
+**For explorers**
+In the arm branch of the Duckietwon SW repo, you can find a modified version of the viso2_ros package that can be compiled on the duckiebot. Its performance on the Rapberry Pi is limited, but could potentially be interesting for future works.
 
