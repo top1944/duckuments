@@ -11,8 +11,16 @@ class AddSearch():
         # lunr loads the index
         lunr = '<script src="https://unpkg.com/lunr/lunr.js"></script>'
 
-        self.include = [jquery, lunr]
+        # css for bootstrap
+        bootstrapCSS = '<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">'
 
+        # JavaScript for bootstrap
+        bootstrapJS = '<script src="bootstrap/js/bootstrap.min.js"></script>'
+
+        self.include = [bootstrapCSS, bootstrapJS, jquery, lunr]
+
+
+        self.style = '<link rel="stylesheet" href="style/duckietown.css">'
 
 
         ### ADD SEARCHBOX TO THE BODY ###
@@ -20,13 +28,31 @@ class AddSearch():
         # div with the searchbox
         self.d = """
             <div id="topbar">
-                <div id="searchdiv">
-                    <form action="/duckuments-dist/master/duckiebook/results.html">
-                       <input type="text" id="searchbox" name="searchbox" placeholder="search">
-                    </form>
-                </div>
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Duckietown</a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="navitem"><a href="http://book.duckietown.org">Home</a></li>
+                                <li class="navitem"><a href="../duckiebook.html">Single-page</a></li>
+                            </ul>
+                            <div id="searchdiv">
+                                <form action="results.html">
+                                   <input type="text" id="searchbox" name="searchbox" placeholder="search">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
             </div> 
-            <br><br>
             """
 
     def addSearch(self, filename, verbose=False):
@@ -36,20 +62,29 @@ class AddSearch():
 
         ### ADD SCRIPTS TO THE HEADER ###
 
-        if self.d in data and verbose:
-            print('Already present:\n\t' + self.d)
+        if self.d in data:
+            if verbose:
+                print('Already present:\n\t' + self.d)
         else:
             after = '<body>'
             data = data.replace(after, after + self.d)
             assert self.d in data
 
         for s in self.include:
-            if s in data and verbose:
-                print('Already present:\n\t' + s)
+            if s in data:
+                if verbose:
+                    print('Already present:\n\t' + s)
             else:
-                before = '</head>'
-                data = data.replace(before, s + before)
+                after = '<head>'
+                data = data.replace(after, after + s)
                 assert s in data
+
+        if self.style in data:
+            pass
+        else:
+            before = '</head>'
+            data = data.replace(before, s + before)
+            assert s in data
 
         with open(filename, 'w') as f:
             f.write(data)
@@ -76,6 +111,9 @@ class AddSearch():
                     AddSearch().addSearch(file)
                 else:
                     AddSearch().removeSearch(file)
+
+    def addBootstrap(self):
+        before=""
 
 
 if __name__ == '__main__':

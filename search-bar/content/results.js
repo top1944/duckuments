@@ -13,6 +13,7 @@ else {
 var MAX_SAMPLE_LEN = 360;
 var WORDS_AROUND = 7;
 var MAX_NUM_SAMPLES = 4;
+var MIN_QUERY_WORD_LEN = 3;
 
 function stemWords(string) {
     return string
@@ -125,6 +126,19 @@ function getSampleAllWords(obj, query) {
         stemmedTextArr = stemmedTextArr.slice(lenPhrase);
     }
     return Array.from(sampleSet);
+}
+
+function getSampleEveryWord(obj, query) {
+    var stemmedQuerySet = new Set();
+    var stemmedQueryArr = stemWordsOnly(query);
+    for (var i=0; i<stemmedQueryArr.length; i++) {
+        if (stemmedQueryArr[i].length > MIN_QUERY_WORD_LEN) {
+            stemmedQuerySet.add(stemmedQueryArr[i]);
+        }
+    }
+    for (var word in stemmedQuerySet) {
+        console.log(word);
+    }
 }
 
 function matchesAny(wordArr, array) {
