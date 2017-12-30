@@ -48,7 +48,7 @@ segments:
    color: white
 """
 
-V = dict(y1=y1,y2=y2,y3=y3,y4=y4,y5=y5,y6=y6, L=L)
+V = dict(y1=y1,y2=y2,y3=y3,y4=y4,y5=y5,y6=y6, L=L, D=D)
 for k,v in V.items():
     yaml = yaml.replace(k, str(v))
 
