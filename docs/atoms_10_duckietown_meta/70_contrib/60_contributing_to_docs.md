@@ -225,7 +225,9 @@ and obtain the name of the commit using the following commands:
     $ git -C ~/duckuments rev-parse HEAD      # commit for duckuments
     $ git -C ~/duckuments/mcdp rev-parse HEAD # commit for mcdp
 
-
+<!--
+JT: this is a test to show how to edit the docs
+-->
 
 
 <!-- don't need to do it manually.
