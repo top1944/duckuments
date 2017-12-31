@@ -128,17 +128,110 @@ function getSampleAllWords(obj, query) {
     return Array.from(sampleSet);
 }
 
-function getSampleEveryWord(obj, query) {
-    var stemmedQuerySet = new Set();
-    var stemmedQueryArr = stemWordsOnly(query);
-    for (var i=0; i<stemmedQueryArr.length; i++) {
-        if (stemmedQueryArr[i].length > MIN_QUERY_WORD_LEN) {
-            stemmedQuerySet.add(stemmedQueryArr[i]);
+function matchingWords(wordArr, wordDict) {
+    matches = []
+    for (var i in wordArr) {
+        if (wordArr[i] in wordDict) {
+            matches.push(wordArr[i]);
         }
     }
-    for (var word in stemmedQuerySet) {
-        console.log(word);
+    return matches;
+}
+
+function addToSampleSet(sampleSet, sideSet, stemmedQueryDict, phrase) {
+    var phraseArr = stemWordsOnly(phrase);
+    var matches = matchingWords(phraseArr, stemmedQueryDict);
+    if (matches.length == 0) {
+        sideSet.add(phrase);
     }
+    else {
+        for (var i in matches) {
+            delete stemmedQueryDict[matches[i]];
+        }
+        sampleSet.add(phrase);
+    }
+}
+
+function getValues(dictionary) {
+    var values = Object.keys(dictionary).map(function(key){
+        return dictionary[key];
+    });
+    return values;
+}
+
+function getSampleEveryWord(obj, query) {
+    var stemmedQueryArr = stemWordsOnly(query);
+    var stemmedQueryDict = {};
+    var queryWords = query.split(/[^\w]/);
+    for (var i in queryWords) {
+        var word = queryWords[i]
+        stemmedQueryDict[stemmer(word)] = word;
+    }
+    for (var word in stemmedQueryDict) {
+        console.log(`|${word}|`);
+    }
+
+    var containingText = $(`:Contains(${query})`, obj).text();
+    var textArr = containingText.split(/\s+/);
+    var stemmedTextArr = textArr
+        .map(x => stemWordsOnly(x));
+    
+    var sampleSet = new Set();
+    var sideSet = new Set();
+    var mostRecentSample = null;
+    while (textArr.length > 0) {
+        var i = 0;
+        while (i < stemmedTextArr.length && !matchesAny(stemmedTextArr[i], stemmedQueryArr)) {
+            i++;
+        }
+        var firstIndex = i;
+        var wordGap = 0;
+        while (i < stemmedTextArr.length && wordGap < WORDS_AROUND) {
+            if (!matchesAny(stemmedTextArr[i], stemmedQueryArr)) {
+                wordGap++;
+                continue;
+            }
+            else {
+                wordGap = 0;
+            }
+            i++;
+        }
+        var lastIndex = i;
+        if (sampleSet.size > 0 && firstIndex < WORDS_AROUND) {
+            var phrase = textArr.slice(0, lastIndex).join(' ');
+            if (mostRecentSample) {
+                mostRecentSample += " " + phrase;
+            }
+            else {
+                mostRecentSample = phrase;
+            }
+        }
+        else {
+            if (sampleSet.size == MAX_NUM_SAMPLES) {
+                break;
+            }
+            firstIndex = Math.max(0, firstIndex - WORDS_AROUND)
+            lastIndex = Math.min(lastIndex + WORDS_AROUND, textArr.length);
+            var phrase = textArr.slice(firstIndex, lastIndex).join(' ');
+            if (mostRecentSample) {
+                addToSampleSet(sampleSet, sideSet, stemmedQueryDict, phrase);
+            }
+            mostRecentSample = phrase;
+        }
+        textArr = textArr.slice(lastIndex);
+        stemmedTextArr = stemmedTextArr.slice(lastIndex);
+    }
+    if (mostRecentSample) {
+        addToSampleSet(sampleSet, sideSet, stemmedQueryDict, phrase);
+    }
+    var sampleArr = Array.from(sampleSet);
+    var sideArr = Array.from(sideSet);
+    while (sampleArr.length < MAX_NUM_SAMPLES && sideArr.length > 0) {
+        sampleArr.push(sideArr.pop());
+    }
+    var queryWordsLeft = getValues(stemmedQueryDict);
+    console.log(stemmedQueryDict)
+    return [sampleArr, queryWordsLeft];
 }
 
 function matchesAny(wordArr, array) {
@@ -211,17 +304,26 @@ function getSampleAnyWords(obj, query) {
 function getFullSample(obj, query) {
     var sampleArr = [];
     //sampleArr = sampleArr.concat(getSampleAllWords(obj, query));
+    samples = getSampleEveryWord(obj, query);
     if (sampleArr.length < MAX_NUM_SAMPLES) {
-        sampleArr = sampleArr.concat(getSampleAnyWords(obj, query));    
+        sampleArr = sampleArr.concat(samples[0]);    
     }
     if (sampleArr.length > MAX_NUM_SAMPLES) {
         sampleArr = sampleArr.slice(0,MAX_NUM_SAMPLES);
     }
     sample = sampleArr
         .join("... ") + "...";
-    sample = sample.replace(/prevnext|Because of mathjax bug/g,'')
+    sample = sample.replace(/prevnext|(Because )?(of )?mathjax bug/g,'')
         .replace(/[✎🔗\s]+/g,' ');
     sample = emphasizeWords(sample, query);
+    if (Object.keys(samples[1]).length > 0) {
+        var notFound = samples[1]
+            .map(x => "<s>" + x + "</s>")
+            .join(" ")
+        missing = `<p> Missing: ${notFound}</p>`
+        console.log(missing);
+        sample += missing;
+    }
     return sample;
 }
 

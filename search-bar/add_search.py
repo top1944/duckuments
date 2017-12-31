@@ -31,6 +31,11 @@ class AddSearch():
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
                         <div class="navbar-header">
+                            <div id="searchdiv" class="navbar-header pull-right">
+                                <form action="results.html">
+                                   <input type="text" id="searchbox" name="searchbox" placeholder="search">
+                                </form>
+                            </div>
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
@@ -44,11 +49,6 @@ class AddSearch():
                                 <li class="navitem"><a href="http://book.duckietown.org">Home</a></li>
                                 <li class="navitem"><a href="../duckiebook.html">Single-page</a></li>
                             </ul>
-                            <div id="searchdiv">
-                                <form action="results.html">
-                                   <input type="text" id="searchbox" name="searchbox" placeholder="search">
-                                </form>
-                            </div>
                         </div>
                     </div>
                 </nav>
