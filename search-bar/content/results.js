@@ -175,9 +175,9 @@ function getValues(dictionary) {
 function getSampleEveryWord(obj, query) {
     var stemmedQueryArr = stemWordsOnly(query);
     var stemmedQueryDict = {};
-    var queryWords = query.split(/[^\w]/);
+    var queryWords = query.split(/[^\w]/).clean("");
     for (var i in queryWords) {
-        var word = queryWords[i]
+        var word = queryWords[i];
         stemmedQueryDict[stemmer(word)] = word;
     }
 
