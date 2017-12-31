@@ -10,6 +10,17 @@ else {
     bookRoot = webroot;
 }
 
+Array.prototype.clean = function(deleteValue) {
+  for (var i = 0; i < this.length; i++) {
+    if (this[i] == deleteValue) {         
+      this.splice(i, 1);
+      i--;
+    }
+  }
+  return this;
+};
+
+
 var MAX_SAMPLE_LEN = 360;
 var WORDS_AROUND = 7;
 var MAX_NUM_SAMPLES = 4;
@@ -19,14 +30,16 @@ function stemWords(string) {
     return string
         .toLowerCase()
         .split(/\s+/)
-        .map(x => stemmer(x));
+        .map(x => stemmer(x))
+        .clean("");
 }
 
 function stemWordsOnly(string) {
     return string
         .toLowerCase()
         .split(/[^\w]+/)
-        .map(x => stemmer(x));
+        .map(x => stemmer(x))
+        .clean("");
 }
 
 $.expr[':'].Contains = function(a,i,m) {
@@ -250,8 +263,6 @@ function getFullSample(obj, query) {
         var nextSample = sampleArrEvery.pop();
         sampleSet.add(nextSample);    
     }
-
-    // console.log(sampleSet);
 
     var sampleArr = Array.from(sampleSet);
     if (sampleArr.length > MAX_NUM_SAMPLES) {
