@@ -1,4 +1,4 @@
-// If testing from localhost:8000/results.html, we hardcode
+// If testing from localhost:8000/searchbar/content/results.html, we hardcode
 // the path.
 if (window.location.pathname == "/search-bar/content/results.html") {
     bookRoot = "http://book.duckietown.org/master/duckiebook/"
@@ -30,6 +30,7 @@ function stemWords(string) {
     return string
         .toLowerCase()
         .split(/\s+/)
+        .map(x => x.replace(/[^\w]/g,""))
         .map(x => stemmer(x))
         .clean("");
 }
@@ -299,7 +300,7 @@ function boldenInsideLetters(string) {
 
 // Make occurrences of words related to the query through stemming bold.
 function emphasizeWords(string, query) {
-    var queryStemmed = stemWords(query);
+    var queryStemmed = stemWordsOnly(query);
     var stringArrStemmed = string
         .toLowerCase()
         .split(/\s/) 

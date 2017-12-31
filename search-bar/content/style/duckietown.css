@@ -34,6 +34,10 @@ body {
   padding-top: 2em;
 }
 
+#navbar-button {
+  z-index: 3;
+}
+
 div#tocdiv {
   padding: 2em;
   position: fixed;

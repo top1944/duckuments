@@ -36,7 +36,7 @@ class AddSearch():
                                    <input type="text" id="searchbox" name="searchbox" placeholder="search">
                                 </form>
                             </div>
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <button id="navbar-button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -48,6 +48,7 @@ class AddSearch():
                             <ul class="nav navbar-nav">
                                 <li class="navitem"><a href="http://book.duckietown.org">Home</a></li>
                                 <li class="navitem"><a href="../duckiebook.html">Single-page</a></li>
+                                <li class="navitem"><a href="../duckiebook">Multi-page</a></li>
                             </ul>
                         </div>
                     </div>
