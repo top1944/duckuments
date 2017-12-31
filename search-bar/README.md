@@ -21,15 +21,15 @@ Compiling the index for DuckieSearch requires:
 
 - `Node.js`. To install in Ubuntu:
 
-    sudo apt-get install nodejs
+        sudo apt-get install nodejs
 
 - The JavaScript library `Lunr`, which creates the index. To install:
 
-    npm install -g lunr
+        npm install -g lunr
 
 - The Python `RegEx` module. To install:
 
-    pip install --user regex
+        pip install --user regex
 
 Known Issues
 ------------
@@ -41,8 +41,7 @@ Known Issues
 Contribute
 ----------
 
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
+- Source Code: `github.com/duckietown/duckuments`
 
 Support
 -------
