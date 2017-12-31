@@ -41,7 +41,7 @@ Known Issues
 Contribute
 ----------
 
-- Source Code: `github.com/duckietown/duckuments`
+- Source Code: `github.com/duckietown/duckuments/search-bar`
 
 Support
 -------
