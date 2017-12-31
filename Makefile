@@ -69,6 +69,9 @@ check-duckietown-software:
 
 add-searchbar:
 	make -C search-bar
+
+remove-searchbar:
+	make -C search-bar clean
 	
 
 generated_figs=docs/generated_pdf_fig

@@ -1,27 +1,42 @@
-$project
-========
+DuckieSearch
+============
 
-$project will solve your problem of where to start with documentation,
-by providing a basic explanation of how to do it easily.
+DuckieSearch allows you to search the Duckietown documentation.
 
-Look how easy it is to use:
+To add DuckieSearch to a compiled Duckiebook, run:
 
-    import project
-    # Get your stuff done
-    project.do_stuff()
+    make add-searchbar
 
-Features
---------
+from the `duckuments` root directory. 
 
-- Be awesome
-- Make things faster
+To removie DuckieSearch from a compiled Duckiebook, run:
 
-Installation
+    make remove-searchbar
+
+Dependencies
 ------------
 
-Install $project by running:
+Compiling the index for DuckieSearch requires:
 
-    install project
+
+- `Node.js`. To install in Ubuntu:
+
+    sudo apt-get install nodejs
+
+- The JavaScript library `Lunr`, which creates the index. To install:
+
+    npm install -g lunr
+
+- The Python `RegEx` module. To install:
+
+    pip install --user regex
+
+Known Issues
+------------
+
+- Page loading speed needs to be improved.
+- We would like to add more search options (quotes, boolean search).
+- The order of result display should be optimized.
 
 Contribute
 ----------
@@ -32,10 +47,13 @@ Contribute
 Support
 -------
 
-If you are having issues, please let us know.
-We have a mailing list located at: project@google-groups.com
+If you are having issues, please let us know. 
+
+Slack channel (`duckietown.slack.com`): `#devel-heroes`
+
+Primary contact: Lucy Newman -- `@Lucy Newman - TTIC`, `newmanlucy@uchicago.edu`
 
 License
 -------
 
-The project is licensed under the BSD license.
+The project is licensed under the GNU General Public License v2.
