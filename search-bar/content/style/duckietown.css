@@ -23,7 +23,15 @@ body {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 2;
+  z-index: 3;
+}
+
+#toggle {
+  position: fixed;
+  padding: 10px;
+  left: 0px;
+  top: 60px;
+  z-index: 1;
 }
 
 #not-toc {
@@ -32,7 +40,7 @@ body {
 }
 
 #navbar-button {
-  z-index: 3;
+  z-index: 4;
 }
 
 div#tocdiv {
@@ -41,6 +49,8 @@ div#tocdiv {
   top: 50px;
   bottom: 0;
   overflow-y: scroll;
+  z-index: 2;
+  background-color: white;
 }
 
 #searchbox {
@@ -76,6 +86,31 @@ div#tocdiv {
         padding-right: 75px;
     }
 }
+
+@media (max-width: 1125px) {
+  #not-toc {
+    width: 400px
+  }
+}
+
+@media (max-width: 953px) {
+  #tocdiv {
+    display: none;
+  }
+  body {
+    padding: 0;
+  }
+}
+
+@media (min-width: 953px) {
+  #tocdiv {
+    display: contents;
+  }
+  #toggle {
+    display: none;
+  }
+}
+
 
 /*
 body{

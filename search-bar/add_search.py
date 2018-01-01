@@ -1,4 +1,5 @@
 #!/usr/bin/env python2
+# -*- coding: utf-8 -*-
 import os
 from optparse import OptionParser
 
@@ -22,12 +23,55 @@ class AddSearch():
         if options.single_page:
             self.style = self.styleSingle
         else:
-            self.style = '<link href="style/duckietown.css" rel="stylesheet">>'
+            self.style = '<link href="style/duckietown.css" rel="stylesheet">'
 
+        self.toggleScript = """
+            <script>
+                function hiddenTOC() {
+                    console.log($('#toggle'));
+                    $('#toggle').text('❯');
+                    $('#toggle').css('margin-left', 0);
+                }
 
-        self.include = [bootstrapCSS, bootstrapJS, jquery, lunr]
+                function shownTOC() {
+                    console.log('peekaboo');
+                    $('#toggle').text('❮');
+                    $('#toggle').css('margin-left', $('#tocdiv').width() + 40);
+                }
 
+                function setToggle() {
+                    if ($('#tocdiv').is(':visible')) {
+                        shownTOC();
+                    }
+                    else { 
+                        hiddenTOC();
+                    }
+                }
+                setToggle();
 
+                var lastWidth = $(window).width();
+
+                $(window).on('resize', function(event){
+                    var windowWidth = $(window).width();
+                    if(windowWidth > 953 && lastWidth <= 953){
+                        $('#tocdiv').show();
+                        shownTOC();
+                    }
+                    else if (windowWidth <= 953 && lastWidth > 953) {
+                        $('#tocdiv').hide();
+                        hiddenTOC();
+                    }
+                    lastWidth = windowWidth;
+                });                
+            </script>
+        """
+
+        self.include = [jquery, lunr, bootstrapCSS, bootstrapJS]
+
+        self.toggle = """
+            <button id="toggle" class="toggle" onclick="$('#tocdiv').toggle(); setToggle();">
+            </button>
+        """
 
         ### ADD SEARCHBOX TO THE BODY ###
 
@@ -92,6 +136,20 @@ class AddSearch():
             </div> 
             """
 
+    def addElement(self, data, element, nextElt, after=False, ensure=True):
+
+        if element in data:
+            pass
+        else:
+            if after:
+                data = data.replace(nextElt, nextElt + element)
+            else:
+                data = data.replace(nextElt, element + nextElt)
+            if ensure:
+                assert element in data
+
+        return data
+
 
     def addSearch(self, filename, single_page=False, verbose=False):
         
@@ -105,29 +163,14 @@ class AddSearch():
         else:
             topdiv = self.d
 
-        if topdiv in data:
-            if verbose:
-                print('Already present:\n\t' + topdiv)
-        else:
-            after = '<body>'
-            data = data.replace(after, after + topdiv)
-            assert topdiv in data
+        data = self.addElement(data, topdiv, '<body>', after=True)
+        data = self.addElement(data, self.style, '</head>')
+        data = self.addElement(data, self.toggle, '<div id="not-toc">', ensure=False)
+        data = self.addElement(data, self.toggleScript, '</body>')
 
         for s in self.include:
-            if s in data:
-                if verbose:
-                    print('Already present:\n\t' + s)
-            else:
-                after = '<head>'
-                data = data.replace(after, after + s)
-                assert s in data
+            data = self.addElement(data, s, '<head>')
 
-        if self.style in data:
-            pass
-        else:
-            before = "</head>"
-            data = data.replace(before, self.style + before)
-            assert self.style in data
 
         with open(filename, 'w') as f:
             f.write(data)
@@ -140,6 +183,9 @@ class AddSearch():
         data = data.replace(self.dSinglePage, '')
         data = data.replace(self.style, '')
         data = data.replace(self.styleSingle, '')
+        data = data.replace(self.toggle, '')
+        data = data.replace(self.toggleScript, '')
+
         for s in self.include:
             data = data.replace(s, '')
         with open(filename, 'w') as f:
