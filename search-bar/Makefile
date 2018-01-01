@@ -3,6 +3,7 @@ duckiebook=$(duckuments-dist)/master/duckiebook
 single-page=$(duckiebook).html
 docs=../docs
 out=out
+style=$(duckiebook)/style
 duckietown-software=../duckietown
 src="$(docs):$(duckietown-software)/catkin_ws/src:$(duckietown-software)/Makefiles"
 
@@ -28,11 +29,13 @@ all:
 	@echo "All searchbar dependencies were found"
 	@./make-index.sh $(src) $(single-page)
 	@./add_search.py -d $(duckiebook)
+	@./add_search.py -s $(duckiebook).html
 	@echo "Search bar added to duckiebook html"
 	@cp -r content/* $(out)/* $(duckiebook)
 	@echo "Search files moved to duckiebook directory"
 
 clean:
-	@./add_search.py -rd $(duckiebook)
+	@./add_search.py -rd $(duckuments-dist)
 	@echo "Search bar removed from html"
-	rm -rf $(out)
+	@rm -rf $(out) $(style) $(duckiebook)/results.html $(duckuments-dist)/results.js $(duckuments-dist)/search.html
+	@echo "Search files removed from duckuments-dist"

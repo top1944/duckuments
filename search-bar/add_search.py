@@ -12,15 +12,21 @@ class AddSearch():
         lunr = '<script src="https://unpkg.com/lunr/lunr.js"></script>'
 
         # css for bootstrap
-        bootstrapCSS = '<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">'
+        bootstrapCSS = '<link href="/duckuments-dist/master/duckiebook/style/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
 
         # JavaScript for bootstrap
-        bootstrapJS = '<script src="bootstrap/js/bootstrap.min.js"></script>'
+        bootstrapJS = '<script src="/duckuments-dist/master/duckiebook/style/bootstrap/js/bootstrap.min.js"></script>'
+
+        self.styleSingle = '<link href="duckiebook/style/duckietown.css" rel="stylesheet">'
+
+        if options.single_page:
+            self.style = self.styleSingle
+        else:
+            self.style = '<link href="style/duckietown.css" rel="stylesheet">>'
+
 
         self.include = [bootstrapCSS, bootstrapJS, jquery, lunr]
 
-
-        self.style = '<link rel="stylesheet" href="style/duckietown.css">'
 
 
         ### ADD SEARCHBOX TO THE BODY ###
@@ -28,7 +34,7 @@ class AddSearch():
         # div with the searchbox
         self.d = """
             <div id="topbar">
-                <nav class="navbar navbar-default">
+                <nav id="navbar" class="navbar navbar-default">
                     <div class="container-fluid">
                         <div class="navbar-header">
                             <div id="searchdiv" class="navbar-header pull-right">
@@ -48,7 +54,7 @@ class AddSearch():
                             <ul class="nav navbar-nav">
                                 <li class="navitem"><a href="http://book.duckietown.org">Home</a></li>
                                 <li class="navitem"><a href="../duckiebook.html">Single-page</a></li>
-                                <li class="navitem"><a href="../duckiebook">Multi-page</a></li>
+                                <li class="navitem"><a href="../duckiebook/index.html">Multi-page</a></li>
                             </ul>
                         </div>
                     </div>
@@ -56,20 +62,56 @@ class AddSearch():
             </div> 
             """
 
-    def addSearch(self, filename, verbose=False):
+        self.dSinglePage = """
+            <div id="topbar">
+                <nav id="navbar" class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <div id="searchdiv" class="navbar-header pull-right">
+                                <form action="duckiebook/results.html">
+                                   <input type="text" id="searchbox" name="searchbox" placeholder="search">
+                                </form>
+                            </div>
+                            <button id="navbar-button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Duckietown</a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="navitem"><a href="http://book.duckietown.org">Home</a></li>
+                                <li class="navitem"><a href="#">Single-page</a></li>
+                                <li class="navitem"><a href="duckiebook/index.html">Multi-page</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div> 
+            """
+
+
+    def addSearch(self, filename, single_page=False, verbose=False):
         
         with open(filename) as f:
             data = f.read()
 
         ### ADD SCRIPTS TO THE HEADER ###
 
-        if self.d in data:
+        if single_page:
+            topdiv = self.dSinglePage
+        else:
+            topdiv = self.d
+
+        if topdiv in data:
             if verbose:
-                print('Already present:\n\t' + self.d)
+                print('Already present:\n\t' + topdiv)
         else:
             after = '<body>'
-            data = data.replace(after, after + self.d)
-            assert self.d in data
+            data = data.replace(after, after + topdiv)
+            assert topdiv in data
 
         for s in self.include:
             if s in data:
@@ -83,18 +125,21 @@ class AddSearch():
         if self.style in data:
             pass
         else:
-            before = '</head>'
-            data = data.replace(before, s + before)
-            assert s in data
+            before = "</head>"
+            data = data.replace(before, self.style + before)
+            assert self.style in data
 
         with open(filename, 'w') as f:
             f.write(data)
 
-    def removeSearch(self, filename):
+    def removeSearch(self, filename, single_page=False):
         with open(filename) as f:
             data = f.read()
 
         data = data.replace(self.d, '')
+        data = data.replace(self.dSinglePage, '')
+        data = data.replace(self.style, '')
+        data = data.replace(self.styleSingle, '')
         for s in self.include:
             data = data.replace(s, '')
         with open(filename, 'w') as f:
@@ -126,6 +171,9 @@ if __name__ == '__main__':
     parser.add_option("-r", "--remove", dest="remove",
                       help="remove search instead of adding",
                       action="store_true", default=False)
+    parser.add_option("-s", "--single-page", dest="single_page",
+                      help="use single-page top div",
+                      action="store_true", default=False)
     (options, args) = parser.parse_args()
 
     if len(args) == 0:
@@ -140,4 +188,4 @@ if __name__ == '__main__':
         if options.remove:
             search.removeSearch(file)
         else:
-            search.addSearch(file)
+            search.addSearch(file, single_page=options.single_page)

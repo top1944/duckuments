@@ -35,8 +35,8 @@ Known Issues
 ------------
 
 - Page loading speed needs to be improved.
-- We would like to add more search options (quotes, boolean search).
-- The order of result display should be optimized.
+- We would like to add more search options (quotes, boolean search). However, Lunr does not support this, so it might be necessary to use a different indexer.
+- The order of result display could be optimized.
 
 Contribute
 ----------
@@ -48,7 +48,7 @@ Support
 
 If you are having issues, please let us know. 
 
-Slack channel (`duckietown.slack.com`): `#devel-heroes`
+Slack channel on `duckietown.slack.com`: `#devel-heroes`
 
 Primary contact: Lucy Newman -- `@Lucy Newman - TTIC`, `newmanlucy@uchicago.edu`
 
