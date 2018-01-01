@@ -28,13 +28,11 @@ class AddSearch():
         self.toggleScript = """
             <script>
                 function hiddenTOC() {
-                    console.log($('#toggle'));
                     $('#toggle').text('❯');
                     $('#toggle').css('margin-left', 0);
                 }
 
                 function shownTOC() {
-                    console.log('peekaboo');
                     $('#toggle').text('❮');
                     $('#toggle').css('margin-left', $('#tocdiv').width() + 40);
                 }
