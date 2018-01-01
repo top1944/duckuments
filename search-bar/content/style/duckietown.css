@@ -32,6 +32,8 @@ body {
   left: -2px;
   top: 60px;
   z-index: 1;
+  background-color: rgba(240,240,240,.9);
+  border: 1px solid lightgray
 }
 
 #not-toc {
