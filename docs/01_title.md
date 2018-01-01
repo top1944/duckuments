@@ -8,7 +8,7 @@
 </p>
 
 <p style='text-align:center'>
-    <img src='logo.png' style='height:auto; width: 13em; margin-top: 10em; margin-bottom:6em;'/>
+    <img src='logo.png' style='height:auto; width: 13em; margin-top: 2em; margin-bottom:2em;'/>
 </p>
 
 <p>
