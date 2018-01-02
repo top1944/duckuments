@@ -1,5 +1,5 @@
 
-<h1 notoc nonumber id='booktitle' status='ready'>The Duckiebook</h1>
+<h1 notoc nonumber id='booktitle' status='ready'>The Duckietown Book (Duckiebook)</h1>
 
 <p style='text-align: center'>
     From kits of parts to an autonomous fleet<br/>
@@ -12,7 +12,7 @@
 </p>
 
 <p>
-    The last version of this book and other documents are available at the URL
+    The last version of this "duckiebook" and other related documents are available at the URL
     <br/>
     <a style='font-size:smaller; font-family: monospace;' href="http://book.duckietown.org/">
         http://book.duckietown.org/
