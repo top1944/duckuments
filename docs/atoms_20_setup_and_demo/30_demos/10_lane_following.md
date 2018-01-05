@@ -12,26 +12,26 @@ Requires: Joystick demo has been successfully launched.[Joystick demo](#rc-contr
 
 </div>
 
-## Video of expected results {#demo-template-expected}
+## Video of expected results {#demo-lane-following-expected}
 
 [link 1 of lane following](https://www.youtube.com/watch?v=6V3w66mF7w0)
 [link 2 of lane following](https://photos.google.com/share/AF1QipMEwYvBW5hl3_l4M0f9on3RSKJmYftbWxo0nSyW7EMTBWs7iXRc_fHEc5mouSMSxA?key=M1ZWc2k0Nnl4ckFjd3dwRmV0WmdMSzFWU0xmOXh3)
 
-## Duckietown setup notes {#demo-template-duckietown-setup}
+## Duckietown setup notes {#demo-lane-following-duckietown-setup}
 
 A duckietown with white and yellow lanes. No obstacles on the lane.
 
-## Duckiebot setup notes {#demo-template-duckiebot-setup}
+## Duckiebot setup notes {#demo-lane-following-duckiebot-setup}
 
 Make sure the camera is heading ahead. Tighten the screws if necessary. 
 
-## Pre-flight checklist {#demo-template-pre-flight}
+## Pre-flight checklist {#demo-lane-following-pre-flight}
 
 Check: turn on joystick. 
 
 Check: Enough battery of the duckiebot. 
 
-## Demo instructions {#demo-template-run}
+## Demo instructions {#demo-lane-following-run}
 
 Here, give step by step instructions to reproduce the demo.
 
@@ -55,7 +55,7 @@ Step 3: On laptop, make sure ros enviroment has been activated, run command:
 In rqt, the images can be visualized are /(vehicle_name)/camera_node/image/compressed, /(vehicle_name)/line_detector_node/image_with_lines, /(vehicle_name)/lane_filter_node/belief_img.
 
 
-## Troubleshooting {#demo-template-troubleshooting}
+## Troubleshooting {#demo-lane-following-troubleshooting}
 
 Contact Yang Shaohui(ETHZ) via Slack if any trouble occurs. 
 
