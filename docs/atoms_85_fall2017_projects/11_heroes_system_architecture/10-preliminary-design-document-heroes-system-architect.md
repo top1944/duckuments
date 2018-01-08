@@ -29,12 +29,13 @@ The system architect is ultimately responsible:
 
 ### Quests
 
-The system architect project can be split into two quests:
+The system architect project can be split into three quests:
 
 1. Ensure that the development of the system goes smoothly (wooden spoon)
 2. Develop a framework/tool to formally describe (and later optimize) the system (bronze, silver and gold)
+3. Develop a tool for writing Duckietown applications (bronze, solver and gold)
 
-The two quests and their respective descriptions will be explained separately in this document.
+The three quests and their respective descriptions will be explained separately in this document.
 
 ## Quest 1
 
@@ -231,3 +232,133 @@ Formalise the description of the system characteristics, so that eventually the 
 * Quest 1 takes priority over quest 2, since it is more crucial to the functioning of the system. This means that quest 2 may suffer if quest 1 takes more time than expected.
 * Quest 2 has a research/experimental aspect, which makes it both interesting and challenging.
 * There is a chance that it might not be solved, as it is not a trivial problem.
+
+## Quest 3: Terrific Tooling
+
+### Mission Statement
+
+To make programming your Duckiebot more pleasant through carefully crafted developer tools. We plan to find pain points in the software development workflow, and eliminate them.
+
+### Scope
+
+#### In scope
+
+* Syntax support - Highlighting, navigation, autocompletion
+* Program analysis - Code inspections, intentions, and linting
+* Testing support - Unit and integration testing, code coverage
+* Project creation - Project setup and boilerplate code generation
+* Dependency management - Track installed and missing packages
+* Monitoring utils - Logging, diagnostics, profiling and visualization
+* Crash analytics - Enhanced stack traces with source navigation
+* Build automation - Delta rebuilds, cmake magic, code hotswap
+* ROS integration - Nodes, topics, services, parameters, graphs
+* Duckumentation - Usage instructions and supported features
+
+#### Out of scope
+
+* Reviewing your code
+* Live debugging (for now)
+* VCS integration (for now)
+* Network related configuration
+* Operating system configuration
+
+### Stakeholders
+
+* Duckietown developers - This project will directly impact all software developers in Duckietown. As such, we need to continuously gather user feedback during the project lifecycle.
+
+* TAs and support staff - This group has valuable insight into common obstacles and sources of friction. We need to engage with TAs to diagnose these problems before they appear on Slack.
+
+*  Software architects - We need to establish conventions for project structure, code style, and formatting. The formal specification will determine the conventions we need to enforce.
+
+### Problem statement
+
+It takes too long to program the Duckiebot. Editing XML, shoveling files, grepping for strings. Who has time for that? Getting rapid feedback is critical for learning, prototyping, and most importantly, having fun! How can we make programming in Duckietown faster and more fun? What areas currently disrupt developers’ workflow? How can we deliver more rapid, relevant feedback to those users?
+
+### Assumptions
+
+The existing tools for writing and deploying code are suitable for power users, however they are not easily accessible to all audiences. These command line tools do not need replacements, but they can be made more accessible through an integrated development environment (IDE). Such tools are common in the software industry, and support a variety of programming related activities. Given sufficient choice, we assume a lightweight IDE, built with careful attention to usability, will be beneficial to both beginner and advanced users alike.
+
+### Approach
+
+* Understand the project structure, XML. How is code compiled and run?
+* Write an MVP/POC app that supports file renaming and refactoring.
+* Add support for project directory structure and skeleton project creation.
+* Add support for deploying a project from the local machine to the remote.
+* Add support for monitoring and tracking running code, viewing logs.
+* Save to local disk
+* Searching the log
+* Collect crash dumps and link to the corresponding code points.
+* Link stack traces to source code
+* Suggest an appropriate Slack channel
+* Copy environment info and crash dump to clipboard
+
+### Functionality, resources, trade-offs
+
+#### Functionality provided
+
+Facilitate writing and deploying code. This includes, but should not be limited to:
+
+* Syntax highlighting
+* Auto-completion
+* Code navigation
+* Static analysis
+* Deployment and execution
+* Live logging and monitoring
+* Crash reporting
+* Stacktrace linking
+
+#### Resources required
+
+Biggest resource: Time
+
+### Performance measurement
+
+* Time taken from opening laptop to write and run a simple program (eg. drive forward)
+* Detection of common errors, and reduction in corresponding help requests
+* User feedback gathered from Duckietown colleagues and mentors
+
+### Deliverables
+
+* Design document and analysis study
+* Open source project with documentation
+* IDE plugin and associated programming tools
+* Screencast demonstrating the tool and features
+* User feedback surveys and project roadmap
+
+### Project levels
+
+* Wooden spoon: Well-documented OSS platform for future tooling development. No users.
+
+* Bronze: Basic syntax support, code analysis, navigation, and deployment. 2 active users.
+
+* Silver: Simple visualization, live logging, ROS integration, crash reporting. 5 active users.
+
+* Gold: Build automation, dependency management, unit testing support. 10 active users.
+
+### Project planning
+
+First steps for next phase:
+
+* Establish conventions for project structure and naming (in collaboration with Architects)
+* Identify common programming stumbling-blocks (in collaboration with colleagues)
+* Write an MVP/POC app that has basic syntax support and code navigation
+
+Relevant Duckietown resources to investigate
+
+* Identify Duckietown-specific conventions and how it fits into ROS
+* Identify existing scripts and tools that can be reused during setup
+* Collect common workflows in the Duckiebook that can be automated
+
+### Risk analysis
+
+#### Challenges
+
+We need to focus on the solving real problems, not just imagined ones. This requires a careful requirements analysis, close user feedback, and laser focus on usability. In addition to the (many) technical challenges, designing such a tool poses a significant challenge to future adoption.
+
+#### Risks
+
+Becomes Yet Another Tool in an ever-growing toolbox. No one wants to use tools until they become useful, which requires significant implementation effort. If The Tool is adopted, it needs to be maintained (possibly a long term commitment).
+
+#### Solution
+
+Solve problems that people have. If the problems they have are different, then pivot. Implement high-impact features first, and build reusable components that can be recycled even if the product fails to gain adoption. Continuously gather feedback from stakeholders to ensure the project is on track.
