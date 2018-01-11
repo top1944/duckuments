@@ -96,4 +96,4 @@ Solution:
 
 ## Demo failure demonstration {#demo-template-failure}
 
-If Anti-Instagram is badly calibrated, the duckiebot will not see enough line segments. This is especially a problem in the curve and the duckiebot will leave the lane. An example of this failure can be seen in this [video](www.video_example_here.com) for which we had a bad Anti-Instagram calibration for which the Duckiebot sees not enough segments. After pressing the **X** button on the joystick the Anti-Instagram node gets relaunched and the number of line segments gets increased drastically. 
+If Anti-Instagram is badly calibrated, the duckiebot will not see enough line segments. This is especially a problem in the curve and the duckiebot will leave the lane. An example of this failure can be seen in this [video](www.video_example_here.com) for which we had a bad Anti-Instagram calibration. Hence, the Duckiebot sees not enough segments. After pressing the **X** button on the joystick the Anti-Instagram node gets relaunched and the number of line segments gets increased drastically. 
