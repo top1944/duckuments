@@ -49,8 +49,6 @@ Check: Duckiebot drives correctly with joystick.
 
 ## Demo instructions {#demo-template-run}
 
-Here, give step by step instructions to reproduce the demo.
-
 Step 1: On duckiebot, in /DUCKIERTOWN_ROOT/ directory, run command:
 
     duckiebot $ make demo-lane-following
@@ -68,9 +66,11 @@ Step 5: Stop the autonomous driving by pressing **L1** button on the joystick an
 
 
 ## Troubleshooting {#demo-template-troubleshooting}
-Problem:
+Problem 1:
 * The Duckiebot does not drive nicely in the lane.
+
 Solution 1:
+
 Step 1: Turn on line segments.
 
     laptop $ rosparam set /'robotname'/line_detector_node/verbose true
@@ -86,6 +86,7 @@ Solution 2:
 
 Problem:
 * Demo does not compile.
+
 Solution:
 * Run [what-the-duck](#subsub:what-the-duck) and follow instructions .
 
