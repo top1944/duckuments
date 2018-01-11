@@ -4,11 +4,11 @@ This is the description of lane following demo.
 
 <div class='requirements' markdown="1">
 
-Requires: Wheels calibration completed.[wheel calibration](#wheel-calibration)
+Requires: Wheels calibration completed [wheel calibration](#wheel-calibration)
 
-Requires: Camera calibration completed.[Camera calibration](#camera-calib)
+Requires: Camera calibration completed [Camera calibration](#camera-calib)
 
-Requires: Joystick demo has been successfully launched.[Joystick demo](#rc-control)
+Requires: Joystick demo has been successfully launched [Joystick demo](#rc-control)
 
 Requires: Duckiebot in configuration [DB17-jwd](#duckiebot-configurations)
 
