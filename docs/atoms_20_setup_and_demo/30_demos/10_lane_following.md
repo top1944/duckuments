@@ -13,6 +13,7 @@ Requires: Joystick demo has been successfully launched.[Joystick demo](#rc-contr
 Requires: Duckiebot in configuration [DB17-jwd](#duckiebot-configurations)
 
 Requires: [Calibrating](#wheel-calibration) the gain parameter to **0.6**.
+</div>
 
 ## Video of expected results {#demo-template-expected}
 
