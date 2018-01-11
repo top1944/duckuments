@@ -1,10 +1,15 @@
+
 m_from_in = lambda x: x * 0.0254
+
 
 tile = m_from_in(12*2)
 
 WW = m_from_in(2)
 WY = m_from_in(1)
-L = (tile - 2*WW - 2*WY) / 2
+# L = (tile - 2*WW - 2*WY) / 2
+L = (tile - 2*WW - WY) / 2
+
+
 y1 = + L + WW
 y2 = + L
 y3 = + WY/2
@@ -14,6 +19,7 @@ y6 = - L - WW
 D = 2 * tile
 
 yaml = """
+# lane width (inner white from inner yellow): L
 points:
      p1: [axle, [0, y1, 0]]
      q1: [axle, [D, y1, 0]]
@@ -42,7 +48,7 @@ segments:
    color: white
 """
 
-V = dict(y1=y1,y2=y2,y3=y3,y4=y4,y5=y5,y6=y6)
+V = dict(y1=y1,y2=y2,y3=y3,y4=y4,y5=y5,y6=y6, L=L, D=D)
 for k,v in V.items():
     yaml = yaml.replace(k, str(v))
 
