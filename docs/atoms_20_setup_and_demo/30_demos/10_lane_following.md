@@ -10,28 +10,38 @@ Requires: Camera calibration completed.[Camera calibration](#camera-calib)
 
 Requires: Joystick demo has been successfully launched.[Joystick demo](#rc-control)
 
-</div>
+Requires: Duckiebot in configuration [DB17-jwd](#duckiebot-configurations)
+
+Requires: [Calibrating](#wheel-calibration) the gain parameter to **0.6**.
 
 ## Video of expected results {#demo-template-expected}
 
-[link 1 of lane following](https://www.youtube.com/watch?v=6V3w66mF7w0)
-[link 2 of lane following](https://photos.google.com/share/AF1QipMEwYvBW5hl3_l4M0f9on3RSKJmYftbWxo0nSyW7EMTBWs7iXRc_fHEc5mouSMSxA?key=M1ZWc2k0Nnl4ckFjd3dwRmV0WmdMSzFWU0xmOXh3)
-
-TODO: upload videos to vimeo and embed them here.
+[Video of demo lane following and expected results](https://drive.google.com/file/d/198iythQkovbQkzY3pPeTXWC8tTCRgDwB/view?usp=sharing)
 
 ## Duckietown setup notes {#demo-template-duckietown-setup}
 
-A duckietown with white and yellow lanes. No obstacles on the lane.
+Assumption about Duckietown:
+
+* A duckietown with white and yellow lanes. No obstacles on the lane.
+* Layout conform to Duckietown Appearance [Specifications](#duckietown_parts)
+* Required tiles types: straight tile, turn tile
+* Additional tile types:3-way/4-way intersection
+* Configurated Wifi network or Duckietown Wifi network
+
+Environment of demo:
+* Good lightning
 
 ## Duckiebot setup notes {#demo-template-duckiebot-setup}
 
-Make sure the camera is heading ahead. Tighten the screws if necessary.
+* Make sure the camera is heading ahead.
+* Duckiebot in configuration [DB17-jwd](#duckiebot-configurations)
+
 
 ## Pre-flight checklist {#demo-template-pre-flight}
 
-Check: turn on joystick.
-
-Check: Enough battery of the duckiebot.
+Check: Turn on joystick.
+Check: Turn on battery of the duckiebot.
+Check: Duckiebot drives correctly with joystick.
 
 ## Demo instructions {#demo-template-run}
 
@@ -41,8 +51,18 @@ Step 1: On duckiebot, in /DUCKIERTOWN_ROOT/ directory, run command:
 
     duckiebot $ make demo-lane-following
 
-Wait a while so that everything has been launched. Press R1 to start autonomous lane following. Press L1 to switch to joystick control. Press X to start anti-instagram.
-Empirically speaking, no duckiebot will successfully run the demo for its first time. Parameter tuning is a must. The only two parameters that you can modify is the gain and trim. The parameter pair which makes your bot go straight will unlikely work for the lane following due to the current controller design. Facts show that a gain ranging from 0.5 to 0.9, as long as paired with a suitable trim, will all work on this demo. Start with your parameter pair obtained from wheel calibration. Increase gain for higher speed. Increase trim to horizontally move the bot to the center of the lane. Decrease will do the inverse.
+Wait a while so that everything has been launched.
+Drive around with joystick to check if connection is working.
+
+Step 2: Press X to start anti-instagram.
+
+Step 3: Start the autonomous lane following by pressing the **R1** button on joystick. to start autonomous.
+
+Step 4: Enjoy the demo.
+
+
+Press L1 to switch to joystick control. 
+
 
 Step 2: On laptop, make sure ros enviroment has been activated, run command:
 
@@ -58,5 +78,21 @@ In rqt, the images can be visualized are /(vehicle_name)/camera_node/image/compr
 
 
 ## Troubleshooting {#demo-template-troubleshooting}
+Problem:
+* The Duckiebot does not drive nicely in the lane.
+Solution:
+* 
+* Check the extrinsic and intrinsic [calibration](#camera-calib)
 
-Contact Yang Shaohui(ETHZ) via Slack if any trouble occurs.
+Problem:
+* Demo does not compile.
+Solution:
+* Run [what-the-duck](#subsub:what-the-duck) and follow instructions .
+
+
+Problem:
+* Duckiebot drives not with joystick.
+Solution:
+* Turn joystick on and off multiple times.
+* Check if battery is powered on.
+
