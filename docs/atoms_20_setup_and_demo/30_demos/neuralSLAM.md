@@ -1,12 +1,18 @@
 To run on gird world:
 Step-1: Setting up our customized gym environment
+
 We need lot of dependencies, so, it’s better to create a new environment
 conda create --name neural python=3.6 (The A3C + NTM code only works with python3)
 source activate neural
+
 pip install gym
+
 pip install matplotlib
+
 pip install scipy
+
 git clone https://github.com/deepmind/pycolab.git
+
 pip install -e .
 pip install visdom
 git clone https://github.com/aalitaiga/gym-duckietown
