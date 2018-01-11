@@ -91,3 +91,7 @@ Solution:
 * Turn joystick on and off multiple times.
 * Check if battery is powered on.
 
+
+## Demo failure demonstration {#demo-template-failure}
+
+If Anti-Instagram is badly calibrated, the duckiebot will not see enough line segments. This is especially a problem in the curve and the duckiebot will leave the lane. An example of this failure can be seen in this [video](www.video_example_here.com)
