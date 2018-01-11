@@ -16,7 +16,7 @@ Requires: [Calibrating](#wheel-calibration) the gain parameter to **0.6**.
 
 ## Video of expected results {#demo-template-expected}
 
-[Video of demo lane following and expected results](https://drive.google.com/file/d/198iythQkovbQkzY3pPeTXWC8tTCRgDwB/view?usp=sharing)
+[Video of demo lane following](https://drive.google.com/file/d/198iythQkovbQkzY3pPeTXWC8tTCRgDwB/view?usp=sharing)
 
 ## Duckietown setup notes {#demo-template-duckietown-setup}
 
@@ -54,34 +54,29 @@ Step 1: On duckiebot, in /DUCKIERTOWN_ROOT/ directory, run command:
 Wait a while so that everything has been launched.
 Drive around with joystick to check if connection is working.
 
-Step 2: Press X to start anti-instagram.
+Step 2: Press X to recalibrate Anti-Instagram.
 
 Step 3: Start the autonomous lane following by pressing the **R1** button on joystick. to start autonomous.
 
 Step 4: Enjoy the demo.
 
-
-Press L1 to switch to joystick control. 
-
-
-Step 2: On laptop, make sure ros enviroment has been activated, run command:
-
-    laptop $ rviz
-
-In rviz, two markerarrays /(vehicle_name)/duckiebot_visualizer/segment_list_markers and /(vehicle_name)/lane_pose_visualizer_node/lane_pose_markers can be visualized. The green arrow shall be in a reasonable direction.
-
-Step 3: On laptop, make sure ros enviroment has been activated, run command:
-
-    laptop $ rqt
-
-In rqt, the images can be visualized are /(vehicle_name)/camera_node/image/compressed, /(vehicle_name)/line_detector_node/image_with_lines, /(vehicle_name)/lane_filter_node/belief_img.
+Step 5: Stop the autonomous driving by pressing **L1** button on the joystick and switch to joystick control. 
 
 
 ## Troubleshooting {#demo-template-troubleshooting}
 Problem:
 * The Duckiebot does not drive nicely in the lane.
-Solution:
-* 
+Solution 1:
+Step 1: Turn on line segments.
+
+    laptop $ rviz rosparam set /'robotname'/line_detector_node/verbose true
+Step 2: Open rviz.
+
+    laptop $ rviz
+    
+Step 3: Look at the .../image_with_lines image output. Apply the anti-instagram callibration by pushing the X button on the joystick. Check if you see enough segments. If not enough segments are visible, press X button on joystick for Anti-Instagram relaunch. Check if you see more segments and the color of the segments are according to the color of the lines in Duckietown
+
+Solution 2:
 * Check the extrinsic and intrinsic [calibration](#camera-calib)
 
 Problem:
