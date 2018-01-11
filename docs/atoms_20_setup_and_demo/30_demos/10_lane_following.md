@@ -13,6 +13,7 @@ Requires: Joystick demo has been successfully launched.[Joystick demo](#rc-contr
 Requires: Duckiebot in configuration [DB17-jwd](#duckiebot-configurations)
 
 Requires: [Calibrating](#wheel-calibration) the gain parameter to **0.6**.
+
 </div>
 
 ## Video of expected results {#demo-template-expected}
@@ -30,12 +31,14 @@ Assumption about Duckietown:
 * Configurated Wifi network or Duckietown Wifi network
 
 Environment of demo:
+
 * Good lightning
 
 ## Duckiebot setup notes {#demo-template-duckiebot-setup}
 
 * Make sure the camera is heading ahead.
 * Duckiebot in configuration [DB17-jwd](#duckiebot-configurations)
+* [Calibrating](#wheel-calibration) the gain parameter to **0.6**.
 
 
 ## Pre-flight checklist {#demo-template-pre-flight}
@@ -70,11 +73,12 @@ Problem:
 Solution 1:
 Step 1: Turn on line segments.
 
-    laptop $ rviz rosparam set /'robotname'/line_detector_node/verbose true
+    laptop $ rosparam set /'robotname'/line_detector_node/verbose true
+
 Step 2: Open rviz.
 
     laptop $ rviz
-    
+
 Step 3: Look at the .../image_with_lines image output. Apply the anti-instagram callibration by pushing the X button on the joystick. Check if you see enough segments. If not enough segments are visible, press X button on joystick for Anti-Instagram relaunch. Check if you see more segments and the color of the segments are according to the color of the lines in Duckietown
 
 Solution 2:
