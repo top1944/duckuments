@@ -66,7 +66,7 @@ Step 5: Stop the autonomous driving by pressing **L1** button on the joystick an
 
 
 ## Troubleshooting {#demo-template-troubleshooting}
-### The Duckiebot does not drive nicely in the lane.
+### The Duckiebot does not drive nicely in the lane
 Solution 1:
 
 Step 1: Turn on line segments.
@@ -82,12 +82,12 @@ Step 3: Look at the .../image_with_lines image output. Apply the anti-instagram 
 Solution 2:
 * Check the extrinsic and intrinsic [calibration](#camera-calib)
 
-### Demo does not compile.
+### Demo does not compile
 
 Solution:
 * Run [what-the-duck](#subsub:what-the-duck) and follow instructions .
 
-### Duckiebot drives not with joystick.
+### Duckiebot drives not with joystick
 Solution:
 
 * Turn joystick on and off multiple times.
