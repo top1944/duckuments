@@ -1,4 +1,4 @@
-# Demo template {#demo-template status=beta}
+# Demo system ID {#sysid status=beta}
 
 This is the description of the wheels calibration procedure. In order to complete the procedure, you need the same chessboard as for the camera calibration.
 
@@ -13,8 +13,7 @@ First, we describe what is needed, including:
 
 Requires: Duckiebot in configuration DB17-lc
 
-Requires: Camera calibration completed. The intrinsic calibration file of your robot must be in the folder duckietown/catkin_ws/src/00-infrastructure/duckietown/config/baseline/calibration/camera_intrinsic/
-
+Requires: Camera calibration completed
 
 </div>
 
@@ -24,26 +23,14 @@ First, we show a video of the expected behavior (if the demo is succesful).
 
 ## Duckietown setup notes {#demo-template-duckietown-setup}
 
-The Duckietown is not needed for the wheel calibration. 
-
-Here, describe the assumptions about the Duckietown, including:
-
-* Layout (tiles types)
-* Instrastructure (traffic lights, wifi networks, ...) required
-* Weather (lights, ...)
-
-Do not write instructions here. The instructions should be somewhere in [the part about Duckietowns](#duckietowns). Here, merely point to them.
+The Duckietown is not needed for the wheels calibration. 
 
 
 ## Duckiebot setup notes {#demo-template-duckiebot-setup}
 
 Mount the USB drive.
+
 See: The procedure is documented in [](#mounting-usb).
-
-Write here any special setup for the Duckiebot, if needed.
-
-Do not write instructions here. The instructions should be somewhere in the appropriate setup part.
-
 
 
 ## Pre-flight checklist {#demo-template-pre-flight}
@@ -52,13 +39,10 @@ Check: the Duckiebot has sufficient battery
 
 Check: the USB drive is mounted 
 
-Check: the camera is calibrated, and the calibration file of your robot is in the folder duckietown/catkin_ws/src/00-infrastructure/duckietown/config/baseline/calibration/camera_intrinsic/
+Check: the camera is calibrated, and the calibration file of your robot is in the folder ![DUCKIETOWN_ROOT]/catkin_ws/src/00-infrastructure/duckietown/config/baseline/calibration/camera_intrinsic/
 
 Check: the chessboard has the good dimensions
 
-
-The pre-flight checklist describes the steps that are sufficient to
-ensure that the demo will be correct:
 
 ## Demo instructions {#demo-template-run}
 
@@ -67,7 +51,7 @@ Everything should be run from branch: devel-sysid. When your are on the devel-sy
 
     duckiebot $ catkin_make -C catkin_ws/
 
-* Step 1: Run the following commands:
+Step 1: Run the following commands:
 
 Make sure you are in the Duckietown folder:
 
@@ -78,7 +62,7 @@ Activate ROS:
     duckiebot $ source environment.sh
 
 
-Step 2: Place the chessboard vertically on the Duckiebot, and place the Duckiebot in front of it at a distance of approximately 2 meters, as shown in the image.
+Step 2: Place the Duckiebot in front of the chessboard at a distance of approximately 2 meters, as shown in the image.
 
 Step 3: Run the calibration procedure
 
@@ -86,7 +70,7 @@ Step 3: Run the calibration procedure
 
 The Duckietown should go forward and then stop. 
 
-Step 4: When the Duckiebot has stopped, you have 10 seconds to replace it at a distance of approximately 2 meters of the chessboard. Wait for the Duckiebot to move forward again.  
+Step 4: When the Duckiebot has stopped, you have 10 seconds to replace it again at a distance of approximately 2 meters of the chessboard. Wait for the Duckiebot to move forward again.
 
 Step 5: When the Duckiebot stops, and the node shuts down, unmount the USB drive :
 
@@ -104,9 +88,9 @@ Activate ROS:
 
 Step 7: Run the calibration process with 
 
-    laptop roslaunch calibration calibration.launch veh:=robot name  path:/absolute/path/to/the/rosbag/folder/
+    laptop $ roslaunch calibration calibration.launch veh:=robot name  path:=/absolute/path/to/the/rosbag/folder/
 
-Do not forget to backslash at the end of the path. 
+Do not forget the backslash at the end of the path. 
 
 Step 8: Once the command has finished, the parameters of your Duckiebot are stored in the folder
 
@@ -120,7 +104,7 @@ Resolution: Try to mount the USB drive.
 
 Symptom: Error with the calibration file. 
 
-Resolution: Place the calibration file of your robot in the folder catkin_ws/src/00-infrastructure/duckietown/config/baseline/calibration/camera_intrinsic/
+Resolution: Place the calibration file of your robot in the folder ![DUCKIETOWN_ROOT]/catkin_ws/src/00-infrastructure/duckietown/config/baseline/calibration/camera_intrinsic/
 
 Symptom: The Duckiebot deviates from the trajectory, so that the chessboard goes out of the camera’s field of view.
 
