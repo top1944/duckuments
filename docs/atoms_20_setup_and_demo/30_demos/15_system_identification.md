@@ -39,7 +39,11 @@ Check: the Duckiebot has sufficient battery
 
 Check: the USB drive is mounted 
 
-Check: the camera is calibrated, and the calibration file of your robot is in the folder ![DUCKIETOWN_ROOT]/catkin_ws/src/00-infrastructure/duckietown/config/baseline/calibration/camera_intrinsic/
+Check: the camera is calibrated, and the calibration file of your robot is in the folder 
+
+
+    ![DUCKIETOWN_ROOT]/catkin_ws/src/00-infrastructure/duckietown/config/baseline/calibration/camera_intrinsic/
+
 
 Check: the chessboard has the good dimensions
 
@@ -94,7 +98,9 @@ Do not forget the backslash at the end of the path.
 
 Step 8: Once the command has finished, the parameters of your Duckiebot are stored in the folder
 
- ![DUCKIEFLEET_ROOT]/calibrations/kinematics/![robot name].yaml
+
+    ![DUCKIEFLEET_ROOT]/calibrations/kinematics/![robot name].yaml
+
 
 ## Troubleshooting {#demo-template-troubleshooting}
 
@@ -104,7 +110,11 @@ Resolution: Try to mount the USB drive.
 
 Symptom: Error with the calibration file. 
 
-Resolution: Place the calibration file of your robot in the folder ![DUCKIETOWN_ROOT]/catkin_ws/src/00-infrastructure/duckietown/config/baseline/calibration/camera_intrinsic/
+Resolution: Place the calibration file of your robot in the folder 
+
+
+    ![DUCKIETOWN_ROOT]/catkin_ws/src/00-infrastructure/duckietown/config/baseline/calibration/camera_intrinsic/
+
 
 Symptom: The Duckiebot deviates from the trajectory, so that the chessboard goes out of the camera’s field of view.
 
