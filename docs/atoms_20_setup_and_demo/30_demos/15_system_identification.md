@@ -1,13 +1,7 @@
 # Demo system ID {#sysid status=beta}
 
-This is the description of the wheels calibration procedure. In order to complete the procedure, you need the same chessboard as for the camera calibration.
-
-First, we describe what is needed, including:
-
-* Robot hardware
-* Number of Duckiebots
-* Robot setup steps
-* Duckietown hardware
+This is the description of the wheels calibration procedure. In order to complete the procedure, you need your Duckiebot in configuration DB17-lc with its camera calibrated and the same chessboard as for the camera calibration. 
+In the first step, you will put your Duckibebot in front of the chessboard and send specific commands to the wheels. By recording the chessboard, the Duckiebot will know its position at any time. On your computer, you will then use this informations to calculate the parameters of the kinematics of you Duckiebot. These parameters will be stored on a yaml file. 
 
 <div class='requirements' markdown="1">
 
@@ -39,11 +33,7 @@ Check: the Duckiebot has sufficient battery
 
 Check: the USB drive is mounted 
 
-Check: the camera is calibrated, and the calibration file of your robot is in the folder 
-
-
-    ![DUCKIETOWN_ROOT]/catkin_ws/src/00-infrastructure/duckietown/config/baseline/calibration/camera_intrinsic/
-
+Check: the camera is calibrated
 
 Check: the chessboard has the good dimensions
 
@@ -108,17 +98,10 @@ Symptom: No log have been recorded.
 
 Resolution: Try to mount the USB drive.
 
-Symptom: Error with the calibration file. 
-
-Resolution: Place the calibration file of your robot in the folder 
-
-
-    ![DUCKIETOWN_ROOT]/catkin_ws/src/00-infrastructure/duckietown/config/baseline/calibration/camera_intrinsic/
-
-
 Symptom: The Duckiebot deviates from the trajectory, so that the chessboard goes out of the camera’s field of view.
 
-Resolution: You can adjust the parameters of the commands by passing arguments to the launch file. 
+Resolution: You can adjust the parameters of the voltage commands by passing arguments when launching the commands. You can change the parameter vFin and Nstep for the straight line, and the parameter k1, k2, omega and duration for the sinewave.
+
 
 ## Demo failure demonstration {#demo-template-failure}
 
