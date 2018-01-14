@@ -62,7 +62,13 @@ Activate ROS:
     duckiebot $ source environment.sh
 
 
-Step 2: Place the Duckiebot in front of the chessboard at a distance of approximately 2 meters, as shown in the image.
+Step 2: Place the Duckiebot in front of the chessboard at a distance of approximately 2 meters, as shown in the image ([](#fig:calibration_setup))..
+
+Use some tape to create a straight line on the floor 
+
+<div figure-id="fig:calibration_setup" figure-caption="The calibration setup">
+     <img src="calibration_setup.jpg" style='width: 30em'/>
+</div>
 
 Step 3: Run the calibration procedure
 
