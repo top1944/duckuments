@@ -13,6 +13,12 @@ Requires: Camera calibration completed
 
 ## Video of expected results {#demo-sysid-expected}
 
+<div figure-id="fig:demo_failed-sysid">
+    <figcaption>Failed demo
+    </figcaption>
+    <dtvideo src='vimeo:251027149'/>
+</div>
+
 
 
 ## Duckietown setup notes {#demo-sysid-duckietown-setup}
