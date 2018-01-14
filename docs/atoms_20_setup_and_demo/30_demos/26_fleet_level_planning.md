@@ -53,56 +53,59 @@ Check: You got popcorn and refreshments for the taxi customers
 ## Demo instructions {#demo-template-run}
 
 
-Step 1: Pick a duckiebot. 
+### Step 1:
+ Pick a duckiebot. 
 
-Step 2: From duckietwon root folder:
+### Step 2: checkout branch
+From duckietown root folder:
 	
 	git checkout devel-fleet-planning
 
-Step 3: rebuild catkin
+### Step 3: rebuild catkin
 
 	make build-catkin
 
-Step 4: Log in via ssh, go to duckietown root folder and prepare environment:
+### Step 4: Environment
+ Log in via ssh, go to duckietown root folder and prepare environment:
 
 	source environment.sh
 	source set_veh_name.sh <robot_name>
 
-Step 5: Run the demo!
+### Step 5: Run the demo!
 
-	roslaunch devel_fleet_planning master.launch
+	roslaunch fleet_planning master.launch
 
-Option: Set joystick_demo:=true if lane following or intersection control does not work well for some reason. This way you can manually steer the duckiebot through duckietown and still see how the fleet planning software works. Pay attention to the terminal output of your duckiebot to see which exit to take at an intersection. Give the duckiebot time to localize at intersections. 
+Option: Set `joystick_demo:=true` if lane following or intersection control does not work well for some reason. This way you can manually steer the duckiebot through duckietown and still see how the fleet planning software works. Pay attention to the terminal output of your duckiebot to see which exit to take at an intersection. Give the duckiebot time to localize at intersections. 
 
 Wait until all nodes have successfully been initialized. Then proceed with step 6.
 
-Step 6: On the laptop, checkout the same branch, rebuild catkin and in the duckietown root folder:
+### Step 6: Environment laptop
+On the laptop, checkout the same branch, rebuild catkin and in the duckietown root folder:
 
 	source environment.sh
 	source set_ros_master.sh
 
 Take care, NO argument to the set_ros_master.sh! We want the master to be on your laptop.
 
-Step 7: Start taxi central on your laptop:
-
+### Step 7: Taxi central:
+Run on the taxi central your laptop:
 	roslaunch fleet_planning master.laptop.sh
 
-Step 8: Start the gu
+### Step 8: Start the GUI
 
 	rqt --force-discover
 
 If you don't see nothing meaningful, start the fleet planning plugin via Plugins->Fleet Planning.
 
-Step 9: Have fun!
-Put your duckiebot at an intersection and it will localize and appear on the map in rqt. The taxi central will automatically assign a mission to the duckiebot, random, to keep him moving and not blocking the streets. 
+### Step 9: Have fun!
+Place your duckiebot at an intersection and it will localize and appear on the map in rqt. The taxi central will automatically assign a mission to the duckiebot, random, to keep him moving and not blocking the streets. Hit R1 on the joystick to go into auto pilot mode. The duckiebot will now follow the instructions from the taxi central. 
 
-Create a new customer request by clicking on the start node and then on the target node of your journey. Hit 'Find Plan'. The tTaxi central will assign the customer to the closest duckiebot and recalculate its path once it localizes again. The new path will be displayed on the map. You will see how the customer moves with its taxi once he was picked up. 
+Create a new customer request by clicking on the start node and then on the target node of your journey. Hit 'Find Plan'. The taxi central will assign the customer to the closest duckiebot and recalculate its path once it localizes again. The new path will be displayed on the map. You will see how the customer moves with its taxi once he was picked up. 
 
 If a duckiebot does not localize within a certain time window it will be removed from the map. 
 
-Step 9: Once you get bored with only one duckiebot on the map, add a another duckiebot by repeating steps 1-5. You may add a few more duckiebots like this.  
-
-
+### Step 9: 
+Once you get bored with only one duckiebot on the map, or want to expand your business, add a another duckiebot to your fleet by repeating steps 1-5. You may add a few more duckiebots like this.  
 
 ## Troubleshooting {#demo-template-troubleshooting}
 
