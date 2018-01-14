@@ -102,7 +102,64 @@ Solution:
 ## `git` {#git status=draft}
 
 TODO: to write
+Once you've set up SSH (so that you don't have to enter passwords all the time - see XXX for instructions) you are now ready to use Git locally. 
 
+jekyll serve
+
+move to directory you want your files stored or make one (google 'using the terminal' for help on this)
+If you are new to using the terminal to navigate but still want Find the repository you would like to work on and chose the "clone or download" button on the right hand side to find the repository's location, for eg/ "git@github.com:duckietown/duckietown.org.git". Then you
+
+git clone git@github.com:duckietown/duckietown.org.git
+
+Check your success with
+
+ls
+
+and now the new repository should be listed in your directory. 
+
+No you need to checkout the code to your own branch, and you do both these things with this:
+
+git checkout -b (GIVE A NAME TO WHAT WILL BE YOUR NEW BRANCH)
+
+git branch --> checks how many branches there are. Your new branch should be listed here. If you went to the browser version of git you would not yet see your branch listed because it has not yet been committed and pushed. We'll get there soon.
+
+Now that you are in your own branch of the repository you are ready to connect and make changes.
+
+jekyll serve --> connects you to ######
+
+Now you can make local (on your own machine) changes to the files within your branch of the repo. How you do this depends on why type of file you are working on. When you've made a few changes and want to officially add them (publicize these changes 'remotely') (it is good to do this often because it allows you to track your changes and revert back to older versions if necessary) then it is good to first
+
+git status --> will tell you about whether there are changes on your branch that have not yet been committed
+
+then you should 
+
+git pull --> to make sure you add your changes to the most recent branch version (if there are multipkle people working on the same branch)
+
+git commit -a -m "A MESSSAGE ABOUT THE CHANGES YOU HAVE MADE - ADD A MESSAGE!"
+
+(-a --> adds all new changes
+-m --> adds a message)
+
+git status to see that no remaining changes or files to add
+
+Now you want to make your branch visible to everyone (it currently only exists locally) so you use
+
+git push --set-upstream origin NAME OF YOUR BRANCH
+
+When committing and pushing future changes to your branch you probably needn't specify the upstream branch #####is this true?? 
+so you can use the more straightforward
+
+git push
+
+Once you've made some major breakthroughs and your code should be added to or become the master branch you will have to MERGE. Depending on the repository this is accomplished two ways. First through
+
+git merge
+
+Where you, the authour, have write rights to this repository.
+
+Otherwise you will have to submit a pull request, where an administrator can review your changes and then merge them into the master branch.
+
+git request-pull
 
 ## `hub` {#hub}
 
