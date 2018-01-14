@@ -54,7 +54,7 @@ Check: You got popcorn and refreshments for the taxi customers
 
 
 ### Step 1:
- Pick a duckiebot. 
+ Pick a duckiebot, log in via ssh. 
 
 ### Step 2: checkout branch
 From duckietown root folder:
@@ -66,7 +66,7 @@ From duckietown root folder:
 	make build-catkin
 
 ### Step 4: Environment
- Log in via ssh, go to duckietown root folder and prepare environment:
+ Prepare environment:
 
 	source environment.sh
 	source set_veh_name.sh <robot_name>
@@ -75,9 +75,9 @@ From duckietown root folder:
 
 	roslaunch fleet_planning master.launch
 
-Option: Set `joystick_demo:=true` if lane following or intersection control does not work well for some reason. This way you can manually steer the duckiebot through duckietown and still see how the fleet planning software works. Pay attention to the terminal output of your duckiebot to see which exit to take at an intersection. Give the duckiebot time to localize at intersections. 
-
 Wait until all nodes have successfully been initialized. Then proceed with step 6.
+
+Option: Set `joystick_demo:=true` if lane following or intersection control does not work well for some reason. This way you can manually steer the duckiebot through duckietown and still see how the fleet planning software works. Pay attention to the terminal output of your duckiebot to see which exit to take at an intersection. Give the duckiebot time to localize at intersections. 
 
 ### Step 6: Environment laptop
 On the laptop, checkout the same branch, rebuild catkin and in the duckietown root folder:
@@ -110,6 +110,3 @@ Once you get bored with only one duckiebot on the map, or want to expand your bu
 ## Troubleshooting {#demo-template-troubleshooting}
 
 The fleet planning demo depends on many other packages to work well. You may take the lane following and intersection control packages out of the loop by activating the joystick demo. More details at step 5. 
-## Demo failure demonstration {#demo-template-failure}
-
-Finally, put here a video of how the demo can fail, when the assumptions are not respected.
