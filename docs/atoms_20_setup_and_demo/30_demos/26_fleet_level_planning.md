@@ -11,7 +11,7 @@ First, we describe what is needed, including:
 
 <div class='requirements' markdown="1">
 
-Requires: Duckiebot in configuration ???
+Requires: Duckiebot in configuration DB17-jwd. DB17-jwdl if coordination at intersections desired.
 
 Requires: Camera calibration completed.
 
@@ -23,18 +23,17 @@ First, we show a video of the expected behavior (if the demo is succesful).
 
 ## Duckietown setup notes {#demo-template-duckietown-setup}
 
-Here, describe the assumptions about the Duckietown, including:
+You need at least one duckiebot, and a duckietown.
 
-* Layout (tiles types)
-* Instrastructure (traffic lights, wifi networks, ...) required
-* Weather (lights, ...)
+The duckiebot needs to be at least a DB17-jwd, better a DB17-jwdl.
 
-Do not write instructions here. The instructions should be somewhere in [the part about Duckietowns](#duckietowns). Here, merely point to them.
+The duckietown needs to have at least one april tag visible from every intersection to allow localization. Make sure to have a description of your map available. For more infos on this see the localization package. 
 
+If you use this demo, you will have to install the fleet communication dependencies. This might take up to 40 minutes. For more, see below. 
 
 ## Duckiebot setup notes {#demo-template-duckiebot-setup}
 
-Duckiebots need to have all the dependencies installed use the fleet level communication setup developed by the fleet-communication team. To do this checkout the branch `devel-fleet-planning-comms` and navigate into the folder `catkin_ws/src/30-localization-and-planning/fleet_messaging/dependencies`. Now identify the name of wlan interface on by running: `ifconfig`. It is probably named `wlan0`. The next step is to run the install script as follows: 
+Duckiebots need to have all the dependencies installed. Use the fleet level communication setup developed by the fleet-communication team. To do this checkout the branch `devel-fleet-planning-comms` and navigate into the folder `catkin_ws/src/30-localization-and-planning/fleet_messaging/dependencies`. Now identify the name of wlan interface on by running: `ifconfig`. It is probably named `wlan0`. The next step is to run the install script as follows: 
 
 	install_fleet_messaging <wlan_interface> <ip_address> 
 
@@ -46,26 +45,73 @@ For the demo to run you need one laptop that is in the same network as all the d
 
 ## Pre-flight checklist {#demo-template-pre-flight}
 
-The pre-flight checklist describes the steps that are sufficient to
-ensure that the demo will be correct:
-
-Check: operation 1 done
-
-Check: operation 2 done
+Check: Duckiebots have communication dependencies installed (described above).
+Check: Duckiebots and laptop are connected to the same network
+Check: All duckeibots can be ssh'ed from your laptop
+Check: You got popcorn and refreshments for the taxi customers
 
 ## Demo instructions {#demo-template-run}
 
-Here, give step by step instructions to reproduce the demo.
 
-Step 1: XXX
+Step 1: Pick a duckiebot. 
 
-Step 2: XXX
+Step 2: From duckietwon root folder:
+<code>
+git checkout devel-fleet-planning
+</code>
+
+Step 3: rebuild catkin
+<code>
+make build-catkin
+</code>
+
+Step 4: Log in via ssh, go to duckietown root folder and prepare environment:
+<code>
+source environment.sh
+source set_veh_name.sh <robot_name>
+</code>
+
+Step 5: Run the demo!
+<code>
+roslaunch devel_fleet_planning master.launch
+
+Option: Set joystick_demo:=true if lane following or intersection control does not work well for some reason. This way you can manually steer the duckiebot through duckietown and still see how the fleet planning software works. Pay attention to the terminal output of your duckiebot to see which exit to take at an intersection. Give the duckiebot time to localize at intersections. 
+</code>
+Wait until all nodes have successfully been initialized. Then proceed with step 6.
+
+Step 6: On the laptop, checkout the same branch, rebuild catkin and in the duckietown root folder:
+<code>
+source environment.sh
+source set_ros_master.sh
+ </code>
+Take care, NO argument to the set_ros_master.sh! We want the master to be on your laptop.
+
+Step 7: Start taxi central on your laptop:
+<code>
+roslaunch fleet_planning master.laptop.sh
+</code>
+
+Step 8: Start the gui
+<code> 
+rqt
+</code>
+
+If you don't see nothing meaningful, start the fleet planning plugin via Plugins->Fleet Planning.
+
+Step 9: Have fun!
+Put your duckiebot at an intersection and it will localize and appear on the map in rqt. The taxi central will automatically assign a mission to the duckiebot, random, to keep him moving and not blocking the streets. 
+
+Create a new customer request by clicking on the start node and then on the target node of your journey. Hit 'Find Plan'. The tTaxi central will assign the customer to the closest duckiebot and recalculate its path once it localizes again. The new path will be displayed on the map. You will see how the customer moves with its taxi once he was picked up. 
+
+If a duckiebot does not localize within a certain time window it will be removed from the map. 
+
+Step 9: Once you get bored with only one duckiebot on the map, add a another duckiebot by repeating steps 1-5. You may add a few more duckiebots like this.  
+
 
 
 ## Troubleshooting {#demo-template-troubleshooting}
 
-Add here any troubleshooting / tips and tricks required.
-
+The fleet planning demo depends on many other packages to work well. You may take the lane following and intersection control packages out of the loop by activating the joystick demo. More details at step 5. 
 ## Demo failure demonstration {#demo-template-failure}
 
 Finally, put here a video of how the demo can fail, when the assumptions are not respected.
