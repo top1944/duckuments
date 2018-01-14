@@ -46,32 +46,37 @@ For the demo to run you need one laptop that is in the same network as all the d
 ## Pre-flight checklist {#demo-template-pre-flight}
 
 Check: Duckiebots have communication dependencies installed (described above).
+
 Check: Duckiebots and laptop are connected to the same network
-Check: All duckeibots can be ssh'ed from your laptop
+
+Check: All duckiebots can be ssh'ed from your laptop
+
 Check: You got popcorn and refreshments for the taxi customers
 
 ## Demo instructions {#demo-template-run}
 
 
 ### Step 1:
- Pick a duckiebot, log in via ssh. 
+Pick a duckiebot, log in via ssh. 
 
 ### Step 2: checkout branch
 From duckietown root folder:
 	
 	git checkout devel-fleet-planning
 
-### Step 3: rebuild catkin
-
-	make build-catkin
-
-### Step 4: Environment
+### Step 3: Environment
  Prepare environment:
 
 	source environment.sh
 	source set_veh_name.sh <robot_name>
 
+### Step 4: rebuild using catkin
+
+    make build-catkin
+
 ### Step 5: Run the demo!
+
+Run this on the duckiebot:
 
 	roslaunch fleet_planning master.launch
 
@@ -85,10 +90,11 @@ On the laptop, checkout the same branch, rebuild catkin and in the duckietown ro
 	source environment.sh
 	source set_ros_master.sh
 
-Take care, NO argument to the set_ros_master.sh! We want the master to be on your laptop.
+Take care: *do not* pass an argument to the command set_ros_master.sh! We want a separate master to run on your laptop since the communication between duckiebot and laptop is done using the fleet-communication software.
 
 ### Step 7: Taxi central:
 Run on the taxi central your laptop:
+
 	roslaunch fleet_planning master.laptop.sh
 
 ### Step 8: Start the GUI
