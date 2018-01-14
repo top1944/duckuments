@@ -56,45 +56,40 @@ Check: You got popcorn and refreshments for the taxi customers
 Step 1: Pick a duckiebot. 
 
 Step 2: From duckietwon root folder:
-<code>
-git checkout devel-fleet-planning
-</code>
+	
+	git checkout devel-fleet-planning
 
 Step 3: rebuild catkin
-<code>
-make build-catkin
-</code>
+
+	make build-catkin
 
 Step 4: Log in via ssh, go to duckietown root folder and prepare environment:
-<code>
-source environment.sh
-source set_veh_name.sh <robot_name>
-</code>
+
+	source environment.sh
+	source set_veh_name.sh <robot_name>
 
 Step 5: Run the demo!
-<code>
-roslaunch devel_fleet_planning master.launch
+
+	roslaunch devel_fleet_planning master.launch
 
 Option: Set joystick_demo:=true if lane following or intersection control does not work well for some reason. This way you can manually steer the duckiebot through duckietown and still see how the fleet planning software works. Pay attention to the terminal output of your duckiebot to see which exit to take at an intersection. Give the duckiebot time to localize at intersections. 
-</code>
+
 Wait until all nodes have successfully been initialized. Then proceed with step 6.
 
 Step 6: On the laptop, checkout the same branch, rebuild catkin and in the duckietown root folder:
-<code>
-source environment.sh
-source set_ros_master.sh
- </code>
+
+	source environment.sh
+	source set_ros_master.sh
+
 Take care, NO argument to the set_ros_master.sh! We want the master to be on your laptop.
 
 Step 7: Start taxi central on your laptop:
-<code>
-roslaunch fleet_planning master.laptop.sh
-</code>
 
-Step 8: Start the gui
-<code> 
-rqt
-</code>
+	roslaunch fleet_planning master.laptop.sh
+
+Step 8: Start the gu
+
+	rqt --force-discover
 
 If you don't see nothing meaningful, start the fleet planning plugin via Plugins->Fleet Planning.
 
