@@ -104,7 +104,7 @@ Create a new customer request by clicking on the start node and then on the targ
 
 If a duckiebot does not localize within a certain time window it will be removed from the map. 
 
-### Step 9: 
+### Step 10: More duckiebots! 
 Once you get bored with only one duckiebot on the map, or want to expand your business, add a another duckiebot to your fleet by repeating steps 1-5. You may add a few more duckiebots like this.  
 
 ## Troubleshooting {#demo-template-troubleshooting}
