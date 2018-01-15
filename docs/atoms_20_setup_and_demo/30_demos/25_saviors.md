@@ -14,7 +14,9 @@ Requires: [Joystick demo](#rc-control) successfully launched.
 
 </div>
 
-[//]: # ## Video of expected results {#demo-saviors-expected}
+## Video of expected results {#demo-saviors-expected}
+
+Video will be added when framework is defined/provided.
 
 ## Duckietown setup notes {#demo-saviors-duckietown-setup}
 
@@ -75,6 +77,6 @@ P: Duckiebot crashes obstacles.
 
 S: Check if CPU load is not too high, reduce if needed. 
 
-[//]: ## Demo failure demonstration {#demo-saviors-failure}
+## Demo failure demonstration {#demo-saviors-failure}
 
-
+Video will be added when framework is defined/provided.
