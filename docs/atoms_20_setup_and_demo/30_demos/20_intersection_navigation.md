@@ -40,14 +40,53 @@ Check: Is your bot up to date with latest software by using git pull?
 
 
 
-## Demo instructions {#demo-template-run}
+## Demo instructions {#demo-indefinite-navigation-run}
 
-Step 1: XXX
+Follow these steps to run the intersection navigation on your Duckiebot:
 
-Step 2: XXX
+For the current working version you need to checkout the branch devel-intersection_navigation , and more specifically the commit #0837ecf until a stable verson is published.  
 
+Step 1: Place your Duckiebot at a four-way intersection just in front of the redline.
 
-Step N: enjoy
+Step 2: Command to modify your gain to 0.6.
+
+    &#36; rosservice call /![robot name]/inverse_kinematics_node/set_gain -- 0.60
+
+Step 3: On the Duckiebot, navigate to the `/DUCKIETOWN_ROOT/` directory, run the command:
+
+	  duckiebot $ source environment.sh
+    
+    duckiebot $ roslaunch interscetion_navigation intersection_navigation_node.launch veh:=![robot_name]
+
+Step 4: In another terminal on the Duckiebot navigate to the following directory:
+
+	  duckiebot $ source environment.sh
+  	
+    duckiebot $ cd ~/duckietown/catkin_ws/src/20-indefinite-navigation/intersection_navigation/scripts/
+
+and run
+
+	  duckiebot $ ./at_intersection.py
+
+this script simulates an entry of the FSM and initializes the intersection navigation. 
+
+If you want to visualize what happens at the intersection when the template is matched, just follow these steps simultaneously with Step 4 described previously.
+
+Navigate to the Duckietown folder,
+
+    laptop &#36; cd ~/duckietown
+
+then source the environment,
+
+    laptop &#36; source environment.sh
+
+set the the ROS master to your vehicle,
+
+    laptop &#36; source set_ros_master.sh ![robot name]
+
+and finally launch 
+
+    laptop &#36; roslaunch intersection_navigation intersection_visualizer_node.launch robot_name:=![robot name]
 
 
 ## Troubleshooting {#demo-template-troubleshooting}
