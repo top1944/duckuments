@@ -44,7 +44,7 @@ Check: Is your bot up to date with latest software by using git pull?
 
 Follow these steps to run the current solution to the intersection navigation on your Duckiebot:
 
-For the current working version you need to checkout the branch devel-intersection_navigation , and more specifically the commit #0837ecf until a stable verson is published.  
+For the current working version you need to checkout the branch devel-intersection_navigation-jan15:
 
 Step 1: Place your Duckiebot at a four-way intersection just in front of the redline.
 
@@ -53,20 +53,20 @@ Step 2: The current version works with a gain of 0.6. To modify your gain to 0.6
     &#36; rosservice call /![robot name]/inverse_kinematics_node/set_gain -- 0.60
 
 Step 3: On the Duckiebot, navigate to the `/DUCKIETOWN_ROOT/` directory, run the command:
+		
+	laptop &#36; git checkout devel-intersection_navigation-jan15
+	
+	laptop &#36; git pull
 
-	  duckiebot $ source environment.sh
+	duckiebot $ source environment.sh
     
     duckiebot $ roslaunch interscetion_navigation intersection_navigation_node.launch veh:=![robot_name]
 
 Step 4: In another terminal on the Duckiebot navigate to the following directory:
 
-	  duckiebot $ source environment.sh
+	duckiebot $ source environment.sh
   	
     duckiebot $ cd ~/duckietown/catkin_ws/src/20-indefinite-navigation/intersection_navigation/scripts/
-
-and run
-
-	  duckiebot $ ./at_intersection.py
 
 this script simulates an entry of the FSM and initializes the intersection navigation. 
 
@@ -74,24 +74,24 @@ If you want to visualize what happens at the intersection when the template is m
 
 Navigate to the Duckietown folder,
 
-    laptop &#36; cd ~/duckietown
+    	laptop &#36; cd ~/duckietown
 
 then source the environment,
 
-    laptop &#36; source environment.sh
+    	laptop &#36; source environment.sh
 
 set the the ROS master to your vehicle,
 
-    laptop &#36; source set_ros_master.sh ![robot name]
+   	laptop &#36; source set_ros_master.sh ![robot name]
 
 and finally launch 
 
-    laptop &#36; roslaunch intersection_navigation intersection_visualizer_node.launch robot_name:=![robot name]
+    	laptop &#36; roslaunch intersection_navigation intersection_visualizer_node.launch robot_name:=![robot name]
 
 
 ## Troubleshooting
 
-* My duckiebot does not initalize the navigation -> make sure to run the ./at_intersection.py script
+* My duckiebot does not initalize the navigation -> make sure to run the node with your robot name
 * My duckiebot does not move -> Could happen if your battery is low, you did not remove the lid of the camera, no april tag is at the intersection or the duckiebot is not placed in front of an intersection
 
 
