@@ -46,13 +46,13 @@ The password is 'Traff!cL!light'
 
 * To start the demo on the traffic light:
 
-Make sure you are on the branch new-trafficlight:
+Make sure you are on the branch new_traffic_light:
 
     $ cd ~/duckietown
 
     $ git fetch --all
 
-    $ git checkout new-trafficlight
+    $ git checkout new_traffic_light
 
 Start the demo:
 
@@ -77,8 +77,7 @@ Run the demo:
     duckiebot &#36; make coordination2017
 
 
-Wait for build to finish. Press 'X' to run anti-instagram. After you see the message ‘transform
-has been published’, place the Duckiebot on the lane and press 'R1'. To switch to manual mode press 'L1'
+Wait for build to finish. Place the Duckiebot on the lane and press 'R1'. To switch to manual mode press 'L1'
 
 #### Expected outcomes
 
