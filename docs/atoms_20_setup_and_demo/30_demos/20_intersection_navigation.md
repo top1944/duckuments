@@ -52,7 +52,7 @@ Step 0: On both the Duckiebot and the laptop switch to the correct branch:
 	
 	&#36; git pull
 	
-Finally run : 
+Finally source the environment and run : 
 
 	&#36; catkin_make
 
