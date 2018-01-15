@@ -48,7 +48,7 @@ For the current working version you need to checkout the branch devel-intersecti
 
 Step 1: Place your Duckiebot at a four-way intersection just in front of the redline.
 
-Step 2: Command to modify your gain to 0.6.
+Step 2: The current version works with a gain of 0.6. To modify your gain to 0.6 run:
 
     &#36; rosservice call /![robot name]/inverse_kinematics_node/set_gain -- 0.60
 
