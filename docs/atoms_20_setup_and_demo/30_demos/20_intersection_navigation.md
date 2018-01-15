@@ -46,6 +46,16 @@ Follow these steps to run the current solution to the intersection navigation on
 
 For the current working version you need to checkout the branch devel-intersection_navigation-jan15:
 
+Step 0: On both the Duckiebot and the laptop switch to the correct branch:
+
+	&#36; git checkout devel-intersection_navigation-jan15
+	
+	&#36; git pull
+	
+Finally run : 
+
+	&#36; catkin_make
+
 Step 1: Place your Duckiebot at a four-way intersection just in front of the redline.
 
 Step 2: The current version works with a gain of 0.6. To modify your gain to 0.6 run:
@@ -54,31 +64,19 @@ Step 2: The current version works with a gain of 0.6. To modify your gain to 0.6
 
 Step 3: On the Duckiebot, navigate to the `/DUCKIETOWN_ROOT/` directory, run the command:
 		
-	laptop &#36; git checkout devel-intersection_navigation-jan15
-	
-	laptop &#36; git pull
-
 	duckiebot $ source environment.sh
     
-    duckiebot $ roslaunch interscetion_navigation intersection_navigation_node.launch veh:=![robot_name]
+    duckiebot $ roslaunch intersection_navigation intersection_navigation_node.launch veh:=![robot_name]
 
-Step 4: In another terminal on the Duckiebot navigate to the following directory:
-
-	duckiebot $ source environment.sh
-  	
-    duckiebot $ cd ~/duckietown/catkin_ws/src/20-indefinite-navigation/intersection_navigation/scripts/
-
-this script simulates an entry of the FSM and initializes the intersection navigation. 
-
-If you want to visualize what happens at the intersection when the template is matched, just follow these steps simultaneously with Step 4 described previously.
+If you want to visualize what happens at the intersection when the template is matched, just follow these steps simultaneously with Step 3 described previously.
 
 Navigate to the Duckietown folder,
 
-    	laptop &#36; cd ~/duckietown
+    laptop &#36; cd ~/duckietown
 
 then source the environment,
 
-    	laptop &#36; source environment.sh
+    laptop &#36; source environment.sh
 
 set the the ROS master to your vehicle,
 
@@ -86,7 +84,7 @@ set the the ROS master to your vehicle,
 
 and finally launch 
 
-    	laptop &#36; roslaunch intersection_navigation intersection_visualizer_node.launch robot_name:=![robot name]
+    laptop &#36; roslaunch intersection_navigation intersection_visualizer_node.launch robot_name:=![robot name]
 
 
 ## Troubleshooting
