@@ -89,9 +89,10 @@ and finally launch
     laptop &#36; roslaunch intersection_navigation intersection_visualizer_node.launch robot_name:=![robot name]
 
 
-## Troubleshooting {#demo-template-troubleshooting}
+## Troubleshooting
 
-* My duckiebot does not look like a duck.  -> Place 1 rubber duck on duckiebot.
+* My duckiebot does not initalize the navigation -> make sure to run the ./at_intersection.py script
+* My duckiebot does not move -> Could happen if your battery is low, you did not remove the lid of the camera, no april tag is at the intersection or the duckiebot is not placed in front of an intersection
 
 
 ## Demo failure demonstration {#demo-template-failure}
