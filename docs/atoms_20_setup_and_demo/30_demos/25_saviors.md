@@ -75,7 +75,7 @@ S: Make sure that anti instagram was run properly. Repeat Step 3 if needed.
 
 P: Duckiebot crashes obstacles. 
 
-S: Check if CPU load is not too high, reduce if needed. 
+S: Might be due to processes not running fast enough. Check if CPU load is too high, reduce if needed. 
 
 ## Demo failure demonstration {#demo-saviors-failure}
 
