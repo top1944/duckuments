@@ -371,7 +371,7 @@ Visual odometry (red) and optimized SLAM-Graph (green), Apriltag features displa
 <!---
 ![alt text](https://github.com/duckietown/duckuments/blob/kaufmann-devel/docs/atoms_85_fall2017_projects/20_distrubuted_est/slam_bigturn_screenshot.png "Big loop in duckietown")
 --->
-<div figure-id="fig:smallloop" figure-caption="Big loop in duckietown">
+<div figure-id="fig:bigloop" figure-caption="Big loop in duckietown">
      <img src="slam_bigturn_screenshot.png" style='width: 15em'/>
 </div>
 
