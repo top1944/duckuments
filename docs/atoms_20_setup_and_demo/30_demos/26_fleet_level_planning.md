@@ -1,6 +1,7 @@
-# Demo template {#demo-template status=beta}
+# Fleet planning Demo {#demo-fleet-planning status=beta}
 
-This is the template for the description of a demo.
+The fleet planning demo demonstrates the implemented functionality for fleet level planning. I.e. an interactive taxi service. 
+It will provide you with a GUI running on a laptop that can be used to generate transportation requests. The Duckiebots will pick up the customer at its location and bring him/her to the final destination.
 
 First, we describe what is needed, including:
 
@@ -17,10 +18,6 @@ Requires: Camera calibration completed.
 
 </div>
 
-## Video of expected results {#demo-template-expected}
-
-First, we show a video of the expected behavior (if the demo is succesful).
-
 ## Duckietown setup notes {#demo-template-duckietown-setup}
 
 You need at least one duckiebot, and a duckietown.
@@ -33,15 +30,17 @@ If you use this demo, you will have to install the fleet communication dependenc
 
 ## Duckiebot setup notes {#demo-template-duckiebot-setup}
 
-Duckiebots need to have all the dependencies installed. Use the fleet level communication setup developed by the fleet-communication team. To do this checkout the branch `devel-fleet-planning-comms` and navigate into the folder `catkin_ws/src/30-localization-and-planning/fleet_messaging/dependencies`. Now identify the name of wlan interface on by running: `ifconfig`. It is probably named `wlan0`. The next step is to run the install script as follows: 
+Duckiebots need to have all the dependencies installed. Use the fleet level communication setup developed by the fleet-communication team. To do this checkout the branch `devel-fleet-planning` and navigate into the folder `catkin_ws/src/30-localization-and-planning/fleet_messaging/dependencies`. Now identify the name of wlan interface on by running: `ifconfig`. It is probably named `wlan0`. The next step is to run the install script as follows: 
 
-	install_fleet_messaging <wlan_interface> <ip_address> 
+	./install_fleet_messaging <wlan_interface> <ip_address> 
 
 Where `<wlan_interface>` is the name of the wlan interface as found with `ifconfig` and `<ip_address>` is a randomly chosen IP address of the form 192.168.x.x/24. Make sure that you run this install script with different IP adresses for each duckiebot that takes part in the demo.
 
-## Master Laptop setup notes ¢#demo-fleet-planning-master-laptop-setup}
+As a last step, ensure that all the duckiebots are connected to the same wifi network. 
 
-For the demo to run you need one laptop that is in the same network as all the duckiebots and runs the central planning node. All duckiebots report their location to that node. With that information it plans which duckiebot picks up which customer. To receive this messages, the laptop also needs the fleet level communication setup. Perform the same steps as you just did on each duckiebot on the laptop. Running of the install script should take much less time.
+## Master Laptop setup notes {#demo-fleet-planning-master-laptop-setup}
+
+For the demo to run you need one laptop that is in the same network as all the duckiebots and runs the central planning node. All duckiebots report their location to that node. With that information it plans which duckiebot picks up which customer. To receive this messages, the laptop also needs the fleet level communication setup. Perform the same steps as you just did on each duckiebot on the laptop. (I.e. follow the instruction in the "Duckiebot setup notes" section. Running the installation script takes less time on the laptop than on the duckiebot.
 
 ## Pre-flight checklist {#demo-template-pre-flight}
 
@@ -78,7 +77,9 @@ From duckietown root folder:
 
 Run this on the duckiebot:
 
-	roslaunch fleet_planning master.launch
+	roslaunch fleet_planning master.launch messaging_iface:=<wlan_interface> messaging_config:=<config_file>
+
+Where `wlan_interface` is the interface you use to connect to the common network of all duckiebots (probably `wlan0`) and `config_file` is the file needed to setup the communication. The files are provided as part of the fleet messaging package under the following path: `catkin_ws/src/30-localization-and-planning/fleet_messaging/config/config_duckiebot_*.yaml`. Make sure to pick a different file for each duckiebot. Make sure to provide an absolute path to the configuration file (i.e. /home/<user>/duckietown/catkin_ws/...)
 
 Wait until all nodes have successfully been initialized. Then proceed with step 6.
 
@@ -95,13 +96,15 @@ Take care: *do not* pass an argument to the command set_ros_master.sh! We want a
 ### Step 7: Taxi central:
 Run on the taxi central your laptop:
 
-	roslaunch fleet_planning master.laptop.sh
+	roslaunch fleet_planning master_laptop.sh messaging_iface:=<wlan_interface> messaging_config:=<config_file>
+
+Where `wlan_interface` is the interface you use to connect to the common network with all duckiebots (probably `wlan0`) and `config_file` is the file needed to setup the communication. The file is provided as part of the fleet messaging package under the following path: `catkin_ws/src/30-localization-and-planning/fleet_messaging/config/config_laptop.yaml`. Make sure to provide an absolute path to the configuration file (i.e. /home/<user>/duckietown/catkin_ws/...)
 
 ### Step 8: Start the GUI
 
 	rqt --force-discover
 
-If you don't see nothing meaningful, start the fleet planning plugin via Plugins->Fleet Planning.
+If you don't see nothing meaningful, start the fleet planning plugin via the menu Plugins->Fleet Planning.
 
 ### Step 9: Have fun!
 Place your duckiebot at an intersection and it will localize and appear on the map in rqt. The taxi central will automatically assign a mission to the duckiebot, random, to keep him moving and not blocking the streets. Hit R1 on the joystick to go into auto pilot mode. The duckiebot will now follow the instructions from the taxi central. 
