@@ -12,9 +12,7 @@ Requires: Lane-following demo has been successfully launched. [Lane-following de
 
 ## Video of expected results {#demo-template-expected}
 
-First, we show a [video](https://drive.google.com/file/d/1k4mDS7rwOrkkx3WWIDFMei7-0Ipzu2pj/view?ts=5a2b0d6e) of the expected behavior.
-
-Second video: [TBD]
+First, we show a [video](https://drive.google.com/open?id=1XDTNk8NgIlMEyC7R0vyqVm3TSj7Sowc8) of the expected behavior.
 
 ## Duckietown setup notes {#demo-anti-instagram-duckietown-setup}
 
@@ -26,24 +24,24 @@ Any duckiebot satisfying the basic DB17 configuration will work.
 
 ## Demo instructions {#demo-anti-instagram-run}
 
-Here, we give step by step instructions to reproduce the demo.
-
 Step 0: On duckiebot, change to /$DUCKIETOWN_ROOT/ directory and checkout the lastest version of devel-anti-instagram branch.
 
 Step 1: Run command:
-
-    laptop $ [set ros master to current duckiebot]
     
-    duckiebot $ source environment.sh
+    duckiebot $ source environment.sh && source set_ros_master.sh && source set_vehicle_name.sh
 
-    duckiebot $ make demo-lane-following [parameters: CB only, time interval, geom, ...]
+    duckiebot $ roslaunch duckietown_demos lane_following.launch
     
 Wait a while so that everything has been launched. 
 
 If you accidentally press R1 which starts autonomous lane following, press L1 to switch back to joystick control.
 
-Step 2: On laptop, set ros master to duckiebot and run command:
+Step 2: On laptop, change to /$DUCKIETOWN_ROOT/ directory and perform the following steps:
 
+    laptop $ source environment.sh
+    
+    laptop $ export ROS_MASTER_URI=http://robot_name.local:11311/
+    
     laptop $ rqt_image_view
 
 which opens a window to preview image messages. Select the /robot name/camera_node/image/compressed to view camera image stream. Place the duckiebot somewhere in duckietown.
@@ -68,6 +66,3 @@ This can be seen as well with the following topics:
 ## Troubleshooting {#demo-anti-instagram-troubleshooting}
 
 Contact David Yunis - TTIC, Shengjie Lin - TTIC, Milan Schilling - ETHZ or Christoph Zuidema - ETHZ via Slack if any trouble occurs. 
-
-
-## Demo failure demonstration?
