@@ -68,7 +68,7 @@ Step 3: On the Duckiebot, navigate to the `/DUCKIETOWN_ROOT/` directory, run the
     
     duckiebot $ roslaunch intersection_navigation intersection_navigation_node.launch veh:=![robot_name]
 
-If you want to visualize what happens at the intersection when the template is matched, just follow these steps simultaneously with Step 3 described previously.
+If you want to visualize what happens at the intersection when the template is matched, just follow these steps simultaneously with Step 3.
 
 Navigate to the Duckietown folder,
 
