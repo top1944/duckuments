@@ -42,7 +42,7 @@ Check: Is your bot up to date with latest software by using git pull?
 
 ## Demo instructions {#demo-indefinite-navigation-run}
 
-Follow these steps to run the intersection navigation on your Duckiebot:
+Follow these steps to run the current solution to the intersection navigation on your Duckiebot:
 
 For the current working version you need to checkout the branch devel-intersection_navigation , and more specifically the commit #0837ecf until a stable verson is published.  
 
