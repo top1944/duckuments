@@ -14,7 +14,7 @@ Requires: [Joystick demo](#rc-control) successfully launched.
 
 </div>
 
-[//]: ## Video of expected results {#demo-saviors-expected}
+[//]: # ## Video of expected results {#demo-saviors-expected}
 
 ## Duckietown setup notes {#demo-saviors-duckietown-setup}
 
