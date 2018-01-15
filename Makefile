@@ -382,6 +382,7 @@ fall2017-pdf: checks check-programs-pdf
 
 # python -m mcdp_docs.add_edit_links <  out/fall2017/pdf/duckiebook.html > out/fall2017/pdf/b.html
 
+	mkdir -p out/fall2017/pdf 
 	prince --javascript -o out/fall2017/pdf/duckiebook1.pdf out/fall2017/data/duckiebook.html
 
 	./reduce-pdf-size.sh out/fall2017/pdf/duckiebook1.pdf out/fall2017/pdf/duckiebook2.pdf
