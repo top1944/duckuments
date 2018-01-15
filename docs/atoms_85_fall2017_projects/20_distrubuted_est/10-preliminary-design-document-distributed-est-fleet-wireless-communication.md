@@ -344,7 +344,13 @@ Simultaneous Localization and Mapping (SLAM) is an essential problem in robotics
 
 Starting from the existing duckiebot code base, we had the ambitous plan to implement Multi-Robot-SLAM functionality for this project. Quickly, we discovered the reality gap and encountered numerous isses whilst evaluating different libraries. Throughout the project, we dropped our constraints to sololey run our nodes on the duckiebot itself. As a result, we present the foundation for a Multi-SLAM implementation for duckietown.
 
+<!---
 ![alt text](https://github.com/duckietown/duckuments/blob/kaufmann-devel/docs/atoms_85_fall2017_projects/20_distrubuted_est/technical_concept.png "Technical overview of this projects implementation")
+--->
+
+<div figure-id="fig:technicalconcept" figure-caption="Technical overview of this projects implementation">
+     <img src="technical_concept.png" style='width: 15em'/>
+</div>
 
 Infrastructure of the Project
 
