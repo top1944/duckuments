@@ -340,7 +340,7 @@ WiFi specs (duckumentation)
 
 Disclaimer: This part should be called "Towards the Collaborative Creation of Duckietown Maps".
 
-Simultaneous Localization and Mapping (SLAM) is an essential problem in robotics: The creation of maps and determination of the own localization within this map is performed simultanously. [Simultaneous Localisation and Mapping (SLAM): Part I The Essential Algorithms, Hugh Durrant-Whyte, Fellow, IEEE, and Tim Bailey] (http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.477.7077&rep=rep1&type=pdf). 
+Simultaneous Localization and Mapping (SLAM) is an essential problem in robotics: The creation of maps and determination of the own localization within this map is performed simultanously. [](#bib:Durrant-Whyte2006). 
 
 Starting from the existing duckiebot code base, we had the ambitous plan to implement Multi-Robot-SLAM functionality for this project. Quickly, we discovered the reality gap and encountered numerous isses whilst evaluating different libraries. Throughout the project, we dropped our constraints to sololey run our nodes on the duckiebot itself. As a result, we present the foundation for a Multi-SLAM implementation for duckietown.
 
@@ -379,7 +379,9 @@ Optimized SLAM-Graph of driving around the big loop in Duckietown, Apriltag feat
 
 **Install GTSAM**
 
-To install GTSAM download [gtsam-3.2.1.zip](https://research.cc.gatech.edu/borg/sites/edu.borg/files/downloads/gtsam-3.2.1.zip) and extract using e.g. the 'unzip' command. Then open the following file to add this line on top of the includes `#include <boost/serialization/serialization.hpp>` in the extracted folder.
+To install GTSAM download [gtsam-3.2.1.zip](https://research.cc.gatech.edu/borg/sites/edu.borg/files/downloads/gtsam-3.2.1.zip) and extract using e.g. the 'unzip' command. Then open the following file to add this line on top of the includes
+    $ #include <boost/serialization/serialization.hpp>
+in the extracted folder.
 
     $ nano [gtsam dir]/gtsam/inference/Ordering.cpp
     
@@ -446,4 +448,3 @@ Now you can use `rviz` to visualize the topics `MarkerArray` and `Marker`. Make 
 
 **For explorers**
 In the arm branch of the Duckietwon SW repo, you can find a modified version of the viso2_ros package that can be compiled on the duckiebot. Its performance on the Rapberry Pi is limited, but could potentially be interesting for future works.
-
