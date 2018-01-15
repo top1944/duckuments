@@ -46,46 +46,65 @@ Follow these steps to run the current solution to the intersection navigation on
 
 For the current working version you need to checkout the branch devel-intersection_navigation-jan15:
 
-Step 0: On both the Duckiebot and the laptop switch to the correct branch:
+**Step 0**: On both the Duckiebot and the laptop switch to the correct branch:
 
-	&#36; git checkout devel-intersection_navigation-jan15
-	
-	&#36; git pull
-	
+```
+git checkout devel-intersection_navigation-jan15
+```
+
+```
+git pull
+```
+
 Finally source the environment and run : 
 
-	&#36; catkin_make
+```
+catkin_make
+```
 
-Step 1: Place your Duckiebot at a four-way intersection just in front of the redline.
+**Step 1**: Place your Duckiebot at a four-way intersection just in front of the redline.
 
-Step 2: The current version works with a gain of 0.6. To modify your gain to 0.6 run:
+**Step 2**: The current version works with a gain of 0.6. To modify your gain to 0.6 run:
 
-    &#36; rosservice call /![robot name]/inverse_kinematics_node/set_gain -- 0.60
+```
+rosservice call /![robot name]/inverse_kinematics_node/set_gain -- 0.60
+```
 
-Step 3: On the Duckiebot, navigate to the `/DUCKIETOWN_ROOT/` directory, run the command:
-		
-	duckiebot $ source environment.sh
-    
-    duckiebot $ roslaunch intersection_navigation intersection_navigation_node.launch veh:=![robot_name]
+**Step 3**: On the Duckiebot, navigate to the `/DUCKIETOWN_ROOT/` directory, run the command:
 
-If you want to visualize what happens at the intersection when the template is matched, just follow these steps simultaneously with Step 3.
+```
+source environment.sh
+```
 
-Navigate to the Duckietown folder,
+``` 
+roslaunch intersection_navigation intersection_navigation_node.launch veh:=![robot_name]
+```
 
-    laptop &#36; cd ~/duckietown
+If you want to **visualize** what happens at the intersection when the template is matched, just follow these steps simultaneously with Step 3.
+
+Navigate to the Duckietown folder on the laptop,
+
+```
+cd ~/duckietown
+```
 
 then source the environment,
 
-    laptop &#36; source environment.sh
+```
+source environment.sh
+```
 
 set the the ROS master to your vehicle,
 
-   	laptop &#36; source set_ros_master.sh ![robot name]
+```
+source set_ros_master.sh ![robot name]
+```
 
 and finally launch 
 
-    laptop &#36; roslaunch intersection_navigation intersection_visualizer_node.launch robot_name:=![robot name]
-
+```
+roslaunch intersection_navigation intersection_visualizer_node.launch robot_name:=![robot name]
+```
 
 ## Troubleshooting
 
@@ -95,4 +114,3 @@ and finally launch
 
 ## Demo failure demonstration {#demo-template-failure}
 None existing yet. 
-
