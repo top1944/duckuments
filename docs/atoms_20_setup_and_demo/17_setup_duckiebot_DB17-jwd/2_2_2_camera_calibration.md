@@ -121,9 +121,9 @@ You should see that your new calibration file is uncommitted. You need to commit
 
 Before moving on to the extrinsic calibration, make sure to kill all running processes by pressing <kbd>Ctrl</kbd>-<kbd>C</kbd> in each of the terminal windows.
 
-## Extrinsic calibration {status=recently-updated}
+## Extrinsic calibration {#camera-calib-extrinsics status=recently-updated}
 
-### Setup
+### Setup {#camera-calib-extrinsics-setup}
 
 Arrange the Duckiebot and checkerboard according to [](#fig:extrinsic_setup). Note that the axis of the wheels should be aligned with the y-axis ([](#fig:extrinsic_setup)).
 
@@ -131,7 +131,6 @@ Arrange the Duckiebot and checkerboard according to [](#fig:extrinsic_setup). No
   <img src="extrinsic_setup.jpg" style='width: 30em'/>
 </div>
 
-Note: Please re-do the picture above with a conforming Duckiebot. A conforming Duckiebot has a duckie on top. -AC
 
 [](#fig:extrinsic_view) shows a view of the calibration checkerboard from the Duckiebot. To ensure proper calibration there should be no clutter in the background and two A4 papers should be aligned next to each other.
 
@@ -139,7 +138,7 @@ Note: Please re-do the picture above with a conforming Duckiebot. A conforming D
   <img src="extrinsic_view.jpg" style='width: 30em'/>
 </div>
 
-### Calibration procedure
+### Calibration procedure {#camera-calib-extrinsics-procedure}
 
 
 #### Step 1
@@ -213,12 +212,25 @@ Here is an updated, more practical extrinsic calibration and validation procedur
 
 ## Check out the experimental branch
 
-
 Check out the branch `andrea-better-camera-calib`.
 
+
+## Place the robot on the pattern {#camera-calib-jan18-extrinsics-setup}
+
+Arrange the Duckiebot and checkerboard according to [](#fig:extrinsic_setup2). Note that the axis of the wheels should be aligned with the y-axis ([](#fig:extrinsic_setup2)).
+
+<div figure-id="fig:extrinsic_setup2" figure-caption="">
+  <img src="extrinsic_setup.jpg" style='width: 30em'/>
+</div>
+
+
+[](#fig:extrinsic_view2) shows a view of the calibration checkerboard from the Duckiebot. To ensure proper calibration there should be no clutter in the background and two A4 papers should be aligned next to each other.
+
+<div figure-id="fig:extrinsic_view2" figure-caption="">
+  <img src="extrinsic_view.jpg" style='width: 30em'/>
+</div>
+
 ## Extrinsic calibration procedure {#camera-calib-jan18-extrinsics}
-
-
 
 Run the following on the Duckiebot:
 
