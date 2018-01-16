@@ -77,13 +77,15 @@ From duckietown root folder:
 
 Run this on the duckiebot:
 
+CAUTION: For the Duckietown Demo Day on Jan 23 2018 you need to run the following command with the option `joystick_demo:=true`
+
 	roslaunch fleet_planning master.launch messaging_iface:=<wlan_interface> messaging_config:=<config_file>
 
 Where `wlan_interface` is the interface you use to connect to the common network of all duckiebots (probably `wlan0`) and `config_file` is the file needed to setup the communication. The files are provided as part of the fleet messaging package under the following path: `catkin_ws/src/30-localization-and-planning/fleet_messaging/config/config_duckiebot_*.yaml`. Make sure to pick a different file for each duckiebot. Make sure to provide an absolute path to the configuration file (i.e. /home/<user>/duckietown/catkin_ws/...)
 
 Wait until all nodes have successfully been initialized. Then proceed with step 6.
 
-Option: Set `joystick_demo:=true` if lane following or intersection control does not work well for some reason. This way you can manually steer the duckiebot through duckietown and still see how the fleet planning software works. Pay attention to the terminal output of your duckiebot to see which exit to take at an intersection. Give the duckiebot time to localize at intersections. 
+Option: Set `joystick_demo:=true`to switch off to take the autonomous control of the duckiebot out of the loop. This way you can manually steer the duckiebot through duckietown and see how the fleet planning software works, with as litte dependency on other packages as possible. Pay attention to the terminal output of your duckiebot to see which exit to take at an intersection. Give the duckiebot time to localize at intersections. 
 
 ### Step 6: Environment laptop
 On the laptop, checkout the same branch, rebuild catkin and in the duckietown root folder:
@@ -107,7 +109,7 @@ Where `wlan_interface` is the interface you use to connect to the common network
 If you don't see nothing meaningful, start the fleet planning plugin via the menu Plugins->Fleet Planning.
 
 ### Step 9: Have fun!
-Place your duckiebot at an intersection and it will localize and appear on the map in rqt. The taxi central will automatically assign a mission to the duckiebot, random, to keep him moving and not blocking the streets. Hit R1 on the joystick to go into auto pilot mode. The duckiebot will now follow the instructions from the taxi central. 
+Place your duckiebot at an intersection and it will localize and appear on the map in rqt. The taxi central will automatically assign a mission to the duckiebot, random, to keep him moving and not blocking the streets. If you run the fleet planning in the standard mode, hit R1 on the joystick to go into auto pilot mode. The duckiebot will now follow the instructions from the taxi central. If the joystick_demo is active, use the joystick to control the duckiebot and follow the instructions from the duckiebot's terminal output.
 
 Create a new customer request by clicking on the start node and then on the target node of your journey. Hit 'Find Plan'. The taxi central will assign the customer to the closest duckiebot and recalculate its path once it localizes again. The new path will be displayed on the map. You will see how the customer moves with its taxi once he was picked up. 
 
