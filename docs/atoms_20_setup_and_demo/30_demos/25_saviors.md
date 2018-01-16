@@ -42,6 +42,8 @@ Step 1: On the duckiebot, navigate to `DUCKIETOWN_ROOT` and run
 
     duckiebot $ source environment.sh
 
+    duckiebot $ catkin_make -C catkin_ws/
+
     duckiebot $ make demo-lane-following
 
 Wait for a couple of seconds until everything has been properly launched.
