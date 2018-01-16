@@ -17,7 +17,7 @@ Results: Calibration for the robot camera.
 ### Setup
 
 
-Download and print a PDF of the calibration checkerboard 
+Download and print a PDF of the calibration checkerboard
 ([A4 intrinsic](github:org=duckietown,repo=duckiefleet,path=calibrations/Calibration_pattern_A4_intrinsic.pdf), [A3 extrinsic](github:org=duckietown,repo=duckiefleet,path=calibrations/calibration_pattern_A3.pdf), [US Letter](github:org=duckietown,repo=Software,path=duckietown/config/baseline/calibration/camera_intrinsic/calibration_pattern.pdf)).
 Fix the checkerboard to a planar surface.
 
@@ -204,3 +204,86 @@ This will do the extrinsic calibration and automatically save the file to your l
 
 As before, add this file to your local Git repository on your laptop, push the changes to your branch and do a pull request to master.
 Finally, you will want to update the local repository on your Duckiebot.
+
+
+# Updated camera calibration and validation {#camera-calib-jan18 status=recently-updated}
+
+Here is an updated, more practical extrinsic calibration and validation procedure.
+
+
+## Check out the experimental branch
+
+
+Check out the branch `andrea-better-camera-calib`.
+
+## Extrinsic calibration procedure {#camera-calib-jan18-extrinsics}
+
+
+
+Run the following on the Duckiebot:
+
+    duckiebot $ rosrun complete_image_pipeline calibrate_extrinsics
+
+That's it!
+
+No laptop is required.
+
+You can also look at the output produced, to make sure it looks reasonable.
+
+## Camera validation by simulation {#camera-calib-jan18-simulation}
+
+You can run the following command to make sure that the camera calibration is reasonable:
+
+    duckiebot $ rosrun complete_image_pipeline validate_calibration
+
+What this does is simulating what the robot should see, if the models were correct ([](#fig:validate_calibration_out1)).
+
+Then it also tries to localize on the simulated data ([](#fig:try_simulated_localization)) - achieving impressing
+precision results!
+
+<div figure-id="fig:validate_calibration_out1">
+    <img style='width:40%' src="validate_calibration_out1.jpg"/>
+    <figcaption>Result of <code>validate_calibration</code>.</figcaption>
+</div>
+
+<div figure-id="fig:try_simulated_localization">
+    <img style='width:90%' src="try_simulated_localization.jpg"/>
+    <figcaption>Output of <code>validate_calibration</code>: localization
+    in simulated environment.</figcaption>
+</div>
+
+try_simulated_localization
+
+## Camera validation by running one-shot localization {#camera-calib-jan18-oneshot}
+
+Place the robot in a lane.
+
+Run the following command:
+
+    duckiebot $ rosrun complete_image_pipeline single_image_pipeline
+
+What this does is taking one snapshot and performing localization on that single image.
+The output will be useful to check that everything is ok.
+
+
+### Example of correct results
+
+[](#fig:oneshot1_all) is an example in which the calibration was correct, and the robot
+localizes perfectly.
+
+<div figure-id="fig:oneshot1_all">
+    <img style='width:90%' src="oneshot1_all.jpg"/>
+    <figcaption>Output when camera not properly calibrated.</figcaption>
+</div>
+
+### Example of failure
+
+This is an example in which the calibration is incorrect.
+
+Look at the output in the bottom left: clearly the perspective is distorted,
+and there is no way for the robot to localize given the perspective points.
+
+<div figure-id="fig:incorrect1">
+    <img style='width:90%' src="incorrect1.jpg"/>
+    <figcaption>Output when camera not properly calibrated.</figcaption>
+</div>
