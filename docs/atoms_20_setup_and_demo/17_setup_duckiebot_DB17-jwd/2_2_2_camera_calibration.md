@@ -240,7 +240,13 @@ That's it!
 
 No laptop is required.
 
-You can also look at the output produced, to make sure it looks reasonable.
+You can also look at the output files produced, to make sure it looks reasonable.
+It should look like [](#fig:calibrate_extrinsics1).
+
+
+<div figure-id="fig:calibrate_extrinsics1" figure-caption="">
+  <img src="calibrate_extrinsics1.jpg" style='width: 90%'/>
+</div>
 
 ## Camera validation by simulation {#camera-calib-jan18-simulation}
 
