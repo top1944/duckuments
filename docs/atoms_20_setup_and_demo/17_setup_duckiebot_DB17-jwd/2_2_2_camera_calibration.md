@@ -248,6 +248,15 @@ It should look like [](#fig:calibrate_extrinsics1).
   <img src="calibrate_extrinsics1.jpg" style='width: 90%'/>
 </div>
 
+Note the difference between the two types of rectification:
+
+1. In `bgr_rectified` the rectified frame coordinates are chosen so that
+the frame is filled entirely. Note the image is stretched - the April tags
+are not square. This is the rectification used in the lane localization pipeline. It doesn't matter that the image is stretched, because the homography learned will account for that deformation.
+
+2. In `rectified_full_ratio_auto` the image is not stretched. The camera matrix is preserved. This means that the aspect ratio is the same. In particular note the April tags are square. If you do something with April tags, you need this rectification.
+
+
 ## Camera validation by simulation {#camera-calib-jan18-simulation}
 
 You can run the following command to make sure that the camera calibration is reasonable:
