@@ -30,8 +30,10 @@ Here, describe the assumptions about the Duckietown, including:
 * Layout (tiles types)
 * Instrastructure (traffic lights, wifi networks, ...) required
 * Weather (lights, ...)
-* It is assumed that the parking lot has six parking spaces as depicted in figure 1.
-  * 4 april tags				
+* It is assumed that the parking lot has six parking spaces as depicted in the figure below.
+  * 4 april tags, which should be placed according to the figure below. From the (0,0) point at the bottom left of the figure below (assuming x is the horizontal axis while y is the vertical axis): place tag #126 at  (10cm,0), tag #128 at (20cm,0), tag #129 at (30cm,0) and tag #131 at (40cm,0).
+
+    ​			
     Do not write instructions here. The instructions should be somewhere in [the part about Duckietowns](#duckietowns). Here, merely point to them.
 
 ![Duckietown parking lot](https://raw.githubusercontent.com/duckietown/Software/devel-parking/catkin_ws/src/50-misc-additional-functionality/parking/report/map_0_1.png "Duckietown parking lot")
@@ -60,7 +62,7 @@ instuctions to reproduce the demo simulation:
 
 Step 1: Switch to the parking branch and go to the simulation folder dt-path-planning.
 
-`git checkout devel-parking`
+`git checkout devel-parking-jan15`
 
 `cd DUCKIETOWN_ROOT/catkin_ws/src/50-misc-additional-functionality/parking/path_planning/dt-path-planning`
 
@@ -80,19 +82,20 @@ The terminal output should tell you that a collision free path was found in stag
 ### Part B: Duckiebot
 Instructions to reproduce the demo on the duckiebot:
 
-Step 1: Switch to the parking branch 
-`git checkout devel-parking`
+Step 1: Switch to the parking branch: 
+`git checkout devel-parking-jan15`
 
-Step 2: Source your environment
+Step 2: Source your environment:
 `source environment.sh`
 
 Step 3: Place your duckiebot anywhere in the parking lot, given that it can see the parking apriltags from a reasonable distance
 
 Step 4: Launch the following file with the appropriate arguments:
 `roslaunch parking parking_localization.launch veh:=myvehicle ` where the argument "veh" is the name of your duckiebot
+
 Step 5: The launch file will localize the duckiebot via the apriltags. An output of "A collision free path was found!" will display when a path is found.
 
-Step 6: Your duckiebot will locate itself with respect to the parking spaces and save a figure of its position and heading in a figure in your duckietown/catkin_ws/src/50-misc-additional-functionality/parking/src/ folder. You can view this image to see how well the duckiebot localized itself within the lot and planned a path to a given space.
+Step 6: Your duckiebot will locate itself with respect to the parking spaces and save a figure of its position and heading in a figure in your duckietown/catkin_ws/src/50-misc-additional-functionality/parking/src/ folder as "path.pdf". You can view this image to see how well the duckiebot localized itself within the lot and planned a path to a given space.
 
 Step 7: The default planning space the duckiebot will plan to is space 2. If you would like to plan to a different space, type the following command: `roslaunch parking parking_localization.launch veh:=myvehicle end_space = endspace `  where end_space is an integer from 1 to 6. 
 
@@ -106,9 +109,7 @@ Step 3 can generate an error in case of unlucky sampling. See Demo failure demon
 
 ### Part B: Duckiebot
 
-Step 5: The command line should output the following:
-`[INFO]: [/myvehicle/fsm_node] Event: apriltag_parking_and_parking_active`
-If you do not recieve this message, please try relaunching the file in step 4. 
+If the parking apriltags are not view and arranged in the correct order 
 
 ## Demo failure demonstration {#demo-template-failure}
 
@@ -138,4 +139,4 @@ We do not have a working demo (in the sense that the duckiebot actually parks it
 
 `roslaunch parking master.launch veh:=myvehicle localization:=true apriltags:=true /camera/raw:=true /camera/raw/rect:=true LED:=false lane_following:=true`
 
-Once a path is generated (it will tell you a path has been found via the terminal), press R1 to enter "parking mode".
+Once a path is generated (it will tell you a path has been found via the terminal), press R1 on your controller to enter "parking mode".
