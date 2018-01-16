@@ -24,7 +24,7 @@ Any duckiebot satisfying the basic DB17 configuration will work.
 
 ## Demo instructions {#demo-anti-instagram-run}
 
-Step 0: On duckiebot, change to /$DUCKIETOWN_ROOT/ directory and checkout the lastest version of devel-anti-instagram branch.
+Step 0: On duckiebot, change to /$DUCKIETOWN_ROOT/ directory and checkout the lastest version of devel-anti-instagram-jan15 branch.
 
 Step 1: Run command:
     
