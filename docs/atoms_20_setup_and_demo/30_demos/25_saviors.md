@@ -26,7 +26,7 @@ To demonstrate functionality, place obstacles (duckies S/M/L or cones) on drivin
 
 ## Duckiebot setup notes {#demo-saviors-duckiebot-setup}
 
-Currently the bot has to be on the devel-saviors-demo branch on git. Furthermore the additional package sk-image has to be installed (`sudo apt-get install python-skimage`)
+Currently the bot has to be on the devel-saviors-jan15 branch on git. Furthermore the additional package sk-image has to be installed (`sudo apt-get install python-skimage`)
 
 ## Pre-flight checklist {#demo-saviors-pre-flight}
 
