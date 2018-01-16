@@ -265,13 +265,17 @@ You can run the following command to make sure that the camera calibration is re
 
 What this does is simulating what the robot should see, if the models were correct ([](#fig:validate_calibration_out1)).
 
-Then it also tries to localize on the simulated data ([](#fig:try_simulated_localization)) - achieving impressing
-precision results!
+
 
 <div figure-id="fig:validate_calibration_out1">
     <img style='width:40%' src="validate_calibration_out1.jpg"/>
     <figcaption>Result of <code>validate_calibration</code>.</figcaption>
 </div>
+
+Then it also tries to localize on the simulated data ([](#fig:try_simulated_localization)).
+It usual achieves impressive calibration results!
+
+> Simulations are doomed to succeed.
 
 <div figure-id="fig:try_simulated_localization">
     <img style='width:90%' src="try_simulated_localization.jpg"/>
@@ -279,7 +283,6 @@ precision results!
     in simulated environment.</figcaption>
 </div>
 
-try_simulated_localization
 
 ## Camera validation by running one-shot localization {#camera-calib-jan18-oneshot}
 
@@ -313,4 +316,19 @@ and there is no way for the robot to localize given the perspective points.
 <div figure-id="fig:incorrect1">
     <img style='width:90%' src="incorrect1.jpg"/>
     <figcaption>Output when camera not properly calibrated.</figcaption>
+</div>
+
+
+## The importance of validation
+
+Validation is useful because otherwise it is hard to detect wrong calibrations.
+
+For example, in 2017, a bug in the calibration made about 5 percent
+of the calibrations useless ([](#fig:calibration_95_percent_success)), and people didn't notice for weeks (!).
+
+
+<div figure-id="fig:calibration_95_percent_success">
+    <img style='width:90%' src="calibration_95_percent_success.jpg"/>
+    <figcaption>In 2017, a bug in the calibration made about 5 percent
+    of the calibrations useless.</figcaption>
 </div>
