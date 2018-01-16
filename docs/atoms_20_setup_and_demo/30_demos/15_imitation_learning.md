@@ -20,9 +20,7 @@ Note: You do not need the whole ncsdk (which requires caffe and tensorflow to be
 
 ## Video of expected results {#demo-imitation-learning-expected}
 
-The videos have been recorded. We are assembling them and they will be out soon. 
-
-TODO: upload videos to vimeo and embed them here.
+The videos have been recorded. See the following websites. [Recorded video](https://youtu.be/FCP8Ndoxae0) 
 
 ## Duckietown setup notes {#demo-imitation-learning-duckietown-setup}
 
@@ -49,7 +47,7 @@ Check: Enough battery of the duckiebot.
 
 ## Demo instructions {#demo-imitation-learning-run}
 
-Step 1: On duckiebot, checkout to the branch "tianlu-deep_imitation_learning". Of course, do git pull first. The branch will be merged into the master branch soon. 
+Step 1: On duckiebot, checkout to the branch "devel-super-learning-jan15". Of course, do git pull first. Use 'catkin_make' to rebuild the src folder. 
 
 Step 2: On duckiebot, in /DUCKIERTOWN_ROOT/ directory, run command:
 
@@ -70,4 +68,4 @@ You will find that there are much less ros nodes and topics compared with the tr
 
 ## Troubleshooting {#demo-imitation-learning-troubleshooting}
 
-Contact Yang Shaohui(ETHZ) via Slack if any trouble occurs.
+Contact Yang Shaohui(ETHZ) via Slack or Email(shyang@ethz.ch) if any trouble occurs.
