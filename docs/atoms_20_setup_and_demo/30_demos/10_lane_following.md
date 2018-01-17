@@ -60,12 +60,15 @@ Step 2: Press X to recalibrate Anti-Instagram.
 
 Step 3: Start the autonomous lane following by pressing the **R1** button on joystick. to start autonomous.
 
-Step 4: Enjoy the demo.
+Step 4: The Duckiebot should drive autonomously in the lane. Intersections and red lines are neglected and the Duckiebot will drive across them like it is a __normal__ lane. Enjoy the demo.
 
 Step 5: Stop the autonomous driving by pressing **L1** button on the joystick and switch to joystick control. 
 
 
 ## Troubleshooting {#demo-template-troubleshooting}
+### The Duckiebot does not drive nicely across intersections
+This is not a valid failure. The Duckiebot assumes only normal lanes during this demo. There is no module concerning the intersections. Therefore, weird behavior at intersections is expected and normal because there are no lines. The demo is only to demonstrate the lane following.
+
 ### The Duckiebot does not drive nicely in the lane
 Solution 1:
 
@@ -92,6 +95,18 @@ Solution:
 
 * Turn joystick on and off multiple times.
 * Check if battery is powered on.
+
+### The Duckiebot cuts white line while driving on inner curves (avanced)
+
+Solution (advanced):
+* Set alternative controller gains. While running the demo on the Duckiebot use the following to set the gains to the alternative values:
+
+
+    duckiebot $ rosparam set /robot_name/lane_controller_node/k_d -60
+    
+    duckiebot $ rosparam set /robot_name/lane_controller_node/k_theta -11
+
+* Those changes are only active while running the demo and need to be repeated at every start of the demo if needed. If this improved the performance of your Duckiebot, you should think about permenantly change the default values in your catkin_ws.
 
 
 ## Demo failure demonstration {#demo-template-failure}
