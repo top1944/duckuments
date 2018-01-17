@@ -54,7 +54,7 @@ Step 2: In a second terminal on the duckiebot, run:
 
 This launches the obstacle avoidance node, wait again until it's properly started up. 
 
-Step 3: Press the X button on the joystick to generate an anti-instagram transformation. Repeat if needed until confirmation message is shown in the `obst_avoid` window. 
+Step 3: Press the X button on the joystick to generate an anti-instagram transformation. Repeat if needed until confirmation message is shown in the `obst_avoid` window (Confirmation message: "!!!!!!!!!!!!!!!!!!!!TRAFO WAS COMPUTED SO WE ARE READY TO GO!!!!!!!!!!!!" in YELLOW letters).
 
 Step 4: To visualise output of the nodes run the following commands on your notebook:
 
