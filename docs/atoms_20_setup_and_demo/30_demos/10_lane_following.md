@@ -99,14 +99,15 @@ Solution:
 ### The Duckiebot cuts white line while driving on inner curves (avanced)
 
 Solution (advanced):
-* Set alternative controller gains. While running the demo on the Duckiebot use the following to set the gains to the alternative values:
+
+Set alternative controller gains. While running the demo on the Duckiebot use the following to set the gains to the alternative values:
 
 
     duckiebot $ rosparam set /robot_name/lane_controller_node/k_d -60
     
     duckiebot $ rosparam set /robot_name/lane_controller_node/k_theta -11
 
-* Those changes are only active while running the demo and need to be repeated at every start of the demo if needed. If this improved the performance of your Duckiebot, you should think about permenantly change the default values in your catkin_ws.
+Those changes are only active while running the demo and need to be repeated at every start of the demo if needed. If this improved the performance of your Duckiebot, you should think about permenantly change the default values in your catkin_ws.
 
 
 ## Demo failure demonstration {#demo-template-failure}
