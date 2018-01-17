@@ -16,7 +16,7 @@ Requires: [Joystick demo](#rc-control) successfully launched.
 
 ## Video of expected results {#demo-saviors-expected}
 
-Video will be added when framework is defined/provided.
+Video will be added when framework is defined/provided. The duckiebot should stop if an obstacle (duckie or cone) is placed in front of the duckiebot. 
 
 ## Duckietown setup notes {#demo-saviors-duckietown-setup}
 
@@ -64,7 +64,7 @@ Step 4: To visualise output of the nodes run the following commands on your note
 
     laptop $ rviz
 
-Add the desired topics to the visualisation. 
+Topics of interest are: `/robot_name/obst_detect_visual/visualize_obstacles` (Markers which show obstacles), `/robot_name/obst_detect_visual/image/compressed` (Image with obstacle detection overlay), `/robot_name/obst_detect_visual/bb_linelist` (bounding box of obstacle detection), `/robot_name/duckiebot_visualizer/segment_list_markers` (line segments). Add more individual topics if needed.
 
 Step 5: To drive press R1 to start lane following. Duckiebot stops if obstacle detected and in reach of the duckiebot. Removal of the obstacle should lead to continuation of lane following.  
 
