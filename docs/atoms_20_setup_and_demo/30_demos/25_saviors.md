@@ -22,7 +22,7 @@ Video will be added when framework is defined/provided. The duckiebot should sto
 
 Duckietown built to specifications. No special requirements like april-tags, traffic lights or similar needed.
 
-To demonstrate functionality, place obstacles (duckies S/M/L or cones) on driving lane.
+To demonstrate functionality, place obstacles (duckies S/M/L or cones) on driving lane. Best performance is achieved when obstacles are placed on the straights, not immediately after a curve.
 
 ## Duckiebot setup notes {#demo-saviors-duckiebot-setup}
 
