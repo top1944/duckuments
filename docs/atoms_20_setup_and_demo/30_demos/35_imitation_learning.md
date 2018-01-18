@@ -1,4 +1,4 @@
-# Imitation Learning
+# Imitation Learning {#imitation_learning}
 
 This is the description of imitation learning project demo.
 
@@ -47,7 +47,7 @@ For these instructions, clone the respository: https://github.com/ritheshkumar95
    This creates a binary file called "graph" which would be used by the inference code.
 
 
-## Demo instructions {#demo-template-run}
+## Demo instructions
 
 These are the step by step instructions to reproduce the demo.
 Clone this branch of the duckietown respository: https://github.com/duckietown/Software/tree/ritheshkumar95-project/
@@ -64,6 +64,6 @@ Step 1: On duckiebot, in /DUCKIERTOWN_ROOT/ directory, run command:
 * Press L1 to switch to joystick control.
 NOTE: Ensure wheel calibration is correct. Parameter tuning is a must. The only two parameters that can be modify are the gain and trim. The parameter pair which makes your bot go straight will unlikely work for the lane following due to the current controller design. Facts show that a gain ranging from 0.5 to 0.9, as long as paired with a suitable trim, will all work on this demo. Start with your parameter pair obtained from wheel calibration. Increase gain for higher speed. Increase trim to horizontally move the bot to the center of the lane. Decrease will do the inverse.
 
-## Troubleshooting {#demo-template-troubleshooting}
+## Troubleshooting
 
 Contact Rithesh Kumar (UdeM) via Slack if any trouble occurs.
