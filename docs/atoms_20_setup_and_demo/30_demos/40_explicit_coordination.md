@@ -36,23 +36,23 @@ To start the traffic light:
 
 * Make sure the traffic light is connected to power
 
-* From your laptop connect to wifi TrafficLight# (# corresponds to a decimal number), the password is 'Traff!cL!light'
+* From your laptop connect to wifi TrafficLight# (# corresponds to a decimal number), the password is 'Traff!cL!ght'
 
 SSH into the raspberry pi:
 
     laptop $ ssh tlo@trafficlight#.local
 
-The password is 'Traff!cL!light'
+The password is 'Traff!cL!ght'
 
 * To start the demo on the traffic light:
 
-Make sure you are on the branch new_traffic_light:
+Make sure you are on the branch new_light_traffic:
 
     $ cd ~/duckietown
 
     $ git fetch --all
 
-    $ git checkout new_traffic_light
+    $ git checkout new_light_traffic
 
 Start the demo:
 
