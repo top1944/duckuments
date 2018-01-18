@@ -28,7 +28,7 @@ The Duckietown used for this demo needs to have the following characteristics:
 No special setup is needed for the Duckiebot. If more Duckiebots are available, they should be used too since the demo is about coordination and LED emission and detection. One to four Duckiebots can be placed at an intersection.
 
 
-## Demo instructions {#demo-template-run}
+## Demo instructions {#demo-explicit-instructions}
 
 ### If there is a traffic light:
 
@@ -92,7 +92,7 @@ Wait for build to finish. Place the Duckiebot on the lane and press 'R1'. To swi
 
 
 
-## Troubleshooting {#demo-template-troubleshooting}
+## Troubleshooting {#demo-explicit-troubleshooting}
 
 * When it shows "Event:intersection_go", the Duckiebot does not move. This problem is related to AprilTags.
 
