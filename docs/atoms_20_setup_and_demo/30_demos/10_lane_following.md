@@ -16,11 +16,11 @@ Requires: [Calibrating](#wheel-calibration) the gain parameter to **0.6**.
 
 </div>
 
-## Video of expected results {#demo-template-expected}
+## Video of expected results {#demo-lane-following-expected}
 
 [Video of demo lane following](https://drive.google.com/file/d/198iythQkovbQkzY3pPeTXWC8tTCRgDwB/view?usp=sharing)
 
-## Duckietown setup notes {#demo-template-duckietown-setup}
+## Duckietown setup notes {#demo-lane-following-duckietown-setup}
 
 Assumption about Duckietown:
 
@@ -34,20 +34,20 @@ Environment of demo:
 
 * Good lightning
 
-## Duckiebot setup notes {#demo-template-duckiebot-setup}
+## Duckiebot setup notes {#demo-lane-following-duckiebot-setup}
 
 * Make sure the camera is heading ahead.
 * Duckiebot in configuration [DB17-jwd](#duckiebot-configurations)
 * [Calibrating](#wheel-calibration) the gain parameter to **0.6**.
 
 
-## Pre-flight checklist {#demo-template-pre-flight}
+## Pre-flight checklist {#demo-lane-following-pre-flight}
 
 Check: Turn on joystick.
 Check: Turn on battery of the duckiebot.
 Check: Duckiebot drives correctly with joystick.
 
-## Demo instructions {#demo-template-run}
+## Demo instructions {#demo-lane-following-run}
 
 Step 1: On duckiebot, in /DUCKIERTOWN_ROOT/ directory, run command:
 
@@ -65,7 +65,7 @@ Step 4: The Duckiebot should drive autonomously in the lane. Intersections and r
 Step 5: Stop the autonomous driving by pressing **L1** button on the joystick and switch to joystick control. 
 
 
-## Troubleshooting {#demo-template-troubleshooting}
+## Troubleshooting {#demo-lane-following-troubleshooting}
 ### The Duckiebot does not drive nicely across intersections
 This is not a valid failure. The Duckiebot assumes only normal lanes during this demo. There is no module concerning the intersections. Therefore, weird behavior at intersections is expected and normal because there are no lines. The demo is only to demonstrate the lane following.
 
@@ -110,6 +110,6 @@ Set alternative controller gains. While running the demo on the Duckiebot use th
 Those changes are only active while running the demo and need to be repeated at every start of the demo if needed. If this improved the performance of your Duckiebot, you should think about permenantly change the default values in your catkin_ws.
 
 
-## Demo failure demonstration {#demo-template-failure}
+## Demo failure demonstration {#demo-lane-following-failure}
 
 If Anti-Instagram is badly calibrated, the duckiebot will not see enough line segments. This is especially a problem in the curve and the duckiebot will leave the lane. An example of this failure can be seen in this [video](https://drive.google.com/open?id=1Hy6EjQ8QakfZliiSp_j2NV78_VpyPvCq) for which we had a bad Anti-Instagram calibration. Hence, the Duckiebot sees not enough line segments and the lane following fails in the curve. To solve the problem Anti-Instagram needs to be relaunched. In the last part of the video the **X** button on the joystick is pressed and the Anti-Instagram node gets relaunched. We can see in RVIZ that the number of detected line segments gets increased drastically after the recalibration.
