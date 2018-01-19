@@ -24,7 +24,7 @@ You need at least one duckiebot, and a duckietown.
 
 The duckiebot needs to be at least a DB17-jwd, better a DB17-jwdl.
 
-The duckietown needs to have at least one april tag visible from every intersection to allow localization. Make sure to have a description of your map available. For more infos on this see the localization package. Or this [document](https://docs.google.com/document/d/1VE2v2Yn8d4wzA8DnPuA429gYzFeV_zTX8rDFCZCKIE0/edit) document. Also don't forget to transform the csv files to the xacro format using the corresponding script from the duckietown_description package. Please note that the demo will NOT work if the duckietown description is not correct.
+The duckietown needs to have at least one april tag visible from every intersection to allow localization. Make sure to have a description of your map available. For more infos on this see the localization package. Or this [document](https://docs.google.com/document/d/1VE2v2Yn8d4wzA8DnPuA429gYzFeV_zTX8rDFCZCKIE0/edit). Also don't forget to transform the csv files to the xacro format using the corresponding script from the duckietown_description package. Please note that the demo will NOT work if the duckietown description is not correct.
 
 If you use this demo, you will have to install the fleet communication dependencies. This might take up to 40 minutes. For more, see below. 
 
