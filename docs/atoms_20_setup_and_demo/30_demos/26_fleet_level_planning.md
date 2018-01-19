@@ -67,7 +67,7 @@ From duckietown root folder:
  Prepare environment:
 
 	source environment.sh
-	source set_veh_name.sh <robot_name>
+	source set_vehicle_name.sh <robot_name>
 
 ### Step 4: rebuild using catkin
 
