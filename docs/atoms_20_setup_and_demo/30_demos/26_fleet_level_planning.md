@@ -1,4 +1,4 @@
-# Fleet planning Demo {#demo-fleet-planning status=beta}
+# Fleet planning Demo {#demo-fleet-planning}
 
 The fleet planning demo demonstrates the implemented functionality for fleet level planning. I.e. an interactive taxi service. 
 It will provide you with a GUI running on a laptop that can be used to generate transportation requests. The Duckiebots will pick up the customer at its location and bring him/her to the final destination.
@@ -18,17 +18,17 @@ Requires: Camera calibration completed.
 
 </div>
 
-## Duckietown setup notes {#demo-template-duckietown-setup}
+## Duckietown setup notes {#demo-duckietown-setup}
 
 You need at least one duckiebot, and a duckietown.
 
 The duckiebot needs to be at least a DB17-jwd, better a DB17-jwdl.
 
-The duckietown needs to have at least one april tag visible from every intersection to allow localization. Make sure to have a description of your map available. For more infos on this see the localization package. 
+The duckietown needs to have at least one april tag visible from every intersection to allow localization. Make sure to have a description of your map available. For more infos on this see the localization package. Or this [document](https://docs.google.com/document/d/1VE2v2Yn8d4wzA8DnPuA429gYzFeV_zTX8rDFCZCKIE0/edit) document. Also don't forget to transform the csv files to the xacro format using the corresponding script from the duckietown_description package. Please note that the demo will NOT work if the duckietown description is not correct.
 
 If you use this demo, you will have to install the fleet communication dependencies. This might take up to 40 minutes. For more, see below. 
 
-## Duckiebot setup notes {#demo-template-duckiebot-setup}
+## Duckiebot setup notes {#demo-duckiebot-setup}
 
 Duckiebots need to have all the dependencies installed. Use the fleet level communication setup developed by the fleet-communication team. To do this checkout the branch `devel-fleet-planning` and navigate into the folder `catkin_ws/src/30-localization-and-planning/fleet_messaging/dependencies`. Now identify the name of wlan interface on by running: `ifconfig`. It is probably named `wlan0`. The next step is to run the install script as follows: 
 
@@ -42,7 +42,7 @@ As a last step, ensure that all the duckiebots are connected to the same wifi ne
 
 For the demo to run you need one laptop that is in the same network as all the duckiebots and runs the central planning node. All duckiebots report their location to that node. With that information it plans which duckiebot picks up which customer. To receive this messages, the laptop also needs the fleet level communication setup. Perform the same steps as you just did on each duckiebot on the laptop. (I.e. follow the instruction in the "Duckiebot setup notes" section. Running the installation script takes less time on the laptop than on the duckiebot.
 
-## Pre-flight checklist {#demo-template-pre-flight}
+## Pre-flight checklist {#demo-pre-flight}
 
 Check: Duckiebots have communication dependencies installed (described above).
 
@@ -52,7 +52,7 @@ Check: All duckiebots can be ssh'ed from your laptop
 
 Check: You got popcorn and refreshments for the taxi customers
 
-## Demo instructions {#demo-template-run}
+## Demo instructions {#demo-run}
 
 
 ### Step 1:
