@@ -1,4 +1,4 @@
-#  Group name: final report {#template-final-report status=draft}
+#  Supervised Learning: final report {#template-final-report status=draft}
 
 <!--
 General notes:
