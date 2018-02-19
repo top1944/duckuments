@@ -75,7 +75,7 @@ With trim $t > 0$, the right wheel will turn slightly more than the left wheel g
 
 The parameters $g$ and $t$ were to be set manually during the wheels calibration procedure.  
 
-#### Existing Calibration Procedure
+#### Calibration Procedure
 
 The current implementation of the calibration procedure can be found in the [#wheel-calibration](#wheel-calibration) section.
 
