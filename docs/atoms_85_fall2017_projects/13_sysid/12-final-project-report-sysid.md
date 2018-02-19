@@ -202,66 +202,59 @@ Hence, we first construct a model and then we try to fit the model to the measur
 
 
 
-### Kinematics
+### Kinematic model 
 
+The Duckiebot was modeled as a symmetric rigid body, according to the following figure. 
 
-	\begin{figure}[H]
-    	\begin {center}
-    	\includegraphics [scale = 0.4] {image/kinematics.png} 
-    	\caption {Modelisation of the Duckiebot}
-	\label{kinematics}
-    	\end {center}
-    	\end {figure}
+<div figure-id="fig:mod-kin" figure-caption="Schematics of differential drive robot [](#bib:Modeling)">
+  <img src="mod-kin.png" style='width: 30em; height:auto'/>
+</div>
 	
-	Considering only the kinematics, we get the following equations for the linear and angular velocity $v_A $ and $\dot{\theta}$ of the Duckiebot : 
+Hence, Considering only the kinematics, we get the following equations for the linear and angular velocity $v_A $ and $\dot{\theta}$ of the Duckiebot : 
 	
- 	\begin{eqnarray}
-		 v_A &= \cfrac{v_r + v_l}{2}
-		 \label{vA} \\
-		 \dot{\theta} &= \cfrac{v_r - v_l}{2L}
-		\label{theta}
-    	\end{eqnarray} \\ 
-    
-	 
-	 With the assumption that the velocity of the wheels is proportional to the voltage applied on each wheel $V_l$ and $V_r$ and that there is no slipping,  we can write the following : 
-	 
-	\begin{eqnarray}
-		 v_l &= c_l \cdot V_l
-		  \label{vl} \\ 
-		 v_r &= c_r \cdot V_r
-	 	\label{vr}
-    	\end{eqnarray}
-	 
-	 Thus ~\eqref{vA} and ~\eqref{theta} can bre rewritten as : 
-	  	
-	\begin{eqnarray}
-	 	v_A &= \cfrac{c_r \cdot V_r + c_l \cdot V_l }{2}
-		 \label{vA2} \\ 
-	 	\dot{\theta} &= \cfrac{c_r \cdot V_r - c_l \cdot V_l }{2L}
-		 \label{theta2}
-	 \end{eqnarray}
-
-	With, $c_r, c_l $ and $L$, some constants to define for each duckiebot. \\ \\ 
-	
-	
-	Alternatively, we can define $c = c_r$ and $c_l = c + \Delta c$ and we get from  ~\eqref{vA3} and ~\eqref{theta3} 
-	
-	\begin{eqnarray}
-	 	v_A &= \cfrac{c \cdot (V_r +  V_l ) + \Delta c \cdot V_l}{2}
-		\label{vA3} \\ 
-	 	\dot{\theta} &= \cfrac{c \cdot (V_r - V_l ) - \Delta c \cdot V_l}{2L}
-		\label{theta3}
-	 \end{eqnarray}
-	 
-	 With this last equation, we see that it we set $ V_r = V_l$, then $ \dot{\theta} = - \cfrac{\Delta c}{2L} \cdot V_l$. 
-	 
+\begin{eqnarray}
+	 v_A &= \cfrac{v_r + v_l}{2}
+	 \label{vA} \\
+	 \dot{\theta} &= \cfrac{v_r - v_l}{2L}
+	\label{theta}
+\end{eqnarray} \\ 
 
 
+ With the assumption that the velocity of the wheels is proportional to the voltage applied on each wheel $V_l$ and $V_r$ and that there is no slipping,  we can write the following : 
+
+\begin{eqnarray}
+	 v_l &= c_l \cdot V_l
+	  \label{vl} \\ 
+	 v_r &= c_r \cdot V_r
+	\label{vr}
+\end{eqnarray}
+
+ Thus ~\eqref{vA} and ~\eqref{theta} can bre rewritten as : 
+
+\begin{eqnarray}
+	v_A &= \cfrac{c_r \cdot V_r + c_l \cdot V_l }{2}
+	 \label{vA2} \\ 
+	\dot{\theta} &= \cfrac{c_r \cdot V_r - c_l \cdot V_l }{2L}
+	 \label{theta2}
+ \end{eqnarray}
+
+With, $c_r, c_l $ and $L$, some constants to define for each duckiebot. \\ \\ 
 
 
+Alternatively, we can define $c = c_r$ and $c_l = c + \Delta c$ and we get from  ~\eqref{vA3} and ~\eqref{theta3} 
+
+\begin{eqnarray}
+	v_A &= \cfrac{c \cdot (V_r +  V_l ) + \Delta c \cdot V_l}{2}
+	\label{vA3} \\ 
+	\dot{\theta} &= \cfrac{c \cdot (V_r - V_l ) - \Delta c \cdot V_l}{2L}
+	\label{theta3}
+ \end{eqnarray}
+
+We get a kinematic model, that shows the relation between the linear and angular velocity of the Duckiebot and the voltage applied to each wheel. To have our model totally defined, we only need to calculate three parameters, namely $c $ and $\Delta c$ and $L$. 
+These three parameters will be calculated with odometry calibration.
 
 
-### General odometry formulation {#sysid-final-odometry}
+### Odometry formulation {#sysid-final-odometry}
 
 The general problem definition for the odometry is to find the most likely calibration parameters given the duckiebot model [#duckiebot-modeling](#duckiebot-modeling) and a set of discrete measurement from which the output can be estimated. [](#bib:OdometryCalibration) 
 The model of the system [](#bib:OdometryCalibration) with the notations explained in Table [](#tab:sysid-notations) can be described as :
@@ -291,69 +284,11 @@ The model $f(\cdot)$ can be a kinematic model, constrained dynamic model or more
 The pose $g(\cdot)$ can be the robot pose or the sensor pose.
 The measurements $m_k$ can be from "internal" sensors e.g. wheel encoders, IMUs etc. or from "external" sensors such as Lidar, Infrared or camera.
 
-### Typical solution: Odometry calibration with wheel encoders {#sysid-final-encoders}
 
-The most spread odometry calibration is done with $f(\cdot)$ being a kinematic model as well as using measurements from $m_k$ wheel encoders.
-A detailed describtion can be found in 
-However, the Duckiebot does not have wheel encoders. Therefore, this approach is unsuitable.
+For our project, our set of measurments was obtained thanks to the camera : we put the Duckiebot in front of a chessboard, and then we were able to derived the position of the Duckiebot at every image relative to the chessboard. 
 
+At the same time, from our kinematic model, we could estimate the position of the Duckiebot $\big( x_i, y_i\big) $ recursively with the formula : 
 
-
-
-
-
-
-
-<!-- 
-### Kinematics
-The previously defined equations \eqref{eq:V_l} and \eqref{eq:V_r} can be rewritten:
-
-\begin{align}
-    v_{a} &= \frac{c_r V_r+c_l V_l}{2}  \label{eq:v_a}     \\
-    \dot{\theta} &= \frac{c_r V_r-c_l V_l}{2L}  \label{eq:omega}
-\end{align}
-
-This can be rewritten by defining $c=c_r$ and $c_l=c+\Delta c$ and we get from \eqref{eq:v_a2} and \eqref{eq:omega2}:
-
-
-\begin{align}
-    v_{a} &= \frac{c \cdot (V_r+V_l)+\Delta c \cdot V_l}{2}  \label{eq:v_a2}     \\
-    \dot{\theta} &= \frac{c \cdot (V_r-V_l)-\Delta c \cdot V_l}{2L}  \label{eq:omega2}
-\end{align}
-
-With this last equation, we see that it we set $V_r=V_l $ , then $ θ̇ = -\frac{\Delta c}{2L} \cdot V_l$
-
-### Calibration from velocity estimation
-
-A first way of estimating the parameters is directly by trying to approximate the linear and angular velocities $v_{a_{i}}$ and $\omega_i$ (in inertial frame)of the duckiebot from the position ($d_i,\omega_i$) we get at every time $t_i$.
-By the finite difference formula:
-
-\begin{align}
-    v_{a_{i}} & = \frac{d_{i+1}-d_{i}}{T_{i+1}-T_{i}}  \label{eq:v_a_i}     \\
-    \dot{\theta}_{i}   & = \frac{\theta_{i+1}-\theta_{i}}{T_{i+1}-T_{i}}  \label{eq:omega_i}
-\end{align}
-
-Once the velocities $v_{a_{i}}$,$\dot{\theta}_{i}$ have been measured for each voltage commands $V_{l,i}$,$V_{r,i}$, we try to fit the measurements with our model, namely the equations \eqref{eq:v_a2} and \eqref{eq:omega2} at every time $t_i$.
-
-For a "straight" line $V = V_l = V_r$, and neglecting $\Delta c$ in \eqref{eq:v_a}, \eqref{eq:v_a2} and \eqref{eq:omega2} become
-
-\begin{align}
-    v_{a} &= c \cdot V  \label{eq:v_a3}     \\
-    \dot{\theta} &= \frac{-\Delta c \cdot V}{2L}  \label{eq:omega3}
-\end{align}
-
-Or:
-
-\begin{align}
-    c  &=\frac{v_{a}}{V}  \label{eq:v_a4}     \\
-   \Delta c  &= \frac{\dot{\theta}2L}{ V}  \label{eq:omega4}
-\end{align}
-
-By manually calculating the semi axis length $L$, we can directly estimate all the parameters, and therefore calibrate the Duckiebot.
-
-### Calibration from position estimation
-
-Alternatively, rather than estimating the velocity, we can estimate the position of the Duckiebot ($x_i,y_i$) recursively with the formula:
 
 \begin{align}
     x_{k+1} & = x_k+v_A \cdot cos(\theta)  \label{eq:1}     \\
@@ -369,20 +304,18 @@ Because $v_A=\frac{c_r \cdot V_r+c_l \cdot V_l}{2}$ we can express every positio
 
 By minimizing the position of the Duckiebot $x_i,y_i$ and its theoretical position given by our model $x_i,y_i$ at every time $t_i$ , we can estimate the parameters $c_r , c_l$ and $L$.
 
-We can as example use the L2-norm :
+We used the L2-norm :
 
 \begin{equation}
-    \begin{pmatrix}c_{l}^{\star}\\c_{r}^{\star}\\L^{\star}\end{pmatrix}= \underset{c_l,c_r,L}{\mathrm{argmin}}   \begin{pmatrix} x_1-\tilde{x}_1\\y_1-\tilde{y}_1\\\vdots\\x_n-\tilde{x}_n\\y_n-\tilde{y}_n\end{pmatrix}^T Q   \begin{pmatrix} x_1-\tilde{x}_1\\y_1-\tilde{y}_1\\\vdots\\x_n-\tilde{x}_n\\y_n-\tilde{y}_n\end{pmatrix}
+    \begin{pmatrix}c_{l}^{\star}\\c_{r}^{\star}\\L^{\star}\end{pmatrix}= \underset{c_l,c_r,L}{\mathrm{argmin}}   \begin{pmatrix} x_1-\tilde{x}_1\\y_1-\tilde{y}_1\\\vdots\\x_n-\tilde{x}_n\\y_n-\tilde{y}_n\end{pmatrix}^T  \begin{pmatrix} x_1-\tilde{x}_1\\y_1-\tilde{y}_1\\\vdots\\x_n-\tilde{x}_n\\y_n-\tilde{y}_n\end{pmatrix}
     
 \end{equation}
-
-With a matrix $Q$ that weights the importance of each measurement (it can be the identity matrix, if all measurements are equally weighted).
 
 
 ### Dealing with uncertainty
 
 Because our model does not take into account the dynamics of the system, and many assumptions as been made, the results we will get won’t perfectly match with the reality.
-Assuming that the states estimation $v_{a_{i}}$ and $\dot{\theta}_{i}$ is accurate enough (an hypothesis that will have to be tested)
+Assuming that the states estimation $v_{a_{i}}$ and $\dot{\theta}_{i}$ is accurate enough
 and a Gaussian distribution of the noise, we can quantify this nose by estimating its variance :
 
 
@@ -398,7 +331,7 @@ with
     \tilde{\dot{\theta}}_{A_{i}} & = \frac{c_{r}^{\star} V_{r_i}-c_{l}^{\star} V_{l_i}}{2L^{\star}}   \label{eq:thetatilde}
 \end{align}
 
--->
+
 
 
 ## Contribution / Added functionality {#sysid-final-contribution}
