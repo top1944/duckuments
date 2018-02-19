@@ -62,17 +62,7 @@ The existing model was the following :
     <s>$g$</s>  <s>Gain</s>
     <s>$t$</s>  <s>Trim</s>
     <s>$v_{A}$</s>  <s>Linear velocity of Duckiebot in bodyframe</s>
-    
-<!--
-    <s>$\theta,\dot{\theta}=\omega$</s>  <s>Vehicle orientation and angular velocity</s>
--->
-
     <s>$\omega$</s>  <s>Angular velocity</s>
-<!--    
-    <s>$c_{l,r}$</s>  <s>"Wheel" calibration parameters</s>
-    <s>$R_{l,r}$</s>  <s>Wheel radii</s>
-    <s>$k_{b_{l,r}}$</s>  <s>Motor constants</s>
---> 
     <s>$L$</s>  <s>Half of distance between the two wheels</s>
  </col2>
  
