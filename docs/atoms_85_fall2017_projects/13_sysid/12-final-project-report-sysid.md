@@ -165,7 +165,7 @@ The Duckiebot was modeled as a symmetric rigid body, according to the following 
   <img src="mod-kin.png" style='width: 30em; height:auto'/>
 </div>
 	
-Hence, Considering only the kinematics, we get the following equations for the linear and angular velocity $v_A $ and $\dot{\theta}$ of the Duckiebot : 
+Considering only the kinematics, we get the following equations for the linear and angular velocity $v_A $ and $\dot{\theta}$ of the Duckiebot : 
 	
 \begin{eqnarray}
 	 v_A &= \cfrac{v_r + v_l}{2}
