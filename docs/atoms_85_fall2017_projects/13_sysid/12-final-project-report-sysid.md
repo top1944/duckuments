@@ -49,41 +49,6 @@ Therefore, the performance of safe crossing is closely related to having well ca
 
 The existing model was the following : 
 
-
-<!--
-
-<div figure-id="fig:mod-kin" figure-caption="Schematics of differential drive robot [](#bib:Modeling)">
-  <img src="mod-kin.png" style='width: 30em; height:auto'/>
-</div>
-
-
-
-We make the following assumptions to gain a simplified relationship between input voltage and resulting left and right wheel velocities. 
-A more thorough derivation can be found in [#duckiebot-modeling](#duckiebot-modeling).
-
-\begin{align}
-    \tau(t)=\frac{K_i}{R}(V-\frac{K_b}{r}v)  \label{eq:tau}
-\end{align}
-
-At steady state $J \ddot{\varphi}=\frac{J}{r} \dot{v}=\tau-\tau_{dist}=0$. If disturbances $\tau_{dist}$ are ignored, $\Rightarrow \tau=0$.
-This leads to the following simplification:
-
-\begin{equation}
-    v_{l,r}=\frac{r_{l,r}}{K_{b_{l,r}}}V_{l,r}=c_{l,r}V_{l,r}          \label{eq:one}
-\end{equation}
-
-
-From the kinematic model it is known that the following holds true for our assumptions:
-\begin{align}
-    v_l &= (v_{A}-\omega L)       \label{eq:v_l}\\
-    v_r &= (v_{A}+\omega L)        \label{eq:v_r}
-\end{align}
-
-By defining trim $t=\frac{c-1}{c+1}$ with $c=\frac{c_{r}}{c_{l}}$ and $g=g_0=1$ the trim and gain model can be defined:  
-
---> 
-
-
 \begin{align}
     V_{l} &= (g+t)(v_{A}-\omega L)  \label{eq:V_l}     \\
     V_{r} &= (g-t)(v_{A}+\omega L)  \label{eq:V_r}
