@@ -153,7 +153,7 @@ Hence, if the results do not meet our expectations or if the Duckiebot is change
 ## Definition of the problem {#sysid-final-problem-def}
 
 The approach we chose to improve the behaviour of the Duckiebots was to derive a model with some parameters, and to identify this parameters for each Duckiebot independantely. 
-Hence, we first construct a model and then we try to fit the model to the measurement we get.
+Hence, we first construct a model and then we try to fit the model to the measurements we get.
 
 
 
