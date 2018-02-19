@@ -301,7 +301,7 @@ To reproduce the results see the  [operation manual](#demo-sysid) which includes
 
 ### Recording rosbag log of Duckiebot maneuvers
 
-Place the Duckiebot in front of the chessboard at a distance of slightly more than 1 meter in front of the checkerboard (~2 duckie tiles), as shown in the image ().. The heading has to be set iteratively to maximize the time the duckiebot sees the checkerboard.
+Place the Duckiebot in front of the chessboard at a distance of slightly more than 1 meter in front of the checkerboard (~2 duckie tiles), as shown in the image. The heading has to be set iteratively to maximize the time the duckiebot sees the checkerboard.
 
 <div figure-id="fig:calibration_setup" figure-caption="The calibration setup">
      <img src="calibration_setup.jpg" style='width: 30em'/>
@@ -310,27 +310,25 @@ Place the Duckiebot in front of the chessboard at a distance of slightly more th
 Run the calibration procedure
 
     duckiebot $ roslaunch calibration commands.launch veh:=robot name
+    
+    
+The program will publish at a frequency of 30 Hz in the topic robot_name/wheels_driver_node/wheels_cmd the following commands : 
 
-The Duckietown should go forward and then stop. 
+- A ramp (the same increasing voltage command to the right and left wheels) 
+- No command for 10 seconds (so you can replace your Duckiebot at 1 meter of the chessboard)
+- A sinusoid (a cosinus voltage command in opposite phase between the left and the right wheels)
 
-Step 5 When the Duckiebot has stopped, you have 10 seconds to replace it again at a distance of approximately 1 meters of the chessboard. Wait for the Duckiebot to move forward again.
+When the program will exit, you will have a rosbag named robot_name_calibration.bag in your USB drive containing the commands published and the images.
 
-
-Step 8: Run the calibration process with 
+You will then have to copy on your computer the rosbag that has been taken during the maneuvers and run the calibration process with the following command :
 
     laptop $ roslaunch calibration calibration.launch veh:=robot name  path:=/absolute/path/to/the/rosbag/folder/
     
-(path example: path:=/home/user_name/sysid/) Do not forget the backslash at the end of the path.(Common mistake: path not starting from /home, forgetting the last / in the path)
+(path example: path:=/home/user_name/sysid/)
 
-Step 9: Once the command has finished, the parameters of your Duckiebot are stored in the folder
+Once the command has finished, the parameters of your Duckiebot are stored in the folder
 
     ![DUCKIEFLEET_ROOT]/calibrations/kinematics/![robot name].yaml
-    
-Step 10: Push the duckiefleet changes to git and pull from the duckiebot
-
-
-
-
 
 
 ### Pose estimation w.r.t. chessboard
