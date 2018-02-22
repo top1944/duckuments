@@ -311,3 +311,7 @@ Fourth, reboot your PI.
     duckiebot $ sudo reboot
 
 Then everything shall be fine. The PI will connect to "eth" automatically everytime it starts. 
+
+Note that, if something went wrong, your Duckiebot tries to connect to the network for 5.5mins at startup while it's blocking SSH connection to it completely ("Connection refused" error when connecting). If this is the case, please wait those 5.5mins until your Duckiebot lets you connect again and recheck your settings. 
+
+TODO: Find a solution to this since it occurs very often
