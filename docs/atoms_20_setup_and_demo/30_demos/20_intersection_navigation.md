@@ -18,7 +18,7 @@ Requires: Duckietown Version 2.0.
 
 This video shows what you should get:
 
-
+<iframe width="420" height="315" src="https://www.youtube.com/watch?v=x2rPmNqhteo&feature=youtu.be" frameborder="0" allowfullscreen></iframe>
 
 ## Duckietown setup notes {#demo-template-duckietown-setup}
 
