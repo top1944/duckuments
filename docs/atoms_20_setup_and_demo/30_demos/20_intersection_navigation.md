@@ -18,6 +18,8 @@ Requires: Duckietown Version 2.0.
 
 This video shows what you should get:
 
+
+
 ## Duckietown setup notes {#demo-template-duckietown-setup}
 
 * Layout: Duckietown Version 2.0 with at least 1 intersection tile (4- or 3-way)
@@ -77,7 +79,7 @@ source environment.sh
 ```
 
 ``` 
-roslaunch intersection_navigation intersection_navigation_node.launch veh:=![robot_name]
+make demo-intersection-navigation
 ```
 
 If you want to **visualize** what happens at the intersection when the template is matched, just follow these steps simultaneously with Step 3.
