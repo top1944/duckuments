@@ -1,8 +1,10 @@
 # Duckietown Appearance Specification {#duckietown-specs status=beta}
 
-Assigned: Liam
+This document describes the Duckietown specification. These are a set of rules for which a functional system has been verified.
 
-This document describes the Duckietown specification. Any Duckietown not adhering to the rules described here cannot call itself a "Duckietown", since it is not one. Additionally, any Duckietown not adhering to these rules may cause the Duckiebots to fail in unexpected ways. These are a set of rules for which a functional system has been verified.
+Any Duckietown not adhering to the rules described here cannot call itself a "Duckietown", since it is not one.
+
+Additionally, any Duckietown not adhering to these rules may cause the Duckiebots to fail in unexpected ways.
 
 ## Version history
 
@@ -11,7 +13,7 @@ the different Duckietowns.
 
 * Version 1.0 - used for MIT 2.166
 
-* Version 2.0 - current version
+* Version 2.0 - user for Fall 2017
 
 ## Overview
 
@@ -27,24 +29,42 @@ Note: the visual appearance of the area where the Duckietown is created is varia
 
 Each tile is a 2 ft x 2 ft square and is able to interlock with the others.
 
-There are five primary types of tiles, as shown in [](#fig:tiles)
+There are six types of tiles, as shown in [](#fig:tiles).
+Currently, the left turn and right turn tiles are symmetric: one is the 90 degree rotation of the other.
+
 
 <div figure-id="fig:tiles" figure-class="flow-subfigures" figure-caption="The principal tile types in Duckietown">
-    <div figure-id="subfig:straight" figure-caption="Straight tile">
-        <img src="straight_tile2.png" style='width: 20ex'/>
+    <div figure-id="subfig:straight" figure-caption="DT17_tile_straight">
+        <img src="DT17_tile_straight-texture.png" style='width: 20ex'/>
     </div>
-    <div figure-id="subfig:turn" figure-caption="Turn tile">
-        <img src="90turntile.png" style='width: 20ex'/>
+    <div figure-id="subfig:DT17_tile_curve_left" figure-caption="DT17_tile_curve_left">
+        <img src="DT17_tile_curve_left-texture.png" style='width: 20ex'/>
     </div>
-    <div figure-id="subfig:3-way" figure-caption="3-way intersection tile">
-        <img src="3way_tile.png" style='width: 20ex'/>
+    <div figure-id="subfig:DT17_tile_curve_right" figure-caption="DT17_tile_curve_right">
+        <img src="DT17_tile_curve_right-texture.png" style='width: 20ex'/>
     </div>
-    <div figure-id="subfig:4-way" figure-caption="4-way intersection tile">
-        <img src="4way_tile.png" style='width: 20ex'/>
+    <div figure-id="subfig:DT17_tile_three_way_center" figure-caption="DT17_tile_three_way_center">
+        <img src="DT17_tile_three_way_center-texture.png" style='width: 20ex'/>
     </div>
-    <div figure-id="subfig:empty" figure-caption="Empty tile">
-        <img src="empty_tile.png" style='width: 20ex'/>
+    <div figure-id="subfig:DT17_tile_four_way_center" figure-caption="DT17_tile_four_way_center">
+        <img src="DT17_tile_four_way_center-texture.png" style='width: 20ex'/>
     </div>
+    <div figure-id="subfig:DT17_tile_empty" figure-caption="DT17_tile_empty">
+        <img src="DT17_tile_empty-texture.png" style='width: 20ex'/>
+    </div>
+</div>
+
+
+<div figure-id="fig:DT17_map_loop3" figure-caption="A 3 by 3 loop (DT17_map_loop3)">
+    <img src="DT17_map_loop3-texture.png" style='width: 8cm'/>
+</div>
+
+
+<div figure-id="fig:DT17_usage_four_way" figure-caption="Four way intersection usage">
+    <img src="DT17_usage_four_way-texture.png" style='width: 8cm'/>
+</div>
+<div figure-id="fig:DT17_usage_three_way" figure-caption="Three way intersection usage">
+    <img src="DT17_usage_three_way-texture.png" style='width: 8cm'/>
 </div>
 
 
@@ -62,7 +82,7 @@ Here are some facts about the white tapes:
 
 * White tapes must be solid (not dashed)
 
-* The width of the white tape is 1 inch.
+* The width of the white tape is 2 inches (5.08 cm).
 
 * The white tape is always placed on the right hand side of a lane. We assume that the Duckiebots drive on the right hand side of the road.
 
@@ -86,10 +106,6 @@ Yellow tapes on curves: see curved road image in white tape section, pieces at t
 Red tapes MAY **only** appear on **intersection** tiles.
 
 The red tape must be the full width of the duck tape roll and should cross the entire lane perpendicular to the lane.
-
-Comment: what is the width of the roll? 1 in? - AC
-
-Comment: Red and White rolls have a 2 inch thickness. Yellow is 1 inch wide. -JT
 
 The placement of red tape should always be **under** yellow and white tape.
 
