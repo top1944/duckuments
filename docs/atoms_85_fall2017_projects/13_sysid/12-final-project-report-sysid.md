@@ -24,9 +24,9 @@ The Duckiebot is in a differential-drive configuration. It actuates each wheel w
   <img src="model.PNG" style='width: 30em; height:auto'/>
 </div>
 
-A mathematical model for a differential drive robot is derived in chapter [#duckiebot-modeling](#duckiebot-modeling). This model can be used to provide a simple method of maintaining an individual’s position or velocity estimate in the absence of computationally expensive position updates from external sources such as the mounted camera.
+A mathematical model for a differential drive robot will be derived. This model can be used to provide a simple method of maintaining an individual’s position or velocity estimate in the absence of computationally expensive position updates from external sources such as the mounted camera.
 
-The derived non-linear model describes the expected output of the pose (e.g. position, velocity) w.r.t. a fixed inertial frame for a certain voltage input. The model makes several assumptions, such as rigid body motion, symmetry, pure rolling and no lateral slipping. Most important of all, the model assumes the knowledge of certain constants that characterize the DC motors as well as the robot’s geometry.
+The derived model describes the expected output of the pose (e.g. position, velocity) w.r.t. a fixed inertial frame for a certain voltage input. The model makes several assumptions, such as rigid body motion, symmetry, pure rolling and no lateral slipping. Most important of all, the model assumes the knowledge of certain constants that characterize the DC motors as well as the robot’s geometry.
 
 However, there will never be two duckiebots that show exactly the same behavior. This can be very problematic. 
 You might have noticed that your vehicle doesn’t really go in a straight line when you command it to. 
