@@ -24,22 +24,21 @@ The Duckiebot is in a differential-drive configuration. It actuates each wheel w
   <img src="model.PNG" style='width: 30em; height:auto'/>
 </div>
 
-A model for a differential drive robot is derived in section in chapter [#duckiebot-modeling](#duckiebot-modeling). This model can be used to provide a simple method of maintaining an individual’s position or velocity estimate in the absence of computationally expensive position updates from external sources such as the mounted camera.
+A mathematical model for a differential drive robot is derived in chapter [#duckiebot-modeling](#duckiebot-modeling). This model can be used to provide a simple method of maintaining an individual’s position or velocity estimate in the absence of computationally expensive position updates from external sources such as the mounted camera.
 
-The derived non-linear model describes the expected output of the pose (e.g. position, velocity) w.r.t. a fixed inertial frame for a certain voltage input. The model makes several assumptions, such as rigid body motion, symmetry, pure rolling and no lateral slipping.
-
-Most important of all, the model assumes the knowledge of certain constants that characterize the DC motors as well as the robot’s geometry.
+The derived non-linear model describes the expected output of the pose (e.g. position, velocity) w.r.t. a fixed inertial frame for a certain voltage input. The model makes several assumptions, such as rigid body motion, symmetry, pure rolling and no lateral slipping. Most important of all, the model assumes the knowledge of certain constants that characterize the DC motors as well as the robot’s geometry.
 
 However, there will never be two duckiebots that show exactly the same behavior. This can be very problematic. 
 You might have noticed that your vehicle doesn’t really go in a straight line when you command it to. 
 For example, when the same voltage is supplied to each motor, the Duckiebot will not go straight as might expected. 
 Also, the vehicle might not go at the velocity you are commanding it to drive at.
-Therefore, these constants needs to be identified individually for each single robot. The determination process to do so is called system identification. 
-Odometry calibration is the process of determining model parameter to “match” predicted motion and measurements. For the duckiebot odometry calibration is the process aimed at identifying the kinematic parameters used to reconstruct the robot’s absolute configuration from the given voltage input. 
+
+Therefore, these constants needs to be identified individually for each single robot. The determination process to do so is called system identification. This can be done by odometry calibration : we determine the model parameter by finding the parameters that fit best some measurements of the position we can get. 
+
+Hence, when these kinematic parameters are defined, we are able to reconstruct the robot’s velocity from the given voltage input.
 
 Increasing the accuracy of the Duckiebot’s odometry will result in reduced operation cost as the robot requires fewer absolute positioning updates with the camera.
-When the duckiebot crossing an intersection forward kinematics is used. 
-Therefore, the performance of safe crossing is closely related to having well calibrated odometry parameters.
+When the duckiebot is crossing an intersection forward kinematics is used. Therefore, the performance of safe crossing is closely related to having well calibrated odometry parameters.
 
 
 ### Existing solution {#sysid-final-literature}
@@ -47,7 +46,7 @@ Therefore, the performance of safe crossing is closely related to having well ca
 
 #### Forward Kinematics
 
-The existing model was the following : 
+The existing mathematical model was the following : 
 
 \begin{align}
     V_{l} &= (g+t)(v_{A}-\omega L)  \label{eq:V_l}     \\
@@ -57,7 +56,7 @@ The existing model was the following :
 
 <div markdown="1">
 
- <col2 id='sysid-notations2' figure-id="tab:sysid-notations2" figure-caption="Notations for odometry calibration a differential drive robot">
+ <col2 id='sysid-notationsExistingModel' figure-id="tab:sysid-notationsExistingModel" figure-caption="Notations for the existing model of the differential drive robot">
     <s>$V_{l,r}$</s>  <s>Voltage to left/right motors</s>
     <s>$g$</s>  <s>Gain</s>
     <s>$t$</s>  <s>Trim</s>
@@ -79,7 +78,7 @@ The parameters $g$ and $t$ were to be set manually during the wheels calibration
 
 The current implementation of the calibration procedure can be found in the [#wheel-calibration](#wheel-calibration) section.
 
-Hereby, the Duckiebot is placed on a line(e.g. tape). Afterwards the joystick demo is launched with the following command:
+Hereby, the Duckiebot is placed on a line (e.g. tape). Afterwards the joystick demo is launched with the following command:
 
     duckiebot: $ roslaunch duckietown_demos joystick.launch veh:=${VEHICLE_NAME}
 
@@ -95,7 +94,6 @@ the Duckiebot drifted ([](#fig:wheel_calibration_lr_drift)).
 
 If the Duckiebot drifted to the left side of the tape, decrease the value of $t$, for example:
 
-
     duckiebot: $ rosservice call /${VEHICLE_NAME}/inverse_kinematics_node/set_trim -- 0.01
 
 Or Changing the trim in a negative way, e.g. to -0.01:
@@ -107,7 +105,9 @@ The speed of the duckiebot can be adjusted by setting the gain:
 
     duckiebot: $ rosservice call /${VEHICLE_NAME}/inverse_kinematics_node/set_gain -- 1.1
 
-The parameters of the Duckiebot are saved in the duckietown/config/baseline/calibration/kinematics/{VEHICLE_NAME}.yaml file.
+The parameters of the Duckiebot are saved in the file
+
+    duckietown/config/baseline/calibration/kinematics/{VEHICLE_NAME}.yaml
 
 ### Opportunity {#sysid-final-opportunity}
 
@@ -136,10 +136,10 @@ There were several possible approaches discussed to overcome the shortcomings of
     * Reconstruct dynamics from blurred images
 
 Because we needed to have very precise measurments of the Duckiebot's position, the localization based calibration has been chosen. To simplify the calibration procedures, we decided also to use the same chessboard as for the camera calibration.
-But since the computational power needed for detecting the chessboard was big, we chose to do the chessboard detection on the laptop.
+But since the computational power needed for detecting the chessboard was big, we had to do the chessboard detection on the laptop.
 
 We also kept a kynematic model, without including any dynamic and made some assumptions about the physics of the Duckiebot: the wheels do not slip and the velocity of the wheels is proportional to the voltage applied. 
-Hence, if the results do not meet our expectations or if the Duckiebot is changed, the model can aslo be changed or it can be made more complex. 
+Hence, if the results do not meet our expectations or if the Duckiebot's configuration is changed, the model can also be changed or it can be made more complex. 
 
 
 ### Preliminaries {#sysid-final-preliminaries}
@@ -149,11 +149,10 @@ Hence, if the results do not meet our expectations or if the Duckiebot is change
 * Pinhole-camera model [#camera-geometry](#camera-geometry)
 
 
-
 ## Definition of the problem {#sysid-final-problem-def}
 
 The approach we chose to improve the behaviour of the Duckiebots was to derive a model with some parameters, and to identify this parameters for each Duckiebot independantely. 
-Hence, we first construct a model and then we try to fit the model to the measurements we get.
+Hence, we first construct a theoretical model and then we try to fit the model to the measurements of the position we get from the camera and the chessboard.
 
 
 
@@ -164,48 +163,48 @@ The Duckiebot was modeled as a symmetric rigid body, according to the following 
 <div figure-id="fig:mod-kin" figure-caption="Schematics of differential drive robot [](#bib:Modeling)">
   <img src="mod-kin.png" style='width: 30em; height:auto'/>
 </div>
-	
+
 Considering only the kinematics, we get the following equations for the linear and angular velocity $v_A $ and $\dot{\theta}$ of the Duckiebot : 
-	
-\begin{eqnarray}
-	 v_A &= \cfrac{v_r + v_l}{2}
-	 \label{vA} \\
-	 \dot{\theta} &= \cfrac{v_r - v_l}{2L}
-	\label{theta}
-\end{eqnarray} \\ 
+
+\begin{align}
+    v_A &= \cfrac{v_r + v_l}{2}
+    \label{vA} \\
+    \dot{\theta} &= \cfrac{v_r - v_l}{2L}
+    \label{theta}
+\end{align} 
 
 
- With the assumption that the velocity of the wheels is proportional to the voltage applied on each wheel $V_l$ and $V_r$ and that there is no slipping,  we can write the following : 
+With the assumption that the velocity of the wheels is proportional to the voltage applied on each wheel $V_l$ and $V_r$ and that there is no slipping,  we can write the following : 
 
-\begin{eqnarray}
-	 v_l &= c_l \cdot V_l
-	  \label{vl} \\ 
-	 v_r &= c_r \cdot V_r
-	\label{vr}
-\end{eqnarray}
+\begin{align}
+    v_l &= c_l \cdot V_l
+    \label{vl} \\ 
+    v_r &= c_r \cdot V_r
+    \label{vr}
+\end{align}
 
- Thus ~\eqref{vA} and ~\eqref{theta} can bre rewritten as : 
+ Thus the above equations can bre rewritten as : 
 
-\begin{eqnarray}
-	v_A &= \cfrac{c_r \cdot V_r + c_l \cdot V_l }{2}
-	 \label{vA2} \\ 
-	\dot{\theta} &= \cfrac{c_r \cdot V_r - c_l \cdot V_l }{2L}
-	 \label{theta2}
- \end{eqnarray}
+\begin{align}
+    v_A &= \cfrac{c_r \cdot V_r + c_l \cdot V_l }{2}
+    \label{vA2} \\ 
+    \dot{\theta} &= \cfrac{c_r \cdot V_r - c_l \cdot V_l }{2L}
+    \label{theta2}
+ \end{align}
 
-With, $c_r, c_l $ and $L$, some constants to define for each duckiebot. \\ \\ 
+With, $c_r, c_l $ and $L$, some constants to define for each duckiebot. 
 
 
-Alternatively, we can define $c = c_r$ and $c_l = c + \Delta c$ and we get from  ~\eqref{vA3} and ~\eqref{theta3} 
+Alternatively, we can define $c = c_r$ and $c_l = c + \Delta c$ and we get : 
 
-\begin{eqnarray}
-	v_A &= \cfrac{c \cdot (V_r +  V_l ) + \Delta c \cdot V_l}{2}
-	\label{vA3} \\ 
-	\dot{\theta} &= \cfrac{c \cdot (V_r - V_l ) - \Delta c \cdot V_l}{2L}
-	\label{theta3}
- \end{eqnarray}
+\begin{align}
+    v_A &= \cfrac{c \cdot (V_r +  V_l ) + \Delta c \cdot V_l}{2}
+    \label{vA3} \\ 
+    \dot{\theta} &= \cfrac{c \cdot (V_r - V_l ) - \Delta c \cdot V_l}{2L}
+    \label{theta3}
+\end{align}
 
-We get a kinematic model, that shows the relation between the linear and angular velocity of the Duckiebot and the voltage applied to each wheel. To have our model totally defined, we only need to calculate three parameters, namely $c $ and $\Delta c$ and $L$. 
+We get a kinematic model, that shows the relation between the linear and angular velocity of the Duckiebot and the voltage applied to each wheel. To have our model totally defined, we only need to calculate three parameters, namely $c $, $\Delta c$ and $L$. 
 These three parameters will be calculated with odometry calibration.
 
 
@@ -217,8 +216,8 @@ The model of the system [](#bib:OdometryCalibration) with the notations explaine
 \begin{align}
     \dot{x} &= f(p;x,u)       \label{eq:model1} \\
       y & = g(x)       \label{eq:model2} \\
-      \mathcal{M}_{n} & = \{ m_k=m(t_k), t_1 < \dots < t_k < \dots < t_n)\}     \label{eq:measurements} \\
-      \hat{\mathcal{Y}}_{n} & = \{ \hat{y}_{k}=h(m_k),k=1, \dots ,n \}             \label{eq:outputestimates}
+      \mathcal{M} & = \{ m_k=m(t_k), t_1 < \dots < t_k < \dots < t_n)\}     \label{eq:measurements} \\
+      \hat{\mathcal{Y}} & = \{ \hat{y}_{k}=h(m_k),k=1, \dots ,n \}             \label{eq:outputestimates}
 \end{align}
 
 
@@ -227,9 +226,9 @@ The model of the system [](#bib:OdometryCalibration) with the notations explaine
     <s>$p$</s>  <s>Calibration Parameters</s>
     <s>$f(\cdot)$</s>  <s>Model </s>
     <s>$g(\cdot)$</s>  <s>Pose </s>
-    <s>$\mathcal{M}_{n}$</s>  <s>Set of discrete measurements</s>
+    <s>$ \mathcal{M} $</s>  <s>Set of discrete measurements</s>
     <s>$m_k$</s>  <s>Measurements (not necessarily evenly space in time)</s>
-    <s>$\hat{\mathcal{Y}}_{n}$</s>  <s>Set of output estimates</s>
+    <s>$\hat{\mathcal{Y}}$</s>  <s>Set of output estimates</s>
 
  </col2>
 </div>
@@ -240,7 +239,7 @@ The pose $g(\cdot)$ can be the robot pose or the sensor pose.
 The measurements $m_k$ can be from "internal" sensors e.g. wheel encoders, IMUs etc. or from "external" sensors such as Lidar, Infrared or camera.
 
 
-For our project, our set of measurments was obtained thanks to the camera : we put the Duckiebot in front of a chessboard, and then we were able to derived the position of the Duckiebot at every image relative to the chessboard. 
+For our project, our set of measurments was obtained thanks to the camera : we put the Duckiebot in front of a chessboard, and then we were able to derive the position of the Duckiebot at every image relative to the chessboard $\big( \hat{x}_i, \hat{y}_i \big) $. 
 
 At the same time, from our kinematic model, we could estimate the position of the Duckiebot $\big( x_i, y_i\big) $ recursively with the formula : 
 
@@ -261,10 +260,10 @@ By minimizing the position of the Duckiebot $x_i,y_i$ and its theoretical positi
 
 We used the L2-norm :
 
-\begin{equation}
-    \begin{pmatrix}c_{l}^{\star}\\c_{r}^{\star}\\L^{\star}\end{pmatrix}= \underset{c_l,c_r,L}{\mathrm{argmin}}   \begin{pmatrix} x_1-\tilde{x}_1\\y_1-\tilde{y}_1\\\vdots\\x_n-\tilde{x}_n\\y_n-\tilde{y}_n\end{pmatrix}^T  \begin{pmatrix} x_1-\tilde{x}_1\\y_1-\tilde{y}_1\\\vdots\\x_n-\tilde{x}_n\\y_n-\tilde{y}_n\end{pmatrix}
+\begin{align}
+    \begin{pmatrix}c_{l}^{\star}\\c_{r}^{\star}\\L^{\star}\end{pmatrix}= \underset{c_l,c_r,L}{\mathrm{argmin}}   \begin{pmatrix} x_1-\hat{x}_1\\y_1-\hat{y}_1\\\vdots\\x_n-\hat{x}_n\\y_n-\hat{y}_n\end{pmatrix}^T  \begin{pmatrix} x_1-\hat{x}_1\\y_1-\hat{y}_1\\\vdots\\x_n-\hat{x}_n\\y_n-\hat{y}_n\end{pmatrix}
     
-\end{equation}
+\end{align}
 
 
 ### Dealing with uncertainty
@@ -293,7 +292,7 @@ with
 
 The calibration procedure consists of two parts:
 
-* Recording rosbag for different duckiebot maneuvers in front of chess board
+* Recording Rosbag for different Duckiebot maneuvers in front of a chessboard
 
 * Offline processing of rosbag to find odometry parameters with fit
 
@@ -301,22 +300,45 @@ To reproduce the results see the  [operation manual](#demo-sysid) which includes
 
 ### Recording rosbag log of Duckiebot maneuvers
 
-Place the Duckiebot in front of the chessboard at a distance of slightly more than 1 meter in front of the checkerboard (~2 duckie tiles), as shown in the image. The heading has to be set iteratively to maximize the time the duckiebot sees the checkerboard.
+For recording the Rosbag, the Duckiebot has to be placed in front of the chessboard at a distance of slightly more than 1 meter in front of the chessboard (~2 duckie tiles), as shown in the image. The heading has to be set iteratively to maximize the time the Duckiebot sees the chessboard.
 
 <div figure-id="fig:calibration_setup" figure-caption="The calibration setup">
      <img src="calibration_setup.jpg" style='width: 30em'/>
 </div>
 
-Run the calibration procedure
+You then have to run the calibration procedure
 
     duckiebot $ roslaunch calibration commands.launch veh:=robot name
     
     
 The program will publish at a frequency of 30 Hz in the topic robot_name/wheels_driver_node/wheels_cmd the following commands : 
 
-- A ramp (the same increasing voltage command to the right and left wheels) 
+- A ramp (the same increasing voltage command to the right and left wheels), of the form 
+
+$V_l = V_r = V_{fin} \cdot \cfrac{N}{N_{step}}$
+
 - No command for 10 seconds (so you can replace your Duckiebot at 1 meter of the chessboard)
-- A sinusoid (a cosinus voltage command in opposite phase between the left and the right wheels)
+- A sinusoid (a cosinus voltage command in opposite phase between the left and the right wheels) of the form
+
+$V_l = k_1 + k_2 \cdot \cos(\omega \cdot t)$
+
+$V_r = k_1 - k_2 \cdot \cos(\omega \cdot t)$
+
+
+<div markdown="1">
+ <col2 id='sysid-notationsCommands' figure-id="tab:sysid-notationsCommands" figure-caption="Notations for the voltage commands sent">
+    <s>$V_l, V_r$</s>  <s>The voltages applied to the left and right wheel</s>
+    <s>$V_{fin}$</s>  <s>The ramp's final voltage applied</s>
+    <s>$N_{step}$</s>  <s>The number of steps of the ramp</s>
+    <s>$N$</s>  <s>The number of the current step (that goes from $0$ to $N_{step}$ at a frequency of 30 Hz)</s>
+    <s>$k_1, k_2$</s>  <s>The gains for the sinusoid command</s>
+    <s>$\omega$</s>  <s>The angular velocity of the sinusoid command</s>
+    <s>$t$</s>  <s>The time of the voltage signal</s>
+ </col2>
+</div>
+
+
+All these parameters can be modified if the chessboard does not stay in the field of view of the camera long enough during the calibration procedure. 
 
 When the program will exit, you will have a rosbag named robot_name_calibration.bag in your USB drive containing the commands published and the images.
 
@@ -402,29 +424,17 @@ The yaw $\theta$ can then be extracted from $R^{I}_{veh}$ with the implemented r
 The resulting translation can be extracted from $t_{I Veh}$
 
 
-
-### Extract Duckiebot pose w.r.t chessboard from successive image recorded in rosbag
-
-
-
-
 ### Fit
 
+Finally the kinematic calibration parameters are found by an optimization. With the recorded commands and the kinematic model of the duckiebot velocities are predicted. A simple forward Euler integration gives us the position x, y and heading. This is compared to the measured positions and headings during all the times the checkerboard was detected. A nonlinear optimizer is used with a least squares objective on the error between the prediction and the measurement. The results are the kinematic calibration parameters gain, baseline and trim which best explain the driven trajectories during the calibration runs.
+
+In order to keep track of missing measurements, the optimization is resampled to a constant sampling time which is equivalent to the frame rate. Keeping track of the timestamps of the control input and the recorded images allows us to "bridge the gap" if in some or even many pictures the checkerboard was not detected. The position prediction is done at every timestep but it is only compared to the measurement at the timesteps where measurements actually exist.
 
 
 
 ## Formal performance evaluation / Results {#sysid-final-formal}
 
-### Plan for Performance evaluation
-
-** Pose estimation w.r.t. chessboard from successive images**  :
-
-
-Run the Validation: Duckiebot should first drive straight for 1m (in 5s) then turn a full circle to the left (in 8s) and then a full circle to the right (in 8s)
-
-    duckiebot $ roslaunch calibration test.launch
-
-known issue: the baseline is rather overestimated at the moment, thus the duckiebot will probably turn more than a circle
+### Performance evaluation
 
 ** Offset in straight line **  :
 
@@ -434,6 +444,35 @@ We will let the Duckiebot drive straight in open loop and measure its offset aft
 
 We will will drive the Duckiebot with a constant velocity $ v_a $ and constant angular velocity $ \dot \omega $ in open loop on a Duckietown corner tile. We will compare the actual path with the desired path. This is done both clock and counterclockwise. The performance metric will be the absolute position offset of the expected to the actual terminal position after the run, measured with a ruler.
 
+
+** Overall User friendliness **
+
+This is a quantitative test. The overall calibration procedure will have to be as simple and short as possible for the user. 
+
+
+### Results
+
+The two first tests have been made thanks to the following command line : 
+
+    duckiebot $ roslaunch calibration test.launch
+
+During this validation test, the Duckiebot should first drive straight for 1m (in 5s) then turn a full circle to the left (in 8s) and then a full circle to the right (in 8s). Both circles have a diameter of 50 cm. 
+
+
+In general, the Duckiebot is able to go straight relatively precisely : on average the Duckiebot stops its 1 meter run with a precision of more or less 6 cm and drifts for approximately 4 cm. 
+
+For the circles, the results are less precise : when the Duckiebot closes the circle, it has an deviation of around 10 cm. This could be due to the limited length and amplitude of the sine steer manouver, which often results in the prediction fitting it better if it assumes less yaw movement, leading to a larger predicted baseline.
+
+This large error also suggest that our kinematic model is not sufficient enough to capture precisely the movement of the Duckiebot. One should build a model that perhaps takes into account some dynamic or develop a more complex model of the wheels. In this project, we have made the assumption that they don’t slip which appear to be not the case especially when the Duckiebot turns. 
+
+An other source of error could come from our measurements : when the Duckiebot runs the sinusoidal maneuvers, its position gets more noisy and hence the position estimation becomes less precise. Other methods of localization should be tried. 
+
+During the calibration, if it is clearly visible in the plots that the predicted movement does not match the measurments or if the duckiebot almost doesn't turn during the sine steer experiment, the amplitude of the sine command can be changed in the launch file for the calibration runs. Otherwise, the baseline can be adjusted manually in order to achieve approximately a full circle during the test.
+
+Nevertheless, the drift when the Duckiebot goes straight is tolerable, and for this movement our model and the measurements taken are sufficient. 
+
+
+
 ** Overall User friendliness ** : 
 
 <div figure-id="fig:demo">
@@ -442,29 +481,19 @@ We will will drive the Duckiebot with a constant velocity $ v_a $ and constant a
     <dtvideo src='vimeo:251383652'/>
 </div>
 
-
-
-The current calibration is done offline. USB stick etc. 
-Of course, this can be improved in future efforts.=> Future make online
-
-
-
-** Integration test  **
-show that intersection crossing is more reliable with sysid
-
-
-When the duckiebot crossing an intersection forward kinematics is used. 
-Therefore, the performance of safe crossing is closely related to having well calibrated odometry parameters.
+Thanks to the odometry calibration, the user has only to place its Duckiebot in front of the chessboard and type a command. But because of computational power restrictions, he has then to transfer the Rosbag from the Duckiebot to its computer before launching the calibration and then sending the calibration file to its Duckiebot again. These manipulations are not straightforward and should be improved in the future. 
 
 
 ## Future avenues of development {#sysid-final-next-steps}
 
-* Simultaneous odometry and camera calibration
-
-* Position estimation based on april tags
+* Dynamic model of the Duckiebot
+    * Since the kinematic model seem to be insufficient for the rotation, a dynamic model should be developed. 
 
 * Caster wheel identification
-    * Initial aim was to include the kinematics of the caster wheel, however due to time constraint, we sticked to the roller wheel
-    
-* Dynamic model of the Duckiebot
+    * The initial aim was to include the kinematics of the caster wheel, however due to time constraint, we sticked to the roller wheel.
 
+* Position estimation based on april tags
+    * Because of noisy position measurements with the chessboard, some other methods could be used, as the april tags. It could even be possible to put several april tags on a track, so that we do not have to replace the Duckietown at the beginning of the track after each movement. 
+
+* Simultaneous odometry and camera calibration
+    * To take even more the human out of the loop, a automatic camera and odometery calibration could be implemented
