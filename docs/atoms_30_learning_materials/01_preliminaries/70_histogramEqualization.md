@@ -1,4 +1,4 @@
-# Histogram Equalization {#preliminaries-histogram-equalization}
+# Histogram Equalization {#preliminaries-histogram-equalization status=draft}
 This text will talk about histograms used for image analysis.
 ## Motivation
 Histogram Equalization can be used for contrast adjustment. For example when a gray scale picture has all values around one value the contrast mathematical difference between different pixels is in general really low. But with histogram equalization the colors are kind of normalized such that the difference and the therefore the contrast of a gray scale picture is increased.
@@ -15,7 +15,7 @@ Since through the red light every pixel is distorted by a certain added red ligh
 
 <center>
 <figure>
-<img src="/images/histogram1.png" alt="kMeans working" style="width: 350px;"/>
+<img src="histogram1.png" alt="kMeans working" style="width: 350px;"/>
 <figcaption> Distorted histogram </figcaption>
 </figure>
 </center>
@@ -29,7 +29,7 @@ So if we want to fix that problem we could equalize this histogram.
 The optimal idea is illustrated in the following picture:
 <center>
 <figure>
-<img src="/images/histogramequalization.png" alt="kMeans working" style="width: 250px;"/>
+<img src="histogramequalization.png" alt="kMeans working" style="width: 250px;"/>
 <figcaption> Basic idea </figcaption>
 </figure>
 </center>
@@ -44,7 +44,7 @@ To get to this flat shaped histogram one can follow the algorithm described here
 
 <center>
 <figure>
-<img src="/images/histogram2.png" alt="kMeans working" style="width: 350px;"/>
+<img src="histogram2.png" alt="kMeans working" style="width: 350px;"/>
 <figcaption> Equalized histogram </figcaption>
 </figure>
 </center>
@@ -56,4 +56,4 @@ Histogram equalization is rather unproblematic in single channel images like gra
 This can lead to unexpected and unwanted behavior.  
 A good idea to solve this problem is to use for example HSL instead of RGB space since you could equalize only luminance there. This would not change any hue or saturation value and provide a good white balance. HSV or LAB could be considered as well.
 
-[ [source] ](http://ieeexplore.ieee.org/document/1257395/?reload=true&arnumber=1257395)
+[ [source] ](http://ieeexplore.ieee.org/document/1257395/?reload=true&amp;arnumber=1257395)
