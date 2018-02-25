@@ -1,4 +1,4 @@
-# Convex optimization {#preliminaries-convex-optimization status=draft}
+# Convex optimization {#preliminaries-convex-optimization status=beta}
 
 Convex optimization is a minimization technique where one optimizes a convex function over convex sets.  
 In the following few lines we'll talk about the standard form of convex optimization.  

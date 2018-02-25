@@ -34,6 +34,13 @@ If the line instead reads the following, please manually change the code to the 
 
       Scalar() : Scalar(0L) {}
 
+EDIT:
+As of 22nd January, 2018: the file Scalar.h is in pytorch/aten/src/ATen/Scalar.h; Line 24
+In case, this changes in the future, use the command to find random phrases in the files:
+
+      grep -rn . -e 'Scalar() : Scalar(int64_t(0))'
+
+
 ## Step 2: Change swap size
 
 When I was compiling the library I ran out of SWAP space (which is 500MB by default). I was successful in compiling it with 2GB of SWAP space. Here is how you can increase the SWAP (only for compilation - later we will switch back to 500MB).
