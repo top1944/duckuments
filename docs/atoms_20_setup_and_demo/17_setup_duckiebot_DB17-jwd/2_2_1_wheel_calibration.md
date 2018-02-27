@@ -71,7 +71,7 @@ parameter by running the command:
 
     duckiebot $ rosservice call /![robot name]/inverse_kinematics_node/set_trim -- ![trim value]
 
-Calibrate the trim parameter using the following steps.
+To calibrate the trim parameter use the following steps:
 
 #### Step 1
 
@@ -132,6 +132,7 @@ by running, for example:
 
     duckiebot $ rosservice call /![robot name]/inverse_kinematics_node/set_trim -- -0.1
 
+In order to run this command you should create another $ssh$ connection to the duckiebot as the joystick process should be still running. 
 
 #### Step 8
 
@@ -140,6 +141,7 @@ $r$, by running, for example:
 
     duckiebot $ rosservice call /![robot name]/inverse_kinematics_node/set_trim -- 0.1
 
+In order to run this command you should create another $ssh$ connection to the duckiebot as the joystick process should be still running. 
 
 #### Step 9
 
