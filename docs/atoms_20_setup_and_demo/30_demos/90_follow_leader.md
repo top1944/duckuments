@@ -49,7 +49,7 @@ Run the following commands on different Duckiebots at the same time.
 Step 1: On Duckiebot, in /DUCKIETOWN_ROOT/ directory, checkout the branch devel-implicit-coord-formationKeeping and run the following commands:
 
     duckiebot $ catkin_make -C catkin_ws/
-    
+
     duckiebot $ make demo-vehicle_follow_leader
 
 Wait a while so that everything has been launched. Press R2 to start autonomous lane following with vehicle avoidance. Press L1 to switch to joystick control or R1 to switch to lane following without vehicle avoidance.
@@ -64,10 +64,10 @@ In rqt_image_view the images with circle grid are visualized: /(vehicle_name)/ve
 If the circle grid is detected, the grid is drawn in the image.
 
 
-## Troubleshooting {#demo-template-troubleshooting}
+## Troubleshooting {#demo-follow-leader-troubleshooting}
 
 Add here any troubleshooting / tips and tricks required.
 
-## Demo failure demonstration {#demo-template-failure}
+## Demo failure demonstration {#demo-follow-leader-failure}
 
 Finally, put here a video of how the demo can fail, when the assumptions are not respected.
