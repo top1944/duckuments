@@ -1,1 +1,1 @@
-# Operation manual - Duckietowns {#part:duckietowns}
+# Operation manual - Duckietown {#part:duckietowns}

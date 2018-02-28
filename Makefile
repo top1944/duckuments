@@ -295,6 +295,8 @@ circle:
 		--output_file out/master/data/1.html \
 		-c "config echo 1; config colorize 0; rparmake n=4"
 
+duckietown_css=style/duckietown.css
+
 master-html:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
 		--src $(src) \
@@ -306,7 +308,8 @@ master-html:
 		-c "config echo 1; config colorize 1; rparmake n=8"
 
 	mkdir -p duckuments-dist/master
-	python add_stylesheet.py out/master/data/1.html style/duckietown.css
+	python add_stylesheet.py out/master/data/1.html $(duckietown_css)
+
 	python -m mcdp_utils_xml.note_errors_inline out/master/data/1.html 2>&1 | tee duckuments-dist/master/errors.txt
 	python -m mcdp_docs.add_edit_links out/master/data/localcss.html < out/master/data/1.html
 	python -m mcdp_docs.embed_css out/master/data/duckiebook.html < out/master/data/localcss.html
@@ -338,11 +341,9 @@ master-split:
 # 		--mathjax \
 # 		--preamble $(tex-symbols)
 
-#--disqus
 
 fall2017-clean:
 	rm -rf out/fall2017
-	#rm -rf duckuments-dist/fall2017
 
 fall2017-prepare:
 	DISABLE_CONTRACTS=1 mcdp-render-manual \
@@ -354,6 +355,7 @@ fall2017-prepare:
 		-o out/fall2017/prepare \
 		--output_file out/fall2017/data/one.html -c "config echo 1; config colorize 1; rparmake"
 	mkdir -p duckuments-dist/fall2017
+	python add_stylesheet.py out/fall2017/data/one.html $(duckietown_css)
 	python -m mcdp_utils_xml.note_errors_inline out/fall2017/data/one.html 2>&1 | tee duckuments-dist/fall2017/errors.txt
 	# python -m mcdp_docs.add_edit_links duckuments-dist/fall2017/two.html < duckuments-dist/fall2017/one.html
 	python -m mcdp_docs.embed_css out/fall2017/data/master.html < out/fall2017/data/one.html
@@ -380,6 +382,7 @@ fall2017-pdf: checks check-programs-pdf
 
 # python -m mcdp_docs.add_edit_links <  out/fall2017/pdf/duckiebook.html > out/fall2017/pdf/b.html
 
+	mkdir -p out/fall2017/pdf 
 	prince --javascript -o out/fall2017/pdf/duckiebook1.pdf out/fall2017/data/duckiebook.html
 
 	./reduce-pdf-size.sh out/fall2017/pdf/duckiebook1.pdf out/fall2017/pdf/duckiebook2.pdf

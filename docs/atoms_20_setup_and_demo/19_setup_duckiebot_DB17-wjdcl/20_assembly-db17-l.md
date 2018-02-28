@@ -1,4 +1,4 @@
-# Assembling the Duckiebot `DB17-wjdlc` {#assembling-duckiebot-c1 status=draft}
+# Assembling the Duckiebot (`DB17-lc`) {#assembling-duckiebot-c1 status=draft}
 
 Assigned: Shiying
 
@@ -40,11 +40,11 @@ From now on, the DC Motor Hat will be powered by the PWM HAT via male -male jump
      <img src="plus_terminal_DC.jpg" style='width: 30em'/>
 </div>
 
-### Stack the PWM HAT above the DC motor HAT 
+### Stack the PWM HAT above the DC motor HAT
 
 Put a soldered Servo/PWM HAT board (in your Duckiebox) with 4 standoffs on the top of Stepper Motor HAT.
 
-Insert the other end of male-male jumper wire into "**+5**"V power terminal on the PWM HAT (PWM-end). It leads the power to DC motor HAT. 
+Insert the other end of male-male jumper wire into "**+5**"V power terminal on the PWM HAT (PWM-end). It leads the power to DC motor HAT.
 
 <div figure-id="fig:pos_terminal_PWM" figure-caption="Insert the PWM-end into +5V terminal on PWM HAT ">
      <img src="pos_terminal_PWM.jpg" style='width: 30em'/>
@@ -69,4 +69,3 @@ For instructions on how to assemble your bumpers set, refer to: [](#bumper-assem
 For instructions on how to assemble the LED HAT and related LEDs, refer to: [](#leds-setup).
 
 TODO: finish above, estimate assembly time, add bumper assembly instructions, add LED positioning and wiring instructions, add castor wheel assembly instructions
-

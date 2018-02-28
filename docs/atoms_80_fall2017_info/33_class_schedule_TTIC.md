@@ -364,7 +364,7 @@ Please help us making the experience better by [providing feedback (can be anony
 
 
 
-## Monday, November 6: Introduction to Planning (Continued)
+## Wednesday, November 8: Introduction to Planning (Continued)
 
 ### Lecture Content
 
@@ -375,6 +375,47 @@ Please help us making the experience better by [providing feedback (can be anony
 ### Reading Material
 
 * Steven M. LaValle, *Planning Algorithms*, Chapter 5. Available [online](http://planning.cs.uiuc.edu)
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+
+## Monday, November 13: Introduction to Control
+
+### Lecture Content
+
+* Control Intro ([Powerpoint](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-08-ttic-control-I.pptx), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-08-ttic-control-I.pdf))
+
+
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+## Wednesday, November 15: Introduction to Control (Continued)
+
+### Lecture Content
+
+* Controls ([Powerpoint](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-15-ttic-control-self-driving.pptx), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-15-ttic-control-self-driving.pdf))
+* Controls for Duckietown ([Powerpoint](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-15-ttic-control-duckietown.pptx), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-15-ttic-control-duckietown.pdf))
+
+
+
+### Feedback Form
+
+Please help us making the experience better by [providing feedback (can be anonymous)](https://goo.gl/forms/yKWqJBuiMiAPC4Zz2)
+
+
+## Monday, November 20: Testing for Autonomous Vehicles
+
+### Lecture Content
+
+* Testing for Autonomous Vehicles ([Keynote](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-20-ttic-testing.key), [PDF](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-20-ttic-testing.pdf))
+
+
 
 ### Feedback Form
 
