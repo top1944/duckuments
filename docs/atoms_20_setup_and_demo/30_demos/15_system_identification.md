@@ -16,7 +16,7 @@ Requires: Camera calibration completed
 <div figure-id="fig:demo_succeeded-sysid">
     <figcaption>Demo of the calibration procedure
     </figcaption>
-    <dtvideo src='vimeo:251383652'/>
+    <dtvideo src='vimeo:251027149'/>
 </div>
 
 
