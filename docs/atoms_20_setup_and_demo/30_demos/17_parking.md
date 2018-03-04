@@ -9,17 +9,24 @@ First, we describe what is needed, including:
 * Robot setup steps
 * Duckietown hardware
 
+
+<div class='requirements' markdown="1">
+
 Requires: Duckiebot in configuration DB17-wjd or DB17-wjdl
 
 Requires: Camera calibration completed.
 
-## Video of expected results {#demo-template-expected}
+</div>
+
+## Video of expected results {#demo-parking-expected}
+
 
 First, we show a video of the expected behavior. It can be found
 [here](https://youtu.be/dS-TWh8cGXk)
 
 
-## Duckietown setup notes {#demo-template-duckietown-setup}
+
+## Duckietown setup notes {#demo-parking-duckietown-setup}
 
 Here, describe the assumptions about the Duckietown, including:
 
@@ -27,9 +34,15 @@ Here, describe the assumptions about the Duckietown, including:
 * Instrastructure (traffic lights, wifi networks, ...) required
 * Weather (lights, ...)
 * It is assumed that the parking lot has six parking spaces as depicted in the figure below.
-* 4 april tags, which should be placed according to the figure below. From the (0,0) point at the bottom left of the figure below (assuming x is the horizontal axis while y is the vertical axis): place tag #126 at  (10cm,0), tag #128 at (20cm,0), tag #129 at (30cm,0) and tag #131 at (40cm,0).
 
-## Duckiebot setup notes {#demo-template-duckiebot-setup}
+* 4 april tags, which should be placed according to the figure below. From the (0,0) point at the bottom left of the figure below (assuming $x$ is the horizontal axis while $y$ is the vertical axis): place tag n.126 at  $(10 cm,0)$, tag n.128 at (20cm,0), tag n.129 at (30cm,0) and tag n.131 at (40cm,0).
+
+    Do not write instructions here. The instructions should be somewhere in [the part about Duckietowns](#duckietowns). Here, merely point to them.
+
+![Duckietown parking lot](https://raw.githubusercontent.com/duckietown/Software/devel-parking/catkin_ws/src/50-misc-additional-functionality/parking/report/map_0_1.png "Duckietown parking lot")
+
+## Duckiebot setup notes {#demo-parking-duckiebot-setup}
+
 
 Write here any special setup for the Duckiebot, if needed.
 No special setup needed
@@ -37,7 +50,9 @@ No special setup needed
 Do not write instructions here. The instructions should be somewhere in the appropriate setup part.
 
 
-## Pre-flight checklist {#demo-template-pre-flight}
+
+## Pre-flight checklist {#demo-parking-pre-flight}
+
 
 The pre-flight checklist describes the steps that are sufficient to
 ensure that the demo will be correct:
@@ -46,9 +61,12 @@ Check: Ensure that your bot is in the correct configuration (DB17-wjd or DB17-wj
 
 Check: You have a duck safely secured to your duckiebot
 
-## Demo instructions {#demo-template-run}
+## Demo instructions {#demo-parking-run}
+
 ### Part A: simulation
-instuctions to reproduce the demo simulation:
+
+Instructions to reproduce the demo simulation:
+
 
 Step 1: Switch to the parking branch and go to the simulation folder dt-path-planning.
 
@@ -69,7 +87,9 @@ Step 3: Compute a path from entracne (0) to parking space 4 (4). Dubins paht sho
 The terminal output should tell you that a collision free path was found in stage 2, the path should be displayed (and all the path pieces in cyan are deleted after stop looking for a better path)
 
 
-### Part B: Duckiebot
+
+### Part B: Duckiebot
+
 Instructions to reproduce the demo on the duckiebot:
 
 Step 1: Switch to the parking branch:
@@ -89,9 +109,9 @@ Step 6: Your duckiebot will locate itself with respect to the parking spaces and
 
 Step 7: The default planning space the duckiebot will plan to is space 2. If you would like to plan to a different space, type the following command: `roslaunch parking parking_localization.launch veh:=myvehicle end_space = endspace `  where end_space is an integer from 1 to 6.
 
-## Troubleshooting {#demo-template-troubleshooting}
+## Troubleshooting {#demo-parking-troubleshooting}
 
-### Part A: simulation
+### Part A: simulation
 
 Step 1-2 should not give an error.
 
@@ -101,22 +121,36 @@ Step 3 can generate an error in case of unlucky sampling. See Demo failure demon
 
 If the parking apriltags are not view and arranged in the correct order
 
-## Demo failure demonstration {#demo-template-failure}
+
+## Demo failure demonstration {#demo-parking-failure}
 
 ### Part A: simulation
+
 Step 3 can lead to errors if we are unlucky with sampling (or do not sample enough).
 
-`Traceback (most recent call last):
-  File "./parking_main.py", line 514...ValueError: min() arg is an empty sequence`
+    Traceback (most recent call last):
+    File "./parking_main.py", line 514, in <module> path_planning(start_number, end_number)
+
+    File "./parking_main.py", line 466, in path_planning px, py, pyaw = RRT_star_path_planning(start_x, start_y, start_yaw, end_x, end_y, end_yaw, obstacles)
+
+    File "./parking_main.py", line 286, in RRT_star_path_planning path = rrt.Planning(animation=rrt_star_animation)
+
+    File "/Users/samueln/duckietown/catkin_ws/src/50-misc-additional-functionality/parking/path_planning/dt-path-planning/rrt_star_car.py", line 70, in Planning lastIndex = self.get_best_last_index()
+
+    File  "/Users/samueln/duckietown/catkin_ws/src/50-misc-additional-functionality/parking/path_planning/dt-path-planning/rrt_star_car.py", line 159, in get_best_last_index mincost = min([self.nodeList[i].cost for i in fgoalinds]) ValueError: min() arg is an empty sequence`
 
 This error says that no path was found. It can be reproduced by setting `maxIter = 10` in `parking_main.py` on line 36. Standard value is 100. If you get the error once, just start the script again. If several times, increase set `maxIter = 200` in `parking_main.py` on line 36.
 
-
 ### Part B: Duckiebot
-See a video [here](https://youtu.be/dsp-9IumGTs)
+
+<div figure-id="fig:parking_video_op_manual">
+    <figcaption>Parking failure example</figcaption>
+    <dtvideo src="vimeo:258471238"/>
+</div>
 
 We do not have a working demo (in the sense that the duckiebot actually parks itself) because the apriltag detection takes several seconds to calculate (~2.9 seconds), resulting in a slow state update while following our given path. If you would like to see the duckiebot trying to control to the planned path, please run the following:
 
-`roslaunch parking master.launch veh:=myvehicle localization:=true apriltags:=true /camera/raw:=true /camera/raw/rect:=true LED:=false lane_following:=true`
+    roslaunch parking master.launch veh:=myvehicle localization:=true apriltags:=true /camera/raw:=true /camera/raw/rect:=true LED:=false lane_following:=true
 
-Once a path is generated (it will tell you a path has been found via the terminal), press R1 on your controller to enter parking mode.
+Once a path is generated (it will tell you a path has been found via the terminal), press R1 on your controller to enter "parking mode".
+
