@@ -23,42 +23,42 @@
 
         Compute the image gradient with Sobel operator. The result turns out to be better when done in RGB rather than HSV space.
 
-        <img src="27_anti_instagram/grad.png" style="width: 400px"/>
+        <img src="grad.png" style="width: 400px"/>
     2. Threshold gradient
 
         This makes a binary image out of the gradient.
 
-        <img src="27_anti_instagram/grad_th.png" style="width: 400px"/>
+        <img src="grad_th.png" style="width: 400px"/>
     3. Dilate gradient
 
         This continues broken lines in the gradient, due to noise (e.g. from motion blur).
 
-        <img src="27_anti_instagram/grad_th_dilated.png" style="width: 400px"/>
+        <img src="grad_th_dilated.png" style="width: 400px"/>
     4. Zero fill bottom ⅖
 
         This part is assumed to be lane surface. See next step for explanation.
 
-        <img src="27_anti_instagram/grad_th_dilated_zeroed.png" style="width: 400px"/>
+        <img src="grad_th_dilated_zeroed.png" style="width: 400px"/>
     5. Floodfill to get mask
 
         This yield the single connected component of low gradient part. The seed is chosen from the bottom ⅖.
 
-        <img src="27_anti_instagram/ff.png" style="width: 400px"/>
+        <img src="ff.png" style="width: 400px"/>
     6. Close narrow openings
 
         Regions inside narrow openings are probably high gradient part within the lane, and thus should be kept. We close it first, which is equivalent to dilation followed by errosion.
 
-        <img src="27_anti_instagram/ff_closed.png" style="width: 400px"/>
+        <img src="ff_closed.png" style="width: 400px"/>
     7. Fill the holes
 
         Then fill the resulting holes by floodfilling from the top, and take the complement.
 
-        <img src="27_anti_instagram/ff_closed_ff.png" style="width: 400px"/>
+        <img src="ff_closed_ff.png" style="width: 400px"/>
     8. Clip off top ⅓
 
         This part are assumed to be not lane surface, so it gets clipped off from the mask.
 
-        <img src="27_anti_instagram/ff_closed_ff_clipped.png" style="width: 400px"/>
+        <img src="ff_closed_ff_clipped.png" style="width: 400px"/>
 
 ### Boundary Region Detection
 
@@ -70,17 +70,17 @@
 
         High gradient part corresponds to boundaries. Dilation is meant to cover more of the bordering pixels to get sufficient information.
 
-        <img src="27_anti_instagram/grad_cnt.png" style="width: 400px"/>
+        <img src="grad_cnt.png" style="width: 400px"/>
     2. Find contours as masks
 
         We want to capture the boundary areas, which can be found as contours in the gradient map above. This is done via the algorithm described in Suzuki, S. and Abe, K., Topological Structural Analysis of Digitized Binary Images by Border Following. CVGIP 30 1, pp 32-46 (1985) (implemented in OpenCV).
 
-        <img src="27_anti_instagram/grad_cnt_masked.png" style="width: 400px"/>
+        <img src="grad_cnt_masked.png" style="width: 400px"/>
     3. Remove small contours and fill in
 
         Contours that have small size are probably noise. Fill in the holes turn out to provide more information than noise.
 
-        <img src="27_anti_instagram/grad_cnt_masked_th.png" style="width: 400px"/>
+        <img src="grad_cnt_masked_th.png" style="width: 400px"/>
 
         The pixels under this mask then get fed into the k-means algorithm.
 

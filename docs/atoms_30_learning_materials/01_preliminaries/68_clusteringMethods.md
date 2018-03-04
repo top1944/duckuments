@@ -2,8 +2,11 @@
 Clustering is the process of grouping some objects such that similar objects belong to the same group. In the sense of colors it could be that similar colors are grouped together e.g. bright red, ruby and pink belong to the group of red colors where as azure blue, copenhagen blue and dark blue would be grouped to the blue colors.  
 Various algorithm can solve such a task. They differ in how they define what is a cluster (e.g. the members are within a certain distance) and how efficiently these algorithms can find these clusters.  
 Following some algorithms for determining clusters are presented.
+
 ## k-Means clustering
+
 ### Description of the algorithm
+
 Let's assume we have $d$ data points $x_{1,...,d}$ and $k$ cluster centers $m_{1,...,k}$. Now the algorithm tries to put the centers such that optimally all the clusters existing in the data are found. A data point $x_i$ belongs to the cluster $j$ if the cluster center $m_j$ is the nearest among all the clusters $m_{1,..,k}$.  
 So the algorithm can be described as follows:  
 1. Define a number k (number of cluster centers), initialize $m_{1,...,k}$ for example randomly.
