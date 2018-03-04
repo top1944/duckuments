@@ -28,7 +28,7 @@ The Duckietown used for these demos needs to have the following characteristics:
 No special setup is needed for the Duckiebot. If more Duckiebots are available, they should be used too since the demo is about coordination and LED emission and detection. One to four Duckiebots can be placed at an intersection.
 
 
-## Demo instructions {#demo-template-run}
+## Demo instructions {#demo-coordination-run}
 
 ### Openhouse-dp4 (traffic light coordination)
 
