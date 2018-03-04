@@ -9,6 +9,7 @@ First, we describe what is needed, including:
 * Robot setup steps
 * Duckietown hardware
 
+
 <div class='requirements' markdown="1">
 
 Requires: Duckiebot in configuration DB17-wjd or DB17-wjdl
@@ -19,8 +20,10 @@ Requires: Camera calibration completed.
 
 ## Video of expected results {#demo-parking-expected}
 
+
 First, we show a video of the expected behavior. It can be found
 [here](https://youtu.be/dS-TWh8cGXk)
+
 
 
 ## Duckietown setup notes {#demo-parking-duckietown-setup}
@@ -31,7 +34,8 @@ Here, describe the assumptions about the Duckietown, including:
 * Instrastructure (traffic lights, wifi networks, ...) required
 * Weather (lights, ...)
 * It is assumed that the parking lot has six parking spaces as depicted in the figure below.
-  * 4 april tags, which should be placed according to the figure below. From the (0,0) point at the bottom left of the figure below (assuming $x$ is the horizontal axis while $y$ is the vertical axis): place tag n.126 at  $(10 cm,0)$, tag n.128 at (20cm,0), tag n.129 at (30cm,0) and tag n.131 at (40cm,0).
+
+* 4 april tags, which should be placed according to the figure below. From the (0,0) point at the bottom left of the figure below (assuming $x$ is the horizontal axis while $y$ is the vertical axis): place tag n.126 at  $(10 cm,0)$, tag n.128 at (20cm,0), tag n.129 at (30cm,0) and tag n.131 at (40cm,0).
 
     Do not write instructions here. The instructions should be somewhere in [the part about Duckietowns](#duckietowns). Here, merely point to them.
 
@@ -39,13 +43,16 @@ Here, describe the assumptions about the Duckietown, including:
 
 ## Duckiebot setup notes {#demo-parking-duckiebot-setup}
 
+
 Write here any special setup for the Duckiebot, if needed.
 No special setup needed
 
 Do not write instructions here. The instructions should be somewhere in the appropriate setup part.
 
 
+
 ## Pre-flight checklist {#demo-parking-pre-flight}
+
 
 The pre-flight checklist describes the steps that are sufficient to
 ensure that the demo will be correct:
@@ -59,6 +66,7 @@ Check: You have a duck safely secured to your duckiebot
 ### Part A: simulation
 
 Instructions to reproduce the demo simulation:
+
 
 Step 1: Switch to the parking branch and go to the simulation folder dt-path-planning.
 
@@ -77,6 +85,7 @@ Step 3: Compute a path from entracne (0) to parking space 4 (4). Dubins paht sho
 `./parking_main.py 0 4`
 
 The terminal output should tell you that a collision free path was found in stage 2, the path should be displayed (and all the path pieces in cyan are deleted after stop looking for a better path)
+
 
 
 ### Part B: Duckiebot
@@ -112,6 +121,7 @@ Step 3 can generate an error in case of unlucky sampling. See Demo failure demon
 
 If the parking apriltags are not view and arranged in the correct order
 
+
 ## Demo failure demonstration {#demo-parking-failure}
 
 ### Part A: simulation
@@ -143,3 +153,4 @@ We do not have a working demo (in the sense that the duckiebot actually parks it
     roslaunch parking master.launch veh:=myvehicle localization:=true apriltags:=true /camera/raw:=true /camera/raw/rect:=true LED:=false lane_following:=true
 
 Once a path is generated (it will tell you a path has been found via the terminal), press R1 on your controller to enter "parking mode".
+
