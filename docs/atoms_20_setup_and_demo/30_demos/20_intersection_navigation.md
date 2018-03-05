@@ -18,7 +18,11 @@ Requires: Duckietown Version 2.0.
 
 This video shows what you should get:
 
-<iframe width="420" height="315" src="https://www.youtube.com/watch?v=x2rPmNqhteo&feature=youtu.be" frameborder="0" allowfullscreen></iframe>
+<div figure-id="fig:demo_video_navigators_op_man">
+    <figcaption>Closed loop intersection navigation</figcaption>
+    <dtvideo src="vimeo:258571104"/>
+</div>
+
 
 ## Duckietown setup notes {#demo-template-duckietown-setup}
 
@@ -58,7 +62,7 @@ git checkout devel-intersection_navigation-jan15
 git pull
 ```
 
-Finally source the environment and run : 
+Finally source the environment and run :
 
 ```
 catkin_make
@@ -78,7 +82,7 @@ rosservice call /![robot name]/inverse_kinematics_node/set_gain -- 0.60
 source environment.sh
 ```
 
-``` 
+```
 make demo-intersection-navigation
 ```
 
@@ -102,7 +106,7 @@ set the the ROS master to your vehicle,
 source set_ros_master.sh ![robot name]
 ```
 
-and finally launch 
+and finally launch
 
 ```
 roslaunch intersection_navigation intersection_visualizer_node.launch robot_name:=![robot name]
@@ -115,4 +119,4 @@ roslaunch intersection_navigation intersection_visualizer_node.launch robot_name
 
 
 ## Demo failure demonstration {#demo-template-failure}
-None existing yet. 
+None existing yet.
