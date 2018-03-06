@@ -10,6 +10,7 @@ Following [the instructions here][instructions]:
 
 [instructions]: http://tipsonubuntu.com/2016/08/05/install-atom-text-editor-ubuntu-16-04/
 
+After installing Atom, please open it once and close it again before proceeding with installing remote-atom! 
 
 ## Using Atom to code remotely {#remote-coding}
 
