@@ -1,5 +1,5 @@
 
-# Soldering boards for `DB17-l` {#soldering-boards-c1 status=draft}
+# Soldering boards (`DB17-l`) {#soldering-boards-c1 status=draft}
 
 Note: General rule in soldering
 

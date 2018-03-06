@@ -101,6 +101,8 @@ recipe:
   - add: bibliography
   - add: last-modified
 
+- add: fall-2017-projects
+
 purl_prefix: http://purl.org/dt/fall2017/
 
 # Removes the sections that have status equal to draft

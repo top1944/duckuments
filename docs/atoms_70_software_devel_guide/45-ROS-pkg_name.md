@@ -218,7 +218,7 @@ The line:
 
     self.pub_topic_a = rospy.Publisher("~topic_a", String, queue_size=1)
 
-defines a publisher which publishes a `String` message to the topic `~topic_a`. Note that the `~` in the name of topic under the namespace of the node. More specifically, this will actually publishes to `talker/topic_a` instead of just `topic_a`. The `queue_size` is usually set to 1 on all publishers.
+defines a publisher which publishes a `String` message to the topic `~topic_a`. Note that the `~` in the name of topic under the namespace of the node. More specifically, this will actually publish to `talker/topic_a` instead of just `topic_a`. The `queue_size` is usually set to 1 on all publishers.
 
 See: For more details see [`rospy` overview: publisher and subscribers](http://wiki.ros.org/rospy/Overview/Publishers%20and%20Subscribers).
 
@@ -228,7 +228,7 @@ The line:
 
 defines a subscriber which expects a `String` message and subscribes to `~topic_b`. The message will be handled by the `self.cbTopic` callback function. Note that similar to the publisher, the `~` in the topic name puts the topic under the namespace of the node. In this case the subscriber actually subscribes to the topic `talker/topic_b`.
 
-It is strongly encouraged that a node always publishers and subscribes to topics under their `node_name` namespace. In other words, always put a `~` in front of the topic names when you defines a publisher or a subscriber. They can be easily remapped in a launch file. This makes the node more modular and minimizes the possibility of confusion and naming conflicts. See [the launch file section](#howto-launch-file) for how remapping works.
+It is strongly encouraged that a node always publishes and subscribes to topics under their `node_name` namespace. In other words, always put a `~` in front of the topic names when you defines a publisher or a subscriber. They can be easily remapped in a launch file. This makes the node more modular and minimizes the possibility of confusion and naming conflicts. See [the launch file section](#howto-launch-file) for how remapping works.
 
 The line
 

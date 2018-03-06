@@ -1,4 +1,4 @@
-# Assembling the Duckiebot `DB17`, `DB17-jwd`  {#assembling-duckiebot-c0 status=beta}
+# Assembling the Duckiebot (`DB17-jwd`)  {#assembling-duckiebot-c0 status=beta}
 
 Point of contact: Shiying Li
 
@@ -112,8 +112,8 @@ To assemble the caster wheel, the following materials are needed:
 
 #### Prepare the Screws with Washers
 
-The lock washers belongs to screw-head side [](#fig:screws_washers_boltz), i.e. the split lock washer and the flat lock washers stays always near the screw head. 
-The split lock washer stays near the screw head. First split lock washer, then flat lock washer. 
+The lock washers belongs to screw-head side [](#fig:screws_washers_boltz), i.e. the split lock washer and the flat lock washers stays always near the screw head.
+The split lock washer stays near the screw head. First split lock washer, then flat lock washer.
 
 <div figure-id="fig:screws_washers_boltz" figure-caption="Insert the locker washers into metal screws from left to right">
      <img src="screws_washer_boltz.jpg" style='width: 30em'/>
@@ -134,9 +134,9 @@ Fasten the screws with washers on the caster wheels from the bottom up and screw
 
 #### Assembly the caster wheels under the chassis bottom
 
-Assembly the prepared caster wheels in the front side of duckiebot under the chassis bottom. Fasten the screws with washers from top to bottom. 
+Assembly the prepared caster wheels in the front side of duckiebot under the chassis bottom. Fasten the screws with washers from top to bottom.
 
-Better: In order to get all the screws properly into the metal standoffs, let all the screws stay loose within the right positions before all the screws are inserted into the standoffs[](#fig:assembled_caster). 
+Better: In order to get all the screws properly into the metal standoffs, let all the screws stay loose within the right positions before all the screws are inserted into the standoffs[](#fig:assembled_caster).
 
 <div figure-id="fig:caster_above" figure-caption="Assembly the caster wheels under chassis-bottom">
      <img src="caster_above.jpg" style='width: 30em'/>
