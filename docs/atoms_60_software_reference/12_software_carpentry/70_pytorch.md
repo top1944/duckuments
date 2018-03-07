@@ -70,9 +70,15 @@ Then run Python:
 
 And in the Python interpreter try this:
 
-    >>> import torch
-    >>> x = torch.rand(5, 3)
-    >>> print(x)
+<pre>
+<code>&#8203;>&#8203;>&#8203;> import torch
+>&#8203;>&#8203;> x = torch.rand(5, 3)
+>&#8203;>&#8203;> print(x) </code>
+</pre>
+
+
+
+
 
 ## (Step 5, optional: unswap the swap)
 
