@@ -1,5 +1,8 @@
 # Parking demo instructions {#parking-demo-instructions status=beta}
 
+TODO: JT image sizes, knowledge graph, 
+
+
 This is the description for the Duckietown parking demo.
 
 First, we describe what is needed, including:
