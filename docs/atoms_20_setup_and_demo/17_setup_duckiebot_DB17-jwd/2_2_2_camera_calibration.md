@@ -303,7 +303,7 @@ localizes perfectly.
 
 <div figure-id="fig:oneshot1_all">
     <img style='width:90%' src="oneshot1_all.jpg"/>
-    <figcaption>Output when camera not properly calibrated.</figcaption>
+    <figcaption>Output when camera is properly calibrated.</figcaption>
 </div>
 
 ### Example of failure

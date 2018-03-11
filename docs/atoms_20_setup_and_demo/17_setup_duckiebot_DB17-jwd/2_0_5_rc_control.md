@@ -79,7 +79,7 @@ Comment: I got no error on first execution on the Raspberry Pi
 
 Clone the relevant `duckiefleet` repository into `~/duckiefleet`.
 
-See see [](#duckiefleet-directory) to find the right `duckiefleet` repository.
+See [](#duckiefleet-directory) to find the right `duckiefleet` repository.
 
 In `~/.bashrc` set `DUCKIEFLEET_ROOT` to point to the directory:
 
