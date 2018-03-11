@@ -13,26 +13,11 @@ First you need to install some additional packages. You might already have insta
 In your current shell add two flags for the compiler
 
     export NO_CUDA=1 # this will disable CUDA components of PyTorch, because the little RaspberriPi doesn't have a GPU that supports CUDA
-    export NO_DISTRIBUTED=1 # no idea what this does, but it fixed a compilation bug for me
+    export NO_DISTRIBUTED=1 # for distributed computing
 
 Then `cd` into a directory of your choice, like `cd ~/Downloads` or something like that and clone the PyTorch library.
 
     git clone --recursive https://github.com/pytorch/pytorch
-
-There was recently a bug in the ARM-relevant code that should now be fixed in the main Github branch, but just to make sure you have the most recent code:...
-
-Change into the directory that you just cloned, and further into the following direcotries:
-
-    cd pytorch/torch/lib/ATen/
-
-...and check that the file `Scalar.h` has the following code on line 16:
-
-
-      Scalar() : Scalar(int64_t(0)) {}
-
-If the line instead reads the following, please manually change the code to the above line:
-
-      Scalar() : Scalar(0L) {}
 
 ## Step 2: Change swap size
 
@@ -67,7 +52,7 @@ This shouldn't create any errors but it took me about an hour. If it does throw 
 
 When it's done, you can install the pytorch package system-wide with
 
-    sudo python setup.py install
+    sudo -E python setup.py install # the -E is important
 
 For some reason on my machine this caused recompilation of a few packages. So this might again take some time (but should be significantly less).
 
@@ -83,18 +68,17 @@ Then run Python:
 
     python
 
-And on the Python interpreter try this:
+And in the Python interpreter try this:
 
-    import torch
-    a = torch.FloatTensor((2,2))
-    a.add_(3)
-    print (a)
+<pre>
+<code>&#8203;>&#8203;>&#8203;> import torch
+>&#8203;>&#8203;> x = torch.rand(5, 3)
+>&#8203;>&#8203;> print(x) </code>
+</pre>
 
-...this should print something like this:
 
-    3  3
-    3  3
-    [torch.FloatTensor of size 2x2]
+
+
 
 ## (Step 5, optional: unswap the swap)
 
