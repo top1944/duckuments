@@ -71,17 +71,7 @@ A dedicated System Architecture meeting was held in class to resolve any further
 ### Documentation of FSM package
 The previous FSM did not have a README, therefore the documentation was improved greatly.
 
-## Formal performance evaluation / Results {#heroes-final-formal}
-
-_Be rigorous!_
-
-- For each of the tasks you defined in you problem formulation, provide quantitative results (i.e., the evaluation of the previously introduced performance metrics)
-- Compare your results to the success targets. Explain successes or failures.
-- Compare your results to the "state of the art" / previous implementation where relevant. Explain failure / success.
-- Include an explanation / discussion of the results. Where things (as / better than / worst than) you expected? What were the biggest challenges?
-
 ## Future avenues of development {#heroes-final-next-steps}
-
 The existing framework for the FSM made it relatively easy to update it to include new functionalities (once you've decided on the system architecture). The FSM is configured using .yaml. files, which are then loaded into the `fsm_node`.
 
 Development of the updated FSM was done in response to a need before demo day, and while it has been tested on its own, it has not been tested thoroughly with all other parts of the system yet.
