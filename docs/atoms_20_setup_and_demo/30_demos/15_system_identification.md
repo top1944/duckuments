@@ -1,5 +1,8 @@
 # Demo system ID {#demo-sysid status=beta}
 
+TODO: JT: fix broken refs
+
+
 This is the description of the wheels calibration procedure. In order to complete the procedure, you need your Duckiebot in configuration DB17-lc with its camera calibrated and the same chessboard as for the camera calibration. 
 In the first step, you will put your Duckiebot in front of the chessboard and send specific commands to the wheels. By recording the chessboard, the Duckiebot will know its position at any time. On your computer, you will then use this informations to calculate the parameters of the kinematics of you Duckiebot. These parameters will be stored on a yaml file. 
 
