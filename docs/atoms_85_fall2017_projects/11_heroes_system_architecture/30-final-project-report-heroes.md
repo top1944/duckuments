@@ -1,9 +1,11 @@
-#  The Heroes - System Architecture: final report {#heroes-final-report status=draft}
+#  The Heroes - System Architecture: final report {#heroes-final-report status=beta}
 
 <!--
 General notes:
 - REMEMBER to change the "heroes" in the chapter labels to your group label!
 -->
+
+TODO: links to relevant files
 
 System Architecture refers to the high-level conceptual model that defines the structure and behaviour of a system. There are different ways to get an insight into the architecture of a system, for example functional decomposition diagrams, package composition, or a Finite State Machine diagram.
 
@@ -12,10 +14,8 @@ The System Architecture project helped to ensure that the Fall 2018 projects int
 
 In Duckietown, the Finite State Machine (FSM) diagram plays an important role in determining how the higher-level system behaves in different scenarios. The FSM defines which states the system can be in, and which functionalities must be active in which states. During the project, the need for development on the FSM arose. Below is the resulting updated Finite State Machine (FSM) diagram.
 
->![FSM diagram](fsm_default.png)
-
 <div figure-id="fig:fsm-diagram" figure-caption="The Finite State Machine">
-     <img src="fsm_default.png" style='width: 15em'/>
+     <img src="fsm_default.png" style='width: 30em'/>
 </div>
 
 ## Mission and Scope {#heroes-final-scope}
@@ -34,6 +34,8 @@ Duckietown already had an existing system architecture. As metioned before, the 
 
 #### ROS `fsm` package
 The `fsm` package consists of two nodes, namely the `fsm_node` and the `logic_gate_node`. The `fsm_node` is in charge of determining the current state and computing state transitions, and the `logic_gate_node` acts as a helper node to the `fsm_node`. For more information, see the README of the `fsm` package, found at `20-indefinite-navigation/fsm/README.md`.
+
+Comment: JT: README for fsm in indefinite navigation seems out of place
 
 #### Configuration of the FSM
 While the `fsm` package handles the computation of state transitions, the FSM states and transitions can be configured using the supplied `.yaml` files. The `fsm` package then reads the configuration in order to know which states and transitions are available in the system. This allows for separation of the computation and configuration of the FSM.

@@ -18,6 +18,8 @@ Requires: Object Detection setup.
 
 First, we show a video of the expected behavior (if the demo is succesful).
 
+TODO: add video
+
 ## Duckietown setup notes {#implicit-coordination-duckietown-setup}
 The Duckietown used for this demo has to be equipped with...
 
@@ -86,8 +88,8 @@ Step 4: Press R1 on your connected gamepad. The duckiebots now perform lane foll
 
 ## Troubleshooting {#implicit-coordination-troubleshooting}
 
-
+TODO: add troubleshooting
 
 ## Demo failure demonstration {#implicit-coordination-failure}
 
-coming soon
+TODO: coming soon

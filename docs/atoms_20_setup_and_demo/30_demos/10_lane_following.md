@@ -62,7 +62,7 @@ Step 3: Start the autonomous lane following by pressing the **R1** button on joy
 
 Step 4: The Duckiebot should drive autonomously in the lane. Intersections and red lines are neglected and the Duckiebot will drive across them like it is a __normal__ lane. Enjoy the demo.
 
-Step 5: Stop the autonomous driving by pressing **L1** button on the joystick and switch to joystick control. 
+Step 5: Stop the autonomous driving by pressing **L1** button on the joystick and switch to joystick control.
 
 
 ## Troubleshooting {#demo-lane-following-troubleshooting}
@@ -104,7 +104,7 @@ Set alternative controller gains. While running the demo on the Duckiebot use th
 
 
     duckiebot $ rosparam set /robot_name/lane_controller_node/k_d -45
-    
+
     duckiebot $ rosparam set /robot_name/lane_controller_node/k_theta -11
 
 Those changes are only active while running the demo and need to be repeated at every start of the demo if needed. If this improved the performance of your Duckiebot, you should think about permenantly change the default values in your catkin_ws.
