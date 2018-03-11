@@ -18,6 +18,8 @@ Requires: Object Detection setup.
 
 First, we show a video of the expected behavior (if the demo is succesful).
 
+TODO: add video
+
 ## Duckietown setup notes {#implicit-coordination-duckietown-setup}
 The Duckietown used for this demo has to be equipped with...
 
