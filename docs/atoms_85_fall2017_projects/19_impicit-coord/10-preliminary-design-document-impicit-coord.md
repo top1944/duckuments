@@ -1,4 +1,4 @@
-# PDD - Implicit Coordination  {#Formation-and-Implicit-Control-pdd status=beta}
+# Implicit Coordination: preliminary report  {#formation-and-implicit-control-pdd status=beta}
 
 
 ## Part 1: Mission and scope
@@ -9,9 +9,9 @@ Formation keeping and collision avoidance using implicit communication
 
 ### Motto
 
-> ALIIS VIVERE
 
-TODO: translation by Jacopo
+Motto: ALIIS VIVERE <br/> (Live for others)
+
 
 ### Project scope
 

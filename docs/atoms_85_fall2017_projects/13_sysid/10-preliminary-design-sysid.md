@@ -1,4 +1,4 @@
-# PDD - System Identification {#sysid-pdd status=beta}
+# System Identification: preliminary report {#sysid-pdd status=beta}
 
 
 ## Part 1: Mission and scope
@@ -10,7 +10,7 @@ Estimate better models to make localization and control more efficient and robus
 
 ### Motto
 
-> NOSCE TE IPSUM (Know thyself)
+Motto: NOSCE TE IPSUM <br/> (Know thyself)
 
 
 

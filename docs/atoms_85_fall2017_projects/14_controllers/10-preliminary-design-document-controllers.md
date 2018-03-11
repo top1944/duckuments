@@ -1,4 +1,4 @@
-#  PDD - The Controllers {#controllers-pdd status=ready}
+# The Controllers: preliminary report {#controllers-pdd status=ready}
 
 
 ## Part 1: Mission and scope
@@ -9,15 +9,10 @@ Make lane following more robust to model assumptions and Duckietown geometric sp
 
 ### Motto
 
-<div class='check' markdown="1">
+Motto: IMPERIUM ET POTESTAS EST <br/> (With control comes power)
 
-IMPERIUM ET POTESTAS EST (with control comes power)
-
-
-</div>
 
 ### Project scope
-
 
 #### What is in scope
 
@@ -192,21 +187,21 @@ We assume to have image space line segments extracted and classified from images
 Drive on the track for one minute and count the number of times the bot touches the side or center line. Repeat this 5 times.
 
 **Metrics**
-Error from the reference distance d when driving straight.
-- Mean and variance of 5 experiments
-Estimate of lane width.
-- Estimate lane width and compare to measurement
-Estimate road curvature.
-- Estimate curvature and compare to measured radius of curve
-Speed - make is a control variable.
-Robustness to initial pose.
-- Run lane following using 5 different initial poses
-Transient error after curved section (e.g. dies in one tile length).
-- 5 experiments of measuring the error d when driving straight after a curved segment $\rightarrow$ Did the transient error die?
-Robustness to the curvature.
-- Run curve following on 5 lanes made of different combinations of curve tiles (left-left-right, left-right-left, … )
-Robustness to lane specifications
-- Run lane following on 5 lanes with different lane width when driving straight
+* Error from the reference distance d when driving straight.
+  - Mean and variance of 5 experiments
+* Estimate of lane width.
+  - Estimate lane width and compare to measurement
+* Estimate road curvature.
+  - Estimate curvature and compare to measured radius of curve
+* Speed - is a control variable.
+* Robustness to initial pose.
+  - Run lane following using 5 different initial poses
+* Transient error after curved section (e.g. dies in one tile length).
+  - 5 experiments of measuring the error d when driving straight after a curved segment $\rightarrow$ Did the transient error die?
+* Robustness to the curvature.
+  - Run curve following on 5 lanes made of different combinations of curve tiles (left-left-right, left-right-left, … )
+* Robustness to lane specifications
+  - Run lane following on 5 lanes with different lane width when driving straight
 
 
 ## Part 3: Preliminary design

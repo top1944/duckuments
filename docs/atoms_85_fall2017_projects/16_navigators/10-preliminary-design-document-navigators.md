@@ -1,4 +1,4 @@
-#  PDD - Navigators {#navigators-pdd status=beta}
+# Navigators: preliminary report {#navigators-pdd status=beta}
 
 
 ## Part 1: Mission and Scope
@@ -10,7 +10,7 @@ The objective of this project is to implement a method that allows Duckiebots to
 ### Motto
 
 
-> **TRANSIBITIS** (you shall pass)
+Motto: TRANSIBITIS <br/>(You shall pass)
 
 
 ### Project Scope
@@ -56,8 +56,10 @@ The objective of this project is to implement a method that allows Duckiebots to
 
 * The Identifiers
 
-
-![Project Boundary](io2.png)
+<div figure-id="fig:navigators-io2">
+    <figcaption>Project boundary</figcaption>
+    <img src="io2.png" style="width: 95%"/>
+</div>
 
 
 ## Part 2: Definition of the Problem

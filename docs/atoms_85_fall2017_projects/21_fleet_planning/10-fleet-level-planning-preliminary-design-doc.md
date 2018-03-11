@@ -1,4 +1,4 @@
-#  Fleet-level Planning: preliminary design document {#fleet-level-planning-preliminary-design-doc status=ready}
+#  Fleet-level Planning: preliminary design document {#fleet-level-planning-preliminary-design-doc status=beta}
 
 
 ## Part 1: Mission and scope
@@ -10,7 +10,7 @@
 ### Motto
 
 
-
+Motto: VICTORIA CONCORDIA CRESCIT <br/> (Victory through harmony)
 
 VICTORIA CONCORDIA CRESCIT (Victory through harmony)
 
@@ -47,13 +47,13 @@ VICTORIA CONCORDIA CRESCIT (Victory through harmony)
 
 ### Problem statement
 
-We need to combine parts of many different stakeholders to achieve planning for a fleet of duckiebots. 
+We need to combine parts of many different stakeholders to achieve planning for a fleet of duckiebots.
 
 ### Assumptions
 
 * Sufficiently large duckietown to accommodate all duckiebots
 * Collision avoidance and navigation works well to allow duckiebots to reach target destination
-* Duckiebots can never park (i.e. stop still anywhere, unless waiting for other duckiebot at intersections etc.). 
+* Duckiebots can never park (i.e. stop still anywhere, unless waiting for other duckiebot at intersections etc.).
 
 
 ### Approach
@@ -72,7 +72,7 @@ Functionality includes:
 * Visualization of N duckiebots
 * Pick up and drop-off on request
 * Functional standby distribution of duckiebots waiting for a pickup/ drop-off request
-* Ability to arrange duckiebots in formations related to christmas videos 
+* Ability to arrange duckiebots in formations related to christmas videos
 * Taxi status lamps
 
 Metrics:
@@ -96,7 +96,7 @@ Metrics:
 ### Performance measurement
 
 * Calculate time taken to complete request
-* Number of requests served per unit of time 
+* Number of requests served per unit of time
 
 
 ## Part 3: Preliminary design
@@ -107,17 +107,17 @@ Metrics:
 
 ### Interfaces
 
-Duckiefleet -  request handling server: 
+Duckiefleet -  request handling server:
 
 * List of duckiebots and corresponding locations and statuses - will be sorted with the fleet-wireless-communications team, see Resources required / dependencies / costs
 
-Customer - request handling server: 
+Customer - request handling server:
 
 * Pickup location and desired target location via clicking on map
 
 Request handling server - Duckiefleet:
 
-* List of target locations for each duckiebot such that request is completed 
+* List of target locations for each duckiebot such that request is completed
 * Each duckiebot displays its status via its LEDs
 
 
@@ -195,6 +195,5 @@ Papers:
 
 ### Risk analysis
 
-* Dependency on the Fleet-communications project. Closely work together with that team to get notified early about any upcoming problems that could delay the delivery of the needed parts for this project. 
+* Dependency on the Fleet-communications project. Closely work together with that team to get notified early about any upcoming problems that could delay the delivery of the needed parts for this project.
 * See Part 4: Project planning
-
