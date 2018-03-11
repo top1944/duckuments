@@ -5,10 +5,10 @@ It will provide you with a GUI running on a laptop that can be used to generate 
 
 First, we describe what is needed, including:
 
-* Robot hardware
-* Number of Duckiebots
-* Robot setup steps
-* Duckietown hardware
+-Robot hardware
+-Number of Duckiebots
+-Robot setup steps
+-Duckietown hardware
 
 <div class='requirements' markdown="1">
 
