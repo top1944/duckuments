@@ -1,4 +1,4 @@
-# Demo Saviors {#demo-saviors status=beta}
+# Demo Saviors {#demo-saviors status=ready}
 
 This is the description of the saviors obstacle avoidance demo.
 
