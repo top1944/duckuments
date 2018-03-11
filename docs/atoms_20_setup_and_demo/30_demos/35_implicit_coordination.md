@@ -88,8 +88,8 @@ Step 4: Press R1 on your connected gamepad. The duckiebots now perform lane foll
 
 ## Troubleshooting {#implicit-coordination-troubleshooting}
 
-
+TODO: add troubleshooting
 
 ## Demo failure demonstration {#implicit-coordination-failure}
 
-coming soon
+TODO: coming soon
