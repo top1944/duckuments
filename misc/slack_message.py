@@ -109,7 +109,7 @@ def check_good_size(min_free_gb=2):
     total_gb = in_gb(usage.total)
 
 
-    s = 'free %s GB of %s GB' % (free_gb, total_gb)
+    s = 'free %.2f GB of %.2f GB' % (free_gb, total_gb)
     print(s)
 
     if free_gb < min_free_gb:
