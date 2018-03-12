@@ -1,5 +1,7 @@
 # Coordination {#demo-coordination2016 status=beta}
 
+TODO: mark this as obsolete (2016). 2017 version is out: explicit coordination, implicit coordination.
+
 This demo (instructions from the MIT 2016 class) allows multiple Duckiebots that stop at an intersection to coordinate with LED signals and clear the intersection. Two demos are available, one for the case with traffic lights and one without them.
 
 <div class='requirements' markdown="1">
