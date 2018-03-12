@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import os, sys
+import os, sys, yaml
 from slacker import Slacker
 from mcdp import logger
 from compmake.jobs.storage import job_cache_exists, get_job_cache
@@ -18,6 +18,13 @@ channel = '#duckuments-bot'
 slack = Slacker(token)
 
 
+response = slack.users.list()
+users = response.body['members']
+for u in users:
+    # print(yaml.dump(u))
+    print('%s = %s' % (u['id'], u['profile']['real_name_normalized']))
+
+
 from compmake.jobs.syntax.parsing import parse_job_list
 from compmake.storage.filesystem import StorageFilesystem
 from compmake.jobs.uptodate import CacheQueryDB
@@ -26,7 +33,7 @@ from compmake.context import Context
 def go(path):
     db = StorageFilesystem(path, compress=True)
     args = ['failed']
-    cq= CacheQueryDB(db)
+    cq = CacheQueryDB(db)
     context = Context(db)
     if not list(db.keys()):
         msg = 'Compmake DB is empty'
@@ -54,11 +61,10 @@ def go(path):
                 else:
                     logger.warning('no cache for %s' % job_id)
 
-            s += '\n@censi'
-            s += '\n@jacopo'
-            s += '\n@paull'
-            s += '\n@walter'
-            s += '\n@daniele'
+            s += '\n@U0DLXEWRL (Andrea Censi)'
+            s += '\n@U0MDRAY9X (Jacopo Tani)'
+            s += '\n@U0DMSBSBG (Liam Paull)'
+            s += '\n@U6RE1RBR9 (Andrea Daniele)'
             print(s)
             slack.chat.post_message(channel, s, link_names=1)
 
