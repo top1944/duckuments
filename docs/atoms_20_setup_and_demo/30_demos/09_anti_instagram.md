@@ -1,4 +1,4 @@
-# Anti-instagram (Lane following) {#demo-lane-following status=beta}
+# Anti-instagram (Lane following) {#demo-lane-following-anti-instagram status=beta}
 
 This is the description of anti-instagram demo.
 
