@@ -318,13 +318,15 @@ master-html:
 		--output duckuments-dist/master/duckiebook.html \
 		--assets duckuments-dist/master/duckiebook/assets
 
+SPLIT_COMMAND="rparmake n=2"
+
 master-split:
 	# rm -f $(dist_dir)/duckiebook/*html
 	 mcdp-split \
 		--filename out/master/data/duckiebook.html \
 		--output_dir duckuments-dist/master/duckiebook \
 		-o out/master/split \
-		-c " config echo 1; config colorize 1; rparmake" \
+		-c " config echo 1; config colorize 1; $(SPLIT_COMMAND)" \
 		--mathjax \
 		--preamble $(tex-symbols)
 
@@ -382,7 +384,7 @@ fall2017-pdf: checks check-programs-pdf
 
 # python -m mcdp_docs.add_edit_links <  out/fall2017/pdf/duckiebook.html > out/fall2017/pdf/b.html
 
-	mkdir -p out/fall2017/pdf 
+	mkdir -p out/fall2017/pdf
 	prince --javascript -o out/fall2017/pdf/duckiebook1.pdf out/fall2017/data/duckiebook.html
 
 	./reduce-pdf-size.sh out/fall2017/pdf/duckiebook1.pdf out/fall2017/pdf/duckiebook2.pdf
@@ -398,7 +400,7 @@ fall2017-split:
 	   --filename out/fall2017/data/duckiebook.html \
 	   --output_dir duckuments-dist/fall2017/duckiebook \
 	   -o out/fall2017/split \
-	   -c " config echo 1; config colorize 1; rparmake" \
+	   -c " config echo 1; config colorize 1; $(SPLIT_COMMAND)" \
 	   --mathjax \
 	   --preamble $(tex-symbols)
 
