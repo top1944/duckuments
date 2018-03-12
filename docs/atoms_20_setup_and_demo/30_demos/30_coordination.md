@@ -1,6 +1,6 @@
 # Coordination {#demo-coordination2016 status=beta}
 
-This demo (instructions from MIT2016) allow multiple Duckiebots that stop at an intersection to coordinate with LED signals and clear the intersection. Two demos are available, one for the case with traffic lights and one without them.
+This demo (instructions from the MIT 2016 class) allows multiple Duckiebots that stop at an intersection to coordinate with LED signals and clear the intersection. Two demos are available, one for the case with traffic lights and one without them.
 
 <div class='requirements' markdown="1">
 
