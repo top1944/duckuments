@@ -17,12 +17,22 @@ with open(where) as f:
 channel = '#duckuments-bot'
 slack = Slacker(token)
 
+maintainers = """
+<@U0DLXEWRL> (Andrea Censi)
+<@U0MDRAY9X> (Jacopo Tani)
+<@U0DMSBSBG> (Liam Paull)
+<@U6RE1RBR9> (Andrea Daniele)
+"""
+#
+# maintainers = """
+# <@U0DLXEWRL> (Andrea Censi)
+# """
 
 response = slack.users.list()
 users = response.body['members']
-for u in users:
-    # print(yaml.dump(u))
-    print('%s = %s' % (u['id'], u['profile']['real_name_normalized']))
+# for u in users:
+#     # print(yaml.dump(u))
+#     print('%s = %s' % (u['id'], u['profile']['real_name_normalized']))
 
 
 from compmake.jobs.syntax.parsing import parse_job_list
@@ -61,10 +71,8 @@ def go(path):
                 else:
                     logger.warning('no cache for %s' % job_id)
 
-            s += '\n@U0DLXEWRL (Andrea Censi)'
-            s += '\n@U0MDRAY9X (Jacopo Tani)'
-            s += '\n@U0DMSBSBG (Liam Paull)'
-            s += '\n@U6RE1RBR9 (Andrea Daniele)'
+
+            s += maintainers
             print(s)
             slack.chat.post_message(channel, s, link_names=1)
 
@@ -73,7 +81,50 @@ def go(path):
             # slack.chat.post_message(channel, s)
             logger.info('No jobs found')
 
+from collections import namedtuple
+usage_ntuple = namedtuple('usage',  'total used free percent')
+
+def disk_usage(path):
+    """Return disk usage associated with path."""
+    st = os.statvfs(path)
+    free = (st.f_bavail * st.f_frsize)
+    total = (st.f_blocks * st.f_frsize)
+    used = (st.f_blocks - st.f_bfree) * st.f_frsize
+    try:
+        percent = ret = (float(used) / total) * 100
+    except ZeroDivisionError:
+        percent = 0
+    # NB: the percentage is -5% than what shown by df due to
+    # reserved blocks that we are currently not considering:
+    # http://goo.gl/sWGbH
+    return usage_ntuple(total, used, free, round(percent, 1))
+
+import psutil
+
+def check_good_size(min_free_gb=2):
+
+    usage = psutil.disk_usage('/')
+    in_gb = lambda x: x * 1.0 / (1024*1024*1024)
+    free_gb = in_gb(usage.free)
+    total_gb = in_gb(usage.total)
+
+
+    s = 'free %s GB of %s GB' % (free_gb, total_gb)
+    print(s)
+
+    if free_gb < min_free_gb:
+        msg = 'Disk space is low. This might stop compilation. \n\n' + s
+        msg += '\n' + maintainers
+
+        slack.chat.post_message(channel, msg, link_names=1)
+    # space = disk_usage('.')
+    # print space
+    # space_GB = space / (1000*1000*1000.0)
+    # print('Available : %s GB' % space_GB)
+
 if __name__ == '__main__':
+
+    check_good_size()
     paths = [
     'out/fall2017/pdf/compmake',
     'out/fall2017/prepare/compmake',
