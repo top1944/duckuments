@@ -326,7 +326,7 @@ master-split:
 		--filename out/master/data/duckiebook.html \
 		--output_dir duckuments-dist/master/duckiebook \
 		-o out/master/split \
-		-c " config echo 1; config colorize 1; $(SPLIT_COMMAND)" \
+		-c ' config echo 1; config colorize 1; rparmake n=2' \
 		--mathjax \
 		--preamble $(tex-symbols)
 
