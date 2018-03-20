@@ -80,7 +80,7 @@ The heading has to be set iteratively to maximize the time the duckiebot sees th
 
 Step 4: Run the calibration procedure
 
-    duckiebot $ roslaunch calibration commands.launch veh:=robot name
+    duckiebot $ roslaunch calibration commands.launch veh:=![robot name]
 
 The Duckietown should go forward and then stop. 
 
