@@ -144,6 +144,8 @@ m_b=\frac{1}{N}\sum_{i=1}^N [y_b]_i
 and act upon this number.
 This algorithms is run three times: To detect Duckiebots on the right, to detect Duckietbots on the left, and to detect traffic lights. To increase the robustness and reduce the computational demand, the image is cut accordingly. Hence, the output of the algorithm are three Booleans indicating the detection on the right, on the front, and for the traffic light respectively.  
 
+Doubt: Shouldn't the Duckiebot run the algorithm to detect other Duckiebots on the right and in front (since is not able to detect Duckiebots on the left)?
+
 ### Coordination
 
 Our coordination algorithm allows the hybrid management of situations with and without a traffic light.
