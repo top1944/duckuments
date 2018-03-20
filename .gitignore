@@ -70,3 +70,5 @@ docs/**/*.html
 .~lock.*
 misc/bot/locks
 misc/bot/logs
+emergency.html
+before-reorg.html
