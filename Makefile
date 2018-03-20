@@ -400,7 +400,7 @@ fall2017-split:
 	   --filename out/fall2017/data/duckiebook.html \
 	   --output_dir duckuments-dist/fall2017/duckiebook \
 	   -o out/fall2017/split \
-	   -c " config echo 1; config colorize 1; $(SPLIT_COMMAND)" \
+	   -c " config echo 1; config colorize 1; rparmake n=2" \
 	   --mathjax \
 	   --preamble $(tex-symbols)
 
