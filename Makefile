@@ -161,6 +161,8 @@ automatic-compile-fall2017-pdf:
 	echo "Done." >> $(log-fall2017-pdf)
 
 upload:
+	echo Not uploading
+_upload:
 	#git -C duckuments-dist pull -X ours
 	echo ignoring errors
 
